@@ -4,6 +4,6 @@ De versie op deze website kan/zal nog wijzingen en kan dus niet als definitief w
 Momenteel is versie 0.75 van het berichtenprotocol KLIC-WIN in consultatie. U kunt tot 13 november 2015 op deze versie reageren via deze website.
 
 Voordat u reviewcommentaar kunt plaatsen, dient u zich eerst te registreren.
-Het plaatsen van reviewcommentaar (issue) doet u hier: xxxx
+Het plaatsen van reviewcommentaar (issue) doet u hier: 
 
 Geef een duidelijke en volledige beschrijving van uw reviewcommentaar en verwijs naar een hoofdstuknummer of paginanummer.
