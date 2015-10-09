@@ -1,5 +1,5 @@
 De vervanger van het huidige Berichtenmodel Kabels en Leidingen (BMKL) is in ontwikkeling. Deze GitHub is bedoeld ter consultatie van de huidige conceptversie van het nieuwe berichtenprotocol KLIC-WIN. 
-De versie op deze website kan/zal nog wijzingen en kan dus niet als definitief worden beschouwd. 
+De versie op deze website kan/zal nog wijzigen en kan dus niet als definitief worden beschouwd. 
 
 Momenteel is versie 0.75 van het berichtenprotocol KLIC-WIN in consultatie.
  
