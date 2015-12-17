@@ -3,8 +3,6 @@ De versie op deze website kan/zal nog wijzigen en kan dus niet als definitief wo
 
 Momenteel is versie 0.76 van het berichtenprotocol KLIC-WIN in consultatie.
  
-U kunt tot 13 november 2015 op deze versie reageren via deze website.
-
 Voordat u reviewcommentaar kunt plaatsen, dient u zich eerst te registreren.
 Het berichtenprotocol KLIC-WIN versie 0.76 vindt u [hier.](https://github.com/Kadaster/KLIC-WIN/tree/master/Berichtenprotocol%20KLIC-WIN)
 
