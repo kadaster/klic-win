@@ -21,21 +21,21 @@ De namespace van de nieuwe IMKL2015 is `"http://www.geostandaarden.nl/imkl/2015/
 Een voorbeeld van correcte namespace declaraties in IMKL 2015:
 
 ```xml
-   <gml:FeatureCollection xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.1" 
-	                   xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
-										 xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
-								 xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
-								     xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
-										xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
-										       xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
-													xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
-												 xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0" 
-												    mlns:gml="http://www.opengis.net/gml/3.2" 
-													 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-												 xmlns:xlink="http://www.w3.org/1999/xlink" 
-												      gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq" 
-									xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 
-	  https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.1/IMKL2015-wion.xsd">
+	<gml:FeatureCollection xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.1" 
+		xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+		xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+		xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+		xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+		xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+		xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+		xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+		xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0" 
+		xmlns:gml="http://www.opengis.net/gml/3.2" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+		gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq" 
+		xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 
+		https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.1/IMKL2015-wion.xsd">
 ```
 
 ## Incorrecte Imkl/2015/ namespace
@@ -49,7 +49,7 @@ IMKL 2015 hanteert de UTF-8 encoding. Een voorbeeld van waar zoiets mis kan gaan
 Een correct voorbeeld:
 
 ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="UTF-8"?>
 ```
 
 ## Onterecht gebruik van gml:boundedBy
