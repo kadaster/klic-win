@@ -104,7 +104,7 @@ De gebruikte codelijst voor thema’s is verouderd. De nieuwe codelijst moet wor
 
 Incorrect is bijvoorbeeld: `<http://www.geonovum.nl/imkl/2015/1.0/def/Thema/water>`
 
-Correct is hier: `<http://definities.geostandaarden.nl/imkl2015/id/waardelijst/Thema/water>`
+Correct is hier: `<http://definities.geostandaarden.nl/imkl2015/doc/waarde/Thema/water>`
 
 ## Verkeerde codelijsten gebruikt
 
