@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (http://www.altova.com) by Kadaster (Kadaster) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:vzm="http://www.kadaster.nl/schemas/klic/20081010/bmkltypes" targetNamespace="http://www.kadaster.nl/schemas/klic/20081010/bmkltypes" elementFormDefault="qualified" attributeFormDefault="unqualified" version="20081010">
+	<xsd:element name="VoorzorgsmaatregelenBeheer" type="vzm:VoorzorgsmaatregelenBeheerType">
+		<xsd:annotation>
+			<xsd:documentation>Het door een bronhouder beheren van aanduidingen en beslissingsregels voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VoorzorgsmaatregelenBeheerType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van het koppelvlak voor het beheren van aanduidingen en beslissingsregels voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="versie" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Versie van het interface waarmee het koppelvlak wordt beschreven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bronhoudercode">
+				<xsd:annotation>
+					<xsd:documentation>Unieke code van de bronhouder (netbeheerder) waarvoor voorzorgs-maatregelen worden beheerd.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:length value="5"/>
+						<xsd:pattern value="[A-Za-z0-9]+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="bronhouderNaam" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Naam van de bronhouder (netbeheerder) waarvoor voorzorgsmaatregelen worden beheerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="documentSjablonen" type="vzm:DocumentSjablonenType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Documentsjablonen waarmee voorzorgsmaatregel bijlagen kunnen worden opgesteld.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="utiliteitsnetAanduidingen" type="vzm:UtiliteitsnetAanduidingenType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Lijst van aanduidingen die aan een net(element) kunnen worden gegeven voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="werkzaamhedenAanduidingen" type="vzm:WerkzaamhedenAanduidingenType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Lijst van aanduidingen die een netbeheerder aan soorten werkzaamheden geeft voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="voorzorgsmaatregelBeslissingsmatrix" type="vzm:VoorzorgsmaatregelBeslissingsmatrixType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Lijst van beslissingsregels waarmee op basis van diverse factoren de te hanteren voorzorgsmaatregelen kunnen worden bepaald.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="voorzorgsmaatregelToelichtingen" type="vzm:VoorzorgsmaatregelToelichtingenType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Toelichtende documentatie betreffende door de aanvrager te nemen voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentSjablonenType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van documentsjablonen voor toepassing als voorzorgsmaatregel bijlagen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="documentSjabloon" type="vzm:DocumentSjabloonType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Documentsjabloon op basis waarvan een voorzorgsmaatregel bijlage kan worden opgesteld.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="UtiliteitsnetAanduidingenType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van aanduidingen die een netbeheerder aan een net(element) kan geven voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="utiliteitsnetAanduiding" type="vzm:UtiliteitsnetAanduidingType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding die een netbeheerder aan een net(element) kan geven voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WerkzaamhedenAanduidingenType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van aanduidingen die een netbeheerder aan soorten werkzaamheden geeft voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="werkzaamhedenAanduiding" type="vzm:WerkzaamhedenAanduidingType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding die een netbeheerder aan soorten werkzaamheden geeft voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="VoorzorgsmaatregelBeslissingsmatrixType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van beslissingsregels waarmee op basis van diverse factoren de door een aanvrager te hanteren voorzorgsmaatregelen kunnen worden bepaald.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="voorzorgsmaatregelBeslissingsregel" type="vzm:VoorzorgsmaatregelBeslissingsregelType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Beslissingsregel waarmee door de netbeheerder op basis van diverse factoren een prioriteit aan een voorzorgsmaatregel wordt gegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="VoorzorgsmaatregelToelichtingenType">
+		<xsd:annotation>
+			<xsd:documentation>Definitie van toelichtende documentatie betreffende door de aanvrager te nemen voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="voorzorgsmaatregelToelichting" type="vzm:VoorzorgsmaatregelToelichtingType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Toelichtende documentatie betreffende een door de aanvrager te nemen voorzorgsmaatregel.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentSjabloonType">
+		<xsd:annotation>
+			<xsd:documentation>Documentsjabloon op basis waarvan een voorzorgsmaatregel bijlage kan worden opgesteld.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="sjabloonID" type="vzm:SjabloonIDType">
+				<xsd:annotation>
+					<xsd:documentation>Identificatie van het documentsjabloon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bestandMediaType" type="vzm:MediaType">
+				<xsd:annotation>
+					<xsd:documentation>Media type van een bestand.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="bestandsnaam" type="vzm:BestandsnaamType">
+				<xsd:annotation>
+					<xsd:documentation>Naam (eventueel met locatie) van het aangeleverde bestand.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="UtiliteitsnetAanduidingType">
+		<xsd:annotation>
+			<xsd:documentation>Aanduiding die een netbeheerder aan een net(element) kan geven voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="thema" type="vzm:ThemaType">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="netbeheerderNetAanduiding" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het risico dat aan een utiliteitsnet of netelement gegeven wordt ten behoeve van de bepaling of en welke voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="netbeheerderNetOmschrijving" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Omschrijving bij een risico aanduiding van een utiliteitsnet of netelement, op basis waarvan mogelijk voorzorgsmaatregelen getroffen worden bij het uitvoeren van werkzaamheden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WerkzaamhedenAanduidingType">
+		<xsd:annotation>
+			<xsd:documentation>Aanduiding die een netbeheerder aan soorten werkzaamheden geeft voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="soortWerkzaamheden" type="vzm:SoortWerkzaamhedenType">
+				<xsd:annotation>
+					<xsd:documentation>Soort werkzaamheden die bij een gebiedsinformatie-aanvraag is opgegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het risico dat aan de soort werkzaamheden gegeven wordt ten behoeve van de bepaling of en welke eisen voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="VoorzorgsmaatregelBeslissingsregelType">
+		<xsd:annotation>
+			<xsd:documentation>Bevat de metadata van een te beheren document.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="thema" type="vzm:ThemaType">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="netbeheerderNetAanduiding" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het risico dat aan een utiliteitsnet of netelement gegeven wordt ten behoeve van de bepaling of en welke voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="aanvraagSoort" type="vzm:AanvraagSoort">
+				<xsd:annotation>
+					<xsd:documentation>Soort gebiedsinformatie-aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Aanduiding van het risico dat aan de soort werkzaamheden gegeven wordt ten behoeve van de bepaling of en welke eisen voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maatregelType" type="vzm:MaatregelType">
+				<xsd:annotation>
+					<xsd:documentation>Hoofdindeling van soorten voorzorgsmaatregelen, ingedeeld naar wettelijk of niet-wettelijk vereiste vormen van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maatregel" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Soort voorzorgsmaatregel dat wordt vereist in geval werkzaamheden aan het netwerk worden uitgevoerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maatregelPrioriteit" type="xsd:int">
+				<xsd:annotation>
+					<xsd:documentation>De prioriteit die aan de bepaalde voorzorgsmaatregel wordt gegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="VoorzorgsmaatregelToelichtingType">
+		<xsd:annotation>
+			<xsd:documentation>Toelichtende documentatie betreffende een door de aanvrager te nemen voorzorgsmaatregel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="maatregelType" type="vzm:MaatregelType">
+				<xsd:annotation>
+					<xsd:documentation>Hoofdindeling van soorten voorzorgsmaatregelen, ingedeeld naar wettelijk of niet-wettelijk vereiste vormen van voorzorgsmaatregelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maatregel" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Soort voorzorgsmaatregel dat wordt vereist in geval werkzaamheden aan het netwerk worden uitgevoerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="toelichting" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Toelichting op de soort voorzorgsmaatregel dat wordt vereist in geval werkzaamheden aan het netwerk uitgevoerd moeten worden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sjabloonID" type="vzm:SjabloonIDType">
+				<xsd:annotation>
+					<xsd:documentation>Identificatie van het sjabloon welke gebruikt wordt om een document op te stellen als bijlage bij een te treffen voorzorgsmaatregel.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SjabloonIDType">
+		<xsd:annotation>
+			<xsd:documentation>Identificatie van een sjabloon voor toepassing als voorzorgsmaatregelbijlage.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="namespace">
+				<xsd:annotation>
+					<xsd:documentation>Unieke verwijzing naar een registratie van objecten binnen de context van NEN3610 (i.c. "nl.imkl").
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="nl.imkl"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="lokaalID">
+				<xsd:annotation>
+					<xsd:documentation>Identificatiecode die een object (i.c. een sjabloon) heeft binnen een (lokale) registratie.				
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="255"/>
+						<xsd:pattern value="[A-Za-z0-9_.,-]+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="BestandsnaamType">
+		<xsd:annotation>
+			<xsd:documentation>Naam (eventueel met locatie) van een bestand.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="MediaType">
+		<xsd:annotation>
+			<xsd:documentation>Media type van een bestand, samnegesteld uit type, subtype en optinele parameters.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ThemaType">
+		<xsd:annotation>
+			<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL). Thema dient in de codelijst voor te komen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="SoortWerkzaamhedenType">
+		<xsd:annotation>
+			<xsd:documentation>Soort werkzaamheden die bij een gebiedsinformatie-aanvraag is opgegeven. Het soort werkzaamheden dient in de codelijst voor te komen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="AanvraagSoort">
+		<xsd:annotation>
+			<xsd:documentation>Soort gebiedsinformatie-aanvraag. De aanvraagsoort dient in de codelijst voor te komen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="MaatregelType">
+		<xsd:annotation>
+			<xsd:documentation>Hoofdindeling van soorten voorzorgsmaatregelen, ingedeeld naar wettelijk of niet-wettelijk vereiste vormen van voorzorgsmaatregelen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="eisVoorzorgsmaatregel"/>
+			<xsd:enumeration value="verzoekContact"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

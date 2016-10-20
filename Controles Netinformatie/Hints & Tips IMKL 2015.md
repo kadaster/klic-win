@@ -140,7 +140,7 @@ De Namespace van een INSPIRE/NEN3610 ID is altijd “nl.imkl”.
 
 Het LocalID van een INSPIRE/NEN3610 ID bestaat altijd uit de eigen bronhoudercode gevolgd door een punt en een door de netbeheerder vrij te bepalen unieke lokale identifier.
 
-Het GML ID wordt gevormd door de Namespace en het LocalID van het feature met een koppelpunt aan elkaar te plakken.
+Het GML ID wordt gevormd door de Namespace en het LocalID van het feature met een koppelteken aan elkaar te plakken.
 
 Voorbeeld:
 
@@ -148,7 +148,7 @@ INSPIRE namespace: nl.imkl
 
 INSPIRE localID: bwater.1274
 
-GML-ID: nl.imkl.bwater.1274
+GML-ID: nl.imkl-bwater.1274
 
 ## INSPIRE ID en lokaal GML ID niet gelijk voor een feature
 

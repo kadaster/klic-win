@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lev:Leveringsinformatie xmlns:lev="http://www.kadaster.nl/schemas/klic/20080722/leveringsinfo" xmlns:gml="http://www.opengis.net/gml" xmlns:ns3="http://www.w3.org/1999/xlink" xmlns:ns4="http://www.w3.org/2001/SMIL20/" xmlns:ns5="http://www.w3.org/2001/SMIL20/Language" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<lev:Version>2.0</lev:Version>
+	<lev:Aanvraag>
+		<lev:Klicnummer>16O044309</lev:Klicnummer>
+		<lev:Ordernummer>9807027120</lev:Ordernummer>
+		<lev:Positienummer>10</lev:Positienummer>
+		<lev:RelatienummerAanvrager>0000648756</lev:RelatienummerAanvrager>
+		<lev:Meldingsoort>Orientatieverzoek</lev:Meldingsoort>
+		<lev:DatumTijdAanvraag>2016-07-25T16:26:04.000+02:00</lev:DatumTijdAanvraag>
+		<lev:KlantReferentie>TEST TEST</lev:KlantReferentie>
+		<lev:Gebiedspolygoon srsName="epsg:28992" srsDimension="2" axisLabels="x y" uomLabels="m m">
+			<gml:exterior>
+				<gml:LinearRing>
+					<gml:posList>155500 388888 155500 389900 154000 389900 154000 388888 155500 388888</gml:posList>
+				</gml:LinearRing>
+			</gml:exterior>
+		</lev:Gebiedspolygoon>
+		<lev:Informatiepolygoon srsName="epsg:28992" srsDimension="2" axisLabels="x y" uomLabels="m m">
+			<gml:exterior>
+				<gml:LinearRing>
+					<gml:posList>155500 388888 155500 389900 154000 389900 154000 388888 155500 388888</gml:posList>
+				</gml:LinearRing>
+			</gml:exterior>
+		</lev:Informatiepolygoon>
+		<lev:GeselecteerdGebiedKaart>
+			<lev:Bestandsnaam>bronnen/SEL_16O044309.png</lev:Bestandsnaam>
+		</lev:GeselecteerdGebiedKaart>
+		<lev:Pngformaat>
+			<lev:OmsluitendeRechthoek>
+				<gml:Envelope srsName="epsg:28992" srsDimension="2" axisLabels="x y" uomLabels="m m">
+					<gml:lowerCorner>154000 388888</gml:lowerCorner>
+					<gml:upperCorner>155500 389900</gml:upperCorner>
+				</gml:Envelope>
+			</lev:OmsluitendeRechthoek>
+			<lev:PixelsBreed>7500</lev:PixelsBreed>
+			<lev:PixelsHoog>5060</lev:PixelsHoog>
+		</lev:Pngformaat>
+	</lev:Aanvraag>
+	<lev:Leveringsvolgnummer>5</lev:Leveringsvolgnummer>
+	<lev:IndicatieLeveringCompleet>true</lev:IndicatieLeveringCompleet>
+	<lev:Leveringsbrief>
+		<lev:Bestandsnaam>LI_16O044309_5.pdf</lev:Bestandsnaam>
+	</lev:Leveringsbrief>
+	<lev:Ondergrondkaarten>
+		<lev:SoortOndergrondkaart>bgtBestaand</lev:SoortOndergrondkaart>
+		<lev:Ondergrondkaart>
+			<lev:Bestandsnaam>bronnen/GB_16O044309.png</lev:Bestandsnaam>
+		</lev:Ondergrondkaart>
+	</lev:Ondergrondkaarten>
+	<lev:Ondergrondkaarten>
+		<lev:SoortOndergrondkaart>bgtPlan</lev:SoortOndergrondkaart>
+		<lev:Ondergrondkaart>
+			<lev:Bestandsnaam>bronnen/GP_16O044309.png</lev:Bestandsnaam>
+		</lev:Ondergrondkaart>
+	</lev:Ondergrondkaarten>
+	<lev:GebundeldeNetinformatie>
+		<lev:Bestandsnaam>NI_netinformatie_16O044309.xml</lev:Bestandsnaam>
+	</lev:GebundeldeNetinformatie>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1031</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000729946</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Enexis</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Enexis</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Hans Pot</lev:Naam>
+				<lev:Telefoon>088-8577630</lev:Telefoon>
+				<lev:Email>Hans.Pot@enexis.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>KLICINFO</lev:Naam>
+				<lev:Telefoon>0888577271</lev:Telefoon>
+				<lev:Email>klicinfo@enexis.nl</lev:Email>
+				<lev:Fax>0388527646</lev:Fax>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer/>
+			<lev:Beschadigingsnummer/>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>middenspanning</lev:Thema>
+			<lev:Themanaam>middenspanning</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1031/LG_middenspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1031/MV_middenspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1031/AN_middenspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>DK</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1031/DK_middenspanning_Enexis_0000729946_16O044309_2.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>DK</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1031/DK_middenspanning_Enexis_0000729946_16O044309_1.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>laagspanning</lev:Thema>
+			<lev:Themanaam>laagspanning</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1031/LG_laagspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1031/MV_laagspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1031/AN_laagspanning_Enexis_0000729946_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1031/BL_Enexis_0000729946_16O044309_BriefAlgemeen_2014_O.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1052</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000579962</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>TenneT TSO B.V.</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>TenneT TSO B.V.</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>TenneT Operator 1</lev:Naam>
+				<lev:Telefoon>026-3731874</lev:Telefoon>
+				<lev:Email>klic_operator1@tennet.org</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Klic</lev:Naam>
+				<lev:Telefoon>0263731874</lev:Telefoon>
+				<lev:Email>klic-info@tennet.eu</lev:Email>
+				<lev:Fax>0182612567</lev:Fax>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>0800-9009</lev:Storingsnummer>
+			<lev:Beschadigingsnummer>06-13055852</lev:Beschadigingsnummer>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>landelijkHoogspanningsnet</lev:Thema>
+			<lev:Themanaam>landelijk hoogspanningsnet</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1052/LG_landelijk+hoogspanningsnet_TenneT+TSO+B.V._0000579962_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1052/AN_landelijk+hoogspanningsnet_TenneT+TSO+B.V._0000579962_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>TB</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1052/TB_landelijk+hoogspanningsnet_TenneT+TSO+B.V._0000579962_16O044309_BriefBovengrondsBelang.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1052/BL_TenneT+TSO+B.V._0000579962_16O044309_BriefOrientatie.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1052/BL_TenneT+TSO+B.V._0000579962_16O044309_Overzichtskaart.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1040</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000574962</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Liander</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Liander</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Dhr. J. Janssen</lev:Naam>
+				<lev:Telefoon>030-8877661</lev:Telefoon>
+				<lev:Email>contact.janssen@liander.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Liander</lev:Naam>
+				<lev:Telefoon>030-8877661</lev:Telefoon>
+				<lev:Email>contactpersoon.janssen@liander.nl</lev:Email>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>030-7235439</lev:Storingsnummer>
+			<lev:Beschadigingsnummer>585421</lev:Beschadigingsnummer>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>false</lev:BetrokkenBijAanvraag>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>nbact1</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000949099</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Netbeheerder Actualiseren01</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Netbeheerder Actualiseren01</lev:BedrijfsnaamAfkorting>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Klic nbact1</lev:Naam>
+				<lev:Telefoon>088-1234567</lev:Telefoon>
+				<lev:Email>klic-contact@actualiseren01.nl</lev:Email>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>hoogspanning</lev:Thema>
+			<lev:Themanaam>hoogspanning</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact1/LG_hoogspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact1/MV_hoogspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact1/AN_hoogspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>laagspanning</lev:Thema>
+			<lev:Themanaam>laagspanning</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact1/LG_laagspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact1/MV_laagspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact1/AN_laagspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>middenspanning</lev:Thema>
+			<lev:Themanaam>middenspanning</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact1/LG_middenspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact1/MV_middenspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact1/AN_middenspanning_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/nbact1/ET_Netbeheerder+Actualiseren01_0000949099_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1001</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000551269</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>bw</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>bw</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Administratie van de regio</lev:Naam>
+				<lev:Telefoon>073-6838888</lev:Telefoon>
+				<lev:Email>wion@brabantwater.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Regio Midden</lev:Naam>
+				<lev:Telefoon>0736838900</lev:Telefoon>
+				<lev:Email>regiomiddenadministratie@brabantwater.nl</lev:Email>
+				<lev:Fax>0736838949</lev:Fax>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>073-6838888</lev:Storingsnummer>
+			<lev:Beschadigingsnummer>073-6838888</lev:Beschadigingsnummer>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>laagspanning</lev:Thema>
+			<lev:Themanaam>laagspanning</lev:Themanaam>
+			<lev:Toezichthouders>
+				<lev:Naam>via administratie van de regio (zie brief)</lev:Naam>
+				<lev:Telefoon>073-6838888</lev:Telefoon>
+				<lev:Email>regioadministratiexxx@brabantwater.nl</lev:Email>
+			</lev:Toezichthouders>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1001/LG_laagspanning_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1001/AN_laagspanning_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>water</lev:Thema>
+			<lev:Themanaam>water</lev:Themanaam>
+			<lev:Toezichthouders>
+				<lev:Naam>via administratie van de regio (zie brief)</lev:Naam>
+				<lev:Telefoon>073-6838888</lev:Telefoon>
+				<lev:Email>regioadministratiexxx@brabantwater.nl</lev:Email>
+			</lev:Toezichthouders>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1001/LG_water_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1001/MV_water_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1001/AN_water_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>DK</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1001/DK_water_bw_0000551269_16O044309_753_208d_ringweg-wilhelminakanaal.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1001/BL_bw_0000551269_16O044309_brief.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/KL1001/ET_bw_0000551269_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1010</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000560460</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Eurofiber</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Eurofiber</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Speer IT</lev:Naam>
+				<lev:Email>wion.eurofiber@speerit.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>J.F. Tetelepta</lev:Naam>
+				<lev:Telefoon>0302428700</lev:Telefoon>
+				<lev:Email>vooroverleg@eurofiber.com</lev:Email>
+				<lev:Fax>0308005502</lev:Fax>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>datatransport</lev:Thema>
+			<lev:Themanaam>datatransport</lev:Themanaam>
+			<lev:Toezichthouders>
+				<lev:Naam>Eurofiber Nederland BV</lev:Naam>
+				<lev:Telefoon>030 242 87 00</lev:Telefoon>
+				<lev:Email>klic.melding@eurofiber.com</lev:Email>
+			</lev:Toezichthouders>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1010/LG_datatransport_Eurofiber_0000560460_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1010/MV_datatransport_Eurofiber_0000560460_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1010/AN_datatransport_Eurofiber_0000560460_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>DK</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1010/DK_datatransport_Eurofiber_0000560460_16O044309_Details.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>TB</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1010/TB_datatransport_Eurofiber_0000560460_16O044309_F12F01+Standaardvoorwaarden_Eurofiber.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1010/BL_Eurofiber_0000560460_16O044309_Brief-Belang.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>nbact2</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000949094</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Gemeente Actualiseren02</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Netbeheerder Actualiseren02</lev:BedrijfsnaamAfkorting>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Klic nbact2</lev:Naam>
+				<lev:Telefoon>088-1239002</lev:Telefoon>
+				<lev:Email>klic-contact@actualiseren02.nl</lev:Email>
+				<lev:Fax>088-9239002</lev:Fax>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>rioolVrijverval</lev:Thema>
+			<lev:Themanaam>riool vrijverval</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact2/LG_riool+vrijverval_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact2/MV_riool+vrijverval_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact2/AN_riool+vrijverval_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>rioolOnderOverOfOnderdruk</lev:Thema>
+			<lev:Themanaam>riool onder druk</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact2/LG_riool+onder+druk_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact2/MV_riool+onder+druk_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact2/AN_riool+onder+druk_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/nbact2/ET_Netbeheerder+Actualiseren02_0000949094_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1051</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000546663</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>KPN</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>KPN</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>KPN KLIC-loket</lev:Naam>
+				<lev:Telefoon>030-25 53334</lev:Telefoon>
+				<lev:Email>orderintakeplan@kpn.com</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>KPN Klic-loket</lev:Naam>
+				<lev:Telefoon>(030) 255 33 34</lev:Telefoon>
+				<lev:Email>orderintakeplan@kpn.com</lev:Email>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>0800 023 01 93</lev:Storingsnummer>
+			<lev:Beschadigingsnummer>0800 023 01 93</lev:Beschadigingsnummer>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>datatransport</lev:Thema>
+			<lev:Themanaam>datatransport</lev:Themanaam>
+			<lev:Toezichthouders>
+				<lev:Naam>KPN KLIC-loket</lev:Naam>
+				<lev:Telefoon>030-25 53334</lev:Telefoon>
+				<lev:Email>orderintakeplan@kpn.com</lev:Email>
+			</lev:Toezichthouders>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1051/LG_datatransport_KPN_0000546663_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1051/MV_datatransport_KPN_0000546663_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1051/AN_datatransport_KPN_0000546663_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5684XG_2</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5684XG_2.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AA_19</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AA_19.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AB_27</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AB_27.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AB_29</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AB_29.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AC_30</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AC_30.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AC_6</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AC_6.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AK_18</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AK_18.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>HA</lev:SoortThemaBijlage>
+				<lev:Adres>5685AV_16</lev:Adres>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/HA_datatransport_KPN_0000546663_16O044309_5685AV_16.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>TB</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1051/TB_datatransport_KPN_0000546663_16O044309_Waterkruisingen.PDF</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1051/BL_KPN_0000546663_16O044309_Brief-belang.PDF</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/KL1051/ET_KPN_0000546663_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoPlan</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/KL1051/PT_KPN_0000546663_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1049</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000579733</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Reggefiber</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Reggefiber</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Reggefiber Operator bv</lev:Naam>
+				<lev:Email>ReggefiberKliconMail@speerit.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Reggefiber Regio Zuid</lev:Naam>
+				<lev:Telefoon>0548800893</lev:Telefoon>
+				<lev:Email>klic-zuid@reggefiber.nl</lev:Email>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>datatransport</lev:Thema>
+			<lev:Themanaam>datatransport</lev:Themanaam>
+			<lev:Toezichthouders>
+				<lev:Naam>Reggefiber Operator bv</lev:Naam>
+				<lev:Telefoon>+31 (0)548 800 8</lev:Telefoon>
+				<lev:Email>beheerpassief@reggefiber.nl</lev:Email>
+			</lev:Toezichthouders>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1049/LG_datatransport_Reggefiber_0000579733_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1049/MV_datatransport_Reggefiber_0000579733_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1049/AN_datatransport_Reggefiber_0000579733_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>DK</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1049/DK_datatransport_Reggefiber_0000579733_16O044309_Details.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1049/BL_Reggefiber_0000579733_16O044309_Brief-Belang+Regio+Zuid.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1011</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000546674</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Ziggo BV</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Ziggo BV</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Afd. ROS Regional Project Infrastructure</lev:Naam>
+				<lev:Telefoon>088 - 717 3025</lev:Telefoon>
+				<lev:Email>topografie.zuid@office.ziggo.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Network Infrastructure South</lev:Naam>
+				<lev:Telefoon>0887174402</lev:Telefoon>
+				<lev:Email>topografie.zuid@office.ziggo.nl</lev:Email>
+				<lev:Fax>0887173711</lev:Fax>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>088 - 717 3315</lev:Storingsnummer>
+			<lev:Beschadigingsnummer/>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>datatransport</lev:Thema>
+			<lev:Themanaam>datatransport</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/KL1011/LG_datatransport_Ziggo+BV_0000546674_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/KL1011/MV_datatransport_Ziggo+BV_0000546674_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/KL1011/AN_datatransport_Ziggo+BV_0000546674_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+			<lev:ThemaBijlagen>
+				<lev:SoortThemaBijlage>TB</lev:SoortThemaBijlage>
+				<lev:Bijlage>
+					<lev:Bestandsnaam>bronnen/KL1011/TB_datatransport_Ziggo+BV_0000546674_16O044309_Regiobrief.pdf</lev:Bestandsnaam>
+				</lev:Bijlage>
+			</lev:ThemaBijlagen>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoPlan</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/KL1011/PT_Ziggo+BV_0000546674_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>KL1015</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000565862</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Ziggo Services</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Ziggo Services</lev:BedrijfsnaamAfkorting>
+			<lev:Contact>
+				<lev:Naam>Ziggo Services</lev:Naam>
+				<lev:Telefoon>0582348800</lev:Telefoon>
+				<lev:Email>klicnl@office.ziggo.nl</lev:Email>
+			</lev:Contact>
+			<lev:Contactpersoon>
+				<lev:Naam>Afdeling NI&amp;C - Klic &amp; Inlichtingen</lev:Naam>
+				<lev:Telefoon>058-2348800</lev:Telefoon>
+				<lev:Email>klicnl@office.ziggo.nl</lev:Email>
+			</lev:Contactpersoon>
+			<lev:Storingsnummer>08002200022</lev:Storingsnummer>
+			<lev:Beschadigingsnummer>08002200022</lev:Beschadigingsnummer>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>false</lev:BetrokkenBijAanvraag>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1015/BL_Ziggo+Services_0000565862_16O044309_letter.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+		<lev:Bijlagen>
+			<lev:SoortBijlage>BL</lev:SoortBijlage>
+			<lev:Bijlage>
+				<lev:Bestandsnaam>bronnen/KL1015/BL_Ziggo+Services_0000565862_16O044309_voorwaarden.pdf</lev:Bestandsnaam>
+			</lev:Bijlage>
+		</lev:Bijlagen>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>nbact3</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000949090</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Netbeheerder Actualiseren03</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Netbeheerder Actualiseren03</lev:BedrijfsnaamAfkorting>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Klic nbact3</lev:Naam>
+				<lev:Telefoon>088-1239003</lev:Telefoon>
+				<lev:Email>klic-contact@actualiseren03.nl</lev:Email>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>buisleidingGevaarlijkeInhoud</lev:Thema>
+			<lev:Themanaam>buisleiding gevaarlijke inhoud</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact3/LG_buisleiding+gevaarlijke+inhoud_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact3/MV_buisleiding+gevaarlijke+inhoud_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact3/AN_buisleiding+gevaarlijke+inhoud_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>gasLageDruk</lev:Thema>
+			<lev:Themanaam>gas lage druk</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact3/LG_gas+lage+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact3/MV_gas+lage+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact3/AN_gas+lage+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Themas>
+			<lev:Thema>gasHogeDruk</lev:Thema>
+			<lev:Themanaam>gas hoge druk</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact3/LG_gas+hoge+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact3/MV_gas+hoge+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact3/AN_gas+hoge+druk_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/nbact3/ET_Netbeheerder+Actualiseren03_0000949090_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>nbact4</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000949087</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Netbeheerder Actualiseren04</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Netbeheerder Actualiseren04</lev:BedrijfsnaamAfkorting>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Klic nbact4</lev:Naam>
+				<lev:Telefoon>088-1239004</lev:Telefoon>
+				<lev:Email>klic-contact@actualiseren04.nl</lev:Email>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>datatransport</lev:Thema>
+			<lev:Themanaam>datatransport</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact4/LG_datatransport_Netbeheerder+Actualiseren04_0000949087_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact4/MV_datatransport_Netbeheerder+Actualiseren04_0000949087_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact4/AN_datatransport_Netbeheerder+Actualiseren04_0000949087_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/nbact4/ET_Netbeheerder+Actualiseren04_0000949087_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+	<!-- ___________________________________________________________________________________________________
+-->
+	<lev:NetbeheerderLeveringen>
+		<lev:Netbeheerder>
+			<lev:Bronhoudercode>nbact5</lev:Bronhoudercode>
+			<lev:RelatienummerNetbeheerder>0000949084</lev:RelatienummerNetbeheerder>
+			<lev:Bedrijfsnaam>Netbeheerder Actualiseren05</lev:Bedrijfsnaam>
+			<lev:BedrijfsnaamAfkorting>Netbeheerder Actualiseren05</lev:BedrijfsnaamAfkorting>
+			<lev:Contactpersoon>
+				<lev:Naam>Medewerker Klic nbact5</lev:Naam>
+				<lev:Telefoon>088-1239005</lev:Telefoon>
+				<lev:Email>klic-contact@actualiseren05.nl</lev:Email>
+			</lev:Contactpersoon>
+		</lev:Netbeheerder>
+		<lev:BetrokkenBijAanvraag>true</lev:BetrokkenBijAanvraag>
+		<lev:Themas>
+			<lev:Thema>water</lev:Thema>
+			<lev:Themanaam>water</lev:Themanaam>
+			<lev:EisVoorzorgmaatregel>false</lev:EisVoorzorgmaatregel>
+			<lev:Ligging>
+				<lev:Bestandsnaam>bronnen/nbact5/LG_water_Netbeheerder+Actualiseren05_0000949084_16O044309.png</lev:Bestandsnaam>
+			</lev:Ligging>
+			<lev:Maatvoering>
+				<lev:Bestandsnaam>bronnen/nbact5/MV_water_Netbeheerder+Actualiseren05_0000949084_16O044309.png</lev:Bestandsnaam>
+			</lev:Maatvoering>
+			<lev:Annotatie>
+				<lev:Bestandsnaam>bronnen/nbact5/AN_water_Netbeheerder+Actualiseren05_0000949084_16O044309.png</lev:Bestandsnaam>
+			</lev:Annotatie>
+		</lev:Themas>
+		<lev:Ondergrondkaarten>
+			<lev:SoortOndergrondkaart>eigenTopoBestaand</lev:SoortOndergrondkaart>
+			<lev:Ondergrondkaart>
+				<lev:Bestandsnaam>bronnen/nbact5/ET_Netbeheerder+Actualiseren05_0000949084_16O044309.png</lev:Bestandsnaam>
+			</lev:Ondergrondkaart>
+		</lev:Ondergrondkaarten>
+	</lev:NetbeheerderLeveringen>
+</lev:Leveringsinformatie>
