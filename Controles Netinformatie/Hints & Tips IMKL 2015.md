@@ -94,6 +94,26 @@ Een fout in de volgorde van hóe het feature is gedefinieerd in de GML.
 
 Bv: Invalid content was found starting with element 'imkl:Annotatie'. One of '{"http://www.opengis.net/gml/3.2":AbstractFeature}' is expected. \[lineNr: x, columnNr: y\]
 
+# Geometrie
+
+## Ongeldige geometrie: Self-intersection
+
+In de output van de validatie staat bijvoorbeeld het volgende:
+
+> GML-ID	Fouttype	Foutcategorie	Omschrijving
+> nl.imkl.KL1031.EG__elec_e_lv_connection_cable_36942610_SQ_731807	ERROR	ongeldige geometrie	Er is een ongeldige geometrie aangetroffen in het feature: Self-intersection[233088.054549074 583950.783440504]  [FeatureMember starting at line number: 16331983]
+
+Het betreffende feature ziet er als volgt uit.
+
+![feature](images/feature.png "Het feature in GML")
+
+Hieronder de bijbehorende visualisatie van de hele geometrie en ingezoomt op het intersectiepunt: 
+
+![hele geometrie](images/intersection1.png "De hele geometrie")
+![ingezoomd](images/intersection2.png "Ingezoomt op het intersectiepunt")
+
+Deze vorm van intersectie is niet toegestaan in de Simple Feature specificatie.
+
 # Thema’s
 
 De volgende bevindingen komen voort uit validatie van feature type thematiek en attributen in IMKL 2015 compliant GML.
