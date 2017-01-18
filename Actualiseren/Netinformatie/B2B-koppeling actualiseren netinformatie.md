@@ -508,7 +508,7 @@ _Figuur 15 - Response body met details van een specifieke aanlevering_
 
 Wanneer een aanlevering de status “Gereed voor handmatige controle” heeft, kan deze goedgekeurd of afgekeurd worden. In het geval dat er een fout is opgetreden bij een aanlevering, dan moet deze aanlevering eerst geannuleerd worden, voordat er een nieuwe aanlevering verwerkt kan worden.
 
-Deze operaties werken op dezelfde manier, alleen wordt er een ander endpoint aangeroepen. De betreffende endpoints zijn:
+Deze operaties werken op dezelfde manier, alleen wordt er een ander endpoint aangeroepen. De betreffende endpoints zijn: 
 
 -   /aanlevering/netinformatie/{aanleveringId}/netbeheerder/goedkeuren
 -   /aanlevering/netinformatie/{aanleveringId}/netbeheerder/afkeuren
