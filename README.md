@@ -6,4 +6,4 @@ Het berichtenprotocol KLIC-WIN vindt u [hier.](https://github.com/Kadaster/KLIC-
 
 Het plaatsen van reviewcommentaar (issue) doet u [hier.](https://github.com/Kadaster/KLIC-WIN/issues)
 
-Geef een duidelijke en volledige beschrijving van uw reviewcommentaar en verwijs naar een hoofdstuknummer of paginanummer.
+Geef een duidelijke en volledige beschrijving van uw reviewcommentaar en verwijs naar een hoofdstuknummer of paginanummer. 
