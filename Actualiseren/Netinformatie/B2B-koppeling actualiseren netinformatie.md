@@ -196,7 +196,7 @@ In dit voorbeeld wordt uitgegaan van een netbeheerder die zelf een aanlevering d
 
 #### Endpoints
 
-De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. Voor NTD netinformatie bevindt deze API zich op <https://service10.kadaster.nl/klic/ntd/actualiseren/netinformatie/rest>.
+De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. Voor NTD netinformatie bevindt deze API zich op <https://service10.kadaster.nl/klic/ntd/actualiseren/netinformatie/api/rest>.
 
 Voor de NTD Upload servlet bevindt deze API zich op <https://service10.kadaster.nl/klic/ntd/actualiseren/netinformatie/upload/api>.
 
