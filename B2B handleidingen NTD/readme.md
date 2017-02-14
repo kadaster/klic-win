@@ -1,4 +1,4 @@
-# Handleidingen Netbeheerder Testdienst
+# B2B Handleidingen Netbeheerder Testdienst
 
 Deze pagina's bieden handleidingen voor het aanleveren van netinformatie en documenten in de Netbeheerders Testdienst (NTD). De handleidingen beschrijven de processen van het aanleveren van netinformatie en documenten door netbeheerders en serviceproviders via de Web API's die het Kadaster beschikbaar heeft gesteld.
 
