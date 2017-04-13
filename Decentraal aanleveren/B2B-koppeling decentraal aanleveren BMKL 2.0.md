@@ -203,6 +203,8 @@ Klik nu op de button “Start test”. Dit zorgt er voor dat er een gebiedsinfor
 
 Wanneer het bericht succesvol is verzonden, verschijnt onderstaand scherm.
 
+**Let op: vanaf het moment dat het bericht succesvol is verzonden, kan het een paar minuten duren voordat de gebiedsinformatie-aanvraag beschikbaar is.**
+
 <img src="images/NTD-Testmelding-BMKL20-5.png" />
 
 _Figuur 9  Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 5_
@@ -250,13 +252,22 @@ De API Documentatie kan bereikt worden via een link op het NTD portaalscherm.
 
 _Figuur 10 API Documentatie Link_
 
-Het klikken van de link brengt u naar de overzichtspagina van de API documentatie. Onder de link "Beheerdersinformatie" vindt u de API voor de BMKL 2.0.
+Het klikken van de link brengt u naar de overzichtspagina van de API Documentatie. Onder "Beheerdersinformatie" vindt u een link naar:
+
+**API Testfaciliteit**
+
+Een hulpmiddel om op basis van de API specificatie eenvoudig de beschikbare services uit te proberen.
+
+**API Specificatie document**
+
+Een beschrijving van de API volgens de OpenAPI specificatie in YAML (JSON) formaat. Dit biedt de softwareontwikkelaar een duidelijke beschrijving van de interface ten behoeve van integratie in eigen software.
+
 
 <img src="images/KLIC-API-documentatie-BMKL20.png" />
 
 _Figuur 11 API Documentatie Beheerdersinformatie / BMKL 2.0_
 
-De "Beheerdersinformatie" link brengt u naar een Swagger pagina waar alle services beschreven zijn.
+De "API Testfaciliteit" link brengt u naar een Swagger pagina waar alle services beschreven zijn.
 
 <img src="images/KLIC-API-documentatie-BMKL20-detail.png" />
 
