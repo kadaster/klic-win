@@ -1,5 +1,12 @@
 # Release notes
 
+### 13 april 2017
+- BMKL2.0 in NTD beschikbaar
+
+### 31 maart 2017
+- Technische aanpassingen t.b.v. livegang BMKL2.0 in NTD
+- Bugfixes
+
 ### 23 februari 2017
 - Bugfix m.b.t. B2B aanleveren netinformatie/documenten
 
