@@ -199,7 +199,7 @@ _Figuur 5 - Chrome hulpprogramma's voor ontwikkelaars_
 4.  Navigeer naar de ‘Application’ tab
 5.  Onder Storage &gt; Cookies &gt; <https://mijn.kadaster.nl> is een lijst van cookies te zien voor dit domein.
 
-De waarde van het cookie “KadasterTicketId” kan vervolgens gebruikt worden om de requests vanuit CURL te authentiseren. In CURL wordt het cookie meegegeven met de parameter `--cookie “KadasterTicket=54f1278c8ed9ba7d50ce6e0ecdb8fd7e”`
+De waarde van het cookie “KadasterTicketId” kan vervolgens gebruikt worden om de requests vanuit CURL te authentiseren. In CURL wordt het cookie meegegeven met de parameter `--cookie "KadasterTicket=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"`
 
 <img src="images/image5.png" width="604" height="334" />  
 _Figuur 6 - Cookies voor <https://mijn.kadaster.nl>_
@@ -241,19 +241,20 @@ De parameters zijn ingevuld met gegevens voor het aan te leveren bestand, “aan
 curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder
 -v
 -X POST
---cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e'
--H 'X-Upload-Content-Length: 1405'
--H 'X-Upload-Content-Type: application/zip'
--H 'X-Upload-Filename: aanlevering.zip'
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"
+-H "X-Upload-Content-Length: 1405"
+-H "X-Upload-Content-Type: application/zip"
+-H "X-Upload-Filename: aanlevering.zip"
 ```
-**Response:**  
+
+> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+
+**Response:**
 ```
 HTTP/1.1 200 OK
 Location: https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/upload/api/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 ```  
 _Figuur 8 - Het CURL commando voor het aanmelden van een aanlevering en een deel van de response_
-
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Figuur 8 toont het CURL commando en het resultaat van het request. De response code 200 geeft aan dat het request succesvol verwerkt is. Een belangrijke parameter in de response is de header “Location”. Dit is een endpoint in de “Upload servlet” API waarnaar het zipbestand geüpload moet worden.
 
@@ -283,20 +284,21 @@ De parameters vertalen zich naar het volgende CURL commando:
 curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/upload/api/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 -v
 -X PUT
---cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e'
--H 'Content-Type: application/octet-stream&quot'
--H 'Content-Length: 1405'
--H 'Content-Range: bytes 0-1404/1405'
---data-binary @'D:\aanlevering.zip'
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"
+-H "Content-Type: application/octet-stream"
+-H "Content-Length: 1405"
+-H "Content-Range: bytes 0-1404/1405"
+--data-binary @"D:\aanlevering.zip"
 ```  
-**Response:**  
+
+> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+
+**Response:**
 ```
 HTTP/1.1 200 OK
 Range: bytes=0-1404
 ```  
 _Figuur 10 - CURL commando en het response voor het versturen van data_
-
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Wanneer het request succesvol verwerkt wordt, geeft de server een 200 OK response en de range aan bytes die ontvangen is voor deze upload. Deze **Range** header wordt uitgebreid besproken in de sectie [Aanlevering hervatten](#aanlevering-hervatten).
 
@@ -332,20 +334,21 @@ Deze header maakt het ook mogelijk om een upload te hervatten wanneer er - om wa
 curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/upload/api/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 -v
 -X PUT
---cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e'
--H 'Content-Type: application/octet-stream'
--H 'Content-Length: 0'
--H 'Content-Range: bytes */1405'
---data-binary @'D:\aanlevering.zip'
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"
+-H "Content-Type: application/octet-stream"
+-H "Content-Length: 0"
+-H "Content-Range: bytes */1405"
+--data-binary @"D:\aanlevering.zip"
 ```
-**Response:**  
+
+> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+
+**Response:**
 ```
 HTTP/1.1 200 OK
 Range: bytes=0-1404
 ```  
 _Figuur 11 - CURL commando voor het ophalen van de status van een upload_
-
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Wanneer nog niet alle bytes van een zipbestand ontvangen zijn, kan aan de **Range** header afgeleid worden vanaf welke byte de draad weer opgepakt kan worden.
 
@@ -359,7 +362,8 @@ Het endpoint */aanleveringen/documenten/netbeheerder* levert een lijst van aanle
 
 **Request**  
 ```sh
-curl --cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e' https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e" 
 ```  
 _Figuur 12 - CURL commando voor het opvragen van een lijst van aanleveringen_
 
@@ -417,7 +421,8 @@ Voor het ophalen van de details van een specifieke aanlevering wordt het endpoin
 
 **Request**  
 ```sh
-curl --cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e' https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"
 ```  
 _Figuur 14 - CURL commando voor het opvragen van details van een aanlevering_
 
@@ -522,16 +527,17 @@ In dit voorbeeld wordt de aanlevering goedgekeurd en wordt dus het eerste endpoi
 **Request**  
 ```sh
 curl https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder/goedkeuren
---cookie 'KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e'
+--cookie "KadasterTicketId=54f1278c8ed9ba7d50ce6e0ecdb8fd7e"
 -v
 -X POST
 ```
+
+> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+
 **Response:**
 ```
 HTTP/1.1 200 OK
 ```  
 _Figuur 16 - Het CURL commando voor het goedkeuren van een aanlevering en een deel van de response_
-
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Na het goedkeuren wordt de aanlevering verwerkt en in productie gezet. De aanlevering krijgt dan uiteindelijk de status “In productie”. Dit kun je verifiëren door de aanlevering nogmaals op te halen (zie de sectie [Individuele aanlevering](#individuele-aanlevering)).
