@@ -1,5 +1,8 @@
 # Release notes
 
+### 1 juni 2017
+- Validaties conform IMKL versie 1.2 in Kadaster KLIC-WIN systemen
+
 ### 13 april 2017
 - BMKL2.0 in NTD beschikbaar
 
