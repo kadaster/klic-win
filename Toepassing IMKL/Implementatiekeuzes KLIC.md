@@ -209,4 +209,3 @@ Voor de featuretypes die in het Klic-proces door het Kadaster worden aangemaakt,
 | Bijlage                      | het object Bijlage (algemeen/nietBetrokken) wordt overgenomen uit de centrale voorziening; daarmee wordt de `beginLifespanVersion` ook overgenomen  |
 | Belang                       | het object Belang wordt overgenomen uit de centrale voorziening; daarmee wordt de `beginLifespanVersion` ook overgenomen  |
 | Beheerder                    | laatste mutatiedatum van een feature uit de Klic-registratie  |
-
