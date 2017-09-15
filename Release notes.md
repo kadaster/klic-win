@@ -1,5 +1,56 @@
 # Release notes
 
+### 14 september 2017
+
+#### _IMKL versie 1.2.1 in Kadaster KLIC-WIN systemen_
+
+> ##### Wijzigingen in waardelijsten
+>
+> 1. http://definities.geostandaarden.nl/imkl2015/id/waardelijst/AnnotatieTypeValue \
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlDubbelgericht \
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlEnkelgericht
+>
+>
+> 2. http://definities.geostandaarden.nl/imkl2015/id/waardelijst/MaatvoeringsTypeValue \
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl
+>
+> ##### Wijzigingen in features
+>
+> 1. Belanghebbende (XSD-wijziging) \
+> Element “netinformatie” is hernoemd naar “utiliteitsnet”. \
+> Element “geraaktBelangGraafpolygoon” is hernoemd naar “geraaktBelangBijGraafpolygoon”. \
+> Element “geraaktBelangInformatiepolygoon” is hernoemd naar “geraaktBelangBijInformatiepolygoon”. \
+> Element “geraaktBelangOrientatiepolygoon” is hernoemd naar “geraaktBelangBijOrientatiepolygoon”.
+>
+> 2. Diepte (XSD-wijziging) \
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+>
+> 3. ExtraGeometrie (XSD-wijziging) \
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+>
+> 4. Diepte (XSD-wijziging) \
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+>
+> 5. Organisatie (XSD-wijziging) \
+> “Organisatie” is geen gml-feature meer, maar een element dat binnen andere features kan worden gebruikt
+>
+>
+> ##### Nieuwe controles (naast XSD-controle)
+> 1. rotatiehoek is verplicht bij Maatvoering van het type maatvoeringslabel of maatvoeringspijlpunt.
+> 2. rotatiehoek is verplicht bij Annotatie van het type annotatielabel of annotatiepijlpunt.
+> 3. label is verplicht bij Maatvoering van het type maatvoeringslabel.
+> 4. label is verplicht bij Annotatie van het type annotatielabel.
+> 5. Binnen “Appurtenance”-features moet element “inNetwork” eenmaal voorkomen.
+> 6. Binnen “Elektriciteitskabel”-features moet element “inNetwork” eenmaal voorkomen.
+> 7. Binnen “OlieGasChemicalienPijpleiding”-features moet element “inNetwork” eenmaal voorkomen.
+> 8. Binnen “Overig”-features moet element “inNetwork” eenmaal voorkomen.
+> 9. Binnen “Rioolleiding”-features moet element “inNetwork” eenmaal voorkomen.
+> 10. Binnen “Telecommunicatiekabel”-features moet element “inNetwork” eenmaal voorkomen.
+> 11. Binnen “ThermischePijpleiding”-features moet element “inNetwork” eenmaal voorkomen.
+> 12. Binnen “Waterleiding”-features moet element “inNetwork” eenmaal voorkomen.
+> 13. Binnen feature “Overig” mag element “pipeDiameter” geen “nilReason” hebben.
+
+
 ### 1 juni 2017
 - Validaties conform IMKL versie 1.2 in Kadaster KLIC-WIN systemen
 
