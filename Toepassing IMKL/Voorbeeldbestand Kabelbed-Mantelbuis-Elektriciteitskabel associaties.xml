@@ -80,7 +80,7 @@
 				</base:Identifier>
 			</net:inspireId>
 			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
-			<net:link xlink:href="nl.imkl-KL3131.m_kb1_ulink"/>
+			<net:link xlink:href="nl.imkl-KL3131.m_mb1_ulink"/>
 			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
 			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
 			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
