@@ -75,7 +75,7 @@ Een centrale netbeheerder of serviceprovider kan op twee manieren netinformatie 
 
 In beide gevallen wordt de netinformatie aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
 
-In het zipbestand staat in de root één XML-bestand conform de IMKL2015_wion XSD. Er zitten verder geen andere bestanden in het zipbestand.
+In het zipbestand staat een XML-bestand, conform de IMKL2015_wion XSD, dat voldoet aan de naamgeving van een netinformatie bestand. Eventuele overige bestanden in het zipbestand worden genegeerd
 
 Het XML-bestand bevat altijd alle assets van de netbeheerder die van belang zijn voor de WION.
 
