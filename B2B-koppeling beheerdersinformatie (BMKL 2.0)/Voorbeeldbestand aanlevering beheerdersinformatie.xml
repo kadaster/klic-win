@@ -54,11 +54,12 @@
 				</imkl:NEN3610ID>
 			</imkl:identificatie>
 			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:beheerdersinformatieGeleverd>true</imkl:beheerdersinformatieGeleverd>
 			<imkl:betrokkenBijAanvraag>true</imkl:betrokkenBijAanvraag>
 			<imkl:eisVoorzorgsmaatregel>true</imkl:eisVoorzorgsmaatregel>
 			<imkl:utiliteitsnet xlink:href="nl.imkl-KL3131.net_data_00571"/>
 			<imkl:utiliteitsnet xlink:href="nl.imkl-KL3131.net_w_00003"/>
-			<imkl:bijlage xlink:href="nl.imkl-KL3131.MijnAlgemeneBijlage"/>
+			<imkl:bijlage xlink:href="nl.imkl-KL3131.mijnBL_Algemeen"/>
 			<imkl:bijlage xlink:href="nl.imkl-KL3131.mijnEVBL_17G000041_warmte"/>
 			<imkl:netbeheerder xlink:href="nl.imkl-KL3131._Beheerder"/>
 		</imkl:Belanghebbende>
