@@ -1,6 +1,6 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen
 
-De centrale voorziening van KLIC heeft de mogelijkheid om eis voorzorgsmaatregelen (EV) te bepalen namens een centrale netbeheerder. In deze map wordt documentatie en diverse voorbeelden beschikbaar gesteld om de werking en de toepassing van deze functionaliteit toe te lichten.    
+De centrale voorziening van KLIC heeft de mogelijkheid om eis voorzorgsmaatregelen (EV) te bepalen namens een centrale netbeheerder. In deze map worden documentatie en diverse voorbeelden beschikbaar gesteld om de werking en de toepassing van deze functionaliteit toe te lichten.    
 Omdat er momenteel nog wordt ontwikkeld aan deze module, is deze informatie nog niet definitief.
 
 Deze map bevat:
@@ -17,3 +17,4 @@ Deze map bevat:
   * Voorbeeld aanlevering voorzorgsmaatregelen KL3131 (alleen GHD) - zipbestand met ingevulde voorzorgsmaatregelen (simpel)
   * Voorbeeld EV-beslissingsregels (Enander, meer thema's) - documentatie over ingevulde voorzorgsmaatregelen (uitgebreider)
   * Voorbeeld aanlevering voorzorgsmaatregelen KL3131 (divers) - zipbestand met ingevulde voorzorgsmaatregelen (uitgebreider)
+  * Voorbeeld aanlevering netinformatie+voorzorgsmaatregelen KL3131 (alleen GHD) - zipbestand met netinformatie + voorzorgsmaatregelen (simpel)
