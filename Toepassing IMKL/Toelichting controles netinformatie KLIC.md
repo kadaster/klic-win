@@ -75,7 +75,7 @@ Een centrale netbeheerder of serviceprovider kan op twee manieren netinformatie 
 
 In beide gevallen wordt de netinformatie aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
 
-In het zipbestand staat in de root één XML-bestand conform de IMKL2015_wion XSD. Er zitten verder geen andere bestanden in het zipbestand.
+In het zipbestand staat een XML-bestand, conform de IMKL2015_wion XSD, dat voldoet aan de naamgeving van een netinformatie bestand. Eventuele overige bestanden in het zipbestand worden genegeerd
 
 Het XML-bestand bevat altijd alle assets van de netbeheerder die van belang zijn voor de WION.
 
@@ -111,7 +111,7 @@ Hieronder worden de controles behandeld.
 Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn en mag niet groter zijn dan een bepaalde grootte. De maximale grootte voor de eindsituatie is voorlopig gesteld op 2GB.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
-* Het aangeleverde ZIP-archief mag maximaal 1 XML-bestand bevatten. Dit XML-bestand bevindt zich in de root van het ZIP-archief en heeft de bestands-extensie .xml. De bestands-extensie is met kleine letters.
+* Ten behoeve van de aanlevering van netinformatie dient het ZIP-archief één XML bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.
 * De bestandsnaam van het ZIP-archief of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
   * Bestandsnaam mag niet langer zijn dan 120 tekens.
   * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
