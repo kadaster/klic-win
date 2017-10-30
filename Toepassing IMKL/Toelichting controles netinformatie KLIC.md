@@ -469,6 +469,7 @@ Voorbeeld van een associatie van een elektriciteitskabel naar het utiliteitsnet 
    ...
 </imkl:Elektriciteitskabel>
 ```
+
 Daarnaast zijn er natuurlijk associaties naar codelijsten/waardelijsten die elders beschikbaar worden gesteld. Ook deze worden gerefereerd met behulp van `xlink:href="..."`.
 Voorbeelden:
 ```xml
