@@ -1,8 +1,9 @@
-# B2B-koppeling aanleveren via BMKL 2.0
+# B2B-koppeling BMKL 2.0
 
 Dit document biedt een handleiding voor het aanleveren van beheerdersinformatie
-via de B2B-koppeling volgens het BMKL 2.0.
+via de B2B-koppeling volgens het BMKL 2.0. als decentrale netbeheerder.
 
+Ook worden de services beschreven waarvan een centrale netbeheerder gebruik van kan maken.
 
 
 **Inhoudsopgave**
@@ -10,26 +11,26 @@ via de B2B-koppeling volgens het BMKL 2.0.
 -   [Context](#context)
 -   [Scope](#scope)
 -   [Leeswijzer](#leeswijzer)
--   [Beheerdersinformatie en documenten aanleveren](#beheerdersinformatie-en-documenten-aanleveren)
-    - [Authenticatie](#authenticatie)
-    - [Endpoints](#endpoints)
-    - [Opvoeren testmelding](#opvoeren-testmelding)
-        - [Mijn Kadaster](#mijn-kadaster)
-        - [KLIC Netbeheerder Testdienst portaal](#klic-netbeheerder-testdienst-portaal)
-        - [Opvoeren testmelding - 1 van 5](#opvoeren-testmelding---1-van-5)
-        - [Opvoeren testmelding - 2 van 5](#opvoeren-testmelding---2-van-5)
-        - [Opvoeren testmelding - 3 van 5](#opvoeren-testmelding---3-van-5)
-        - [Opvoeren testmelding - 4 van 5](#opvoeren-testmelding---4-van-5)
-        - [Opvoeren testmelding - 5 van 5](#opvoeren-testmelding---5-van-5)
-    - [Beheerdersinformatie aanleveren mbv REST interface](#beheerdersinformatie-aanleveren-mbv-rest-interface)
-        - [Netbeheerders en serviceproviders](#netbeheerders-en-serviceproviders)
-        - [Swagger API Documentatie](#swagger-api-documentatie)
-        - [Opvragen lijst van gebiedsinformatie-aanvragen](#opvragen-lijst-van-gebiedsinformatie-aanvragen)
-        - [Opvragen van één specifieke gebiedsinformatie-aanvraag](#opvragen-van-één-specifieke-gebiedsinformatie-aanvraag)
-        - [Gebiedsinformatie-aanvraag bevestigen](#gebiedsinformatie-aanvraag-bevestigen)
-        - [Beheerdersinformatie aanleveren](#beheerdersinformatie-aanleveren)
-        - [Opvragen gegevens aangeboden beheerdersinformatie](#opvragen-gegevens-aangeboden-beheerdersinformatie)
-        - [Uitgeleverde beheerdersinformatie opvragen](#uitgeleverde-beheerdersinformatie-opvragen)
+-   [Authenticatie](#authenticatie)
+-   [Endpoints](#endpoints)
+-   [Opvoeren testmelding (centraal/decentraal)](#opvoeren-testmelding)
+      - [Mijn Kadaster](#mijn-kadaster)
+      - [KLIC Netbeheerder Testdienst portaal](#klic-netbeheerder-testdienst-portaal)
+      - [Opvoeren testmelding - 1 van 5](#opvoeren-testmelding---1-van-5)
+      - [Opvoeren testmelding - 2 van 5](#opvoeren-testmelding---2-van-5)
+      - [Opvoeren testmelding - 3 van 5](#opvoeren-testmelding---3-van-5)
+      - [Opvoeren testmelding - 4 van 5](#opvoeren-testmelding---4-van-5)
+      - [Opvoeren testmelding - 5 van 5](#opvoeren-testmelding---5-van-5)
+-   [Beheerdersinformatie en documenten aanleveren (enkel decentraal)](#beheerdersinformatie-en-documenten-aanleveren-enkel-decentraal)
+-   [Beheerdersinformatie aanleveren mbv REST interface (enkel decentraal)](#beheerdersinformatie-aanleveren-mbv-rest-interface-enkel-decentraal)
+      - [Netbeheerders en serviceproviders](#netbeheerders-en-serviceproviders)
+      - [Swagger API Documentatie](#swagger-api-documentatie)
+      - [Opvragen lijst van gebiedsinformatie-aanvragen](#opvragen-lijst-van-gebiedsinformatie-aanvragen)
+      - [Opvragen van één specifieke gebiedsinformatie-aanvraag](#opvragen-van-één-specifieke-gebiedsinformatie-aanvraag)
+      - [Gebiedsinformatie-aanvraag bevestigen](#gebiedsinformatie-aanvraag-bevestigen)
+      - [Beheerdersinformatie aanleveren (enkel decentraal)](#beheerdersinformatie-aanleveren-enkel-decentraal)
+      - [Opvragen gegevens aangeboden beheerdersinformatie (enkel decentraal)](#opvragen-gegevens-aangeboden-beheerdersinformatie-enkel-decentraal)
+      - [Uitgeleverde beheerdersinformatie opvragen](#uitgeleverde-beheerdersinformatie-opvragen)
 
 ## Context
 Voor het oriënteren, plannen en uitvoeren van graafwerkzaamheden in een bepaald gebied hebben
@@ -64,11 +65,12 @@ In dit voorbeeld wordt er ingelogd als een netbeheerder. De API kan ook gebruikt
 Zie hiervoor [Netbeheerders en serviceproviders](#netbeheerders-en-serviceproviders)
 
 De sectie [Beheerdersinformatie en documenten aanleveren](#beheerdersinformatie-en-documenten-aanleveren) beschrijft het proces
-van het aanleveren van beheerdersinformatie en de bijbehorende documenten. Alle bestanden worden verpakt in één zipbestand.
+van het aanleveren van beheerdersinformatie en de bijbehorende documenten door de centrale netbeheerder. Alle bestanden worden verpakt in één zipbestand.
 
 Om dit zipbestand aan te kunnen leveren moet er eerst een testmelding opgevoerd worden, zodat er een gebiedsinformatie-aanvraag aangemaakt
 wordt waarvoor beheerdersinformatie en de bijbehorende documenten aangeleverd kunnen worden. Dit wordt beschreven in de
-sectie [Opvoeren testmelding](#opvoeren-testmelding)
+sectie [Opvoeren testmelding](#opvoeren-testmelding) De decentrale netbeheerder doet een testmelding via de link
+"Opvoeren testmelding - BMKL 2.0 decentraal (b&egrave;ta-versie)"
 
 De sectie [Beheerdersinformatie aanleveren mbv REST interface](#beheerdersinformatie-aanleveren-mbv-rest-interface) beschrijft de verschillende componenten van de API. Voor het aanleveren van een zipbestand kunnen achtereenvolgens de volgende secties doorlopen worden:
 
@@ -78,23 +80,14 @@ De sectie [Beheerdersinformatie aanleveren mbv REST interface](#beheerdersinform
 - [Beheerdersinformatie aanleveren](#beheerdersinformatie-aanleveren)
 
 Sectie [Opvragen gegevens aangeboden beheerdersinformatie](#opvragen-gegevens-aangeboden-beheerdersinformatie) beschrijft hoe vervolgens
-de status van een aanlevering gecontroleerd kan worden.
+de status van een aanlevering gecontroleerd kan worden van een decentrale netbeheerder.
 
 Sectie [Uitgeleverde beheerdersinformatie opvragen](#uitgeleverde-beheerdersinformatie-opvragen) beschrijft hoe een aangeleverd zipbestand gedownload kan worden.
 
-## Beheerdersinformatie en documenten aanleveren
-
-Beheerdersinformatie en de bijbehorende documenten worden aangeleverd in een zipbestand. Dit bestand moet voldoen aan de volgende voorwaarden:
-
-- Het zipbestand bevat exact één bestand met de extentie `.xml`. Dit bestand bevat de beheerdersinformatie in [IMKL 2015 formaat](https://register.geostandaarden.nl/imkl2015/index.html).
-- Het zipbestand mag één of meerdere PDF bestanden bevatten. Elk van deze bestanden moet gerefereerd worden vanuit het XML bestand.
-- Het zipbestand mag geen mappenstructuur bevatten; alle bestanden in het zipbestand moeten op het hoogste niveau in het zipbestand opgeslagen worden.
-
-Het aanbieden van beheerdersinformatie gaat in een aantal fases:
-
-1. Het opvragen van gebiedsinformatie-aanvragen waarvoor beheerdersinformatie moet worden aangeleverd
-2. Het bevestigen van een specifieke gebiedsinformatie-aanvraag, door deze te markeren als 'gezien'
-3. Het aanbieden van beheerdersinformatie voor de bevestigde gebiedsinformatie-aanvraag
+De centrale netbeheerder actualiseert in de NTD-omgeving eerst (indien van toepassing) documenten, via de link "NTD Actualiseren documenten (b&egrave;ta-versie)"
+en vervolgens netinformatie, via de link "NTD Actualiseren netinformatie (b&egrave;ta-versie)". Daarna doet de centrale netbeheerder een testmelding via de
+link "Opvoeren testmelding - BMKL 2.0 centraal (b&egrave;ta-versie)". De beheerdersinformatie en de bijbehorende documenten wordt naar aanleiding van de
+gedane testmelding smanegesteld door het Kadaster.
 
 ### Authenticatie
 
@@ -111,7 +104,7 @@ het betreffende cookie uit de browser gehaald. In Chrome gaat dat op de volgende
 2.  Log in
 3.  Open de hulpprogramma’s voor ontwikkelaars
 
-<img src="images/browser-hulpprogramma-ontwikkelaars.png" width="604" height="338" />
+![mijnKadaster](images/browser-hulpprogramma-ontwikkelaars.png "Hulpprogramma's voor ontwikkelaars")
 
 _Figuur 1 - Chrome hulpprogramma's voor ontwikkelaars_
 
@@ -119,9 +112,9 @@ _Figuur 1 - Chrome hulpprogramma's voor ontwikkelaars_
 5.  Onder Storage &gt; Cookies &gt; <https://mijn.kadaster.nl> is een lijst van cookies te zien voor dit domein.
 
 De waarde van het cookie “KadasterTicketId” kan vervolgens gebruikt worden om de requests vanuit CURL te authentiseren.
-In CURL wordt het cookie meegegeven met de parameter `--cookie “KadasterTicket=54f1278c8ed9ba7d50ce6e0ecdb8fd7e”`
+In CURL wordt het cookie meegegeven met de parameter `--cookie “KadasterTicket=0361ea1994a04255a1b60fefa2688de1”`
 
-<img src="images/browser-hulpprogramma-ontwikkelaars-cookie.png" width="604" height="334" />
+![mijnKadaster](images/browser-hulpprogramma-ontwikkelaars-cookie.png "Hulpprogramma's voor ontwikkelaars - Cookies")
 
 _Figuur 2 - Cookies voor <https://mijn.kadaster.nl>_
 
@@ -139,24 +132,27 @@ Na het inloggen in Mijn Kadaster kiest u via het menu voor "Klic Netbeheerder Te
 
 :information_source: Hiervoor dient u geautoriseerd te zijn.
 
-<img src="images/mijn-kadaster-ntd.png" />
+![mijnKadaster](images/mijn-kadaster-ntd.png "Mijn Kadaster - Klic Netbeheerder TestDienst")
 
 _Figuur 3 Mijn Kadaster - Klic Netbeheerder Testdienst_
 
 #### KLIC Netbeheerder Testdienst portaal
 
 Vervolgens opent zich het "Klic Netbeheerder Testdienst" portaalscherm met hierop alle opties die binnen de NTD beschikbaar worden gesteld,
-mits u hiervoor geautoriseerd bent. Op dit portaalscherm vindt u de link "Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie)" waar u een testmelding kunt opvoeren.
+mits u hiervoor geautoriseerd bent. Op dit portaalscherm vindt u de links waar u een testmelding kunt opvoeren:
 
-<img src="images/NTD-Portaal-BMKL20-TestMelding.png" />
+- "Opvoeren testmelding - BMKL 2.0 centraal (b&egrave;ta-versie)" waar u als centrale netbeheerder een testmelding kunt opvoeren
+- "Opvoeren testmelding - BMKL 2.0 decentraal (b&egrave;ta-versie)" waar u als decentrale netbeheerder een testmelding kunt opvoeren
+
+![mijnKadaster](images/NTD-Portaal-BMKL20-TestMelding.png "NTD Portaal - Testmelding")
 
 _Figuur 4 Optie voor opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie)_
 
 #### Opvoeren testmelding - 1 van 5
 
-Nadat u de link "Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie)" opent zich het 1e scherm van het opvoeren van een testmelding.
+Nadat u de link "Opvoeren testmelding - BMKL 2.0 centraal (b&egrave;ta-versie)" of "Opvoeren testmelding - BMKL 2.0 decentraal (b&egrave;ta-versie)" heeft aangeklikt opent zich het 1e scherm van het opvoeren van een testmelding.
 
-<img src="images/NTD-Testmelding-BMKL20-1.png" />
+![mijnKadaster](images/NTD-Testmelding-BMKL20-1.png "NTD Portaal - Testmelding opvoeren 1")
 
 _Figuur 5 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 1_
 
@@ -168,7 +164,7 @@ In dit scherm moet minimaal de volgende gegevens worden ingevoerd:
 - _Meldingsoort:_ het soort melding; Graafmelding, Calamiteitenmelding of Orientatieverzoek
 - _Gebiedspolygoon (WKT):_ de gebiedspolygoon in Well Known Text (WKT)
 
-:information_source: De informatiepolygoon (WKT) wordt nu nog niet ondersteund / gebruikt.
+:information_source: De informatiepolygoon (WKT) wordt nu nog niet ondersteund / gebruikt. In een latere release zal de informatiepolygoonfunctionaliteit worden toegevoegd.
 
 Kies daarna "Verder".
 
@@ -176,7 +172,7 @@ Kies daarna "Verder".
 
 Nadat alle gegevens zijn ingevoerd en de knop "Verder" is geklikt opent zich het volgende scherm waarin u de aanvangsdatum, verwachte einddatum en graafwerkzaamheden kunt opgeven.
 
-<img src="images/NTD-Testmelding-BMKL20-2.png" />
+![mijnKadaster](images/NTD-Testmelding-BMKL20-2.png "NTD Portaal - Testmelding opvoeren 2")
 
 _Figuur 6 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 2_
 
@@ -184,7 +180,7 @@ _Figuur 6 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 2_
 
 Controleer het gegeven BAG-adres en pas deze, indien nodig, aan. Selecteer Ja of Nee voor het aanvragen van huisaansluitschetsen. Indien gekozen is voor Nee, start de test.
 
-<img src="images/NTD-Testmelding-BMKL20-3.png" />
+![mijnKadaster](images/NTD-Testmelding-BMKL20-3.png "NTD Portaal - Testmelding opvoeren 3")
 
 _Figuur 7 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 3_
 
@@ -192,7 +188,7 @@ Indien gekozen is om huisaansluitschetsen toe te voegen kunt u deze in het volge
 
 #### Opvoeren testmelding - 4 van 5
 
-<img src="images/NTD-Testmelding-BMKL20-4.png" />
+![mijnKadaster](images/NTD-Testmelding-BMKL20-4.png "NTD Portaal - Testmelding opvoeren 4")
 
 _Figuur 8 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 4_
 
@@ -205,12 +201,25 @@ Wanneer het bericht succesvol is verzonden, verschijnt onderstaand scherm.
 
 **Let op: vanaf het moment dat het bericht succesvol is verzonden, kan het een paar minuten duren voordat de gebiedsinformatie-aanvraag beschikbaar is.**
 
-<img src="images/NTD-Testmelding-BMKL20-5.png" />
+![mijnKadaster](images/NTD-Testmelding-BMKL20-5.png "NTD Portaal - Testmelding opvoeren 5")
 
 _Figuur 9  Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 5_
 
+## Beheerdersinformatie en documenten aanleveren (enkel decentraal)
 
-### Beheerdersinformatie aanleveren mbv REST interface
+Beheerdersinformatie en de bijbehorende documenten worden aangeleverd in een zipbestand door de decentrale netbeheerder. Dit bestand moet voldoen aan de volgende voorwaarden:
+
+- Het zipbestand bevat exact één bestand met de extentie `.xml`. Dit bestand bevat de beheerdersinformatie in [IMKL 2015 formaat](https://register.geostandaarden.nl/imkl2015/index.html).
+- Het zipbestand mag één of meerdere PDF bestanden bevatten. Elk van deze bestanden moet gerefereerd worden vanuit het XML bestand.
+- Het zipbestand mag geen mappenstructuur bevatten; alle bestanden in het zipbestand moeten op het hoogste niveau in het zipbestand opgeslagen worden.
+
+Het aanbieden van beheerdersinformatie gaat in een aantal fases:
+
+1. Het opvragen van gebiedsinformatie-aanvragen waarvoor beheerdersinformatie moet worden aangeleverd
+2. Het bevestigen van een specifieke gebiedsinformatie-aanvraag, door deze te markeren als 'gezien'
+3. Het aanbieden van beheerdersinformatie voor de bevestigde gebiedsinformatie-aanvraag
+
+### Beheerdersinformatie aanleveren mbv REST interface (enkel decentraal)
 
 Voor het geautomatiseerd aanleveren van beheerdersinformatie heeft het Kadaster REST interfaces beschikbaar gesteld. De documentatie over de werking van
 deze interfaces is beschikbaar in de vorm van [Swagger](http://swagger.io) specificatie. Deze documentatie is te vinden bij de “KLIC API documentatie”-applicatie.
@@ -234,8 +243,8 @@ In dit voorbeeld wordt uitgegaan van een netbeheerder die zelf een aanlevering d
 - Haal als belanghebbende netbeheerder een lijst met gebiedsinformatie-aanvragen op die voldoen aan opgegeven criteria.
 - Haal als netbeheerder één gebiedsinformatie-aanvraag op.
 - Bevestig een gebiedsinformatie-aanvraag door deze te markeren als 'gezien'.
-- Lever als belanghebbende netbeheerder de beheerdersinformatie aan voor een specifieke gebiedsinformatie-aanvraag.
-- Ophalen van eerder aangeleverde beheerdersinformatie voor een specifieke gebiedsinformatie-aanvraag
+- Lever als belanghebbende netbeheerder de beheerdersinformatie aan voor een specifieke gebiedsinformatie-aanvraag (decentraal).
+- Ophalen van eerder aangeleverde beheerdersinformatie voor een specifieke gebiedsinformatie-aanvraag (decentraal).
 - Haal als netbeheerder de uitgeleverde beheerdersinformatie op voor een specifieke gebiedsinformatie-aanvraag.
 
 #### CURL
@@ -248,7 +257,7 @@ De CURL commando's worden in dit document voor de leesbaarheid weergegeven op me
 
 De API Documentatie kan bereikt worden via een link op het NTD portaalscherm.
 
-<img src="images/NTD-Portaal-BMKL20-API-Documentatie.png" />
+![mijnKadaster](images/NTD-Portaal-BMKL20-API-Documentatie.png "NTD Portaal - API Documentatie")
 
 _Figuur 10 API Documentatie Link_
 
@@ -262,14 +271,13 @@ Een hulpmiddel om op basis van de API specificatie eenvoudig de beschikbare serv
 
 Een beschrijving van de API volgens de OpenAPI specificatie in YAML (JSON) formaat. Dit biedt de softwareontwikkelaar een duidelijke beschrijving van de interface ten behoeve van integratie in eigen software.
 
-
-<img src="images/KLIC-API-documentatie-BMKL20.png" />
+![mijnKadaster](images/KLIC-API-documentatie-BMKL20.png "NTD Portaal - API Documentatie")
 
 _Figuur 11 API Documentatie Beheerdersinformatie / BMKL 2.0_
 
 De "API Testfaciliteit" link brengt u naar een Swagger pagina waar alle services beschreven zijn.
 
-<img src="images/KLIC-API-documentatie-BMKL20-detail.png" />
+![mijnKadaster](images/KLIC-API-documentatie-BMKL20-detail.png "NTD Portaal - API Documentatie detail")
 
 _Figuur 12 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
 
@@ -524,7 +532,7 @@ https://service10.kadaster.nl/klic/ntd/leveren/api/web/gebiedsInformatieAanvrage
 
 #### Gebiedsinformatie-aanvraag bevestigen
 
-Voordat een netbeheerder beheerdersinformatie kan uploaden voor een gebiedsinformatie-aanvraag, moet de netbeheerder aangeven dat hij de gebiedsinformatie-aanvraag gezien heeft. Dat gaat met een POST request naar het endpoint `/gebiedsInformatieAanvragen/{giAanvraagId}/netbeheerder/gezien`.
+Voordat een decentrale netbeheerder beheerdersinformatie kan uploaden voor een gebiedsinformatie-aanvraag, moet de netbeheerder aangeven dat hij de gebiedsinformatie-aanvraag gezien heeft. Dat gaat met een POST request naar het endpoint `/gebiedsInformatieAanvragen/{giAanvraagId}/netbeheerder/gezien`.
 
 **Request:**
 ```sh
@@ -539,9 +547,13 @@ curl
 HTTP/1.1 200 OK
 ```
 
-#### Beheerdersinformatie aanleveren
+Voor de centrale netbeheerder wordt aanbevolen de gebiedsinformatieaanvraag te bevestigen. Als een centrale netbeheerder geen ontvangstbevestiging stuurt op een
+gebiedsinformatieaanvraag, blijft deze de status 'open' houden. Het Kadaster zal ongeacht de notificatiestatus beheerdersinformatie namens de centrale
+netbeheerder produceren en uitleveren.
 
-Als de gebiedsinformatie-aanvraag gemarkeerd is als 'gezien', kan de beheerdersinformatie aangeleverd worden. Dit gaat met een POST request naar
+#### Beheerdersinformatie aanleveren (enkel decentraal)
+
+Als de gebiedsinformatie-aanvraag gemarkeerd is als 'gezien', kan de beheerdersinformatie aangeleverd worden door de centrale netbeheerder. Dit gaat met een POST request naar
 het endpoint `/beheerdersInformatie/gebiedsInformatieAanvragen/{giAanvraagId}/netbeheerder`.In onderstaand voorbeeld wordt een POST request gedaan
 naar dit endpoint en wordt de beheerdersinformatie in de vorm van een zipbestand aangeleverd.
 
@@ -573,12 +585,15 @@ bevestigd ('gezien') zijn alvorens er beheerdersinformatie kan worden aangelever
 }
 ```
 
-#### Opvragen gegevens aangeboden beheerdersinformatie
+#### Opvragen gegevens aangeboden beheerdersinformatie (enkel decentraal)
 
-Wanneer u als netbeheerder beheerdersinformatie heeft aangeleverd, kunt u gegevens opvragen over de betreffende aanlevering.
+Wanneer u als decentrale netbeheerder beheerdersinformatie heeft aangeleverd, kunt u gegevens opvragen over de betreffende aanlevering.
 Deze informatie bevat de status van de aanlevering en gegevens over de verwerking en validatie ervan. Dit gaat met een GET request naar hetzelfde
 endpoint als waar de beheerdersinformatie met een POST naar toe gestuurd is. De gegevens over de beheerdersinformatie kunnen opgehaald worden met een GET
 request naar het endpoint `/beheerdersInformatie/gebiedsInformatieAanvragen/{giAanvraagId}/netbeheerder`.
+
+Omdat de centrale netbeheerder geen beheerdersinformatie mag aanleveren/geen aanleverstatus van beheerdersinformatie van toepassing is, zal er een lege
+aanleverstatus worden teruggegeven bij een GET request door een centrale netbeheerder.
 
 **Request:**
 ```sh
@@ -1728,4 +1743,16 @@ https://service10.kadaster.nl/klic/ntd/leveren/api/web/beheerdersInformatie/gebi
 ```
 
 **Response:**
-Het response bestaat uit het zipbestand dat eerder is aangeleverd als beheerdersinformatie voor de betreffende gebiedsinformatie-aanvraag.
+Het response bestaat uit het zipbestand dat eerder is aangeleverd door de decentrale netbeheerder/geproduceerd namens de centrale netbeheerder door het Kadaster
+als beheerdersinformatie voor de betreffende gebiedsinformatie-aanvraag.
+
+De processtappen van de B2B-koppeling met de REST-APIS’s zoals het informeren van de netbeheerder over de gebiedsinformatie-aanvraag tot en met het aanleveren/ophalen
+van de beheerdersinformatie zijn hieronder in de verschillende procesmodellen weergegeven.
+
+**Procesmodel BMKL 2.0 (decentrale netbeheerder)**
+
+![procesmodel](images/Produceren-volgens-BMKL2.0-decentraal.png "Procesmodel BMKL 2.0 (decentrale netbeheerder)")
+
+**Procesmodel BMKL 2.0 (centrale netbeheerder)**
+
+![procesmodel](images/Produceren-volgens-BMKL2.0-centraal.png "Procesmodel BMKL 2.0 (centrale netbeheerder)")
