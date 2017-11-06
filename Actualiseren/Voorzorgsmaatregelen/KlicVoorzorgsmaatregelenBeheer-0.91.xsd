@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Kadaster (Kadaster) -->
 <!--
 <schema 
 	xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" 
-	targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" 
+	targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" 
-	version="0.9">
+	version="0.91">
 -->
-<xsd:schema xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.9">
+<xsd:schema xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.91">
 	<xsd:annotation>
-		<xsd:documentation>[0.9] 01-08-2017 -------------------------------------------------------------------------------------------------------------------------------
-Versie			: 0.9
-Datum			: 01-08-2017
+		<xsd:documentation>[0.91] 30-10-2017 -------------------------------------------------------------------------------------------------------------------------------
+Versie			: 0.91
+Datum			: 30-10-2017
 Door				: Kadaster 
 Toelichting	:
 Dit schema definieert de set aan gegevens die door een bronhouder (netbeheerder) moet worden aangeleverd om gebruik te kunnen maken van de EV-module uit de centrale voorziening van KLIC-WIN.
 Naast de gegevens voor het beslissingsmodel - welke maatregelen moeten bij welke factoren worden toegepast? - moeten bij de maatregel gerefereerde documentsjablonen worden meegeleverd.
 De definities en terminologie van de gebruikte elementen is zoveel mogelijk in overeenstemming gebracht met de modellering van IMKL1.2 (voorheen IMKL2015).
-Van de codelijsten/waardelijsten die ook in IMKL worden gebruikt, moet alleen de waarde worden ingevuld en niet de referentie naar de extren gepubliceerde waardelijst.
-Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
+Voor het gebruik van waarden uit waardelijsten die ook in IMKL worden gebruikt, moet de referentie naar de betreffende waarde uit de extern gepubliceerde waardelijst worden toegepast.
+Voorbeelden van deze waardelijsten: 
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/AaanvraagSoort
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema
 -----------------------------------------------------------------------------------------------------------------------------------------------
 </xsd:documentation>
 	</xsd:annotation>
+	<xsd:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<xsd:element name="VoorzorgsmaatregelenBeheer" type="VoorzorgsmaatregelenBeheerType">
 		<xsd:annotation>
 			<xsd:documentation>Het door een bronhouder beheren van aanduidingen en beslissingsregels voor bepaling van eis voorzorgsmaatregelen.</xsd:documentation>
@@ -85,9 +92,12 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 					<xsd:documentation>Identificatie van het documentsjabloon.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="bestandMediaType" type="MediaType">
+			<xsd:element name="bestandMediaType" type="WaardelijstWaardeRefType">
 				<xsd:annotation>
-					<xsd:documentation>Media type van een bestand.</xsd:documentation>
+					<xsd:documentation>Media type van een bestand (conform IMKL1.2, waardelijst: BestandMediaTypeValue).</xsd:documentation>
+					<xsd:appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">BestandMediaTypeValue</targetCodeList>
+					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="bestandsnaam" type="BestandsnaamType">
@@ -102,9 +112,12 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 			<xsd:documentation>Aanduiding die een netbeheerder aan een net(element) kan geven voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="thema" type="ThemaType">
+			<xsd:element name="thema" type="WaardelijstWaardeRefType">
 				<xsd:annotation>
-					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2).</xsd:documentation>
+					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2, waardelijst: Thema).</xsd:documentation>
+					<xsd:appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="netbeheerderNetAanduiding" type="xsd:string">
@@ -124,9 +137,12 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 			<xsd:documentation>Aanduiding die een netbeheerder aan soorten werkzaamheden geeft voor bepaling van voorzorgsmaatregelen.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="soortWerkzaamheden" type="SoortWerkzaamhedenType">
+			<xsd:element name="soortWerkzaamheden" type="WaardelijstWaardeRefType">
 				<xsd:annotation>
-					<xsd:documentation>Soort werkzaamheden die bij een gebiedsinformatie-aanvraag is opgegeven (conform IMKL1.2.</xsd:documentation>
+					<xsd:documentation>Soort werkzaamheden die bij een gebiedsinformatie-aanvraag is opgegeven (conform IMKL1.2, waardelijst: SoortWerkzaamhedenValue).</xsd:documentation>
+					<xsd:appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">SoortWerkzaamhedenValue</targetCodeList>
+					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string">
@@ -141,9 +157,12 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 			<xsd:documentation>Beslissingsregel waarmee door de netbeheerder op basis van diverse factoren een prioriteit aan een voorzorgsmaatregel wordt gegeven.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="thema" type="ThemaType">
+			<xsd:element name="thema" type="WaardelijstWaardeRefType">
 				<xsd:annotation>
-					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2).</xsd:documentation>
+					<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2, waardelijst: Thema).</xsd:documentation>
+					<xsd:appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="netbeheerderNetAanduiding" type="xsd:string">
@@ -151,9 +170,12 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 					<xsd:documentation>Aanduiding van het risico dat aan een utiliteitsnet of netelement gegeven wordt ten behoeve van de bepaling of en welke voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="aanvraagSoort" type="AanvraagSoortType">
+			<xsd:element name="aanvraagSoort" type="WaardelijstWaardeRefType">
 				<xsd:annotation>
-					<xsd:documentation>Soort gebiedsinformatie-aanvraag.</xsd:documentation>
+					<xsd:documentation>Soort gebiedsinformatie-aanvraag (conform IMKL1.2, waardelijst: AanvraagSoortValue).</xsd:documentation>
+					<xsd:appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
+					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string">
@@ -183,7 +205,7 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 					<xsd:documentation>Soort voorzorgsmaatregel dat wordt vereist in geval werkzaamheden aan het netwerk worden uitgevoerd.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="toelichting" type="xsd:string">
+			<xsd:element name="toelichting" type="xsd:string" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Toelichting op de soort voorzorgsmaatregel dat wordt vereist in geval werkzaamheden aan het netwerk uitgevoerd moeten worden.</xsd:documentation>
 				</xsd:annotation>
@@ -226,22 +248,18 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:complexType name="WaardelijstWaardeRefType">
+		<xsd:annotation>
+			<xsd:documentation>Generieke definitie van een referentie naar een waarde uit een IMKL-waardelijst. In IMKL1.2 bijv. "http://definities.geostandaarden.nl/imkl2015/id/waarde/{waardelijst}/{waarde}"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute ref="xlink:href" use="required"/>
+	</xsd:complexType>
 	<xsd:simpleType name="VersienummerType">
 		<xsd:annotation>
 			<xsd:documentation>Bekende versies voor dit interface.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="0.9"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="AanvraagSoortType">
-		<xsd:annotation>
-			<xsd:documentation>Soort gebiedsinformatie-aanvraag (graafmelding, oriëntatieverzoek of calamiteitenmelding) (conform IMKL1.2)</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="graafmelding"/>
-			<xsd:enumeration value="calamiteitenmelding"/>
-			<xsd:enumeration value="orientatieverzoek"/>
+			<xsd:enumeration value="0.91"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="BronhoudercodeType">
@@ -256,24 +274,6 @@ Voorbeeld: 			<soortWerkzaamheden>archeologischOnderzoek</soortWerkzaamheden>
 	<xsd:simpleType name="BestandsnaamType">
 		<xsd:annotation>
 			<xsd:documentation>Naam van een bestand (eventueel met extensie/locatie).</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="MediaType">
-		<xsd:annotation>
-			<xsd:documentation>Media type van een bestand, samnegesteld uit type, subtype en optinele parameters.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="ThemaType">
-		<xsd:annotation>
-			<xsd:documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2). Thema dient in de codelijst voor te komen.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="SoortWerkzaamhedenType">
-		<xsd:annotation>
-			<xsd:documentation>Soort werkzaamheden die bij een gebiedsinformatie-aanvraag is opgegeven (conform IMKL1.2). Het soort werkzaamheden dient in de codelijst voor te komen.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string"/>
 	</xsd:simpleType>
