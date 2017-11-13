@@ -1,5 +1,9 @@
 # Release notes
 
+### 16 oktober 2017
+- BMKL2.0 in NTD als centrale netbeheerder beschikbaar
+- Bugfix (mogelijk om beheerdersinformatie in de NTD conform IMKL v1.2.1 aan te leveren)
+
 ### 14 september 2017
 
 #### _IMKL versie 1.2.1 in Kadaster KLIC-WIN systemen_
