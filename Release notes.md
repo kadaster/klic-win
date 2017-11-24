@@ -1,5 +1,11 @@
 # Release notes
 
+### 24 november 2017
+- OAuth (Open Authorization); een open standaard voor autorisatie bij elke B2B-koppeling (REST API) van de KLIC-WIN systemen
+- BMKL API endpoints aanpassingen conform Kadasterbeleid API-management
+- Diverse performance verbeteringen met betrekking tot Actualiseren netinformatie
+- NTD BMKL klassiek; bug-fix met betrekking tot graafbericht: standaard `aanvangsdatum` en `soort werkzaamheid` weer opgenomen in het verzonden graafbericht naar de netbeheerder
+
 ### 16 oktober 2017
 - BMKL2.0 in NTD als centrale netbeheerder beschikbaar
 - Bugfix (mogelijk om beheerdersinformatie in de NTD conform IMKL v1.2.1 aan te leveren)
