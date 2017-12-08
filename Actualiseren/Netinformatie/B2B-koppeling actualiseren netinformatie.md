@@ -63,7 +63,7 @@ Al deze fases worden doorlopen in de sectie [REST interfaces](#rest-interfaces).
 
 ### Zipbestand
 
-De voorwaarden waaraan het zipbestand en de netinformatie daarin moeten voldoen staan [hier](https://github.com/Kadaster/KLIC-WIN/blob/master/Controles%20Netinformatie/Toelichting-Controles-Netinformatie-KLIC.md).
+De voorwaarden waaraan het zipbestand en de netinformatie daarin moeten voldoen staan [hier](https://github.com/kadaster/klic-win/blob/master/Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md).
 
 Zie hieronder een voorbeeld.
 ```xml
