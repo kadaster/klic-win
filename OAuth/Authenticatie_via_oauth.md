@@ -30,6 +30,7 @@ Na goedkeuring van de aanvraag krijgt u een client_id en client_secret
 #### Scopes
 
 Voor de klic API kennen we de volgende scopes:
+
 |Scope                                  |Omschrijving	                                                                    |
 |---------------------------------------|-----------------------------------------------------------------------------------|
 |klic.centraal                          |Actualiseren van netinfo, documenten, voorzorgsmaatregelen tbv centrale voorziening|
