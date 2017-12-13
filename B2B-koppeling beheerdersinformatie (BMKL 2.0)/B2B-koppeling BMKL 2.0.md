@@ -261,6 +261,11 @@ _Figuur 10 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
 GET /gebiedsinformatieAanvragen
 GET /gebiedsinformatieAanvragen/{giAanvraagId}
 ```
+
+**benodigde scope**
+```
+klic.gebiedsinformatieaanvraag.readonly
+```
 Het endpoint voor het opvragen van de lijst met gebiedsinformatie-aanvragen waar de betreffende netbeheerder bij betrokken is,
 kan aangeroepen worden met of zonder `giaAanvraagId`. De aanroep zonder `giaAanvraagId` levert een lijst op en kan worden aangeroepen
 met verschillende parameters om zo naar één specifieke, of een bepaalde set gebiedsinformatie-aanvragen te kunnen zoeken.
@@ -350,6 +355,13 @@ GET /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen
 GET /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{beheerdersinformatieId}
 ```
 
+**benodigde scope**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
+
 Het endpoint voor het opvragen van de lijst met beheerdersinformatie-aanvragen van de netbeheerder,
 kan aangeroepen worden met of zonder `beheerdersinformatieId`. De aanroep zonder `beheerdersinformatieId` levert een lijst op en kan worden aangeroepen
 met verschillende parameters om zo naar één specifieke, of een bepaalde set beheerdersinformatie-aanvragen te kunnen zoeken.
@@ -397,6 +409,13 @@ curl
 ```
 PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{beheerdersinformatieId}
 ```
+
+**benodigde scope**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
 Voordat een netbeheerder beheerdersinformatie kan uploaden voor een gebiedsinformatie-aanvraag, moet de netbeheerder bevestigen dat hij de beheerdersinformatie-aanvraag ontvangen heeft.
 
 **Voorbeeld:**
@@ -421,6 +440,11 @@ netbeheerder produceren en uitleveren.
 **Pad**
 ```
 POST /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{beheerdersinformatieId}/aanleveringen
+```
+
+**benodigde scope**
+```
+klic.beheerdersinformatie
 ```
 Als bevestigd is dat de beheerdersinformatie-aanvraag ontvangen is, kan de beheerdersinformatie aangeleverd worden. In onderstaand voorbeeld wordt een POST request gedaan
 en wordt de beheerdersinformatie in de vorm van een zipbestand aangeleverd.
@@ -457,6 +481,11 @@ bevestigd ('bevestigingOntvangen') zijn alvorens er beheerdersinformatie kan wor
 **Pad**
 ```
 GET /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{beheerdersinformatieId}/aanleveringen
+```
+
+**benodigde scope**
+```
+klic.beheerdersinformatie
 ```
 Wanneer u als netbeheerder beheerdersinformatie heeft aangeleverd, kunt u gegevens opvragen over de betreffende aanlevering.
 Deze informatie bevat de status van de aanlevering en gegevens over de verwerking en validatie ervan. Dit gaat met een GET request naar hetzelfde
@@ -518,6 +547,13 @@ curl
 **Pad**
 ```
 GET /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{beheerdersinformatieId}/beheerdersinformatieLevering/zip
+```
+
+**benodigde scope**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
 ```
 Wanneer de beheerdersinformatie is aangeleverd kan de uitgeleverde beheerdersinformatie worden opgevraagd behorend bij de aangegeven gebiedsinformatie-aanvraag.
 
