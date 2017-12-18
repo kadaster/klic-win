@@ -20,6 +20,7 @@
       - [Diepte](#diepte)
     - [Tijdaanduiding](#tijdaanduiding)
     - [Geometrie](#geometrie)
+      - [Bounding Box](#bounding-box-gmlboundedby)
       - [Referentiestelsel en dimensie](#referentiestelsel-en-dimensie)
         - [srsName](#srsname)
         - [srsDimension](#srsdimension)
@@ -75,7 +76,7 @@ Een centrale netbeheerder of serviceprovider kan op twee manieren netinformatie 
 
 In beide gevallen wordt de netinformatie aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
 
-In het zipbestand staat een XML-bestand, conform de IMKL2015_wion XSD, dat voldoet aan de naamgeving van een netinformatie bestand. Eventuele overige bestanden in het zipbestand worden genegeerd
+In het zipbestand staat in de root één XML-bestand conform de IMKL2015_wion XSD. Er zitten verder geen andere bestanden in het zipbestand.
 
 Het XML-bestand bevat altijd alle assets van de netbeheerder die van belang zijn voor de WION.
 
@@ -96,7 +97,7 @@ Voor de decentraal aangeleverde netinformatie worden dezelfde validatie regels g
 
 De netinformatie wordt inclusief bijlagen aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
 
-In het zipbestand staat in de root één XML-bestand conform de IMKL2015_wion XSD. De bijlages bevinden zich ook in de root van het zipbestand.
+In het zipbestand staat een XML-bestand, conform de IMKL2015_wion XSD, dat voldoet aan de naamgeving van een netinformatie bestand. Eventuele overige bestanden in het zipbestand worden genegeerd.
 
 Het XML-bestand bevat alle assets van de netbeheerder die van belang zijn voor de WION en binnen de gebiedsinformatie-aanvraag vallen. Geometrieën zijn daarbij geklipt op het informatiegebied indien beschikbaar en anders worden de geometriën geklipt op het graafgebied.
 
@@ -280,6 +281,8 @@ Voorbeelden (wisseling wintertijd/zomertijd is voor Nederland in 2017 respectiev
 
 #### Geometrie
 
+In dit hoofdstuk wordt een toelichting gegeven op de toepassing van de controles op geometrie-objecten.
+
 ##### Bounding Box _(gml:boundedBy)_
 Het is in GML optioneel om een bounding box te definiëren waarin een rechthoek is opgenomen die
 middels een linkerbenedenhoek en rechterbovenhoek de extent van de coördinaten weergeeft.
@@ -297,7 +300,18 @@ Voorbeeld:
 </gml:boundedBy>
 ```
 
-De geometrie van de objecten wordt individueel gecontroleerd op de volgende punten:
+###### Huidige werking
+-	Volgens bovenstaand uitgangspunt moet er bij een individuele geometrie geen Bounding Box worden opgenomen.
+Daarom wordt er in KLIC bij aangeleverde netinformatie of beheerdersinformatie geen rekening mee gehouden.
+Als deze wél meegeleverd zou worden, wordt dus niet gecontroleerd of deze “passend” is bij de meegeleverde geometrie.
+Evenmin wordt een Bounding Box aangepast als de geometrie geclipped wordt.
+-	Bij het aanleveren van netinformatie of beheerdersinformatie zou er – volgens GML - voor de FeatureCollection ook een Bounding Box meegegeven kunnen worden.
+In KLIC wordt daarmee geen rekening gehouden. De inhoud hiervan wordt genegeerd.
+Als deze wél meegeleverd wordt, wordt dus niet gecontroleerd of deze “passend” is bij alle meegeleverde geometrieën.
+-	Volgens bovenstaand uitgangspunt moet er bij uitlevering van gebiedsinformatie wél een Bounding Box van de FeatureCollection worden meegegeven.
+Aangezien bronhouders in principe geen geometrieën buiten de aangevraagde polygoon uitleveren, wordt hiervoor de Bounding Box van de selectiepolygoon opgenomen.
+Het is feitelijk mogelijk dat in de uitlevering geometrieën buiten deze Bounding Box vallen. Denk bijvoorbeeld aan een aangevraagde huisaansluiting buiten de selectiepolygoon.
+Evenmin controleert KLIC of de door een decentrale bronhouder aangeleverde beheerdersinformatie binnen de selectiepolygoon valt.
 
 ##### Referentiestelsel en dimensie
 
@@ -469,7 +483,6 @@ Voorbeeld van een associatie van een elektriciteitskabel naar het utiliteitsnet 
    ...
 </imkl:Elektriciteitskabel>
 ```
-
 Daarnaast zijn er natuurlijk associaties naar codelijsten/waardelijsten die elders beschikbaar worden gesteld. Ook deze worden gerefereerd met behulp van `xlink:href="..."`.
 Voorbeelden:
 ```xml
