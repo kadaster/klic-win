@@ -9,6 +9,7 @@ Deze map bevat:
   * Voorbeelden van procesregels bij EV-verwerking
 * toelichting op het proces om voorzorgsmaatregelen (beslissingsregels, document-sjablonen) te actualiseren:
   * Actualiseren voorzorgsmaatregelen
+  * Handreiking voor het invullen van gegeven voor EV-bepaling
 * informatie over het opstellen van een document-sjabloon voor een EV-bijlage:
   * Invulvelden EV-sjabloon
 * technische uitwerking met voorbeelden:
@@ -20,5 +21,5 @@ Deze map bevat:
   * Voorbeeld 3. Aanlevering netinformatie+voorzorgsmaatregelen KL3131 - zipbestand met netinformatie + voorzorgsmaatregelen (simpel)
   * Voorbeeld 4. Uitwerking EV-bepaling - presentatie over de wijze van EV-bepaling aan de hand van 3 aanvraagsoorten (O, C, G)
   * Voorbeeld 4. Uitwerking EV-bepaling - zipbestand met uitgewerkte voorbeelden over de wijze waarop EV wordt bepaald aan de hand van
-    - een ingelezen featureset met netinformatie + voorzorgsmaatregelen
-    - een orientatieverzoek, een calamiteitenmelding en een graafmelding
+    * een ingelezen featureset met netinformatie + voorzorgsmaatregelen
+    * een orientatieverzoek, een calamiteitenmelding en een graafmelding

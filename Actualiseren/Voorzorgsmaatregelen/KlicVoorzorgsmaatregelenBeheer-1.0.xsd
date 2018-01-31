@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Kadaster (Kadaster) -->
+<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by  (Kadaster) -->
 <!--
 <schema 
 	xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" 
@@ -8,13 +8,13 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" 
-	version="0.91">
+	version="1.0">
 -->
-<xsd:schema xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.91">
+<xsd:schema xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xsd:annotation>
-		<xsd:documentation>[0.91] 30-10-2017 -------------------------------------------------------------------------------------------------------------------------------
-Versie			: 0.91
-Datum			: 30-10-2017
+		<xsd:documentation>[1.0] 04-01-2018 -------------------------------------------------------------------------------------------------------------------------------
+Versie			: 1.0
+Datum			: 04-01-2018
 Door				: Kadaster 
 Toelichting	:
 Dit schema definieert de set aan gegevens die door een bronhouder (netbeheerder) moet worden aangeleverd om gebruik te kunnen maken van de EV-module uit de centrale voorziening van KLIC-WIN.
@@ -22,7 +22,7 @@ Naast de gegevens voor het beslissingsmodel - welke maatregelen moeten bij welke
 De definities en terminologie van de gebruikte elementen is zoveel mogelijk in overeenstemming gebracht met de modellering van IMKL1.2 (voorheen IMKL2015).
 Voor het gebruik van waarden uit waardelijsten die ook in IMKL worden gebruikt, moet de referentie naar de betreffende waarde uit de extern gepubliceerde waardelijst worden toegepast.
 Voorbeelden van deze waardelijsten: 
-	http://definities.geostandaarden.nl/imkl2015/id/waarde/AaanvraagSoort
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoort
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema
@@ -178,9 +178,9 @@ Voorbeelden van deze waardelijsten:
 					</xsd:appinfo>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string">
+			<xsd:element name="netbeheerderWerkAanduiding" type="xsd:string" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Aanduiding van het risico dat aan de soort werkzaamheden gegeven wordt ten behoeve van de bepaling of en welke eisen voorzorgsmaatregelen getroffen dienen te worden.</xsd:documentation>
+					<xsd:documentation>Aanduiding van het risico dat aan de soort werkzaamheden gegeven wordt ten behoeve van de bepaling of en welke eisen voorzorgsmaatregelen getroffen dienen te worden. Niet van toepassing bij een calamiteitenmelding.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="maatregel" type="xsd:string">
@@ -259,7 +259,7 @@ Voorbeelden van deze waardelijsten:
 			<xsd:documentation>Bekende versies voor dit interface.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="0.91"/>
+			<xsd:enumeration value="1.0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="BronhoudercodeType">
