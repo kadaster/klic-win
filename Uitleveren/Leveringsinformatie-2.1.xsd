@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- bestandsnaam: Leveringsinformatie-2.1.xsd -->
 <!-- bron: Kadaster-KLIC -->
-<!-- [2.1] 01-02-2018 _____________________________________________________________________
+<!-- [2.1] 01-02-2018 ________________________________________________________________________________
 Versie			: 2.1
 Datum			: 01-02-2018
 Toelichting	:
-Dit schema definieert de (meta-)gegevens over de levering van gebiedsinformatie zoals deze als zipbestand wordt uitgeleverd bij een Klic-aanvraag.
-De definities en terminologie van de gebruikte elementen is zoveel mogelijk in overeenstemming gebracht met de modellering van IMKL1.2 (voorheen IMKL2015).
-In deze versie wordt rekening gehouden met het feit dat er gedurende de overgangsperiode netbeheerders zijn die de beheerdersinformatie nog in het oude formaat aanleveren (IMKL1.1, BMKL1.2) en netbeheerders die al in het huidige formaat aanleveren (conform IMKL1.2). Gedurende deze overgangsperiode worden ligging, maatvoering en annotatie ook nog als png-bestand meegeleverd.
-Als in de omschrijving van een element de term [Klic5 (obsolete)] is gebruikt, betekent dit dat dit element (nog) nodig is om compatible te zijn met het oude model (IMKL1.1) of de uitwisseling in het oude formaat (BMKL1.2). Als na een overgangsperiode volledig is overgegaan naar IMKL1.2, en geen png-bestanden meer meegeleverd hoeven te worden, zullen deze overbodig worden.
+Dit schema definieert de (meta-)gegevens over de levering van gebiedsinformatie zoals deze in het zipbestand
+of op de downloadserver wordt uitgeleverd naar aanleiding van een Klic gebiedsinformatie-aanvraag.
+De definities en terminologie van de gebruikte elementen is zoveel mogelijk in overeenstemming gebracht met de modellering van IMKL1.2.
 
-TODO
+In deze versie wordt rekening gehouden met het feit dat er gedurende de overgangsperiode netbeheerders zijn 
+die de beheerdersinformatie nog in het klassieke formaat aanleveren (IMKL1.1, BMKL1.2) en netbeheerders die
+in het nieuwe formaat aanleveren (conform IMKL1.2).
+Gedurende deze overgangsperiode worden er door het Klic-systeem voor netbeheerders die al vector-gegevens aanleveren 
+ook nog kaarten (png-bestanden) opgesteld en meegeleverd voor ligging, maatvoering, annotatie en eigen topografie (indien van toepassing).
 
-_____________________________________________________________________ -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:levi="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" elementFormDefault="qualified" version="2.1">
+De leveringsinformatie geeft een overzicht van bijlagen (kaarten, documenten, e.d.) die in het zipbestand worden uitgeleverd.
+Deze bijlagen kunnen worden onderverdeeld naar
+- bijlagen per levering (zie bijlagePerLevering), onder te verdelen naar
+    - bijlagen die niet afhankelijk zijn van het leveringsvolgnummer, bijv. geselecteerdGebied, achtergrondkaart
+    - bijlagen die specifiek voor deze (deel)levering zijn opgesteld, bijv. leveringsbrief, gebiedsinformatieLevering
+- bijlagen per netbeheerder (zie bijlagePerNetbeheerder), 
+  onafhankelijk van het thema, bijv. algemeen, eigenTopo
+- bijlagen per netbeheerder per thema (zie themabijlagePerNetbeheerder),
+  afhankelijk van het thema, bijv. ligging, aansluiting, profielschets, eisVoorzorgsmaatregel
+
+Overige informatie over de aanvraag, de levering en de belanghebbenden is te vinden in de GebiedsinformatieLevering.xml,
+de featurecollection zoals gedefinieerd in het IMKL1.2.
+De GebiedsinformatieLevering wordt als bijlage meegeleverd (soortBijlage: gebiedsinformatieLevering)
+
+Ter ondersteuning van het bestaande BMKL1.2 worden enkele gegevens uit de beheerdersinformatie die nog
+in het klassieke formaat worden meegeleverd, in de overgangsperiode nog meegenomen in de uitlevering.
+Dit betreft:
+  - netbeheerderContact: contactgegevens van de netbeheerder, storingsnummer en/of beschadigingsnummer
+  - toezichthouder: lijst van contactgegevens van de netbeheerder voor een thema
+
+Als in de omschrijving van een element de term [Klic5 (obsolete)] is gebruikt, betekent dit dat dit element (nog) nodig is
+om compatible te zijn met het oude model (IMKL1.1) of de uitwisseling in het oude formaat (BMKL1.2). 
+Als na een overgangsperiode volledig is overgegaan naar IMKL1.2, en geen png-bestanden meer meegeleverd hoeven te worden,
+zullen deze overbodig worden.
+_____________________________________________________________________________________________________ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:levi="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+targetNamespace="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" 
+elementFormDefault="qualified" 
+version="2.1">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<element name="Leveringsinformatie" type="levi:LeveringsinformatieType">
