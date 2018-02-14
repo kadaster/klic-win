@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: Leveringsinformatie-2.1.xsd -->
+<!-- bron: Kadaster-KLIC -->
+<!-- [2.1] 01-02-2018 _____________________________________________________________________
+Versie			: 2.1
+Datum			: 01-02-2018
+Toelichting	:
+Dit schema definieert de (meta-)gegevens over de levering van gebiedsinformatie zoals deze als zipbestand wordt uitgeleverd bij een Klic-aanvraag.
+De definities en terminologie van de gebruikte elementen is zoveel mogelijk in overeenstemming gebracht met de modellering van IMKL1.2 (voorheen IMKL2015).
+In deze versie wordt rekening gehouden met het feit dat er gedurende de overgangsperiode netbeheerders zijn die de beheerdersinformatie nog in het oude formaat aanleveren (IMKL1.1, BMKL1.2) en netbeheerders die al in het huidige formaat aanleveren (conform IMKL1.2). Gedurende deze overgangsperiode worden ligging, maatvoering en annotatie ook nog als png-bestand meegeleverd.
+Als in de omschrijving van een element de term [Klic5 (obsolete)] is gebruikt, betekent dit dat dit element (nog) nodig is om compatible te zijn met het oude model (IMKL1.1) of de uitwisseling in het oude formaat (BMKL1.2). Als na een overgangsperiode volledig is overgegaan naar IMKL1.2, en geen png-bestanden meer meegeleverd hoeven te worden, zullen deze overbodig worden.
+
+TODO
+
+_____________________________________________________________________ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:levi="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" elementFormDefault="qualified" version="2.1">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<element name="Leveringsinformatie" type="levi:LeveringsinformatieType">
+		<annotation>
+			<documentation>Informatie over de geleverde gebiedsinformatie in het zipbestand of beschikbaar op de downloadserver.</documentation>
+		</annotation>
+	</element>
+	<!--_____________________________ Leveringsinformatie _____________________________-->
+	<complexType name="LeveringsinformatieType">
+		<annotation>
+			<documentation>Gegevens over de geleverde gebiedsinformatie, zoals deze in het zipbestand beschikbaar is gesteld t.b.v. Klic-viewers.</documentation>
+		</annotation>
+		<sequence>
+			<element name="version" type="levi:VersionNumberType">
+				<annotation>
+					<documentation>Versie van het interface waarmee de leveringsinformatie wordt beschreven</documentation>
+				</annotation>
+			</element>
+			<element name="bijlagePerLevering" type="levi:BijlageType" minOccurs="1" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Mogelijke bijlage per levering, zoals leveringsbrief, achtergrondkaart, geselecteerd gebied.</documentation>
+				</annotation>
+			</element>
+			<element name="pngFormaat" type="levi:PngFormaatType" minOccurs="0">
+				<annotation>
+					<documentation>[Klic5] Formaat waaraan de geleverde png-bestanden met gebiedsinformatie (kaarten) moeten voldoen.</documentation>
+				</annotation>
+			</element>
+			<element name="belanghebbende" type="levi:Belanghebbende" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Verwijzing naar belanghebbende netbeheerders (bronhouders) binnen het aangevraagde gebied.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ Belanghebbende _____________________________-->
+	<complexType name="Belanghebbende">
+		<annotation>
+			<documentation>De gegevens van een belanghebbende (net)beheerder bij de aanvraag van gebiedsinformatie.</documentation>
+		</annotation>
+		<sequence>
+			<element name="bronhoudercode" type="levi:Bronhoudercode">
+				<annotation>
+					<documentation>Bronhoudercode van de beheerder [IMKL1.2].</documentation>
+				</annotation>
+			</element>
+			<element name="beheerdersinformatieVersie" type="levi:BeheerdersinformatieVersie">
+				<annotation>
+					<documentation>Versie van de beheerdersinformatie die van deze belanghebbende is opgenomen bij deze levering</documentation>
+				</annotation>
+			</element>
+			<element name="netbeheerderContact" type="levi:NetbeheerderContact" minOccurs="0">
+				<annotation>
+					<documentation>[Klic5] Contactinformatie van de netbeheerder, mogelijk aangeleverd bij de beheerdersinformatie [BMKL1.2].</documentation>
+				</annotation>
+			</element>
+			<element name="bijlagePerNetbeheerder" type="levi:BijlageType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Mogelijke (algemene) bijlage per netbeheerder, zoals algemeen, nietBetrokken, eigenTopo, etc.</documentation>
+				</annotation>
+			</element>
+			<element name="beheerdersinformatie" type="levi:BeheerdersinformatieType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Overzicht van de geleverde beheerdersinformatie per netbeheerder / thema.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ Beheerdersinformatie _____________________________-->
+	<complexType name="BeheerdersinformatieType">
+		<annotation>
+			<documentation>Overzicht van de geleverde beheerdersinformatie per netbeheerder / thema.</documentation>
+		</annotation>
+		<sequence>
+			<element name="thema" type="levi:WaardelijstWaardeRefType">
+				<annotation>
+					<documentation>Aanduiding van het type en de functie van een kabel of leiding (conform IMKL1.2, waardelijst: Thema).</documentation>
+					<appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="toezichthouder" type="levi:ContactType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>[Klic5] Lijst van toezichthouders van de netbeheerder voor dit thema.</documentation>
+				</annotation>
+			</element>
+			<element name="eisVoorzorgmaatregel" type="boolean">
+				<annotation>
+					<documentation>Indicator die aangeeft of er een eis/voorzorgmaatregel bij dit thema is gevoegd</documentation>
+				</annotation>
+			</element>
+			<element name="themabijlagePerNetbeheerder" type="levi:BijlageType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Mogelijke themabijlagen per netbeheerder, zoals ligging, maatvoering, eisVoorzorgsmaatregel, huisaansluiting, etc.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ Contact _____________________________-->
+	<complexType name="ContactType">
+		<annotation>
+			<documentation>Contact bij een organisatie.</documentation>
+		</annotation>
+		<sequence>
+			<element name="naam" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam van het contact</documentation>
+				</annotation>
+			</element>
+			<element name="telefoon" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Telefoonnummer van het contact</documentation>
+				</annotation>
+			</element>
+			<element name="email" type="levi:EmailType" minOccurs="0">
+				<annotation>
+					<documentation>E-mailadres van het contact</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ BijlageType _____________________________-->
+	<complexType name="BijlageType">
+		<annotation>
+			<documentation>.....De naam van de bijlage en de URL met een verwijzing naar het bijbehorende PDF-bestand op de downloadservice.</documentation>
+		</annotation>
+		<sequence>
+			<element name="soortBijlage" type="levi:SoortBijlage">
+				<annotation>
+					<documentation>
+De logische naam van een bijlage die door het Kadaster of de netbeheerder is aangeleverd,
+--- per levering ---
+--- per netbeheerder ---
+--- per netbeheerder / thema ---
+</documentation>
+				</annotation>
+			</element>
+			<element name="bestandLocatie" type="anyURI">
+				<annotation>
+					<documentation>De bestandsnaam omvat ook de locatie van het bestand.</documentation>
+				</annotation>
+			</element>
+			<element name="bestandMediaType" type="levi:WaardelijstWaardeRefType">
+				<annotation>
+					<documentation>Media type van een bestand (conform IMKL1.2, waardelijst: BestandMediaTypeValue).</documentation>
+					<appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">BestandMediaTypeValue</targetCodeList>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="bestandIdentificator" type="anyURI">
+				<annotation>
+					<documentation>Unieke identificator / bestandsnaam van een bijlage, beschreven via een URI.</documentation>
+				</annotation>
+			</element>
+			<element name="adres" type="levi:BijlageAdres" minOccurs="0">
+				<annotation>
+					<documentation>Enkele kenmerkende gegevens van een adres bij een bijlage (m.n. huisaansluitschets).</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ BijlageAdres _____________________________-->
+	<complexType name="BijlageAdres">
+		<annotation>
+			<documentation>Identificerende gegevens van een adres bij een bijlage (m.n. huisaansluitschets). Niet alle gegevens hoeven bekend te zijn; denk aan [klic5]. </documentation>
+		</annotation>
+		<sequence>
+			<element name="postcode" type="string">
+				<annotation>
+					<documentation>De door TNT Post vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.</documentation>
+				</annotation>
+			</element>
+			<element name="huisnummerLetterToev" type="string">
+				<annotation>
+					<documentation>Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering, evt. aangevuld met huisletter en huisnummertoevoeging.</documentation>
+				</annotation>
+			</element>
+			<element name="BAGidAdresseerbaarObject" type="string" minOccurs="0">
+				<annotation>
+					<documentation>BAG identifier van het adresseerbaar object (Verblijfsobject, Ligplaats of Standplaats) waar een adres aan is toegekend zoals geregistreerd bij de BAG.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ Basis-elementen _____________________________-->
+	<complexType name="NetbeheerderContact">
+		<annotation>
+			<documentation>[Klic5] Contactinformatie van de netbeheerder, aangeleverd bij de beheerdersinformatie [BMKL1.2].</documentation>
+		</annotation>
+		<sequence>
+			<element name="contact" type="levi:ContactType" minOccurs="0">
+				<annotation>
+					<documentation>[Klic5] Contactpersoon van de netbeheerder afkomstig uit de beheerdersinformatie.</documentation>
+				</annotation>
+			</element>
+			<element name="storingsnummer" type="string" minOccurs="0">
+				<annotation>
+					<documentation>[Klic5] Algemeen storingsnummer van de netbeheerder dan wel een bepaalde groep van netbeheerders.</documentation>
+				</annotation>
+			</element>
+			<element name="beschadigingsnummer" type="string" minOccurs="0">
+				<annotation>
+					<documentation>[Klic5] Nummer van de netbeheerder dat gebeld moet worden indien er sprake is van schade, zonder dat de levering is onderbroken.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="PngFormaatType">
+		<annotation>
+			<documentation>[Klic5] Definiering van het preciese forrmaat van het geleverde kaartmateriaal en de postionering op de kaart (BMKL1.2).</documentation>
+		</annotation>
+		<sequence>
+			<element name="omsluitendeRechthoek" type="gml:BoundingShapeType">
+				<annotation>
+					<documentation>Rechthoek (GML definitie) die de getekende polygoon omsluit. Bepaalt het gebied waarover de png-kaarten moeten worden geleverd.</documentation>
+				</annotation>
+			</element>
+			<element name="pixelsBreed" type="int">
+				<annotation>
+					<documentation>Geeft de breedte (in pixels) aan van de op te leveren png kaarten (BMKL1.2).</documentation>
+				</annotation>
+			</element>
+			<element name="pixelsHoog" type="int">
+				<annotation>
+					<documentation>Geeft de hoogte (in pixels) aan van de op te leveren png kaarten (BMKL1.2).</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="WaardelijstWaardeRefType">
+		<annotation>
+			<documentation>Generieke definitie van een referentie naar een waarde uit een IMKL-waardelijst. In IMKL1.2 bijv. "http://definities.geostandaarden.nl/imkl2015/id/waarde/{waardelijst}/{waarde}"</documentation>
+		</annotation>
+		<attribute ref="xlink:href" use="required"/>
+	</complexType>
+	<simpleType name="VersionNumberType">
+		<annotation>
+			<documentation>Bekende versies voor dit interface, bijv. 2.1</documentation>
+		</annotation>
+		<restriction base="string"/>
+	</simpleType>
+	<simpleType name="EmailType">
+		<annotation>
+			<documentation>E-mail adres</documentation>
+		</annotation>
+		<restriction base="string">
+			<maxLength value="70"/>
+			<pattern value="([\.a-zA-Z0-9&amp;_\-])+@([a-zA-Z0-9_\-])+(([a-zA-Z0-9_\-])*\.([a-zA-Z0-9_\-])+)+"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BeheerdersinformatieVersie">
+		<annotation>
+			<documentation>Versie van de beheerdersinformatie die van deze belanghebbende is opgenomen bij deze levering)</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="klassiek"/>
+			<enumeration value="IMKL1.2"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="SoortBijlage">
+		<annotation>
+			<documentation>De logische naam van een bijlage die door het Kadaster of de netbeheerder is aangeleverd.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="geselecteerdGebied"/>
+			<enumeration value="achtergrondkaart"/>
+			<enumeration value="achtergrondkaartPlan"/>
+			<enumeration value="ontvangstbevestiging"/>
+			<enumeration value="leveringsbrief"/>
+			<enumeration value="leveringsinformatie"/>
+			<enumeration value="gebiedsinformatieLevering"/>
+			<enumeration value="algemeen"/>
+			<enumeration value="nietBetrokken"/>
+			<enumeration value="bijlage"/>
+			<enumeration value="eigenTopo"/>
+			<enumeration value="eigenTopoPlan"/>
+			<enumeration value="ligging"/>
+			<enumeration value="maatvoering"/>
+			<enumeration value="annotatie"/>
+			<enumeration value="detailkaart"/>
+			<enumeration value="themabijlage"/>
+			<enumeration value="aansluiting"/>
+			<enumeration value="profielschets"/>
+			<enumeration value="overig"/>
+			<enumeration value="eisVoorzorgsmaatregel"/>
+			<enumeration value="huisaansluiting"/>
+		</restriction>
+		<!--
+gebiedsinformatieLevering: Xml-bestand met een bundeling van alle door de netbeheerders volgens IMKL1.2 aangeleverde beheerdersinformatie, door de Klic-dienst aangevuld met informatie over de levering en de oorspronkelijke aanvraag. 
+-->
+	</simpleType>
+	<simpleType name="Bronhoudercode">
+		<annotation>
+			<documentation>Bronhoudercode van de beheerder (IMKL1.2). De code bestaat uit zes alfanumerieke posities. Dit is afgestemd met het format van CBS codes voor gemeenten en provincies.</documentation>
+		</annotation>
+		<restriction base="string">
+			<length value="6"/>
+		</restriction>
+	</simpleType>
+</schema>

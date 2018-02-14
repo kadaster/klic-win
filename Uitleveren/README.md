@@ -1,6 +1,17 @@
-Hier vindt u de informatie aangaande het uitleveren van netinformatie in de context van de WION zoals die voor het KLIC-WIN project gerealiseerd gaat worden.
+﻿#### Uitleveren gebiedsinformatie
 
-Momenteel zijn we bezig om een representatief voorbeeld te ontwikkelen. Zodra deze beschikbaar is, zullen we deze ook publiceren.
+Op basis van een gebiedsinformatie-aanvraag van een 'grondroerder' wordt er in het Klic-systeem beheerdersinformatie van de verschillende bronhouders verzameld en uitgeleverd als gebiedsinformatielevering.
+De informatie over de belanghebbende bronhouders ('netbeheerders'), hun netwerkgegevens, de gebiedsinformatie-aanvraag en -levering is beschreven volgens het nieuwe informatiemodel (IMKL1.2).
 
-De vorm van de levering is in ontwikkeling en er kunnen nog wijzigingen plaatsvinden.
+In deze map worden documentatie en diverse voorbeelden beschikbaar gesteld om de specificaties van de levering te verduidelijken.
+Momenteel wordt er nog gewerkt aan deze module. Het is mogelijk dat er op details nog kleine wijzigingen zullen plaatsvinden.
 
+Deze map bevat:
+* algemene toelichting over de WION levering:
+  * WION levering (IMKL1.2) (in bewerking)
+  * Indeling gebiedsinformatie;
+onderdelen uit de levering (klassiek en IMKL1.2)
+soorten bijlagen
+* schemadefinitie betreffende de metagegevens van de leveringsinformatie (Leveringsinformatie.xsd)
+* regels bij clippen van netwerkgegevens
+* map met diverse voorbeelden
