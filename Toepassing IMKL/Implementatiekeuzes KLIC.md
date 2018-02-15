@@ -81,11 +81,12 @@ Om te voorkomen dat er eventuele dubbelingen gaan ontstaan met objecten die door
 
 Voorbeelden van identificaties van objecten die door het Kadaster namens een bronhouder kunnen worden aangemaakt:
 ```xml
-<imkl:Belanghebbende gml:id="nl.imkl-KL9999._Belanghebbende_17G000041">
+<imkl:Belanghebbende gml:id="nl.imkl-KL9999._Belanghebbende_17G000041-1">
     <imkl:identificatie>
         <imkl:NEN3610ID>
             <imkl:namespace>nl.imkl</imkl:namespace>
             <imkl:lokaalID>KL9999._Belanghebbende_17G000041</imkl:lokaalID>
+            <imkl:versie>1</imkl:versie>
         </imkl:NEN3610ID>
     </imkl:identificatie>
     <imkl:beginLifespanVersion>2017-01-11T09:09:11.31+01:00</imkl:beginLifespanVersion>
@@ -138,7 +139,7 @@ Voorbeelden:
 
 <imkl:Graafpolygoon gml:id="nl.imkl-KA0000._Graafpolygoon_17G000041">
 
-<imkl:Belanghebbende gml:id="nl.imkl-KL1031._Belanghebbende_17G000041">
+<imkl:Belanghebbende gml:id="nl.imkl-KL1031._Belanghebbende_17G000041-1">
 
 <imkl:Beheerder gml:id="nl.imkl-KL1031._Beheerder">
 
@@ -168,6 +169,18 @@ Voorbeeld:
 <imkl:Belang gml:id="nl.imkl-KL1031._Belang_PetroBGIregioNoordOost-3">
 
 <imkl:Belang gml:id="nl.imkl-KL1031._Belang_PetroBGIregioNoordOost-4">
+```
+
+#### Belanghebbende
+Als een bronhouder als belanghebbende bij een gebiedsinformatie-aanvraag is onderkend, ontstaat een eerste ruwe "0-versie" van het object.
+Op dat moment is zijn betrokkenheid bij de aanvraag nog niet bekend.
+Pas wanneer een belanghebbende voor deze aanvraag beheerdersinformatie heeft aangeleverd, kan zijn betrokkenheid - en daarmee de aanvullende kenmerken van het object - worden ingevuld.
+Er ontstaat een nieuwe versie van het Belanghebbende-object.
+Voorbeeld:
+```xml
+<imkl:Belanghebbende gml:id="nl.imkl-KL1031._Belanghebbende_17G000041-0">
+
+<imkl:Belanghebbende gml:id="nl.imkl-KL1031._Belanghebbende_17G000041-1">
 ```
 
 ### BeginLifespanVersion
@@ -204,7 +217,7 @@ Voor de featuretypes die in het Klic-proces door het Kadaster worden aangemaakt,
 | Informatiepolygoon           | 'aanvraagDatum' uit GebiedsinformatieAanvraag;  |
 | Graafpolygoon                | 'aanvraagDatum' uit GebiedsinformatieAanvraag;  |
 | Orientatiepolygoon           | 'aanvraagDatum' uit GebiedsinformatieAanvraag;  |
-| Belanghebbende               | het moment dat de bepaling van geraakte belangen wordt uitgevoerd (datumBelangGeraakt)  |
+| Belanghebbende               | versie 0: het moment dat de bepaling van geraakte belangen wordt uitgevoerd (datumBelangGeraakt); <br/>versie 1: het moment dat beheerdersinformatie is aangeleverd  |
 | EisVoorzorgsmaatregelBijlage | het moment dat de beheerdersinformatie wordt samengesteld (datumBeheerdersinformatieOntvangen)  |
 | Bijlage                      | het object Bijlage (algemeen/nietBetrokken) wordt overgenomen uit de centrale voorziening; daarmee wordt de `beginLifespanVersion` ook overgenomen  |
 | Belang                       | het object Belang wordt overgenomen uit de centrale voorziening; daarmee wordt de `beginLifespanVersion` ook overgenomen  |
