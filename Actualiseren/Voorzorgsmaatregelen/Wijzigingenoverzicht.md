@@ -1,10 +1,10 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
-21-02-1018
+21-02-2018
 * Voorbeelden verplaatst naar aparte map
 * Kleine wijzigingen in features in voorbeeldbestanden doorgevoerd:
- - coordinatenstelsel `srsname="epsg:28992"`
- - gml:id's van geometrie conform richtlijnen: "nl.imkl-<bronhoudercode>.lokaalid" (*_geo)
+    * coordinatenstelsel `srsname="epsg:28992"`
+    * gml:id's van geometrie conform richtlijnen: "nl.imkl-<bronhoudercode>.lokaalid" (*_geo)
 
 01-02-2018
 * Documentatie over controles toegevoegd
