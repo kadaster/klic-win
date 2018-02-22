@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: Voorbeeld 2. Beheerdersinformatie KL4141 (nietBetrokken, AANBEVOLEN).xml -->
+<!-- bron: Kadaster-Klic -->
+<!-- ______________________________________________________________________________________
+Toelichting:
+Voorbeeld voor een aanlevering van beheerdersinformatie door een decentrale netbeheerder.
+De gebruikte voorbeeld-features zijn bedoeld voor demo-doeleinden en zijn niet bedoeld om een
+representatie te geven van de werkelijke situatie ter plaatse.
+De inhoud is gebaseerd op de definities uit IMKL2015, versie 1.2.1.
+
+Het voorbeeld betreft een aanlevering van beheerdersinformatie waarbij de decentrale netbeheerder wil
+aangeven NIET betrokken te zijn. Voor dit scenario is dit de aanbevolen werkwijze.
+NB. Bij uitlevering worden organisatiegegevens van de netbeheerder meegeleverd, waaronder 'websiteKlic'.
+
+De netbeheerder geeft als "Belanghebbende" zijn bronhoudercode mee in het "Beheerder"-object.  Zie:
+	<imkl:Belanghebbende gml:id="nl.imkl-KL4141._Belanghebbende_17G000041">
+	<imkl:Beheerder gml:id="nl.imkl-KL4141._Beheerder">
+ ______________________________________________________________________________________ -->
+
+<gml:FeatureCollection 
+xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2" 
+xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+gml:id="ID_beheerdersinformatie_KL4141_2017-10-10" 
+xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
+
+	<gml:featureMember>
+		<imkl:Belanghebbende gml:id="nl.imkl-KL4141._Belanghebbende_17G000041">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL4141._Belanghebbende_17G000041</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:beheerdersinformatieGeleverd>true</imkl:beheerdersinformatieGeleverd>
+			<imkl:betrokkenBijAanvraag>false</imkl:betrokkenBijAanvraag>
+			<imkl:eisVoorzorgsmaatregel>false</imkl:eisVoorzorgsmaatregel>
+			<imkl:netbeheerder xlink:href="nl.imkl-KL4141._Beheerder"/>
+		</imkl:Belanghebbende>
+	</gml:featureMember>
+	
+	<gml:featureMember>
+		<imkl:Beheerder gml:id="nl.imkl-KL4141._Beheerder">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL4141._Beheerder</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:bronhoudercode>KL4141</imkl:bronhoudercode>
+		</imkl:Beheerder>
+	</gml:featureMember>
+
+</gml:FeatureCollection>
