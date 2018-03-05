@@ -1,35 +1,47 @@
-# Hints en tips bij het gebruik van IMKL2015 v1.2.1
+﻿# Hints en tips bij het gebruik van IMKL2015 v1.2.1
 
 **Inhoudsopgave**
 
 - [Inleiding](#inleiding)
   - [Doel](#doel)
-- [Namespaces](#namespaces)
+- [Namespaces en declaraties](#namespaces-en-declaraties)
+  - [Standaard namespace afkortingen](#standaard-namespace-afkortingen)
   - [Verkeerde namespace declaraties](#verkeerde-namespace-declaraties)
   - [Incorrecte imkl/2015/ namespace](#incorrecte-imkl2015-namespace)
+  - [Default namespace](#default-namespace)
+  - [Definiering namespaces op dieper niveau](#definiering-namespaces-op-dieper-niveau)
   - [Verkeerde character encoding](#verkeerde-character-encoding)
   - [Missende namespace bij afsluitende tag](#missende-namespace-bij-afsluitende-tag)
 - [XSD fouten](#xsd-fouten)
   - [Verplicht attribuut niet toegevoegd](#verplicht-attribuut-niet-toegevoegd)
   - [Niet toegestaan attribuut toegevoegd](#niet-toegestaan-attribuut-toegevoegd)
-  - [Geen NilReason opgegeven](#geen-NilReason-opgegeven)
+  - [Voidable](#voidable)
+  - [Geen NilReason opgegeven](#geen-nilreason-opgegeven)
   - [Incorrecte geometrie](#incorrecte-geometrie)
   - [Verkeerde volgorde in gml-features](#verkeerde-volgorde-in-gml-features)
   - [Volgorde van elementen](#volgorde-van-elementen)
+- [Extra validatieregels](#extra-validatieregels)
+  - [IMKL v1.2.1 ExtraRegels](#imkl-v121-extraregels)
+  - [OCL-constraints](#ocl-constraints)
+  - [Toelichting controles netinformatie KLIC](#toelichting-controles-netinformatie-klic)
+  - [KLIC-WIN validatiecode](#klic-win-validatiecode)
 - [Verwijzingen](#verwijzingen)
   - [Verouderde codelijst gebruikt](#verouderde-codelijst-gebruikt)
   - [Verkeerde waarde uit codelijst gebruikt](#verkeerde-waarde-uit-codelijst-gebruikt)
+  - [Thema oilGasChemical](#thema-oilgaschemical)
   - [Verwijzingen naar AppurtenanceType](#verwijzingen-naar-appurtenancetype)
   - [Verwijzingen met authorityRole](#verwijzingen-met-authorityrole)
   - [Gebruik van Maatvoering en Annotatie](#gebruik-van-maatvoering-en-annotatie)
   - [Lege xlink's](#lege-xlinks)
   - [Gebruik van eenheden (uom, Unit of Measure)](#gebruik-van-eenheden-uom-unit-of-measure)
+  - [Gebruik `utilityFacilityReference`](#gebruik-utilityfacilityreference)
 - [Identificaties van objecten](#identificaties-van-objecten)
   - [Format van identifiers](#format-van-identifiers)
   - [Vergelijking van identifier en gml:id](#vergelijking-van-identifier-en-gmlid)
   - [Associatie naar Utiliteitsnet en UtilityLink](#associatie-naar-utiliteitsnet-en-utilitylink)
   - [Driehoeksverhouding feature - Utiliteitsnet - UtilityLink](#driehoeksverhouding-feature---utiliteitsnet---utilitylink)
 
+---------
 ## Inleiding
 
 Met de introductie van IMKL2015 zal de wijze waarop de graafsector kabel- en leidinginformatie uitwisselt, sterk gaan veranderen. Waar tot nog deze informatie werd uitgewisseld op basis van "plaatjes" en bijlages, zal nu steeds meer informatie worden uitgewisseld op basis van objecten en vectordata (ook wel "features" genoemd).
@@ -48,40 +60,100 @@ Zie daarvoor ook https://github.com/kadaster/klic-win.
 Doel van dit document is de lezer een samenvatting met opgedane ervaringen te geven bij het toepassen van het IMKL2015-model tot nog toe. Dit kan toekomstig aansluitende netbeheerders helpen om veelvoorkomende fouten te voorkomen, waardoor het
 aansluitproces soepel en effectief verloopt.
 
-## Namespaces
+---------
+## Namespaces en declaraties
 
 De volgende bevindingen komen voort uit het gebruik van namespaces in IMKL2015 compliant GML.
 
+### Standaard namespace afkortingen
+
+Een willekeurig XML-dataset zit zo in elkaar dat de namespace afkorting geen betekenis heeft en alleen bedoeld is om het XML beter leesbaar te maken.
+Elke dataset kan zijn eigen afkortingen definieren. Dat betekent dat in de uitwisseling tussen de datasets verschillende typen afkortingen kunnen voorkomen. 
+Dat is voor de herkenbaarheid niet zo handig.  
+In de sector zijn daarom werkafspraken gemaakt om op een _gelijksoortige_ wijze om te gaan met __afkortingen__ voor namespaces.  
+
+In onderstaand voorbeeld wordt een overzicht gegeven van de te gebruiken namespace afkortingen:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection
+	xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+	xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+	xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+	xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+	xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+	xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+	xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+	xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+	xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+	xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+	...
+```
+
+Het geeft veel voordelen om op een eenduidige manier met deze namespaces om te gaan:
+* Namespaces zijn direct herkenbaar voor de gebruiker
+* Er is geen verschil tussen de mogelijke manieren waarop netbeheerders namespaces definiëren
+* Uniformiteit geeft betere leesbaarheid (veel minder tekst; alleen de relevante informatie wordt getoond)
+* Namespaces kunnen in de header worden gezet (eenmalige definitie) en binnen de elementen worden weggelaten, waardoor de omvang van de xml-file aanzienlijk wordt gereduceerd
+
 ### Verkeerde namespace declaraties
 
-De namespace van de nieuwe IMKL2015 is `"http://www.geostandaarden.nl/imkl/2015/wion/1.2"`.
+De namespace van de nieuwe versie van IMKL is `"http://www.geostandaarden.nl/imkl/2015/wion/1.2"`.   
 Een voorbeeld van correcte namespace declaraties in IMKL2015 met een verwijzing naar versie 1.2.1 van IMKL:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<gml:FeatureCollection xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
-                       xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0"
-                       xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
-                       xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0"
-                       xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
-                       xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0"
-                       xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0"
-                       xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0"
-                       xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0"
-                       xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
-                       xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0"
-                       xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
-                       xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
+<gml:FeatureCollection
+	xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+	...
+	gml:id="ID_netinformatie_KL9999_2018-01-15" 
+	xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
 ```
 
 ### Incorrecte imkl/2015/ namespace
 
 Op dit moment ondersteunt het Kadaster de imkl/2015/wion/1.2 namespace.
 
+### Default namespace
+Het is niet de bedoeling dat in een aangeleverde XML-dataset een default namespace wordt gebruikt.
+De Klic-programmatuur gaat uit van de voorgedefinieerde afkortingen voor namespaces, zoals hierboven gespecificeerd.
+
+Voorbeeld *onjuist* gebruik:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection
+	xmlns="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+	...
+```
+
+### Definiering namespaces op dieper niveau
+Het is mogelijk om op een dieper niveau eigen namespaces te definieren.
+De Klic-programmatuur zal deze namespaces respecteren en opnemen in de uitlevering van gebiedsinformatie.
+
+Voorbeeld eigen namespace:
+```xml
+<gml:featureMember>
+    <imkl:Utiliteitsnet gml:id="nl.imkl-KL3131.UNET_gasHogeDruk_4">
+        ...
+        <us-net-common:disclaimer >
+            <gmd:PT_FreeText xmlns:gmd="http://www.isotc211.org/2005/gmd">
+                <gmd:textGroup>
+                    <gmd:LocalisedCharacterString>https://www.enexis.nl/Documents/brochures/brochure-graaf-zorgvuldig-klic-noord-en-zuid.pdf</gmd:LocalisedCharacterString>
+                </gmd:textGroup>
+            </gmd:PT_FreeText>
+        </us-net-common:disclaimer>
+        ...
+    </imkl:Utiliteitsnet>
+</gml:featureMember>
+```
+
 ### Verkeerde character encoding
 
-IMKL2015 hanteert de UTF-8 encoding. Een voorbeeld van waar zoiets mis kan gaan is bijvoorbeeld het oude florijn teken.
+IMKL hanteert de UTF-8 encoding. Een voorbeeld van waar zoiets mis kan gaan is bijvoorbeeld het oude florijn teken.
 Een correct voorbeeld:
 
 ```xml
@@ -95,8 +167,9 @@ Een voorbeeld is: “Afsluitende tag voor rotatiehoek mist de namespace: `</rota
 
 ## XSD fouten
 
-Een door netbeheerders aangeleverd XML-bestand met IMKL2015-features wordt gevalideerd door een laag XSD-validaties op basis van schema-definities. Dit niveau bevat een eigen laag feedback.
-De volgende bevindingen komen voort uit het valideren van een XML-bestand (IMKL2015 compliant gml) op basis van de imkl2015-wion.xsd.
+Een door netbeheerders aangeleverd XML-bestand met IMKL-features wordt gevalideerd door een laag XSD-validaties op basis van schema-definities. Dit niveau bevat een eigen laag feedback.
+De schema-definities waartegen wordt gevalideerd zijn vastgelegd "imkl2015-wion.xsd".
+
 Het voorbeeld heeft betrekking op het aanleveren van een _Rioolleiding_ met attributen die gedefinieerd zijn volgens de onderliggende INSPIRE-definities.
 In het klasse-diagram van IMKL2015 is deze beschreven volgens onderstaande figuur.
 
@@ -146,14 +219,31 @@ Een syntactisch *onjuiste* invulling...:
 </imkl:Rioolleiding>
 ```
 
+### Voidable
+Bij attributen en associaties die het stereotype "\<\<voidable\>\>" hebben kan, indien het van
+toepassing is, geen waarde worden ingevuld. Optioneel kan er ook een reden opgenomen worden waarom
+er geen waarde is ingevuld.  
+De benoemde redenen volgens INSPIRE zijn:
+- `Unknown`: Waarde onbekend: De waarde is bij de zender niet bekend.
+- `Unpopulated`: Niet ondersteund: De zender houdt in zijn registratie geen waarde voor dit attribuut bij.
+Geldt voor alle objecten van dit objecttype.
+- `Withheld`: Niet geautoriseerd: De zender vindt dat de ontvanger niet geautoriseerd is om de waarde te
+Kennen. Waarde is vertrouwelijk en wordt niet uitgewisseld.
+
+Zie: http://inspire.ec.europa.eu/codelist/VoidReasonValue/
+
+NB. In de XSD wordt gerefereerd naar de waardelijst `gml:NilReasonEnumaration`.
+Deze heeft andere mogelijk in te vullen waarden.  
+We bevelen aan om de door INSPIRE voorgeschreven waarden te gebruiken.
+
 ### Geen NilReason opgegeven
-Vergeten een NilReason op te geven bij het ontbreken van een waarde, daar waar deze verplicht is, indien een waarde niet ingevuld is.
-In het klasse-diagram van IMKL2015 zijn deze attributen aangegeven als "\<\<voidable\>\>".
+Bij verplichte attributen die aangegeven zijn als "\<\<voidable\>\>" moet
+- óf een waarde worden ingevuld,
+- óf een NilReason worden opgegeven als de waarde ontbreekt. De opgave van de reden is overigens optioneel.
 
-voorbeeld: Attribuut `us-net-common:verticalPosition` heeft geen waarde en geen NilReason.
+Voorbeeld foutmelding: Attribuut `us-net-common:verticalPosition` heeft geen waarde en geen NilReason.
 
-In bovenstaande figuur zijn een aantal codelists getoond die bij een rioolleiding toegepast zouden kunnen worden.
-Voorbeelden van syntactisch juiste invullingen zouden kunnen zijn:
+In onderstaande XML-gegevensset zijn enkele verplichte attributen van een rioolleiding ingevuld met geldige referenties naar codelijsten:
 ```xml
     ...
     <!-- attribuutwaarden toegekend -->
@@ -163,10 +253,17 @@ Voorbeelden van syntactisch juiste invullingen zouden kunnen zijn:
     <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">12</us-net-common:pipeDiameter>
     <us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
     ...
+```
+Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven::
+```xml
+    ...
     <!-- attribuutwaarden met NilReason -->
-    <us-net-common:verticalPosition xsi:nil="true" nilReason="Withheld"/>
+    <us-net-common:currentStatus xsi:nil="true"/>
+    <us-net-common:verticalPosition xsi:nil="true"/>
+    <!-- attribuutwaarden met NilReason en opgave van reden -->
     <us-net-common:warningType xsi:nil="true" nilReason="Unknown"/>
     <us-net-common:pipeDiameter xsi:nil="true" nilReason="Unpopulated"/>
+    <us-net-sw:sewerWaterType xsi:nil="true" nilReason="Withheld"/>
     ...
 ```
 
@@ -187,12 +284,12 @@ Invalid content was found starting with element 'imkl:Annotatie'. One of '{"http
 Voorbeeld van syntactisch juiste invulling:
 ```xml
 <imkl:Annotatie gml:id="nl.imkl-KL9999.ann_tst00532">
-	...
-	<imkl:ligging>
-		<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="ID_463d65cb-8bfe-491e-837f-599efdc78bd0x-ann">
-			<gml:posList>123281.263 383887.883 123279.616 383891.403</gml:posList>
-		</gml:LineString>
-	</imkl:ligging>
+    ...
+    <imkl:ligging>
+        <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.ann_tst00532_geo">
+            <gml:posList>123281.263 383887.883 123279.616 383891.403</gml:posList>
+        </gml:LineString>
+    </imkl:ligging>
 </imkl:Annotatie>
 ```
 
@@ -202,16 +299,74 @@ De volgorde van de elementen `thema` en `standaardDieptelegging` is niet correct
 Voorbeeld van _onjuiste_ volgorde:
 ```xml
 <imkl:Utiliteitsnet gml:id="nl.imkl-KL9999.nw_00004">
-	<us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/electricity"/>
-	<us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
-	...
-	<imkl:standaardDieptelegging uom="urn:ogc:def:uom:OGC::m">0.65</imkl:standaardDieptelegging>
-	<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning"/>
+    <us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/electricity"/>
+    <us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
+    ...
+    <imkl:standaardDieptelegging uom="urn:ogc:def:uom:OGC::m">0.65</imkl:standaardDieptelegging>
+    <imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning"/>
 </imkl:Utiliteitsnet>
 ```
-Het IMKL-thema-element dient in IMKL2015 boven het optionele element `standaardDieptelegging` te worden geplaatst.
+Het element `thema` dient in IMKL boven het optionele element `standaardDieptelegging` te worden geplaatst.
 
+---------
+## Extra validatieregels
+Naast validaties die afgedwongen kunnen worden op basis van een XML-schema-definitie (XSD), zijn er binnen IMKL nog regels afgesproken die niet in een XSD zijn te valideren.
 
+### IMKL v1.2.1 ExtraRegels
+In het Excel-document "IMKL2015 v 1.2.1_object-attributen-ExtraRegels.xlsx" wordt op een tabblad per IMKL-feature van elk attribuut aangegeven welke regels hiervoor gelden.   
+Zie de publicatie zoals vastgelegd bij Geonovum: https://github.com/Geonovum/imkl2015/tree/master/regels.
+
+Voorbeeld:   
+Voor feature "Electriciteitskabel" is het attribuut "operatingVoltage" verplicht en de UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::V
+
+### OCL-constraints
+Niet alle regels zijn in een XSD vast te leggen.  
+In het IMKL zijn veel extra validatieregels vastgelegd als "OCL-constraint". Zie daarvoor het informatiemodel, zoals vastgelegd bij Geonovum. Zie https://github.com/Geonovum/imkl2015/tree/master/informatiemodel/1.2.1
+
+Met deze constraints kunnen regels worden gedefinieerd waarbij bijzondere condities of afhankelijkheden tussen verschillende elementen worden aangegeven.
+Het uitvoeren van deze validatieregels dient te gebeuren met spcifiek daarvoor bedoelde software (bijv. Schematron) en vraagt de nodige systeemresources.  
+In het Klic-systeem zijn deze controles geimplementeerd in de eigen software.
+
+Voorbeeld bij IMKL-feature `ContainerLeidingelement` (abstract) met constraint "RotatiehoekEenheidDegrees":
+```xml
+/* Rotatiehoek van het symbool in graden. */
+Inv: self.rotatiehoekSymbool.Measure.uom = 'urn:ogc:def:uom:OGC::deg'
+```
+
+Voorbeeld bij IMKL-feature `Belanghebbende` met constraint "RegelsIndienNietbetrokken":
+```xml
+/* Regels indien netbeheerder niet betrokken:
+geen netinformatie,
+geen eigenTopografie,
+eisVoorzorgsmaatregelBijlage=nee,
+wel bijlage optioneel */
+
+Inv RegelsIndienNietbetrokken:
+(Gebiedsinformatielevering :: allInstances() -> size () = 1 and not(self.betrokkenBijAanvraag)) implies
+(self.netinformatie->isEmpty()
+and
+self.eigenTopografie->isEmpty()
+and
+not(self.eisVoorzorgsmaatregel)
+and
+not(self.bijlage.oclIsTypeOf(EisVoorzorgsmaatregelBijlage))
+```
+
+### Toelichting controles netinformatie KLIC
+In de publicatie "Toelichting controles netinformatie KLIC" wordt een toelichting gegeven op controles die door het Klic-systeem worden uitgevoerd bij aanlevering van IMKL-netinformatie.
+
+Netbeheerders krijgen in het nieuwe KLIC de keuze om centraal te gaan, waarbij ze hun netinformatie in een centrale voorziening zetten, of decentraal te gaan waarbij ze - net als in de oude situatie - per gebiedsinformatie-aanvraag beheerdersinformatie aanleveren aan het Kadaster.
+
+In beide gevallen wordt voor de definiëring van de aan te leveren vectordata gebruik gemaakt van hetzelfde IMKL-model. De validatie van de vector informatie is in beide gevallen - op een enkele uitzondering na - gelijk.
+
+### KLIC-WIN validatiecode
+Het Kadaster stelt gedurende het project KLIC-WIN deze validatiecode beschikbaar aan de netbeheerder of degene die in opdracht van hem werkzaamheden verricht, om naast de functionele beschrijving aanvullend inzicht te geven in de door het Kadaster gerealiseerde validaties van netinformatie.  
+Deze validatiecode kan als hulpmiddel worden gebruikt voor de realisatie van validaties van netinformatie bij netbeheerders.
+
+De validatiecode wordt gepubliceerd op Github (https://github.com/kadaster/klic-win/blob/master/Toepassing%20IMKL/KLIC-WIN%20validatiecode.zip).  
+Op deze code is een disclaimer van toepassing.
+
+---------
 ## Verwijzingen
 
 Onderstaande bevindingen komen voort uit validaties waarbij wordt gecontroleerd of er juiste (geldige) verwijzingen worden gebruikt in de IMKL-dataset.
@@ -230,6 +385,18 @@ Correct is hier: `<imkl:thema xlink:href="http://definities.geostandaarden.nl/im
 De ingevulde waarde komt komt niet voor in de gebruikte codelijst. Foutmelding is dan: Waarde '\[CODELIJSTWAARDE\] komt niet
 voor in codelijst '\[CODELIJST\]'. (Incorrecte codelijst gebruikt).
 
+### Thema `oilGasChemical`
+In het UML-model van INSPIRE wordt met de waardelijst _UtilityNetworkTypeValue_ de mogelijke INSPIRE-thema's voor een _UtilityNetwork_ aangegeven.
+
+![utilitynetworktypevalue](images/UtilityNetworkTypeValue.jpg "UtilityNetworkTypeValue")
+
+In dit UML-model wordt gesproken over het thema `oilGasChemicals`, maar dit hoort te zijn `oilGasChemical` (zonder afsluitende "s")!
+
+Deze waardelijst wordt gepubliceerd als codelijst in het register en deze is leidend.
+Zie: http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical
+
+In het overzicht van waardelijsten (zie IMKL2015 - 1.2.1 waardelijsten.xlsx) is deze wél correct opgenomen.
+De IMKL-waardelijst _UtilityNetworkTypeIMKLValue_ overerft de waarden uit _UtilityNetworkTypeValue_ en wordt nog aangevuld met de waarde "overig".
 
 ### Verwijzingen naar AppurtenanceType
 
@@ -239,7 +406,7 @@ Een extra bijzonderheid hierbij is dat deze waardelijst varierend is per INSPIRE
 | INSPIRE-thema      | INSPIRE-codelijst                       | IMKL-codelijst                              |
 |--------------------|-----------------------------------------|---------------------------------------------|
 | electricity        | ElectricityAppurtenanceTypeValue        | ElectricityAppurtenanceTypeIMKLValue        |
-| oilGasChemicals    | OilGasChemicalsAppurtenanceTypeValue    | OilGasChemicalsAppurtenanceTypeIMKLValue    |
+| oilGasChemical     | OilGasChemicalsAppurtenanceTypeValue    | OilGasChemicalsAppurtenanceTypeIMKLValue    |
 | sewer              | SewerAppurtenanceTypeValue              | SewerAppurtenanceTypeIMKLValue              |
 | telecommunications | TelecommunicationsAppurtenanceTypeValue | TelecommunicationsAppurtenanceTypeIMKLValue |
 | thermal            | ThermalAppurtenanceTypeValue            | ThermalAppurtenanceTypeIMKLValue            |
@@ -295,13 +462,13 @@ Waardelijst RelatedPartyRoleValue (IMKL2015 v1.2.1):
 Voorbeeld van het gebruik van `authorityRole`:
 ```xml
 <imkl:Utiliteitsnet gml:id="nl.imkl-KL9999.nw_GLD00023">
-	<us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical"/>
-	<us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
-	<imkl:identificatie>
-		...
-	</imkl:identificatie>
-	...
-	<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasLageDruk"/>
+    <us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical"/>
+    <us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
+    <imkl:identificatie>
+        ...
+    </imkl:identificatie>
+    ...
+    <imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasLageDruk"/>
 </imkl:Utiliteitsnet>
 ```
 
@@ -321,22 +488,22 @@ In onderstaand voorbeeld is een object _Maatvoering_ gespecificeerd met als `maa
 
 ```xml
 <imkl:Maatvoering gml:id="nl.imkl-KL9999.mvpijl_00543">
-	...
-	<imkl:label>4,5</imkl:label>
-	<imkl:inNetwork xlink:href="..."/>
-	<imkl:maatvoeringsType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl"/>
-	<imkl:rotatiehoek uom="urn:ogc:def:uom:OGC::deg">20</imkl:rotatiehoek>
-	<imkl:labelpositie>
-		<imkl:Labelpositie>
-			<imkl:aangrijpingHorizontaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/0"/>
-			<imkl:aangrijpingVerticaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/0"/>
-		</imkl:Labelpositie>
-	</imkl:labelpositie>
-	<imkl:ligging>
-		<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="ID_463d65cb-8bfe-491e-837f-599efdc78bd0">
-			<gml:posList>154965.763 389492.883 154967.803 3894488.403</gml:posList>
-		</gml:LineString>
-	</imkl:ligging>
+    ...
+    <imkl:label>4,5</imkl:label>
+    <imkl:inNetwork xlink:href="..."/>
+    <imkl:maatvoeringsType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl"/>
+    <imkl:rotatiehoek uom="urn:ogc:def:uom:OGC::deg">20</imkl:rotatiehoek>
+    <imkl:labelpositie>
+        <imkl:Labelpositie>
+            <imkl:aangrijpingHorizontaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/0"/>
+            <imkl:aangrijpingVerticaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/0"/>
+        </imkl:Labelpositie>
+    </imkl:labelpositie>
+    <imkl:ligging>
+        <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.463d65cb-8bfe-491e-837f-599efdc78bd0">
+            <gml:posList>154965.763 389492.883 154967.803 3894488.403</gml:posList>
+        </gml:LineString>
+    </imkl:ligging>
 </imkl:Maatvoering>
 ```
 
@@ -353,20 +520,20 @@ Voorbeeld:
 ```xml
 
 <imkl:Mantelbuis gml:id="nl.imkl-KL9999.mb_00536">
-	...
-	<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
-	<us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
-	<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">100</us-net-common:pipeDiameter>
-	<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/asbestos-cement"/>
+    ...
+    <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+    <us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
+    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">100</us-net-common:pipeDiameter>
+    <imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/asbestos-cement"/>
 </imkl:Mantelbuis>
 
 
 <imkl:Overig gml:id="nl.imkl-KL9999.ml_00537">
-	...
-	<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/polyester"/>
-	<imkl:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">12.5</imkl:pipeDiameter>
-	<imkl:pressure uom="urn:ogc:def:uom:OGC::bar">5.3</imkl:pressure>
-	<imkl:producttype>Melkleiding van boer naar grootafnemer</imkl:producttype>
+    ...
+    <imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/polyester"/>
+    <imkl:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">12.5</imkl:pipeDiameter>
+    <imkl:pressure uom="urn:ogc:def:uom:OGC::bar">5.3</imkl:pressure>
+    <imkl:producttype>Melkleiding van boer naar grootafnemer</imkl:producttype>
 </imkl:Overig>
 ```
 
@@ -451,6 +618,45 @@ Voorbeelden:
     <imkl:standaardDieptelegging uom="urn:ogc:def:uom:OGC::m">1.25</imkl:standaardDieptelegging>
 ```
 
+### Gebruik `utilityFacilityReference`
+De attributen `us-net-common:utilityFacilityType` en `us-net-common:governmentalServiceReference` van het abstracte Inspire-feature _UtilityNetworkElement_ zijn beide optioneel.
+De attributen hoeven dus - volgens IMKL - niet meegegeven te worden.
+
+![utilitynetworkelement](images/UtilityNetworkEelement.jpg "UtilityNetworkEelement")
+
+Voorbeeld:
+```xml
+<gml:featureMember>
+    <imkl:OlieGasChemicalienPijpleiding gml:id="nl.imkl-KL3131.<id>">
+        ...
+        <us-net-common:verticalPosition >underground</us-net-common:verticalPosition>
+        <!-- niets noemen -->
+        <us-net-common:utilityDeliveryType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/distribution"></us-net-common:utilityDeliveryType>
+        <us-net-common:warningType xsi:nil="true"></us-net-common:warningType>
+        ...
+    </imkl:OlieGasChemicalienPijpleiding>
+</gml:featureMember>
+```
+Als het attribuut wél meegegeven wordt, dan \
+a)	Moet er een _ActivityComplex_, respectievelijk een _GovernmentalService_ worden aangegeven.
+Beide features hebben we in de huidige versie van het IMKL niet onderkend en er wordt niets mee gedaan,
+óf \
+b)	Moet er een nilReason worden aangegeven (element is “voidable”)
+
+Voorbeeld:
+```xml
+<gml:featureMember>
+    <imkl:OlieGasChemicalienPijpleiding gml:id="nl.imkl-KL3131.<id>">
+        ...
+        <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="missing"/>
+        <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="missing"/>
+        ...
+    </imkl:OlieGasChemicalienPijpleiding>
+</gml:featureMember>
+```
+Omdat IMKL er momenteel niets mee doet, is het gebruik van deze attributen zinloos.
+
+---------
 ## Identificaties van objecten
 
 Bij het valideren van een GML-compliant dataset met IMKL-objecten wordt gecontroleerd of de objecten een (syntactisch) juiste ID hebben.
@@ -476,28 +682,28 @@ Zie daarvoor ook de hoofdstukken "Identifier management" en "Nadere GML implemen
 Voorbeeld van een INSPIRE-feature:
 ```xml
 <us-net-common:UtilityLink gml:id="nl.imkl-KL9999.ul_825200388">
-	<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
-	<net:inspireId>
-		<base:Identifier>
-			<base:localId>KL9999.ul_825200388</base:localId>
-			<base:namespace>nl.imkl</base:namespace>
-		</base:Identifier>
-	</net:inspireId>
-	...
+    <net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+    <net:inspireId>
+        <base:Identifier>
+            <base:localId>KL9999.ul_825200388</base:localId>
+            <base:namespace>nl.imkl</base:namespace>
+        </base:Identifier>
+    </net:inspireId>
+    ...
 </us-net-common:UtilityLink>
 ```
 
 Voorbeeld van een IMKL-feature:
 ```xml
 <imkl:Utiliteitsnet gml:id="nl.imkl-KL9999.nw_GHD_509370004">
-	...
-	<imkl:identificatie>
-		<imkl:NEN3610ID>
-			<imkl:namespace>nl.imkl</imkl:namespace>
-			<imkl:lokaalID>KL9999.nw_GHD_509370004</imkl:lokaalID>
-		</imkl:NEN3610ID>
-	</imkl:identificatie>
-	...
+    ...
+    <imkl:identificatie>
+        <imkl:NEN3610ID>
+            <imkl:namespace>nl.imkl</imkl:namespace>
+            <imkl:lokaalID>KL9999.nw_GHD_509370004</imkl:lokaalID>
+        </imkl:NEN3610ID>
+    </imkl:identificatie>
+    ...
 </imkl:Utiliteitsnet>
 ```
 
@@ -518,34 +724,34 @@ IMKL-objecten die overerven van de abstracte featuretypes _KabelOfLeiding_ of _K
 Voorbeeld van een  verwijzing naar een bestaand netwerk (zie hierboven) en een bestaande _UtilityLink_:
 ```xml
 <imkl:OlieGasChemicalienPijpleiding gml:id="nl.imkl-KL9999.ghd_52885200018">
-	<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
-	<net:inspireId>
-		<base:Identifier>
-			<base:localId>KL9999.KL9999.ghd_52885200018</base:localId>
-			<base:namespace>nl.imkl</base:namespace>
-		</base:Identifier>
-	</net:inspireId>
-	<net:inNetwork xlink:href="nl.imkl-KL9999.nw_GHD_509370004"/>
-	...
-	<net:link xlink:href="nl.imkl-KL9999.ulink_4279931100403"/>
-	...
+    <net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+    <net:inspireId>
+        <base:Identifier>
+            <base:localId>KL9999.KL9999.ghd_52885200018</base:localId>
+            <base:namespace>nl.imkl</base:namespace>
+        </base:Identifier>
+    </net:inspireId>
+    <net:inNetwork xlink:href="nl.imkl-KL9999.nw_GHD_509370004"/>
+    ...
+    <net:link xlink:href="nl.imkl-KL9999.ulink_4279931100403"/>
+    ...
 </imkl:OlieGasChemicalienPijpleiding>
 
 <us-net-common:UtilityLink gml:id="nl.imkl-KL9999.ulink_4279931100403">
-	<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
-	<net:inspireId>
-		<base:Identifier>
-			<base:localId>KL9999.ulink_4279931100403</base:localId>
-			<base:namespace>nl.imkl</base:namespace>
-		</base:Identifier>
-	</net:inspireId>
-	<net:inNetwork xlink:href="nl.imkl-KL9999.nw_GHD_509370004"/>
-	<net:centrelineGeometry>
-		<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="idm522374155600">
-			...
-		</gml:Curve>
-	</net:centrelineGeometry>
-	...
+    <net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+    <net:inspireId>
+        <base:Identifier>
+            <base:localId>KL9999.ulink_4279931100403</base:localId>
+            <base:namespace>nl.imkl</base:namespace>
+        </base:Identifier>
+    </net:inspireId>
+    <net:inNetwork xlink:href="nl.imkl-KL9999.nw_GHD_509370004"/>
+    <net:centrelineGeometry>
+        <gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.ulink_4279931100403_geo">
+            ...
+        </gml:Curve>
+    </net:centrelineGeometry>
+    ...
 </us-net-common:UtilityLink>
 ```
 

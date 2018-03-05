@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<!-- bestandsnaam: Voorbeeld 1. Utiliteitsnet met Mantelbuis en ExtraGeometrie.xml -->
+<!-- bron: Kadaster-Klic -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld  gebruik ExtraGeometrie bij een Mantelbuis met 2 elektriciteitskabels in een netwerk. 
+De gebruikte voorbeeld-features zijn bedoeld voor demo-doeleinden en zijn niet bedoeld om een
+representatie te geven van de werkelijke situatie ter plaatse.
+De inhoud is gebaseerd op de definities uit IMKL2015, versie 1.2.1.
+
+Het betreft één mantelbuis waar twee elektriciteitskabels doorlopen.
+Bij deze mantelbuis is een verwijzing naar ExtraGeometrie (vlakgeometrie2D).
+Dit voorbeeld gaat met name in op de topologische relatie. Andere attributen zijn minimaal ingevuld
+of alleen om het schema valide te maken.
+ _____________________________________________________________________ -->
+
+<gml:FeatureCollection xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+gml:id="ID_Netinformatie_KL3131_Pipe-Cable-ExtraGeometrie_2017-19-09" 
+xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
+
+	<!-- de netinformatie met 1 utiliteitsnet -->
+	<!-- laagspanning -->
+	<gml:featureMember>
+		<imkl:Utiliteitsnet gml:id="nl.imkl-KL3131.net_ls2">
+			<us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/electricity"/>
+			<us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL3131.net_ls2</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning"/>
+		</imkl:Utiliteitsnet>
+	</gml:featureMember>
+	
+	<!-- Mantelbuis (Pipe) met (optioneel) twee elektriciteitskabels en een verwijzing naar extra vlakgeometrie-->
+	<gml:featureMember>
+		<imkl:Mantelbuis gml:id="nl.imkl-KL3131.M1">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.M1</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:link xlink:href="nl.imkl-KL3131.m_mb1_ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xsi:nil="true"/>
+			<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">15</us-net-common:pipeDiameter>
+			<us-net-common:cables xlink:href="nl.imkl-KL3131.EK1"/>
+			<us-net-common:cables xlink:href="nl.imkl-KL3131.EK2"/>
+			<imkl:bovengrondsZichtbaar>false</imkl:bovengrondsZichtbaar>
+			<imkl:aantalKabelsLeidingen>2</imkl:aantalKabelsLeidingen>
+			<imkl:extraGeometrie xlink:href="nl.imkl-KL3131.m_extrageo_1"/>
+			<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/HDPE"/>
+		</imkl:Mantelbuis>
+	</gml:featureMember>
+	<!-- Elektriciteitskabel:-->
+	<gml:featureMember>
+		<imkl:Elektriciteitskabel gml:id="nl.imkl-KL3131.EK1">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.EK1</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:link xlink:href="nl.imkl-KL3131.m_ek1_ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xsi:nil="true"/>
+			<us-net-el:operatingVoltage uom="urn:ogc:def:uom:OGC::V">230</us-net-el:operatingVoltage>
+            <us-net-el:nominalVoltage uom="urn:ogc:def:uom:OGC::V">230</us-net-el:nominalVoltage>
+		</imkl:Elektriciteitskabel>
+	</gml:featureMember>
+	<!-- Elektriciteitskabel -->
+	<gml:featureMember>
+		<imkl:Elektriciteitskabel gml:id="nl.imkl-KL3131.EK2">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.EK2</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:link xlink:href="nl.imkl-KL3131.m_ek2_ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xsi:nil="true"/>
+			<us-net-el:operatingVoltage uom="urn:ogc:def:uom:OGC::V">230</us-net-el:operatingVoltage>
+            <us-net-el:nominalVoltage uom="urn:ogc:def:uom:OGC::V">230</us-net-el:nominalVoltage>
+		</imkl:Elektriciteitskabel>
+	</gml:featureMember>
+	
+	<!-- de Links (geometrieen) die er bij horen. Elke leiding heeft eigen link element; geen hergebruik van links-->
+	<!-- Link voor mantelbuis -->
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-KL3131.m_mb1_ulink">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.m_mb1_ulink</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL3131.m_mb1_ulink_geo">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList srsDimension="2">154718.401 389452.656 154755.558 389445.825</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	<!-- Link voor elektricteitskabel 1 -->
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-KL3131.m_ek1_ulink">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.m_ek1_ulink</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL3131.m_ek1_ulink_geo">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList srsDimension="2">154718.401 389452.656 154755.558 389445.825</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	<!-- Link voor elektricteitskabel 2 -->
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-KL3131.m_ek2_ulink">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL3131.m_ek2_ulink</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL3131.m_ek2_ulink_geo">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList srsDimension="2">154718.401 389452.656 154755.558 389445.825</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:validTo>2001-12-17T09:30:47.00+01:00</us-net-common:validTo>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+
+	<!-- ExtarGeometrie voor mantelbuis -->
+	<gml:featureMember>
+		<imkl:ExtraGeometrie gml:id="nl.imkl-KL3131.m_extrageo_1">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL3131.m_extrageo_1</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:vlakgeometrie2D>
+				<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL3131.m_extrageo_1_geo">
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList srsDimension="2">154717.6 389452.0 154754.7 389445.1 154756.7 389447.1 154718.6 389454.0 154717.6 389452.0</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:Polygon>
+			</imkl:vlakgeometrie2D>
+			<imkl:inNetwork xlink:href="nl.imkl-KL3131.net_ls2"/>
+		</imkl:ExtraGeometrie>
+	</gml:featureMember>
+
+</gml:FeatureCollection>
