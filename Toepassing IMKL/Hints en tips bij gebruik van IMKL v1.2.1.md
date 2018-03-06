@@ -77,21 +77,21 @@ In onderstaand voorbeeld wordt een overzicht gegeven van de te gebruiken namespa
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <gml:FeatureCollection
-	xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
-	xmlns:gml="http://www.opengis.net/gml/3.2" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
-	xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
-	xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
-	xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
-	xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
-	xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
-	xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
-	xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
-	xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
-	xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
-	...
+    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+    xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+    xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+    xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+    xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+    xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+    xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+    xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+    ...
 ```
 
 Het geeft veel voordelen om op een eenduidige manier met deze namespaces om te gaan:
@@ -108,10 +108,10 @@ Een voorbeeld van correcte namespace declaraties in IMKL2015 met een verwijzing 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <gml:FeatureCollection
-	xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
-	...
-	gml:id="ID_netinformatie_KL9999_2018-01-15" 
-	xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
+    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+    ...
+    gml:id="ID_netinformatie_KL9999_2018-01-15" 
+    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
 ```
 
 ### Incorrecte imkl/2015/ namespace
@@ -126,8 +126,8 @@ Voorbeeld *onjuist* gebruik:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <gml:FeatureCollection
-	xmlns="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
-	...
+    xmlns="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+    ...
 ```
 
 ### Definiering namespaces op dieper niveau
@@ -228,13 +228,12 @@ De benoemde redenen volgens INSPIRE zijn:
 - `Unpopulated`: Niet ondersteund: De zender houdt in zijn registratie geen waarde voor dit attribuut bij.
 Geldt voor alle objecten van dit objecttype.
 - `Withheld`: Niet geautoriseerd: De zender vindt dat de ontvanger niet geautoriseerd is om de waarde te
-Kennen. Waarde is vertrouwelijk en wordt niet uitgewisseld.
+kennen. Waarde is vertrouwelijk en wordt niet uitgewisseld.
 
 Zie: http://inspire.ec.europa.eu/codelist/VoidReasonValue/
 
 NB. In de XSD wordt gerefereerd naar de waardelijst `gml:NilReasonEnumaration`.
-Deze heeft andere mogelijk in te vullen waarden.  
-We bevelen aan om de door INSPIRE voorgeschreven waarden te gebruiken.
+Deze heeft andere mogelijk in te vullen waarden. We bevelen aan om de door INSPIRE voorgeschreven waarden te gebruiken.
 
 ### Geen NilReason opgegeven
 Bij verplichte attributen die aangegeven zijn als "\<\<voidable\>\>" moet
@@ -324,7 +323,7 @@ Niet alle regels zijn in een XSD vast te leggen.
 In het IMKL zijn veel extra validatieregels vastgelegd als "OCL-constraint". Zie daarvoor het informatiemodel, zoals vastgelegd bij Geonovum. Zie https://github.com/Geonovum/imkl2015/tree/master/informatiemodel/1.2.1
 
 Met deze constraints kunnen regels worden gedefinieerd waarbij bijzondere condities of afhankelijkheden tussen verschillende elementen worden aangegeven.
-Het uitvoeren van deze validatieregels dient te gebeuren met spcifiek daarvoor bedoelde software (bijv. Schematron) en vraagt de nodige systeemresources.  
+Het uitvoeren van deze validatieregels dient te gebeuren met specifiek daarvoor bedoelde software (bijv. Schematron) en vraagt de nodige systeemresources.  
 In het Klic-systeem zijn deze controles geimplementeerd in de eigen software.
 
 Voorbeeld bij IMKL-feature `ContainerLeidingelement` (abstract) met constraint "RotatiehoekEenheidDegrees":
@@ -353,17 +352,17 @@ not(self.bijlage.oclIsTypeOf(EisVoorzorgsmaatregelBijlage))
 ```
 
 ### Toelichting controles netinformatie KLIC
-In de publicatie "Toelichting controles netinformatie KLIC" wordt een toelichting gegeven op controles die door het Klic-systeem worden uitgevoerd bij aanlevering van IMKL-netinformatie.
+In de publicatie [Toelichting controles netinformatie KLIC](Toelichting%20controles%20netinformatie%20KLIC.md) wordt een toelichting gegeven op controles die door het Klic-systeem worden uitgevoerd bij aanlevering van IMKL-netinformatie.
 
 Netbeheerders krijgen in het nieuwe KLIC de keuze om centraal te gaan, waarbij ze hun netinformatie in een centrale voorziening zetten, of decentraal te gaan waarbij ze - net als in de oude situatie - per gebiedsinformatie-aanvraag beheerdersinformatie aanleveren aan het Kadaster.
 
 In beide gevallen wordt voor de definiëring van de aan te leveren vectordata gebruik gemaakt van hetzelfde IMKL-model. De validatie van de vector informatie is in beide gevallen - op een enkele uitzondering na - gelijk.
 
 ### KLIC-WIN validatiecode
-Het Kadaster stelt gedurende het project KLIC-WIN deze validatiecode beschikbaar aan de netbeheerder of degene die in opdracht van hem werkzaamheden verricht, om naast de functionele beschrijving aanvullend inzicht te geven in de door het Kadaster gerealiseerde validaties van netinformatie.  
+Het Kadaster heeft voor het project KLIC-WIN eenmalig ("as-is") validatiecode beschikbaar gesteld aan de netbeheerder of degene die in opdracht van hem werkzaamheden verricht, om naast de functionele beschrijving aanvullend inzicht te geven in de door het Kadaster gerealiseerde validaties van netinformatie.  
 Deze validatiecode kan als hulpmiddel worden gebruikt voor de realisatie van validaties van netinformatie bij netbeheerders.
 
-De validatiecode wordt gepubliceerd op Github (https://github.com/kadaster/klic-win/blob/master/Toepassing%20IMKL/KLIC-WIN%20validatiecode.zip).  
+De validatiecode is gepubliceerd op Github (https://github.com/kadaster/klic-win/blob/master/Toepassing%20IMKL/KLIC-WIN%20validatiecode.zip).  
 Op deze code is een disclaimer van toepassing.
 
 ---------
