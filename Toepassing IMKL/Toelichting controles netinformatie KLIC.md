@@ -113,6 +113,9 @@ Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn en mag niet groter zijn dan een bepaalde grootte. De maximale grootte voor de eindsituatie is voorlopig gesteld op 2GB.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
 * Ten behoeve van de aanlevering van netinformatie dient het ZIP-archief één XML bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.
+* Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het ZIP-archief twee XML bestand te bevatten. Het eerste bestand bevat de netinformatie volgens de richtlijn hierboven vermeldt. Het tweede bestand
+bevat de voorzorgsmaatregelen, waarvan de bestandsnaam begint met 'voorzorgsmaatregelen' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters. Tevens moeten bij de voorzorgsmaatregelen
+één of meerdere bijlagen aanwezig zijn waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.
 * De bestandsnaam van het ZIP-archief of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
   * Bestandsnaam mag niet langer zijn dan 120 tekens.
   * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
@@ -185,11 +188,12 @@ Het lokaalID maakt het mogelijk per bronhouder de objecten uniek te identificere
 Om te voorkomen dat er eventuele dubbelingen gaan ontstaan bij objecten die door het Kadaster namens een bronhouder worden aangemaakt, mag het lokaalID echter niet beginnen met "_". Dit is voorbehouden aan objecten die door het Kadaster worden aangemaakt en daarmee onderscheidend.
 Voorbeelden van identificaties van objecten die door het Kadaster namens een bronhouder kunnen worden aangemaakt:
 ```xml
-<imkl:Belanghebbende gml:id="nl.imkl-KL9999._Belanghebbende_17G000041">
+<imkl:Belanghebbende gml:id="nl.imkl-KL9999._Belanghebbende_17G000041-1">
     <imkl:identificatie>
         <imkl:NEN3610ID>
             <imkl:namespace>nl.imkl</imkl:namespace>
             <imkl:lokaalID>KL9999._Belanghebbende_17G000041</imkl:lokaalID>
+            <imkl:versie>1</imkl:versie>
         </imkl:NEN3610ID>
     </imkl:identificatie>
     <imkl:beginLifespanVersion>2017-01-11T09:09:11.31+01:00</imkl:beginLifespanVersion>
@@ -293,9 +297,9 @@ individuele geometrieën.
 Voorbeeld:
 ```xml
 <gml:boundedBy>
-    <gml:Envelope>
-        <gml:lowerCorner srsName="urn:opengis:def:crs:EPSG::28992">......</gml:lowerCorner>
-        <gml:upperCorner srsName="urn:opengis:def:crs:EPSG::28992">......</gml:upperCorner>
+    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
+        <gml:lowerCorner>......</gml:lowerCorner>
+        <gml:upperCorner>......</gml:upperCorner>
     </gml:Envelope>
 </gml:boundedBy>
 ```
@@ -319,9 +323,18 @@ Evenmin controleert KLIC of de door een decentrale bronhouder aangeleverde behee
 
 srsName wordt ingevuld bij elk object op hoogste geometrie niveau.
 
-Voor IMKL2015 is het coördinaat referentiesysteem Rijksdriehoekstelsel, epsg code 28992, verplicht en wordt dit als volgt ingevuld:
+Voor IMKL1.2 is het "Rijksdriehoekstelsel" (epsg code 28992) het verplicht te gebruiken coördinaat referentiesysteem. Deze wordt als volgt ingevuld:
 
 `srsName="urn:ogc:def:crs:EPSG::28992"`
+
+In de GIS-wereld is het niet ongebruikelijk om de verwijzing naar het coördinatenstelsel verkort te gebruiken, zoals hieronder genoemd. Dit wordt geaccepteerd door het Klic-systeem.
+
+`srsName="epsg:28992"`
+
+NB.
+Onderstaande referentie mag _**niet**_ gebruikt worden bij aanlevering van IMKL-data. In de door KLIC gebruikte tool "Degree" geeft dit technische problemen.
+
+`srsName="http://spatialreference.org/ref/epsg/28992/"`  **NIET** gebruiken!!
 
 ###### srsDimension
 
@@ -349,7 +362,7 @@ Een geometry wordt gevalideerd tegen de regels gespecificeerd in de OpenGIS Simp
 
 | Groep/Element/@attribute | Type               | Card. | Opmerking                                                                          |
 |--------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345678` |
+| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                 | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
 | @srsDimension            | Positiveinteger    |  0…1  |                                                                                    |
 | - pos                    | list of xsd:double |   1   |                                                                                    |
@@ -358,7 +371,7 @@ Een geometry wordt gevalideerd tegen de regels gespecificeerd in de OpenGIS Simp
 
 Voorbeeld:
 ```xml
-<gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_p835263">
+<gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_p835263_geo">
    <gml:pos srsDimension="2">155203.526 389052.316</gml:pos>
 </gml:Point>
 ```
@@ -369,7 +382,7 @@ Voorbeeld:
 
 | Groep/Element/@attribute | Type               | Card. | Opmerking                                                                          |
 |--------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345678` |
+| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                 | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
 | @srsDimension            | Positiveinteger    |  0…1  |                                                                                    |
 | - posList                | list of xsd:double |   1   |                                                                                    |
@@ -377,7 +390,7 @@ Voorbeeld:
 
 Voorbeeld:
 ```xml
-<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.W_ls118334">
+<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.W_ls118334_geo">
    <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
 </gml:LineString>
 ```
@@ -386,7 +399,7 @@ Voorbeeld:
 
 | Groep/Element/@attribute   | Type               | Card. | Opmerking                                                                          |
 |----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345678` |
+| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
 | @srsDimension              | Positiveinteger    |  0…1  |                                                                                    |
 | - segments                 |                    |   1   |                                                                                    |
@@ -397,7 +410,7 @@ Voorbeeld:
 
 Voorbeeld:
 ```xml
-<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_C436270">
+<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_C436270_geo">
    <gml:segments>
       <gml:LineStringSegment>
          <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
@@ -414,7 +427,7 @@ Voor Curves wordt gecontroleerd dat de segmenten aan elkaar vast zitten (beginne
 
 | Groep/Element/@attribute   | Type               | Card. | Opmerking                                                                          |
 |----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345678` |
+| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
 | @srsDimension              | Positiveinteger    |  0…1  |                                                                                    |
 | - exterior                 | Complex            |  0…1  |                                                                                    |
@@ -430,7 +443,7 @@ Voor Curves wordt gecontroleerd dat de segmenten aan elkaar vast zitten (beginne
 
 Voorbeeld:
 ```xml
-<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.GHD_s538123224">
+<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.GHD_s538123224_geo">
    <gml:exterior>
       <gml:LinearRing>
          <gml:posList srsDimension="2">154891.113 389309.387 154889.624 389309.867 154888.356 389310.783 154887.433 389312.047 154886.946 389313.533 154886.942 389315.098 154887.422 389316.587 154888.338 389317.854 154889.602 389318.777 154891.088 389319.264 154892.653 389319.268 154894.474 389318.984 154895.963 389318.504 154897.231 389317.588 154898.154 389316.325 154898.641 389314.838 154898.645 389313.274 154898.165 389311.785 154897.249 389310.517 154895.985 389309.594 154894.499 389309.107 154892.934 389309.103 154891.113 389309.387</gml:posList>
@@ -492,7 +505,7 @@ Voorbeelden:
 
 <imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/warmte"/>
 
-<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoort/graafmelding"/>
+<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding"/>
 ```
 
 #### Controles
@@ -620,10 +633,6 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | beginLifespanVersion    |   1   | Strikte verplichting IMKL. Voor niet INSPIRE plichtige dataset mag 'dummy waarde'                                                                                                    | :heavy_check_mark:                          |
 | endLifespanVersion      |  0…1  | Geen extra regels                                                                                                                                                                    | :heavy_check_mark:                          |
 | thema                   |   1   | Strikte verplichting IMKL, nilReason is niet toegelaten.                                                                                                                             | :heavy_check_mark:                          |
-| technischContactpersoon |   1   | Strikte verplichting IMKL                                                                                                                                                            | :heavy_check_mark:                          |
-| naam                    |   1   | Strikte verplichting IMKL, nilReason is niet toegelaten.                                                                                                                             | :heavy_check_mark:                          |
-| telefoon                |   1   | Strikte verplichting IMKL, nilReason is niet toegelaten.                                                                                                                             | :heavy_check_mark:                          |
-| email                   |   1   | Strikte verplichting IMKL, nilReason is niet toegelaten.                                                                                                                             | :heavy_check_mark:                          |
 | standaardDieptelegging  |  0…1  | Voor WION eenheid is meter met max twee decimalen. Sterk aanbevolen om toe te voegen De UOM wordt uitgedrukt in meters middels de volgende OGC URN code:<br>• urn:ogc:def:uom:OGC::m | :heavy_check_mark: (URN code)               |
 | heeftExtraInformatie    |  0…*  | Verplicht wanneer één of meerdere ExtraInformatie objecten zijn die bij het hele utiliteitsnet horen (binnen deze dataset), extra check op vorm IMKL identificator                   | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat|
 

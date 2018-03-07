@@ -14,20 +14,21 @@ Dit voorbeeld gaat met name in op de topologische relatie. Andere attributen zij
 of alleen om het schema valide te maken.
  _____________________________________________________________________ -->
 
-<gml:FeatureCollection xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
-xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
-xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
-xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
-xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
-xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
-xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
-xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
-xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
-xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
-xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+<gml:FeatureCollection
+xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
 xmlns:gml="http://www.opengis.net/gml/3.2" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0"
 gml:id="ID_Netinformatie_KL3131_Pipe-Cable-ExtraGeometrie_2017-19-09" 
 xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
 
