@@ -8,10 +8,10 @@ Momenteel wordt er nog gewerkt aan deze module. Het is mogelijk dat er op detail
 
 Deze map bevat:
 * algemene toelichting over de WION levering:
-  * WION levering (IMKL1.2) (in bewerking)
-  * Indeling gebiedsinformatie;
-onderdelen uit de levering (klassiek en IMKL1.2)
-soorten bijlagen
+	* WION levering - producten IMKL1.2
+	* Indeling gebiedsinformatie;
+		- onderdelen uit de levering (klassiek en IMKL1.2)
+		- soorten bijlagen
 * schemadefinitie betreffende de metagegevens van de leveringsinformatie (Leveringsinformatie.xsd)
 * regels bij clippen van netwerkgegevens
 * map met diverse voorbeelden
