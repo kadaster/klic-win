@@ -38,6 +38,7 @@
 - [Identificaties van objecten](#identificaties-van-objecten)
   - [Format van identifiers](#format-van-identifiers)
   - [Vergelijking van identifier en gml:id](#vergelijking-van-identifier-en-gmlid)
+  - [Maximaal aantal tekens](#maximaal-aantal-tekens)
   - [Associatie naar Utiliteitsnet en UtilityLink](#associatie-naar-utiliteitsnet-en-utilitylink)
   - [Driehoeksverhouding feature - Utiliteitsnet - UtilityLink](#driehoeksverhouding-feature---utiliteitsnet---utilitylink)
 
@@ -711,6 +712,19 @@ Voorbeeld van een IMKL-feature:
 Bij een INSPIRE-object moet de concatenatie van `base:namespace` + "-" + `base:localId` gelijk zijn aan de GML-identificatie `gml:id`.
 Evenzo moet bij een IMKL-object de concatenatie van `imkl:namespace` + "-" + `imkl:lokaalID` gelijk zijn aan de GML-identificatie `gml:id`.
 Zie bovenstaand voorbeeld.
+
+### Maximaal aantal tekens
+
+In het IMKL is de werkafspraak gemaakt dat het `lokaalID` maximaal 255 tekens mag bevatten.
+Dat betekent dus dat de maximale lengte van een `gml:id` 265 tekens kan zijn, volgens:
+
+| onderdelen `gml:id`   | waarde                   | aantal tekens                     |
+|-----------------------|--------------------------|-----------------------------------|
+| <imkl:namespace>      | "nl.imkl"                | 7 tekens                          |
+| (separator)           | "-"                      | 1 teken                           |
+| <imkl:lokaalID>       | bronhoudercode.lokaalID  | een totaal van maximaal 255 tekens|
+| (separator)           | "-"                      | 1 teken                           |
+| <imkl:versie>         | volgnummer               | aanname: maximaal 1 teken         |
 
 ### Associatie naar Utiliteitsnet en UtilityLink
 
