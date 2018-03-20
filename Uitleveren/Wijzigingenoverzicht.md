@@ -1,5 +1,10 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+19-03-1018
+* Diverse kleine wijzigingen in voorbeeldbestanden doorgevoerd:
+  * consistentie tussen meegeleverde bijlagen en leveringsinformatie (LI_<>.xml)
+  * consistentie tussen meegeleverde bijlagen en documentatie over bijlagen (VBx. Bijlagen <>.pdf)
+
 08-03-1018
 * Presentatie over WION-levering geactualiseerd
   * aanpassingen n.a.v. upgrade IMKL1.1 - IMKL1.2 (v1.2.1)
