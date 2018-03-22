@@ -1,7 +1,7 @@
 ﻿#### Actualiseren documenten
 
-De centrale voorziening van KLIC heeft de mogelijkheid om documenten van een netbeheerder op te slaan. 
-Bij het opstellen van een levering van gebiedsinformatie voor een centrale netbeheerder, zullen de documenten waarna in de gebiedsinformatie wordt gerefereerd, ook worden uitgeleverd.
+De centrale voorziening van KLIC heeft de mogelijkheid om documenten van een netbeheerder op te slaan. \
+Bij het opstellen van een levering van gebiedsinformatie voor een centrale netbeheerder, zullen de documenten waarnaar in de gebiedsinformatie wordt gerefereerd, ook worden uitgeleverd.
 
 In deze map worden documentatie en diverse voorbeelden beschikbaar gesteld om het actualiseren en het gebruiken van deze documenten toe te lichten.
 Momenteel wordt er nog gewerkt aan deze module. Het is mogelijk dat er op details nog kleine wijzigingen zullen plaatsvinden.
