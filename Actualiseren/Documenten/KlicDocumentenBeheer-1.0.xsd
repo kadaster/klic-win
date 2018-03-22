@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: KlicDocumentenBeheer-1.0.xsd -->
+<!-- bron: Kadaster-KLIC -->
+<!-- [1.0] 01-03-2018 ________________________________________________________________________________
+Versie			: 1.0
+Datum			: 01-03-2018
+Door				: Kadaster 
+Toelichting	:
+Dit schema definieert de meta-informatie die door een bronhouder (netbeheerder) moet worden aangeleverd om documenten
+te actualiseren in de DocumentenOpslag van de centrale voorziening van KLIC.
+De definities en terminologie van de gebruikte elementen is in overeenstemming gebracht met de modellering van IMKL1.2.
+
+Voor het gebruik van waarden uit waardelijsten die ook in IMKL worden gebruikt, moet de referentie naar de betreffende waarde
+uit de extern gepubliceerde waardelijst worden toegepast.
+Voorbeeld van deze waardelijsten: 
+	http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue
+_____________________________________________________________________________________________________ -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:doc="http://www.kadaster.nl/schemas/klic/20180301/documentenbeheer" 
+targetNamespace="http://www.kadaster.nl/schemas/klic/20180301/documentenbeheer" 
+elementFormDefault="qualified" 
+attributeFormDefault="unqualified" 
+version="1.0">
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<element name="DocumentenBeheer" type="doc:DocumentenBeheerType">
+		<annotation>
+			<documentation>Meta-informatie over de door de bronhouder aangeleverde / te verwijderen documenten in de DocumentenOpslag van KLIC.</documentation>
+		</annotation>
+	</element>
+	<complexType name="DocumentenBeheerType">
+		<annotation>
+			<documentation>Definitie van het koppelvlak voor het beheren van documenten in de Klic-DocumentenOpslag.</documentation>
+		</annotation>
+		<sequence>
+			<element name="versie" type="doc:VersienummerType">
+				<annotation>
+					<documentation>Versie van het interface waarmee het koppelvlak wordt beschreven.</documentation>
+				</annotation>
+			</element>
+			<element name="bronhoudercode" type="doc:BronhoudercodeType">
+				<annotation>
+					<documentation>Unieke code van de bronhouder (netbeheerder) waarvoor documenten worden beheerd.</documentation>
+				</annotation>
+			</element>
+			<element name="bronhouderNaam" type="string">
+				<annotation>
+					<documentation>Naam van de bronhouder (netbeheerder) waarvoor documenten worden beheerd.</documentation>
+				</annotation>
+			</element>
+			<element name="indAutomatischNaarProductie" type="boolean" default="false">
+				<annotation>
+					<documentation>Indicatie dat een valide aanlevering automatisch doorgezet mag worden naar de productieomgeving van de Klic-DocumentenOpslag.</documentation>
+				</annotation>
+			</element>
+			<element name="aangeleverdeDocumenten" type="doc:DocumentenType" minOccurs="0">
+				<annotation>
+					<documentation>Aangeleverde documenten voor de Klic-DocumentenOpslag.</documentation>
+				</annotation>
+			</element>
+			<element name="teVerwijderenDocumenten" type="doc:DocumentIDsType" minOccurs="0">
+				<annotation>
+					<documentation>Te verwijderen documenten in Klic-DocumentenOpslag.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DocumentenType">
+		<annotation>
+			<documentation>Definitie voor de set aan documenten die door de netbeheerder worden aangeleverd voor de Klic-DocumentenOpslag</documentation>
+		</annotation>
+		<sequence>
+			<element name="document" type="doc:DocumentType" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Metagegevens van een te beheren document.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DocumentIDsType">
+		<annotation>
+			<documentation>Definitie voor de set aan documenten die door de bronhouder worden beheerd in de Klic-DocumentenOpslag</documentation>
+		</annotation>
+		<sequence>
+			<element name="documentID" type="doc:DocumentIDType" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Identificatie van een te beheren document.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!--_____________________________ Basis-elementen _____________________________-->
+	<complexType name="DocumentType">
+		<annotation>
+			<documentation>Bevat de metadata van een te beheren document.</documentation>
+		</annotation>
+		<sequence>
+			<element name="documentID" type="doc:DocumentIDType">
+				<annotation>
+					<documentation>Identificatie van het document.</documentation>
+				</annotation>
+			</element>
+			<element name="bestandMediaType" type="doc:WaardelijstWaardeRefType">
+				<annotation>
+					<documentation>Media type van een bestand (conform IMKL1.2, waardelijst: BestandMediaTypeValue).</documentation>
+					<appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">BestandMediaTypeValue</targetCodeList>
+					</appinfo>
+				</annotation>
+			</element>
+			<element name="bestandsnaam" type="doc:BestandsnaamType">
+				<annotation>
+					<documentation>Naam (eventueel met locatie) van het aangeleverde bestand.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DocumentIDType">
+		<annotation>
+			<documentation>Definitie van de identificatie van een document in de Klic-DocumentenOpslag.</documentation>
+		</annotation>
+		<sequence>
+			<element name="namespace">
+				<annotation>
+					<documentation>Unieke verwijzing naar een registratie van objecten binnen de context van NEN3610 (i.c. "nl.imkl").
+					</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<pattern value="nl\.imkl"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="lokaalID">
+				<annotation>
+					<documentation>Identificatiecode die een object (i.c. een document) heeft binnen een (lokale) registratie.
+					</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<maxLength value="255"/>
+						<pattern value="[A-Za-z0-9_.,-]+"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="WaardelijstWaardeRefType">
+		<annotation>
+			<documentation>Generieke definitie van een referentie naar een waarde uit een IMKL-waardelijst. In IMKL1.2 bijv. "http://definities.geostandaarden.nl/imkl2015/id/waarde/{waardelijst}/{waarde}"</documentation>
+		</annotation>
+		<attribute ref="xlink:href" use="required"/>
+	</complexType>
+	<simpleType name="VersienummerType">
+		<annotation>
+			<documentation>Bekende versies voor dit interface.</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="1.0"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BronhoudercodeType">
+		<annotation>
+			<documentation>Bronhoudercode van de beheerder (IMKL1.2). De code bestaat uit zes alfanumerieke posities. Dit is afgestemd met het format van CBS codes voor gemeenten en provincies.</documentation>
+		</annotation>
+		<restriction base="string">
+			<length value="6"/>
+			<pattern value="[A-Za-z0-9]+"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="BestandsnaamType">
+		<annotation>
+			<documentation>Naam (eventueel met locatie) van een bestand.</documentation>
+		</annotation>
+		<restriction base="string"/>
+	</simpleType>
+</schema>
