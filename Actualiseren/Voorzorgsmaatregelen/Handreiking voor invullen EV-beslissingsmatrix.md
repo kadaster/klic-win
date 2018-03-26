@@ -146,14 +146,14 @@ De bronhouder voor de aangeleverde netinformatie en voorzorgsmaatregelen dient n
 De gegevensgroepen in het XML-bestand dienen unieke primaire sleutels te hebben.  
 In onderstaand overzicht worden deze sleutels per gegevensgroep benoemd.
 
-| gegevensgroep     | primaire sleutel                                                                          |
-|-------------------|--------------------------------------------------------------------------------------------|
-| documentSjabloon  | sjabloonID  |
-| utiliteitsnetAanduiding | thema + netbeheerderNetAanduiding |
-| werkzaamhedenAanduiding | soortWerkzaamheden |
-| voorzorgsmaatregelBeslissingsregel | thema + netbeheerderNetAanduiding + aanvraagSoort + netbeheerderWerkAanduiding |
-|  | thema + netbeheerderNetAanduiding + aanvraagSoort (bij calamiteitenmelding) |
-| voorzorgsmaatregelToelichting | maatregel |
+| gegevensgroep                      | primaire sleutel                                                                       |
+|------------------------------------|----------------------------------------------------------------------------------------|
+| DocumentSjabloon                   | sjabloonID                                                                             |
+| UtiliteitsnetAanduiding            | thema + netbeheerderNetAanduiding                                                      |
+| WerkzaamhedenAanduiding            | soortWerkzaamheden                                                                     |
+| VoorzorgsmaatregelBeslissingsregel | thema + netbeheerderNetAanduiding + aanvraagSoort + netbeheerderWerkAanduiding         |
+|                                    | thema + netbeheerderNetAanduiding + aanvraagSoort (bij calamiteitenmelding)            |
+| VoorzorgsmaatregelToelichting      | maatregel                                                                              |
 
 #### Identificatie EV-sjabloon
 Voor de identificatie van een documentsjabloon (`sjabloonID`) gelden dezelfde regels als bij overige objectidentificaties van IMKL-features:
@@ -243,6 +243,29 @@ Voorbeeld:
 #### Meeleveren EV-sjablonen
 In de gegevensgroep _DocumentSjabloon_ wordt in het attribuut `bestandsnaam` de naam van het pdf-bestand genoemd die als sjabloon kan worden gebruikt voor het opstellen van een EV-bijlage.  
 Alle gerefereerde pdf-bestanden moeten meegeleverd zijn bij de aanlevering van voorzorgsmaatregelen.
+
+Een meegeleverd pdf-sjabloonbestand heeft een eigen unieke identificatie, aangeduid als `sjabloonID`. \
+Elk sjabloon uit _DocumentSjabloon_ (met een eigen unieke identificatie `sjabloonID`) heeft daarmee een eigen pdf-sjabloonbestand.
+
+Voorbeeld:
+```xml
+<documentSjabloon>
+    <sjabloonID>
+        <namespace>nl.imkl</namespace>
+        <lokaalID>KL3131.EV_middenspanning_T_risicoHoog</lokaalID>
+    </sjabloonID>
+    <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+    <bestandsnaam>MS-T-risicoHoog.sjabloon_v1.3.pdf</bestandsnaam>
+</documentSjabloon>
+<documentSjabloon>
+    <sjabloonID>
+        <namespace>nl.imkl</namespace>
+        <lokaalID>KL3131.EV_middenspanning_T_standaard</lokaalID>
+    </sjabloonID>
+    <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+    <bestandsnaam>MS-T-standaard.sjabloon_v1.1.pdf</bestandsnaam>
+</documentSjabloon>
+```
 
 ## Opstellen EV-sjablonen
 In andere documentatie is aangegeven op welke wijze een EV-sjabloon kan worden opgesteld.  

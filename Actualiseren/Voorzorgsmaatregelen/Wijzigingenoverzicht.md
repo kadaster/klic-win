@@ -1,10 +1,13 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+23-03-2018
+* Handreiking voor invullen EV-beslissingsregels aangevuld: pdf-sjabloonbestanden enkelvoudig refereren in _DocumentSjabloon_
+
 21-02-2018
 * Voorbeelden verplaatst naar aparte map
 * Kleine wijzigingen in features in voorbeeldbestanden doorgevoerd:
-    * coordinatenstelsel `srsname="epsg:28992"`
-    * gml:id's van geometrie conform richtlijnen: "nl.imkl-<bronhoudercode>.lokaalid" (*_geo)
+  * coordinatenstelsel `srsname="epsg:28992"`
+  * gml:id's van geometrie conform richtlijnen: "nl.imkl-<bronhoudercode>.lokaalid" (*_geo)
 
 01-02-2018
 * Documentatie over controles toegevoegd
