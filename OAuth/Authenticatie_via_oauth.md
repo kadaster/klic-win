@@ -14,16 +14,16 @@ Dit document biedt een handleiding voor het aansluiten op de KLIC API's met OAut
 
 #### Werking
 Bij elk request naar een API endpoint moet een access token in de header van het request meegestuurd worden. Om dit token te verkrijgen moeten onderstaande stappen doorlopen worden.
-
-1. Client Applicatie aanmelden. Dit moet éénmalig per client apllicatie gedaan worden.
+ 
+1. Client Applicatie aanmelden. Dit moet éénmalig per client apllicatie gedaan worden.   
 2. Authorization token opvragen. Dit moet éénmalig per gebruiker gedaan worden.
-3. Access token opvragen. Dit token geeft toegang tot de API. Dit token is één uur geldig en zal daarna ververst moeten worden.
+3. Access token opvragen. Dit token geeft toegang tot de API. Dit token is één uur geldig en zal daarna ververst moeten worden.  
 4. Access token verversen. Als het access token verlopen is kan deze vervest worden. Daarvoor hoeven stap 1 t/m 3 niet opnieuw doorlopen te worden.
 <img src="images/oauth_klic.png" />
 
 #### Client Applicatie aanmelden
 
-Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden bij het kadaster. Dit kan via een formulier op de kadaster website. Dit formulier vind u op https://formulieren.kadaster.nl/klic-oauth
+Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden bij het kadaster. Dit kan via een formulier op de kadaster website. Dit formulier vind u op https://formulieren.kadaster.nl/klic-oauth  
 
 Na goedkeuring van de aanvraag krijgt u een client_id en client_secret
 
@@ -32,7 +32,8 @@ Na goedkeuring van de aanvraag krijgt u een client_id en client_secret
 Voor de klic API kennen we de volgende scopes:
 
 |Scope                                  |Omschrijving	                                                                    |
-|---------------------------------------|-----------------------------------------------------------------------------------|
+|---------------------------------------|-----------------------------------------------------------------------------------|	
+|klic.ntd                               |Toegang tot de 'Netbeheerder Test Dienst'.                                         |
 |klic.centraal                          |Actualiseren van netinfo, documenten, voorzorgsmaatregelen tbv centrale voorziening|
 |klic.gebiedsinformatieaanvraag.readonly|GIA's opvragen (eigen GIA of GIA waarbij requester belanghebbend is)	            |
 |klic.beheerdersinformatie              |Eigen beheerderinformatie aanleveren en inzien (decentraal)	                    |
