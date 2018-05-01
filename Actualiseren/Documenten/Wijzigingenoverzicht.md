@@ -1,22 +1,27 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+26-04-2018
+* Aanpassingen:
+  - KlicDocumentenBeheer-1.0.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/documentenbeheer/v20180418"
+  - XML-voorbeelden zijn hierop aangepast; geen XSD-verwijzing in XML-bericht
+
 22-03-2018
-Nieuw toegevoegd:
-- diashow: Aanleveren-uitleveren bijlagen 2018-03-12.ppsx
-- README.md
-Aanpassingen:
-- Presentatie over het concept van beheren documenten (Documentenbeheer) geactualiseerd + ppsx-formaat
-- Presentatie over B2B Actualiseren documenten geactualiseerd + ppsx-formaat
-- Schemadefinitie:
-  - KlicDocumentenBeheer (versie 1.0)
-  - BestandMedaType verwijst naar IMKL-codelijst
-Uitwerking/toelichting voorbeelden naar nieuwe map Voorbeelden
-Voorbeelden (verplaatst en aangevuld):
-- README.md
-- toelichting op voorbeelden 1-3 (presentatie)
-- voorbeeld 1 - actualiseren van KL3131 (profielschets)
-- voorbeeld 2 - actualiseren van KL5151 (huisaansluiting)
-- voorbeeld 3 - aanleveren van netinformatie en uitleveren met documenten n.a.v. een gebiedsinformatie-aanvraag
+* Nieuw toegevoegd:
+  - diashow: Aanleveren-uitleveren bijlagen 2018-03-12.ppsx
+  - README.md
+* Aanpassingen:
+  - Presentatie over het concept van beheren documenten (Documentenbeheer) geactualiseerd + ppsx-formaat
+  - Presentatie over B2B Actualiseren documenten geactualiseerd + ppsx-formaat
+  - Schemadefinitie:
+    - KlicDocumentenBeheer (versie 1.0)
+    - BestandMedaType verwijst naar IMKL-codelijst
+  - Uitwerking/toelichting voorbeelden naar nieuwe map Voorbeelden
+* Voorbeelden (verplaatst en aangevuld):
+  - README.md
+  - toelichting op voorbeelden 1-3 (presentatie)
+  - voorbeeld 1 - actualiseren van KL3131 (profielschets)
+  - voorbeeld 2 - actualiseren van KL5151 (huisaansluiting)
+  - voorbeeld 3 - aanleveren van netinformatie en uitleveren met documenten n.a.v. een gebiedsinformatie-aanvraag
 
 01-01-2018
 * Documentatie over controles bij actualiseren documenten (Controles documenten.md) toegevoegd

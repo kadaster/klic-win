@@ -1,5 +1,14 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+26-04-2018
+* Schemadefinitie Leveringsinformatie-2.1.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/leveringsinformatie/v20180418"
+* XML-voorbeelden verwijzen in LI_<>.xml naar bovenstaande namespace
+* Enkele XML-voorbeelden aangepast vanwege dubbele bestandsverwijzingen bij GM0753
+* Toepassing JSON-files (LI_<>.json):
+  * op basis van nieuwe JSON-structuur (analogie op structuur Leveringsinformatie-2.1.xsd)
+  * toegevoegd aan voorbeelden 2 t/m 6 (zie voorbeeld-zip's)
+  * referenties naar bestandslocaties op GDS (downloadserver) zijn niet werkend (vanwege periodieke opschoning)
+
 19-03-1018
 * Diverse kleine wijzigingen in voorbeeldbestanden doorgevoerd:
   * consistentie tussen meegeleverde bijlagen en leveringsinformatie (LI_<>.xml)

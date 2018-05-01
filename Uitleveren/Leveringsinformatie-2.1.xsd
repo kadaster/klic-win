@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- bestandsnaam: Leveringsinformatie-2.1.xsd -->
 <!-- bron: Kadaster-KLIC -->
-<!-- [2.1] 01-02-2018 ________________________________________________________________________________
-Versie			: 2.1
-Datum			: 01-02-2018
+<!-- [2.1] 18-04-2018 ________________________________________________________________________________
+Versie		: 2.1
+Datum		: 18-04-2018
 Toelichting	:
 Dit schema definieert de (meta-)gegevens over de levering van gebiedsinformatie zoals deze in het zipbestand
 of op de downloadserver wordt uitgeleverd naar aanleiding van een Klic gebiedsinformatie-aanvraag.
@@ -40,13 +40,7 @@ om compatible te zijn met het oude model (IMKL1.1) of de uitwisseling in het oud
 Als na een overgangsperiode volledig is overgegaan naar IMKL1.2, en geen png-bestanden meer meegeleverd hoeven te worden,
 zullen deze overbodig worden.
 _____________________________________________________________________________________________________ -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
-xmlns:levi="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" 
-xmlns:gml="http://www.opengis.net/gml/3.2" 
-xmlns:xlink="http://www.w3.org/1999/xlink" 
-targetNamespace="http://www.kadaster.nl/schemas/klic/20180201/leveringsinformatie" 
-elementFormDefault="qualified" 
-version="2.1">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:levi="http://www.kadaster.nl/schemas/klic/leveringsinformatie/v20180418" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/leveringsinformatie/v20180418" elementFormDefault="qualified" version="2.1">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<element name="Leveringsinformatie" type="levi:LeveringsinformatieType">

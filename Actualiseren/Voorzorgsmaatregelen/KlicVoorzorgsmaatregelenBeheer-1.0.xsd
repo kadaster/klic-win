@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by  (Kadaster) -->
-<!--
-<schema 
-	xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" 
-	targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	elementFormDefault="qualified" 
-	attributeFormDefault="unqualified" 
-	version="1.0">
--->
-<xsd:schema xmlns="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.kadaster.nl/schemas/klic/20170801/voorzorgsmaatregelen" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xsd:annotation>
-		<xsd:documentation>[1.0] 04-01-2018 -------------------------------------------------------------------------------------------------------------------------------
-Versie			: 1.0
-Datum			: 04-01-2018
-Door				: Kadaster 
+<!-- bestandsnaam: KlicVoorzorgsmaatregelenBeheer-1.0.xsd -->
+<!-- bron: Kadaster-KLIC -->
+<!-- [1.0] 18-04-2018 ________________________________________________________________________________
+Versie		: 1.0
+Datum		: 18-04-2018
+Door		: Kadaster
 Toelichting	:
 Dit schema definieert de set aan gegevens die door een bronhouder (netbeheerder) moet worden aangeleverd om gebruik te kunnen maken van de EV-module uit de centrale voorziening van KLIC-WIN.
 Naast de gegevens voor het beslissingsmodel - welke maatregelen moeten bij welke factoren worden toegepast? - moeten bij de maatregel gerefereerde documentsjablonen worden meegeleverd.
@@ -26,9 +15,15 @@ Voorbeelden van deze waardelijsten:
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema
------------------------------------------------------------------------------------------------------------------------------------------------
-</xsd:documentation>
-	</xsd:annotation>
+_____________________________________________________________________________________________________ -->
+<xsd:schema 
+xmlns="http://www.kadaster.nl/schemas/klic/voorzorgsmaatregelen/v20180418" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+targetNamespace="http://www.kadaster.nl/schemas/klic/voorzorgsmaatregelen/v20180418" 
+elementFormDefault="qualified" 
+attributeFormDefault="unqualified" 
+version="1.0">
 	<xsd:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<xsd:element name="VoorzorgsmaatregelenBeheer" type="VoorzorgsmaatregelenBeheerType">
 		<xsd:annotation>

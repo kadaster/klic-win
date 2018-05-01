@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- bestandsnaam: KlicDocumentenBeheer-1.0.xsd -->
 <!-- bron: Kadaster-KLIC -->
-<!-- [1.0] 01-03-2018 ________________________________________________________________________________
-Versie			: 1.0
-Datum			: 01-03-2018
-Door				: Kadaster 
+<!-- [1.0] 18-04-2018 ________________________________________________________________________________
+Versie		: 1.0
+Datum		: 18-04-2018
+Door		: Kadaster
 Toelichting	:
 Dit schema definieert de meta-informatie die door een bronhouder (netbeheerder) moet worden aangeleverd om documenten
 te actualiseren in de DocumentenOpslag van de centrale voorziening van KLIC.
@@ -15,10 +15,11 @@ uit de extern gepubliceerde waardelijst worden toegepast.
 Voorbeeld van deze waardelijsten: 
 	http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue
 _____________________________________________________________________________________________________ -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
 xmlns:xlink="http://www.w3.org/1999/xlink" 
-xmlns:doc="http://www.kadaster.nl/schemas/klic/20180301/documentenbeheer" 
-targetNamespace="http://www.kadaster.nl/schemas/klic/20180301/documentenbeheer" 
+xmlns:doc="http://www.kadaster.nl/schemas/klic/documentenbeheer/v20180418" 
+targetNamespace="http://www.kadaster.nl/schemas/klic/documentenbeheer/v20180418" 
 elementFormDefault="qualified" 
 attributeFormDefault="unqualified" 
 version="1.0">

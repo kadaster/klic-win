@@ -1,4 +1,4 @@
-# B2B-koppeling actualiseren netinformatie
+﻿# B2B-koppeling actualiseren netinformatie
 
 Dit document biedt een handleiding voor het actualiseren van netinformatie in de centrale voorziening van KLIC met behulp van de B2B-koppeling.
 

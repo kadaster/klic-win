@@ -1,5 +1,9 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+26-04-2018
+* KlicVoorzorgsmaatregelenBeheer-1.0.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/voorzorgsmaatregelen/v20180418"
+* XML-voorbeelden zijn hierop aangepast; geen XSD-verwijzing in XML-bericht
+
 23-03-2018
 * Handreiking voor invullen EV-beslissingsregels aangevuld: pdf-sjabloonbestanden enkelvoudig refereren in _DocumentSjabloon_
 
