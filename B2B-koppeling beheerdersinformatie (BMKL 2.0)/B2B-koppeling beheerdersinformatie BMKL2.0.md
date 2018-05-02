@@ -200,7 +200,7 @@ In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de NTD-om
 
 ### Authenticatie
 De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor
- [Authenticatie via OAuth](./../OAuth/Authenticatie_via_oauth.md).
+ [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
 
 ### CURL
 

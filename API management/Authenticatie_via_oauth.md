@@ -93,6 +93,6 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
 ```
 ### Voorbeeld client applicatie
 
-Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](./Voorbeeldapllicatie_oauth.net/KlicOauthExample).
+Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](Voorbeelden/KlicOauthExample).
 
 

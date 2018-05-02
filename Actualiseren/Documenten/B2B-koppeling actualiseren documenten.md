@@ -183,7 +183,7 @@ Voor het actualiseren van documenten worden voornamelijk operaties gebruikt van 
 ### Authenticatie
 
 De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor 
- [Authenticatie via oauth](./../../OAuth/Authenticatie_via_oauth.md).
+ [Authenticatie via oauth](../../API%20management/Authenticatie_via_oauth.md).
 De benodigde scope voor het actualiseren van documenten is `klic.centraal`
 
 
