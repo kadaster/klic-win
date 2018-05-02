@@ -15,7 +15,7 @@ Deze map bevat:
   * [Aanleveren grote bestanden](..//Aanleveren%20grote%20bestanden%202016-09-23.ppt) (presentatie)
   * [hints en tips](../../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md) bij het actualiseren van netinformatie
 * B2B-koppeling voor actualiseren netinformatie
-  * [B2B Actualiseren netinformatie](B2B%20Actualiseren%20netinformatie%202016-11-21.ppt (presentatie)
+  * [B2B Actualiseren netinformatie](B2B%20Actualiseren%20netinformatie%202016-11-21.ppt) (presentatie)
   * Technische uitwerking [B2B-koppeling](B2B-koppeling%20actualiseren%20netinformatie.md) voor actualiseren netinformatie
 * map met diverse voorbeelden
 

@@ -7,6 +7,6 @@ De KLIC REST API's zijn beveiligd middels de [OAuth 2.0](https://oauth.net/2/) s
 
 Deze map bevat:
 
-* een handleiding voor het [aansluiten op de KLIC API's met OAuth](Authenticatie_via_oauth.md'
+* een handleiding voor het [aansluiten op de KLIC API's met OAuth](Authenticatie_via_oauth.md)
 * toelichting op [documentatie en versiebeheer](API-documentatie%20en%20versiebeheer.md) van KLIC API's
 * map met voorbeelden van gebruik OAuth

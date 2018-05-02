@@ -23,7 +23,7 @@ Specificaties (documentatie) is beschikbaar als Open API Specification (OAS) V2.
 
 - _**Documentatie is in het Nederlands**_  \
 De voertaal voor de API’s is Nederlands.  \
-De documentatie dient voorzien te zijn van voorbeelden inclusief complete request en response-cycli.  \
+De documentatie dient voorzien te zijn van voorbeelden inclusief complete request en response-cycli.
 
 - _**Documentatie wordt getest en geaccepteerd**_  \
 De dienst KLIC biedt de mogelijkheid om direct vanuit de documentatie de API te testen (API-requests uit te voeren). Dit wordt eerst getest.
@@ -49,7 +49,7 @@ _Voorbeeld:_
 ```
 https://.../klic/api/v2/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-5f54ac38d4d1
 ```
-vraagt via API v2 gebiedsinformatieAanvraag #4c8353bd-3907-40ee-5f54ac38d4d1 op.
+_vraagt via API v2 gebiedsinformatieAanvraag #4c8353bd-3907-40ee-5f54ac38d4d1 op._
 
 Het versienummer begint voor KLIC bij 2 (v2) en wordt met 1 opgehoogd voor elke major release waarbij het koppelvlak niet backward compatible wijzigt.
 
@@ -66,7 +66,7 @@ Een API is aan veranderingen onderhevig. Het is belangrijk hoe met deze verander
 Major releases van API's zijn altijd backward incompatible.
 Immers, als een nieuwe release van de API niet tot backward incompatibiliteit leidt, is er geen reden om een hele versie omhoog te gaan en spreken we van een minor release. 
 
-Op het moment dat er een major release plaatsvindt, is het de bedoeling dat alle (potentiële) clients deze nieuwe versie implementeren.  \
+Op het moment dat er een major release plaatsvindt, is het de bedoeling dat alle (potentiële) clients deze nieuwe versie implementeren.
 Omdat we geen clients willen breken, kunnen we niet op één moment overschakelen van de oude naar de nieuwe versie, zoals dat bijvoorbeeld bij een update van een website wel vaak gebeurt.  \
 Daarom is het noodzakelijk om na de livegang van de nieuwe versie óók de oude versie in de lucht te houden.
 
@@ -78,13 +78,13 @@ zes maanden, maar niet meer dan één jaar.
 
 De volgende zaken moeten gecommuniceerd worden:
 
-•	Een link naar de (documentatie van de) nieuwe versie van de API;
-•	Deprecation periode met exacte datum waarop de deprecated versie offline wordt gehaald;
-•	Migratieplan om eenvoudig over te stappen naar de nieuwe versie;
-•	Welke features er toegevoegd, gewijzigd of verwijderd worden;
-•	Welke wijzigingen de huidige implementaties kunnen breken;
+- Een link naar de (documentatie van de) nieuwe versie van de API;
+- Deprecation periode met exacte datum waarop de deprecated versie offline wordt gehaald;
+- Migratieplan om eenvoudig over te stappen naar de nieuwe versie;
+- Welke features er toegevoegd, gewijzigd of verwijderd worden;
+- Welke wijzigingen de huidige implementaties kunnen breken;
 
 Deze zaken dienen gecommuniceerd te worden via de volgende kanalen:
 
-•	Per e-mail van de clients;
-•	Duidelijk leesbaar in de API documentatie van de oude versie;
+- Per e-mail van de clients;
+- Duidelijk leesbaar in de API documentatie van de oude versie;

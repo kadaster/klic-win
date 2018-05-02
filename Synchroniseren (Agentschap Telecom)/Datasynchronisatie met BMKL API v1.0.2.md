@@ -64,7 +64,7 @@ In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de produc
 
 ### Authenticatie
 De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor
- [Authenticatie via oauth](https://github.com/Kadaster/KLIC-WIN/OAuth/Authenticatie_via_oauth.md).
+ [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
 
 ## Pagineren
 Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. In het request kan het gewenste aantal objecten per pagina opgegeven worden. Aan de serverkant zal hiervoor een maximum gelden.
