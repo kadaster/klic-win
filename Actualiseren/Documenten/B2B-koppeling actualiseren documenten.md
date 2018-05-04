@@ -200,7 +200,7 @@ De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van 
 Voor de NTD Upload servlet bevindt deze API zich op <https://service10.kadaster.nl//klic/ntd/actualiseren/upload/api/v2/web>.
 
 Het OAuth Authorization endpoint voor NTD is
-<https://authorization.test.kadaster.nl/auth/oauth/v2/>
+<https://authorization.kadaster.nl/auth/oauth/v2/>
 
 #### Documenten aanleveren
 

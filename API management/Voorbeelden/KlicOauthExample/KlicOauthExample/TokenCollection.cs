@@ -22,7 +22,7 @@ namespace KlicOauthExample
         public string Scope { get; set; }
         public string TestUrl { get; set; }
         public DateTime ValidUntil { get; set; }
-        public string AuthorizationEndpoint { get; set; } = "https://authorization.test.kadaster.nl/auth/oauth/v2";
+        public string AuthorizationEndpoint { get; set; } = "https://authorization.kadaster.nl/auth/oauth/v2";
 
         #endregion Public Properties
 

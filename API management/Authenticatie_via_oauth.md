@@ -27,18 +27,21 @@ Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden
 
 Na goedkeuring van de aanvraag krijgt u een client_id en client_secret
 
+U dient eerst een client registratie aan te vragen voor NTD. Na een succesvolle test in NTD kunt u een nieuwe client registratie aanvragen voor de productie omgeving.
+
 #### Scopes
 
 Voor de klic API kennen we de volgende scopes:
 
 |Scope                                  |Omschrijving	                                                                    |
 |---------------------------------------|-----------------------------------------------------------------------------------|	
-|klic.ntd                               |Toegang tot de 'Netbeheerder Test Dienst'.                                         |
+|klic.ntd                               |Toegang tot de 'Netbeheerder Test Dienst' (NTD).                                         |
 |klic.centraal                          |Actualiseren van netinfo, documenten, voorzorgsmaatregelen tbv centrale voorziening|
 |klic.gebiedsinformatieaanvraag.readonly|GIA's opvragen (eigen GIA of GIA waarbij requester belanghebbend is)	            |
 |klic.beheerdersinformatie              |Eigen beheerderinformatie aanleveren en inzien (decentraal)	                    |
 |klic.beheerdersinformatie.readonly     |Eigen beheerdersinformatie inzien	                                                |
 
+De scope klic.ntd geeft toegang tot de NTD. Deze scope moet dus toegevoegd worden voor testen in de NTD. De scope klic.ntd mag niet gebruikt worden bij requests naar de productie omgeving.  
 
 #### Authorization token opvragen
 Rechten voor gebruik van de API endpoints zijn gekoppeld aan mijn kadaster accounts. De gebruiker zal de client applicatie hiervoor éénmalig toestemming moeten geven door in te loggen via mijn kadaster.  
@@ -63,7 +66,7 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
     "token_type": "Bearer",
     "expires_in": 3600,
     "refresh_token": "a413b322-59ab-4573-dd0b-000547d929b3",
-    "scope": "klic.ntd"
+    "scope": "klic.beheerdersinformatie klic.gebiedsinformatie.readonly"
 }
 ```
 Dit access token en refresh token moet door de client apllicatie op een veilige manier bewaard worden.
@@ -74,7 +77,7 @@ Een voorbeeld van een API call met access token via curl.
 ```sh
 curl
 --header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
-https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerder/?aanvraagSoort=graafmelding&biNotificatieStatus=open&limiet=50
+https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/?biNotificatieStatus=open&limiet=50
 ```
 
 #### Access token verversen
@@ -88,7 +91,7 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
     "token_type": "Bearer",
     "expires_in": 3600,
     "refresh_token": "29786b93-24ca-4e91-9c8c-b87715f48ba9",
-    "scope": "klic.ntd"
+    "scope": "klic.beheerdersinformatie klic.gebiedsinformatie.readonly"
 }
 ```
 ### Voorbeeld client applicatie
