@@ -1,5 +1,8 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+16-05-2018
+* Klicnummer toegevoegd aan bestandsnaam van uitgeleverde documenten (zie voorbeeld 3. aanleveren-uitleveren)
+
 26-04-2018
 * Aanpassingen:
   - KlicDocumentenBeheer-1.0.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/documentenbeheer/v20180418"

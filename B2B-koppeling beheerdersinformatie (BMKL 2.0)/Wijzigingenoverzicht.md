@@ -1,5 +1,8 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+16-05-2018
+* Documentatie aangepast: beheerdersinformatieLevering is na 20 werkdagen niet meer op te vragen (vanwege opschoning)
+
 30-04-2018
 * Documentatie over Netbeheerder Testdienst (NTD) afgesplitst uit BMKL-documentatie
 * Documentatie over BMKL API geactualiseerd naar beoogde productieversie (v2)

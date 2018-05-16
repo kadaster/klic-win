@@ -572,6 +572,8 @@ curl
 Nadat de beheerdersinformatie is samengesteld ten behoeve van een uitlevering, kan de netbeheerder opvragen welke informatie door KLIC namens de netbeheerder wordt uitgeleverd.
 De beheerdersinformatie-uitlevering wordt als zipbestand teruggegeven.
 
+**Let wel**: De uitgeleverde beheerdersinformatie wordt na 20 werkdagen opgeschoond en is dan niet meer op te vragen!
+
 **_pad:_**
 ```
 GET /gebiedsinformatieAanvragen/{giAanvraagId}/beheerdersinformatieAanvragen/{biAanvraagId}/beheerdersinformatieLevering/zip

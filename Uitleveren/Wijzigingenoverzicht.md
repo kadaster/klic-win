@@ -1,5 +1,12 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+16-05-2018
+* Klicnummer toegevoegd aan bestandsnaam van meegeleverde bijlagen (t.b.v. uniekheid op downloadserver); aanpassingen doorgevoerd in:
+  * Indeling gebiedsinformatie (.pdf)
+  * Presentatie WION levering - producten
+  * bestandsnamen, leveringsinformatie (LI) en gebiedsinformatielevering (GI) van voorbeelden 3 t/m 6
+* 3 nieuwe voorbeelden toegevoegd
+
 26-04-2018
 * Schemadefinitie Leveringsinformatie-2.1.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/leveringsinformatie/v20180418"
 * XML-voorbeelden verwijzen in LI_<>.xml naar bovenstaande namespace

@@ -1,5 +1,8 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+16-05-2018
+* Klicnummer toegevoegd aan bestandsnaam van meegeleverde EV-bijlagen (zie uitleveringen voorbeeld 4)
+
 26-04-2018
 * KlicVoorzorgsmaatregelenBeheer-1.0.xsd gepubliceerd als xmlns="http://www.kadaster.nl/schemas/klic/voorzorgsmaatregelen/v20180418"
 * XML-voorbeelden zijn hierop aangepast; geen XSD-verwijzing in XML-bericht
