@@ -1,5 +1,31 @@
 # Release notes
 
+### 16 mei 2018
+Algemeen:
+- Upgrade naar Java 8.
+- Structuur verbetering in de database; hierdoor is de (eerder aangeleverde) netinformatie verwijderd.
+- Validatie op gebruik standaard (namespace)prefixes in XML berichten.
+
+WION Levering: 
+- Complementeren gebiedsinformatielevering (GIL.xml).
+- Complementeren leveringsinformatie (LI.xml).
+
+EV:
+- Controleren op juiste gebruikte placeholders in aangeleverde EV-sjablonen.
+- Controleren op netbeheerdernetaanduidingen in de AanduidingEisVoorzorgsmaatregel-features: de netbeheerdernetaanduidingen moeten voorkomen bij de beslissingsregels.
+
+BMKL API v2.0:
+- Agentschap Telecom (AT) leestoegang verlenen.
+- Gebiedsinformatielevering (GIL.xml) toegevoegd aan de service ‘Opvragen beheerdersinformatie-levering zoals deze voor belanghebbende netbeheerder is uitgeleverd bij de aangegeven beheerdersinformatie-aanvraag.’ 
+- Leveringsinformatie (LI.xml) toegevoegd aan de service ‘Opvragen beheerdersinformatie-levering zoals deze voor belanghebbende netbeheerder is uitgeleverd bij de aangegeven beheerdersinformatie-aanvraag.’
+- Teksten ontwikkelaarsmelding uniform gemaakt en benaming gelijkgetrokken aan IMKL benaming.
+- Indien geen gegevens voor API call dan httpstatus 200 +lege lijst geven i.p.v. httpstatus 404.
+- Het is als Service Provider niet meer mogelijk om gebiedsinformatieAanvragen (GIA's) van meerdere netbeheerders tegelijkertijd op te vragen middels BMKL API.
+- Update BMKL API's ten aanzien van naamgeving e.d. 
+
+Performance:
+- Diverse performance verbeteringen met betrekking tot levering en de gebruikerservaringen van de door netbeheer geautoriseerde serviceprovider.
+
 ### 30 januari 2018
 - Nieuwe functionaliteit: Beschikbaarheid van EV module. EV bijlagen met EV vlakken kunnen worden uitgeleverd.
 - Nieuwe functionaliteit: Voorzorgsmaatregelen validatie op uniekheid prioritering per Thema en AanvraagSoort.
