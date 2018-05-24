@@ -1,5 +1,11 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+23-05-2018
+* Invulvelden EV-sjabloon (pdf): aanvulling dat invulvelden onder dezelfde naam vaker zijn te gebruiken (zonder suffix)
+* Voorbeelden 1 t/m 4: EV-sjablonen en EV-brieven aangepast; invulvelden onder dezelfde naam vaker gebruikt
+* Toelichting op voorbeelden (presentatie) aangepast:
+  - Klicnummer toegevoegd aan bestandsnaam van uitgeleverde documenten
+
 16-05-2018
 * Klicnummer toegevoegd aan bestandsnaam van meegeleverde EV-bijlagen (zie uitleveringen voorbeeld 4)
 
@@ -9,6 +15,9 @@
 
 23-03-2018
 * Handreiking voor invullen EV-beslissingsregels aangevuld: pdf-sjabloonbestanden enkelvoudig refereren in _DocumentSjabloon_
+
+19-03-2018
+* Documentatie_pdf_sjabloon_aanmaken (zip): invulvelden onder dezelfde naam vaker te gebruiken in een EV-sjabloon
 
 21-02-2018
 * Voorbeelden verplaatst naar aparte map

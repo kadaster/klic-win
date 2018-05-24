@@ -1,5 +1,10 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+23-05-2018
+* Voorbeelden en toelichting op voorbeelden (presentatie) aangepast op:
+  - toepassen gewijzigde namespace (/documentenbeheer/v20180418)
+  - Klicnummer toegevoegd aan bestandsnaam van uitgeleverde documenten
+
 16-05-2018
 * Klicnummer toegevoegd aan bestandsnaam van uitgeleverde documenten (zie voorbeeld 3. aanleveren-uitleveren)
 

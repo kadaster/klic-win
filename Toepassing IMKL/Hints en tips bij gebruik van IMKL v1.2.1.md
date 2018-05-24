@@ -294,7 +294,10 @@ Voorbeeld van syntactisch juiste invulling:
 ```
 
 ### Volgorde van elementen
-De volgorde van de elementen `thema` en `standaardDieptelegging` is niet correct.
+De elementen van IMKL-features en de verschillende soorten relaties die er tussen deze features bestaan, zijn gemodelleerd in UML klasse diagram. Een dergelijk diagram geeft geen volledig beeld van volgorde van attributen als er ook overgeërfd wordt van andere klassen.
+
+Het logische IMKL-model is door Geonovum ook omgezet en beschikbaar gesteld in een technische implementatie: de IMKL schema-definities (XSD’s). Zie https://github.com/Geonovum/imkl2015/tree/master/gmlapplicatieschema/1.2.1.  /
+In de XSD's is de volgorde afgedwongen en met tooling inzichtelijk te krijgen.
 
 Voorbeeld van _onjuiste_ volgorde:
 ```xml
@@ -414,8 +417,24 @@ Een extra bijzonderheid hierbij is dat deze waardelijst varierend is per INSPIRE
 
 De toegestane waardes voor IMKL kunnen een uitbreiding of een inperking op de waardelijst zijn zoals deze in INSPIRE is gedefinieerd.
 Zie daarvoor ook de Geonovum-documentatie op Github:
-https://github.com/Geonovum/imkl2015/tree/master/waardelijst/1.2.1\
-Het is niet de bedoeling dat gebruik wordt gemaakt van de verwijzingen naar de INSPIRE-waardelijst, omdat dan de inperking op de lijst niet wordt gerespecteerd.
+https://github.com/Geonovum/imkl2015/tree/master/waardelijst/1.2.1.1  \
+Onder het kopje **"bron"** wordt aangegeven welk model als bron is gebruikt voor de betreffende waarde uit de waardelijst. Het uri-schema voor deze bron moet worden gebruikt om naar de betreffende waarde en waardelijst te refereren.
+
+Onderstaand is een overzichtje gemaakt van de verschillende bronnen voor AppurtenanceType's bij een bepaald thema, en het bijbehorende uri-schema.
+
+| INSPIRE-thema      | bron    | waardelijst                                 | uri-schema                                                                                                  |
+|--------------------|---------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| electricity        | inspire | ElectricityAppurtenanceTypeValue            | http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/{waarde}                              |
+| electricity        | imkl    | ElectricityAppurtenanceTypeIMKLValue        | http://definities.geostandaarden.nl/imkl2015/id/waarde/ElectricityAppurtenanceTypeIMKLValue/{waarde}        |
+| oilGasChemical     | inspire | OilGasChemicalAppurtenanceTypeValue         | http://inspire.ec.europa.eu/codelist/OilGasChemicalAppurtenanceTypeValue/{waarde}                           |
+| oilGasChemical     | imkl    | OilGasChemicalAppurtenanceTypeIMKLValue     | http://definities.geostandaarden.nl/imkl2015/id/waarde/OilGasChemicalAppurtenanceTypeIMKLValue/{waarde}     |
+| sewer              | inspire | SewerAppurtenanceTypeValue                  | http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/{waarde}                                    |
+| sewer              | imkl    | SewerAppurtenanceTypeIMKLValue              | http://definities.geostandaarden.nl/imkl2015/id/waarde/SewerAppurtenanceTypeIMKLValue/{waarde}              |
+| sewer              | gwsw    | SewerAppurtenanceTypeIMKLValue              | http://data.gwsw.nl/{waarde}                                                                                |
+| telecommunications | imkl    | TelecommunicationsAppurtenanceTypeIMKLValue | http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/{waarde} |
+| thermal            | imkl    | ThermalAppurtenanceTypeIMKLValue            | http://definities.geostandaarden.nl/imkl2015/id/waarde/ThermalAppurtenanceTypeIMKLValue/{waarde}            |
+| water              | inspire | WaterAppurtenanceTypeValue                  | http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/{waarde}                                    |
+| water              | imkl    | WaterAppurtenanceTypeIMKLValue              | http://definities.geostandaarden.nl/imkl2015/id/waarde/WaterAppurtenanceTypeIMKLValue/{waarde}              |
 
 In onderstaande figuur worden de toegestane waarden weergegeven voor een IMKL rioolleiding.
 De waarden onder het kopje \<\<inspire\>\> met een '-' teken, zijn een inperking van de INSPIRE-codelijst. Ze mogen niet worden gebruikt.
@@ -427,19 +446,21 @@ Voorbeelden (mix van verschillende thema's):
 
 ```xml
     ...
-    <!-- onderstaande verwijzing NIET gebruiken: -->
     <us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/connectionBox"/>
-    <!-- daarvoor in de plaats WEL gebruiken: -->
-    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/ElectricityAppurtenanceTypeIMKLValue/connectionBox"/>
+    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/ElectricityAppurtenanceTypeIMKLValue/aarding"/>
 
-    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/OilGasChemicalsAppurtenanceTypeIMKLValue/pumpingStation"/>
+    <us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/pumpingStation"/>
+    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/OilGasChemicalsAppurtenanceTypeIMKLValue/ontluchting"/>
 
-    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/SewerAppurtenanceTypeValue/connection"/>
+    <us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/cleanOut"/>
+    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/SewerAppurtenanceTypeIMKLValue/overstort"/>
+    <us-net-common:appurtenanceType xlink:href="http://data.gwsw.nl/kolk"/>
 
     <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/mof"/>
 
     <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/ThermalAppurtenanceTypeIMKLValue/puntVanLevering"/>
 
+    <us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/pumpStation"/>
     <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/WaterAppurtenanceTypeIMKLValue/afsluiter"/>
     ...
 ```
@@ -718,13 +739,13 @@ Zie bovenstaand voorbeeld.
 In het IMKL is de werkafspraak gemaakt dat het `lokaalID` maximaal 255 tekens mag bevatten.
 Dat betekent dus dat de maximale lengte van een `gml:id` 265 tekens kan zijn, volgens:
 
-| onderdelen `gml:id`   | waarde                   | aantal tekens                     |
-|-----------------------|--------------------------|-----------------------------------|
-| <imkl:namespace>      | "nl.imkl"                | 7 tekens                          |
-| (separator)           | "-"                      | 1 teken                           |
-| <imkl:lokaalID>       | bronhoudercode.lokaalID  | een totaal van maximaal 255 tekens|
-| (separator)           | "-"                      | 1 teken                           |
-| <imkl:versie>         | volgnummer               | aanname: maximaal 1 teken         |
+| onderdelen `gml:id`   | waarde              | aantal tekens |
+|----------------------|------------------------|---------------------------------|
+| <imkl:namespace>            | "nl.imkl"             | 7 tekens   |
+| (separator)            | "-"             | 1 teken   |
+| <imkl:lokaalID>            | bronhoudercode.lokaalID  | een totaal van maximaal 255 tekens   |
+| (separator)            | "-"             | 1 teken   |
+| <imkl:versie>            | volgnummer  | aanname: maximaal 1 teken   |
 
 ### Associatie naar Utiliteitsnet en UtilityLink
 
