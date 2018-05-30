@@ -1,4 +1,4 @@
-# Release notes
+﻿# Release notes
 
 ### 16 mei 2018
 Algemeen:
