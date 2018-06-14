@@ -25,3 +25,7 @@ Voorbeeld 1. Utiliteitsnet met Mantelbuis en ExtraGeometrie.xml
 In onderstaande bijlage wordt het objectenmodel van de gebruikte features weergegeven.
 
 ![voorbeeld_1_objectenmodel](../images/Voorbeeld-1-Utiliteitsnet-met-Mantelbuis-en-ExtraGeometrie-objectenmodel.jpg "Voorbeeld 1. Objectenmodel")
+
+Onderstaande schermafdruk laat zien hoe de features uit dit voorbeeld worden gevisualiseerd in de kaart (bij actualiseren netinformatie).
+
+![voorbeeld_1_visualisatie](../images/Voorbeeld-1-Visualisatie-Utiliteitsnet-met-Mantelbuis-en-ExtraGeometrie.jpg "Voorbeeld 1. Visualisatie IMKL-features")

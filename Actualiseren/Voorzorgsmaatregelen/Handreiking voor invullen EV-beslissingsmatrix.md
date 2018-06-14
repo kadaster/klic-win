@@ -146,14 +146,14 @@ De bronhouder voor de aangeleverde netinformatie en voorzorgsmaatregelen dient n
 De gegevensgroepen in het XML-bestand dienen unieke primaire sleutels te hebben.  
 In onderstaand overzicht worden deze sleutels per gegevensgroep benoemd.
 
-| gegevensgroep                      | primaire sleutel                                                                       |
-|------------------------------------|----------------------------------------------------------------------------------------|
-| DocumentSjabloon                   | sjabloonID                                                                             |
-| UtiliteitsnetAanduiding            | thema + netbeheerderNetAanduiding                                                      |
-| WerkzaamhedenAanduiding            | soortWerkzaamheden                                                                     |
-| VoorzorgsmaatregelBeslissingsregel | thema + netbeheerderNetAanduiding + aanvraagSoort + netbeheerderWerkAanduiding         |
-|                                    | thema + netbeheerderNetAanduiding + aanvraagSoort (bij calamiteitenmelding)            |
-| VoorzorgsmaatregelToelichting      | maatregel                                                                              |
+| gegevensgroep     | primaire sleutel                                                                          |
+|-------------------|--------------------------------------------------------------------------------------------|
+| DocumentSjabloon  | sjabloonID  |
+| UtiliteitsnetAanduiding | thema + netbeheerderNetAanduiding |
+| WerkzaamhedenAanduiding | soortWerkzaamheden |
+| VoorzorgsmaatregelBeslissingsregel | thema + netbeheerderNetAanduiding + aanvraagSoort + netbeheerderWerkAanduiding |
+|  | thema + netbeheerderNetAanduiding + aanvraagSoort (bij calamiteitenmelding) |
+| VoorzorgsmaatregelToelichting | maatregel |
 
 #### Identificatie EV-sjabloon
 Voor de identificatie van een documentsjabloon (`sjabloonID`) gelden dezelfde regels als bij overige objectidentificaties van IMKL-features:
@@ -249,27 +249,29 @@ Elk sjabloon uit _DocumentSjabloon_ (met een eigen unieke identificatie `sjabloo
 
 Voorbeeld:
 ```xml
-<documentSjabloon>
-    <sjabloonID>
-        <namespace>nl.imkl</namespace>
-        <lokaalID>KL3131.EV_middenspanning_T_risicoHoog</lokaalID>
-    </sjabloonID>
-    <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
-    <bestandsnaam>MS-T-risicoHoog.sjabloon_v1.3.pdf</bestandsnaam>
-</documentSjabloon>
-<documentSjabloon>
-    <sjabloonID>
-        <namespace>nl.imkl</namespace>
-        <lokaalID>KL3131.EV_middenspanning_T_standaard</lokaalID>
-    </sjabloonID>
-    <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
-    <bestandsnaam>MS-T-standaard.sjabloon_v1.1.pdf</bestandsnaam>
-</documentSjabloon>
+	<documentSjabloon>
+		<sjabloonID>
+			<namespace>nl.imkl</namespace>
+			<lokaalID>KL3131.EV_middenspanning_T_risicoHoog</lokaalID>
+		</sjabloonID>
+		<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+		<bestandsnaam>MS-T-risicoHoog.sjabloon_v1.3.pdf</bestandsnaam>
+	</documentSjabloon>
+	<documentSjabloon>
+		<sjabloonID>
+			<namespace>nl.imkl</namespace>
+			<lokaalID>KL3131.EV_middenspanning_T_standaard</lokaalID>
+		</sjabloonID>
+		<bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+		<bestandsnaam>MS-T-standaard.sjabloon_v1.1.pdf</bestandsnaam>
+	</documentSjabloon>
 ```
 
 ## Opstellen EV-sjablonen
 In andere documentatie is aangegeven op welke wijze een EV-sjabloon kan worden opgesteld.  
-Daarbij is ook aangegeven welke 'placeholders' zijn onderkend en door de EV-engine vervangen kunnen worden door de van toepassing zijnde werkelijke waarde.  
+Daarbij is ook aangegeven welke 'placeholders' (invulvelden) zijn onderkend en door de EV-engine vervangen kunnen worden door de van toepassing zijnde werkelijke waarde.  
+Een placeholder mag meerdere keren in een EV-sjabloon worden gebruikt, maar moet telkens de exacte naam van het placeholder hebben (dus geen volgnummer, o.i.d. gebruiken).
+
 Onderstaande placeholders zijn onderkend:
 
 | gegevenscategorie          | sub-categorie   | naam placeholder     |

@@ -1,5 +1,10 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+12-06-2018
+* Explicieter benoemen dat invulvelden onder dezelfde naam vaker zijn te gebruiken (zonder suffix!), bij
+  * Controles voorzorgsmaatregelen
+  * Handreiking voor invullen EV-beslsissingsmatrix KLIC
+
 23-05-2018
 * Invulvelden EV-sjabloon (pdf): aanvulling dat invulvelden onder dezelfde naam vaker zijn te gebruiken (zonder suffix)
 * Voorbeelden 1 t/m 4: EV-sjablonen en EV-brieven aangepast; invulvelden onder dezelfde naam vaker gebruikt

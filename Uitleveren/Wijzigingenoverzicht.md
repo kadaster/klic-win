@@ -1,6 +1,9 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
-16-05-2018
+13-06-2018
+* Aanpassing voorbeeld 6 vanwege onjuiste bestandverwijzingen
+
+  16-05-2018
 * Klicnummer toegevoegd aan bestandsnaam van meegeleverde bijlagen (t.b.v. uniekheid op downloadserver); aanpassingen doorgevoerd in:
   * Indeling gebiedsinformatie (.pdf)
   * Presentatie WION levering - producten

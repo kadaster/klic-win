@@ -1,5 +1,8 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+13-06-2018
+* Overzicht met versieverschillen BMKL API v2 aangepast: huisnummerToevoeging -> huisnummertoevoeging (conform BAG)
+
 16-05-2018
 * Documentatie aangepast: beheerdersinformatieLevering is na 20 werkdagen niet meer op te vragen (vanwege opschoning)
 

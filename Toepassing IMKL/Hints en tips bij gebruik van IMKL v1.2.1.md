@@ -254,7 +254,7 @@ In onderstaande XML-gegevensset zijn enkele verplichte attributen van een riooll
     <us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
     ...
 ```
-Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven::
+Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven:
 ```xml
     ...
     <!-- attribuutwaarden met NilReason -->
@@ -262,10 +262,13 @@ Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven
     <us-net-common:verticalPosition xsi:nil="true"/>
     <!-- attribuutwaarden met NilReason en opgave van reden -->
     <us-net-common:warningType xsi:nil="true" nilReason="Unknown"/>
-    <us-net-common:pipeDiameter xsi:nil="true" nilReason="Unpopulated"/>
+    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm" xsi:nil="true" nilReason="Unpopulated"/>
     <us-net-sw:sewerWaterType xsi:nil="true" nilReason="Withheld"/>
     ...
 ```
+
+NB. Het attribuut `pipeDiameter` van een object _Pipe_ moet verplicht ingevuld worden, maar is "voidable". Ook de parameter `uom` bij het attribuut `pipeDiameter` is verplicht.  \
+Dit betekent dat het attribuut `pipeDiameter` met de parameter `uom` ingevuld **moet** worden, óók als er geen waarde voor de diameter wordt meegegeven.
 
 ### Incorrecte geometrie
 In de dataset is incorrecte INSPIRE GML geometrie gebruikt, bijvoorbeeld het type Multicurve.
