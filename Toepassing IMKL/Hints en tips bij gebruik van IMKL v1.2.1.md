@@ -646,7 +646,7 @@ Voorbeelden:
 De attributen `us-net-common:utilityFacilityType` en `us-net-common:governmentalServiceReference` van het abstracte Inspire-feature _UtilityNetworkElement_ zijn beide optioneel.
 De attributen hoeven dus - volgens IMKL - niet meegegeven te worden.
 
-![utilitynetworkelement](images/UtilityNetworkEelement.jpg "UtilityNetworkEelement")
+![utilitynetworkelement](images/UtilityNetworkElement.jpg "UtilityNetworkElement")
 
 Voorbeeld:
 ```xml

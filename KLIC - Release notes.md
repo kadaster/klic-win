@@ -1,5 +1,37 @@
 ﻿# Release notes
 
+### 13 juli 2018
+Algemeen:
+- Clippen voor WION objecten is geïmplementeerd.
+- Multi-geometrieën in WIBON-features toestaan bij actualiseren/decentraal aanleveren (voor zover dit voor het geometrietype is toegestaan).
+
+WION Levering: 
+- Achtergrondkaart en selectie kaart ook meeleveren bij het opvragen van de namens de netbeheerder geleverde beheerdersinformatie.
+- Gegenereerde bestandsnamen voor uitlevering op GDS worden uniek gemaakt.
+- Gebruik default namespace voor leveringsinformatie (in LI.xml).
+- Er wordt (ook) voor _ExtraDetailInfo_ een _Utiliteitsnet_ feature aangemaakt in GI.xml.
+
+NTD:
+- Aanpassen sortering en typo-correctie bij soort werkzaamheden in NTD "Opvoeren testmelding".
+- Bericht in response van de API voor het initiëren van een upload in NTD in JSON formaat door meegeven "Content-Type: application/json".
+
+HAS / DAS:
+- Aan- en uitleveren HuisAansluitSchetsen (HAS) geïmplementeerd.
+- Validatie dat bij HAS een verplicht adres-element is meegegeven bij aanleveren netinformatie of beheerdersinformatie.
+- Aanpassingen bij een B2BAanvraag waarbij gecontroleerd wordt of er geldige adressen als HAS en DAS zijn opgegeven (alleen hoofdadressen).
+- `BAGidAdresserbaarObject` wordt nu ook gevalideerd bij een decentrale aanlevering van beheerdersinformatie
+- HAS adressen zijn opgenomen in feature _GebiedsinformatieAanvraag_ van GI.xml.
+
+BMKL API v2.0:
+- Via de BMKL wordt de interne webdav-locatie niet teruggegeven in de response.
+- Ping zonder PKI certificaat mogelijk gemaakt
+- BMKL API aangepast zodat adresgegevens correct gevuld worden (HAS/DAS)
+
+Performance:
+- Diverse performance verbeteringen t.b.v. uitlevering van vector-informatie.
+- PNG's met IMKL-informatie zijn verkleind t.b.v. snelle levering.
+
+------------------------
 ### 16 mei 2018
 Algemeen:
 - Upgrade naar Java 8.
@@ -26,6 +58,7 @@ BMKL API v2.0:
 Performance:
 - Diverse performance verbeteringen met betrekking tot levering en de gebruikerservaringen van de door netbeheer geautoriseerde serviceprovider.
 
+------------------------
 ### 30 januari 2018
 - Nieuwe functionaliteit: Beschikbaarheid van EV module. EV bijlagen met EV vlakken kunnen worden uitgeleverd.
 - Nieuwe functionaliteit: Voorzorgsmaatregelen validatie op uniekheid prioritering per Thema en AanvraagSoort.
@@ -40,6 +73,7 @@ Performance:
 - Verbetering: Tekst "Gereed voor handmatige controle" gewijzigd naar "Gereed voor beoordeling". Deze wordt gegeven bij het actualiseren van netinformatie en documenten.
 - Diverse performance verbeteringen met betrekking tot Actualiseren netinformatie
 
+------------------------
 ### 2 januari 2018
 - KLIC is voorbereid om nieuwe orientatieverzoeken in het kader van de WIBON te kunnen afhandelen;
 Het betreft \

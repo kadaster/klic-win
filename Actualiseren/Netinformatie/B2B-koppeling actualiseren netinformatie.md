@@ -81,13 +81,6 @@ Zie hieronder een voorbeeld.
             </imkl:identificatie>
             <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>
             <imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/water"/>
-            <imkl:technischContactpersoon>
-                <imkl:TechnischContactpersoon>
-                    <imkl:naam>J Tester</imkl:naam>
-                    <imkl:telefoon>030-456789</imkl:telefoon>
-                    <imkl:email>j.tester@test.nl</imkl:email>
-                </imkl:TechnischContactpersoon>
-            </imkl:technischContactpersoon>
             <imkl:standaardDieptelegging uom="urn:ogc:def:uom:OGC::m">0.63</imkl:standaardDieptelegging>
         </imkl:Utiliteitsnet>
     </gml:featureMember>
@@ -110,7 +103,6 @@ Zie hieronder een voorbeeld.
             <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">10</us-net-common:pipeDiameter>
             <us-net-common:pressure uom="urn:ogc:def:uom:OGC::bar">2</us-net-common:pressure>
             <us-net-wa:waterType xlink:href="http://inspire.ec.europa.eu/codelist/WaterTypeValue/potable"/>
-            <imkl:label/>
         </imkl:Waterleiding>
     </gml:featureMember>
     <gml:featureMember>
@@ -131,12 +123,12 @@ Zie hieronder een voorbeeld.
             <net:fictitious>false</net:fictitious>
             <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
             <us-net-common:validFrom>2001-12-17T09:30:47.0Z</us-net-common:validFrom>
-            <us-net-common:verticalPosition nilReason="daarom" xsi:nil="true"/>
+            <us-net-common:verticalPosition xsi:nil="true" nilReason="Unknown"/>
         </us-net-common:UtilityLink>
     </gml:featureMember>
 </gml:FeatureCollection>
 ```
-_Figuur 2 - voorbeeld niAanlevering.xml_
+_Figuur 2 - Voorbeeld niAanlevering.xml_
 
 ### Mijn Kadaster
 
@@ -190,7 +182,8 @@ Het bestand dat eerder beschreven werd in de sectie [Zipbestand](#zipbestand), w
 
 Het aanleveren van een zipbestand gaat in twee fases:
 
-1.  Het aanmelden van een aanlevering. Dit gaat door middel van een POST request naar de “Netinformatie API”. Het response op dit request bevat een header “Location” met daarin een URI naar de “Upload servlet API” waarnaar de data verzonden kan worden.
+1.  Het aanmelden van een aanlevering. Dit gaat door middel van een POST request naar de “Netinformatie API”. Het response op dit request bevat een header “Location” met daarin een URI naar de “Upload servlet API” waarnaar de data verzonden kan worden.  \
+In de body van het response worden tevens gegevens over de aanlevering teruggegeven (o.a. 'aanleveringId').
 2.  Het verzenden van de data naar het Kadaster. Dit gaat door middel van één of meerder PUT requests naar de “Upload servlet” API waarin de daadwerkelijke bytes van het zipbestand verstuurd worden.
 
 ##### Aanlevering aanmelden
@@ -209,7 +202,8 @@ De parameters zijn ingevuld met gegevens voor het aan te leveren bestand, “aan
 curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/backend/rest/aanleveringen/netinformatie/netbeheerder
 -v
 -X POST
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+-H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+-H 'Content-Type: application/json'
 -H 'X-Upload-Content-Length: 1366'
 -H 'X-Upload-Content-Type: application/zip'
 -H 'X-Upload-Filename: niAanlevering.zip'
@@ -220,6 +214,25 @@ HTTP/1.1 200 OK
 Location: https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/upload/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 ```  
 _Figuur 6 - Het CURL commando voor het aanmelden van een aanlevering en een deel van de response_
+
+In de body van de response worden kenmerkende gegevens over de aanlevering teruggegeven.  \
+Om dit response (met zekerheid) in json-formaat terug te krijgen, moet dit in de header van het request worden meegegeven als 'Content-Type: application/json'.
+
+Voorbeeld:
+```json
+[{
+	"aanleveringId": "a77aff2b-c794-4ad3-a021-7c1a29096770",
+	"bronhouderCode": "KL9999",
+	"informatieSoort": "netinformatie",
+	"bestandsnaam": "niAanlevering.zip",
+	"netbeheerder" : "Kadaster KLIC-WIN",
+	"fileSizeInBytes": 34097,
+	"aanleverNummer": 15,
+	"aanleverDatum": "2017-01-12T08:41:48.665",
+	"aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/niGestart"
+}]
+```
+Bovenstaand voorbeeld laat de attributen van het response-bericht zien, zoals deze er in versie 2 uit gaat zien.
 
 > **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
@@ -355,18 +368,16 @@ Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is 
   ],
   "content": [
     {
-      "aanleveringId": "a77aff2b-c794-4ad3-a021-7c1a29096770",
-      "bronhouderCode": "KL9999",
-      "informatieSoort": "netinformatie",
-      "bestandsnaam": "niAanlevering.zip",
-      "locatieInOpslag": "netinformatie/2017/01/12/2017-01-12_08H41M48S574_6fecc154-0542-4d46-ae51-0ee67139d642.zip",
-      "netbeheerder":  "Kadaster KLIC-WIN",
-      "relatienummer": "0000001234",
-      "fileSizeInBytes": 34097,
-      "aanleverNummer": 15,
-      "aanleverDatum": "2017-01-12T08:41:48.665",
-      "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/niTerBeoordeling",
-      "aanleverStatusMutatieDatum": "2017-01-12T08:41:54.755",
+	  "aanleveringId": "a77aff2b-c794-4ad3-a021-7c1a29096770",
+	  "bronhouderCode": "KL9999",
+	  "informatieSoort": "netinformatie",
+	  "bestandsnaam": "niAanlevering.zip",
+	  "netbeheerder" : "Kadaster KLIC-WIN",
+	  "fileSizeInBytes": 34097,
+	  "aanleverNummer": 15,
+	  "aanleverDatum": "2017-01-12T08:41:48.665",
+	  "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/niTerBeoordeling",
+	  "aanleverStatusMutatieDatum": "2017-01-12T08:41:54.755",
       "link": []
     }
     
@@ -408,12 +419,10 @@ In de **aanleverStatistiekList** is te zien dat deze aanlevering 69 waterleiding
   "bronhouderCode": "KL9999",
   "informatieSoort": "netinformatie",
   "bestandsnaam": "niAanlevering.zip",
-  "locatieInOpslag": "netinformatie/2017/01/12/2017-01-12_08H41M48S574_6fecc154-0542-4d46-ae51-0ee67139d642.zip",
-  "netbeheerder": "Kadaster KLIC-WIN",
-  "relatienummer": "0000001234",
+  "netbeheerder" : "Kadaster KLIC-WIN",
   "fileSizeInBytes": 34097,
   "aanleverNummer": 15,
-  "aanleverDatum": "2017-01-12T08:41:48.665",
+  "aanleverDatum": "2017-01-12T08:41:54.755",
   "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/niTerBeoordeling",
   "aanleverStatusMutatieDatum": "2017-01-12T08:41:54.755",
   "aanleverStatusHistorieList": [
@@ -461,28 +470,25 @@ In de **aanleverStatistiekList** is te zien dat deze aanlevering 69 waterleiding
     }
   ],
   "aanleverStatistiekList": [
-    
-{
-  "statistiekSoort": "IMKL-netinformatie-WION",
-  "statistiekAanduidingNiveau1": "utiliteitsnet",
-  "statistiekAanduidingNiveau2": "water",
-  "aantal": 1,
-  "aantalNieuw": 0,
-  "aantalGewijzigd": 0,
-  "aantalVerwijderd": 0
-},
-    
-    
- {
-  "statistiekSoort": "IMKL-netinformatie-WION",
-  "statistiekAanduidingNiveau1": "kabelOfLeiding",
-  "statistiekAanduidingNiveau2": "water",
-  "aantal": 69,
-  "aantalNieuw": 0,
-  "aantalGewijzigd": 0,
-  "aantalVerwijderd": 0
-}
-   /* ... */
+	{
+	  "statistiekSoort": "IMKL-netinformatie-WION",
+	  "statistiekAanduidingNiveau1": "utiliteitsnet",
+	  "statistiekAanduidingNiveau2": "water",
+	  "aantal": 1,
+	  "aantalNieuw": 0,
+	  "aantalGewijzigd": 0,
+	  "aantalVerwijderd": 0
+	},
+	{
+	  "statistiekSoort": "IMKL-netinformatie-WION",
+	  "statistiekAanduidingNiveau1": "kabelOfLeiding",
+	  "statistiekAanduidingNiveau2": "water",
+	  "aantal": 69,
+	  "aantalNieuw": 0,
+	  "aantalGewijzigd": 0,
+	  "aantalVerwijderd": 0
+	}
+	/* ... */
   ]
 }
 ```  

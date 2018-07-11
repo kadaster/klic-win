@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: Voorbeeld 4. Utiliteitsnet met nilReason.xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Dit is een voorbeeld van netinformatie van bronhouder KL9999 gelegen in de plaats Best.
+De gebruikte voorbeeld-features zijn bedoeld voor demo-doeleinden en zijn niet bedoeld om een 
+representatie te geven van de werkelijke situatie ter plaatse.
+De inhoud is gebaseerd op de definities uit IMKL2015, versie 1.2.1
+
+In het voorbeeld is nader ingezoomd op mogelijkheden om nilReason op te kunnen geven.
+Mogelijke waarden voor VoidReasonValue:
+- Unknown
+- Unpopulated
+- Withheld
+ _____________________________________________________________________ -->
+
+<gml:FeatureCollection 
+xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" 
+xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" 
+xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" 
+xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0"
+gml:id="ID_Netinformatie_KL3131_nilReason_2018-02-01" 
+xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 http://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd">
+
+	<!--________________ Utiliteitsnet ________________-->
+	<gml:featureMember>
+		<imkl:Utiliteitsnet gml:id="nl.imkl-KL9999.tst00537">
+			<us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical"/>
+			<us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL9999.tst00537</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</imkl:beginLifespanVersion>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasHogeDruk"/>
+		</imkl:Utiliteitsnet>
+	</gml:featureMember>
+	<!--________________ Toren ________________-->
+	<gml:featureMember>
+		<imkl:Toren gml:id="nl.imkl-KL9999.tst00000">
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:geometry>
+				<gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="idm522375726704toren">
+					<gml:pos srsDimension="2">153439.0 389514.0</gml:pos>
+				</gml:Point>
+			</us-net-common:geometry>
+			<us-net-common:inspireId>
+				<base:Identifier>
+					<base:localId>KL9999.tst00000</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</us-net-common:inspireId>
+			<us-net-common:towerHeight uom="urn:ogc:def:uom:OGC::m">100.0</us-net-common:towerHeight>
+			<imkl:inNetwork xlink:href="nl.imkl-KL9999.tst00537"/>
+		</imkl:Toren>
+	</gml:featureMember>
+
+	<!--________________ OlieGasChemicalienPijpleiding ________________-->
+	<gml:featureMember>
+		<imkl:OlieGasChemicalienPijpleiding gml:id="nl.imkl-KL9999.tst00076">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL9999.tst00076</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL9999.tst00537"/>
+			<net:link xlink:href="nl.imkl-KL9999.tst00358"/>
+			<us-net-common:currentStatus xsi:nil="true" nilReason=""/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition xsi:nil="true" nilReason="withheld"/>
+			<us-net-common:utilityFacilityReference xsi:nil="true"/>
+			<us-net-common:warningType xsi:nil="true" nilReason="--geheim--"/>
+			<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm" xsi:nil="true" nilReason="missing"/>
+			<us-net-common:pressure  uom="urn:ogc:def:uom:OGC::bar">4.3</us-net-common:pressure>
+			<us-net-ogc:oilGasChemicalsProductType xlink:href="http://inspire.ec.europa.eu/codelist/OilGasChemicalsProductTypeValue/naturalGas"/>
+		</imkl:OlieGasChemicalienPijpleiding>
+	</gml:featureMember>
+
+	<!--________________ UtilityLink ________________-->
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-KL9999.tst00357">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL9999.tst00357</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL9999.tst00537"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL9999.tst00357_geo">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList>154923.213 389409.969 154897.971 389306.899 154894.305 389304.023</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-KL9999.tst00358">
+			<net:beginLifespanVersion>2001-12-17T09:30:47.00+01:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>KL9999.tst00358</base:localId>
+					<base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-KL9999.tst00537"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL9999.tst00358_geo">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList>153628.707 389676.866 153644.19 389679.23 154107.659 389579.951</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+<!--
+ConditionOfFacilityValue is een codelist bestaande uit onderstaande te gebruiken waarden (werkafspraak):
+  disused - The facility is no longer used, but is not being or has not been decommissioned.
+  functional - The facility is functional.
+  projected - The facility is being designed. Construction has not yet started.
+
+		INCORRECT
+			weglaten - NIET VALIDE, verplicht element
+			<us-net-common:currentStatus></us-net-common:currentStatus>	XSD-validatie OK
+			<us-net-common:currentStatus xsi:nil="true"/>			XSD-valide, waarschuwing: geen nilReason opgegeven
+			<us-net-common:currentStatus xsi:nil="true" nilReason=""/>	XSD-valide, ongeldige reden, maar geen melding+ NIET aanbevolen
+			<us-net-common:currentStatus xlink:href=""/>			XSD-valide; niet conform waarden uit codelist...
+		CORRECT
+			<us-net-common:currentStatus xsi:nil="true" nilReason="Unknown"/>	XSD-valide, nilReason uit INSPIRE-waardelijst, functioneel correct
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>	XSD-valide, functioneel correct
+-->
+			<us-net-common:currentStatus xsi:nil="true" nilReason="Unknown"/>
+<!--
+validFrom is van het type DateTime
+		INCORRECT
+			weglaten - NIET VALIDE, verplicht element
+			<us-net-common:validFrom></us-net-common:validFrom>
+			<us-net-common:validFrom xsi:nil="true" nilReason="- onbekend -"/>  XSD-valide, ongeldige reden, maar geen melding, NIET aanbevolen
+			<us-net-common:validFrom xsi:nil="true"/> 		XSD-valide, geen waarschuwing: geen nilReason opgegeven
+		CORRECT
+			<us-net-common:validFrom xsi:nil="true" nilReason="Withheld"/>
+			<us-net-common:validFrom>2001-12-17T09:30:47.00+01:00</us-net-common:validFrom>
+-->
+			<us-net-common:validFrom xsi:nil="true" nilReason="Withheld"/>
+<!--
+verticalPositionValue is een enumeration bestaande uit:
+- onGroundSurface - The spatial object is on ground level.
+- suspendedOrElevated - The spatial object is suspended or elevated.
+- underground - The spatial object is underground.
+
+		INCORRECT
+			weglaten - NIET VALIDE, verplicht element
+			<us-net-common:verticalPosition></us-net-common:verticalPosition> 	NIET XSD-valide, geen van de enumeraties is opgegeven
+			<us-net-common:verticalPosition>ondergronds</us-net-common:verticalPosition>	NIET XSD-valide, geen toegestane waarde
+			<us-net-common:verticalPosition xsi:nil="true"/>			XSD-valide, waarschuwing: geen nilReason opgegeven (opgave van reden is niet verplicht)
+			<us-net-common:verticalPosition xsi:nil="true" nilReason="- - geheim - -"/> XSD-valide, ongeldige reden, maar geen melding, NIET aanbevolen
+			<us-net-common:verticalPosition xsi:nil="true" nilReason="unknown"/>	XSD-valide, nilReason uit gml-waardelijst, maar ongeldige reden, maar geen melding
+		CORRECT
+			<us-net-common:verticalPosition xsi:nil="true" nilReason="Unknown"/>	XSD-valide, nilReason uit INSPIRE-waardelijst, functioneel correct
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>	XSD-valide, functioneel correct
+-->
+			<us-net-common:verticalPosition xsi:nil="true" nilReason="Unpopulated"/>
+
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+
+</gml:FeatureCollection>

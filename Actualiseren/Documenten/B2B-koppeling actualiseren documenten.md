@@ -28,7 +28,6 @@ Dit document biedt een handleiding voor het actualiseren van documenten in de do
 
 Dit document beschrijft de structuur en inhoud van het zipbestand met aangeleverde documenten en de procedure voor het aanleveren en verwerken van dit zipbestand.
 
-
 In de sectie [Zipbestand](#zipbestand) wordt de structuur van het zipbestand toegelicht.
 
 Om documenten aan te kunnen leveren zijn er bepaalde rechten nodig. In deze documentatie gaan we uit van een aanlevering van documenten in de NTD omgeving. De sectie [Mijn Kadaster](#mijn-kadaster) beschrijft hoe gecontroleerd kan worden of de gebruiker over de benodigde rechten beschikt.
@@ -104,8 +103,10 @@ Het zipbestand moet aan een aantal voorwaarden voldoen:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DocumentenBeheer xmlns="http://www.kadaster.nl/schemas/klic/20081010/bmkltypes">
-    <versie>v0.6</versie>
+<DocumentenBeheer 
+xmlns="http://www.kadaster.nl/schemas/klic/documentenbeheer/v20180418" 
+xmlns:xlink="http://www.w3.org/1999/xlink">
+    <versie>1.0</versie>
     <bronhoudercode>KL9999</bronhoudercode>
     <bronhouderNaam>Kadaster KLIC-WIN</bronhouderNaam>
     <indAutomatischNaarProductie>false</indAutomatischNaarProductie>
@@ -113,41 +114,41 @@ Het zipbestand moet aan een aantal voorwaarden voldoen:
         <document>
             <documentID>
                 <namespace>nl.imkl</namespace>
-                <lokaalID>KL9999.electriciteit.bestand1</lokaalID>
+                <lokaalID>KL9999.electriciteit_bestand1</lokaalID>
             </documentID>
-            <bestandMediaType>application/pdf</bestandMediaType>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
             <bestandsnaam>map1/bestandA.pdf</bestandsnaam>
         </document>
         <document>
             <documentID>
                 <namespace>nl.imkl</namespace>
-                <lokaalID>KL9999.elektriciteit.bestand2</lokaalID>
+                <lokaalID>KL9999.elektriciteit_bestand2</lokaalID>
             </documentID>
-            <bestandMediaType>application/pdf</bestandMediaType>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
             <bestandsnaam>map1/bestandB.pdf</bestandsnaam>
         </document>
         <document>
             <documentID>
                 <namespace>nl.imkl</namespace>
-                <lokaalID>KL9999.water.bestand1</lokaalID>
+                <lokaalID>KL9999.water_bestand1</lokaalID>
             </documentID>
-            <bestandMediaType>application/pdf</bestandMediaType>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
             <bestandsnaam>map2/bestandC.pdf</bestandsnaam>
         </document>
         <document>
             <documentID>
                 <namespace>nl.imkl</namespace>
-                <lokaalID>KL9999.water.bestand2</lokaalID>
+                <lokaalID>KL9999.water_bestand2</lokaalID>
             </documentID>
-            <bestandMediaType>application/pdf</bestandMediaType>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
             <bestandsnaam>map2/bestandD.pdf</bestandsnaam>
         </document>
         <document>
             <documentID>
                 <namespace>nl.imkl</namespace>
-                <lokaalID>KL9999.water.bestand3</lokaalID>
+                <lokaalID>KL9999.water_bestand3</lokaalID>
             </documentID>
-            <bestandMediaType>application/pdf</bestandMediaType>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
             <bestandsnaam>map2/bestandD.pdf</bestandsnaam>
         </document>
     </aangeleverdeDocumenten>
@@ -200,7 +201,7 @@ De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van 
 Voor de NTD Upload servlet bevindt deze API zich op <https://service10.kadaster.nl//klic/ntd/actualiseren/upload/api/v2/web>.
 
 Het OAuth Authorization endpoint voor NTD is
-<https://authorization.kadaster.nl/auth/oauth/v2/>
+<https://authorization.test.kadaster.nl/auth/oauth/v2/>
 
 #### Documenten aanleveren
 
@@ -228,7 +229,8 @@ curl https://service10.kadaster.nl/klic/actualiseren/api/v2
 /aanleveringen/documenten/netbeheerder
 -v
 -X POST
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+-H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+-H 'Content-Type: application/json'
 -H 'X-Upload-Content-Length: 1405'
 -H 'X-Upload-Content-Type: application/zip'
 -H 'X-Upload-Filename: aanlevering.zip'
@@ -240,6 +242,23 @@ Location: https://service10.kadaster.nl/klic/actualiseren/upload/api/v2/upload?u
 ```  
 _Figuur 6 - Het CURL commando voor het aanmelden van een aanlevering en een deel van de response_
 
+In de body van de response worden kenmerkende gegevens over de aanlevering teruggegeven.  \
+Om dit response (met zekerheid) in json-formaat terug te krijgen, moet dit in de header van het request worden meegegeven als 'Content-Type: application/json'.
+
+Voorbeeld:
+```json
+[{
+    "aanleveringId" : "a77aff2b-c794-4ad3-a021-7c1a29096770",
+    "bronhouderCode" : "KL9999",
+    "informatieSoort" : "documenten",
+    "bestandsnaam" : "aanlevering.zip",
+    "netbeheerder" : "Kadaster KLIC-WIN",
+    "fileSizeInBytes" : 1405,
+    "aanleverNummer" : 29,
+    "aanleverDatum" : "2016-11-08T15:58:47.062",
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docGestart"
+}]
+```
 > **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Figuur 6 toont het CURL commando en het resultaat van het request. De response code 200 geeft aan dat het request succesvol verwerkt is. Een belangrijke parameter in de response is de header “Location”. Dit is een endpoint in de “Upload servlet” API waarnaar het zipbestand geüpload moet worden.
@@ -372,15 +391,13 @@ Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is 
   "content" : [ {
     "aanleveringId" : "a77aff2b-c794-4ad3-a021-7c1a29096770",
     "bronhouderCode" : "KL9999",
-    "informatieSoort" : "DOCUMENTEN",
-    "aanleverNummer" : 29,
-    "aanleverDatum" : "2016-11-08T15:58:47.062",
+    "informatieSoort" : "documenten",
     "bestandsnaam" : "aanlevering.zip",
     "netbeheerder" : "Kadaster KLIC-WIN",
-    "relatienummer" : "0000947354",
     "fileSizeInBytes" : 1405,
-    "aanleverStatusId" : 7,
-    "aanleverStatusName" : "Gereed voor handmatige controle",
+    "aanleverNummer" : 29,
+    "aanleverDatum" : "2016-11-08T15:58:47.062",
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docTerBeoordeling",
     "aanleverStatusMutatieDatum" : "2016-11-08T16:07:31.424",
     "link" : [ ]
   }
@@ -422,65 +439,48 @@ In de **aanleverStatistiekList** is te zien dat deze aanlevering 5 documenten be
 {
   "aanleveringId" : "a77aff2b-c794-4ad3-a021-7c1a29096770",
   "bronhouderCode" : "KL9999",
-  "informatieSoort" : "DOCUMENTEN",
-  "aanleverNummer" : 29,
-  "aanleverDatum" : "2016-11-08T15:58:47.062",
+  "informatieSoort" : "documenten",
   "bestandsnaam" : "aanlevering.zip",
   "netbeheerder" : "Kadaster KLIC-WIN",
-  "relatienummer" : "0000947354",
   "fileSizeInBytes" : 1405,
-  "aanleverStatusId" : 7,
-  "aanleverStatusName" : "Gereed voor handmatige controle",
+  "aanleverNummer" : 29,
+  "aanleverDatum" : "2016-11-08T15:58:47.062",
+  "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docTerBeoordeling",
   "aanleverStatusMutatieDatum" : "2016-11-08T16:07:31.424",
   "aanleverStatusHistorieList" : [ {
     "mutatieDatum" : "2016-11-08T16:07:31.424",
-    "aanleverStatusId" : 7,
-    "aanleverStatusName" : "Gereed voor handmatige controle"
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docTerBeoordeling"
   }, {
     "mutatieDatum" : "2016-11-08T16:07:31.410",
-    "aanleverStatusId" : 6,
-    "aanleverStatusName" : "Gevalideerd zonder fouten"
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docGevalideerdZonderFouten"
   }, {
     "mutatieDatum" : "2016-11-08T16:07:31.382",
-    "aanleverStatusId" : 4,
-    "aanleverStatusName" : "Aanlevering wordt gevalideerd"
-  }, {
-    "mutatieDatum" : "2016-11-08T16:07:31.219",
-    "aanleverStatusId" : 3,
-    "aanleverStatusName" : "Aanlevering ingepland voor verwerking"
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docWordtGevalideerd"
   }, {
     "mutatieDatum" : "2016-11-08T16:07:30.147",
-    "aanleverStatusId" : 1,
-    "aanleverStatusName" : "Aanlevering geslaagd"
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docAangeleverd"
   }, {
     "mutatieDatum" : "2016-11-08T15:58:47.069",
-    "aanleverStatusId" : 12,
-    "aanleverStatusName" : "Aanlevering gestart"
+    "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docGestart"
   } ],
   "aanleverStapList" : [ {
-    "aanleverStapAanduidingId" : 1,
+    "aanleverStapAanduiding" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStapAanduiding/docAanleveren",
     "startDatum" : "2016-11-08T15:58:47.074",
     "eindDatum" : "2016-11-08T16:07:30.143",
-    "stapStatus" : "SUCCES",
-    "gebruikersnaam" : "veerkj1",
-    "aanleverStapAanduidingName" : "aanleveren",
-    "aanleverStapMeldingList" : [ ]
+    "stapStatus" : "succes",
+    "gebruikersnaam" : "veerkj1"
   }, {
-    "aanleverStapAanduidingId" : 2,
+    "aanleverStapAanduiding" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStapAanduiding/docValideren",
     "startDatum" : "2016-11-08T16:07:31.378",
     "eindDatum" : "2016-11-08T16:07:31.413",
-    "stapStatus" : "SUCCES",
-    "gebruikersnaam" : "system",
-    "aanleverStapAanduidingName" : "valideren",
-    "aanleverStapMeldingList" : [ ]
+    "stapStatus" : "succes",
+    "gebruikersnaam" : "system"
   }, {
-    "aanleverStapAanduidingId" : 3,
+    "aanleverStapAanduidingId" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStapAanduiding/docBeoordelen",
     "startDatum" : "2016-11-08T16:07:31.422",
     "eindDatum" : "2016-11-08T16:07:31.427",
-    "stapStatus" : "SUCCES",
-    "gebruikersnaam" : "system",
-    "aanleverStapAanduidingName" : "beoordelen",
-    "aanleverStapMeldingList" : [ ]
+    "stapStatus" : "succes",
+    "gebruikersnaam" : "system"
   } ],
   "aanleverStatistiekList" : [ {
     "statistiekSoort" : "IMKL_DOCUMENTEN",

@@ -1,5 +1,11 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+10-07-2018
+* Documentatie over technische werking B2B-koppeling (BMKL API) aangepast i.v.m.
+  - toepassen gewijzigde namespace (/documentenbeheer/v20180418)
+  - request voor initieren nieuwe aanlevering: Content-Type : application/json (response in json)
+* Nieuw voorbeeld 4: aanleveren documenten in submappen
+  
 23-05-2018
 * Voorbeelden en toelichting op voorbeelden (presentatie) aangepast op:
   - toepassen gewijzigde namespace (/documentenbeheer/v20180418)

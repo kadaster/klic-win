@@ -10,3 +10,4 @@ Technische uitwerking met voorbeelden:
   * Voorbeeld 3. Gebruiken van documenten uit de centrale voorziening
     - Actualiseren van netinformatie voor KL3131 en KL5151
 	- Uitleveren van gebiedsinformatie met gerefereerde documenten o.b.v. een orientatieverzoek
+  * Voorbeeld 4. Actualiseren van documenten waarbij deze in submap(pen) worden aangeleverd

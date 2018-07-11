@@ -12,3 +12,5 @@ Technische uitwerking met voorbeelden:
 * Voorbeeld 4. Uitwerking EV-bepaling - zipbestand met uitgewerkte voorbeelden over de wijze waarop EV wordt bepaald aan de hand van
   - een ingelezen featureset met netinformatie + voorzorgsmaatregelen
   - een orientatieverzoek, een calamiteitenmelding en een graafmelding
+* Voorbeeld 5. soortWerkzaamheden bij meerdere aanduidingen - zipbestand met voorbeelden van EV-bepaling
+indien `soortWerkzaamheden` bij meerdere `werkzaamhedenAanduiding`-klassen worden ingedeeld
