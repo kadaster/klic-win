@@ -4,6 +4,7 @@
 Algemeen:
 - Clippen voor WION objecten is geïmplementeerd.
 - Multi-geometrieën in WIBON-features toestaan bij actualiseren/decentraal aanleveren (voor zover dit voor het geometrietype is toegestaan).
+- Let op: door structuurwijzigingen in de database tbv performance verbetering is de reeds aangeleverde netinformatie en beheerdersinformatie verwijderd. U dient dus opnieuw aan te leveren in de NTD.
 
 WION Levering: 
 - Achtergrondkaart en selectie kaart ook meeleveren bij het opvragen van de namens de netbeheerder geleverde beheerdersinformatie.
