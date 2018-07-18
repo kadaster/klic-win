@@ -4,8 +4,8 @@
 Algemeen:
 - Clippen voor WION objecten is geïmplementeerd
 - Onderstaande WION-objecten kunnen nog niet correct worden geclipped (zie https://github.com/Geonovum/imkl2015-review/issues/210)
-  * AanduidingEisVoorzorgsmaatregel
-  * ExtraGeometrie
+  * _AanduidingEisVoorzorgsmaatregel_
+  * _ExtraGeometrie_
 - Multi-geometrieën in WIBON-features toestaan bij actualiseren/decentraal aanleveren (voor zover dit voor het geometrietype is toegestaan).
 
 WION Levering: 
@@ -34,6 +34,10 @@ Performance:
 - Diverse performance verbeteringen t.b.v. uitlevering van vector-informatie.
 - PNG's met IMKL-informatie zijn verkleind t.b.v. snelle levering.
 
+Let op:  \
+Door de structuurverbetering in de database is de eerder aangeleverde netinformatie in de testomgeving NTD in zijn geheel verwijderd (ook met de status ‘in productie’).  \
+Indien er in de NTD de berichtenuitwisseling (BMKL) wordt getest voor de centrale variant (dienst ‘Opvoeren testmelding – BMKL 2.0 centraal): netinformatie dient nogmaals geactualiseerd te worden.
+
 ------------------------
 ### 16 mei 2018
 Algemeen:
@@ -59,7 +63,11 @@ BMKL API v2.0:
 - Update BMKL API's ten aanzien van naamgeving e.d. 
 
 Performance:
-- Diverse performance verbeteringen met betrekking tot levering en de gebruikerservaringen van de door netbeheer geautoriseerde serviceprovider.
+- Diverse performance verbeteringen met betrekking tot levering en de gebruikerservaringen van de door netbeheerder geautoriseerde serviceprovider.
+
+Let op:  \
+Door de structuurverbetering in de database is de eerder aangeleverde netinformatie in de testomgeving NTD in zijn geheel verwijderd (ook met de status ‘in productie’).  \
+Indien er in de NTD de berichtenuitwisseling (BMKL) wordt getest voor de centrale variant (dienst ‘Opvoeren testmelding – BMKL 2.0 centraal): netinformatie dient nogmaals geactualiseerd te worden.
 
 ------------------------
 ### 30 januari 2018
