@@ -24,10 +24,12 @@
       - [Referentiestelsel en dimensie](#referentiestelsel-en-dimensie)
         - [srsName](#srsname)
         - [srsDimension](#srsdimension)
-      - [Geldige geometrietype](#geldige-geometrietype)
+      - [Geldige geometrietypen](#geldige-geometrietypen)
         - [Punt](#punt)
         - [Lijn](#lijn)
         - [Vlak](#vlak)
+        - [Multilijn](#multilijn)
+        - [Multivlak](#multivlak)
       - [Geometrie niet leeg en voldoende coördinaten](#geometrie-niet-leeg-en-voldoende-co%C3%B6rdinaten)
       - [Topologisch correct](#topologisch-correct)
       - [Aantal punten](#aantal-punten)
@@ -113,9 +115,6 @@ Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn en mag niet groter zijn dan een bepaalde grootte. De maximale grootte voor de eindsituatie is voorlopig gesteld op 2GB.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
 * Ten behoeve van de aanlevering van netinformatie dient het ZIP-archief één XML bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.
-* Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het ZIP-archief twee XML bestand te bevatten. Het eerste bestand bevat de netinformatie volgens de richtlijn hierboven vermeldt. Het tweede bestand
-bevat de voorzorgsmaatregelen, waarvan de bestandsnaam begint met 'voorzorgsmaatregelen' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters. Tevens moeten bij de voorzorgsmaatregelen
-één of meerdere bijlagen aanwezig zijn waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.
 * De bestandsnaam van het ZIP-archief of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
   * Bestandsnaam mag niet langer zijn dan 120 tekens.
   * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
@@ -344,30 +343,47 @@ srsDimension in verplicht bij elk geometrie object en wordt als volgt ingevuld:
 
 `srsDimension="2"`
 
-##### Geldige geometrietype
+##### Geldige geometrietypen
 
-De volgende geometrietype worden ondersteund:
+Voor de toepassing van geometrie in informatiemodellering en de implementatie daarvan in GML refereren we naar handreikingen zoals deze o.a. door Geonovum zijn gepubliceerd.  \
+Zie bijv. [Handreiking Geometrie in model en GML](https://www.geonovum.nl/uploads/documents/Geometrieinmodelengml_1.0_0.pdf).
 
-| Type | in GML                      | in UML     | Restricties                                                                          | Opmerking |
-|------|-----------------------------|------------|--------------------------------------------------------------------------------------|-----------|
-| Punt | gml:Point                   | GM_Point   | geen                                                                                 | Zie Type  |
-| Lijn | gml:LineString<br>gml:Curve | GM_Curve   | gml:LineString<br>gml:Curve met:<br>- gml:LineStringSegment                          | Zie Type  |
-| Vlak | gml:Polygon                 | GM_Surface | gml:Polygon<br><br>Surface grenzen kunnen beschreven worden met:<br>- gml:LinearRing | Zie Type  |
+Van de hierin beschreven geometrietypen worden de volgende (met restricties) ondersteund:
 
-Een geometry wordt gevalideerd tegen de regels gespecificeerd in de OpenGIS Simple Feature Specification http://www.opengeospatial.org/standards/sfa en http://www.opengeospatial.org/standards/sfs.
+| Type            | in GML           | in UML          | Restricties                                                                                                   | Opmerking                   |
+|-----------------|------------------|-----------------|---------------------------------------------------------------------------------------------------------------|-----------------------------|
+| Punt            | gml:Point        | GM_Point        | geen                                                                                                          | Zie [Punt](#punt)           |
+| Lijn | gml:LineString<br>gml:Curve | GM_Curve        | - gml:LineString, of<br>- gml:Curve met gml:LineStringSegment                                                 | Zie [Lijn](#lijn)           |
+| Multi-<br>lijn  | gml:MultiCurve   | GM_MultiCurve   | "curveMember" beschreven met (zie GM_Curve):<br>- gml:LineString, of<br>- gml:Curve met gml:LineStringSegment | Zie [Multilijn](#multilijn) |
+| Vlak            | gml:Polygon      | GM_Surface      | - gml:Polygon<br>&nbsp;&nbsp;vlakgrenzen (buitengrenzen) worden beschreven met:<br>&nbsp;&nbsp;- gml:exterior met gml:LinearRing<br>&nbsp;&nbsp;binnengrenzen (gaten, "donuts") worden beschreven met:<br>&nbsp;&nbsp;- gml:interior met gml:LinearRing | Zie [Vlak](#vlak) |
+| Multi-<br>vlak  | gml:MultiSurface | GM_MultiSurface | "surfaceMember" beschreven met (zie GM_Surface):<br>- gml:Polygon (met gml:exterior, eventueel gml:interior)  | Zie [Multivlak](#multivlak) |
+
+Een geometrie wordt gevalideerd tegen de regels gespecificeerd in de OpenGIS Simple Feature Specification http://www.opengeospatial.org/standards/sfa en http://www.opengeospatial.org/standards/sfs.
+
+In het huidige IMKL zijn er geen features gemodelleerd met geometrieen die gedefinieerd zijn volgens de geometrische aggregaties GM_MultiCurve of GM_MultiSurface.
+Echter, een geometrie van het type GM_Object maakt het gebruik van deze geometrietypen - in principe - wél mogelijk.
+
+In aanvullende regels kan per feature met een attribuut van het type GM_Object worden bepaald, welke geometrietypen worden toegestaan.  \
+Voorbeeld:  \
+Functioneel is het gewenst dat de `geometrie` van een _AanduidingEisVoorzorgsmaatregel_ (EV-vlak) zowel een vlak (GM_Surface), als een multivlak (GM_MultiSurface) mag zijn. Vanwege dit requirement zal dit attribuut van het type GM_Object horen te zijn.
+
+Zie onderstaand diagram met de geometrietypen die in IMKL v1.2.1. zijn toegestaan.
+
+![IMKL v1.2.1. Ruimtelijk schema](images/IMKLv1-2-1-Ruimtelijke-schema.jpg "Ruimtelijk schema")
+
 
 ###### Punt
 
 **gml:Point**
 
-| Groep/Element/@attribute | Type               | Card. | Opmerking                                                                          |
-|--------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
-| @srsName                 | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
-| @srsDimension            | Positiveinteger    |  0…1  |                                                                                    |
-| - pos                    | list of xsd:double |   1   |                                                                                    |
-|   pos@srsName            | anyURI             |  0…1  |                                                                                    |
-|   pos@srsDimension       | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| Groep/Element/@attribute         | Type               | Card. | Opmerking                                                                           |
+|----------------------------------|--------------------|:-----:|-------------------------------------------------------------------------------------|
+| @id                              | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
+| @srsName                         | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                             |
+| @srsDimension                    | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                  |
+| - pos                            | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;pos@srsName          | anyURI             |  0…1  |                                                                                     |
+| &nbsp;&nbsp;pos@srsDimension     | Positiveinteger    |  0…1  |                                                                                     |
 
 Voorbeeld:
 ```xml
@@ -378,15 +394,16 @@ Voorbeeld:
 
 ###### Lijn
 
-**xml:LineString**
+**gml:LineString**
 
-| Groep/Element/@attribute | Type               | Card. | Opmerking                                                                          |
-|--------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
-| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
-| @srsName                 | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
-| @srsDimension            | Positiveinteger    |  0…1  |                                                                                    |
-| - posList                | list of xsd:double |   1   |                                                                                    |
-|   posList@srsName        | anyURI             |  0…1  |                                                                                    |
+| Groep/Element/@attribute         | Type               | Card. | Opmerking                                                                           |
+|----------------------------------|--------------------|:-----:|-------------------------------------------------------------------------------------|
+| @id                              | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
+| @srsName                         | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                             |
+| @srsDimension                    | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                  |
+| - posList                        | list of xsd:double |   1   |                                                                                     |
+| &nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                     |
+| &nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                     |
 
 Voorbeeld:
 ```xml
@@ -401,12 +418,12 @@ Voorbeeld:
 |----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
 | @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
-| @srsDimension              | Positiveinteger    |  0…1  |                                                                                    |
+| @srsDimension              | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
 | - segments                 |                    |   1   |                                                                                    |
-|   - LineStringSegment      |                    |  0…*  |                                                                                    |
-|     - posList              | list of xsd:double |   1   |                                                                                    |
-|       posList@srsName      | anyURI             |  0…1  |                                                                                    |
-|       posList@srsDimension | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| &nbsp;&nbsp;- LineStringSegment      |                    |  0…*  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
 
 Voorbeeld:
 ```xml
@@ -418,8 +435,77 @@ Voorbeeld:
    </gml:segments>
 </gml:Curve>
 ```
+Voor Curves wordt gecontroleerd dat de segmenten (`<gml:LineStringSegment>`) aan elkaar vast zitten (beginnen waar het vorige segment eindigt).
 
-Voor Curves wordt gecontroleerd dat de segmenten aan elkaar vast zitten (beginnen waar het vorige segment eindigt).
+###### Multilijn
+
+**gml:MultiCurve met gml:curveMember: gml:LineString**
+
+| Groep/Element/@attribute | Type               | Card. | Opmerking                                                                          |
+|--------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
+| @id                      | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
+| @srsName                 | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
+| @srsDimension            | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| - curveMember            |                    |   *   |                                                                                    |
+| &nbsp;&nbsp;- LineString           |                    |  0…*  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- posList            | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName  | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger | 0…1  |                                                                                    |
+
+Voorbeeld:
+```xml
+<gml:MultiCurve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiCurve_LineString_geo">
+	<gml:curveMember>
+		<gml:LineString>
+		 <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
+		</gml:LineString>
+	</gml:curveMember>
+	<gml:curveMember>
+		<gml:LineString>
+			<gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
+		</gml:LineString>
+	</gml:curveMember>
+</gml:MultiCurve>
+```
+
+**gml:MultiCurve met gml:curveMember: gml:Curve**
+
+| Groep/Element/@attribute   | Type               | Card. | Opmerking                                                                          |
+|----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
+| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
+| @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
+| @srsDimension              | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| - curveMember              |                    |   *   |                                                                                    |
+| &nbsp;&nbsp;- Curve                  |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- segments             |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- LineStringSegment      |                    |  0…*  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                    |
+
+Voorbeeld:
+```xml
+<gml:MultiCurve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiCurve_Curve_geo">
+	<gml:curveMember>
+		<gml:Curve>
+		   <gml:segments>
+			  <gml:LineStringSegment>
+				 <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
+			  </gml:LineStringSegment>
+		   </gml:segments>
+		</gml:Curve>
+	</gml:curveMember>
+	<gml:curveMember>
+		<gml:Curve>
+		   <gml:segments>
+			  <gml:LineStringSegment>
+				 <gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
+			  </gml:LineStringSegment>
+		   </gml:segments>
+		</gml:Curve>
+	</gml:curveMember>
+</gml:MultiCurve>
+```
 
 ###### Vlak
 
@@ -429,27 +515,90 @@ Voor Curves wordt gecontroleerd dat de segmenten aan elkaar vast zitten (beginne
 |----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
 | @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
 | @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
-| @srsDimension              | Positiveinteger    |  0…1  |                                                                                    |
+| @srsDimension              | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
 | - exterior                 | Complex            |  0…1  |                                                                                    |
-|   - LinearRing             |                    |   1   |                                                                                    |
-|     - posList              | list of xsd:double |   1   |                                                                                    |
-|       posList@srsName      | anyURI             |  0…1  |                                                                                    |
-|       posList@srsDimension | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| &nbsp;&nbsp;- LinearRing             |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                    |
 | - interior                 | Complex            |  0…*  |                                                                                    |
-|   - LinearRing             |                    |   1   |                                                                                    |
-|     - posList              | list of xsd:double |   1   |                                                                                    |
-|       posList@srsName      | anyURI             |  0…1  |                                                                                    |
-|       posList@srsDimension | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| &nbsp;&nbsp;- LinearRing             |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                    |
 
 Voorbeeld:
 ```xml
-<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.GHD_s538123224_geo">
+<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL9999.GHD_s538123224_geo">
    <gml:exterior>
       <gml:LinearRing>
-         <gml:posList srsDimension="2">154891.113 389309.387 154889.624 389309.867 154888.356 389310.783 154887.433 389312.047 154886.946 389313.533 154886.942 389315.098 154887.422 389316.587 154888.338 389317.854 154889.602 389318.777 154891.088 389319.264 154892.653 389319.268 154894.474 389318.984 154895.963 389318.504 154897.231 389317.588 154898.154 389316.325 154898.641 389314.838 154898.645 389313.274 154898.165 389311.785 154897.249 389310.517 154895.985 389309.594 154894.499 389309.107 154892.934 389309.103 154891.113 389309.387</gml:posList>
+         <gml:posList>154891.113 389309.387 154889.624 389309.867 154888.356 389310.783 154887.433 389312.047 154886.946 389313.533 154886.942 389315.098 154887.422 389316.587 154888.338 389317.854 154889.602 389318.777 154891.088 389319.264 154892.653 389319.268 154894.474 389318.984 154895.963 389318.504 154897.231 389317.588 154898.154 389316.325 154898.641 389314.838 154898.645 389313.274 154898.165 389311.785 154897.249 389310.517 154895.985 389309.594 154894.499 389309.107 154892.934 389309.103 154891.113 389309.387</gml:posList>
       </gml:LinearRing>
    </gml:exterior>
 </gml:Polygon>
+```
+Voorbeeld van "donut":
+```xml
+<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_Polygon_exterior_interior_interior_geo">
+   <gml:exterior>
+		<gml:LinearRing>
+			<gml:posList>154891 389309 154898 389312 154894 389329 154886 389328 154886 389313 154888 389310 154891 389309</gml:posList>
+		</gml:LinearRing>
+	</gml:exterior>
+	<gml:interior>
+		<gml:LinearRing>
+			<gml:posList>154891 389310 154888 389311 154887 389314 154887 389327 154894 389328 154897 389311 154891 389310</gml:posList>
+		</gml:LinearRing>
+	</gml:interior>
+</gml:Polygon>
+```
+
+Een `<gml:Polygon>` mag eventueel meerdere `<gml:interior>`-elementen hebben, maar deze mogen elkaar niet overlappen. Een "eiland in een gat" is dus ook niet toegestaan.
+
+###### Multivlak
+
+**gml:MultiSurface met gml:surfaceMember: gml:Polygon**
+
+| Groep/Element/@attribute   | Type               | Card. | Opmerking                                                                          |
+|----------------------------|--------------------|:-----:|------------------------------------------------------------------------------------|
+| @id                        | ID                 |   1   | `<nameSpace>-<lokaalID>(-<versie>)`<br>Voorbeeld: `gml:id=nl.imkl-GM0124.12345_geo` |
+| @srsName                   | anyURI             |  0…1  | `srsName="urn:ogc:def:crs:EPSG::28992"`                                            |
+| @srsDimension              | Positiveinteger    |  0…1  | `srsDimension="2"`                                                                 |
+| - surfaceMember            |                    |   *   |                                                                                    |
+| &nbsp;&nbsp;- Polygon                |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- exterior                 | Complex            |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- LinearRing             |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;- interior                 | Complex            |  0…*  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- LinearRing             |                    |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- posList              | list of xsd:double |   1   |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsName      | anyURI             |  0…1  |                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posList@srsDimension | Positiveinteger    |  0…1  |                                                                                    |
+
+Voorbeeld:
+```xml
+<gml:MultiSurface srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiSurface_Polygon_exterior_Polygon_exterior_geo">
+	<gml:surfaceMember>
+		<gml:Polygon>
+			<gml:exterior>
+				<gml:LinearRing>
+					<gml:posList>154891 389312 154893 389313 154893 389320 154892 389320 154891 389312</gml:posList>
+				</gml:LinearRing>
+			</gml:exterior>
+		</gml:Polygon>
+	</gml:surfaceMember>
+	<gml:surfaceMember>
+		<gml:Polygon>
+			<gml:exterior>
+				<gml:LinearRing>
+					<gml:posList>155091 389312 155093 389313 155093 389320 155092 389320 155091 389312</gml:posList>
+				</gml:LinearRing>
+			</gml:exterior>
+		</gml:Polygon>
+	</gml:surfaceMember>
+</gml:MultiSurface>
 ```
 
 ##### Geometrie niet leeg en voldoende coördinaten
@@ -690,23 +839,25 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 | geometrie                                  |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Maatvoering**                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
-| label                                      |  0…1  | Strikte verplichting in IMKL voor een maatvoeringsobject van het type maatvoeringsLabel.                                                                                                                                                                      | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| label                                      |  0…1  | Strikte verplichting in IMKL voor een maatvoeringsobject van het type maatvoeringslabel.                                                                                                                                                                      | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
 | inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 | maatvoeringsType                           |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
-| rotatiehoek                                |  0…1  | Strikte verplichting voor annotatieobjecten van het type  annotatieLabel of pijl. De unit of measure moet zijn OGC:URN:DEF:UOM:ogc:F16:deg- Bij annotatieobjecten van het type maatvoeringsLijn of annotatielijn wordt de waarde van deze property genegeerd. | :heavy_minus_sign: Wordt niet gecontroleerd                                                     |
-| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypes: - voor annotatietypes maatvoeringsHulplijn, maatvoeringsLijn en annotatielijn: enkel lijnen- voor maatvoeringsLabel, annotatieLabel, pijl: enkel punten                                                  | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
+| rotatiehoek                                |  0…1  | Strikte verplichting voor maatvoeringsobjecten van het type maatvoeringslabel.<br>De unit of measure moet zijn `urn:ogc:def:uom:OGC::deg`.<br>Bij maatvoeringsobjecten van het type maatvoeringslijn of maatvoeringshulplijn wordt de waarde van deze property genegeerd. | :heavy_minus_sign: Wordt niet gecontroleerd                                                     |
+| labelpositie                               |  0…1  | Strikte verplichting in IMKL voor een maatvoeringsobject van het type maatvoeringslabel.<br>Verplichte attributen:<br>- aangrijpingHorizontaal<br>- aangrijpingHorizontaal                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypen: - voor annotatietypes maatvoeringsHulplijn, maatvoeringsLijn en annotatielijn: enkel lijnen- voor maatvoeringsLabel, annotatieLabel, pijl: enkel punten                                                  | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Annotatie**                              |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | label                                      |  0…1  | Strikte verplichting in IMKL voor een annotatieobject van het type annotatielabel.                                                                                                                                                                            | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
 | inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 | annotatieType                              |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
-| rotatiehoek                                |  0…1  | Strikte verplichting voor annotatieobjecten van het type annotatieLabel of pijlpunt. De unit of measure moet zijn urn:ogc:def:uom:ogc::deg                                                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
-| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypes: - voor annotatietypes maatvoeringsHulplijn, maatvoeringsLijn en annotatielijn: enkel lijnen- voor maatvoeringsLabel, annotatieLabel, pijl: enkel punten                                                  | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
+| rotatiehoek                                |  0…1  | Strikte verplichting voor annotatieobjecten van het type annotatielabel of annotatiepijlpunt. De unit of measure moet zijn `urn:ogc:def:uom:OGC::deg`                                                                                                         | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| labelpositie                               |  0…1  | Strikte verplichting in IMKL voor een annotatieobject van het type annotatielabel.<br>Verplichte attributen:<br>- aangrijpingHorizontaal<br>- aangrijpingHorizontaal                                                                                          | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypen: - voor annotatietypes maatvoeringsHulplijn, maatvoeringsLijn en annotatielijn: enkel lijnen- voor maatvoeringsLabel, annotatieLabel, pijl: enkel punten                                                  | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **EigenTopografie**                        |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | status                                     |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | typeTopografischObject                     |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
-| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypes:  punten, lijnen, polygonen en multigeometry bestaande uit punten, lijnen en/of polygonen                                                                                                                 | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypen:  punten, lijnen, polygonen en multigeometry bestaande uit punten, lijnen en/of polygonen                                                                                                                 | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
 | inNetwork                                  |  1…*  | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat, Meerdere netwerken nu NIET mogelijk.    |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Bijlage / EisVoorzorgsmaatregelBijlage** |       |                                                                                                                                                                                                                                                               |                                                                                                   |
