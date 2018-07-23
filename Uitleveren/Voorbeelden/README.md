@@ -1,4 +1,4 @@
-﻿#### Uitleveren gebiedsinformatie (voorbeelden)
+#### Uitleveren gebiedsinformatie (voorbeelden)
 
 In deze map zijn diverse voorbeelden van gebiedsinformatieleveringen uitgewerkt en beschikbaar gesteld.
 Als uitgangspunt is een bestaande levering gebruikt (18G030795), waarbij alle belanghebbenden nog op de klassieke manier (BMKL1.2) hebben aangeleverd.
@@ -22,5 +22,9 @@ Deze map bevat:
   * Voorbeeld 6. als voorbeeld 5; mix van netbeheerders klassiek/IMKL1.2, Enexis + Brabant Water + GasUnie IMKL1.2 geleverd
 * extra voorbeelden
   * Levering_18G002330_1
+  * Levering_18G007160_1_met EV
   * Levering_18C000154_1
+  * Levering_18C000206_1
   * Levering_18O000097_1
+  * Levering_18O000145_1
+  

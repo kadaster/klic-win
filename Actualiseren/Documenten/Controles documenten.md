@@ -1,13 +1,14 @@
-# Validatie documenten
+﻿# Validatie documenten
 
 De belangrijkste uitgangspunten met betrekking tot de documenten-validatie zijn:
 
-- Het upload-bestand is een ZIP-file.
-- Maximale bestandsgrootte van de ZIP-file is 200 MB (in de bèta versie van deze dienst).
-- In de ZIP zit exact 1 XML-bestand. Dit bestand beschrijft de overige documenten (meta-informatie).
-- XSD controle van het XML-bestand (meta-informatie).
-- Alle genoemde bestanden in .XML-bestand moeten aanwezig zijn in het ZIP-bestand.
-- Type aangeleverde documenten: deze moeten .PDF documenten zijn.
-- Lokaal-ID moet uniek zijn: mag één keer voorkomen.
-- Lokaal-ID moet juiste bronhoudercode bevatten.
-- Wanneer document wel in .ZIP bestand maar niet in .XML bestand (meta-informatie) voorkomt: is niet blokkerend (warning).
+- Het upload-bestand is een zipbestand.
+- Maximale bestandsgrootte van het zipbestand is 200 MB.
+- In het zipbestand zit exact 1 XML-bestand (ook wel de documentenbeheer.xml).  \
+  Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (meta-informatie).
+- XSD-controle van het XML-bestand (meta-informatie).
+- Alle genoemde bestanden in het XML-bestand moeten aanwezig zijn in het zipbestand.
+- Type aangeleverde documenten: dit moet een PDF-document zijn (extensie .pdf).
+- `lokaalID` moet uniek zijn in documentenbeheer.xml: mag één keer voorkomen.
+- `documentID` moet juiste bronhoudercode bevatten.
+- Wanneer het document wél in het zipbestand, maar niét in het XML-bestand (meta-informatie) voorkomt: is niet blokkerend (warning).
