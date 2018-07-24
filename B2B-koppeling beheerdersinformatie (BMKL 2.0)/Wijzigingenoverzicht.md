@@ -1,5 +1,8 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+24-07-2018
+* Statussen en statusovergangen opgenomen in documentatie over B2B-koppeling
+
 13-06-2018
 * Overzicht met versieverschillen BMKL API v2 aangepast: huisnummerToevoeging -> huisnummertoevoeging (conform BAG)
 

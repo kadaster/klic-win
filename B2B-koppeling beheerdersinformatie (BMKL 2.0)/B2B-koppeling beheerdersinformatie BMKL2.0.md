@@ -11,7 +11,11 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
   - [Procesmodellen afhandelen beheerdersinformatie-aanvragen](#procesmodellen-afhandelen-beheerdersinformatie-aanvragen)
     - [Procesmodel BMKL 2.0 (decentrale netbeheerder)](#procesmodel-bmkl-20-decentrale-netbeheerder)
     - [Procesmodel BMKL 2.0 (centrale netbeheerder)](#procesmodel-bmkl-20-centrale-netbeheerder)
-    - [Use casemodel BMKL 2.0](#puse-casemodel-bmkl-20)
+    - [Use casemodel BMKL 2.0](#use-casemodel-bmkl-20)
+    - [Statusovergangen BMKL 2.0](#statusovergangen-bmkl-20)
+      - [`biNotificatieStatus`](#binotificatiestatus)	
+      - [`biProductieStatus`](#biproductiestatus)	
+      - [`biAanleverStatus`](#biaanleverstatus)	
   - [Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)](#afhandelen-beheerdersinformatie-aanvragen-enkel-decentraal)
       - [Samenstellen zipbestand](#samenstellen-zipbestand)
       - [Beheerdersinformatie en documenten aanleveren (enkel decentraal)](#beheerdersinformatie-en-documenten-aanleveren-enkel-decentraal)
@@ -153,6 +157,60 @@ De verschillende processtappen zijn gemodelleerd in een use casemodel. Hiermee w
 ![usecasemodel](images/UC230-Uitwisselen-beheerdersinformatie-BMKL2.0.jpg "UC230 Uitwisselen beheerdersinformatie (BMKL2.0)")
 _Figuur 3 UCM B2B-koppeling beheerdersinformatie (BMKL2.0)_
 
+### Statusovergangen BMKL 2.0
+De stappen die de verschillende (deel)processen doorlopen bij het afhandelen van een aanvraag voor beheerdersinformatie, worden vastgelegd in statussen.  \
+We onderkennen hierbij de volgende statussen:
+- `biNotificatieStatus`  \
+De status die de processtappen volgt bij het notificeren van een belanghebbende netbeheerder en bevestigen van de aanvraag.
+- `biProductieStatus`  \
+De status die de processtappen volgt bij het "produceren" van beheerdersinformatie voor een decentrale of centrale netbeheerder.
+- `biAanleverStatus`  \
+De status die de processtappen volgt bij het aanleveren van beheerdersinformatie door een decentrale netbeheerder.
+
+Hieronder volgt een toelichting op de verschillende statusvelden met hun statussen, waarbij de mogelijke statusovergangen zijn weergegeven in diagrammen.  \
+De mogelijke statussen zijn overigens ook op te vragen met een REST-API (backlog-item).
+
+#### `biNotificatieStatus`
+
+| statuswaarde             | toelichting                                                                                                                                                      |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| biOpen                   | De beheerdersinformatie-aanvraag staat nog open voor de netbeheerder. Het moment dat de netbeheerder is genotificeerd, wordt vastgelegd in `datumGenotificeerd`. |
+| biBevestigingOntvangen   | De netbeheerder heeft de beheerdersinformatie-aanvraag bevestigd. Het moment van bevestiging wordt vastgelegd in `datumBevestigingOntvangen`.                    |
+
+![biNotificatieStatus](images/STD-biNotificatieStatus.jpg "STD biNotificatieStatus")  \
+_Figuur 4 STD biNotificatieStatus_
+
+#### `biProductieStatus`
+
+| statuswaarde                    | toelichting                                                                                                                                                      |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| _**(decentraal)**_              |                                                                                                                                                                  |
+| biWachtOpAntwoord               | Het systeem wacht nog op antwoord van de decentrale netbeheerder. Deze heeft - voor de betreffende beheerdersinformatie-aanvraag - nog geen beheerdersinformatie aangeleverd.<br> Let wel: De decentrale netbeheerder moet de aanvraag eerst bevestigen. |
+| biInAanlevering                 | De decentrale netbeheerder is bezig met aanleveren van beheerdersinformatie. De mogelijke statussen van het aanleverproces zijn beschreven bij `biAanleverStatus`. |
+| biGereedVoorSamenstellenProduct | De beheerdersinformatie is correct en kan worden gebruikt om een product (gebiedsinformatie) samen te stellen. Het moment van ontvangst wordt vastgelegd in `datumBeheerdersinformatieOntvangen`.<br>De netbeheerder kan opvragen wat er voor hem wordt uitgeleverd. |
+|                                 |                                                                                                                                                                  |
+| _**(centraal)**_                |                                                                                                                                                                  |
+| biOphalenUitCV                  | De beheerdersinformatie wordt voor de centrale netbeheerder door Kadaster-KLIC opgehaald uit de centrale voorziening.                                            |
+| biGereedVoorSamenstellenProduct | De beheerdersinformatie is correct en kan worden gebruikt om een product (gebiedsinformatie) samen te stellen. Het moment van ophalen wordt vastgelegd in `datumBeheerdersinformatieOntvangen`.<br>De netbeheerder kan opvragen wat er voor hem wordt uitgeleverd. |
+
+![biProductieStatus](images/STD-biProductieStatus.jpg "STD biProductieStatus")  \
+_Figuur 5 STD biProductieStatus_
+
+#### `biAanleverStatus`
+Het aanleveren van beheerdersinformatie is alleen van toepassing voor decentrale netbeheerders.
+
+| statuswaarde              | toelichting                                                                                                                                   |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| biGestart                 | De aanlevering van beheerdersinformatie is gestart.                                                                                           |
+| biAfgebroken              | Het aanleveren van beheerdersinformatie is mislukt of afgebroken. Er moet een nieuwe poging worden gedaan.                                    |
+| biAangeleverd             | De aanlevering van beheerdersinformatie is geslaagd.                                                                                          |
+| biWordtGevalideerd        | Er wordt gecontroleerd of de aangeleverde beheerdersinformatie valide is.                                                                     |
+| biGevalideerdMetFouten    | De beheerdersinformatie is niet correct. Er moet verbeterde beheerdersinformatie worden aangeleverd.                                          |
+| biGevalideerdZonderFouten | De beheerdersinformatie is zonder (ernstige) fouten. De beheerdersinformatie kan worden gebruikt voor het samenstellen van gebiedsinformatie. |
+
+![biAanleverStatus](images/STD-biAanleverStatus.jpg "STD biAanleverStatus")  \
+_Figuur 6 STD biAanleverStatus_
+
 ---------------------------------------------------------
 ## Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)
 
@@ -215,7 +273,7 @@ Op onderstaande Swagger pagina worden de services voor het afhandelen van beheer
 
 ![mijnKadaster](images/KLIC-API-documentatie-BMKL20-detail.png "NTD Portaal - API Documentatie detail")
 
-_Figuur 4 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
+_Figuur 7 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
 
 ---------------------------------------------------------
 ## Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen ##
@@ -226,7 +284,7 @@ _De voorbeelden die hieronder zijn beschreven, gaan er vanuit dat er	&eacute;&ea
 De use cases voor het koppelvlak BMKL 2.0 zijn geimplementeerd als API's. Onderstaand overzicht geeft van de use cases de API-structuur.
 
 ![usecasemodel](images/UC230-Uitwisselen-beheerdersinformatie-BMKL2.0-WebAPI.jpg "UC230 Uitwisselen beheerdersinformatie (BMKL2.0) (WebAPI)")
-_Figuur 5 UCM B2B-koppeling beheerdersinformatie (BMKL2.0, API-structuur)_
+_Figuur 8 UCM B2B-koppeling beheerdersinformatie (BMKL2.0, API-structuur)_
 
 ### Zoeken beheerdersinformatie-aanvragen
 
