@@ -27,8 +27,8 @@
       - [Geldige geometrietypen](#geldige-geometrietypen)
         - [Punt](#punt)
         - [Lijn](#lijn)
-        - [Vlak](#vlak)
         - [Multilijn](#multilijn)
+        - [Vlak](#vlak)
         - [Multivlak](#multivlak)
       - [Geometrie niet leeg en voldoende coördinaten](#geometrie-niet-leeg-en-voldoende-co%C3%B6rdinaten)
       - [Topologisch correct](#topologisch-correct)
@@ -40,8 +40,10 @@
     - [Controles](#controles)
     - [1..n associaties naar Utiliteitsnet](#1n-associaties-naar-utiliteitsnet)
   - [Extra regels](#extra-regels)
-    - [Network Element](#network-element)
-    - [Utility Node Container](#utility-node-container)
+    - [Kabel of leiding](#kabel-of-leiding)
+    - [Kabel en leidingcontainer](#kabel-en-leidingcontainer)
+    - [Leidingelement](#leidingelement)
+    - [Container leidingelement](#container-leidingelement)
     - [Utiliteitsnet](#utiliteitsnet)
     - [UtilityLink](#utilitylink)
     - [IMKL](#imkl)
@@ -355,8 +357,8 @@ Van de hierin beschreven geometrietypen worden de volgende (met restricties) ond
 | Punt            | gml:Point        | GM_Point        | geen                                                                                                          | Zie [Punt](#punt)           |
 | Lijn | gml:LineString<br>gml:Curve | GM_Curve        | - gml:LineString, of<br>- gml:Curve met gml:LineStringSegment                                                 | Zie [Lijn](#lijn)           |
 | Multi-<br>lijn  | gml:MultiCurve   | GM_MultiCurve   | "curveMember" beschreven met (zie GM_Curve):<br>- gml:LineString, of<br>- gml:Curve met gml:LineStringSegment | Zie [Multilijn](#multilijn) |
-| Vlak            | gml:Polygon      | GM_Surface      | - gml:Polygon<br>&nbsp;&nbsp;vlakgrenzen (buitengrenzen) worden beschreven met:<br>&nbsp;&nbsp;- gml:exterior met gml:LinearRing<br>&nbsp;&nbsp;binnengrenzen (gaten, "donuts") worden beschreven met:<br>&nbsp;&nbsp;- gml:interior met gml:LinearRing | Zie [Vlak](#vlak) |
-| Multi-<br>vlak  | gml:MultiSurface | GM_MultiSurface | "surfaceMember" beschreven met (zie GM_Surface):<br>- gml:Polygon (met gml:exterior, eventueel gml:interior)  | Zie [Multivlak](#multivlak) |
+| Vlak            | gml:Polygon      | GM_Surface      | - gml:Polygon<br>vlakgrenzen (buitengrenzen) worden beschreven met:<br>&nbsp;&nbsp;- gml:exterior met gml:LinearRing<br>binnengrenzen (gaten, "donuts") worden beschreven met:<br>&nbsp;&nbsp;- gml:interior met gml:LinearRing | Zie [Vlak](#vlak) |
+| Multi-<br>vlak  | gml:MultiSurface | GM_MultiSurface | "surfaceMember" beschreven met (zie GM_Surface):<br>- gml:Polygon (met gml:exterior, evt. gml:interior)       | Zie [Multivlak](#multivlak) |
 
 Een geometrie wordt gevalideerd tegen de regels gespecificeerd in de OpenGIS Simple Feature Specification http://www.opengeospatial.org/standards/sfa en http://www.opengeospatial.org/standards/sfs.
 
@@ -388,7 +390,7 @@ Zie onderstaand diagram met de geometrietypen die in IMKL v1.2.1. zijn toegestaa
 Voorbeeld:
 ```xml
 <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_p835263_geo">
-   <gml:pos srsDimension="2">155203.526 389052.316</gml:pos>
+    <gml:pos srsDimension="2">155203.526 389052.316</gml:pos>
 </gml:Point>
 ```
 
@@ -408,7 +410,7 @@ Voorbeeld:
 Voorbeeld:
 ```xml
 <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.W_ls118334_geo">
-   <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
+    <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
 </gml:LineString>
 ```
 
@@ -428,11 +430,11 @@ Voorbeeld:
 Voorbeeld:
 ```xml
 <gml:Curve srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.LS_C436270_geo">
-   <gml:segments>
-      <gml:LineStringSegment>
-         <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
-      </gml:LineStringSegment>
-   </gml:segments>
+    <gml:segments>
+        <gml:LineStringSegment>
+            <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
+        </gml:LineStringSegment>
+    </gml:segments>
 </gml:Curve>
 ```
 Voor Curves wordt gecontroleerd dat de segmenten (`<gml:LineStringSegment>`) aan elkaar vast zitten (beginnen waar het vorige segment eindigt).
@@ -455,16 +457,16 @@ Voor Curves wordt gecontroleerd dat de segmenten (`<gml:LineStringSegment>`) aan
 Voorbeeld:
 ```xml
 <gml:MultiCurve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiCurve_LineString_geo">
-	<gml:curveMember>
-		<gml:LineString>
-		 <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
-		</gml:LineString>
-	</gml:curveMember>
-	<gml:curveMember>
-		<gml:LineString>
-			<gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
-		</gml:LineString>
-	</gml:curveMember>
+    <gml:curveMember>
+        <gml:LineString>
+            <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
+        </gml:LineString>
+    </gml:curveMember>
+    <gml:curveMember>
+        <gml:LineString>
+            <gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
+        </gml:LineString>
+    </gml:curveMember>
 </gml:MultiCurve>
 ```
 
@@ -486,24 +488,24 @@ Voorbeeld:
 Voorbeeld:
 ```xml
 <gml:MultiCurve srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiCurve_Curve_geo">
-	<gml:curveMember>
-		<gml:Curve>
-		   <gml:segments>
-			  <gml:LineStringSegment>
-				 <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
-			  </gml:LineStringSegment>
-		   </gml:segments>
-		</gml:Curve>
-	</gml:curveMember>
-	<gml:curveMember>
-		<gml:Curve>
-		   <gml:segments>
-			  <gml:LineStringSegment>
-				 <gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
-			  </gml:LineStringSegment>
-		   </gml:segments>
-		</gml:Curve>
-	</gml:curveMember>
+    <gml:curveMember>
+        <gml:Curve>
+           <gml:segments>
+              <gml:LineStringSegment>
+                  <gml:posList>154430.283 389773.995 154431.859 389771.832 154430.610 389770.544</gml:posList>
+              </gml:LineStringSegment>
+           </gml:segments>
+        </gml:Curve>
+    </gml:curveMember>
+    <gml:curveMember>
+        <gml:Curve>
+           <gml:segments>
+              <gml:LineStringSegment>
+                  <gml:posList>154434.283 389773.995 154435.859 389771.832 154434.610 389770.544</gml:posList>
+              </gml:LineStringSegment>
+           </gml:segments>
+        </gml:Curve>
+    </gml:curveMember>
 </gml:MultiCurve>
 ```
 
@@ -532,7 +534,7 @@ Voorbeeld:
 <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL9999.GHD_s538123224_geo">
    <gml:exterior>
       <gml:LinearRing>
-         <gml:posList>154891.113 389309.387 154889.624 389309.867 154888.356 389310.783 154887.433 389312.047 154886.946 389313.533 154886.942 389315.098 154887.422 389316.587 154888.338 389317.854 154889.602 389318.777 154891.088 389319.264 154892.653 389319.268 154894.474 389318.984 154895.963 389318.504 154897.231 389317.588 154898.154 389316.325 154898.641 389314.838 154898.645 389313.274 154898.165 389311.785 154897.249 389310.517 154895.985 389309.594 154894.499 389309.107 154892.934 389309.103 154891.113 389309.387</gml:posList>
+          <gml:posList>154891.113 389309.387 154889.624 389309.867 154888.356 389310.783 154887.433 389312.047 154886.946 389313.533 154886.942 389315.098 154887.422 389316.587 154888.338 389317.854 154889.602 389318.777 154891.088 389319.264 154892.653 389319.268 154894.474 389318.984 154895.963 389318.504 154897.231 389317.588 154898.154 389316.325 154898.641 389314.838 154898.645 389313.274 154898.165 389311.785 154897.249 389310.517 154895.985 389309.594 154894.499 389309.107 154892.934 389309.103 154891.113 389309.387</gml:posList>
       </gml:LinearRing>
    </gml:exterior>
 </gml:Polygon>
@@ -541,15 +543,15 @@ Voorbeeld van "donut":
 ```xml
 <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_Polygon_exterior_interior_interior_geo">
    <gml:exterior>
-		<gml:LinearRing>
-			<gml:posList>154891 389309 154898 389312 154894 389329 154886 389328 154886 389313 154888 389310 154891 389309</gml:posList>
-		</gml:LinearRing>
-	</gml:exterior>
-	<gml:interior>
-		<gml:LinearRing>
-			<gml:posList>154891 389310 154888 389311 154887 389314 154887 389327 154894 389328 154897 389311 154891 389310</gml:posList>
-		</gml:LinearRing>
-	</gml:interior>
+        <gml:LinearRing>
+            <gml:posList>154891 389309 154898 389312 154894 389329 154886 389328 154886 389313 154888 389310 154891 389309</gml:posList>
+        </gml:LinearRing>
+    </gml:exterior>
+    <gml:interior>
+        <gml:LinearRing>
+            <gml:posList>154891 389310 154888 389311 154887 389314 154887 389327 154894 389328 154897 389311 154891 389310</gml:posList>
+        </gml:LinearRing>
+    </gml:interior>
 </gml:Polygon>
 ```
 
@@ -580,24 +582,24 @@ Een `<gml:Polygon>` mag eventueel meerdere `<gml:interior>`-elementen hebben, ma
 Voorbeeld:
 ```xml
 <gml:MultiSurface srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL3131.EDI_MultiSurface_Polygon_exterior_Polygon_exterior_geo">
-	<gml:surfaceMember>
-		<gml:Polygon>
-			<gml:exterior>
-				<gml:LinearRing>
-					<gml:posList>154891 389312 154893 389313 154893 389320 154892 389320 154891 389312</gml:posList>
-				</gml:LinearRing>
-			</gml:exterior>
-		</gml:Polygon>
-	</gml:surfaceMember>
-	<gml:surfaceMember>
-		<gml:Polygon>
-			<gml:exterior>
-				<gml:LinearRing>
-					<gml:posList>155091 389312 155093 389313 155093 389320 155092 389320 155091 389312</gml:posList>
-				</gml:LinearRing>
-			</gml:exterior>
-		</gml:Polygon>
-	</gml:surfaceMember>
+    <gml:surfaceMember>
+        <gml:Polygon>
+            <gml:exterior>
+                <gml:LinearRing>
+                    <gml:posList>154891 389312 154893 389313 154893 389320 154892 389320 154891 389312</gml:posList>
+                </gml:LinearRing>
+            </gml:exterior>
+        </gml:Polygon>
+    </gml:surfaceMember>
+    <gml:surfaceMember>
+        <gml:Polygon>
+            <gml:exterior>
+                <gml:LinearRing>
+                    <gml:posList>155091 389312 155093 389313 155093 389320 155092 389320 155091 389312</gml:posList>
+                </gml:LinearRing>
+            </gml:exterior>
+        </gml:Polygon>
+    </gml:surfaceMember>
 </gml:MultiSurface>
 ```
 
@@ -670,15 +672,20 @@ Momenteel wordt de relatie vanuit deze featuretypes naar meerdere thema's nog ni
 
 Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra regels over de object-attributen van IMKL2015 worden hieronder toegelicht. Zie het document: https://register.geostandaarden.nl/regels/imkl2015/1.2.1/IMKL2015%20v%201.2.1_object-attributen-ExtraRegels.xlsx
 
-#### Network Element
+
+#### Kabel of leiding
 
 | Property naam                       | Card. | Extra regels                                                                                                                                                         | Implementatie-status                         |
 |-------------------------------------|:-----:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| **(Netwerk Element)**               |       |                                                                                                                                                                      |                                              |
+| **(_NetworkElement_)**              |       |                                                                                                                                                                      |                                              |
 | beginLifespanVersion                |   1   | Strikte verplichting IMKL. Voor niet INSPIRE plichtige dataset mag 'dummy waarde'                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie |
 | inspireId                           |  0…1  | Strikte verplichting IMKL; extra check op vorm IMKL identificator                                                                                                    | :heavy_check_mark:                           |
 | endLifespanVersion                  |  0…1  | Geen extra regels                                                                                                                                                    | :heavy_check_mark:                           |
 | inNetwork                           |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                       | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
+| **(_LinkSet/UtilityLinkSet_)**      |       |                                                                                                                                                                      |                                              |
+| link                                |  1…*  | Strikte verplichting IMKL; Extra check: Alleen link naar een UtilityLink is toegestaan. UtilityLinkSequence komt niet voor.                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
+| warningType                         |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
+| **(_UtilityNetworkElement_)**       |       |                                                                                                                                                                      |                                              |
 | currentStatus                       |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
 | validFrom                           |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
 | validTo                             |  0…1  | Geen extra regels                                                                                                                                                    | :heavy_check_mark:                           |
@@ -686,23 +693,54 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | utilityFacilityReference            |  0…1  | Doet IMKL niets mee. nilReason mag.                                                                                                                                  | :heavy_check_mark:                           |
 | governmentalServiceReference        |  0…1  | Doet IMKL niets mee. nilReason mag.                                                                                                                                  | :heavy_check_mark:                           |
 |                                     |       |                                                                                                                                                                      |                                              |
-| **Appurtenance**                    |       |                                                                                                                                                                      |                                              |
-| geometry                            |   1   | Strikte verplichting IMKL.                                                                                                                                           | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie |
-| appurtenanceType                    |   1   | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
-| specificAppurtenanceType            |  0…1  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_minus_sign: Wordt niet gecontroleerd  |
-| spokeEnd                            |  0…*  | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
-| spokeStart                          |  0…*  | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
+| **(alle kabels (_Cable_))**         |       |                                                                                                                                                                      |                                              |
 |                                     |       |                                                                                                                                                                      |                                              |
-| **(KabelOfLeiding)**                |       |                                                                                                                                                                      |                                              |
-| link                                |  1…*  | Strikte verplichting IMKL; Extra check: Alleen link naar een UtilityLink is toegestaan. UtilityLinkSequence komt niet voor.                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
-| warningType                         |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **Electriciteitskabel**             |       |                                                                                                                                                                      |                                              |
-| operatingVoltage                    |   1   | VerplichtDe UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::V                                                                                                          | :heavy_check_mark:                           |
-| nominalVoltage                      |   1   | Strikte verplichting IMKL<br>De UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::V                                                                                      | :heavy_check_mark:                           |
+| **Elektriciteitskabel**             |       |                                                                                                                                                                      |                                              |
+| operatingVoltage                    |   1   | Verplicht.<br>De UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::V                                                                                                     | :heavy_check_mark:                           |
+| nominalVoltage                      |   1   | Strikte verplichting IMKL.<br>De UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::V                                                                                     | :heavy_check_mark:                           |
 |                                     |       |                                                                                                                                                                      |                                              |
 | **Telecommunicatiekabel**           |       |                                                                                                                                                                      |                                              |
 | telecommunicationsCableMaterialType |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **(alle leidingen (_Pipe_))**       |       |                                                                                                                                                                      |                                              |
+| pipeDiameter                        |   1   | nilReason mag.<br>De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
+| cables                              |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
+| pipes                               |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **OlieGasChemicalienPijpleiding**   |       |                                                                                                                                                                      |                                              |
+| pressure                            |  0…1  | Strikte verplichting IMKL.<br>De UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::bar                                                                                   | :heavy_check_mark:                           |
+| oilGasChemicalsProductType          |  1…*  | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **RioolPijpleiding**                |       |                                                                                                                                                                      |                                              |
+| sewerWaterType                      |   1   | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **WaterPijpleiding**                |       |                                                                                                                                                                      |                                              |
+| waterType                           |   1   | Strikte verplichting IMKL.                                                                                                                                           | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **ThermischePijpleiding**           |       |                                                                                                                                                                      |                                              |
+| thermalProductType                  |   1   | Strikte verplichting IMKL; extra check op codelijst                                                                                                                  | :heavy_check_mark:                           |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **(kabels/leidingen (Overig))**     |       |                                                                                                                                                                      |                                              |
+| pipeDiameter                        |  0…1  | De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm                   | :heavy_check_mark:                           |
+| pressure                            |  0…1  | De UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::bar                                                                                                                 | :heavy_check_mark:                           |
+| productType                         |  1…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark:                           |
+
+
+#### Kabel en leidingcontainer
+
+| Property naam                       | Card. | Extra regels                                                                                                                                                         | Implementatie-status                         |
+|-------------------------------------|:-----:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| **(_NetworkElement_)**              |       | (zie hierboven bij kabel of leiding)                                                                                                                                 |                                              |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **(_LinkSet/UtilityLinkSet_)**      |       |                                                                                                                                                                      |                                              |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **(_UtilityNetworkElement_)**       |       |                                                                                                                                                                      |                                              |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **Mantelbuis**                      |       |                                                                                                                                                                      |                                              |
+| pipeDiameter                        |   1   | nilReason mag.<br>De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
+| pressure                            |  0…1  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
+| cables                              |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
+| pipes                               |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
 |                                     |       |                                                                                                                                                                      |                                              |
 | **Duct/Kabelbed**                   |       |                                                                                                                                                                      |                                              |
 | ductWidth                           |   1   | nilReason mag.<br>De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
@@ -710,74 +748,59 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | cables                              |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
 | pipes                               |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
 | aantalKabelsLeidingen               |  0…1  | Wordt opgenomen indien het aantal meer dan één is.                                                                                                                   | :heavy_minus_sign: Wordt niet gecontroleerd  |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **(Leiding)**                       |       |                                                                                                                                                                      |                                              |
-| pipeDiameter                        |   1   | nilReason mag.<br>De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **OlieGasChemicalienPijpleiding**   |       |                                                                                                                                                                      |                                              |
-| pressure                            |  0…1  | Strikte verplichting IMKLDe UOM wordt uitgedrukt met urn:ogc:def:uom:OGC::bar                                                                                        | :heavy_check_mark:                           |
-| cables                              |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| pipes                               |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| oilGasChemicalsProductType          |  1…*  | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **RioolPijpleiding**                |       |                                                                                                                                                                      |                                              |
-| cables                              |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| pipes                               |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| sewerWaterType                      |   1   | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **WaterPijpleiding**                |       |                                                                                                                                                                      |                                              |
-| cables                              |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| pipes                               |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| waterType                           |   1   | Strikte verplichting IMKL.                                                                                                                                           | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **ThermischePijpleiding**           |       |                                                                                                                                                                      |                                              |
-| cables                              |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| pipes                               |  0…*  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| thermalProductType                  |   1   | Strikte verplichting IMKL; extra check op codelijst                                                                                                                  | :heavy_check_mark:                           |
-|                                     |       |                                                                                                                                                                      |                                              |
-| **Mantelbuis**                      |       |                                                                                                                                                                      |                                              |
-| pressure                            |  0…1  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_check_mark:                           |
-| cables                              |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
-| pipes                               |  0…*  | Geen extra regels                                                                                                                                                    | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
 
-#### Utility Node Container
 
-| Property naam                | Card. | Extra regels                                                                                                                                       | Implementatie-status                         |
-|------------------------------|:-----:|----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| **(Utility Node Container)** |       |                                                                                                                                                    |                                              |
-| currentStatus                |   1   | nilReason mag.                                                                                                                                     | :heavy_check_mark:                           |
-| validFrom                    |   1   | nilReason mag                                                                                                                                      | :heavy_check_mark:                           |
-| validTo                      |  0…1  | Geen extra regels                                                                                                                                  | :heavy_check_mark:                           |
-| verticalPosition             |   1   | nilReason mag                                                                                                                                      | :heavy_check_mark:                           |
-| utilityFacilityReference     |  0…1  | Doet IMKL niets mee. nilReason mag.                                                                                                                | :heavy_check_mark:                           |
-| governmentalServiceReference |  0…1  | Doet IMKL niets mee. nilReason mag.                                                                                                                | :heavy_check_mark:                           |
-| geometry                     |   1   | Strikte verplichting IMKL.                                                                                                                         | :heavy_check_mark:                           |
-| inspireId                    |  0…1  | Strikte verplichting IMKL; extra check op vorm IMKL identificator                                                                                  | :heavy_check_mark:                           |
-| nodes                        |  0…*  | Aanbevolen om toe te voegen indien beschikbaar, dan ook check op vorm IMKL identificator                                                           | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
-| inNetwork                    |  1…*  | Strikte verplichting IMKL. Kan bij meerdere netwerken horen; extra check of UtilityNetwork bestaat en op vorm IMKL identificator.                  | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat, Meerdere netwerken nu NIET mogelijk |
-|                              |       |                                                                                                                                                    |                                              |
-| **Toren**                    |       |                                                                                                                                                    |                                              |
-| towerHeight                  |   1   | De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
-|                              |       |                                                                                                                                                    |                                              |
-| **Mast**                     |       |                                                                                                                                                    |                                              |
-| poleHeight                   |   1   | De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
-|                              |       |                                                                                                                                                    |                                              |
-| **Mangat**                   |       |                                                                                                                                                    |                                              |
-|                              |       |                                                                                                                                                    |                                              |
-| **Kast**                     |       |                                                                                                                                                    |                                              |
-|                              |       |                                                                                                                                                    |                                              |
-| **TechnischGebouw**          |       |                                                                                                                                                    |                                              |
-|                              |       |                                                                                                                                                    |                                              |
+#### Leidingelement
+
+| Property naam                       | Card. | Extra regels                                                                                                                                                         | Implementatie-status                         |
+|-------------------------------------|:-----:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| **(_NetworkElement_)**              |       | (zie hierboven bij kabel of leiding)                                                                                                                                 |                                              |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **(_UtilityNetworkElement_)**       |       |                                                                                                                                                                      |                                              |
+|                                     |       |                                                                                                                                                                      |                                              |
+| **Appurtenance**                    |       |                                                                                                                                                                      |                                              |
+| geometry                            |   1   | Strikte verplichting IMKL.                                                                                                                                           | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie |
+| spokeEnd                            |  0…*  | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
+| spokeStart                          |  0…*  | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
+| appurtenanceType                    |   1   | Strikte verplichting IMKL                                                                                                                                            | :heavy_check_mark:                           |
+| specificAppurtenanceType            |  0…1  | Mag niet voorkomen in IMKL                                                                                                                                           | :heavy_minus_sign: Wordt niet gecontroleerd  |
+
+
+#### Container leidingelement
+
+| Property naam                  | Card. | Extra regels                                                                                                                                       | Implementatie-status                         |
+|--------------------------------|:-----:|----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| **(_UtilityNetworkElement_)**  |       | (zie hierboven bij kabel of leiding)                                                                                                                                 |                                              |
+|                                |       |                                                                                                                                                                      |                                              |
+| **(_UtilityNodeContainer_)**   |       |                                                                                                                                                    |                                              |
+| geometry                       |   1   | Strikte verplichting IMKL.                                                                                                                         | :heavy_check_mark:                           |
+| inspireId                      |  0…1  | Strikte verplichting IMKL; extra check op vorm IMKL identificator                                                                                  | :heavy_check_mark:                           |
+| nodes                          |  0…*  | Aanbevolen om toe te voegen indien beschikbaar, dan ook check op vorm IMKL identificator                                                           | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
+|                                |       |                                                                                                                                                    |                                              |
+| inNetwork                      |  1…*  | Strikte verplichting IMKL. Kan bij meerdere netwerken horen; extra check of UtilityNetwork bestaat en op vorm IMKL identificator.                  | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat. Meerdere netwerken nu NIET mogelijk |
+|                                |       |                                                                                                                                                    |                                              |
+| **Toren**                      |       |                                                                                                                                                    |                                              |
+| towerHeight                    |   1   | De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
+|                                |       |                                                                                                                                                    |                                              |
+| **Mast**                       |       |                                                                                                                                                    |                                              |
+| poleHeight                     |   1   | De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m<br>• urn:ogc:def:uom:OGC::cm<br>• urn:ogc:def:uom:OGC::mm | :heavy_check_mark:                           |
+|                                |       |                                                                                                                                                    |                                              |
+| **Mangat**                     |       |                                                                                                                                                    |                                              |
+|                                |       |                                                                                                                                                    |                                              |
+| **Kast**                       |       |                                                                                                                                                    |                                              |
+|                                |       |                                                                                                                                                    |                                              |
+| **TechnischGebouw**            |       |                                                                                                                                                    |                                              |
+
 
 #### Utiliteitsnet
 
 | Property naam           | Card. | Extra regels                                                                                                                                                                         | Implementatie-status                        |
 |-------------------------|:-----:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
 | **Utiliteitsnet**       |       |                                                                                                                                                                                      |                                             |
-| elements                |  0…*  | Niet gebruiken. Wordt genegeerd. NetwerkElement verwijst naar Untiliteitsnet en niet andersom.                                                                                       | :heavy_check_mark:                          |
+| elements                |  0…*  | Niet gebruiken. Wordt genegeerd. NetworkElement verwijst naar Utiliteitsnet en niet andersom.                                                                                       | :heavy_check_mark:                          |
 | utilityNetworkType      |   1   | Strikte verplichting IMKL                                                                                                                                                            | :heavy_check_mark:                          |
-| authorityRole           |  1…*  | Is technisch verkeerd opgenomen in INSPIRE. Strikte verplichting IMKL. Los dit op door een lege referentie optenemen.                                                                | :heavy_check_mark:                          |
-| networks                |  0…*  | Voorlopig niet toestaan; Heeft geen bruikbare toepassing in KLICWIN. Zou data onnodig compliceren.                                                                                   | :heavy_minus_sign: Wordt niet gecontroleerd |
+| authorityRole           |  1…*  | Is technisch verkeerd opgenomen in INSPIRE. Strikte verplichting IMKL. Los dit op door een lege referentie op te nemen.                                                                | :heavy_check_mark:                          |
+| networks                |  0…*  | Voorlopig niet toestaan; Heeft geen bruikbare toepassing in KLIC-WIN. Zou data onnodig compliceren.                                                                                   | :heavy_minus_sign: Wordt niet gecontroleerd |
 | identificatie           |   1   | Strikte verplichting IMKL; extra check op vorm IMKL identificator                                                                                                                    | :heavy_check_mark:                          |
 | beginLifespanVersion    |   1   | Strikte verplichting IMKL. Voor niet INSPIRE plichtige dataset mag 'dummy waarde'                                                                                                    | :heavy_check_mark:                          |
 | endLifespanVersion      |  0…1  | Geen extra regels                                                                                                                                                                    | :heavy_check_mark:                          |
@@ -785,11 +808,11 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | standaardDieptelegging  |  0…1  | Voor WION eenheid is meter met max twee decimalen. Sterk aanbevolen om toe te voegen De UOM wordt uitgedrukt in meters middels de volgende OGC URN code:<br>• urn:ogc:def:uom:OGC::m | :heavy_check_mark: (URN code)               |
 | heeftExtraInformatie    |  0…*  | Verplicht wanneer één of meerdere ExtraInformatie objecten zijn die bij het hele utiliteitsnet horen (binnen deze dataset), extra check op vorm IMKL identificator                   | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat|
 
+
 #### UtilityLink
 
-Meervoudig gebruik van geometrieën (UtilityLink) is niet toegestaan.
-
-In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwerkelementen wordt gebruikt. In de IMKL2015 uitwisseling is dat echter niet toegestaan. Elke link wordt maar door één netwerkelement gebruikt.
+Meervoudig gebruik van geometrieën (UtilityLink) is niet toegestaan.  \
+In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwerkelementen wordt gebruikt. In de IMKL-uitwisseling is dat echter niet toegestaan. Elke link wordt maar door één netwerkelement gebruikt.
 
 | Property naam                | Card. | Extra regels                                                                                                                                                                                      | Implementatie-status                                                         |
 |------------------------------|:-----:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
@@ -807,7 +830,10 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 | utilityFacilityReference     |  0…1  | Deze info zit al in de UtilityLinkSet. Op niveau van de individuele link is dit niet meer nodig. Wordt bijgevolg genegeerd als toch meegegeven wordt.                                             |                                                                              |
 | governmentalServiceReference |  0…1  | Deze info zit al in de UtilityLinkSet. Op niveau van de individuele link is dit niet meer nodig. Wordt bijgevolg genegeerd als toch meegegeven wordt.                                             |                                                                              |
 
+
 #### IMKL
+
+Toelichting op regels van features die alléén in het IMKL-deel (niet-INSPIRE) van het IMKL-model voorkomen.
 
 | Property naam                              | Card. | Extra regels                                                                                                                                                                                                                                                  | Implementatie-status                                                                              |
 |--------------------------------------------|:-----:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -817,21 +843,21 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 | endLifespanVersion                         |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_check_mark:                                                                                |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **ExtraGeometrie**                         |       |                                                                                                                                                                                                                                                               |                                                                                                   |
-| vlakgeometrie2D                            |  0…*  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometriën    |
-| puntgeometrie2.5D                          |  0…*  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometriën    |
-| lijngeometrie2.5D                          |  0…*  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometriën    |
-| vlakgeometrie2.5D                          |  0…*  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometriën    |
-| geometrie3D                                |  0…*  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometriën    |
+| vlakgeometrie2D                            |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometrieën   |
+| puntgeometrie2.5D                          |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometrieën   |
+| lijngeometrie2.5D                          |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometrieën   |
+| vlakgeometrie2.5D                          |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometrieën   |
+| geometrie3D                                |  0…1  | Geen extra regels                                                                                                                                                                                                                                             | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie, zie ondersteunde geometrieën   |
 | inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **ExtraDetailInfo**                        |       |                                                                                                                                                                                                                                                               |                                                                                                   |
-| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
+| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator; (OPMERKING: 1…* bij een kabelEnLeidingContainer of ContainerLeidingelement nog niet geimplementeerd.)                                                        | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 | adres                                      |  0…1  | Verplicht indien betreft huisaansluiting                                                                                                                                                                                                                      | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
 | extraInfoType                              |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
-| bestandLocatie                             |   1   | Strikte verplichting IMKL; extra check op bestand en op vorm IMKL identificator                                                                                                                                                                               | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
-| bestandMediaType                           |   1   | Strikte verplichting IMKL; extra check of in codelijst en of het bestandMediaType overeenkomt met de bestandsextensie van het bestand zelf                                                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd, behalve de codelijstwaarde                           |
+| bestandLocatie                             |  0…1  | Bij uitlevering verplicht (bij aanlevering genegeerd)                                                                                                                                                                                                         | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
+| bestandMediaType                           |  0…1  | Bij uitlevering verplicht (bij aanlevering genegeerd)                                                                                                                                                                                                         | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 | bestandIdentificator                       |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
-| ligging                                    |   1   | Strikte verplichting IMKL.                                                                                                                                                                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
+| ligging                                    |   1   | Punt, lijn, vlak, of multilijn (of multivlak bij uitlevering).                                                                                                                                                                                                | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **AanduidingEisVoorzorgsmaatregel**        |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
@@ -840,7 +866,7 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Maatvoering**                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | label                                      |  0…1  | Strikte verplichting in IMKL voor een maatvoeringsobject van het type maatvoeringslabel.                                                                                                                                                                      | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
-| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
+| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator; (zie OPMERKING: 1…*)                                                                                                                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 | maatvoeringsType                           |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | rotatiehoek                                |  0…1  | Strikte verplichting voor maatvoeringsobjecten van het type maatvoeringslabel.<br>De unit of measure moet zijn `urn:ogc:def:uom:OGC::deg`.<br>Bij maatvoeringsobjecten van het type maatvoeringslijn of maatvoeringshulplijn wordt de waarde van deze property genegeerd. | :heavy_minus_sign: Wordt niet gecontroleerd                                                     |
 | labelpositie                               |  0…1  | Strikte verplichting in IMKL voor een maatvoeringsobject van het type maatvoeringslabel.<br>Verplichte attributen:<br>- aangrijpingHorizontaal<br>- aangrijpingHorizontaal                                                                                    | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
@@ -848,7 +874,7 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Annotatie**                              |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | label                                      |  0…1  | Strikte verplichting in IMKL voor een annotatieobject van het type annotatielabel.                                                                                                                                                                            | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
-| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
+| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator; (zie OPMERKING: 1…*)                                                                                                                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 | annotatieType                              |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | rotatiehoek                                |  0…1  | Strikte verplichting voor annotatieobjecten van het type annotatielabel of annotatiepijlpunt. De unit of measure moet zijn `urn:ogc:def:uom:OGC::deg`                                                                                                         | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
 | labelpositie                               |  0…1  | Strikte verplichting in IMKL voor een annotatieobject van het type annotatielabel.<br>Verplichte attributen:<br>- aangrijpingHorizontaal<br>- aangrijpingHorizontaal                                                                                          | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
@@ -858,7 +884,6 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 | status                                     |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | typeTopografischObject                     |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | ligging                                    |   1   | Strikte verplichting IMKL.Toegelaten geometrietypen:  punten, lijnen, polygonen en multigeometry bestaande uit punten, lijnen en/of polygonen                                                                                                                 | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
-| inNetwork                                  |  1…*  | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat, Meerdere netwerken nu NIET mogelijk.    |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **Bijlage / EisVoorzorgsmaatregelBijlage** |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | bijlageType                                |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
@@ -871,7 +896,7 @@ In principe staat het INSPIRE model toe dat een UtilityLink door meerdere netwer
 | diepteNauwkeurigheid                       |   1   | Strikte verplichting IMKL                                                                                                                                                                                                                                     | :heavy_check_mark:                                                                                |
 | dieptePeil                                 |   1   | Strikte verplichting IMKLDe UOM wordt uitgedrukt in meters eenheid meter met max twee decimalen middels de volgende OGC URN code:<br>• urn:ogc:def:uom:OGC::m                                                                                                 | :heavy_minus_sign: Wordt niet gecontroleerd, alleen xsd-validatie                                 |
 | diepteAangrijpingspunt                     |   1   | Strikte verplichting IMKL: default waarde is bovenkant                                                                                                                                                                                                        | :heavy_check_mark:                                                                                |
-| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                                                                                                                | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
+| inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator; (zie OPMERKING: 1…*)                                                                                                                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **DiepteNAP**                              |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | maaiveldPeil                               |  0…1  | Voor WION is eenheid meter met max twee decimalen. Sterk aanbevolen indien beschikbaarDe UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m                                                                                | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
