@@ -11,3 +11,7 @@ Technische uitwerking met voorbeelden:
     - Actualiseren van netinformatie voor KL3131 en KL5151
 	- Uitleveren van gebiedsinformatie met gerefereerde documenten o.b.v. een orientatieverzoek
   * Voorbeeld 4. Actualiseren van documenten waarbij deze in submap(pen) worden aangeleverd
+  * Voorbeeld 5. Gebruik maken van bijlagen van het type `algemeen` en `nietBetrokken` t.a.v.
+    - Actualiseren van documenten met deze bijlagen
+    - Actualiseren van netinformatie met _Bijlage_-objecten
+	- Uitleveren van gebiedsinformatie met deze bijlagen

@@ -1,5 +1,11 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+25-07-2018
+* Nieuw voorbeeld 5: gebruik maken van bijlagen van het type `algemeen` en `nietBetrokken` t.a.v.
+    - Actualiseren van documenten met deze bijlagen
+    - Actualiseren van netinformatie met _Bijlage_-objecten
+	- Uitleveren van gebiedsinformatie met deze bijlagen
+
 10-07-2018
 * Documentatie over technische werking B2B-koppeling (BMKL API) aangepast i.v.m.
   - toepassen gewijzigde namespace (/documentenbeheer/v20180418)

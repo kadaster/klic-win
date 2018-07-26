@@ -1,9 +1,19 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+18-07-2018
+* Documentatie aangepast t.a.v. onderstaande gewijzigde functionaliteit:
+  - Invulvelden die vaker in een sjabloon worden gebruikt, mogen nu ook met een suffix worden aangegeven;  \
+    format: <naam invulveld>_<volgnummer> (voorbeeld: `EV-naam`, `EV-naam_1`, e.d.)
+  - Het is mogelijk om `soortWerkzaamheden` te categoriseren bij meerdere `netbeheerderWerkaanduiding`-en.
+  - Een meegeleverd pdf-sjabloon mag maar één keer als `documentSjabloon` worden opgevoerd.  
+
+01-07-2018
+* Voorbeeld 5. toegevoegd: EV-bepaling indien `soortWerkzaamheden` bij meerdere `werkzaamhedenAanduiding`-klassen worden ingedeeld
+
 12-06-2018
 * Explicieter benoemen dat invulvelden onder dezelfde naam vaker zijn te gebruiken (zonder suffix!), bij
   * Controles voorzorgsmaatregelen
-  * Handreiking voor invullen EV-beslsissingsmatrix KLIC
+  * Handreiking voor invullen EV-beslissingsmatrix KLIC
 
 23-05-2018
 * Invulvelden EV-sjabloon (pdf): aanvulling dat invulvelden onder dezelfde naam vaker zijn te gebruiken (zonder suffix)
