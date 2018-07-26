@@ -150,10 +150,13 @@ In onderstaand overzicht worden deze sleutels per gegevensgroep benoemd.
 |-------------------|--------------------------------------------------------------------------------------------|
 | DocumentSjabloon  | sjabloonID  |
 | UtiliteitsnetAanduiding | thema + netbeheerderNetAanduiding |
-| WerkzaamhedenAanduiding | soortWerkzaamheden |
+| WerkzaamhedenAanduiding | soortWerkzaamheden + netbeheerderWerkAanduiding |
 | VoorzorgsmaatregelBeslissingsregel | thema + netbeheerderNetAanduiding + aanvraagSoort + netbeheerderWerkAanduiding |
 |  | thema + netbeheerderNetAanduiding + aanvraagSoort (bij calamiteitenmelding) |
 | VoorzorgsmaatregelToelichting | maatregel |
+
+Let wel:  \
+Het is mogelijk om `soortWerkzaamheden` te categoriseren bij meerdere `netbeheerderWerkaanduiding`-en.
 
 #### Identificatie EV-sjabloon
 Voor de identificatie van een documentsjabloon (`sjabloonID`) gelden dezelfde regels als bij overige objectidentificaties van IMKL-features:
@@ -171,6 +174,8 @@ Voorbeeld:
     ...
 </documentSjabloon>
 ```
+De bestandsnaam van een pdf-sjabloon wordt als `documentSjabloon` uniek geïdentificeerd met zijn `sjabloonID`.  \
+Een meegeleverd pdf-sjabloon mag dus maar één keer als `documentSjabloon` worden opgevoerd.
 
 #### Codelijsten/Waardelijsten
 
@@ -269,8 +274,9 @@ Voorbeeld:
 
 ## Opstellen EV-sjablonen
 In andere documentatie is aangegeven op welke wijze een EV-sjabloon kan worden opgesteld.  
-Daarbij is ook aangegeven welke 'placeholders' (invulvelden) zijn onderkend en door de EV-engine vervangen kunnen worden door de van toepassing zijnde werkelijke waarde.  
-Een placeholder mag meerdere keren in een EV-sjabloon worden gebruikt, maar moet telkens de exacte naam van het placeholder hebben (dus geen volgnummer, o.i.d. gebruiken).
+Daarbij is ook aangegeven welke 'placeholders' (invulvelden) zijn onderkend en door de EV-engine vervangen kunnen worden door de van toepassing zijnde werkelijke waarde.  \
+Een invulveld mag meerdere keren in een EV-sjabloon worden gebruikt. Het invulveld moet dan worden aangeduid met zijn exacte naam, of zijn naam gevolgd door een "\_"_<volgnummer>_.  \
+Het invulveld `EV-naam` kan dus meerdere keren worden gebruikt door de volgende velden bijvoorbeeld `EV-naam_1`, `EV-naam_2`, etcetera te noemen.
 
 Onderstaande placeholders zijn onderkend:
 
