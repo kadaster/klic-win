@@ -116,8 +116,11 @@ Hieronder worden de controles behandeld.
 Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn en mag niet groter zijn dan een bepaalde grootte. De maximale grootte voor de eindsituatie is voorlopig gesteld op 2GB.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
-* Ten behoeve van de aanlevering van netinformatie dient het ZIP-archief één XML bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.
-* De bestandsnaam van het ZIP-archief of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
+* Ten behoeve van de aanlevering van netinformatie dient het zipbestand één XML-bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'.De bestands-extensie is met kleine letters.
+* Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het zipbestand een tweede XML-bestand te bevatten.  \
+Dit bestand bevat de beslissingsregels voor de bapling van voorzorgsmaatregelen. De bestandsnaam begint met 'voorzorgsmaatregelen' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.  \
+Tevens moeten bij de voorzorgsmaatregelen één of meerdere EV-sjablonen meegeleverd worden waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.  
+* De bestandsnaam van het zipbestand of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
   * Bestandsnaam mag niet langer zijn dan 120 tekens.
   * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
 * Het aangeleverde bestand mag niet beveiligd zijn met een wachtwoord.
