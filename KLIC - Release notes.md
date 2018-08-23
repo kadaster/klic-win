@@ -1,5 +1,33 @@
 ﻿# Release notes
 
+### 27 Augustus 2018
+Algemeen:
+- Gebruik BGT als achtergrondkaart in Klic-online
+- Gebruik BGT als achtergrondkaart in de ontvangstbevestiging
+- Gebruik BGT als achtergrondkaart in de levering
+- Performance verbetering voor grote oriëntatieverzoeken.
+- Performance verbeterd voor actualiseren netinformatie.
+- Minor upgrade van de visualisatie (SLD's) naar de IMKL 1.2.1 versie.
+
+WION Levering:
+- In de LI.xml worden nu ook de HAS bijlagen van netbeheerders met BMKL v1.2 genoemd.
+- Bugfix: In de LI.xml wordt alleen maar gerefereerd naar beheerdersinformatie die volgens de administratie (ordermanagement) op dat moment is aangeleverd.
+- Bugfix: Verwerken van speciale tekens (bv een letter met trema) in de GI.xml verbeterd.
+- Bugfix: In GI.xml in feature _ExtraDetailinfo_ is het element <bestandMediaType> voor de centrale netbeheerders toegevoegd.
+- Bugfix: Netinformatie buiten gebiedspolygoon wordt in PNG-bestand nu geclipped.
+
+NTD:
+- In de NTD is het mogelijk om WIBON-keuzes op te geven (verzoek tot medegebruik / coördinatie).
+- In het "klassieke testmelding" scherm, zijn de opties voor WIBON keuzes (verzoek tot medegebruik / coördinatie) gedeactiveerd in geval van graafmeldingen en calamiteitenmeldingen.
+- Bij testmelding via NTD wordt de gebiedspolygoon gevalideerd, zodat de gebruiker gelijk weet of de polygoon syntactisch goed is opgegeven.
+- Performance verbeterd voor verwerken/valideren netinformatie (voor kleine aanleveringen (configuratie)) op NTD.
+- Het maximaal aantal weer te geven fouten bij het aanleveren van netinformatie is verruimd.
+- De telling van het aantal fouten in een aanlevering van netinformatie is verbeterd (i.v.m. multi-threading).
+- Foutmelding verduidelijkt bij Actualiseren Netinformatie als er EV-documentsjablonen verwijzen naar hetzelfde bestand.
+- Bugfix: namen van placeholders die vaker in een EV-sjabloon worden gebruikt, mogen nu ook een suffix hebben.
+- Bugfix: Het is nu mogelijk om bij het aanleveren van netinformatie meerdere malen naar dezelfde bijlage te verwijzen.
+
+------------------------
 ### 16 juli 2018
 Algemeen:
 - Clippen voor WION objecten is geïmplementeerd
@@ -46,7 +74,7 @@ Algemeen:
 - Validatie op gebruik standaard (namespace)prefixes in XML berichten.
 
 WION Levering: 
-- Complementeren gebiedsinformatielevering (GIL.xml).
+- Complementeren gebiedsinformatielevering (GI.xml).
 - Complementeren leveringsinformatie (LI.xml).
 
 EV:

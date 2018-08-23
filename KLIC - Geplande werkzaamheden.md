@@ -1,15 +1,30 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 juli 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 23 augustus 2018)
 
-## Planning voor release - medio september 2018
+## Planning voor release - oktober 2018
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**BMKL API v2.0**:
+- Toepassing url's naar Kadaster-waardelijsten in BMKL API's (ID 2522).
+  * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
+  * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
+  * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
+  * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
+- Toepassen gebruik 3-letterige landencode (volgens ISO3166-1) (ID 2535).
+
+**BGT**:
+- Gebruik BGT als achtergrondkaart in belangenbeheer
+
+**Bug-fixes**:
+- nader te bepalen
+
+--------------------------------------------------------------------------------------
+## Planning voor release - september 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **IMKL contacten**:
 - Gebruik van IMKL contacten (type "aanvraag") op de ontvangstbevestiging
 - Gebruik van IMKL contacten (type "netinformatie", "beschadiging") op de leveringsbrief
 - Gebruik van IMKL contacten (type "netinformatie", "beschadiging") op de gelaagde PDF
-
-**BGT**:
-- Gebruik BGT als achtergrondkaart in belangenbeheer
 
 **Documentenbeheer**:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn (ID 2653)
@@ -40,14 +55,6 @@ De komende periode worden de volgende onderwerpen geïmplementeerd:
 - Gebruik BGT als achtergrondkaart in de levering (ID 2163)
 
 Voor de NTD worden de volgende onderwerpen geïmplementeerd:
-
-**BMKL API v2.0**:
-- Toepassing url's naar Kadaster-waardelijsten in BMKL API's (ID 2522).
-  * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
-  * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
-  * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
-  * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
-- Toepassen gebruik 3-letterige landencode (volgens ISO3166-1) (ID 2535).
 
 **EV**:
 - Uitbreiding validatieregels: Controleren of één enkel PDF-bestand in meerdere documentsjablonen in de voorzorgsmaatregelen.xml voorkomt (ID 2457).
