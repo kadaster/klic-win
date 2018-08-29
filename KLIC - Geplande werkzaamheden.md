@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 23 augustus 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 29 augustus 2018)
 
 ## Planning voor release - oktober 2018
 Voor deze release zijn de volgende onderwerpen gepland:
@@ -26,6 +26,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Gebruik van IMKL contacten (type "netinformatie", "beschadiging") op de leveringsbrief
 - Gebruik van IMKL contacten (type "netinformatie", "beschadiging") op de gelaagde PDF
 
+**BGT**:
+- Gebruik BGT als achtergrondkaart in Klic-online (ID 2161)
+- Gebruik BGT als achtergrondkaart in de ontvangstbevestiging (ID 2162)
+- Gebruik BGT als achtergrondkaart in de levering (ID 2163)
+
 **Documentenbeheer**:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn (ID 2653)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
@@ -42,17 +47,12 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio augustus 2018
-De komende periode worden de volgende onderwerpen geïmplementeerd:
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **IMKL contacten**:
 - De (de)centrale netbeheerder krijgt de mogelijkheid om van een belang per aanvraagsoort vast te kunnen leggen welk contact van toepassing is voor "netinformatie" (ID 2361)
 - De (de)centrale netbeheerder krijgt de mogelijkheid om van een belang vast te kunnen leggen welk contact van toepassing is voor "beschadiging" (ID 2361)
 - Let wel: dit wordt niet in de NTD beschikbaar gesteld
-
-**BGT**:
-- Gebruik BGT als achtergrondkaart in Klic-online (ID 2161)
-- Gebruik BGT als achtergrondkaart in de ontvangstbevestiging (ID 2162)
-- Gebruik BGT als achtergrondkaart in de levering (ID 2163)
 
 Voor de NTD worden de volgende onderwerpen geïmplementeerd:
 

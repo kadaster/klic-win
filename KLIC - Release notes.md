@@ -2,9 +2,6 @@
 
 ### 27 Augustus 2018
 Algemeen:
-- Gebruik BGT als achtergrondkaart in Klic-online
-- Gebruik BGT als achtergrondkaart in de ontvangstbevestiging
-- Gebruik BGT als achtergrondkaart in de levering
 - Performance verbetering voor grote oriëntatieverzoeken.
 - Performance verbeterd voor actualiseren netinformatie.
 - Minor upgrade van de visualisatie (SLD's) naar de IMKL 1.2.1 versie.
