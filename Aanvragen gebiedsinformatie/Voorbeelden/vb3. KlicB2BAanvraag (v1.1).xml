@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: [Voorbeeld 3.] KlicB2BAanvraag (v1.1).xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld van een gebiedsinformatie-aanvraag die wordt aangeboden met B2B-koppeling
+volgens SOAP. Versie van KlicB2BAanvraag: 1.1.
+
+In het voorbeeld is geen gebruik gemaakt van de nieuwe attributen:
+	- KvkNummer (van aanvrager)
+	- KvkNummer (van opdrachtgever)
+	- Informatiepolygoon
+	- VoorbereidingCoordinatieCivieleWerken
+In het voorbeeld is wel gebruik gemaakt van de nieuwe attributen:
+	- VoorbereidingMedegebruikFysiekeInfrastructuur
+	- IdentificatieBAG (bij dichtsbijzijnd adres)
+	- IdentificatieBAG (bij huisaansluitschets adres)
+ _____________________________________________________________________ -->
+
+<soapenv:Envelope 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:ns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814" 
+xmlns:gml="http://www.opengis.net/gml">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:Action>KLIC-B2B-TESTAANVRAAG</wsa:Action>
+		<wsa:ReplyTo>
+			<wsa:Address>http://localhost:9999/klic/mock/mockservices</wsa:Address>
+		</wsa:ReplyTo>
+		<wsa:MessageID>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:MessageID>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns:KlicB2BAanvraag>
+			<Order>
+				<Klant>
+					<Relatienummer>517000</Relatienummer>
+					<Contactgegevens>
+						<Naam>G. Grondroerder</Naam>
+						<Telefoon>088-1234567</Telefoon>
+						<Email>my.dummy@kadaster.nl</Email>
+					</Contactgegevens>
+					<ExtraEmail>my.extra@validemail.org</ExtraEmail>
+				</Klant>
+				<Klantreferentie>Ons Ordernr: 1234567</Klantreferentie>
+				<Orderregel>
+					<ID/>
+					<Product>Klic levering orientatieverzoek</Product>
+					<Productdetails>
+						<KlantSpecificatie></KlantSpecificatie>
+						<ProductSpecificatie>
+							<Gebiedspolygoon>
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:posList>173680.0 435950.0 173480.0 435950.0 173480.0 435820.0 173680.0 435820.0 173680.0 435950.0 </gml:posList>
+									</gml:LinearRing>
+								</gml:exterior>
+							</Gebiedspolygoon>
+							<VoorbereidingMedegebruikFysiekeInfrastructuur>true</VoorbereidingMedegebruikFysiekeInfrastructuur>
+							<Locatieadres>
+								<Straat>Brederode</Straat>
+								<Huisnummer>52</Huisnummer>
+								<Postcode>6669GL</Postcode>
+								<Plaats>Dodewaard</Plaats>
+								<IdentificatieBAG>1740010000013740</IdentificatieBAG>
+							</Locatieadres>
+							<HuisaansluitschetsAdres>
+								<Straat>Brederode</Straat>
+								<Huisnummer>50</Huisnummer>
+								<Postcode>6669GL</Postcode>
+								<Plaats>Dodewaard</Plaats>
+								<IdentificatieBAG>1740010000013739</IdentificatieBAG>
+							</HuisaansluitschetsAdres>
+							<HuisaansluitschetsAdres>
+								<Straat>Brederode</Straat>
+								<Huisnummer>52</Huisnummer>
+								<Postcode>6669GL</Postcode>
+								<Plaats>Dodewaard</Plaats>
+								<IdentificatieBAG>1740010000013740</IdentificatieBAG>
+							</HuisaansluitschetsAdres>
+							<HuisaansluitschetsAdres>
+								<Straat>Brederode</Straat>
+								<Huisnummer>54</Huisnummer>
+								<Postcode>6669GL</Postcode>
+								<Plaats>Dodewaard</Plaats>
+								<IdentificatieBAG>1740010000013741</IdentificatieBAG>
+							</HuisaansluitschetsAdres>
+							<HuisaansluitschetsAdres>
+								<Straat>Gieser Wildeman</Straat>
+								<Huisnummer>21</Huisnummer>
+								<Postcode>6669GP</Postcode>
+								<Plaats>Dodewaard</Plaats>
+								<IdentificatieBAG>1740010000013749</IdentificatieBAG>
+							</HuisaansluitschetsAdres>
+						</ProductSpecificatie>
+					</Productdetails>
+				</Orderregel>
+			</Order>
+		</ns:KlicB2BAanvraag>
+	</soapenv:Body>
+</soapenv:Envelope>

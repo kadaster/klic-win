@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: [Voorbeeld 1.] KlicB2BAanvraag (v1.1).xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld van een gebiedsinformatie-aanvraag die wordt aangeboden met B2B-koppeling
+volgens SOAP. Versie van KlicB2BAanvraag: 1.1.
+
+In het voorbeeld is GEEN gebruik gemaakt van de nieuwe attributen:
+	- KvkNummer (van aanvrager)
+	- KvkNummer (van opdrachtgever)
+	- VoorbereidingMedegebruikFysiekeInfrastructuur, of
+	  VoorbereidingCoordinatieCivieleWerken
+	- Informatiepolygoon
+	- IdentificatieBAG (bij dichtsbijzijnd adres)
+	- IdentificatieBAG (bij huisaansluitschets adres)
+ _____________________________________________________________________ -->
+
+<soapenv:Envelope 
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:ns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814" 
+xmlns:gml="http://www.opengis.net/gml">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:Action>KLIC-B2B-TESTAANVRAAG</wsa:Action>
+		<wsa:ReplyTo>
+			<wsa:Address>http://localhost:9999/klic/mock/mockservices</wsa:Address>
+		</wsa:ReplyTo>
+		<wsa:MessageID>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:MessageID>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns:KlicB2BAanvraag>
+			<Order>
+				<Klant>
+					<Relatienummer>517000</Relatienummer>
+					<Contactgegevens>
+						<Naam>G. Grondroerder</Naam>
+						<Telefoon>088-1234567</Telefoon>
+						<Email>my.dummy@kadaster.nl</Email>
+					</Contactgegevens>
+					<ExtraEmail>my.extra@validemail.org</ExtraEmail>
+				</Klant>
+				<Klantreferentie>Ons Ordernr: 1234567</Klantreferentie>
+				<Orderregel>
+					<ID/>
+					<Product>Klic levering graafmelding</Product>
+					<Productdetails>
+						<KlantSpecificatie>
+							<Opdrachtgever>
+								<Naam>P. Baas</Naam>
+								<Bedrijfsnaam>Uitvoerder B.V.</Bedrijfsnaam>
+								<Adres>
+									<Straat>Laan van Westenenk</Straat>
+									<Huisnummer>701</Huisnummer>
+									<Postcode>7334DP</Postcode>
+									<Plaats>Apeldoorn</Plaats>
+									<Landcode>NL</Landcode>
+								</Adres>
+								<Telefoon>088-1234567</Telefoon>
+								<Email>my.dummy@kadaster.nl</Email>
+							</Opdrachtgever>
+						</KlantSpecificatie>
+						<ProductSpecificatie>
+							<Gebiedspolygoon>
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:posList>173656.0 435917.0 173611.0 435917.0 173612.0 435869.0 173640.0 435869.0 173640.0 435853.0 173612.0 435853.0 173611.0 435840.0 173655.0 435840.0 173653.0 435885.0 173626.0 435885.0 173627.0 435902.0 173655.0 435904.0 173656.0 435917.0</gml:posList>
+									</gml:LinearRing>
+								</gml:exterior>
+							</Gebiedspolygoon>
+							<Werkzaamheden>
+								<AanvangGraafwerkzaamheden>2015-04-23</AanvangGraafwerkzaamheden>
+								<EindeWerkzaamheden>2015-05-30</EindeWerkzaamheden>
+								<SoortWerkzaamheden>Bodemonderzoek/sonderingen</SoortWerkzaamheden>
+								<SoortWerkzaamheden>Leggen laagspanning</SoortWerkzaamheden>
+								<SoortWerkzaamheden>Proefsleuven graven</SoortWerkzaamheden>
+								<SoortWerkzaamheden>Leggen hoogspanning</SoortWerkzaamheden>
+								<SoortWerkzaamheden>Mantelbuis leggen</SoortWerkzaamheden>
+								<Notitie>Laat dit nou eens een notitie zijn...</Notitie>
+							</Werkzaamheden>
+							<Locatieadres>
+								<Straat>Brederode</Straat>
+								<Huisnummer>52</Huisnummer>
+								<Postcode>6669GL</Postcode>
+								<Plaats>Dodewaard</Plaats>
+							</Locatieadres>
+						</ProductSpecificatie>
+					</Productdetails>
+				</Orderregel>
+			</Order>
+		</ns:KlicB2BAanvraag>
+	</soapenv:Body>
+</soapenv:Envelope>

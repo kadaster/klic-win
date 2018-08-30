@@ -5,6 +5,7 @@ Voor netbeheerders en serviceproviders is er veel informatie te vinden om aan te
 
 De informatie is ingedeeld naar onderstaande onderdelen:
 * [API management](../../tree/master/API%20management) over het uitwisselen van informatie op basis van REST-API's
+* [Aanvragen gebiedsinformatie](../../tree/master/Aanvragen%20gebiedsinformatie) over het aanvragen van gebiedsinformatie over kabels en leidingen 
 * [Actualiseren](../../tree/master/Actualiseren) over het als centrale netbeheerder aanleveren van
   - [/ Documenten](../../tree/master/Actualiseren/Documenten)
   - [/ Netinformatie](../../tree/master/Actualiseren/Netinformatie)
