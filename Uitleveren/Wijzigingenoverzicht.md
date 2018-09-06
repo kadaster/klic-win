@@ -1,5 +1,9 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+06-09-2018
+* Map met voorbeelden van gebruik BGT als achtergrondkaart toegevoegd
+* 7 voorbeelden toegevoegd van gebruik in Klic-online, ontvangstbevestiging en levering (oude en nieuwe zip-structuur)
+
 13-06-2018
 * Aanpassing voorbeeld 6 vanwege onjuiste bestandverwijzingen
 

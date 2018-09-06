@@ -15,3 +15,4 @@ Deze map bevat:
 * schemadefinitie betreffende de metagegevens van de leveringsinformatie (Leveringsinformatie.xsd)
 * regels bij clippen van netwerkgegevens
 * map met diverse voorbeelden
+* map met voorbeelden van het gebruik van BGT als achtergrondkaart
