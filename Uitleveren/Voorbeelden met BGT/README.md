@@ -11,9 +11,9 @@ De BGT kaart is ook beschikbaar op www.PDOK.nl.
 Ook de Klic-dienstverlening schakelt over naar het gebruik van deze basisregistratie.  \
 De BGT wordt op 3 plekken gebruikt:
 - Klic-online (graafmelding, oriëntatieverzoek en calamiteitenmelding);  \
-Als achtergrondkaart wordt hier de visualisatie van "BGT omtrekgericht" gebruikt. De standaardschalen van de BGT dienstverlening zijn geïmplementeerd.
+Als achtergrondkaart wordt hier de visualisatie van "BGT lijngericht" gebruikt. De standaardschalen van de BGT dienstverlening zijn geïmplementeerd.
 - Ontvangstbevestiging;   \
-Als achtergrondkaart wordt ook hier de "BGT omtrekgericht" gebruikt. De standaardschalen van de BGT dienstverlening zijn geïmplementeerd. Er wordt de grootste schaal gebruikt waarmee de polygoon van het aangevraagde gebied volledig kan worden weergegeven.
+Als achtergrondkaart wordt ook hier de "BGT lijngericht" gebruikt. De standaardschalen van de BGT dienstverlening zijn geïmplementeerd. Er wordt de grootste schaal gebruikt waarmee de polygoon van het aangevraagde gebied volledig kan worden weergegeven.
 - Klic-levering;  \
 Voor de producten uit de Klic-levering wordt als achtergrondkaart de visualisatie van "BGT pastel" gebruikt. De kaart wordt zodanig geschaald dat het geselecteerde gebied (polygoon) volledig op de kaart kan worden weergegeven.
 
