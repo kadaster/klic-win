@@ -1,5 +1,10 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+11-09-2018
+* Voorbeelden 1 t/m 4 aangevuld met _beheerdersinformatieLevering_
+* Voorbeeld 4b: als alternatief documenten aanleveren in submap
+* Voorbeeld 4-BIL: objectenmodel van _beheerdersinformatieLevering_ toegevoegd
+
 24-07-2018
 * Statussen en statusovergangen opgenomen in documentatie over B2B-koppeling
 
