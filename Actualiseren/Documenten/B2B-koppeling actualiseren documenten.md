@@ -291,7 +291,7 @@ curl https://service10.kadaster.nl/klic/actualiseren/upload/api/v2/upload?upload
 -v
 -X PUT
 --header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--H 'Content-Type: application/octet-stream&quot'
+-H 'Content-Type: application/octet-stream'
 -H 'Content-Length: 1405'
 -H 'Content-Range: bytes 0-1404/1405'
 --data-binary @'D:\aanlevering.zip'

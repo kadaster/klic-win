@@ -265,7 +265,7 @@ curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformati
 -v
 -X PUT
 --header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--H 'Content-Type: application/octet-stream&quot'
+-H 'Content-Type: application/octet-stream'
 -H 'Content-Length: 1366'
 -H 'Content-Range: bytes 0-1365/1366'
 --data-binary @'D:\niAanlevering.zip'
