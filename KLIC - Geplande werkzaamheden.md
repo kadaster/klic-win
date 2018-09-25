@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 september 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 25 september 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
@@ -34,11 +34,14 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 - VoorbereidingCoordinatieCivieleWerken; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot coördinatie van civiele werken. 
 - IdentificatieBAG van een dichtstbijzijnd adres (DAS); de identificatie van het adresseerbare object van een dichtstbijzijnd adres. Informatiepolygoon; de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.
 
-Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing. 
+Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
 
 **Documentenbeheer**:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn (ID 2653)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
+
+**Ontvangstbevestiging**:
+- In Ontvangstbevestiging worden de juiste contactgegevens van Beheer Veiligheidsgebieden opgeslagen. (ID 3072)
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
@@ -53,6 +56,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **EV**:
 - In EV brief wordt locatieWerkzaamheden correct gevuld (ID 3112) 
 - Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt (ID 1964)
+- In NTD worden contactpersoon van de aanvrager opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
+- Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
