@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 september 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 27 september 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
@@ -105,7 +105,9 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 **EV**:
 - De controle op placeholdernamen is verruimd. (ID 2887, ID 2893)
 
-**Bug-fixes / Performance**:
+**Bug-fixes / Performance / Tekstueel**:
+- Aanpassing van de tekstuele toelichting bij de 3 keuzes bij een Oriëntatieverzoek (ID 2827)
+- Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
 - Log-bestand na uploaden Netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
 - Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
 - HAS-adressen toegevoegd aan li-xml. (ID 2436)
