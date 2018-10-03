@@ -27,4 +27,7 @@ Deze map bevat:
   * Levering_18C000206_1
   * Levering_18O000097_1
   * Levering_18O000145_1
-  
+* voorbeelden uit Acceptatie Test. Deze voorbeelden bevatten de ontvangstbevestiging, de leveringsemail, en het ZIP bestand van de levering.
+  * Acceptatie Test voorbeeld 1 (18G001904)
+  * Acceptatie Test voorbeeld 2 (18G001905)
+  * Acceptatie Test voorbeeld 3 (18G001906)
