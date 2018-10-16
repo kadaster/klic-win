@@ -9,20 +9,28 @@ Dit document biedt een handleiding voor het actualiseren van documenten in de do
   - [Zipbestand](#zipbestand)
     - [XML-bestand](#xml-bestand)
     - [Validatieregels](#validatieregels)
-  - [Mijn Kadaster](#mijn-kadaster)
+- [Gebruik KLIC API's](#gebruik-klic-apis)
   - [REST interfaces](#rest-interfaces)
-    - [Authenticatie](#authenticatie)
-    - [Netbeheerders en serviceproviders](#netbeheerders-en-serviceproviders)
-    - [Endpoints](#endpoints)
-    - [Documenten aanleveren](#documenten-aanleveren)
-      - [Aanlevering aanmelden](#aanlevering-aanmelden)
-      - [Data versturen](#data-versturen)
-      - [Data in stukken aanleveren](#data-in-stukken-aanleveren)
-      - [Aanlevering hervatten](#aanlevering-hervatten)
-    - [Aanleveringen raadplegen](#aanleveringen-raadplegen)
-      - [Lijst van aanleveringen](#lijst-van-aanleveringen)
-      - [Individuele aanlevering](#individuele-aanlevering)
-    - [Aanlevering goedkeuren/afkeuren/annuleren](#aanlevering-goedkeurenafkeurenannuleren)
+  - [Endpoints](#endpoints)
+  - [Authenticatie](#authenticatie)
+  - [_Accept_ header](#accept-header)
+  - [Rechten in Mijn Kadaster](#rechten-in-mijn-kadaster)
+  - [CURL](#curl)
+  - [KLIC API Documentatie](#klic-api-documentatie)
+- [Gebruik Swagger UI](#gebruik-swagger-ui)
+- [Overzicht KLIC API's voor actualiseren documenten](#overzicht-klic-apis-voor-actualiseren-documenten)
+  - [Netbeheerders en serviceproviders](#netbeheerders-en-serviceproviders)
+  - [Documenten aanleveren](#documenten-aanleveren)
+    - [Aanlevering aanmelden](#aanlevering-aanmelden)
+    - [Data versturen](#data-versturen)
+    - [Data in stukken aanleveren](#data-in-stukken-aanleveren)
+    - [Aanlevering hervatten](#aanlevering-hervatten)
+  - [Aanleveringen raadplegen](#aanleveringen-raadplegen) fo
+    - [Lijst van aanleveringen](#lijst-van-aanleveringen)
+    - [Individuele aanlevering](#individuele-aanlevering)
+  - [Aanlevering goedkeuren/afkeuren/annuleren](#aanlevering-goedkeurenafkeurenannuleren)
+
+---------------------------------------------------------
 
 ## Leeswijzer
 
@@ -30,7 +38,7 @@ Dit document beschrijft de structuur en inhoud van het zipbestand met aangelever
 
 In de sectie [Zipbestand](#zipbestand) wordt de structuur van het zipbestand toegelicht.
 
-Om documenten aan te kunnen leveren zijn er bepaalde rechten nodig. In deze documentatie gaan we uit van een aanlevering van documenten in de NTD omgeving. De sectie [Mijn Kadaster](#mijn-kadaster) beschrijft hoe gecontroleerd kan worden of de gebruiker over de benodigde rechten beschikt.
+Om documenten aan te kunnen leveren zijn er bepaalde rechten nodig. In deze documentatie gaan we uit van een aanlevering van documenten in de NTD omgeving. De sectie [Rechten in Mijn Kadaster](#rechten-in-mijn-kadaster) beschrijft hoe gecontroleerd kan worden of de gebruiker over de benodigde rechten beschikt.
 
 De sectie [REST interfaces](#rest-interfaces) beschrijft de verschillende componenten van de REST API’s voor het actualiseren van documenten in de documentenopslag van KLIC. Voor het actualiseren van documenten is er geen beperking op de grootte van het aangeleverde zipbestand, maar het aanleverproces verschilt voor kleine en grotere bestanden. Voor het aanleveren van een zipbestand van 34 Mb of kleiner kunnen achtereenvolgens de volgende secties doorlopen worden:
 
@@ -154,65 +162,147 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     </aangeleverdeDocumenten>
 </DocumentenBeheer>
 ```  
-_Figuur 2 - meta.xml_
+_Figuur 2 - documenten.xml_
 
-### Mijn Kadaster
-
-Om te verifiëren of een gebruiker rechten heeft om een aanlevering te kunnen doen, moet deze inloggen in Mijn Kadaster en moet de gebruiker toegang hebben tot de Klic Netbeheerder Testdienst (kortweg NTD).
-
-![Figuur 3](images/image2.png "Figuur 3 - Toegang tot de Klic Netbeheerders Testdienst vanuit Mijn Kadaster")
-_Figuur 3 - Toegang tot de Klic Netbeheerders Testdienst vanuit Mijn Kadaster_
-
-Figuur 3 toont de home pagina van Mijn Kadaster van een gebruiker die toegang heeft tot de Klic Netbeheerder Testdienst.
+---------------------------------------------------------
+## Gebruik KLIC API's
 
 ### REST interfaces
 
-Voor het geautomatiseerd actualiseren van documenten heeft het Kadaster REST interfaces beschikbaar gesteld. De documentatie over de werking van deze interfaces is beschikbaar in de vorm van Swagger specificatie. Deze documentatie is te vinden bij de “KLIC API documentatie”-applicatie (<https://service10.kadaster.nl/klic/ntd/actualiseren/api-docs/>).
+Voor het geautomatiseerd actualiseren van documenten heeft het Kadaster REST interfaces beschikbaar gesteld.  \
+De documentatie over de werking van deze interfaces is beschikbaar in de vorm van Swagger specificatie. Deze documentatie is te vinden bij de “KLIC API documentatie”-applicatie die in de Netbeheerder Testdienst beschikbaar wordt gesteld.
 
-Om de “KLIC API documentatie”-applicatie te openen, moet de gebruiker ingelogd zijn in Mijn Kadaster (zie de sectie [Mijn Kadaster](#mijn-kadaster)). Vervolgens kan bovenstaande link gekopieerd worden naar het tabblad waarin de gebruiker is ingelogd in Mijn Kadaster.
+De applicatie biedt een overzicht van de endpoints van de verschillende API’s en hoe deze endpoints gebruikt kunnen worden. Voor de “Netinformatie” API zijn al deze endpoints meteen uit te proberen via de aangeboden interface.  \
+
+### Endpoints
+
+De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s.  \
+De service "/aanleveringen/documenten" wordt bijvoorbeeld voluit
+- voor de productieomgeving KLIC:  \
+  "https://service10.kadaster.nl/klic/api/v2/aanleveringen/documenten"
+- voor de Netbeheerder Testdienst (NTD):  \
+  "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten"
+
+De API voor het (in fragmenten) uploaden van data ("Upload servlet") bevindt zich
+- voor de productieomgeving KLIC:  \
+  "https://service10.kadaster.nl/klic/api/v2/web/documenten/upload"
+- voor de Netbeheerder Testdienst (NTD):  \
+  "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/documenten/upload"
+  
+Het OAuth Authorization endpoint voor de productie-omgevingen is:
+- "https://authorization.kadaster.nl/auth/oauth/v2/"
+
+In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de NTD-omgeving.
+
+### Authenticatie
+
+De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor [Authenticatie via OAuth](../../API%20management/Authenticatie_via_oauth.md).
+De benodigde scope voor het actualiseren van documenten is `klic.centraal`.
+
+### _Accept_ header
+
+Wanneer je een KLIC API met een verlopen/ongeldige token gebruikt, dan is het response met foutmelding erin per default in HTML-formaat.  \
+Vanuit een client-applicatie is het veelal gewenst om het response-bericht in JSON-formaat terug te krijgen. Om zeker te stellen dat dit formaat wordt teruggegeven, moet een _Accept_-header worden meegegeven in het request.  \
+Voorbeeld:
+
+**Request**  
+```sh
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten
+ -v
+ -X POST
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
+ -H 'Content-Type: application/json'
+ -H 'X-Upload-Content-Length: 1366'
+ -H 'X-Upload-Content-Type: application/zip'
+ -H 'X-Upload-Filename: docAanlevering.zip'
+```
+**Response:**  (indien toegang geweigerd)
+```json
+{
+    "error": "Kadaster - Niet geauthenticeerd.",
+    "error_description": "Toegang tot de dienst Klic Online is alleen voor geauthenticeerde gebruikers. "
+}
+```  
+Bij een HTTP 200 response, wordt de response wél in JSON-formaat teruggegeven.
+
+### Rechten in Mijn Kadaster
+
+Om te verifiëren of een gebruiker rechten heeft om een aanlevering te kunnen doen, moet deze eerst inloggen in "Mijn Kadaster". Gecontroleerd kan worden of de gebruiker toegang heeft tot de gewenste dienst: "Klic Netbeheerder Testdienst" (kortweg NTD) of "Klic Actualiseren netinformatie".
+
+![Figuur 3](images/image2.png "Figuur 3 - Toegang tot de Klic Netbeheerder Testdienst vanuit Mijn Kadaster")  \
+_Figuur 3 - Toegang tot de Klic Netbeheerder Testdienst vanuit Mijn Kadaster_
+
+Figuur 3 toont de home pagina van Mijn Kadaster van een gebruiker die toegang heeft tot de Klic Netbeheerder Testdienst.
+
+### CURL
+
+De “KLIC API Documentatie”-applicatie maakt het mogelijk om de meeste endpoints aan te roepen vanuit de browser.
+In het voorbeeld in dit document wordt echter gebruik gemaakt van de command-line tool CURL (https://curl.haxx.se/). Dit heeft meer analogie met de werkwijze als een netbeheerder of serviceprovider een eigen applicatie wil ontwikkelen voor het decentraal aanleveren van beheerdersinformatie via de B2B-koppeling. \
+De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+
+### KLIC API Documentatie
+
+Om de “KLIC API documentatie”-applicatie te openen, moet de gebruiker ingelogd zijn in Mijn Kadaster (zie de sectie [Rechten in Mijn Kadaster](#rechten-in-mijn-kadaster)). Vervolgens kan bovenstaande link gekopieerd worden naar het tabblad waarin de gebruiker is ingelogd in Mijn Kadaster.
 
 ![Figuur 4](images/KLIC-API-documentatie-actualiseren.png "Figuur 4 - home pagina van de KLIC API documentatie applicatie")
-_Figuur 4 - home pagina van de KLIC API documentatie applicatie_
+_Figuur 4 - home pagina van de KLIC API netinformatie applicatie_
 
+De “KLIC API documentatie”-applicatie maakt het mogelijk om de meeste endpoints aan te roepen vanuit de browser.
 
-In het voorbeeld in dit document wordt gebruik gemaakt van de command-line tool CURL (<https://curl.haxx.se/>). Dit heeft een duidelijke analogie met de werkwijze als een netbeheerder of serviceprovider een eigen applicatie wil ontwikkelen voor het actualiseren van documenten via de B2B-koppeling.
+In het voorbeeld in dit document wordt echter gebruik gemaakt van de command-line tool CURL (<https://curl.haxx.se/>). Dit heeft meer analogie met de werkwijze als een netbeheerder of serviceprovider een eigen applicatie wil ontwikkelen voor het actualiseren van netinformatie via de B2B-koppeling.
 
 In dit voorbeeld wordt een bestand aangeleverd voor de netbeheerder “Kadaster KLIC-WIN” met de bronhouder “KL9999”. Dit gebeurt op de NTD-omgeving en er wordt dan ook gebruik gemaakt van de documentatie onder de kop “NTD” zoals te zien in Figuur 4.
 
 Voor het actualiseren van documenten worden voornamelijk operaties gebruikt van de “Documentenbeheer” API, behalve voor het versturen van data van het aan te leveren bestand. In dat geval wordt er gebruik gemaakt van de “Upload servlet” API.
 
-### Authenticatie
+---------------------------------------------------------
+## Gebruik Swagger UI ##
 
-De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor 
- [Authenticatie via oauth](../../API%20management/Authenticatie_via_oauth.md).
-De benodigde scope voor het actualiseren van documenten is `klic.centraal`
+De link 'API Testfaciliteit' in de KLIC API-documentatie brengt u naar een overzicht van alle endpoints die in dit document beschreven zijn.
+Al deze endpoints zijn meteen uit te proberen via de aangeboden interface. Met uitzondering van de upload-operaties van de "Upload servlet" voor het aanleveren van een bestand.
 
+### OAuth token meegeven ###
 
-#### Netbeheerders en serviceproviders
+Net als in alle beschreven CURL-commando's moet een OAuth-token als Authorization header meegegeven worden. In CURL gaat dat via een parameter,
+de Swagger-UI is een webapplicatie dus de browser moet verteld worden de header mee te geven. In Chrome kan dat door een extensie te installeren: [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=nl).
+Wanneer de extensie geïnstalleerd is, is naast de adresbalk een icoon toegevoegd. Hierop klikken geeft onderstaand invulformulier:
+
+![Figuur 15](images/ModHeader-OAuth.png "Figuur 15 - ModHeader invulformulier voor OAuth")
+
+Vul bij `Request Headers` "Authorization" in en als waarde "Bearer " plus het OAuth token (net als bij de CURL-commandos).
+Optioneel kan een filter toegevoegd worden. Een filter zorgt ervoor dat de Authorization-token alleen voor bepaalde URLs wordt meegegeven.
+Dit is sterk aan te raden omdat anders andere diensten die gebruik maken van OAuth (Google-diensten bijvoorbeeld) niet meer correct zullen werken.
+Om een filter toe te voegen klik op `+` en kies Filter. Selecteer `URL Pattern` en vul een patroon in dat uniek is voor de B2B-koppeling,
+bijvoorbeeld "*/klic/ntd/*". (dit betekent dat ieder URL waarin "/klic/ntd/" voorkomt de Authorization-header meegestuurd krijgt)
+
+Zonder Authorization-header zal iedere klik op `Try it out!` leiden tot een HTML-pagina met de melding: "Kadaster - Niet geauthenticeerd".
+
+---------------------------------------------------------
+## Overzicht KLIC API's voor actualiseren documenten
+
+### Netbeheerders en serviceproviders
 
 De REST interfaces kennen verschillende endpoints voor netbeheerders en voor serviceproviders. Serviceproviders moeten in de URL van het endpoint dat ze aanroepen de bronhoudercode opnemen van de netbeheerder waarvoor zij de betreffende operatie willen uitvoeren. In de documentatie zijn deze endpoints te herkennen aan de parameter "{bronhoudercode}".
 
 In dit voorbeeld wordt uitgegaan van een netbeheerder die zelf een aanlevering doet. Er wordt dus geen gebruik gemaakt van de endpoints met "{bronhoudercode}" erin.
 
-#### Endpoints
+### Documenten aanleveren
 
-De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. Voor NTD documentenbeheer bevindt deze API zich op <https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web>.
-
-Voor de NTD Upload servlet bevindt deze API zich op <https://service10.kadaster.nl//klic/ntd/actualiseren/upload/api/v2/web>.
-
-Het OAuth Authorization endpoint voor NTD is
-<https://authorization.test.kadaster.nl/auth/oauth/v2/>
-
-#### Documenten aanleveren
-
-Het bestand dat eerder beschreven werd in de sectie [Zipbestand](#zipbestand), wordt nu aangeleverd. Dit is een bestand voor de netbeheerder “Kadaster KLIC-WIN” het wordt aangeleverd door de netbeheerder zelf.
+Het bestand dat eerder beschreven werd in de sectie [Zipbestand](#zipbestand), wordt nu aangeleverd. Dit is een bestand van bronhouder KL9999 en wordt aangeleverd door de bronhouder (netbeheerder) zelf.
 
 Het aanleveren van een zipbestand gaat in twee fases:
 
-1.  Het aanmelden van een aanlevering. Dit gaat door middel van een POST request naar de “Documentenbeheer API”. Het response op dit request bevat een header “Location” met daarin een URI naar de “Upload servlet API” waarnaar de data verzonden kan worden.
-2.  Het verzenden van de data naar het Kadaster. Dit gaat door middel van één of meerder PUT requests naar de “Upload servlet” API waarin de daadwerkelijke bytes van het zipbestand verstuurd worden.
+1.  Het aanmelden van een aanlevering van documenten.  \
+Dit gaat door middel van een POST request naar de “Documentenbeheer API”. Het response op dit request bevat een header “Location” met daarin een URI naar de locatie waarnaar de data verzonden kan worden.  \
+In de body van het response worden tevens gegevens over de aanlevering teruggegeven (o.a. 'aanleveringId').  \
+NB. Feitelijk zorgt de API er voor dat de aanlevering wordt aangemeld bij de "Upload servlet API" zoals beschreven in de sectie "Uploaden" van de KLIC API Documentatie.  \
+Hierbij wordt de "Upload servlet" aangeroepen met de parameter "/documenten/upload/init"
 
-##### Aanlevering aanmelden
+2.  Het verzenden van de data naar het Kadaster.  \
+Dit gaat door middel van één of meerder PUT requests naar de “Upload servlet” API waarin de daadwerkelijke bytes van het zipbestand verstuurd worden.
+
+#### Aanlevering aanmelden
 
 Het aanmelden van de aanlevering gaat met een POST request naar het endpoint */aanleveringen/documenten/netbeheerder*.
 
@@ -221,26 +311,26 @@ _Figuur 5 - Swagger-UI voor het uitvoeren van een POST request naar /aanlevering
 
 Figuur 5 toont de Swagger-UI voor het aanmelden van een aanlevering. Dit endpoint kent een aantal parameters die als header meegestuurd moeten worden. De dikgedrukte parameters zijn verplicht, de andere parameter is optioneel.
 
-De parameters zijn ingevuld met gegevens voor het aan te leveren bestand, “aanlevering.zip”. Dit is een klein voorbeeldbestand van in totaal 1405 bytes groot. Deze parameters vertalen zich naar het volgende CURL commando:
+De parameters zijn ingevuld met gegevens voor het aan te leveren bestand, “aanlevering.zip”. Dit is een klein voorbeeldbestand van in totaal 1405 bytes groot. Deze parameters vertalen zich naar het volgende CURL-commando:
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/actualiseren/api/v2 
-/aanleveringen/documenten/netbeheerder
--v
--X POST
--H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--H 'Content-Type: application/json'
--H 'X-Upload-Content-Length: 1405'
--H 'X-Upload-Content-Type: application/zip'
--H 'X-Upload-Filename: aanlevering.zip'
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder
+ -v
+ -X POST
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
+ -H 'Content-Type: application/json'
+ -H 'X-Upload-Content-Length: 1405'
+ -H 'X-Upload-Content-Type: application/zip'
+ -H 'X-Upload-Filename: aanlevering.zip'
 ```
 **Response:**  
 ```
 HTTP/1.1 200 OK
-Location: https://service10.kadaster.nl/klic/actualiseren/upload/api/v2/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+Location: https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/documenten/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 ```  
-_Figuur 6 - Het CURL commando voor het aanmelden van een aanlevering en een deel van de response_
+_Figuur 6 - Het CURL-commando voor het aanmelden van een aanlevering en een deel van de response_
 
 In de body van de response worden kenmerkende gegevens over de aanlevering teruggegeven.  \
 Om dit response (met zekerheid) in json-formaat terug te krijgen, moet dit in de header van het request worden meegegeven als 'Content-Type: application/json'.
@@ -255,15 +345,15 @@ Voorbeeld:
     "netbeheerder" : "Kadaster KLIC-WIN",
     "fileSizeInBytes" : 1405,
     "aanleverNummer" : 29,
-    "aanleverDatum" : "2016-11-08T15:58:47.062",
+    "aanleverDatum" : "2016-11-08T15:58:47+01",
     "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docGestart"
 }]
 ```
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+> **N.B.** De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
-Figuur 6 toont het CURL commando en het resultaat van het request. De response code 200 geeft aan dat het request succesvol verwerkt is. Een belangrijke parameter in de response is de header “Location”. Dit is een endpoint in de “Upload servlet” API waarnaar het zipbestand geüpload moet worden.
+Figuur 6 toont het CURL-commando en het resultaat van het request. De response code 200 geeft aan dat het request succesvol verwerkt is. Een belangrijke parameter in de response is de header “Location”. Dit is een endpoint in de “Upload servlet” API waarnaar het zipbestand geüpload moet worden.
 
-##### Data versturen
+#### Data versturen
 
 Figuur 7 toont de Swagger-UI voor een PUT request naar het */upload* endpoint van de “Upload servlet” API. Het veld "body" is in dit overzicht niet gevuld omdat de Swagger-UI interface geen binaire data ondersteund. Dit endpoint kan dan ook niet getest worden vanuit de Swagger-UI.
 
@@ -283,31 +373,32 @@ De documentatie van dit endpoint toont een aantal parameters:
 ![Figuur 7](images/image7.png "Figuur 7 - Swagger-UI voor het uitvoeren van een PUT request naar /upload")
 _Figuur 7 - Swagger-UI voor het uitvoeren van een PUT request naar /upload_
 
-De parameters vertalen zich naar het volgende CURL commando:
+De parameters vertalen zich naar het volgende CURL-commando:
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/actualiseren/upload/api/v2/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
--v
--X PUT
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--H 'Content-Type: application/octet-stream'
--H 'Content-Length: 1405'
--H 'Content-Range: bytes 0-1404/1405'
---data-binary @'D:\aanlevering.zip'
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/documenten/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+ -v
+ -X PUT
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
+ -H 'Content-Type: application/octet-stream&quot'
+ -H 'Content-Length: 1405'
+ -H 'Content-Range: bytes 0-1404/1405'
+ --data-binary @'D:\aanlevering.zip'
 ```  
 **Response:**  
 ```
 HTTP/1.1 200 OK
 Range: bytes=0-1404
 ```  
-_Figuur 8 - CURL commando en het response voor het versturen van data_
+_Figuur 8 - CURL-commando en het response voor het versturen van data_
 
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+> **N.B.** De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Wanneer het request succesvol verwerkt wordt, geeft de server een 200 OK response en de range aan bytes die ontvangen is voor deze upload. Deze **Range** header wordt uitgebreid besproken in de sectie [Aanlevering hervatten](#aanlevering-hervatten).
 
-##### Data in stukken aanleveren
+#### Data in stukken aanleveren
 
 Er is voor het aanleveren van documenten geen limiet op het formaat van het zipbestand. Echter, er zit wel een maximum op het aantal bytes dat per keer verstuurd kan worden naar het Kadaster. Dit is maximaal 34 Mb per request. Voor zipbestanden groter dan 34 Mb moet het bestand dus in stukken aangeleverd worden. De aanmelding van de aanlevering gaat zoals beschreven in de sectie [Aanlevering aanmelden](#aanlevering-aanmelden). Hierbij moet als **X-Upload-Content-Length** de grootte van het volledige zipbestand opgegeven worden.
 
@@ -328,7 +419,7 @@ Wanneer er bijvoorbeeld een bestand aangeleverd wordt van 80.000.000 bytes (~76 
 | 30000000       | bytes 30000000-59999999/80000000 |
 | 20000000       | bytes 60000000-79999999/80000000 |
 
-##### Aanlevering hervatten
+#### Aanlevering hervatten
 
 Ieder PUT request naar het */upload* endpoint van de “Upload servlet” API bevat in het response de **Range** header. Deze header bevat een aanduiding van de reeks aan bytes die door het Kadaster ontvangen is. In het voorbeeld in de sectie [Data in stukken aanleveren](#data-in-stukken-aanleveren), waarbij 80.000.000 bytes in 3 requests verstuurd worden naar het Kadaster, zou deze header na elk request achtereenvolgens de waarden bevatten: “0-29999999”, “0-59999999”, “0-79999999”.
 
@@ -336,40 +427,42 @@ Deze header maakt het ook mogelijk om een upload te hervatten wanneer er - om wa
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/actualiseren/upload/api/v2/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
--v
--X PUT
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--H 'Content-Type: application/octet-stream'
--H 'Content-Length: 0'
--H 'Content-Range: bytes */1405'
---data-binary @'D:\aanlevering.zip'
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/documenten/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+ -v
+ -X PUT
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
+ -H 'Content-Type: application/octet-stream'
+ -H 'Content-Length: 0'
+ -H 'Content-Range: bytes */1405'
+ --data-binary @'D:\aanlevering.zip'
 ```
 **Response:**  
 ```
 HTTP/1.1 200 OK
 Range: bytes=0-1404
 ```  
-_Figuur 9 - CURL commando voor het ophalen van de status van een upload_
+_Figuur 9 - CURL-commando voor het ophalen van de status van een upload_
 
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+> **N.B.** De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Wanneer nog niet alle bytes van een zipbestand ontvangen zijn, kan aan de **Range** header afgeleid worden vanaf welke byte de draad weer opgepakt kan worden.
 
-#### Aanleveringen raadplegen
+### Aanleveringen raadplegen
 
 De “Documentenbeheer” API biedt een aantal endpoints voor het raadplegen van de aanleveringen.
 
-##### Lijst van aanleveringen
+#### Lijst van aanleveringen
 
 Het endpoint */aanleveringen/documenten/netbeheerder* levert een lijst van aanleveringen van de netbeheerder op. Deze lijst is gepagineerd, dat wil zeggen dat de totale lijst van aanleveringen opgedeeld is in pagina’s. Per request wordt er één pagina met aanleveringen teruggegeven. Standaard bevat een pagina 5 aanleveringen en wordt de eerste pagina teruggegeven. Dit kan door middel van de optionele parameters **page** en **size** aangepast worden. De paginanummering begint bij pagina 1 (dus niet bij 0) en de maximale paginagrootte (**size**) is 15.
 
 **Request**  
 ```sh
-curl 
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e' https://service10.kadaster.nl/klic/actualiseren/api/v2/aanleveringen/documenten/netbeheerder
+curl  https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
 ```  
-_Figuur 10 - CURL commando voor het opvragen van een lijst van aanleveringen_
+_Figuur 10 - CURL-commando voor het opvragen van een lijst van aanleveringen_
 
 Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is voor het overzicht een aantal aanleveringen weggelaten.
 
@@ -377,16 +470,16 @@ Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is 
 {
   "link" : [ {
     "rel" : "first",
-    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder?page=1&size=5"
+	"href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder?page=1&size=5"
   }, {
     "rel" : "self",
-    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder"
+    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder"
   }, {
     "rel" : "next",
-    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder?page=2&size=5"
+    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder?page=2&size=5"
   }, {
     "rel" : "last",
-    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/documenten/backend/rest/aanleveringen/documenten/netbeheerder?page=6&size=5"
+    "href" : "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/netbeheerder?page=6&size=5"
   } ],
   "content" : [ {
     "aanleveringId" : "a77aff2b-c794-4ad3-a021-7c1a29096770",
@@ -396,7 +489,7 @@ Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is 
     "netbeheerder" : "Kadaster KLIC-WIN",
     "fileSizeInBytes" : 1405,
     "aanleverNummer" : 29,
-    "aanleverDatum" : "2016-11-08T15:58:47.062",
+    "aanleverDatum" : "2016-11-08T15:58:47+01",
     "aanleverStatus" : "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/docTerBeoordeling",
     "aanleverStatusMutatieDatum" : "2016-11-08T16:07:31.424",
     "link" : [ ]
@@ -417,16 +510,17 @@ _Figuur 11 - Response body met een lijst van aanleveringen_
 
 Per aanlevering is er een JSON object met daarin de basisgegevens van een aanlevering en de actuele status. In Figuur 11 is te zien dat de aanlevering die zojuist gedaan is, de status “Gereed voor handmatige controle” heeft gekregen. Voor deze aanlevering kunnen de details opgehaald worden en op basis daarvan kan worden besloten om de aanlevering goed of af te keuren.
 
-##### Individuele aanlevering
+#### Individuele aanlevering
 
 Voor het ophalen van de details van een specifieke aanlevering wordt het endpoint */aanleveringen/documenten/{aanleveringId}/netbeheerder* aangeroepen. Dit endpoint heeft als parameter in het pad het **aanleveringId** van de aanlevering waarvoor de gegevens opgehaald worden.
 
 **Request**  
 ```sh
-curl 
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e' https://service10.kadaster.nl/klic/actualiseren/api/v2/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder
+curl   https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
 ```  
-_Figuur 12 - CURL commando voor het opvragen van details van een aanlevering_
+_Figuur 12 - CURL-commando voor het opvragen van details van een aanlevering_
 
 Figuur 12 toont het request voor het opvragen van detailgegevens van een specifieke aanlevering. Hierin is het **aanleveringId** veld overgenomen van de aanlevering die zojuist gedaan is. Figuur 13 toont het response. Het response bevat een JSON object met daarin de basisgegevens van de aanlevering, aangevuld met een lijst van statussen die de aanlevering heeft gehad, de **aanleverStatusHistorieList**, een lijst van stappen die de aanlevering doorlopen heeft, de **aanleverStapList** en een lijst van statistieken, de **aanleverStatistiekList**.
 
@@ -497,7 +591,7 @@ In de **aanleverStatistiekList** is te zien dat deze aanlevering 5 documenten be
 ```  
 _Figuur 13 - Response body met details van een specifieke aanlevering_
 
-### Aanlevering goedkeuren/afkeuren/annuleren
+## Aanlevering goedkeuren/afkeuren/annuleren
 
 Wanneer een aanlevering de status “Gereed voor handmatige controle” heeft, kan deze goedgekeurd of afgekeurd worden. In het geval dat er een fout is opgetreden bij een aanlevering, dan moet deze aanlevering eerst geannuleerd worden, voordat er een nieuwe aanlevering verwerkt kan worden.
 
@@ -511,39 +605,18 @@ In dit voorbeeld wordt de aanlevering goedgekeurd en wordt dus het eerste endpoi
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/actualiseren/api/v2/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder/goedkeuren
---header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
--v
--X POST
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/documenten/a77aff2b-c794-4ad3-a021-7c1a29096770/netbeheerder/goedkeuren
+ -v
+ -X POST
+ -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
+ -H 'Accept: application/json'
 ```
 **Response:**
 ```
 HTTP/1.1 200 OK
 ```  
-_Figuur 14 - Het CURL commando voor het goedkeuren van een aanlevering en een deel van de response_
+_Figuur 14 - Het CURL-commando voor het goedkeuren van een aanlevering en een deel van de response_
 
-> **N.B.** De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+> **N.B.** De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 Na het goedkeuren wordt de aanlevering verwerkt en in productie gezet. De aanlevering krijgt dan uiteindelijk de status “In productie”. Dit kun je verifiëren door de aanlevering nogmaals op te halen (zie de sectie [Individuele aanlevering](#individuele-aanlevering)).
-
-
-## Swagger UI ##
-
-De link 'API Testfaciliteit' in de KLIC API-documentatie brengt u naar een overzicht van alle endpoints die in dit document beschreven zijn.
-Al deze endpoints zijn meteen uit te proberen via de aangeboden interface. Met uitzondering van de PUT-operatie voor het aanleveren van een bestand.
-
-### OAuth token meegeven ###
-
-Net als in alle beschreven curl-commando's moet een OAuth-token als Authorization header meegegeven worden. In curl gaat dat via een parameter,
-de Swagger-UI is een webapplicatie dus de browser moet verteld worden de header mee te geven. In Chrome kan dat door een extensie te installeren: [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=nl).
-Wanneer de extensie geïnstalleerd is, is naast de adresbalk een icoon toegevoegd. Hierop klikken geeft onderstaand invulformulier:
-
-![Figuur 15](images/ModHeader-OAuth.png "Figuur 15 - ModHeader invulformulier voor OAuth")
-
-Vul bij `Request Headers` "Authorization" in en als waarde "Bearer " plus het OAuth token (net als bij de curl-commandos).
-Optioneel kan een filter toegevoegd worden. Een filter zorgt ervoor dat de Authorization-token alleen voor bepaalde URLs wordt meegegeven.
-Dit is sterk aan te raden omdat anders andere diensten die gebruik maken van OAuth (Google-diensten bijvoorbeeld) niet meer correct zullen werken.
-Om een filter toe te voegen klik op `+` en kies Filter. Selecteer `URL Pattern` en vul een patroon in dat uniek is voor de B2B-koppeling,
-bijvoorbeeld "*/klic/ntd/*". (dit betekent dat ieder URL waarin "/klic/ntd/" voorkomt de Authorization-header meegestuurd krijgt)
-
-Zonder Authorization-header zal iedere klik op `Try it out!` leiden tot een HTML-pagina met de melding: "Kadaster - Niet geauthenticeerd".

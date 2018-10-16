@@ -11,11 +11,7 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
   - [Procesmodellen afhandelen beheerdersinformatie-aanvragen](#procesmodellen-afhandelen-beheerdersinformatie-aanvragen)
     - [Procesmodel BMKL 2.0 (decentrale netbeheerder)](#procesmodel-bmkl-20-decentrale-netbeheerder)
     - [Procesmodel BMKL 2.0 (centrale netbeheerder)](#procesmodel-bmkl-20-centrale-netbeheerder)
-    - [Use casemodel BMKL 2.0](#use-casemodel-bmkl-20)
-    - [Statusovergangen BMKL 2.0](#statusovergangen-bmkl-20)
-      - [`biNotificatieStatus`](#binotificatiestatus)	
-      - [`biProductieStatus`](#biproductiestatus)	
-      - [`biAanleverStatus`](#biaanleverstatus)	
+    - [Use casemodel BMKL 2.0](#puse-casemodel-bmkl-20)
   - [Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)](#afhandelen-beheerdersinformatie-aanvragen-enkel-decentraal)
       - [Samenstellen zipbestand](#samenstellen-zipbestand)
       - [Beheerdersinformatie en documenten aanleveren (enkel decentraal)](#beheerdersinformatie-en-documenten-aanleveren-enkel-decentraal)
@@ -24,6 +20,7 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
       - [REST interfaces](#rest-interfaces)
       - [Endpoints](#endpoints)
       - [Authenticatie](#authenticatie)
+      - [_Accept_ header](#accept-header)
       - [CURL](#curl)
       - [KLIC API Documentatie](#klic-api-documentatie)
   - [Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen](#overzicht-bmkl-apis-voor-afhandelen-beheerdersinformatie-aanvragen)
@@ -71,7 +68,6 @@ Hierin wordt ook beschreven hoe een testmelding kan worden opgevoerd. \
 Ook wordt daar in algemene termen beschreven hoe technische documentatie over de API's kan worden ingezien en de werking van API's kan worden getest.
 
 ---------------------------------------------------------
-
 ## Leeswijzer
 
 In de sectie [Procesmodellen afhandelen beheerdersinformatie-aanvragen](#procesmodellen-afhandelen-beheerdersinformatie-aanvragen) wordt een schematisch overzicht gegeven van het procesverloop bij het afhandelen van een beheerdersinformatie-aanvraag. \
@@ -157,60 +153,6 @@ De verschillende processtappen zijn gemodelleerd in een use casemodel. Hiermee w
 ![usecasemodel](images/UC230-Uitwisselen-beheerdersinformatie-BMKL2.0.jpg "UC230 Uitwisselen beheerdersinformatie (BMKL2.0)")
 _Figuur 3 UCM B2B-koppeling beheerdersinformatie (BMKL2.0)_
 
-### Statusovergangen BMKL 2.0
-De stappen die de verschillende (deel)processen doorlopen bij het afhandelen van een aanvraag voor beheerdersinformatie, worden vastgelegd in statussen.  \
-We onderkennen hierbij de volgende statussen:
-- `biNotificatieStatus`  \
-De status die de processtappen volgt bij het notificeren van een belanghebbende netbeheerder en bevestigen van de aanvraag.
-- `biProductieStatus`  \
-De status die de processtappen volgt bij het "produceren" van beheerdersinformatie voor een decentrale of centrale netbeheerder.
-- `biAanleverStatus`  \
-De status die de processtappen volgt bij het aanleveren van beheerdersinformatie door een decentrale netbeheerder.
-
-Hieronder volgt een toelichting op de verschillende statusvelden met hun statussen, waarbij de mogelijke statusovergangen zijn weergegeven in diagrammen.  \
-De mogelijke statussen zijn overigens ook op te vragen met een REST-API (backlog-item).
-
-#### `biNotificatieStatus`
-
-| statuswaarde             | toelichting                                                                                                                                                      |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| biOpen                   | De beheerdersinformatie-aanvraag staat nog open voor de netbeheerder. Het moment dat de netbeheerder is genotificeerd, wordt vastgelegd in `datumGenotificeerd`. |
-| biBevestigingOntvangen   | De netbeheerder heeft de beheerdersinformatie-aanvraag bevestigd. Het moment van bevestiging wordt vastgelegd in `datumBevestigingOntvangen`.                    |
-
-![biNotificatieStatus](images/STD-biNotificatieStatus.jpg "STD biNotificatieStatus")  \
-_Figuur 4 STD biNotificatieStatus_
-
-#### `biProductieStatus`
-
-| statuswaarde                    | toelichting                                                                                                                                                      |
-|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _**(decentraal)**_              |                                                                                                                                                                  |
-| biWachtOpAntwoord               | Het systeem wacht nog op antwoord van de decentrale netbeheerder. Deze heeft - voor de betreffende beheerdersinformatie-aanvraag - nog geen beheerdersinformatie aangeleverd.<br> Let wel: De decentrale netbeheerder moet de aanvraag eerst bevestigen. |
-| biInAanlevering                 | De decentrale netbeheerder is bezig met aanleveren van beheerdersinformatie. De mogelijke statussen van het aanleverproces zijn beschreven bij `biAanleverStatus`. |
-| biGereedVoorSamenstellenProduct | De beheerdersinformatie is correct en kan worden gebruikt om een product (gebiedsinformatie) samen te stellen. Het moment van ontvangst wordt vastgelegd in `datumBeheerdersinformatieOntvangen`.<br>De netbeheerder kan opvragen wat er voor hem wordt uitgeleverd. |
-|                                 |                                                                                                                                                                  |
-| _**(centraal)**_                |                                                                                                                                                                  |
-| biOphalenUitCV                  | De beheerdersinformatie wordt voor de centrale netbeheerder door Kadaster-KLIC opgehaald uit de centrale voorziening.                                            |
-| biGereedVoorSamenstellenProduct | De beheerdersinformatie is correct en kan worden gebruikt om een product (gebiedsinformatie) samen te stellen. Het moment van ophalen wordt vastgelegd in `datumBeheerdersinformatieOntvangen`.<br>De netbeheerder kan opvragen wat er voor hem wordt uitgeleverd. |
-
-![biProductieStatus](images/STD-biProductieStatus.jpg "STD biProductieStatus")  \
-_Figuur 5 STD biProductieStatus_
-
-#### `biAanleverStatus`
-Het aanleveren van beheerdersinformatie is alleen van toepassing voor decentrale netbeheerders.
-
-| statuswaarde              | toelichting                                                                                                                                   |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| biGestart                 | De aanlevering van beheerdersinformatie is gestart.                                                                                           |
-| biAfgebroken              | Het aanleveren van beheerdersinformatie is mislukt of afgebroken. Er moet een nieuwe poging worden gedaan.                                    |
-| biAangeleverd             | De aanlevering van beheerdersinformatie is geslaagd.                                                                                          |
-| biWordtGevalideerd        | Er wordt gecontroleerd of de aangeleverde beheerdersinformatie valide is.                                                                     |
-| biGevalideerdMetFouten    | De beheerdersinformatie is niet correct. Er moet verbeterde beheerdersinformatie worden aangeleverd.                                          |
-| biGevalideerdZonderFouten | De beheerdersinformatie is zonder (ernstige) fouten. De beheerdersinformatie kan worden gebruikt voor het samenstellen van gebiedsinformatie. |
-
-![biAanleverStatus](images/STD-biAanleverStatus.jpg "STD biAanleverStatus")  \
-_Figuur 6 STD biAanleverStatus_
-
 ---------------------------------------------------------
 ## Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)
 
@@ -249,22 +191,44 @@ een browser of via CURL moeten worden uitgevoerd, aangezien Swagger ZIP response
 ### Endpoints
 
 De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. \
-De service "/gebiedsinformatieAanvragen" wordt bijvoorbeeld voluit \
-voor de productieomgeving KLIC:
-        "https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen" \
-voor de Netbeheerder Testdienst (NTD):
-        "<https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen>". \
+De service "/gebiedsinformatieAanvragen" wordt bijvoorbeeld voluit:
+- voor de productieomgeving KLIC:  \
+  "https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen"
+- voor de Netbeheerder Testdienst (NTD):  \
+  "<https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen>"
+
 In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de NTD-omgeving.
 
 ### Authenticatie
-De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor
- [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
+De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
+
+### _Accept_ header
+
+Wanneer je een KLIC API met een verlopen/ongeldige token gebruikt, dan is het response met foutmelding erin per default in HTML-formaat.  \
+Vanuit een client-applicatie is het veelal gewenst om het response-bericht in JSON-formaat terug te krijgen. Om zeker te stellen dat dit formaat wordt teruggegeven, moet een _Accept_-header worden meegegeven in het request.  \
+Voorbeeld:
+
+**Request**  
+```sh
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen
+-X GET
+-H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+-H 'Accept: application/json'
+```
+**Response:**  (indien toegang geweigerd)
+```json
+{
+    "error": "Kadaster - Niet geauthenticeerd.",
+    "error_description": "Toegang tot de dienst Klic Online is alleen voor geauthenticeerde gebruikers. "
+}
+```  
+Bij een HTTP 200 response, wordt de response wél in JSON-formaat teruggegeven.
 
 ### CURL
 
 De “KLIC API Documentatie”-applicatie maakt het mogelijk om de meeste endpoints aan te roepen vanuit de browser.
 In het voorbeeld in dit document wordt echter gebruik gemaakt van de command-line tool CURL (https://curl.haxx.se/). Dit heeft meer analogie met de werkwijze als een netbeheerder of serviceprovider een eigen applicatie wil ontwikkelen voor het decentraal aanleveren van beheerdersinformatie via de B2B-koppeling. \
-De CURL commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
+De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op meerdere regels. Deze commando's dienen of als één enkele regel ingevoerd te worden, of de regels dienen afgesloten te worden met een '^' (Windows) of een '\\' (Unix).
 
 ### KLIC API Documentatie
 
@@ -273,7 +237,7 @@ Op onderstaande Swagger pagina worden de services voor het afhandelen van beheer
 
 ![mijnKadaster](images/KLIC-API-documentatie-BMKL20-detail.png "NTD Portaal - API Documentatie detail")
 
-_Figuur 7 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
+_Figuur 4 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
 
 ---------------------------------------------------------
 ## Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen ##
@@ -284,7 +248,7 @@ _De voorbeelden die hieronder zijn beschreven, gaan er vanuit dat er	&eacute;&ea
 De use cases voor het koppelvlak BMKL 2.0 zijn geimplementeerd als API's. Onderstaand overzicht geeft van de use cases de API-structuur.
 
 ![usecasemodel](images/UC230-Uitwisselen-beheerdersinformatie-BMKL2.0-WebAPI.jpg "UC230 Uitwisselen beheerdersinformatie (BMKL2.0) (WebAPI)")
-_Figuur 8 UCM B2B-koppeling beheerdersinformatie (BMKL2.0, API-structuur)_
+_Figuur 5 UCM B2B-koppeling beheerdersinformatie (BMKL2.0, API-structuur)_
 
 ### Zoeken beheerdersinformatie-aanvragen
 
@@ -312,9 +276,10 @@ klic.beheerdersinformatie.readonly
 
 In dit voorbeeld wordt gezocht naar alle beheerdersinformatie-aanvragen voor de ingelogde netbeheerder met de status "open". Hiervoor wordt de parameter `biNotificatieStatus` met de waarde `biOpen` toegevoegd aan het request.
 ```sh
-curl
- -X GET --header "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen
+ -X GET
+ -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
+ -H 'Accept: application/json'
 ```
 
 **_response_**
@@ -360,9 +325,10 @@ klic.beheerdersinformatie.readonly
 
 **_voorbeeld: Opvragen één specifieke beheerdersinformatie-aanvraag_**
 ```sh
-curl
- -X GET --header "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768
+ -X GET
+ -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
+ -H 'Accept: application/json'
 ```
 
 **_response_**
@@ -400,9 +366,10 @@ klic.gebiedsinformatieaanvraag.readonly
 
 **_voorbeeld: Ophalen één specifieke gebiedsinformatie-aanvraag_**
 ```sh
-curl
- -X GET --header "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
-  https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1
+ -X GET
+ -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
+ -H 'Accept: application/json'
 ```
 
 **Voorbeeld van response**
@@ -508,10 +475,11 @@ klic.beheerdersinformatie.readonly
 
 **_voorbeeld:_**
 ```sh
-curl
- -X PATCH --header 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768
+ -X PATCH
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
  -d "{  \"biNotificatieStatus\": \"biBevestigingOntvangen\" }"
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768
 ```
 
 **_response:_**
@@ -537,10 +505,11 @@ klic.beheerdersinformatie
 
 **_voorbeeld:_**
 ```sh
-curl
- -X POST --header 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/aanleveringen
+ -X POST
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
  -F "netinformatie=@C:/Aanleveringen/Decentraal/nbact1/BMKL20_DECENTRAAL.zip"
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/aanleveringen
 ```
 
 **_response:_**
@@ -578,9 +547,10 @@ klic.beheerdersinformatie
 
 **_voorbeeld:_**
 ```sh
-curl
- -X GET --header 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/aanleveringen
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/aanleveringen
+ -X GET 
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
 ```
 
 **_voorbeeld van response:_**
@@ -646,9 +616,10 @@ klic.beheerdersinformatie.readonly
 
 **_voorbeeld:_**
 ```sh
-curl
- -X GET --header 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
- https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/beheerdersinformatieLevering/zip
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/beheerdersinformatieAanvragen/330d0526-0586-4843-ad86-04d8969fc768/beheerdersinformatieLevering/zip
+ -X GET
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
  > download.zip
 ```
 
