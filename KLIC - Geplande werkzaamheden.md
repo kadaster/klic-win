@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 03 oktober 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 16 oktober 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
@@ -22,7 +22,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - november 2018
+## Planning voor release - eind november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B aanvraag**:
@@ -51,7 +51,7 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind oktober 2018
+## Planning voor release - begin november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **EV**:
@@ -72,7 +72,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin oktober 2018
+## Planning voor release - medio oktober 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren Belangen**:
