@@ -26,15 +26,15 @@ In dit document wordt toegelicht hoe deze API gebruikt kan worden door AT voor h
 ## Objecten
 
 De volgende objecten spelen een rol in de BMKL API.
-- __gebiedsinformatieAanvraag (GIA)__  \
+- __gebiedsinformatieAanvraag__  \
 Dit is de aanvraag zoals deze door de grondroerder wordt gedaan.
-- __beheerdersinformatieAanvraag (BIA)__  \
-Dit zijn de beheerdersinformatieAanvragen die gestuurd worden naar de netbeheerders die een belang hebben in het selectiegebied van de GIA.
-- __beheerdersinformatieAanlevering (BIAL)__  \
-De beheerdersinformatie die geleverd word door de beheerder op basis van de beheerdersinformatieAanvraag. Dit kunnen meerdere afgekeurde leveringen zijn en + maximaal 1 goedgekeurde levering. (Alleen beschikbaar voor decentrale netbeheerders)
-- __beheerdersinformatieLevering (BIL)__  \
+- __beheerdersinformatieAanvraag__  \
+Dit zijn de beheerdersinformatieAanvragen die gestuurd worden naar de netbeheerders die een belang hebben in het selectiegebied van de gebiedsinformatieAanvraag.
+- __aanlevering (beheerdersinformatie)__  \
+De beheerdersinformatie die aangeleverd wordt door de beheerder op basis van de beheerdersinformatieAanvraag. Dit kunnen meerdere afgekeurde leveringen zijn en + maximaal 1 goedgekeurde levering. (Alleen beschikbaar voor decentrale netbeheerders)
+- __beheerdersinformatieLevering__  \
 Dit is de gevalideerde decentrale aanlevering of de centrale aanlevering aangevuld met de thema's die daarin geleverd zijn. Hiervan is er maximaal 1 per beheerdersinformatieAanvraag en deze is pas beschikbaar ná een succesvolle aanlevering. Indien gevraagd op het __/zip__ endpoint levert dit een levering met de uitsnede van de gebiedsinformatie-levering voor de betreffende netbeheerder.
-- __gebiedsinformatieLeveringen (GIL)__  \
+- __gebiedsinformatieLeveringen__  \
 De gebiedsinformatieLevering in json, of als ziplevering. Dit kunnen één of meer (deel)leveringen zijn. Dit object is pas beschikbaar na een daadwerkelijke levering.
 - __terugmeldingen__  \
 Eén of meer terugmeldingen op een gebiedsinformatieLevering.
@@ -68,15 +68,16 @@ De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoo
 
 ## Pagineren
 Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. In het request kan het gewenste aantal objecten per pagina opgegeven worden. Aan de serverkant zal hiervoor een maximum gelden.
-Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven. Voor synchronisatie kan pagineren op basis van een mutatiedatum gebruikt worden.
+Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.<br> 
+Voor synchronisatie wordt pagineren op basis van een mutatiedatum gebruikt. In de URL dient de '+' van de timezone aanduiding in de timestamp weergeven te worden als '%2B'. 
 ``` json
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01"
+         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323+01&datumTm=2018-07-01T20:00:00+01"
+         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "collection":[
@@ -111,10 +112,10 @@ _Figuur 2 UCM B2B-koppeling datasynchronisatie met BMKL API's (BMKL2.0, API-stru
 # Voorbeeldberichten per endpoint
 ## gebiedsinformatieAanvragen synchroniseren
 Aanvragers van gebiedsinformatie (grondroerders) en AT kunnen een lijst van gebiedsinformatieAanvragen ophalen.
-Aanvragers krijgen dan alleen eigen GIA's. AT krijgt alle GIA's.  
+Aanvragers krijgen dan alleen eigen gebiedsinformatieAanvragen. AT krijgt alle gebiedsinformatieAanvragen.  
 Benodigde scope: klic.gebiedsinformatieaanvraag of klic.gebiedsinformatieaanvraag.readonly of klic.toezicht  
 
-GET /gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01  
+GET /gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02  
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -124,10 +125,10 @@ Content-Type: application/json
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01"
+         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323+01&datumTm=2018-07-01T20:00:00+01"
+         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:15:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "gebiedsinformatieAanvragen":[
@@ -168,8 +169,8 @@ Content-Type: application/json
             },
         },
          "aanvraagSoort":"http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding",
-         "aanvraagDatum":"2018-07-01T19:05:22.323+01",
-         "mutatieDatum":"2018-07-01T19:05:22.323+01",
+         "aanvraagDatum":"2018-07-01T19:05:22+02",
+         "mutatieDatum":"2018-07-01T19:05:22.323+02",
          "giAanvraagStatus":"https://api.kadaster.nl/klic/v2/waarde/giAanvraagStatussen/giOpen",
          "soortWerkzaamheden":[
             "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/funderingswerk",
@@ -220,7 +221,7 @@ Content-Type: application/json
                   ],
                   [
                      121539,
-                     4872260
+                     487226
                   ],
                   [
                      121460,
@@ -264,10 +265,10 @@ Content-Type: application/json
 ```
 
 ## beheerdersinformatieAanvragen synchroniseren
-Netbeheerders, serviceproviders of AT kunnen een lijst van beheerdersinformatieAanvragen (BIA) ophalen.
-Netbeheerders en service providers krijgen dan alleen eigen BIA's. AT krijgt alle BIA's.  
+Netbeheerders, serviceproviders of AT kunnen een lijst van beheerdersinformatieAanvragen ophalen.
+Netbeheerders en service providers krijgen dan alleen eigen beheerdersinformatieAanvragen. AT krijgt alle beheerdersinformatieAanvragen.  
 
-GET /gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01  
+GET /gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02  
 Scope: klic.gebiedsinformatieaanvraag.readonly of klic.toezicht    
 
 ``` http
@@ -279,10 +280,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:55:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieAanvragen": [{
@@ -291,35 +292,35 @@ Content-Type: application/json
         "bronhoudercode": "nbact2",
         "biNotificatieStatus": "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
         "biProductieStatus": "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biGereedVoorSamenstellenProduct",
-        "datumGenotificeerd": "2018-06-30T19:00:00.323+01",
-        "datumBevestigingOntvangen": "2018-06-30T19:02:01.819+01",
-        "mutatieDatum":"2018-07-01T19:04:29+01"
+        "datumGenotificeerd": "2018-06-30T19:00:00+02",
+        "datumBevestigingOntvangen": "2018-06-30T19:02:01+02",
+        "mutatieDatum":"2018-07-01T19:04:29.248+02"
     }, {
         "biAanvraagId": "8G33E1D5-1833-4E82-B826-7E820AD012F6",
         "giAanvraagId": "7A908F06-484E-42D7-AD86-D1E558A1F5B9",
         "bronhoudercode": "nbact1",
         "biNotificatieStatus": "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
         "biProductieStatus": "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-        "datumGenotificeerd": "2018-06-30T19:00:00.4+01",
-        "datumBevestigingOntvangen": "2018-07-01T19:16:00+01",
-        "mutatieDatum":"2018-07-01T19:16:00+01"
+        "datumGenotificeerd": "2018-06-30T19:00:00+02",
+        "datumBevestigingOntvangen": "2018-07-01T19:16:00+02",
+        "mutatieDatum":"2018-07-01T19:16:00.369+02"
     }, {
         "biAanvraagId": "3D3988D5-1813-4E82-B386-7E820AD012S2",
         "giAanvraagId": "2639FD07-6A9F-4455-84D0-87EBFB13466D",
         "bronhoudercode": "nbact1",
         "biNotificatieStatus": "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
         "biProductieStatus": "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-        "datumGenotificeerd": "2018-07-01T19:15:00+01",
-        "datumBevestigingOntvangen": "2018-07-01T19:22:00+01",
-        "mutatieDatum":"2018-07-01T19:22:00+01"
+        "datumGenotificeerd": "2018-07-01T19:15:00+02",
+        "datumBevestigingOntvangen": "2018-07-01T19:22:00+02",
+        "mutatieDatum":"2018-07-01T19:22:00.246+02"
     }, {
         "biAanvraagId": "42G178D6-1815-4X27-B386-7E820AD012F2",
         "giAanvraagId": "2109992D-90F6-4BC7-815E-E72A02D46220",
         "bronhoudercode": "nbact1",
         "biNotificatieStatus": "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biOpen",
         "biProductieStatus": "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-        "datumGenotificeerd": "2018-07-01T19:55:00+01",
-        "mutatieDatum":"2018-07-01T19:55:00+01"
+        "datumGenotificeerd": "2018-07-01T19:55:00+02",
+        "mutatieDatum":"2018-07-01T19:55:00.248+02"
     }]
 }
 ```
@@ -328,7 +329,7 @@ Content-Type: application/json
 Netbeheerders, serviceproviders of AT kunnen een lijst van beheerdersinformatieLeveringen ophalen.
 Netbeheerders en service providers krijgen dan alleen eigen leveringen. AT krijgt alle leveringen.  
 
-GET /gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01  
+GET /gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02  
 Scope: klic.gebiedsinformatieaanvraag.readonly of klic.toezicht    
 
 ``` http
@@ -340,16 +341,16 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieLeveringen": [{
         "biAanvraagId": "8A1C2D58-1823-4E50-B826-7E820AD080A6",
-        "datumBeheerdersinformatieOntvangen": "2018-07-01T19:03:69+01",
-        "mutatieDatum": "2018-07-01T19:03:69+01",
+        "datumBeheerdersinformatieOntvangen": "2018-07-01T19:03:49+02",
+        "mutatieDatum": "2018-07-01T19:03:49.248+02",
         "betrokkenBijAanvraag": "true",
         "eisVoorzorgsMaatregel": "true",
         "geleverdeThemas" : [
@@ -364,15 +365,15 @@ Content-Type: application/json
         ]
     }, {
         "biAanvraagId": "B002B509-FE7C-45B3-83C0-CDBA2584697F",
-        "datumBeheerdersinformatieOntvangen": "2018-07-01T19:04:12+01",
-        "mutatieDatum": "2018-07-01T19:04:12+01",
+        "datumBeheerdersinformatieOntvangen": "2018-07-01T19:04:12+02",
+        "mutatieDatum": "2018-07-01T19:04:12.369+02",
         "betrokkenBijAanvraag": "false"
     }]
 }
 ```
 
 ## gebiedsinformatieLeveringen synchroniseren
-GET /gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01  
+GET /gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01  
 Scope: klic.gebiedsinformatieaanvraag.readonly of klic.toezicht    
 
 ``` http
@@ -384,26 +385,26 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323+01&datumTm=2018-07-01T20:00:00+01"
+            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         }
     },
     "gebiedsinformatieLeveringen": [{
         "giAanvraagId": "F7CB3ACE-6E73-42F9-9865-EFA57D00AEC1",
         "giLeveringId": "BE0B80CA-1301-4216-80A9-DE691356E273",
         "leveringsvolgnummer": "2",
-        "datumLeveringSamengesteld": "2017-11-02T09:16:01.808",
-        "mutatieDatum":"2017-11-02T09:16:01.808",
+        "datumLeveringSamengesteld": "2017-11-02T09:16:01+01",
+        "mutatieDatum":"2017-11-02T09:16:01.808+01",
         "indicatieLeveringCompleet": "true",
         "giLeveringUrl": "https://service10.kadaster.nl/gds2/download/public/ce417a87-92cd-4c57-a70e-8a0c405b2701"
     }, {
         "giAanvraagId": "2109992D-90F6-4BC7-815E-E72A02D46220",
         "giLeveringId": "10789865-82A0-4FA5-8E07-500EA0E2487B",
         "leveringsvolgnummer": "1",
-        "datumLeveringSamengesteld": "2017-11-02T09:25:01.808",
-        "mutatieDatum":"2017-11-02T09:25:01.808",
+        "datumLeveringSamengesteld": "2017-11-02T09:25:01+01",
+        "mutatieDatum":"2017-11-02T09:25:01.808+01",
         "indicatieLeveringCompleet": "false",
         "giLeveringUrl": "https://service10.kadaster.nl/gds2/download/public/cfbdaaf6-c84b-4a05-9d71-657cd43ecf21"
     }]
