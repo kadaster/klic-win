@@ -114,7 +114,7 @@ Hieronder worden de controles behandeld.
 ### Zipbestand eigenschappen
 
 Een aangeleverd zipbestand wordt gecontroleerd op de punten:
-* Het aangeleverde bestand moet een ZIP-archief zijn en mag niet groter zijn dan een bepaalde grootte. De maximale grootte voor de eindsituatie is voorlopig gesteld op 2GB.
+* Het aangeleverde bestand moet een ZIP-archief zijn.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
 * Ten behoeve van de aanlevering van netinformatie dient het zipbestand één XML-bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'.De bestands-extensie is met kleine letters.
 * Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het zipbestand een tweede XML-bestand te bevatten.  \
