@@ -3,7 +3,6 @@
 De belangrijkste uitgangspunten met betrekking tot de documenten-validatie zijn:
 
 - Het upload-bestand is een zipbestand.
-- Maximale bestandsgrootte van het zipbestand is 200 MB.
 - In het zipbestand zit exact 1 XML-bestand (ook wel de documentenbeheer.xml).  \
   Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (meta-informatie).
 - XSD-controle van het XML-bestand (meta-informatie).
