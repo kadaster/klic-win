@@ -1,5 +1,55 @@
 ﻿# Release notes
 
+### 29 Oktober 2018
+
+**Beheren Belangen**:
+
+Ter voorbereiding op de KLIC-WIN implementatie wordt binnenkort mogelijk gemaakt om 2 nieuwe contactsoorten op te voeren in de belangenregistratie.
+- Contact netinformatie: De contactpersoon voor de grondroerder voor vragen over de kabels en leidingen. (ID 2361)
+- Contact storing/schade: Contactgegevens voor de grondroerder bij schade of storing. (ID 2361)
+
+**Aanpassing leveringsbrief**:
+- Deze bovengenoemde contacten, indien gevuld, worden gebruikt in de leveringsbrief.
+- De layout van de leveringsbrief wordt aangepast. Hiermee wordt de leveringsbrief overzichtelijker.
+
+**BGT**:
+
+De Basisregistratie Grootschalige Topografie (BGT) leidt tot een gedetailleerde digitale kaart van Nederland. De GBKN achtergrondkaart die gebruikt wordt binnen KLIC, zal vervangen worden door een BGT achtergrondkaart.
+
+Deze nieuwe achtergondkaart zal op 3 plaatsen binnen KLIC gebruikt gaan worden:
+- Klic-online (bij het doen van een graafmelding, oriëntatieverzoek en calamiteitenmelding);</br>
+  Als achtergrondkaart wordt hier de visualisatie van "BGT omtrekgericht" gebruikt. (ID 2161)
+- In de Klic-ontvangstbevestiging;</br>
+  Als achtergrondkaart wordt ook hier de "BGT omtrekgericht" gebruikt.  (ID 2162)
+- Binnen de Klic-levering;</br>
+  Als achtergrondkaart wordt hier de visualisatie van "BGT pastel" gebruikt. (ID 2163)
+
+
+Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20met%20BGT) gepubliceerd.
+
+**Synchronisatie API**:
+- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie. (ID 2137)
+
+**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
+- De controle op placeholdernamen is verruimd. (ID 2887, ID 2893)
+- Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
+
+**Beheer Communicatie**:
+- Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
+
+**Bug-fixes / Performance / Tekstueel**:
+- Aanpassing van de tekstuele toelichting bij de 3 keuzes bij een Oriëntatieverzoek. (ID 2827)
+- Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
+- Log-bestand na uploaden Netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
+- Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
+- HAS-adressen toegevoegd aan li-xml. (ID 2436)
+- HAS-adressen en DAS-adressen toegevoegd aan GebiedsInformatieAanvraag via bmkl-api. (ID 2516, ID 2755, ID 2696)
+- HAS adressen opgenomen in feature GebiedsinformatieAanvraag van GI.xml. (ID 2727)
+- Geen foutmelding wanneer een serviceprovider alle BeheerdersInformatieAanvragen (BIA) opvraagt.  (ID 2737)
+- Tekst op scherm Actualiseren Netinfo veranderd van ‘IMKL2015’ naar ‘IMKL’. (ID 3150)
+- Diverse performance verbeteringen met betrekking tot uitleveren en actualiseren.
+
+------------------------
 ### 27 Augustus 2018
 Algemeen:
 - Performance verbetering voor grote oriëntatieverzoeken.

@@ -490,7 +490,7 @@ Het response van dit request is weergegeven in Figuur 11. In deze afbeelding is 
 ```  
 _Figuur 11 - Response body met een lijst van aanleveringen_
 
-Per aanlevering is er een JSON object met daarin de basisgegevens van een aanlevering en de actuele status. In Figuur 11 is te zien dat de aanlevering die zojuist gedaan is, de status “Gereed voor handmatige controle” heeft gekregen. Voor deze aanlevering kunnen de details opgehaald worden en op basis daarvan kan worden besloten om de aanlevering goed of af te keuren.
+Per aanlevering is er een JSON object met daarin de basisgegevens van een aanlevering en de actuele status. In Figuur 11 is te zien dat de aanlevering die zojuist gedaan is, de status “Gereed voor beoordeling” heeft gekregen. Voor deze aanlevering kunnen de details opgehaald worden en op basis daarvan kan worden besloten om de aanlevering goed of af te keuren.
 
 #### Individuele aanlevering
 
@@ -508,7 +508,7 @@ Figuur 12 toont het request voor het opvragen van detailgegevens van een specifi
 
 Wanneer er fouten, waarschuwingen of informatiemeldingen optreden bij het doorlopen van de aanleverstappen, wordt dit getoond in de **aanleverStapMeldingList** van de betreffende aanleverstap. Hierbij kun je denken aan foutmeldingen of waarschuwingen die optreden tijdens de validatie van het zipbestand.
 
-In de **aanleverStatistiekList** is te zien dat deze aanlevering 69 waterleidingen betreft (**aantal** = 69). Als de aanlevering de status “Gereed voor handmatige controle” heeft en de statistieken zijn naar verwachting, dan kan de aanlevering goedgekeurd worden (zie de sectie [Aanlevering goedkeuren/afkeuren/annuleren](#aanlevering-goedkeurenafkeurenannuleren)).
+In de **aanleverStatistiekList** is te zien dat deze aanlevering 69 waterleidingen betreft (**aantal** = 69). Als de aanlevering de status “Gereed voor beoordeling” heeft en de statistieken zijn naar verwachting, dan kan de aanlevering goedgekeurd worden (zie de sectie [Aanlevering goedkeuren/afkeuren/annuleren](#aanlevering-goedkeurenafkeurenannuleren)).
 
 **Response**  
 ```json
@@ -594,7 +594,7 @@ _Figuur 13 - Response body met details van een specifieke aanlevering_
 
 ### Aanlevering goedkeuren/afkeuren/annuleren
 
-Wanneer een aanlevering de status “Gereed voor handmatige controle” heeft, kan deze goedgekeurd of afgekeurd worden. In het geval dat er een fout is opgetreden bij een aanlevering, dan moet deze aanlevering eerst geannuleerd worden, voordat er een nieuwe aanlevering verwerkt kan worden.
+Wanneer een aanlevering de status “Gereed voor beoordeling” heeft, kan deze goedgekeurd of afgekeurd worden. In het geval dat er een fout is opgetreden bij een aanlevering, dan moet deze aanlevering eerst geannuleerd worden, voordat er een nieuwe aanlevering verwerkt kan worden.
 
 Deze operaties werken op dezelfde manier, alleen wordt er een ander endpoint aangeroepen. De betreffende endpoints zijn: 
 

@@ -21,6 +21,7 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
       - [Endpoints](#endpoints)
       - [Authenticatie](#authenticatie)
       - [_Accept_ header](#accept-header)
+      - [Pagineren](#pagineren)
       - [CURL](#curl)
       - [KLIC API Documentatie](#klic-api-documentatie)
   - [Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen](#overzicht-bmkl-apis-voor-afhandelen-beheerdersinformatie-aanvragen)
@@ -224,6 +225,44 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 ```  
 Bij een HTTP 200 response, wordt de response wél in JSON-formaat teruggegeven.
 
+### Pagineren
+Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. In het request kan het gewenste aantal objecten per pagina opgegeven worden. Aan de serverkant zal hiervoor een maximum gelden.
+Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.  \
+Voorbeeld van een resultaatlijst: 
+
+``` json
+{
+    "_links": {
+        "next": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?limiet=5&offset=5"
+        },
+        "self": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?limiet=5"
+        }
+    },
+    "beheerdersinformatieAanvragen": [
+    "collection":[
+        {
+           //lijst met 5 beheerdersinformatie-aanvragen...
+        }
+    ]
+}
+```
+
+Voor het pagineren van een lijst van objecten als resultaat van een API-request kunnen twee query-parameters worden gebruikt:
+- 'limiet'  \
+Deze parameter geeft het maximum aantal objecten aaan die in het antwoord teruggegeven mogen worden.  \
+Het systeem zal een beperking stellen aan het te gebruiken maximum (bijv. maximum 50). Als de opgegeven limiet groter is dan het door het systeem toegelaten maximum, zal er een HTTP 400 status worden teruggegeven (ongeldig request).
+- 'offset'  \
+Deze parameter geeft aan vanaf welk object het resultaat van de query moet worden teruggegeven. De default-waarde voor de offset is 0.  \
+Als je de eerste 50 objecten van het query-resultaat wilt terug krijgen, is de 'limiet=50' en 'offset=0' (of default-waarde). Als je de 31e - 70e object wilt terug krijgen, is de 'offset=30' en 'limiet=40'.
+
+Als een zoekopdracht resulteert in een lijst _zonder_ objecten, zal deze opdracht als een geldig request worden beschouwd. De HTTP-status zal dan 200 zijn:
+
+```json
+HTTP/1.1 200 OK
+```
+
 ### CURL
 
 De “KLIC API Documentatie”-applicatie maakt het mogelijk om de meeste endpoints aan te roepen vanuit de browser.
@@ -233,11 +272,12 @@ De CURL-commando's worden in dit document voor de leesbaarheid weergegeven op me
 ### KLIC API Documentatie
 
 De API Documentatie is beschikbaar via een Swagger-implementatie. Deze functionaliteit is opgenomen in het portaal van de [Netbeheerder Testdienst (NTD](Netbeheerder Testdienst (NTD).md).
-Op onderstaande Swagger pagina worden de services voor het afhandelen van beheerdersinformatie-aanvargen weergegeven.
+Op onderstaande Swagger-pagina worden de services voor het afhandelen van beheerdersinformatie-aanvragen weergegeven.  \
+Let wel, niet alle services zijn geautoriseerd om door netbeheerders gebruikt te worden.
 
 ![mijnKadaster](images/KLIC-API-documentatie-BMKL20-detail.png "NTD Portaal - API Documentatie detail")
 
-_Figuur 4 API Documentatie Beheerdersinformatie / BMKL 2.0 detail_
+_Figuur 4 API Documentatie Beheerdersinformatie / BMKL 2.0 (detail)_
 
 ---------------------------------------------------------
 ## Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen ##
@@ -276,7 +316,7 @@ klic.beheerdersinformatie.readonly
 
 In dit voorbeeld wordt gezocht naar alle beheerdersinformatie-aanvragen voor de ingelogde netbeheerder met de status "open". Hiervoor wordt de parameter `biNotificatieStatus` met de waarde `biOpen` toegevoegd aan het request.
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5
  -X GET
  -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
  -H 'Accept: application/json'
@@ -284,24 +324,38 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 
 **_response_**
 ```json
-[ {
-    "biAanvraagId" : "330d0526-0586-4843-ad86-04d8969fc768",
-    "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
-    "bronhoudercode" : "nbact2",
-    "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biOpen",
-    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-    "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
-    "mutatieDatum":"2017-11-03T10:38:44+01:00"
-  },{
-    "biAanvraagId" : "130k5426-0586-4843-ad86-04d89623fd28",
-    "giAanvraagId" : "8dc933bd-3907-40ee-84b0-5f54ah37a4d1",
-    "bronhoudercode" : "nbact2",
-    "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
-    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-    "datumGenotificeerd" : "2017-11-03T10:43:25+01:00",
-    "datumBevestigingOntvangen" : "2017-11-03T10:55:36+01:00",
-    "mutatieDatum":"2017-11-03T10:55:36+01:00"
-} ]
+{
+    "_links": {
+        "next": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5&offset=5"
+        },
+        "self": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5"
+        }
+    },
+    "beheerdersinformatieAanvragen": [
+        {
+	        "biAanvraagId" : "330d0526-0586-4843-ad86-04d8969fc768",
+            "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
+            "bronhoudercode" : "nbact2",
+            "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biOpen",
+            "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
+            "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
+            "mutatieDatum":"2017-11-03T10:38:44.653+01:00"
+        },{
+            "biAanvraagId" : "130k5426-0586-4843-ad86-04d89623fd28",
+            "giAanvraagId" : "8dc933bd-3907-40ee-84b0-5f54ah37a4d1",
+            "bronhoudercode" : "nbact2",
+            "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
+            "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
+            "datumGenotificeerd" : "2017-11-03T10:43:25+01:00",
+            "datumBevestigingOntvangen" : "2017-11-03T10:55:36+01:00",
+            "mutatieDatum":"2017-11-03T10:55:36.399+01:00"
+        },{
+            //overige 3 beheerdersinformatie-aanvragen uit resultaatlijst...
+        }
+    ]
+}
 ```
 
 ### Opvragen beheerdersinformatie-aanvraag
@@ -338,10 +392,10 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
     "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
     "bronhoudercode" : "nbact2",
     "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
-    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biGereedVoorSamenstellenProduct",
+    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biLeveringSamengesteld",
     "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
     "datumBevestigingOntvangen" : "2017-11-03T11:05:31+01:00",
-    "mutatieDatum":"2017-11-03T11:05:31+01:00"
+    "mutatieDatum":"2017-11-03T11:05:31.932+01:00"
 }
 ```
 
@@ -412,7 +466,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
     },
     "aanvraagSoort":"http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding",
     "aanvraagDatum":"2017-11-03T10:38:14+01",
-    "mutatieDatum":"2017-11-03T10:38:14+01",
+    "mutatieDatum":"2017-11-03T10:38:14.451+01",
     "giAanvraagStatus" : "https://api.kadaster.nl/klic/v2/waarde/giAanvraagStatussen/giOpen",
     "soortWerkzaamheden":[
         "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/leggenLaagspanning",
@@ -563,7 +617,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
   "bestandsnaam" : "nbact2_met documenten.zip",
   "bestandsgrootte" : 40955,
   "aanleverNummer" : 15,
-  "aanleverDatum" : "2017-11-03T16:23:53.459+01",
+  "aanleverDatum" : "2017-11-03T16:23:53+01",
   "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biGevalideerdZonderFouten",
   "aanleverStatusMutatieDatum" : "2017-11-03T16:23:56.829+01",
   "aanleverStatusHistorie" : [ {
@@ -581,14 +635,14 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
   }],
   "aanleverStappen" : [{
     "aanleverStapAanduiding" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStapAanduidingen/biAanleveren",
-    "startDatum" : "2017-11-03T16:23:53.465+01",
-    "eindDatum" : "2017-11-03T16:23:54.236+01",
+    "startDatum" : "2017-11-03T16:23:53+01",
+    "eindDatum" : "2017-11-03T16:23:54+01",
     "stapStatus" : "succes",
     "gebruiker" : "jvanklaveren"
   }, {
     "aanleverStapAanduiding" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStapAanduidingen/biValideren",
-    "startDatum" : "2017-11-03T16:23:55.734",
-    "eindDatum" : "2017-11-03T16:23:56.832",
+    "startDatum" : "2017-11-03T16:23:55",
+    "eindDatum" : "2017-11-03T16:23:56",
     "stapStatus" : "succes",
     "gebruiker" : "system"
   }]

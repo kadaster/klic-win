@@ -1,4 +1,31 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 oktober 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 29 oktober 2018)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B aanvraag**:
+
+Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorgevoerd. In de nieuwe versie van het interface KlicB2BAanvraag zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd: 
+- KvkNummer van aanvrager; het KvK-nummer (Kamer van Koophandel) van de aanvrager (klant) van de aanvraag.
+- KvkNummer van opdrachtgever; het KvK-nummer (Kamer van Koophandel) van de opdrachtgever voor de aanvraag. 
+- VoorbereidingMedegebruikFysiekeInfrastructuur; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot medegebruik van fysieke infrastructuur. 
+- VoorbereidingCoordinatieCivieleWerken; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot coördinatie van civiele werken. 
+- IdentificatieBAG van een dichtstbijzijnd adres (DAS); de identificatie van het adresseerbare object van een dichtstbijzijnd adres. 
+- Informatiepolygoon; de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.
+
+Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - januari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Documentenbeheer**:
+- Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
+  * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
+
+**Bug-fixes**:
+- nader te bepalen 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
@@ -22,27 +49,12 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind november 2018
+## Planning voor release - medio november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**B2B aanvraag**:
-
-Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorgevoerd. In de nieuwe versie van het interface KlicB2BAanvraag zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd: 
-- KvkNummer van aanvrager; het KvK-nummer (Kamer van Koophandel) van de aanvrager (klant) van de aanvraag.
-- KvkNummer van opdrachtgever; het KvK-nummer (Kamer van Koophandel) van de opdrachtgever voor de aanvraag. 
-- VoorbereidingMedegebruikFysiekeInfrastructuur; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot medegebruik van fysieke infrastructuur. 
-- VoorbereidingCoordinatieCivieleWerken; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot coördinatie van civiele werken. 
-- IdentificatieBAG van een dichtstbijzijnd adres (DAS); de identificatie van het adresseerbare object van een dichtstbijzijnd adres. 
-- Informatiepolygoon; de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.
-
-Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
-
-**Documentenbeheer**:
-- Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
-  * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
-
-**Ontvangstbevestiging**:
-- In Ontvangstbevestiging worden de juiste contactgegevens van Beheer Veiligheidsgebieden opgeslagen. (ID 3072)
+**Keten Acceptatietest Bevindingen**:
+- Visualisatie bevindingen (deel 2). Zie issue 220 tot en met 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues)
+- nader te bepalen 
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
@@ -54,25 +66,33 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 ## Planning voor release - begin november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**EV**:
+**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
 - In EV brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
 - Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
 - In NTD worden contactpersoon van de aanvrager opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
-- Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
+- Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
+
+**BeheerdersinformatieAanvragen API**:
+- De mogelijkheid om de resultaten uit de API te pagineren is toegevoegd. (ID 2139)
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
-**Beheren communicatie gegevens**:
-- Er komt een update van de pagina ‘ Beheren Communicatie gegevens”, waarin het mogelijk wordt een ‘WebsiteKlic’ op te geven. (ID 2192, ID 2970, ID 3067)
+**Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
+- Er komt een update van de pagina ‘ Beheren Communicatie gegevens”, waarin het mogelijk wordt een ‘WebsiteKlic’ (zie IMKL v1.2.1) op te geven. (ID 2192, ID 2970, ID 3067)
 - Van netbeheerder wordt ‘WebsiteKlic’ gepresenteerd op leveringsbrief. (ID 2903, ID 2954,  ID 2955)
 - Van netbeheerder wordt de ‘WebsiteKlic’ weergegeven in de GebiedsinformatieLevering (KLIC-WIN per 1 januari 2019) (ID 2904)
 
+**Keten Acceptatietest Bevindingen**:
+- Visualisatie bevindingen (deel 1). Zie issues 221, 223, 225 en 226 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3265, ID 3266)   
+
 **Bug-fixes**:
-- nader te bepalen
+- Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
+- Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dn 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
+- Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio oktober 2018
+## Planning voor release - eind oktober 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren Belangen**:
@@ -103,8 +123,9 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie. (ID 2137)
 
-**EV**:
+**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
 - De controle op placeholdernamen is verruimd. (ID 2887, ID 2893)
+- Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
 
 **Beheer Communicatie**:
 - Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
@@ -141,7 +162,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 Voor de NTD worden de volgende onderwerpen geïmplementeerd:
 
-**EV**:
+**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
 - Uitbreiding validatieregels: Controleren of één enkel PDF-bestand in meerdere documentsjablonen in de voorzorgsmaatregelen.xml voorkomt (ID 2457).
 - In het pdf-sjabloon mag een invulveld meerder keren worden gebruikt door daar een suffix aan toe te voegen (_\_\<volgnummer\>_) (ID 2778)
 
