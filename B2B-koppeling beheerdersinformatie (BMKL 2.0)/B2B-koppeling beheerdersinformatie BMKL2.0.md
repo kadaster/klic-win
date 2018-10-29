@@ -241,11 +241,10 @@ Voorbeeld van een resultaatlijst:
         }
     },
     "beheerdersinformatieAanvragen": [
-    "collection":[
         {
-           //lijst met 5 beheerdersinformatie-aanvragen...
+           //lijst met eerste 5 beheerdersinformatie-aanvragen...
         }
-    ]
+	]
 }
 ```
 
