@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 29 oktober 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 30 oktober 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -31,15 +31,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Planning voor release - december 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**BMKL API v2.0**:
-- Toepassing url's naar Kadaster-waardelijsten in BMKL API's. (ID 2522)
+**BMKL-API v2.0**:
+- Toepassing url's naar Kadaster-waardelijsten in BMKL-API's. (ID 2522)
   * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
   * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
   * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
   * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
 
 **Aanleveringen API**:
-- Aanleveringen API qua naamgeving en gebruik laten aansluiten op de BMKL API's. (ID 2674)
+- Aanleveringen API qua naamgeving en gebruik laten aansluiten op de BMKL-API's. (ID 2674)
   * Zie [Versieverschillen Aanleveringen API v1.0.pdf](Actualiseren/Versieverschillen%20Aanleveringen%20API%20v1.0.pdf).
  
 **Synchronisatie API**:
@@ -54,23 +54,27 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Keten Acceptatietest Bevindingen**:
 - Visualisatie bevindingen (deel 2). Zie issue 220 tot en met 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues)
+- Uitlevering: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
 - nader te bepalen 
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
-**Bug-fixes**:
+**Bug-fixes KLIC-WIN**:
+- Diverse performance verbeteringen. (ID 2844)
+- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
+- Aanleveren beheerdersinformatie houdt nu niet meer de status "Wordt gevalideerd". (ID 3316)
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
-- In EV brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
-- Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
-- In NTD worden contactpersoon van de aanvrager opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
-- Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
+**KLIC-WIN Voorzorgsmaatregelen (EV)**:
+- Uitleveren EV brief: In de brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
+- Aanleveren: Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
+- Aanleveren: In NTD worden contactpersoon van de aanvrager opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
+- Aanleveren: Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
 
 **BeheerdersinformatieAanvragen API**:
 - De mogelijkheid om de resultaten uit de API te pagineren is toegevoegd. (ID 2139)
@@ -79,16 +83,20 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
+- Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
 - Er komt een update van de pagina ‘ Beheren Communicatie gegevens”, waarin het mogelijk wordt een ‘WebsiteKlic’ (zie IMKL v1.2.1) op te geven. (ID 2192, ID 2970, ID 3067)
 - Van netbeheerder wordt ‘WebsiteKlic’ gepresenteerd op leveringsbrief. (ID 2903, ID 2954,  ID 2955)
-- Van netbeheerder wordt de ‘WebsiteKlic’ weergegeven in de GebiedsinformatieLevering (KLIC-WIN per 1 januari 2019) (ID 2904)
+- Van netbeheerder wordt de ‘WebsiteKlic’ weergegeven in de GI.xml (KLIC-WIN per 1 januari 2019) (ID 2904)
 
 **Keten Acceptatietest Bevindingen**:
-- Visualisatie bevindingen (deel 1). Zie issues 221, 223, 225 en 226 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3265, ID 3266)   
+- Uitlevering (Zip) aanpassing: Visualisatie bevindingen (deel 1). Zie issues 221, 223, 225, 226 en 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (KLIC-WIN ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3264, ID 3265, ID 3266)   
+- Uitlevering (Zip) bugfix: Sommige annotaties werden niet weergegeven (ID 3292)
+- Uitlevering (Zip) bugfix: Het lettertype van het annotatielabel is aangepast naar 'Liberation Sans' conform het visualisatie document van Geonovum. (ID 3283)
+- Aanleveren netinformatie: “nilReason” waarde bij "currentStatus" van UtilityNetworkElement, worden niet meer toegestaan. (ID 3221)
 
-**Bug-fixes**:
+**Bug-fixes KLIC-WIN**:
 - Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
-- Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dn 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
+- Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dan 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 --------------------------------------------------------------------------------------
@@ -123,23 +131,20 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie. (ID 2137)
 
-**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
+**KLIC-WIN Voorzorgsmaatregelen (EV)**:
 - De controle op placeholdernamen is verruimd. (ID 2887, ID 2893)
 - Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
-
-**Beheer Communicatie**:
-- Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
 
 **Bug-fixes / Performance / Tekstueel**:
 - Aanpassing van de tekstuele toelichting bij de 3 keuzes bij een Oriëntatieverzoek. (ID 2827)
 - Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
-- Log-bestand na uploaden Netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
+- Log-bestand na uploaden netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
 - Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
-- HAS-adressen toegevoegd aan li-xml. (ID 2436)
-- HAS-adressen en DAS-adressen toegevoegd aan GebiedsInformatieAanvraag via bmkl-api. (ID 2516, ID 2755, ID 2696)
+- HAS-adressen toegevoegd aan LI-xml. (ID 2436)
+- HAS-adressen en DAS-adressen toegevoegd aan GebiedsinformatieAanvraag via BMKL-API. (ID 2516, ID 2755, ID 2696)
 - HAS adressen opgenomen in feature GebiedsinformatieAanvraag van GI.xml. (ID 2727)
-- Geen foutmelding wanneer een serviceprovider alle BeheerdersInformatieAanvragen (BIA) opvraagt.  (ID 2737)
-- Tekst op scherm Actualiseren Netinfo veranderd van ‘IMKL2015’ naar ‘IMKL’. (ID 3150)
+- Geen foutmelding wanneer een serviceprovider alle BeheerdersinformatieAanvragen opvraagt.  (ID 2737)
+- Tekst op scherm Actualiseren netinformatie veranderd van ‘IMKL2015’ naar ‘IMKL’. (ID 3150)
 - Diverse performance verbeteringen met betrekking tot uitleveren en actualiseren.
 
 
@@ -162,7 +167,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 Voor de NTD worden de volgende onderwerpen geïmplementeerd:
 
-**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
+**KLIC-WIN Voorzorgsmaatregelen (EV)**:
 - Uitbreiding validatieregels: Controleren of één enkel PDF-bestand in meerdere documentsjablonen in de voorzorgsmaatregelen.xml voorkomt (ID 2457).
 - In het pdf-sjabloon mag een invulveld meerder keren worden gebruikt door daar een suffix aan toe te voegen (_\_\<volgnummer\>_) (ID 2778)
 
