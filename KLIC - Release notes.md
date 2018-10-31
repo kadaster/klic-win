@@ -30,23 +30,20 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie. (ID 2137)
 
-**KLIC-WIN Proces actualiseren netinformatie, Voorzorgsmaatregelen (EV)**:
+**KLIC-WIN Voorzorgsmaatregelen (EV)**:
 - De controle op placeholdernamen is verruimd. (ID 2887, ID 2893)
 - Vulling van EV bijlage placeholder "Avg-Contactpersoon-naam". Dit veld wordt nu met de correcte waarde gevuld. (ID 2243)
-
-**Beheer Communicatie**:
-- Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
 
 **Bug-fixes / Performance / Tekstueel**:
 - Aanpassing van de tekstuele toelichting bij de 3 keuzes bij een Oriëntatieverzoek. (ID 2827)
 - Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
-- Log-bestand na uploaden Netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
+- Log-bestand na uploaden netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
 - Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
-- HAS-adressen toegevoegd aan li-xml. (ID 2436)
-- HAS-adressen en DAS-adressen toegevoegd aan GebiedsInformatieAanvraag via bmkl-api. (ID 2516, ID 2755, ID 2696)
+- HAS-adressen toegevoegd aan LI-xml. (ID 2436)
+- HAS-adressen en DAS-adressen toegevoegd aan GebiedsinformatieAanvraag via BMKL-API. (ID 2516, ID 2755, ID 2696)
 - HAS adressen opgenomen in feature GebiedsinformatieAanvraag van GI.xml. (ID 2727)
-- Geen foutmelding wanneer een serviceprovider alle BeheerdersInformatieAanvragen (BIA) opvraagt.  (ID 2737)
-- Tekst op scherm Actualiseren Netinfo veranderd van ‘IMKL2015’ naar ‘IMKL’. (ID 3150)
+- Geen foutmelding wanneer een serviceprovider alle BeheerdersinformatieAanvragen opvraagt.  (ID 2737)
+- Tekst op scherm Actualiseren netinformatie veranderd van ‘IMKL2015’ naar ‘IMKL’. (ID 3150)
 - Diverse performance verbeteringen met betrekking tot uitleveren en actualiseren.
 
 ------------------------
