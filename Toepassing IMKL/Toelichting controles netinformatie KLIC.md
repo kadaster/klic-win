@@ -109,7 +109,14 @@ Het XML-bestand bevat alle assets van de netbeheerder die van belang zijn voor d
 
 ## Controles
 
-Hieronder worden de controles behandeld.
+Hieronder worden de controles behandeld. :
+
+	**LET WEL**:
+	De door de netbeheerders aangeleverde features in netinformatie of beheerdersinformatie worden syntactisch en semantisch gecontroleerd door KLIC.  \
+	Let wel, dat niet alle semantische regels door KLIC kunnen worden gevalideerd.  \
+	Het kan dus voorkomen dat de aangeleverde features gevalideerd zijn zonder fouten, maar er (onbedoeld) toch onvolkomenheden in de aangeleverde data zitten.  \
+	De verantwoordelijkheid om een inhoudelijk juiste dataset aan te leveren bij KLIC ligt bij de bronhouder zelf.
+
 
 ### Zipbestand eigenschappen
 
@@ -688,7 +695,7 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | endLifespanVersion                  |  0…1  | Geen extra regels                                                                                                                                                    | :heavy_check_mark:                           |
 | inNetwork                           |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator                                                                       | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
 | **(_LinkSet/UtilityLinkSet_)**      |       |                                                                                                                                                                      |                                              |
-| link                                |  1…*  | Strikte verplichting IMKL; Extra check: Alleen link naar een UtilityLink is toegestaan. UtilityLinkSequence komt niet voor.                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat |
+| link                                |  1…*  | Strikte verplichting IMKL; Alleen link naar een UtilityLink is toegestaan (UtilityLinkSequence komt niet voor).<br>Meervoudig gebruik van geometrieën (UtilityLink) is niet toegestaan. | :heavy_minus_sign: Geen controle of UtilityLink bestaat |
 | warningType                         |   1   | nilReason mag.                                                                                                                                                       | :heavy_check_mark:                           |
 | **(_UtilityNetworkElement_)**       |       |                                                                                                                                                                      |                                              |
 | currentStatus                       |   1   | Strikte verplichting IMKL; nilReason niet toegestaan i.v.m. visualisatie                                                                                             | :heavy_check_mark:                           |
