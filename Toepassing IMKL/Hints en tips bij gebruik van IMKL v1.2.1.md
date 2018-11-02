@@ -4,6 +4,7 @@
 
 - [Inleiding](#inleiding)
   - [Doel](#doel)
+  - [Disclaimer](#disclaimer)
 - [Namespaces en declaraties](#namespaces-en-declaraties)
   - [Standaard namespace afkortingen](#standaard-namespace-afkortingen)
   - [Verkeerde namespace declaraties](#verkeerde-namespace-declaraties)
@@ -60,6 +61,15 @@ Zie daarvoor ook https://github.com/kadaster/klic-win.
 
 Doel van dit document is de lezer een samenvatting met opgedane ervaringen te geven bij het toepassen van het IMKL2015-model tot nog toe. Dit kan toekomstig aansluitende netbeheerders helpen om veelvoorkomende fouten te voorkomen, waardoor het
 aansluitproces soepel en effectief verloopt.
+
+### Disclaimer
+
+	** LET WEL **
+	De door de netbeheerders aangeleverde features in netinformatie of beheerdersinformatie worden syntactisch en
+	semantisch gecontroleerd door KLIC.
+	Let wel, dat niet alle semantische regels door KLIC kunnen worden gevalideerd. Het kan dus voorkomen dat de aangeleverde
+	features gevalideerd zijn zonder fouten, maar er (onbedoeld) toch onvolkomenheden in de aangeleverde data zitten.
+	De verantwoordelijkheid om een inhoudelijk juiste dataset aan te leveren bij KLIC ligt bij de bronhouder zelf.
 
 ---------
 ## Namespaces en declaraties
