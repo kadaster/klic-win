@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 30 oktober 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 6 november 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -40,7 +40,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
-In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+Voor deze release zijn de volgende onderwerpen gepland:
  
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
@@ -53,16 +54,17 @@ In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder b
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio november 2018
-In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+Voor deze release zijn de volgende onderwerpen gepland:
 
+**Huisaansluitschetsen**:
 Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
 - Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
 	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
 	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
 	- Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
 - Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen.
-<br>
-Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik huisaansluitschetsen%20in%20IMKL%20v1.2.1.md) <br>
+Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
 <br>
 
 **Keten Acceptatietest Bevindingen**:
@@ -79,7 +81,8 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik huisaa
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin november 2018
-In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
 - Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
@@ -168,8 +171,7 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **NTD**:
-
-Diverse Performance verbeteringen met betrekking tot actualiseren. (ID 3026)
+- Diverse Performance verbeteringen met betrekking tot actualiseren. (ID 3026)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio augustus 2018

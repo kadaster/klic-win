@@ -1,5 +1,15 @@
 ﻿#### Toepassing IMKL - Overzicht wijzigingen
 
+06-11-2018
+- toelichting op het gebruik van huisaansluitschetsen in het nieuwe IMKL
+
+02-11-2018
+- hints en tips
+  - disclaimer toegevoegd
+- toelichting controles:
+  - geen controle of UtilityLink bestaat
+  - disclaimer toegevoegd
+
 25-07-2018
 - toelichting controles:
   - uitlijning stukjes voorbeeldgebruik
