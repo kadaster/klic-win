@@ -35,7 +35,7 @@ Dit geldt zowel voor de
 -	centrale netbeheerder: bij aanlevering van netinformatie aan de Centrale Voorziening
 -	decentrale netbeheerder: bij aanlevering van beheerdersinformatie en huisaansluitschetsen volgens het nieuwe berichtenmodel BMKL 2.0
 
-Alle ‘_ExtraDetailinfo_’-objecten van het type `huisaansluiting` moeten dan voorzien zijn van het BAG-ID van het Adresseerbaar Object.
+Alle ‘_ExtraDetailinfo_’-objecten van het type `huisaansluiting` moeten dan voorzien zijn van het BAG-ID van het adresseerbare object waar de huisaansluitschets toe behoort.
 
 ---------------------------------------------------------
 ## Implementatie in huidige KLIC-omgeving
@@ -43,8 +43,8 @@ Alle ‘_ExtraDetailinfo_’-objecten van het type `huisaansluiting` moeten dan 
 Met de invoering van de bovengenoemde functionaliteit per medio november 2018 wordt de voorbereiding getroffen voor de implementatie van het nieuwe IMKL v1.2.1 (per 1 januari 2019).
 
 Vanaf dat moment (dus medio november 2018) kunnen door grondroerders alleen nog maar huisaansluitschetsen van adresseerbare objecten worden opgevraagd.  \
-Zie voor meer details het overzicht van [geplande werkzaamheden](../(KLIC%20-%20Geplande%20werkzaamheden.md).
+Zie voor meer details het overzicht van [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md).
 
-	** **
-	**Bent u al voorbereid op deze nieuwe manier van aanvragen en aanleveren van huisaansluitschetsen?**
-	** **
+	**
+	** Bent u al voorbereid op deze nieuwe manier van aanvragen en aanleveren van huisaansluitschetsen?
+	**
