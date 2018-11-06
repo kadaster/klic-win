@@ -81,7 +81,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Diverse performance verbeteringen. (ID 2844)
-- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
 - Aanleveren beheerdersinformatie houdt nu niet meer de status "Wordt gevalideerd". (ID 3316)
 
 **Synchronisatie API**:
@@ -123,6 +122,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
 - Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dan 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
+- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 --------------------------------------------------------------------------------------
