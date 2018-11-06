@@ -16,6 +16,17 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
 
+**Aanleveringen API**:
+- Aanleveringen API qua naamgeving en gebruik laten aansluiten op de BMKL-API's. (ID 2674)
+  * Zie [Versieverschillen Aanleveringen API v1.0.pdf](Actualiseren/Versieverschillen%20Aanleveringen%20API%20v1.0.pdf).
+
+**BMKL-API v2.0**:
+- Toepassing url's naar Kadaster-waardelijsten in BMKL-API's. (ID 2522)
+  * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
+  * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
+  * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
+  * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
+
 --------------------------------------------------------------------------------------
 ## Planning voor release - januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
@@ -29,58 +40,46 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - december 2018
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**BMKL-API v2.0**:
-- Toepassing url's naar Kadaster-waardelijsten in BMKL-API's. (ID 2522)
-  * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
-  * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
-  * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
-  * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
-
-**Aanleveringen API**:
-- Aanleveringen API qua naamgeving en gebruik laten aansluiten op de BMKL-API's. (ID 2674)
-  * Zie [Versieverschillen Aanleveringen API v1.0.pdf](Actualiseren/Versieverschillen%20Aanleveringen%20API%20v1.0.pdf).
+In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
  
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
+
+**OAuth**:
+- Wijziging van de benaming van de scope `klic.ntd` in de NTD-omgeving: De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`.
 
 **Bug-fixes**:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio november 2018
-Voor deze release zijn de volgende onderwerpen gepland:
+In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
+
+Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
+- Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
+	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
+	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
+	- Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
+- Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen.
+<br>
+Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik huisaansluitschetsen%20in%20IMKL%20v1.2.1.md) <br>
+<br>
 
 **Keten Acceptatietest Bevindingen**:
-- Visualisatie bevindingen (deel 2). Zie issue 220 tot en met 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues)
-- Uitlevering: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
-- nader te bepalen 
+- Uitlevering (Zip) aanpassing: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
+- Uitlevering (Zip) aanpassing: EigenTopo met status "plan" wordt nu correct gevisualiseerd in png. (ID 3310)
 
-**Synchronisatie API**:
-- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
-
-**Bug-fixes KLIC-WIN**:
+**Bug-fixes KLIC-WIN (in de NTD)**:
 - Diverse performance verbeteringen. (ID 2844)
 - Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
 - Aanleveren beheerdersinformatie houdt nu niet meer de status "Wordt gevalideerd". (ID 3316)
-- nader te bepalen 
-
---------------------------------------------------------------------------------------
-## Planning voor release - begin november 2018
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**KLIC-WIN Voorzorgsmaatregelen (EV)**:
-- Uitleveren EV brief: In de brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
-- Aanleveren: Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
-- Aanleveren: In NTD worden contactpersoon van de aanvrager opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
-- Aanleveren: Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
-
-**BeheerdersinformatieAanvragen API**:
-- De mogelijkheid om de resultaten uit de API te pagineren is toegevoegd. (ID 2139)
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - begin november 2018
+In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder berschikbaar.<br><br>Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
 - Aanpassen van de communicatiegegevens (URL netbeheerder & Uitvalcontact berichten) geen selfservice meer. Wijzigingsverzoeken worden voortaan afgehandeld via Klantenservice Klic. (ID 3218)
@@ -88,13 +87,29 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Van netbeheerder wordt ‘WebsiteKlic’ gepresenteerd op leveringsbrief. (ID 2903, ID 2954,  ID 2955)
 - Van netbeheerder wordt de ‘WebsiteKlic’ weergegeven in de GI.xml (KLIC-WIN per 1 januari 2019) (ID 2904)
 
+**KLIC-WIN Voorzorgsmaatregelen (EV) (in de NTD)**:
+- Uitleveren EV brief: In de brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
+- Aanleveren: Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
+- Aanleveren: De contactpersoon van de aanvrager wordt opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
+- Aanleveren: Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
+
+**B2B-koppeling BMKL 2.0: BeheerdersinformatieAanvragen**:
+- De mogelijkheid om de resultaten uit de API te pagineren is in de NTD toegevoegd. (ID 2139)
+
+**Synchronisatie API**:
+- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
+
 **Keten Acceptatietest Bevindingen**:
-- Uitlevering (Zip) aanpassing: Visualisatie bevindingen (deel 1). Zie issues 221, 223, 225, 226 en 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (KLIC-WIN ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3264, ID 3265, ID 3266)   
+- Uitlevering (Zip) aanpassing: Visualisatie bevindingen. Zie issues 221, 223, 224, 225, 226 en 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (KLIC-WIN ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3264, ID 3265, ID 3266)   
 - Uitlevering (Zip) bugfix: Sommige annotaties werden niet weergegeven (ID 3292)
-- Uitlevering (Zip) bugfix: Het lettertype van het annotatielabel is aangepast naar 'Liberation Sans' conform het visualisatie document van Geonovum. (ID 3283)
+- Uitlevering (Zip) bugfix: Het lettertype van het Maatvoering-/Annotatielabel is aangepast naar 'Liberation Sans' conform het visualisatie document van Geonovum. (ID 3314, ID 3296)
+- Uitlevering (Zip) bugfix: EigenTopo met status "plan" wordt nu gevisualiseerd in de png. (ID 3310)
+- Uitlevering (Zip) bugfix: ExtraDetailInfo type "profielschets" en "overig" worden nu ook gevisualiseerd in de png bij een 2500x2500 melding. (ID 3311)
+- Uitlevering (Zip) bugfix: Alle appurtenances worden nu uitgeleverd in de png. (ID 3312)
+- Uitlevering (Zip) bugfix: Visualisatie van ExtraDetailinfo in de png heeft nu juiste kleur bij alle zoomniveaus. (ID 3313)
 - Aanleveren netinformatie: “nilReason” waarde bij "currentStatus" van UtilityNetworkElement, worden niet meer toegestaan. (ID 3221)
 
-**Bug-fixes KLIC-WIN**:
+**Bug-fixes KLIC-WIN (in de NTD)**:
 - Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
 - Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dan 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
