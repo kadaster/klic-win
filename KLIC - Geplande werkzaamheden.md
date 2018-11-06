@@ -53,19 +53,27 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio november 2018
+## Planning voor release - eind november 2018
 	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Huisaansluitschetsen**:
+
 Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
 - Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
 	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
 	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
 	- Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
 - Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen.
+
+
 Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
 <br>
+
+--------------------------------------------------------------------------------------
+## Planning voor release - medio november 2018
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Keten Acceptatietest Bevindingen**:
 - Uitlevering (Zip) aanpassing: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)

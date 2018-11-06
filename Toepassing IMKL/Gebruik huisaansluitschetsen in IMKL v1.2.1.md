@@ -40,9 +40,9 @@ Alle ‘_ExtraDetailinfo_’-objecten van het type `huisaansluiting` moeten dan 
 ---------------------------------------------------------
 ## Implementatie in huidige KLIC-omgeving
 
-Met de invoering van de bovengenoemde functionaliteit per medio november 2018 wordt de voorbereiding getroffen voor de implementatie van het nieuwe IMKL v1.2.1 (per 1 januari 2019).
+Met de invoering van de bovengenoemde functionaliteit per eind november 2018 wordt de voorbereiding getroffen voor de implementatie van het nieuwe IMKL v1.2.1 (per 1 januari 2019).
 
-Vanaf dat moment (dus medio november 2018) kunnen door grondroerders alleen nog maar huisaansluitschetsen van adresseerbare objecten worden opgevraagd.  \
+Vanaf dat moment (dus eind november 2018) kunnen door grondroerders alleen nog maar huisaansluitschetsen van adresseerbare objecten worden opgevraagd.  \
 Zie voor meer details het overzicht van [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md).
 
 	**
