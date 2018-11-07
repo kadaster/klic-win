@@ -77,7 +77,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Keten Acceptatietest Bevindingen**:
 - Uitlevering (Zip) aanpassing: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
-- Uitlevering (Zip) aanpassing: EigenTopo met status "plan" wordt nu correct gevisualiseerd in png. (ID 3310)
 
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Diverse performance verbeteringen. (ID 2844)
