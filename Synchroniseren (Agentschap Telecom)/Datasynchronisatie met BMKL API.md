@@ -67,8 +67,9 @@ De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoo
  [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
 
 ## Pagineren
-Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. In het request kan het gewenste aantal objecten per pagina opgegeven worden. Aan de serverkant zal hiervoor een maximum gelden.
-Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.<br> 
+Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.  \
+Zie ook de toepassing van [standaarden en richtlijnen](../API%20management/Standaardisering%20bij%20KLIC%20APIs.md) in KLIC API's.
+
 Voor synchronisatie wordt pagineren op basis van een mutatiedatum gebruikt. In de URL dient de '+' van de timezone aanduiding in de timestamp weergeven te worden als '%2B'. 
 ``` json
 {

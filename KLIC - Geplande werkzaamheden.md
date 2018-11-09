@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 november 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 8 november 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -46,8 +46,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
-**OAuth**:
-- Wijziging van de benaming van de scope `klic.ntd` in de NTD-omgeving: De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`.
+**B2B-koppeling BMKL 2.0**:
+- Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigd. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231)
+- De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
+- Het veld `giAannvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
+- BeheerdersInformatieleveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
 
 **Bug-fixes**:
 - nader te bepalen 
@@ -70,6 +73,9 @@ Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
 Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
 <br>
 
+**B2B-koppeling BMKL 2.0**:
+- De API's voor GebiedinformatieLevering (voor AT) en BeheerdersinformatieLevering (voor netbeheerders en AT) worden nu gesorteerd met oplopende datum. (ID 3319)
+
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio november 2018
 	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
@@ -77,9 +83,12 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Keten Acceptatietest Bevindingen**:
 - Uitlevering (Zip) aanpassing: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
+- Uitlevering (Zip) Bugfix: In de leveringsbrief wordt nu altijd correct vermeld dat de netbeheerder heeft geleverd. (ID 3259)
+- Uitlevering (Zip) Bugfix: Contactinformatie van Klassieke NB wordt in het LI.xml nu correct weergegeven. (ID 3293)
+
 
 **Bug-fixes KLIC-WIN (in de NTD)**:
-- Diverse performance verbeteringen. (ID 2844)
+- Diverse performance verbeteringen. (ID 2844, ID 3107, ID 3195, ID 3272)
 - Aanleveren beheerdersinformatie houdt nu niet meer de status "Wordt gevalideerd". (ID 3316)
 
 **Synchronisatie API**:
@@ -87,7 +96,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin november 2018
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
@@ -121,7 +129,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
 - Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dan 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
-- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
+- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276, ID 3350, ID 3355)
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 --------------------------------------------------------------------------------------
@@ -165,7 +173,7 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 - Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
 - Log-bestand na uploaden netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
 - Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
-- HAS-adressen toegevoegd aan LI-xml. (ID 2436)
+- HAS-adressen toegevoegd aan LI.xml. (ID 2436)
 - HAS-adressen en DAS-adressen toegevoegd aan GebiedsinformatieAanvraag via BMKL-API. (ID 2516, ID 2755, ID 2696)
 - HAS adressen opgenomen in feature GebiedsinformatieAanvraag van GI.xml. (ID 2727)
 - Geen foutmelding wanneer een serviceprovider alle BeheerdersinformatieAanvragen opvraagt.  (ID 2737)

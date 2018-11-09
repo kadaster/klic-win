@@ -33,7 +33,7 @@
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Aanleveren Documenten houdt nu niet meer de status "Wordt gevalideerd". (ID 3089, ID 3202)
 - Als er meer dan 1000 validatiemeldingen zijn bij het aanleveren van documenten, komt er te staan "Er zijn meer dan 1000 validatie meldingen. Meer meldingen worden niet getoond." (ID 3253, ID 2261)
-- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276)
+- Testmeldingen met een grote (graaf)polygoon kunnen door de netbeheerder opgevraagd worden via de API. (ID 3276, ID 3350, ID 3355)
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 ------------------------
@@ -76,7 +76,7 @@ Er zijn verschillende voorbeeldbestanden op [onze GitHub pagina](https://github.
 - Tekstuele wijziging in het proces van het opvoeren van een graafmelding: WION is gewijzigd in WIBON. (ID 2564)
 - Log-bestand na uploaden netinformatie m.b.t. aantal foutmeldingen aangepast. (ID 2842)
 - Bij actualiseren documenten worden nu documenten correct opgeslagen als er meerdere malen worden verwezen naar hetzelfde bestand. (ID 2889)
-- HAS-adressen toegevoegd aan LI-xml. (ID 2436)
+- HAS-adressen toegevoegd aan LI.xml. (ID 2436)
 - HAS-adressen en DAS-adressen toegevoegd aan GebiedsinformatieAanvraag via BMKL-API. (ID 2516, ID 2755, ID 2696)
 - HAS adressen opgenomen in feature GebiedsinformatieAanvraag van GI.xml. (ID 2727)
 - Geen foutmelding wanneer een serviceprovider alle BeheerdersinformatieAanvragen opvraagt.  (ID 2737)

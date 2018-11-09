@@ -226,10 +226,10 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 Bij een HTTP 200 response, wordt de response wél in JSON-formaat teruggegeven.
 
 ### Pagineren
-Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. In het request kan het gewenste aantal objecten per pagina opgegeven worden. Aan de serverkant zal hiervoor een maximum gelden.
-Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.  \
-Voorbeeld van een resultaatlijst: 
+Voor de endpoints die een lijst van objecten opleveren, pagineren we de output. Waar we een collectie geven, pagineren we door in de response een link naar volgende pagina te geven.  \
+Zie ook de toepassing van [standaarden en richtlijnen](../API%20management/Standaardisering%20bij%20KLIC%20APIs.md) in KLIC API's.
 
+Voorbeeld van een resultaatlijst: 
 ``` json
 {
     "_links": {
@@ -244,22 +244,8 @@ Voorbeeld van een resultaatlijst:
         {
            //lijst met eerste 5 beheerdersinformatie-aanvragen...
         }
-	]
+    ]
 }
-```
-
-Voor het pagineren van een lijst van objecten als resultaat van een API-request kunnen twee query-parameters worden gebruikt:
-- 'limiet'  \
-Deze parameter geeft het maximum aantal objecten aaan die in het antwoord teruggegeven mogen worden.  \
-Het systeem zal een beperking stellen aan het te gebruiken maximum (bijv. maximum 50). Als de opgegeven limiet groter is dan het door het systeem toegelaten maximum, zal er een HTTP 400 status worden teruggegeven (ongeldig request).
-- 'offset'  \
-Deze parameter geeft aan vanaf welk object het resultaat van de query moet worden teruggegeven. De default-waarde voor de offset is 0.  \
-Als je de eerste 50 objecten van het query-resultaat wilt terug krijgen, is de 'limiet=50' en 'offset=0' (of default-waarde). Als je de 31e - 70e object wilt terug krijgen, is de 'offset=30' en 'limiet=40'.
-
-Als een zoekopdracht resulteert in een lijst _zonder_ objecten, zal deze opdracht als een geldig request worden beschouwd. De HTTP-status zal dan 200 zijn:
-
-```json
-HTTP/1.1 200 OK
 ```
 
 ### CURL

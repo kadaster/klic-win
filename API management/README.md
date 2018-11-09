@@ -9,4 +9,5 @@ Deze map bevat:
 
 * een handleiding voor het [aansluiten op de KLIC API's met OAuth](Authenticatie_via_oauth.md)
 * toelichting op [documentatie en versiebeheer](API-documentatie%20en%20versiebeheer.md) van KLIC API's
+* toepassing van [standaarden en richtlijnen](Standaardisering%20bij%20KLIC%20APIs.md) in KLIC API's
 * map met voorbeelden van gebruik OAuth
