@@ -1,5 +1,10 @@
 ﻿# Release notes
 
+### 9 november 2018
+
+**Klic-viewer**:
+Er is een nieuw versie (4.3) beschikbaar van de Klic-viewer.
+
 ### 7 november 2018
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
