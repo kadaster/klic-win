@@ -11,7 +11,7 @@ Bij elk van de voorbeelden is toelichtende informatie gevoegd over
 * contacten per bronhouder  \
 Van voorbeelden 2 t/m 6 is ook de LI_<>.json toegevoegd (volgens nieuwe structuur)
 
-Deze map bevat:
+Deze map bevat onder andere:
 * algemene toelichting over de verschillende voorbeelden
 * technische uitwerking met voorbeelden o.b.v Klic-melding 18G030795:
   * Voorbeeld 1. bestaande levering; alle netbeheerders klassiek (BMKL1.2)
@@ -20,14 +20,5 @@ Deze map bevat:
   * Voorbeeld 4. nieuwe uitleverstructuur / deellevering; mix van netbeheerders klassiek/IMKL1.2, Enexis IMKL1.2 geleverd
   * Voorbeeld 5. als voorbeeld 4; mix van netbeheerders klassiek/IMKL1.2, Enexis IMKL1.2 geleverd, diversen "niet betrokken"
   * Voorbeeld 6. als voorbeeld 5; mix van netbeheerders klassiek/IMKL1.2, Enexis + Brabant Water + GasUnie IMKL1.2 geleverd
+* Levering_18O000687_1 is een zeer gevarieerd voorbeeld
 * extra voorbeelden
-  * Levering_18G002330_1
-  * Levering_18G007160_1_met EV
-  * Levering_18C000154_1
-  * Levering_18C000206_1
-  * Levering_18O000097_1
-  * Levering_18O000145_1
-* voorbeelden uit Acceptatie Test. Deze voorbeelden bevatten de ontvangstbevestiging, de leveringsemail, en het ZIP bestand van de levering.
-  * Acceptatie Test voorbeeld 1 (18G001904)
-  * Acceptatie Test voorbeeld 2 (18G001905)
-  * Acceptatie Test voorbeeld 3 (18G001906)
