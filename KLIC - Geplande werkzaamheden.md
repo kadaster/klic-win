@@ -75,6 +75,7 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 
 **B2B-koppeling BMKL 2.0**:
 - De API's voor GebiedinformatieLevering (voor AT) en BeheerdersinformatieLevering (voor netbeheerders en AT) worden nu gesorteerd met oplopende datum. (ID 3319)
+- Documentatie van de API-sprecificatie (OAS, Swagger) van Beheerdersinformatie Services is geactualiseerd.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio november 2018
