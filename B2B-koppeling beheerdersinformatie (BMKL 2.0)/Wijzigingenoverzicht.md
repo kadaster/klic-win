@@ -1,5 +1,8 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+14-11-2018
+* Voorbeelden 1 t/m 4 aangevuld met gebruik `websiteKlic`
+
 11-09-2018
 * Voorbeelden 1 t/m 4 aangevuld met _beheerdersinformatieLevering_
 * Voorbeeld 4b: als alternatief documenten aanleveren in submap
