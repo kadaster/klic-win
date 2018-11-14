@@ -158,8 +158,8 @@ _response:_
     ]
 }
 ```
-  /
-  /
+<br>
+<br>
 **Voorbeeld 2. Zoeken op een objectenverzameling die geen vervolgpagina heeft.**
 
 In dit voorbeeld wordt gezocht naar alle beheerdersinformatie-aanvragen voor de ingelogde gebruiker voor een specifieke gebiedsinformatie-aanvraag.  \
@@ -192,8 +192,8 @@ _response:_
   } ]
 }
 ```
-  /
-  /
+<br>
+<br>
 **Voorbeeld 3. Geen objecten gevonden bij zoeken op een objectenverzameling.**
 
 In dit voorbeeld wordt gezocht naar beheerdersinformatie-aanvragen die voldoen aan bepaalde selectie-criteria, maar waarvoor geen objecten zijn gevonden.  \
@@ -218,8 +218,8 @@ _response:_
   "beheerdersinformatieAanvragen" : [ ]
 }
 ```
-  /
-  /
+<br>
+<br>
 **Voorbeeld 4. Opvragen objectenverzameling met een limiet die de systeemlimiet overschrijdt.**
 
 In onderstaand voorbeeld is de systeemlimiet ingesteld op 50.
