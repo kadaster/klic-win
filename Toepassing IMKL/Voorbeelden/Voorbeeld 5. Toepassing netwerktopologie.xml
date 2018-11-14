@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: Voorbeeld 5. Toepassing netwerktopologie.xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld  toepassing netwerktopologie
+De gebruikte voorbeeld-features zijn bedoeld voor demo-doeleinden en zijn niet bedoeld om een
+representatie te geven van de werkelijke situatie ter plaatse.
+De inhoud is gebaseerd op de definities uit IMKL2015, versie 1.2.1.
+
+In het voorbeeld is nader ingezoomd op het mogelijk gebruik van het (de) feature(s):
+	- Appurtenance (= node)
+    - UtilityLink (met startnode, endnode)
+Overige feature(s):
+	- Utiliteitsnet
+	- Rioolleiding
+ _____________________________________________________________________ -->
+
+<gml:FeatureCollection
+xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2" 
+xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" 
+xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" 
+xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" 
+xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+gml:id="ID_featureCollection_2018-05-30-17-11"
+xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.2 https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2/IMKL2015-wion.xsd">
+
+	<gml:featureMember>
+		<imkl:Utiliteitsnet gml:id="nl.imkl-GM3131.unet_riool_10">
+			<us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/sewer"/>
+			<us-net-common:authorityRole xlink:href="http://inspire.ec.europa.eu/codelist/RelatedPartyRoleValue/operator"/>
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>GM3131.unet_riool_10</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2014-11-12T00:00:00+00:00</imkl:beginLifespanVersion>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/rioolVrijverval"/>
+		</imkl:Utiliteitsnet>
+	</gml:featureMember>
+
+	<gml:featureMember>
+		<imkl:Rioolleiding gml:id="nl.imkl-GM3131.l_2814">
+			<net:beginLifespanVersion>2016-08-22T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_2814</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:link xlink:href="nl.imkl-GM3131.l_2814.ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2016-08-22T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
+			<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">31</us-net-common:pipeDiameter>
+			<us-net-common:pressure uom="urn:ogc:def:uom:OGC::bar">0</us-net-common:pressure>
+			<us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
+			<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/PVC"/>
+		</imkl:Rioolleiding>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Rioolleiding gml:id="nl.imkl-GM3131.l_226">
+			<net:beginLifespanVersion>2012-01-01T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_226</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:link xlink:href="nl.imkl-GM3131.l_226.ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2012-01-01T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
+			<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">20</us-net-common:pipeDiameter>
+			<us-net-common:pressure uom="urn:ogc:def:uom:OGC::bar">0</us-net-common:pressure>
+			<us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
+			<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/PVC"/>
+		</imkl:Rioolleiding>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Rioolleiding gml:id="nl.imkl-GM3131.l_2205">
+			<net:beginLifespanVersion>2017-04-26T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_2205</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:link xlink:href="nl.imkl-GM3131.l_2205.ulink"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2017-04-26T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
+			<us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">31</us-net-common:pipeDiameter>
+			<us-net-common:pressure uom="urn:ogc:def:uom:OGC::bar">0</us-net-common:pressure>
+			<us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
+			<imkl:buismateriaalType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/PVC"/>
+		</imkl:Rioolleiding>
+	</gml:featureMember>
+
+	<gml:featureMember>
+		<imkl:Appurtenance gml:id="nl.imkl-GM3131.n_10_2257">
+			<net:beginLifespanVersion>1977-01-01T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.n_10_2257</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:geometry><gml:Point srsName="epsg:28992" gml:id="geomid.nl.imkl-GM3131.n_10_2257"> <gml:pos srsDimension="2">167466.280 441032.040</gml:pos></gml:Point>
+			</net:geometry>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>1977-01-01T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection"/>
+		</imkl:Appurtenance>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Appurtenance gml:id="nl.imkl-GM3131.n_10_2833">
+			<net:beginLifespanVersion>2015-12-28T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.n_10_2833</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:geometry><gml:Point srsName="epsg:28992" gml:id="geomid.nl.imkl-GM3131.n_10_2833"> <gml:pos srsDimension="2">167465.393 441015.684</gml:pos></gml:Point>
+			</net:geometry>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2015-12-28T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection"/>
+		</imkl:Appurtenance>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Appurtenance gml:id="nl.imkl-GM3131.n_10_280">
+			<net:beginLifespanVersion>2016-08-23T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.n_10_280</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:geometry><gml:Point srsName="epsg:28992" gml:id="geomid.nl.imkl-GM3131.n_10_280"> <gml:pos srsDimension="2">167473.885 441016.574</gml:pos></gml:Point>
+			</net:geometry>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2016-08-23T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection"/>
+		</imkl:Appurtenance>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Appurtenance gml:id="nl.imkl-GM3131.n_10_2256">
+			<net:beginLifespanVersion>1987-01-01T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.n_10_2256</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:geometry><gml:Point srsName="epsg:28992" gml:id="geomid.nl.imkl-GM3131.n_10_2256"> <gml:pos srsDimension="2">167463.570 441002.500</gml:pos></gml:Point>
+			</net:geometry>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>1987-01-01T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+			<us-net-common:appurtenanceType xlink:href="http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection"/>
+		</imkl:Appurtenance>
+	</gml:featureMember>
+
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-GM3131.l_2814.ulink">
+			<net:beginLifespanVersion>2016-08-22T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_2814.ulink</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="epsg:28992" gml:id="linkid.nl.imkl-GM3131.l_2814.ulink">
+					<gml:segments><gml:LineStringSegment><gml:posList srsDimension="2">167466.280 441032.040 167466.935 441025.563 167465.393 441015.684</gml:posList></gml:LineStringSegment></gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<net:endNode xlink:href="nl.imkl-GM3131.n_10_2833"/>
+			<net:startNode xlink:href="nl.imkl-GM3131.n_10_2257"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2016-08-22T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-GM3131.l_226.ulink">
+			<net:beginLifespanVersion>2012-01-01T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_226.ulink</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="epsg:28992" gml:id="linkid.nl.imkl-GM3131.l_226.ulink">
+					<gml:segments><gml:LineStringSegment><gml:posList srsDimension="2">167465.393 441015.684 167466.422 441016.116 167473.885 441016.574</gml:posList></gml:LineStringSegment></gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<net:endNode xlink:href="nl.imkl-GM3131.n_10_280"/>
+			<net:startNode xlink:href="nl.imkl-GM3131.n_10_2833"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2012-01-01T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	<gml:featureMember>
+		<us-net-common:UtilityLink gml:id="nl.imkl-GM3131.l_2205.ulink">
+			<net:beginLifespanVersion>2017-04-26T00:00:00+00:00</net:beginLifespanVersion>
+			<net:inspireId>
+				<base:Identifier>
+					<base:localId>GM3131.l_2205.ulink</base:localId><base:namespace>nl.imkl</base:namespace>
+				</base:Identifier>
+			</net:inspireId>
+			<net:inNetwork xlink:href="nl.imkl-GM3131.unet_riool_10"/>
+			<net:centrelineGeometry>
+				<gml:Curve srsName="epsg:28992" gml:id="linkid.nl.imkl-GM3131.l_2205.ulink">
+					<gml:segments><gml:LineStringSegment><gml:posList srsDimension="2">167465.393 441015.684 167463.570 441002.500</gml:posList></gml:LineStringSegment></gml:segments>
+				</gml:Curve>
+			</net:centrelineGeometry>
+			<net:fictitious>false</net:fictitious>
+			<net:endNode xlink:href="nl.imkl-GM3131.n_10_2256"/>
+			<net:startNode xlink:href="nl.imkl-GM3131.n_10_2833"/>
+			<us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+			<us-net-common:validFrom>2017-04-26T00:00:00+00:00</us-net-common:validFrom>
+			<us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+		</us-net-common:UtilityLink>
+	</gml:featureMember>
+	
+</gml:FeatureCollection>

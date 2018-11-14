@@ -9,10 +9,10 @@ Technische uitwerking met voorbeelden:
 * Voorbeeld 2. Utiliteitsnet met Duct-Pipe-Cable: kabels in mantelbuizen in kabelbed
   
 * Voorbeeld 4. Utiliteitsnet waarbij op verschillende manieren een 'nilReason' wordt gebruikt
-
+* Voorbeeld 5. Toepassing van netwerktopologie tussen "lines" en "nodes"
 * Voorbeeld 6. Utiliteitsnet met EV-vlak+donut:
   - zipbestand t.b.v. aanlevering netinformatie met EV-vlak met donut
-  - [Voorbeeld 6. Utiliteitsnet met EV-vlak+donut](Voorbeeld%20%6.%20%Utiliteitsnet%20%met%20%EV-vlak+donut.md) met een toelichting op het voorbeeld  
+  - [Voorbeeld 6. Utiliteitsnet met EV-vlak+donut](Voorbeeld%206.%20Utiliteitsnet%20met%20EV-vlak%2Bdonut.md) met een toelichting op het voorbeeld  
  
 Presentatie: 
   * Implementatiekeuzes voor mantelbuizen net kabels/leidingen van meerdere thema's (IMKL-issue 181)
