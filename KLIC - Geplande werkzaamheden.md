@@ -16,16 +16,6 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
 
-**Aanleveringen API**:
-- Aanleveringen API qua naamgeving en gebruik laten aansluiten op de BMKL-API's. (ID 2674)
-  * Zie [Versieverschillen Aanleveringen API v1.0.pdf](Actualiseren/Versieverschillen%20Aanleveringen%20API%20v1.0.pdf).
-
-**BMKL-API v2.0**:
-- Toepassing url's naar Kadaster-waardelijsten in BMKL-API's. (ID 2522)
-  * Het betreft: `giAanvraagStatus`, `biNotificatieStatus`, `biProductieStatus`, `aanleverStatus` en `aanleverStapAanduiding`
-  * De waardelijsten zijn momenteel nog niet opvraagbaar op deze url's
-  * Zie [Versieverschillen BMKL API v2.pdf](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/Versieverschillen%20BMKL%20API%20v2.pdf).
-  * Zie [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md) (versie 2018-05-01)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - januari 2019
