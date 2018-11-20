@@ -16,7 +16,7 @@ In dit document wordt toegelicht hoe deze API gebruikt kan worden door AT voor h
         - [Endpoints](#endpoints)
         - [Authenticatie](#authenticatie)
     - [Pagineren](#pagineren)
-- [Use casemodel datasynchronisatie met BMKL API](#use-casemodel-data-synchronisatie-met-bmkl-api)
+- [Use casemodel datasynchronisatie met BMKL API](#use-casemodel-datasynchronisatie-met-bmkl-api)
 - [Voorbeeldberichten per endpoint](#voorbeeldberichten-per-endpoint)
     - [gebiedsinformatieAanvragen synchroniseren](#gebiedsinformatieaanvragen-synchroniseren)
     - [beheerdersinformatieAanvragen synchroniseren](#beheerdersinformatieaanvragen-synchroniseren)
@@ -148,11 +148,22 @@ Content-Type: application/json
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Laan van Westenenk",
                     "huisnummer":"701",
+                    "huisletter": "string",
+                    "huisnummertoevoeging": "string",
+                    "woonplaatsNaam":"APELDOORN",
                     "postcode":"7334DP",
-                    "woonplaatsNaam":"APELDOORN"
+                    "landcode": "string",
+                    "bagidAdresseerbaarObject": "string"
                 },
+                "postbusAdres": {
+                    "postbusnummer": "string",
+                    "woonplaatsNaam": "string",
+                    "postcode": "string",
+                    "landcode": "string"
+                }
             },
          },
+         "referentie" : "FTO regressie Graafmelding",
          "opdrachtgever":{
             "contact":{
                 "naam":"Kadaster",
@@ -164,29 +175,61 @@ Content-Type: application/json
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Hofstraat",
                     "huisnummer":"110",
+                    "huisletter": "string",
+                    "huisnummertoevoeging": "string",
+                    "woonplaatsNaam":"APELDOORN",
                     "postcode":"7311KZ",
-                    "woonplaatsNaam":"APELDOORN"
+                    "landcode": "string",
+                    "bagidAdresseerbaarObject": "string"
                 },
+                "postbusAdres": {
+                    "postbusnummer": "string",
+                    "woonplaatsNaam": "string",
+                    "postcode": "string",
+                    "landcode": "string"
+                }
             },
         },
          "aanvraagSoort":"http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding",
          "aanvraagDatum":"2018-07-01T19:05:22+02",
          "mutatieDatum":"2018-07-01T19:05:22.323+02",
          "giAanvraagStatus":"https://api.kadaster.nl/klic/v2/waarde/giAanvraagStatussen/giOpen",
+         "voorbereidingVerzoekCoordinatie": false,
+         "voorbereidingVerzoekMedegebruik": false,
          "soortWerkzaamheden":[
             "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/funderingswerk",
             "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/woningbouw"
          ],
+         "omschrijvingWerkzaamheden":"string",
          "locatieWerkzaamheden":{
                "openbareRuimteNaam":"Laan van Westenenk",
                "huisnummer":"701",
-               "postcode":"7334DP",
+               "huisletter": "string",
+               "huisnummertoevoeging": "string",
                "woonplaatsNaam":"Apeldoorn",
+               "postcode":"7334DP",
                "BAGidAdresseerbaarObject": "0200010000130331"
          },
          "startDatum":"2018-08-01",
          "eindDatum":"2018-08-08",
-         "graafpolygoon":{
+         "huisaansluitingAdressen":[{
+               "openbareRuimteNaam":"Laan van Westenenk",
+               "huisnummer":"701",
+               "huisletter": "string",
+               "huisnummertoevoeging": "string",
+               "woonplaatsNaam":"Apeldoorn",
+               "postcode":"7334DP",
+               "BAGidAdresseerbaarObject": "0200010000130331"
+            }, {
+               "openbareRuimteNaam":"Evert van 't Landstraat",
+               "huisnummer":"15",
+               "huisletter": "string",
+               "huisnummertoevoeging": "string",
+               "woonplaatsNaam":"Apeldoorn",
+               "postcode":"7334DR",
+               "BAGidAdresseerbaarObject": "0200010003923183"
+            }],
+         "graafPolygoon":{
             "type":"Polygon",
             "crs":{
                "type":"name",
@@ -247,19 +290,67 @@ Content-Type: application/json
                ]
             ]
          },
-         "huisaansluitingAdressen":[{
-               "openbareRuimteNaam":"Laan van Westenenk",
-               "postcode":"7334DP",
-               "huisnummer":"701",
-               "woonplaatsNaam":"Apeldoorn",
-               "BAGidAdresseerbaarObject": "0200010000130331"
-            }, {
-               "openbareRuimteNaam":"Evert van 't Landstraat",
-               "postcode":"7334DR",
-               "huisnummer":"15",
-               "woonplaatsNaam":"Apeldoorn",
-               "BAGidAdresseerbaarObject": "0200010003923183"
-            }]
+         "orientatiePolygoon":{
+            "type":"Polygon",
+            "crs":{
+               "type":"name",
+               "properties":{
+                  "name":"EPSG:28992"
+               }
+            },
+            "coordinates":[
+               [
+                  [
+                     121070,
+                     486903
+                  ],
+                  [
+                     121095,
+                     486849
+                  ],
+                  [
+                     121220,
+                     486871
+                  ],
+                  [
+                     121480,
+                     486905
+                  ],
+                  [
+                     121507,
+                     487100
+                  ],
+                  [
+                     121564,
+                     487215
+                  ],
+                  [
+                     121539,
+                     4872260
+                  ],
+                  [
+                     121460,
+                     487288
+                  ],
+                  [
+                     121337,
+                     487331
+                  ],
+                  [
+                     121220,
+                     487338
+                  ],
+                  [
+                     121156,
+                     487308
+                  ],
+                  [
+                     121070,
+                     486903
+                  ]
+               ]
+            ]
+         }
       }
    ]
 }
@@ -353,15 +444,15 @@ Content-Type: application/json
         "datumBeheerdersinformatieOntvangen": "2018-07-01T19:03:49+02",
         "mutatieDatum": "2018-07-01T19:03:49.248+02",
         "betrokkenBijAanvraag": "true",
-        "eisVoorzorgsMaatregel": "true",
+        "indicatieEisVoorzorgsmaatregel": "true",
         "geleverdeThemas" : [
             {
                 "thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning",
-                "eisVoorzorgsMaatregel": "false"
+                "indicatieEisVoorzorgsmaatregel": "false"
             },
             {
                 "thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/hoogspanning",
-                "eisVoorzorgsMaatregel": "true"
+                "indicatieEisVoorzorgsmaatregel": "true"
             },
         ]
     }, {
