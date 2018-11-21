@@ -58,6 +58,10 @@ Hierbij wordt verwezen naar respectievelijk de `startNode` en `endNode` (objecte
 </gml:featureMember>
 ```
 
+Hieronder wordt het objectenmodel van de gebruikte features weergegeven.
+
+![voorbeeld_5_objectenmodel_netwerktopologie](../images/Voorbeeld-5-Objectenmodel-netwerktopologie.jpg "Voorbeeld 5. Objectenmodel netwerktopologie")
+
 In onderstaande figuur is verder ingezoomd op de kaart met de verschillende features ((schaal 1:188).  \
 Van de objecten van het type _UtilityLink_ en _Appurtenance_ is het `gml:id` aangegeven. Dit zijn respectievelijk de links en nodes van het topologisch netwerkmodel. Met de groene pijl wordt de richting (start -> end) gesuggereerd.
 
@@ -66,7 +70,7 @@ Van de objecten van het type _UtilityLink_ en _Appurtenance_ is het `gml:id` aan
 <br>
 In de [dataspecificatie van IMKL v1.2.1](https://github.com/Geonovum/imkl2015/blob/master/informatiemodel/1.2.1/IMKL2015_Dataspecificatie_1.2.1.pdf) wordt het volgende over netwerktopologie aangegeven:
 
-- "_Al de uitiliteitsnetten zijn opgebouwd uit verbindingen en verbindingspunten die samen een
+- "_Al de utiliteitsnetten zijn opgebouwd uit verbindingen en verbindingspunten die samen een
 transportnetwerk vormen. De logica van de netwerken wordt beschreven middels een topologische-, of
 connectiviteitsmodel.  \
 IMKL2015 volgt een arc-node topologie om de logica van het netwerk te kunnen

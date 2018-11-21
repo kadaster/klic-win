@@ -1,5 +1,8 @@
 ﻿#### Toepassing IMKL - Overzicht wijzigingen
 
+14-11-2018
+- voorbeeld 5 toegevoegd: Toepassing netwerktopologie
+
 06-11-2018
 - toelichting op het gebruik van huisaansluitschetsen in het nieuwe IMKL
 
@@ -25,6 +28,10 @@
   - voorbeeldgebruik van IMKL-features met multi-geometrieen
   - ruimtelijk schema toegevoegd
   - extra validatie voor lablepositie bij _Maatvoering_ en _Annotatie_
+
+11-07-2018  
+- voorbeeld 4 toegevoegd: Utiliteitsnet met nilReason
+- voorbeeld 6 toegevoegd: Utiliteitsnet met EV-vlak en donut
 
 07-03-2018
 - inhoudsopgave in README

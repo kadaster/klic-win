@@ -377,7 +377,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
     "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
     "bronhoudercode" : "nbact2",
     "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
-    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biLeveringSamengesteld",
+    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biGereedVoorSamenstellenProduct",
     "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
     "datumBevestigingOntvangen" : "2017-11-03T11:05:31+01:00",
     "mutatieDatum":"2017-11-03T11:05:31.932+01:00"
@@ -466,6 +466,19 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
     },
     "startDatum" : "2017-11-13",
     "eindDatum" : "2017-11-22",
+    "huisaansluitingAdressen":[{
+       "openbareRuimteNaam":"Laan van Westenenk",
+       "postcode":"7334DP",
+       "huisnummer":"701",
+       "woonplaatsNaam":"Apeldoorn",
+       "BAGidAdresseerbaarObject": "0200010000130331"
+	}, {
+       "openbareRuimteNaam":"Evert van 't Landstraat",
+       "postcode":"7334DR",
+       "huisnummer":"15",
+       "woonplaatsNaam":"Apeldoorn",
+       "BAGidAdresseerbaarObject": "0200010003923183"
+    }],
     "graafpolygoon":{
         "type":"Polygon",
         "crs":{
@@ -475,20 +488,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
             }
         },
         "coordinates":[ [ [ 153606.0, 391101.0 ], [ 153594.0, 391095.0 ], [ 153602.0, 391080.0 ], [ 153622.0, 391094.0 ], [ 153606.0, 391101.0 ] ] ]
-    },
-    "huisaansluitingAdressen":[{
-       "openbareRuimteNaam":"Laan van Westenenk",
-       "postcode":"7334DP",
-       "huisnummer":"701",
-       "woonplaatsNaam":"Apeldoorn",
-       "BAGidAdresseerbaarObject": "0200010000130331"
-    }, {
-       "openbareRuimteNaam":"Evert van 't Landstraat",
-       "postcode":"7334DR",
-       "huisnummer":"15",
-       "woonplaatsNaam":"Apeldoorn",
-       "BAGidAdresseerbaarObject": "0200010003923183"
-    }]
+    }
 }
 ```
 

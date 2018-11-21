@@ -25,6 +25,9 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
 
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd. (ID 3411)
+
 **Bug-fixes**:
 - nader te bepalen 
 
@@ -46,7 +49,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigd. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231)
 - De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
 - Het veld `giAannvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
-- BeheerdersInformatieleveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
+- BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
 
 **Bug-fixes**:
 - nader te bepalen 
