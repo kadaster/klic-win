@@ -1,10 +1,36 @@
 ﻿# Release notes
 
+### 22 november 2018
+
+**Huisaansluitschetsen**:
+
+Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
+- Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
+	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
+	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
+	- Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
+
+
+Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
+<br>
+
+**Keten Acceptatietest Bevindingen**:
+- Uitlevering (Zip) aanpassing: Markering Voorzorgsmaatregelen thema’s in leveringsbrief (weergeven in rood). (ID 3244)
+- Uitlevering (Zip) Bugfix: In de leveringsbrief wordt nu altijd correct vermeld dat de netbeheerder heeft geleverd. (ID 3259)
+- Uitlevering (Zip) Bugfix: Contactinformatie van Klassieke NB wordt in het LI.xml nu correct weergegeven. (ID 3293)
+- Uitlevering (Zip) Bugfix: Visualisatie van labels DiepteTovMaaiveld en DiepteNAP (ID 3376)
+- Bugfix: Een probleem die op kon treden tijdens het produceren is opgelost. (ID 3333)
+
+**Synchronisatie API**:
+- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
+
+------------------------
 ### 9 november 2018
 
 **Klic-viewer**:
-Er is een nieuw versie (4.3) beschikbaar van de Klic-viewer.
+- Er is een nieuw versie (4.3) beschikbaar van de Klic-viewer.
 
+------------------------
 ### 7 november 2018
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
