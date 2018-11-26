@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 8 november 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 26 november 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -35,7 +35,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio december 2018
+## Planning voor release - medio december 2018 (verwacht 17 december)
 	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
  
@@ -52,14 +52,14 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin december 2018
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+## Planning voor release - begin december 2018 (verwacht 5 december)
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen per 26 november beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Huisaansluitschetsen**:
 
 Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
-- Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen.
+- Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen. Soms is één unieke adres gerelateerd aan meerdere adresseerbare objecten in de Basisregistratie Adressen en Gebouwen (BAG). De telling van het maximum (100) is gebaseerd op adresseerbare objecten. (ID 3246, ID 3337, ID 3338, ID 3339, ID 3340, ID 3341)
 
 
 Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
@@ -69,8 +69,11 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - De API's voor GebiedinformatieLevering (voor AT) en BeheerdersinformatieLevering (voor netbeheerders en AT) worden nu gesorteerd met oplopende datum. (ID 3319)
 - Documentatie van de API-sprecificatie (OAS, Swagger) van Beheerdersinformatie Services is geactualiseerd.
 
+**Bug-fixes KLIC-WIN (in de NTD)**:
+- Diverse performance verbeteringen. (ID 3272)
+
 --------------------------------------------------------------------------------------
-## Planning voor release - medio november 2018
+## Planning voor release - 22 november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Huisaansluitschetsen**:
@@ -91,7 +94,11 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - Uitlevering (Zip) Bugfix: Contactinformatie van Klassieke NB wordt in het LI.xml nu correct weergegeven. (ID 3293)
 - Uitlevering (Zip) Bugfix: Visualisatie van labels DiepteTovMaaiveld en DiepteNAP (ID 3376)
 - Bugfix: Een probleem die op kon treden tijdens het produceren is opgelost. (ID 3333)
+- Bugfix: Geen excepties meer bij calamiteitenmelding met eisvoorzorgsmaatregel (EV). (ID 3418)
 
+**B2B-koppeling BMKL 2.0**:
+- In de BeheerdersinformatieAanvragen API is er voor de voor biProductiestatus een interne tussenstatus geïntroduceerd: `biGereedVoorLevering`.</br>
+  De volgende waarden zijn nu mogelijk voor de biProductiestatus: `biWachtOpAntwoord`, `biInAanlevering`, `biOphalenUitCV`, `biGereedVoorLevering`, `biGereedVoorSamenstellenProduct`. (ID 2844, ID 3431)
 
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Diverse performance verbeteringen. (ID 2844, ID 3107, ID 3195, ID 3272)
@@ -101,7 +108,7 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin november 2018
+## Planning voor release - 7 november 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren communicatie gegevens**: Dienst onder Mijn Kadaster voor netbeheerders en de serviceproviders
@@ -139,7 +146,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Diverse performance verbeteringen. (ID 2338, ID 2687, ID 3277)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind oktober 2018
+## Planning voor release - 29 oktober 2018
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Beheren Belangen**:

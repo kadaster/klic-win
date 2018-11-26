@@ -1,10 +1,11 @@
 ﻿# Release notes
 
 ### 22 november 2018
+	In de NTD-omgeving zijn de wijzigingen per 26 november beschikbaar.
 
 **Huisaansluitschetsen**:
 
-Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
+Het proces rondom de aanvraag en registratie van HAS is wijzigd:
 - Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
 	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
 	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
@@ -20,6 +21,15 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - Uitlevering (Zip) Bugfix: Contactinformatie van Klassieke NB wordt in het LI.xml nu correct weergegeven. (ID 3293)
 - Uitlevering (Zip) Bugfix: Visualisatie van labels DiepteTovMaaiveld en DiepteNAP (ID 3376)
 - Bugfix: Een probleem die op kon treden tijdens het produceren is opgelost. (ID 3333)
+- Bugfix: Geen excepties meer bij calamiteitenmelding met eisvoorzorgsmaatregel (EV). (ID 3418)
+
+**B2B-koppeling BMKL 2.0**:
+- In de BeheerdersinformatieAanvragen API is er voor de voor biProductiestatus een interne tussenstatus geïntroduceerd: `biGereedVoorLevering`.</br>
+  De volgende waarden zijn nu mogelijk voor de biProductiestatus: `biWachtOpAntwoord`, `biInAanlevering`, `biOphalenUitCV`, `biGereedVoorLevering`, `biGereedVoorSamenstellenProduct`. (ID 2844, ID 3431)
+
+**Bug-fixes KLIC-WIN (in de NTD)**:
+- Diverse performance verbeteringen. (ID 2844, ID 3107, ID 3195, ID 3272)
+- Aanleveren beheerdersinformatie houdt nu niet meer de status "Wordt gevalideerd". (ID 3316)
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
