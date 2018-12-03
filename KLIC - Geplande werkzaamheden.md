@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 november 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 29 november 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -32,6 +32,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Planning voor release - eind december 2018
 	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B-koppeling BMKL 2.0**:
+- BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
+
+**Bug-fixes**:
 - nader te bepalen 
 
 --------------------------------------------------------------------------------------
@@ -43,13 +48,19 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
 **B2B-koppeling BMKL 2.0**:
-- Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigd. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231)
+- Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigt. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231, ID 3353)
 - De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
 - Het veld `giAanvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
-- BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
+
+**Keten Acceptatietest Bevindingen**:
+- Uitlevering (Zip) Bugfix: In de LI.xml wordt nu maar een keer naar één bijlage verwezen. (ID 3438)
+- Uitlevering (Zip) Bugfix: Bij het bekijken van de LI.pdf kwam soms een pop-up over mogelijk geen correcte weergave. Dit is opgelost. (ID 3429)
+- Uitlevering (Zip) Bugfix: De rotatiehoekSymbool van DiepteNap en DiepeTovMaaiveld wordt nu getoond in png. (ID 3412)
 
 **Bug-fixes**:
-- nader te bepalen 
+- Weer mogelijk voor nieuwe netbeheerder om belangen aan te maken. (ID 3404)
+- Performance verbetering. (ID 3113)
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin december 2018 (verwacht 5 december)
