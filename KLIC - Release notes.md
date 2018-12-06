@@ -1,5 +1,16 @@
 ﻿# Release notes
 
+
+### 5 december 2018
+
+**B2B-koppeling BMKL 2.0**:
+- De API's voor GebiedinformatieLevering (voor AT) en BeheerdersinformatieLevering (voor netbeheerders en AT) worden nu gesorteerd met oplopende datum. (ID 3319)
+- Documentatie van de API-sprecificatie (OAS, Swagger) van Beheerdersinformatie Services is geactualiseerd.
+
+**Bug-fixes KLIC-WIN (in de NTD)**:
+- Diverse performance verbeteringen. (ID 3272)
+
+------------------------
 ### 22 november 2018
 	In de NTD-omgeving zijn de wijzigingen per 26 november beschikbaar.
 
