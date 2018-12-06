@@ -1,4 +1,4 @@
-# Authenticatie via OAuth voor de KLIC API's
+﻿# Authenticatie via OAuth voor de KLIC API's
 
 De KLIC REST API's zijn beveiligd middels de [OAuth 2.0](https://oauth.net/2/) specificatie.
 Dit document biedt een handleiding voor het aansluiten op de KLIC API's met OAuth.
@@ -18,30 +18,42 @@ Bij elk request naar een API endpoint moet een access token in de header van het
 1. Client Applicatie aanmelden. Dit moet éénmalig per client apllicatie gedaan worden.   
 2. Authorization token opvragen. Dit moet éénmalig per gebruiker gedaan worden.
 3. Access token opvragen. Dit token geeft toegang tot de API. Dit token is één uur geldig en zal daarna ververst moeten worden.  
-4. Access token verversen. Als het access token verlopen is kan deze vervest worden. Daarvoor hoeven stap 1 t/m 3 niet opnieuw doorlopen te worden.
+4. Access token verversen. Als het access token verlopen is kan deze ververst worden. Daarvoor hoeven stap 1 t/m 3 niet opnieuw doorlopen te worden.
 <img src="images/oauth_klic.png" />
 
 #### Client Applicatie aanmelden
 
-Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden bij het kadaster. Dit kan via een formulier op de kadaster website. Dit formulier vind u op https://formulieren.kadaster.nl/klic-oauth  
+Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden bij het kadaster. Dit kan via een formulier op de kadaster website. Dit formulier vindt u op https://formulieren.kadaster.nl/klic-oauth.
 
-Na goedkeuring van de aanvraag krijgt u een client_id en client_secret
+Na goedkeuring van de aanvraag krijgt u een client_id en client_secret.
 
-U dient eerst een client registratie aan te vragen voor NTD. Na een succesvolle test in NTD kunt u een nieuwe client registratie aanvragen voor de productie omgeving.
+U dient eerst een client registratie aan te vragen voor de Netbeheerder Testdienst (NTD). Na een succesvolle test in de NTD kunt u een client registratie aanvragen voor de productieomgeving.
 
 #### Scopes
 
-Voor de klic API kennen we de volgende scopes:
+Voor de KLIC API kennen we voor de productieomgeving de volgende scopes:
 
-|Scope                                  |Omschrijving	                                                                    |
-|---------------------------------------|-----------------------------------------------------------------------------------|	
-|klic.ntd                               |Toegang tot de 'Netbeheerder Test Dienst' (NTD).                                         |
-|klic.centraal                          |Actualiseren van netinfo, documenten, voorzorgsmaatregelen tbv centrale voorziening|
-|klic.gebiedsinformatieaanvraag.readonly|GIA's opvragen (eigen GIA of GIA waarbij requester belanghebbend is)	            |
-|klic.beheerdersinformatie              |Eigen beheerderinformatie aanleveren en inzien (decentraal)	                    |
-|klic.beheerdersinformatie.readonly     |Eigen beheerdersinformatie inzien	                                                |
+|Scope                                      |Omschrijving	                                                                           |
+|-------------------------------------------|------------------------------------------------------------------------------------------|	
+|klic.centraal                              |Actualiseren van netinformatie, documenten, voorzorgsmaatregelen tbv centrale voorziening |
+|klic.gebiedsinformatieaanvraag.readonly    |Opvragen gebiedsinformatie-aanvragen (door aanvrager of belanghebbende beheerder)	       |
+|klic.beheerdersinformatie                  |Aanleveren en opvragen eigen beheerdersinformatie (decentraal)	                           |
+|klic.beheerdersinformatie.readonly         |Inzien eigen beheerdersinformatie                                                         |
+|klic.toezicht                              |Inzien gebiedsdinformatie en beheerdersinformatie                                         |
 
-De scope klic.ntd geeft toegang tot de NTD. Deze scope moet dus toegevoegd worden voor testen in de NTD. De scope klic.ntd mag niet gebruikt worden bij requests naar de productie omgeving.  
+Voor de Netbeheerder Testdienst (NTD) kennen onderstaande corresponderende scopes:
+
+|Scope (NTD)                                |Omschrijving	                                                                           |
+|-------------------------------------------|------------------------------------------------------------------------------------------|	
+|klic.ntd.centraal                          |Actualiseren van netinformatie, documenten, voorzorgsmaatregelen tbv centrale voorziening |
+|klic.ntd.gebiedsinformatieaanvraag.readonly|Opvragen gebiedsinformatie-aanvragen (door aanvrager of belanghebbende beheerder)	       |
+|klic.ntd.beheerdersinformatie              |Aanleveren en opvragen eigen beheerdersinformatie (decentraal)	                           |
+|klic.ntd.beheerdersinformatie.readonly     |Inzien eigen beheerdersinformatie                                                         |
+|klic.ntd.toezicht                          |Inzien gebiedsdinformatie en beheerdersinformatie                                         |
+
+De klic.ntd.*-scopes geven toegang tot de Netbeheerder Testdienst (NTD). Deze scope moet dus toegevoegd worden voor testen in de NTD.  \
+Deze klic.ntd.*-scopes mogen niet gebruikt worden bij requests naar de productieomgeving.
+
 
 #### Authorization token opvragen
 Rechten voor gebruik van de API endpoints zijn gekoppeld aan mijn kadaster accounts. De gebruiker zal de client applicatie hiervoor éénmalig toestemming moeten geven door in te loggen via mijn kadaster.  
@@ -51,7 +63,7 @@ Ga naar: https://authorization.kadaster.nl/auth/oauth/v2/authorize?response_type
 
 De gebruiker wordt daarna doorgestuurd naar de redirect_uri. Uit de request parameters kan de authorization code gehaald worden.
 Bijvoorbeeld:    
-http://localhost:14057/authorize/?code=42283687-7c09-4018-8a7a-9e9533366dbb&scope=klic.ntd  
+http://localhost:14057/authorize/?code=42283687-7c09-4018-8a7a-9e9533366dbb&scope=klic.ntd.centraal  
 Deze code is 30 seconden geldig, haal daarom direct daarna een access code op.  
 
 #### Access token opvragen
@@ -66,7 +78,7 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
     "token_type": "Bearer",
     "expires_in": 3600,
     "refresh_token": "a413b322-59ab-4573-dd0b-000547d929b3",
-    "scope": "klic.beheerdersinformatie klic.gebiedsinformatie.readonly"
+    "scope": "klic.ntd.centraal"
 }
 ```
 Dit access token en refresh token moet door de client apllicatie op een veilige manier bewaard worden.
@@ -77,7 +89,7 @@ Een voorbeeld van een API call met access token via curl.
 ```sh
 curl
 --header 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
-https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/?biNotificatieStatus=open&limiet=50
+https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerder/?aanvraagSoort=graafmelding&biNotificatieStatus=open&limiet=50
 ```
 
 #### Access token verversen
@@ -91,11 +103,9 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
     "token_type": "Bearer",
     "expires_in": 3600,
     "refresh_token": "29786b93-24ca-4e91-9c8c-b87715f48ba9",
-    "scope": "klic.beheerdersinformatie klic.gebiedsinformatie.readonly"
+    "scope": "klic.ntd.centraal"
 }
 ```
 ### Voorbeeld client applicatie
 
-Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](Voorbeelden/KlicOauthExample).
-
-
+Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](./Voorbeeldapllicatie_oauth.net/KlicOauthExample).
