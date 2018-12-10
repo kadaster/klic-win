@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 10 december 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -18,20 +18,12 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - januari 2019
+## Planning voor release - medio januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Documentenbeheer**:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
-
-**Bug-fixes**:
-- nader te bepalen 
-
---------------------------------------------------------------------------------------
-## Planning voor release - eind december 2018
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
-Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B-koppeling BMKL 2.0**:
 - BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
@@ -50,7 +42,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio december 2018 (verwacht 14 december)
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen ongeveer 2 weken eerder beschikbaar.
+	In de KetenAcceptatieTest-omgeving zijn de wijzigingen per 6 december beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
  
 **Synchronisatie API**:
@@ -61,6 +53,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
 - Het veld `giAanvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
 - Wanneer je het BIL zip-bestand ophaalt middels de API, kijgt het bestand een naam die is opgebouwd uit "BeheerdersinformatieLevering", het Klicmeldnummer en de bronhoudercode. Bijvoorbeeld: `BeheerdersinformatieLevering_19G003456_kl4141.zip`. (ID 3448)
+- Bugfix: Als er bij het opvragen van BeheerdersinformatieAanvraag, ook een giAanvraagId wordt opgegeven, wordt vanaf nu alleen de BeheerdersinformatieAanvraag gefilterd met de opgegeven giAanvraagId. (ID 3468)
+
 
 **Keten Acceptatietest Bevindingen**:
 - Uitlevering (Zip) Bugfix: In de LI.xml wordt nu maar een keer naar één bijlage verwezen. (ID 3438)
