@@ -1,6 +1,17 @@
 ﻿# Release notes
 
+### 10 december 2018
 
+*Huisaansluitschetsen**: <i>(let op: NTD volgt later)</i>
+
+Het proces rondom de aanvraag en registratie van HAS gaat wijzigen:
+- Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen. Soms is één unieke adres gerelateerd aan meerdere adresseerbare objecten in de Basisregistratie Adressen en Gebouwen (BAG). De telling van het maximum (100) is gebaseerd op adresseerbare objecten. (ID 3246, ID 3337, ID 3338, ID 3339, ID 3340, ID 3341)
+
+
+Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
+<br>
+
+------------------------
 ### 5 december 2018
 
 **B2B-koppeling BMKL 2.0**:

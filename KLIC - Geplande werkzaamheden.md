@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 11 december 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -37,8 +37,21 @@ Voor deze release zijn de volgende onderwerpen gepland:
         - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
         - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
 
-**Bug-fixes**:
-- nader te bepalen 
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 januari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Nieuwe ZIP-structuur**:
+Vanaf 2 januari wordt het ZIP-bestand uitgeleverd met de nieuwe structuur.  \
+Zie voor meer informatie over de nieuwe structuur [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren).  \
+Hier is ook de presentatie 'WION levering - producten 2018-05-16.ppsx' te vinden.  \
+De leveringen met de nieuwe structuur zijn alleen te bekijken met versie 4.3 van de Klic-viewer. Met deze versie van de Klic-viewer zijn zowel de oude, als de nieuwe leveringen te bekijken.
+
+
+**Vector-aanlevering**:
+Op 7 januari staat gepland om de eerste netbeheerder over te sluiten op het nieuwe aanleveringsformaat (IMKL 1.2.1). Netbeheerders die aanleveren via dit formaat, leveren hun netinformatie aan als geo-objecten (features, vectoren). De nieuwe ZIP-structuur, die vanaf 2 januari gebruikt wordt, is hiervoor geschikt.
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio december 2018 (verwacht 14 december)
@@ -53,7 +66,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
 - Het veld `giAanvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
 - Wanneer je het BIL zip-bestand ophaalt middels de API, kijgt het bestand een naam die is opgebouwd uit "BeheerdersinformatieLevering", het Klicmeldnummer en de bronhoudercode. Bijvoorbeeld: `BeheerdersinformatieLevering_19G003456_kl4141.zip`. (ID 3448)
-- Bugfix: Als er bij het opvragen van BeheerdersinformatieAanvraag, ook een giAanvraagId wordt opgegeven, wordt vanaf nu alleen de BeheerdersinformatieAanvraag gefilterd met de opgegeven giAanvraagId. (ID 3468)
+- Bugfix: Als er bij het opvragen van BeheerdersinformatieAanvraag ook een giAanvraagId wordt opgegeven, wordt vanaf nu alleen de BeheerdersinformatieAanvraag gefilterd met de opgegeven giAanvraagId. (ID 3468)
 
 
 **Keten Acceptatietest Bevindingen**:
@@ -67,8 +80,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin december 2018 (verwacht 10 december)
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen per 26 november beschikbaar.
+## Planning voor release - 10 december
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Huisaansluitschetsen**: <i>(let op: NTD volgt later)</i>
