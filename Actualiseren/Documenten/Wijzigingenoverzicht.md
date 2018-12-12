@@ -1,5 +1,10 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+12-12-2018
+- Handleiding B2B-koppeling actualiseren documenten aangepast:
+  - overzicht basispaden voor endpoints BMKL API's in eigen map
+  - basispaden voor endpoints geactualiseerd
+
 25-07-2018
 * Nieuw voorbeeld 5: gebruik maken van bijlagen van het type `algemeen` en `nietBetrokken` t.a.v.
     - Actualiseren van documenten met deze bijlagen

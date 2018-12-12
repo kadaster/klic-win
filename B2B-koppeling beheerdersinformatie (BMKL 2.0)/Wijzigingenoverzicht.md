@@ -1,5 +1,10 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+12-12-2018
+- Handleiding B2B-koppeling beheerdersinformatie BMKL2.0 aangepast:
+  - overzicht basispaden voor endpoints BMKL API's in eigen map
+  - basispaden voor endpoints geactualiseerd
+
 14-11-2018
 * Voorbeelden 1 t/m 4 aangevuld met gebruik `websiteKlic`
 

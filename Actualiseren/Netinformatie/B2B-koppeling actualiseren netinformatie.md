@@ -150,24 +150,10 @@ De applicatie biedt een overzicht van de endpoints van de verschillende API’s 
 Voor de “Upload servlet” API is de PUT operatie niet uit te voeren vanuit de browser.
 
 ### Endpoints
+In het [overzicht met endpoints KLIC API's](../../API%20management/Overzicht%20endpoints%20KLIC%20APIs.md) wordt een overzicht gegeven van de basispaden voor de endpoints die door KLIC API's worden gebruikt.
 
-De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s.  \
-De service "/aanleveringen/netinformatie" wordt bijvoorbeeld voluit
-- voor de productieomgeving KLIC:  \
-  "https://service10.kadaster.nl/klic/api/v2/aanleveringen/netinformatie"
-- voor de Netbeheerder Testdienst (NTD):  \
-  "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringen/netinformatie"
-
-De API voor het (in fragmenten) uploaden van data ("Upload servlet") bevindt zich
-- voor de productieomgeving KLIC:  \
-  "https://service10.kadaster.nl/klic/api/v2/web/netinformatie/upload"
-- voor de Netbeheerder Testdienst (NTD):  \
-  "https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/upload"
-	
-Het OAuth Authorization endpoint voor de productie-omgevingen is:
-- "https://authorization.kadaster.nl/auth/oauth/v2/"
-
-In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de NTD-omgeving.
+De endpoints die in onderstaande voorbeelden worden gebruikt, zijn relatief ten opzichte van deze basispaden.  \
+In de voorbeelden wordt uitgegaan van de API's op de NTD-omgeving.
 
 ### Authenticatie
 
@@ -303,7 +289,7 @@ curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/aanleveringe
 **Response:**  
 ```
 HTTP/1.1 200 OK
-Location: https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/upload/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+Location: https://service10.kadaster.nl/klic/ntd/actualiseren/upload/api/v2/web/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
 ```  
 _Figuur 6 - Het CURL-commando voor het aanmelden van een aanlevering en een deel van de response_
 
@@ -353,7 +339,7 @@ De parameters vertalen zich naar het volgende CURL-commando:
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/upload/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/upload/api/v2/web/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
  -v
  -X PUT
  -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'
@@ -403,7 +389,7 @@ Deze header maakt het ook mogelijk om een upload te hervatten wanneer er - om wa
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/actualiseren/api/v2/web/netinformatie/upload/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
+curl https://service10.kadaster.nl/klic/ntd/actualiseren/upload/api/v2/web/upload?upload_id=57eca5b8-543b-4f42-b4d4-e52bed10ab84
  -v
  -X PUT
  -H 'Authorization: Bearer 9e25ab45-82a4-4f9e-8bf6-b9ef0eb7568e'

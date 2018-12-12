@@ -190,15 +190,10 @@ de meeste endpoints meteen uit te proberen via de aangeboden interface. Uitzonde
 een browser of via CURL moeten worden uitgevoerd, aangezien Swagger ZIP responses niet ondersteunt.
 
 ### Endpoints
+In het [overzicht met endpoints KLIC API's](../API%20management/Overzicht%20endpoints%20KLIC%20APIs.md) wordt een overzicht gegeven van de basispaden voor de endpoints die door KLIC API's worden gebruikt.
 
-De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. \
-De service "/gebiedsinformatieAanvragen" wordt bijvoorbeeld voluit:
-- voor de productieomgeving KLIC:  \
-  "https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen"
-- voor de Netbeheerder Testdienst (NTD):  \
-  "<https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen>"
-
-In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de NTD-omgeving.
+De endpoints die in onderstaande voorbeelden worden gebruikt, zijn relatief ten opzichte van deze basispaden.  \
+In de voorbeelden wordt uitgegaan van de API's op de NTD-omgeving.
 
 ### Authenticatie
 De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor [Authenticatie via OAuth](../API%20management/Authenticatie_via_oauth.md).
