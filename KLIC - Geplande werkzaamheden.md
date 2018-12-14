@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 11 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 13 december 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -25,8 +25,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
 
-**B2B-koppeling BMKL 2.0**:
-- BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
 
 **Huisaansluitschetsen**:
 - In de productie omgeving is begin december het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 3246). Het betreft:
@@ -54,12 +52,11 @@ Op 7 januari staat gepland om de eerste netbeheerder over te sluiten op het nieu
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio december 2018 (verwacht 14 december)
-	In de KetenAcceptatieTest-omgeving zijn de wijzigingen per 6 december beschikbaar.
+## Planning voor release - 13 december 2018
 Voor deze release zijn de volgende onderwerpen gepland:
  
 **Synchronisatie API**:
-- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
+- Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie. (ID 3409, ID 3492)
 
 **B2B-koppeling BMKL 2.0**:
 - Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigt. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231, ID 3353)
@@ -67,6 +64,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Het veld `giAanvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
 - Wanneer je het BIL zip-bestand ophaalt middels de API, kijgt het bestand een naam die is opgebouwd uit "BeheerdersinformatieLevering", het Klicmeldnummer en de bronhoudercode. Bijvoorbeeld: `BeheerdersinformatieLevering_19G003456_kl4141.zip`. (ID 3448)
 - Bugfix: Als er bij het opvragen van BeheerdersinformatieAanvraag ook een giAanvraagId wordt opgegeven, wordt vanaf nu alleen de BeheerdersinformatieAanvraag gefilterd met de opgegeven giAanvraagId. (ID 3468)
+- BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
 
 
 **Keten Acceptatietest Bevindingen**:
