@@ -16,7 +16,7 @@ In dit document wordt toegelicht hoe deze API gebruikt kan worden door AT voor h
         - [Endpoints](#endpoints)
         - [Authenticatie](#authenticatie)
     - [Pagineren](#pagineren)
-- [Use casemodel datasynchronisatie met BMKL API](#use-casemodel-datasynchronisatie-met-bmkl-api)
+- [Use casemodel datasynchronisatie met BMKL API](#use-casemodel-data-synchronisatie-met-bmkl-api)
 - [Voorbeeldberichten per endpoint](#voorbeeldberichten-per-endpoint)
     - [gebiedsinformatieAanvragen synchroniseren](#gebiedsinformatieaanvragen-synchroniseren)
     - [beheerdersinformatieAanvragen synchroniseren](#beheerdersinformatieaanvragen-synchroniseren)
@@ -53,14 +53,10 @@ De objecten van deze API zijn ondergebracht in onderstaande url-structuur:
 |                                      | /[__gebiedsinformatieLeveringen__](#gebiedsinformatieleveringen-synchroniseren)/[id]    | /__terugmeldingen__/[id]/__beheerdersTerugmeldingen__/[id] |
 
 ### Endpoints
+In het [overzicht met endpoints KLIC API's](../API%20management/Overzicht%20endpoints%20KLIC%20APIs.md) wordt een overzicht gegeven van de basispaden voor de endpoints die door KLIC API's worden gebruikt.
 
-De endpoints die gebruikt worden in dit document zijn relatief ten opzichte van de betreffende API’s. \
-De service "/gebiedsinformatieAanvragen" wordt bijvoorbeeld voluit \
-voor de productieomgeving KLIC:
-        "https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen" \
-voor de Netbeheerder Testdienst (NTD):
-        "<https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen>". \
-In de voorbeelden in deze documentatie wordt uitgegaan van de API's op de productieomgeving KLIC.
+De endpoints die in onderstaande voorbeelden worden gebruikt, zijn relatief ten opzichte van deze basispaden.  \
+In de voorbeelden wordt uitgegaan van de API's op de productieomgeving KLIC.
 
 ### Authenticatie
 De KLIC REST API's zijn beveiligd middels de OAuth 2.0 specificatie. Zie daarvoor
@@ -75,10 +71,10 @@ Voor synchronisatie wordt pagineren op basis van een mutatiedatum gebruikt. In d
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "collection":[
@@ -126,10 +122,10 @@ Content-Type: application/json
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/api/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:15:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:15:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "gebiedsinformatieAanvragen":[
@@ -148,22 +144,11 @@ Content-Type: application/json
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Laan van Westenenk",
                     "huisnummer":"701",
-                    "huisletter": "string",
-                    "huisnummertoevoeging": "string",
-                    "woonplaatsNaam":"APELDOORN",
                     "postcode":"7334DP",
-                    "landcode": "string",
-                    "bagidAdresseerbaarObject": "string"
+                    "woonplaatsNaam":"APELDOORN"
                 },
-                "postbusAdres": {
-                    "postbusnummer": "string",
-                    "woonplaatsNaam": "string",
-                    "postcode": "string",
-                    "landcode": "string"
-                }
             },
          },
-         "referentie" : "FTO regressie Graafmelding",
          "opdrachtgever":{
             "contact":{
                 "naam":"Kadaster",
@@ -175,61 +160,29 @@ Content-Type: application/json
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Hofstraat",
                     "huisnummer":"110",
-                    "huisletter": "string",
-                    "huisnummertoevoeging": "string",
-                    "woonplaatsNaam":"APELDOORN",
                     "postcode":"7311KZ",
-                    "landcode": "string",
-                    "bagidAdresseerbaarObject": "string"
+                    "woonplaatsNaam":"APELDOORN"
                 },
-                "postbusAdres": {
-                    "postbusnummer": "string",
-                    "woonplaatsNaam": "string",
-                    "postcode": "string",
-                    "landcode": "string"
-                }
             },
         },
          "aanvraagSoort":"http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding",
          "aanvraagDatum":"2018-07-01T19:05:22+02",
          "mutatieDatum":"2018-07-01T19:05:22.323+02",
          "giAanvraagStatus":"https://api.kadaster.nl/klic/v2/waarde/giAanvraagStatussen/giOpen",
-         "voorbereidingVerzoekCoordinatie": false,
-         "voorbereidingVerzoekMedegebruik": false,
          "soortWerkzaamheden":[
             "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/funderingswerk",
             "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/woningbouw"
          ],
-         "omschrijvingWerkzaamheden":"string",
          "locatieWerkzaamheden":{
                "openbareRuimteNaam":"Laan van Westenenk",
                "huisnummer":"701",
-               "huisletter": "string",
-               "huisnummertoevoeging": "string",
-               "woonplaatsNaam":"Apeldoorn",
                "postcode":"7334DP",
+               "woonplaatsNaam":"Apeldoorn",
                "BAGidAdresseerbaarObject": "0200010000130331"
          },
          "startDatum":"2018-08-01",
          "eindDatum":"2018-08-08",
-         "huisaansluitingAdressen":[{
-               "openbareRuimteNaam":"Laan van Westenenk",
-               "huisnummer":"701",
-               "huisletter": "string",
-               "huisnummertoevoeging": "string",
-               "woonplaatsNaam":"Apeldoorn",
-               "postcode":"7334DP",
-               "BAGidAdresseerbaarObject": "0200010000130331"
-            }, {
-               "openbareRuimteNaam":"Evert van 't Landstraat",
-               "huisnummer":"15",
-               "huisletter": "string",
-               "huisnummertoevoeging": "string",
-               "woonplaatsNaam":"Apeldoorn",
-               "postcode":"7334DR",
-               "BAGidAdresseerbaarObject": "0200010003923183"
-            }],
-         "graafPolygoon":{
+         "graafpolygoon":{
             "type":"Polygon",
             "crs":{
                "type":"name",
@@ -290,67 +243,19 @@ Content-Type: application/json
                ]
             ]
          },
-         "orientatiePolygoon":{
-            "type":"Polygon",
-            "crs":{
-               "type":"name",
-               "properties":{
-                  "name":"EPSG:28992"
-               }
-            },
-            "coordinates":[
-               [
-                  [
-                     121070,
-                     486903
-                  ],
-                  [
-                     121095,
-                     486849
-                  ],
-                  [
-                     121220,
-                     486871
-                  ],
-                  [
-                     121480,
-                     486905
-                  ],
-                  [
-                     121507,
-                     487100
-                  ],
-                  [
-                     121564,
-                     487215
-                  ],
-                  [
-                     121539,
-                     4872260
-                  ],
-                  [
-                     121460,
-                     487288
-                  ],
-                  [
-                     121337,
-                     487331
-                  ],
-                  [
-                     121220,
-                     487338
-                  ],
-                  [
-                     121156,
-                     487308
-                  ],
-                  [
-                     121070,
-                     486903
-                  ]
-               ]
-            ]
-         }
+         "huisaansluitingAdressen":[{
+               "openbareRuimteNaam":"Laan van Westenenk",
+               "postcode":"7334DP",
+               "huisnummer":"701",
+               "woonplaatsNaam":"Apeldoorn",
+               "BAGidAdresseerbaarObject": "0200010000130331"
+            }, {
+               "openbareRuimteNaam":"Evert van 't Landstraat",
+               "postcode":"7334DR",
+               "huisnummer":"15",
+               "woonplaatsNaam":"Apeldoorn",
+               "BAGidAdresseerbaarObject": "0200010003923183"
+            }]
       }
    ]
 }
@@ -372,10 +277,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:55:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:55:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieAanvragen": [{
@@ -433,10 +338,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieLeveringen": [{
@@ -444,15 +349,15 @@ Content-Type: application/json
         "datumBeheerdersinformatieOntvangen": "2018-07-01T19:03:49+02",
         "mutatieDatum": "2018-07-01T19:03:49.248+02",
         "betrokkenBijAanvraag": "true",
-        "indicatieEisVoorzorgsmaatregel": "true",
+        "eisVoorzorgsMaatregel": "true",
         "geleverdeThemas" : [
             {
                 "thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning",
-                "indicatieEisVoorzorgsmaatregel": "false"
+                "eisVoorzorgsMaatregel": "false"
             },
             {
                 "thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/hoogspanning",
-                "indicatieEisVoorzorgsmaatregel": "true"
+                "eisVoorzorgsMaatregel": "true"
             },
         ]
     }, {
@@ -477,10 +382,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         },
         "next": {
-            "href": "https://api.kadaster.nl/klic/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         }
     },
     "gebiedsinformatieLeveringen": [{
