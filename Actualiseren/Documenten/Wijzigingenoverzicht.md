@@ -1,5 +1,8 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+18-12-2018
+* Documentatie over controles van documenten aangevuld
+
 12-12-2018
 - Handleiding B2B-koppeling actualiseren documenten aangepast:
   - overzicht basispaden voor endpoints BMKL API's in eigen map
