@@ -1,5 +1,12 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+18-12-2018
+* Documentatie over controles van voorzorgsmaatregelen uitgebreid:
+  - nieuwe validaties toegevoegd
+  - aanvulling met voorbeelden voor invullen XML-bestand met voorzorgsmaatregelen
+  - aanvulling met aandachtspunten die mogelijk wél van enig belang kunnen zijn voor de toepassing door de netbeheerder, maar waarop nú nog niet wordt gevalideerd
+* Kolomnamen van invulvelden EV-sjabloon (pdf) aangepast: onderscheid technisch naam invulveld en de logische naam (volgens IMKL 1.2)
+
 18-07-2018
 * Documentatie aangepast t.a.v. onderstaande gewijzigde functionaliteit:
   - Invulvelden die vaker in een sjabloon worden gebruikt, mogen nu ook met een suffix worden aangegeven;  \
