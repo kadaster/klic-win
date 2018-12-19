@@ -3,11 +3,30 @@
 De belangrijkste uitgangspunten met betrekking tot de documenten-validatie zijn:
 
 - Het upload-bestand is een zipbestand.
+
 - In het zipbestand zit exact 1 XML-bestand (ook wel de documentenbeheer.xml).  \
-  Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (meta-informatie).
+Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (meta-informatie).
+
+- Een aangeleverd document mag maximaal 8 MB groot zijn (uitgezonderd het XML-bestand met meta-informatie).
+
 - XSD-controle van het XML-bestand (meta-informatie).
-- Alle genoemde bestanden in het XML-bestand moeten aanwezig zijn in het zipbestand.
-- Type aangeleverde documenten: dit moet een PDF-document zijn (extensie .pdf).
-- `lokaalID` moet uniek zijn in documentenbeheer.xml: mag één keer voorkomen.
+
+- Alle genoemde documenten in het XML-bestand moeten aanwezig zijn in het zipbestand.
+
+- Type aangeleverde documenten: dit moet een PDF-document zijn (extensie .pdf).  \
+Dit moet dan ook als mediatype worden meegegeven als meta-informatie van het document.  \
+Voorbeeld:
+```xml
+        <document>
+            <documentID>
+                <namespace>nl.imkl</namespace>
+                <lokaalID>KL9999.EDI_aansluiting</lokaalID>
+            </documentID>
+            <bestandMediaType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/BestandMediaTypeValue/PDF"/>
+            <bestandsnaam>EDI_aansluiting.pdf</bestandsnaam>
+        </document>
+```
+
+- `lokaalID` moet uniek zijn in documentenbeheer.xml: de identificatie mag één keer voorkomen.
 - `documentID` moet juiste bronhoudercode bevatten.
 - Wanneer het document wél in het zipbestand, maar niét in het XML-bestand (meta-informatie) voorkomt: is niet blokkerend (warning).
