@@ -1,5 +1,11 @@
 ﻿#### Toepassing IMKL - Overzicht wijzigingen
 
+18-12-2018
+* Documentatie met toelichting over controles netinformatie aangepast:
+  - maximale bestandsgrootte zipbestand beheerdersinformatie
+  - wet WION -> wet WIBON
+  - onderscheid verduidelijkt tussen centrale en decentrale aanlevering
+
 14-11-2018
 - voorbeeld 5 toegevoegd: Toepassing netwerktopologie
 
