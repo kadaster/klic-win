@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 13 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 19 december 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -38,17 +38,67 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 januari 2019
+	Tijdens deze release is KLIC in de ochtend niet beschikbaar.
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Nieuwe ZIP-structuur**:
+**Nieuwe ZIP-structuur**:  \
 Vanaf 2 januari wordt het ZIP-bestand uitgeleverd met de nieuwe structuur.  \
 Zie voor meer informatie over de nieuwe structuur [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren).  \
 Hier is ook de presentatie 'WION levering - producten 2018-05-16.ppsx' te vinden.  \
 De leveringen met de nieuwe structuur zijn alleen te bekijken met versie 4.3 van de Klic-viewer. Met deze versie van de Klic-viewer zijn zowel de oude, als de nieuwe leveringen te bekijken.
 
 
-**Vector-aanlevering**:
+**Vector-aanlevering**:  \
 Op 7 januari staat gepland om de eerste netbeheerder over te sluiten op het nieuwe aanleveringsformaat (IMKL 1.2.1). Netbeheerders die aanleveren via dit formaat, leveren hun netinformatie aan als geo-objecten (features, vectoren). De nieuwe ZIP-structuur, die vanaf 2 januari gebruikt wordt, is hiervoor geschikt.
+
+
+**Tariefswijziging Klic-melding**:  \
+De [tariefswijziging die per 1 januari 2019](https://www.kadaster.nl/-/tarieven-per-1-januari-2019) van kracht is, wordt zichtbaar op het scherm getoond bij een Tracémelding. 
+
+
+**Synchronisatie API**:  \
+Voor Agentschap Telecom zijn de API’s live gezet om KLIC procesgegevens te synchroniseren met hun eigen registratie. 
+
+--------------------------------------------------------------------------------------
+## Planning voor release IMKL v1.2.1.2 - 13 december 2018
+Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op het IMKL.  \
+De voorgestelde wijzigingen zijn geaccordeerd door Werkgroep standaarden KLIC en het BAO KLIC.  \
+Voor deze IMKL-release zijn de volgende onderwerpen gepland:
+ 
+**[IMKL2015/visualisatie](https://github.com/Geonovum/imkl2015/tree/master/visualisatie)** (versie 1.2.1.2) en
+**[IMKL2015/symbool](https://github.com/Geonovum/imkl2015/tree/master/symbool)** (versie 1.2.1.2):
+- Aanpassingen van de visualisatie (en gebruikte symbolen) zijn beschreven in [IMKL2015-Handreiking-visualisatie_1.2.1.2.pdf](https://github.com/Geonovum/imkl2015/blob/master/visualisatie/1.2.1.2/IMKL2015-Handreiking-visualisatie_1.2.1.2.pdf)
+- Er zijn geen aanpassingen aan het UML-model of het gml-applicatieschema gedaan
+- Afgehandelde issues:
+  * [Issue 221](https://github.com/Geonovum/imkl2015-review/issues/221)  \
+Visualisatie van EV-gebieden is aangepast. Door gebruik te maken van een patroon (i.p.v. transparantie) blijft kabel- en leidinginformatie zichtbaar, ook bij meerdere, overlappende EV-gebieden.
+  * [Issue 223](https://github.com/Geonovum/imkl2015-review/issues/223)  \
+De visualisatie van de kop van een mantelbuis is aangepast. De kop eindigt nu op het einde van de geometrie van de mantelbuis.
+  * [Issue 224](https://github.com/Geonovum/imkl2015-review/issues/224)  \
+Het symbool en de grootte voor mof is aangepast (zie SLD).
+  * [Issue 225](https://github.com/Geonovum/imkl2015-review/issues/225)  \
+De grootte van de symbolen van overige leidingelementen (_Toren_, _Mast_, _Mangat_, _Kast_, _TechnischGebouw_) is aangepast.
+  * [Issue 226](https://github.com/Geonovum/imkl2015-review/issues/226)  \
+Ook de transparantie van de symbolen van overige leidingelementen is aangepast, om eigen geometrie te kunnen zien.
+  * [Issue 227](https://github.com/Geonovum/imkl2015-review/issues/227)  \
+Het aangrijpingspunt van het symbool voor een blaasgat op de leiding is verplaatst naar de onderkant.
+  * [Issue 230](https://github.com/Geonovum/imkl2015-review/issues/230)  \
+Het label met `dieptePeil` wordt nu (onderscheidend) getoond bij de features _DiepteTovMaaiveld_ en _DiepteNAP_.
+- Onderstaande [SLD's](https://github.com/Geonovum/imkl2015/tree/master/visualisatie/1.2.1.2) zijn aangepast:
+  * sld-aanduidingeisvoorzorgsmaatregel.xml
+  * sld-dieptenap.xml
+  * sld-dieptetovmaaiveld.xml
+  * sld-kast.xml
+  * sld-leidingelement.xml
+  * sld-mangat.xml
+  * sld-mantelbuis.xml
+  * sld-mast.xml
+  * sld-technischgebouw.xml
+  * sld-toren.xml
+- De volgende [iconen](https://github.com/Geonovum/imkl2015/tree/master/symbool/1.2.1.2/iconen) zijn aangepast: 
+  * dieptenap
+  * dieptetovmaaiveld
+- Map met [patronen](https://github.com/Geonovum/imkl2015/tree/master/symbool/1.2.1.2/patronen) is toegevoegd; fonts worden niet meer toegepast.
 
 
 --------------------------------------------------------------------------------------
@@ -100,6 +150,24 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes KLIC-WIN (in de NTD)**:
 - Diverse performance verbeteringen. (ID 3272)
+
+--------------------------------------------------------------------------------------
+## Planning voor release IMKL v1.2.1.1 - 3 december 2018
+Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op beschrijvingen van het IMKL.  \
+Voor deze IMKL-release zijn de volgende onderwerpen gepland:
+ 
+**[IMKL2015/regels](https://github.com/Geonovum/imkl2015/tree/master/regels)** (versie 1.2.1.1):
+- Aanpassingen van extra regels zijn beschreven in [IMKL2015 v 1.2.1.1_object-attributen-ExtraRegels.xlsx](https://github.com/Geonovum/imkl2015/blob/master/regels/1.2.1.1/IMKL2015%20v%201.2.1.1_object-attributen-ExtraRegels.xlsx);  \
+De aanpassingen zijn geel gemarkeerd in het document.
+- Er zijn geen aanpassingen aan het UML-model of het gml-applicatieschema gedaan
+- Afgehandelde issues:
+  * Tabblad _Annotatie_ mist attribuut `labelpositie` met extra regels. Zie [issue 212](https://github.com/Geonovum/imkl2015-review/issues/212)
+  * Bij tabblad _Maatvoering_ zijn extra regels toegevoegd bij attribuut `labelpositie`. Zie [issue 213](https://github.com/Geonovum/imkl2015-review/issues/213)
+  * Bij tabblad _Utiliteitsnet_ is afkomstklasse van attribuut `beginLifespanVersion` aangepast. Zie [issue 217](https://github.com/Geonovum/imkl2015-review/issues/217)
+  * Bij tabblad _Utiliteitsnet_ maar één keer attribuut `beginLifespanVersion`. Zie [issue 218](https://github.com/Geonovum/imkl2015-review/issues/218)
+  * Bij attribuut `currentStatus` (afkomst: _UtilityNetworkElement_) is nilReason niet toegestaan. Zie [issue 220](https://github.com/Geonovum/imkl2015-review/issues/220)  \
+Hierdoor worden netwerkelementen die hiervan overerven wél gevisualiseerd met de meegeleverde SLD.
+  * Bij tabblad _ExtraDetailinfo_ zijn aan de attributen `bestandLocatie` en `bestandMediaType` extra regels toegevoegd. Zie [issue 222](https://github.com/Geonovum/imkl2015-review/issues/222)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 22 november 2018
