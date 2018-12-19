@@ -3,12 +3,14 @@
 **Inhoudsopgave**
 
 - [Inleiding](#inleiding)
-  - [Centrale Voorziening](#centrale-voorziening)
-    - [Aanleveren gegevens](#aanleveren-gegevens)
+  - [Centrale voorziening](#centrale-voorziening)
+    - [Aanleveren netinformatie](#aanleveren-netinformatie)
   - [Decentrale aanlevering](#decentrale-aanlevering)
-    - [Aanleveren gegevens](#aanleveren-gegevens-1)
+    - [Aanleveren beheerdersinformatie](#aanleveren-beheerdersinformatie)
 - [Controles](#controles)
   - [Zipbestand eigenschappen](#zipbestand-eigenschappen)
+    - [Zipbestand centraal](#zipbestand-centraal)
+    - [Zipbestand decentraal](#zipbestand-decentraal)
   - [XML](#xml)
     - [Encoding, tekenset](#encoding-tekenset)
     - [XSD validatie](#xsd-validatie)
@@ -67,12 +69,16 @@ De IMKL2015 versie die het Kadaster gebruikt (1.2.1) staat gepubliceerd op https
 Het Kadaster beheert de centrale voorziening kabels en leidingen, waar de door de centrale netbeheerders aangeleverde netinformatie samenkomt.
 De aanlevering van netinformatie van een centrale netbeheerder bestaat mogelijk uit
 * alle gegevens over kabels en leidingen behorende bij een utiliteitsnet
+* referenties naar aanvullende documenten (_ExtraDetailinfo_-objecten) bij een utiliteitsnet;  \
+deze documenten worden getypeerd als `huisaansluiting`, `aansluiting`, `profielschets` of `overig`
 * eigen topografie (optioneel)
-* bijlagen van het type `algemeen` en/of `nietBetrokken` (optioneel)
+* referenties naar aanvullende bijlagen van het type `algemeen` en/of `nietBetrokken` ((_Bijlage_-objecten, optioneel)
 
-Om de goede verwerking van de centrale voorziening te kunnen garanderen, wordt een aangeleverd bestand technisch en functioneel gecontroleerd alvorens de gegevens in de centrale voorziening opgenomen worden.
+Om de goede verwerking van de centrale voorziening te kunnen garanderen, wordt een aangeleverd bestand technisch en functioneel gecontroleerd alvorens de gegevens in de centrale voorziening opgenomen worden.  \
+Documenten en/of bijlagen waar in de netinformatie naar wordt gerefereerd, worden in een separaat proces aangeleverd aan de centrale voorziening. Zie hiervoor "Actualiseren documenten".  \
+Informatie ten behoeve van de bepaling van voorzorgsmaatregelen wordt gelijktijdig meegegeven bij het actualiseren van netinformatie. Zie hiervoor "Actualiseren documenten".
 
-#### Aanleveren gegevens
+#### Aanleveren netinformatie
 
 Een centrale netbeheerder of serviceprovider kan op twee manieren netinformatie aanleveren:
 * In Mijn Kadaster is de functie _KLIC Actualiseren Netinformatie_ beschikbaar
@@ -82,40 +88,47 @@ In beide gevallen wordt de netinformatie aangeleverd in een zipbestand. De speci
 
 In het zipbestand staat in de root één XML-bestand conform de IMKL2015_wion XSD. Er zitten verder geen andere bestanden in het zipbestand.
 
-Het XML-bestand bevat altijd alle assets van de netbeheerder die van belang zijn voor de WION.
+Het XML-bestand bevat altijd alle assets van de netbeheerder die van belang zijn voor de WIBON.
 
 ### Decentrale aanlevering
 
-Een decentrale netbeheerder of serviceprovider levert informatie op basis van een gebiedsinformatie-aanvraag d.m.v. de _KLIC Netbeheerder API_.
+Een decentrale netbeheerder of serviceprovider levert informatie op basis van een gebiedsinformatie-aanvraag d.m.v. de _KLIC Netbeheerder API_. We spreken in dat geval over het aanleveren van "beheerdersinformatie".
 
 De aanlevering van beheerdersinformatie van een belanghebbende decentrale netbeheerder bestaat mogelijk uit
 * gegevens over de belanghebbende
 * alle gegevens over kabels en leidingen behorende bij utiliteitsnetten die binnen het aangevraagde gebied liggen
+* documenten die als _ExtraDetailinfo_ worden meegeleverd bij een utiliteitsnet;  \
+deze documenten worden getypeerd als `huisaansluiting`, `aansluiting`, `profielschets` of `overig`
 * eigen topografie binnen het aangevraagde gebied (optioneel)
 * bijlagen van het type `algemeen` en/of `nietBetrokken` (optioneel)
-* bijlage(n) van het type `eisVoorzorgsmaatregel` (optioneel)
+* bijlage(n) van het type `eisVoorzorgsmaatregel` (indien van toepassing)
 
-Voor de decentraal aangeleverde netinformatie worden dezelfde validatie regels gehanteerd als voor het aanleveren aan de centrale voorziening.
+Documenten en/of bijlagen waar in de beheerdersinformatie naar wordt gerefereerd, worden - in tegenstelling tot een centrale aanlevering - gelijktijdig met de netinformatie meegeleverd in hetzelfde proces. Zie hiervoor ook "B2B/koppeling beheerdersinformatie (BMKL 2.0)".
 
-#### Aanleveren gegevens
+Voor de decentraal aangeleverde netinformatie (beheerdersinformatie) worden dezelfde validatieregels gehanteerd als voor het aanleveren van netinformatie aan de centrale voorziening.  \
+Op een paar punten is er een klein verschil in afhandeling, maar deze zullen dan expliciet worden genoemd.  \
+Voor decentraal meegeleverde documenten/bijlagen worden vergelijkbare validaties uitgevoerd als bij het actualiseren van documenten. Denk bijvoorbeeld aan de maximale bestandsgrootte.
 
-De netinformatie wordt inclusief bijlagen aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
+#### Aanleveren beheerdersinformatie
+
+De netinformatie inclusief bijlagen wordt als beheerdersinformatie aangeleverd in een zipbestand. De specifieke eigenschappen van het zipbestand worden verderop in het document beschreven.
 
 In het zipbestand staat een XML-bestand, conform de IMKL2015_wion XSD, dat voldoet aan de naamgeving van een netinformatie bestand. Eventuele overige bestanden in het zipbestand worden genegeerd.
 
-Het XML-bestand bevat alle assets van de netbeheerder die van belang zijn voor de WION en binnen de gebiedsinformatie-aanvraag vallen. Geometrieën zijn daarbij geklipt op het informatiegebied indien beschikbaar en anders worden de geometriën geklipt op het graafgebied.
+Het XML-bestand bevat alle assets van de netbeheerder die van belang zijn voor de WIBON en binnen de gebiedsinformatie-aanvraag vallen. Geometrieën zijn daarbij geklipt op het informatiegebied indien beschikbaar en anders worden de geometriën geklipt op het graafgebied.
 
 ![aanleveringen](images/KLIC-API-documentatie-aanlevering.png "Aanleveringen")
 
 ## Controles
 
-Hieronder worden de controles behandeld.
+In dit hoofdstuk wordt een overzicht gegeven van de controles op netinformatie en beheerdersinformatie.
 
 	** LET WEL **
 	De door de netbeheerders aangeleverde features in netinformatie of beheerdersinformatie worden syntactisch en
 	semantisch gecontroleerd door KLIC.
-	Let wel, dat niet alle semantische regels door KLIC kunnen worden gevalideerd. Het kan dus voorkomen dat de aangeleverde
-	features gevalideerd zijn zonder fouten, maar er (onbedoeld) toch onvolkomenheden in de aangeleverde data zitten.
+	Let wel, dat niet alle semantische regels door KLIC kunnen worden gevalideerd. Het kan dus voorkomen dat de
+	aangeleverde features gevalideerd zijn zonder fouten, maar er (onbedoeld) toch onvolkomenheden in de aangeleverde
+	data zitten.
 	De verantwoordelijkheid om een inhoudelijk juiste dataset aan te leveren bij KLIC ligt bij de bronhouder zelf.
 
 
@@ -124,14 +137,19 @@ Hieronder worden de controles behandeld.
 Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
-* Ten behoeve van de aanlevering van netinformatie dient het zipbestand één XML-bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'.De bestands-extensie is met kleine letters.
-* Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het zipbestand een tweede XML-bestand te bevatten.  \
-Dit bestand bevat de beslissingsregels voor de bapling van voorzorgsmaatregelen. De bestandsnaam begint met 'voorzorgsmaatregelen' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.  \
-Tevens moeten bij de voorzorgsmaatregelen één of meerdere EV-sjablonen meegeleverd worden waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.  
 * De bestandsnaam van het zipbestand of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
   * Bestandsnaam mag niet langer zijn dan 120 tekens.
   * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
 * Het aangeleverde bestand mag niet beveiligd zijn met een wachtwoord.
+
+#### Zipbestand centraal
+* Ten behoeve van de aanlevering van netinformatie dient het zipbestand één XML-bestand te bevatten, waarvan de bestandsnaam begint met 'netinformatie' en eindigt met de extensie '.xml'.De bestands-extensie is met kleine letters.
+* Ten behoeve van de aanlevering van voorzorgsmaatregelen dient het zipbestand een tweede XML-bestand te bevatten.  \
+Dit bestand bevat de beslissingsregels voor de bepaling van voorzorgsmaatregelen. De bestandsnaam begint met 'voorzorgsmaatregelen' en eindigt met de extensie '.xml'. De bestands-extensie is met kleine letters.  \
+Tevens moeten bij de voorzorgsmaatregelen één of meerdere EV-sjablonen meegeleverd worden waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.  
+
+#### Zipbestand decentraal
+* Het aangeleverde zipbestand mag maximaal 50 MB groot zijn (conform het huidige BMKL).
 
 ### XML
 
@@ -152,7 +170,7 @@ Het IMKL2015 UML is toegepast in 4 profielen. Voor elk van die is er een GML app
 
 De netinformatie voor KLIC wordt gevalideerd tegen de IMKL2015-wion.xsd die gepubliceerd staat op: https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
 
-Deze XSD geldt voor zowel de WION als INSPIRE.
+Deze XSD geldt voor zowel de WIBON als INSPIRE.
 
 Van de features types die beschreven zijn in de XSD accepteren we de volgende feature types niet:
 * Electricity Network::ElectricityCable
@@ -182,7 +200,7 @@ We ondersteunen, conform de afspraak in de Dataspecificatie IMKL2015, de volgend
 
 De attributen die verwijzen naar code of waarde lijsten worden gevalideerd tegen de lijst gepubliceerd op https://register.geostandaarden.nl/waardelijst/imkl2015/1.2.1/imkl-waardelijsten-1.2.1.rdf.
 
-Niet alle waardelijsten in deze publicatie hebben een betekenis binnen de WION of INSPIRE.
+Niet alle waardelijsten in deze publicatie hebben een betekenis binnen de WIBON of INSPIRE.
 
 #### Object Identificatie
 
@@ -255,13 +273,13 @@ De specifieke datatypen voor waarden zoals Measure bestaan uit een combinatie va
 
 ##### Hoogte
 
-De hoogte van een leidingelement is met het attribuut hoogte op te nemen. De hoogte betreft de lengte van het hele leidingelement in verticale richting ongeacht of er een deel onder of boven het maaiveld bevindt. Het datatype is 'Length' waarbij de meeteenheid apart wordt gespecificeerd. Voor WION wordt er altijd meters gebruikt met maximaal 2 decimalen.
+De hoogte van een leidingelement is met het attribuut hoogte op te nemen. De hoogte betreft de lengte van het hele leidingelement in verticale richting ongeacht of er een deel onder of boven het maaiveld bevindt. Het datatype is 'Length' waarbij de meeteenheid apart wordt gespecificeerd. Voor WIBON wordt er altijd meters gebruikt met maximaal 2 decimalen.
 
 Het aantal decimalen wordt niet gecontroleerd.
 
 ##### Diepte
 
-Het datatype van dieptepeil is 'Measure' waarbij de meeteenheid apart wordt gespecificeerd. Voor WION wordt er altijd meters (urn:ogc:def:uom:OGC::m) gebruikt met maximaal 2 decimalen.
+Het datatype van dieptepeil is 'Measure' waarbij de meeteenheid apart wordt gespecificeerd. Voor WIBON wordt er altijd meters (urn:ogc:def:uom:OGC::m) gebruikt met maximaal 2 decimalen.
 
 Het aantal decimalen wordt niet gecontroleerd.
 
@@ -302,7 +320,7 @@ In dit hoofdstuk wordt een toelichting gegeven op de toepassing van de controles
 ##### Bounding Box _(gml:boundedBy)_
 Het is in GML optioneel om een bounding box te definiëren waarin een rechthoek is opgenomen die
 middels een linkerbenedenhoek en rechterbovenhoek de extent van de coördinaten weergeeft.
-Voor WION geldt de volgende regel:
+Voor WIBON geldt de volgende regel:
 Een bounding box is verplicht alleen voor het hele bestand bij uitleveringen en is niet opgenomen bij
 individuele geometrieën.
 
@@ -818,7 +836,7 @@ Alleen de rode en groene INSPIRE-attributen uit het Excel-document met extra reg
 | beginLifespanVersion    |   1   | Strikte verplichting IMKL. Voor niet INSPIRE plichtige dataset mag 'dummy waarde'                                                                                                    | :heavy_check_mark:                          |
 | endLifespanVersion      |  0…1  | Geen extra regels                                                                                                                                                                    | :heavy_check_mark:                          |
 | thema                   |   1   | Strikte verplichting IMKL, nilReason is niet toegelaten.                                                                                                                             | :heavy_check_mark:                          |
-| standaardDieptelegging  |  0…1  | Voor WION eenheid is meter met max twee decimalen. Sterk aanbevolen om toe te voegen De UOM wordt uitgedrukt in meters middels de volgende OGC URN code:<br>• urn:ogc:def:uom:OGC::m | :heavy_check_mark: (URN code)               |
+| standaardDieptelegging  |  0…1  | Voor WIBON eenheid is meter met max twee decimalen. Sterk aanbevolen om toe te voegen De UOM wordt uitgedrukt in meters middels de volgende OGC URN code:<br>• urn:ogc:def:uom:OGC::m | :heavy_check_mark: (URN code)               |
 | heeftExtraInformatie    |  0…*  | Verplicht wanneer één of meerdere ExtraInformatie objecten zijn die bij het hele utiliteitsnet horen (binnen deze dataset), extra check op vorm IMKL identificator                   | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat|
 
 
@@ -912,4 +930,4 @@ Toelichting op regels van features die alléén in het IMKL-deel (niet-INSPIRE) 
 | inNetwork                                  |   1   | Strikte verplichting IMKL; extra check of UtilityNetwork bestaat en op vorm IMKL identificator; (zie OPMERKING: 1…*)                                                                                                                                          | :heavy_check_mark: Alleen NTD, Alleen of feature bestaat                                          |
 |                                            |       |                                                                                                                                                                                                                                                               |                                                                                                   |
 | **DiepteNAP**                              |       |                                                                                                                                                                                                                                                               |                                                                                                   |
-| maaiveldPeil                               |  0…1  | Voor WION is eenheid meter met max twee decimalen. Sterk aanbevolen indien beschikbaarDe UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m                                                                                | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
+| maaiveldPeil                               |  0…1  | Voor WIBON is eenheid meter met max twee decimalen. Sterk aanbevolen indien beschikbaarDe UOM wordt uitgedrukt via 1 van de volgende OGC URN codes:<br>• urn:ogc:def:uom:OGC::m                                                                                | :heavy_minus_sign: Wordt niet gecontroleerd                                                       |
