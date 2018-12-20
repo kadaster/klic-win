@@ -27,7 +27,8 @@ Voordat u kunt beginnnen met testen van uw applicatie dient u deze aan te melden
 
 Na goedkeuring van de aanvraag krijgt u een client_id en client_secret.
 
-U dient eerst een client registratie aan te vragen voor de Netbeheerder Testdienst (NTD). Na een succesvolle test in de NTD kunt u een client registratie aanvragen voor de productieomgeving.
+U dient eerst een client registratie aan te vragen voor de Netbeheerder Testdienst (NTD). Na een succesvolle test in de NTD kunt u gaan aansluiten op [KLIC-WIN](https://zakelijk.kadaster.nl/aansluiten-bestaande-netbeheerder-op-klic-win).
+Na binnenkomst van het aansluitformulier zullen de scopes worden uitgebreid op dezelfde Client ID die u voor de NTD gebruikt.
 
 #### Scopes
 
