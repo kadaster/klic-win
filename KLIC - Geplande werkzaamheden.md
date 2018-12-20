@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 20 december 2018)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2019
@@ -16,6 +16,21 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
 
+--------------------------------------------------------------------------------------
+## Planning voor release - maart 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - februari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio januari 2019
