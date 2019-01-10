@@ -76,7 +76,7 @@ Deze fasering ziet er voorlopig als volgt uit:
 4. Het vastleggen en gebruiken van `Informatiepolygoon` bij een graafmelding of calamiteitenmelding.
 
 Voor een overzicht van de geplande en gerealiseerde implementaties van deze functionaliteit, zie:
-* [KLIC - Geplande werkzaamheden](../../KLIC - Geplande werkzaamheden.md) 
-* [KLIC - Release notes](../../KLIC - Release notes.md) 
+* [KLIC - Geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) 
+* [KLIC - Release notes](../KLIC%20-%20Release%20notes.md) 
 
 
