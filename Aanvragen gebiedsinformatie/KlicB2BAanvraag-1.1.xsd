@@ -1,8 +1,8 @@
 <!-- bestandsnaam: KlicB2BAanvraag-1.1.xsd -->
 <!-- bron: Kadaster-KLIC -->
-<!-- [1.1] 01-09-2018 ________________________________________________________________________________
+<!-- [1.1] 09-01-2019 ________________________________________________________________________________
 Versie			: 1.1
-Datum			: 01-09-2018
+Datum			: 09-01-2019
 Door				: Kadaster 
 Toelichting	:
 Dit schema definieert de gebiedsinformatie-aanvraag zoals die door een aanvrager met een B2B-koppeling kan worden aangeboden.
@@ -14,16 +14,13 @@ Onderstaande nieuwe attributen zijn optioneel:
 	- VoorbereidingMedegebruikFysiekeInfrastructuur, of
 	  VoorbereidingCoordinatieCivieleWerken
 	- Informatiepolygoon
-	- IdentificatieBAG (bij dichtsbijzijnd adres)
-	- IdentificatieBAG (bij huisaansluitschets adres)
+	- IdentificatieBAG (bij dichtsbijzijnd adres) en IdentificatieBAG (bij huisaansluitschets adres)
+	  Van deze adressen (NIAdresTpe) zijn de elementen Huisnummer en Postcode niet meer verplicht.
+
 Let op:
 Functionaliteit om gebruik te maken van deze attributen in KLIC zal gefaseerd beschikbaar worden gesteld.
 _____________________________________________________________________________________________________ -->
-<xsd:schema 
-xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-xmlns:gml="http://www.opengis.net/gml" 
-xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814" 
-targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814" targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814">
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="../gml/3.1.1/base/gml.xsd"/>
 	<xsd:element name="KlicB2BAanvraag" type="tns:KlicB2BAanvraagType">
 		<xsd:annotation>
@@ -333,7 +330,7 @@ Van het BAG-object kan nu ook het BAGid worden meegegeven (van het adresseerbare
 					<xsd:documentation>Straatnaam (zonder huisnummer)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Huisnummer" type="xsd:int" maxOccurs="1">
+			<xsd:element name="Huisnummer" type="xsd:int" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>Huisnummer van een straat</xsd:documentation>
 				</xsd:annotation>
@@ -358,7 +355,7 @@ Van het BAG-object kan nu ook het BAGid worden meegegeven (van het adresseerbare
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="Postcode" minOccurs="1" maxOccurs="1">
+			<xsd:element name="Postcode" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>Postcode</xsd:documentation>
 				</xsd:annotation>
