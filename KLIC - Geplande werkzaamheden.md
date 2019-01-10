@@ -1,8 +1,20 @@
-﻿# Geplande werkzaamheden (bijgewerkt 20 december 2018)
+﻿# Geplande werkzaamheden (bijgewerkt 10 januari 2019)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 2019
+## Planning voor release - medio februari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - eind januari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 **B2B aanvraag**:
 
@@ -16,40 +28,17 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
 
---------------------------------------------------------------------------------------
-## Planning voor release - maart 2019
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**B2B-koppeling BMKL 2.0**:
-- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
-  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
-
---------------------------------------------------------------------------------------
-## Planning voor release - februari 2019
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**B2B-koppeling BMKL 2.0**:
-- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD omgeving. (ID 3411)  \
-  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Documentenbeheer**:
-- Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653)
+- Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653, ID 2654)
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
 
-
-**Huisaansluitschetsen**:
-- In de productie omgeving is begin december het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 3246). Het betreft:
-  * Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen. Soms is één unieke adres gerelateerd aan meerdere adresseerbare objecten in de Basisregistratie Adressen en Gebouwen (BAG). De telling van het maximum (100) is gebaseerd op adresseerbare objecten. (ID 3246, ID 3337, ID 3338, ID 3339, ID 3340, ID 3341)
-- In de productie omgeving is 22 november het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 2728). Het betreft: 
-    * Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
-        - Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
-        - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
-        - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
-
+**Performance**:
+- Performance verbetering bij het genereren van het zipbestand met de BeheerdersinformatieLeveringen (ID 3558)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 januari 2019
@@ -73,6 +62,20 @@ De [tariefswijziging die per 1 januari 2019](https://www.kadaster.nl/-/tarieven-
 
 **Synchronisatie API**:  \
 Voor Agentschap Telecom zijn de API’s live gezet om KLIC procesgegevens te synchroniseren met hun eigen registratie. 
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 28 december 2018
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Huisaansluitschetsen**:
+- In de productie omgeving is begin december het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 3246, ID 3457). Het betreft:
+  * Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen. Soms is één unieke adres gerelateerd aan meerdere adresseerbare objecten in de Basisregistratie Adressen en Gebouwen (BAG). De telling van het maximum (100) is gebaseerd op adresseerbare objecten. (ID 3246, ID 3337, ID 3338, ID 3339, ID 3340, ID 3341)
+- In de productie omgeving is 22 november het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 2728). Het betreft: 
+    * Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
+        - Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
+        - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
+        - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release IMKL v1.2.1.2 - 13 december 2018
