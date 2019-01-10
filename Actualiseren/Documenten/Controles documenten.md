@@ -9,6 +9,9 @@ Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (m
 
 - Een aangeleverd document mag maximaal 8 MB groot zijn (uitgezonderd het XML-bestand met meta-informatie).
 
+- Een totale aanlevering (zipbestand) mag maximaal 10 GB groot zijn.  \
+Als de omvang van de alle te actualiseren documenten zodanig groot is, dat deze grens wordt overschreden, dan zal dit dus in meerdere aanleveringen moeten gebeuren.
+
 - XSD-controle van het XML-bestand (meta-informatie).
 
 - Alle genoemde documenten in het XML-bestand moeten aanwezig zijn in het zipbestand.
@@ -28,5 +31,7 @@ Voorbeeld:
 ```
 
 - `lokaalID` moet uniek zijn in documentenbeheer.xml: de identificatie mag één keer voorkomen.
+
 - `documentID` moet juiste bronhoudercode bevatten.
-- Wanneer het document wél in het zipbestand, maar niét in het XML-bestand (meta-informatie) voorkomt: is niet blokkerend (warning).
+
+- Wanneer het document wél in het zipbestand, maar niét in het XML-bestand (meta-informatie) voorkomt, is dit niet blokkerend (warning).
