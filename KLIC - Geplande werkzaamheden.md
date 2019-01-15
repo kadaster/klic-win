@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 15 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio februari 2019
@@ -39,6 +39,14 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Performance**:
 - Performance verbetering bij het genereren van het zipbestand met de BeheerdersinformatieLeveringen (ID 3558)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 11 januari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bug-fixes NTD**:
+- Bugfix: in de NTD omgeving worden nu alle statussen in de API response als volledige URL weergegeven. (ID 3557)
+- Bugfix: in de NTD omgeving is het probleem opgelost waardoor nu tijdens het opvoeren van een BMKL 2.0 testmelding, niet meer versprongen wordt naar het beginscherm van een klasieke testmelding. (ID 3562)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 januari 2019

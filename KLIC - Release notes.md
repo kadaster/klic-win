@@ -1,5 +1,12 @@
 ﻿# Release notes
 
+### 11 januari 2019
+
+**Bug-fixes NTD**:
+- Bugfix: in de NTD omgeving worden nu alle statussen in de API response als volledige URL weergegeven. (ID 3557)
+- Bugfix: in de NTD omgeving is het probleem opgelost waardoor nu tijdens het opvoeren van een BMKL 2.0 testmelding, niet meer versprongen wordt naar het beginscherm van een klasieke testmelding. (ID 3562)
+
+------------------------
 ### 2 januari 2019
 
 **Nieuwe ZIP-structuur**:  \
