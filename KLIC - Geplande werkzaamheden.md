@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 15 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 16 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio februari 2019
@@ -7,6 +7,10 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **B2B-koppeling BMKL 2.0**:
 - Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
   Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
+
+**Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
+- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geld voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind januari 2019
