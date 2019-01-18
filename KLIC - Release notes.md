@@ -1,5 +1,15 @@
 ﻿# Release notes
 
+### 17 januari 2019 in NTD (21 januari 2019 op Productie)
+
+**Documentenbeheer**:
+- Validatie dat een aangeleverd document maximaal 8 MB groot mag zijn. (ID 2653, ID 2654)
+  * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
+
+**Performance**:
+- Performance verbetering bij het genereren van het zipbestand met de BeheerdersinformatieLeveringen (ID 3558)
+
+------------------------
 ### 11 januari 2019
 
 **Bug-fixes NTD**:
