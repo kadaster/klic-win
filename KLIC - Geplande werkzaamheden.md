@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 17 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio februari 2019
@@ -9,7 +9,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
   Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 **Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
-- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geld voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
+- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
 
 
 --------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio januari 2019
+## Planning voor release - NTD: 17 januari 2019; Productie: 21 januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Documentenbeheer**:
