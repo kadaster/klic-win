@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 17 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 18 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio februari 2019
@@ -31,6 +31,9 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorg
 - Informatiepolygoon; de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
+
+**Bug-fix**:
+- Bij het uitleveringsbestand in het JSON formaat wordt bij de 'BestandMediaTypeValue' nu altijd de correcte waarde weergegeven. (ID 3580)
 
 
 --------------------------------------------------------------------------------------
