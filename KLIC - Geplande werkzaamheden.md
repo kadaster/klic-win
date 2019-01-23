@@ -21,8 +21,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Beheren belangen**:
 Het emailadres van contacten wordt alleen verplicht als het contact gekoppeld is als contactAanvraag of contactNetinformatie. (ID 3577, ID 3676)
 
-**Bug-fix**:
-- Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind januari 2019
@@ -48,6 +46,14 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 - Bij het uitleveringsbestand in het JSON formaat wordt bij de 'BestandMediaTypeValue' nu altijd de correcte waarde weergegeven. (ID 3580)
 - De status van de BIA's van voor 28 december 2018 worden geupdate. Hierdoor krijgt een op KLIC-WIN aangesloten netbeheerder bij het opvragen van zijn openstaande BIA's via de API niet meer deze historische aanvragen te zien. (ID 3586)
 - PKIoverheid-certificaat niet meer verplicht bij PING naar de op KLICWIN aangesloten netbeheerders. (ID 3635)
+- Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 25 januari 2019 (verwacht)
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bug-fix**:
+- Voorkomen van een http 503 response bij ophalen BIA via API zonder parameters. (ID 3683)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 17 januari 2019; Productie: 21 januari 2019
