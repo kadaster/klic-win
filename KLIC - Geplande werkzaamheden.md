@@ -19,7 +19,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
 
 **Beheren belangen**:
-Het emailadres van contacten wordt alleen verplicht als het contact gekoppeld is als contactAanvraag of contactNetinformatie. (ID 3577, ID 3676)
+- Het emailadres van contacten wordt alleen verplicht als het contact gekoppeld is als contactAanvraag of contactNetinformatie. (ID 3577, ID 3676)
 
 
 --------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 - Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 25 januari 2019 (verwacht)
+## Planning voor release - 23 januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fix**:

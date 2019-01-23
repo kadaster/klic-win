@@ -1,5 +1,11 @@
 ﻿# Release notes
 
+### 23 januari 2019
+
+**Bug-fix**:
+- Voorkomen van een http 503 response bij ophalen BIA via API zonder parameters. (ID 3683)
+
+------------------------
 ### 21 januari 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 17 januari beschikbaar.
 
