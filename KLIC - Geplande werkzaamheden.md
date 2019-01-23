@@ -1,4 +1,11 @@
-﻿# Geplande werkzaamheden (bijgewerkt 18 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 23 januari 2019)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - eind februari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Synchronisatie API**:
+- Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio februari 2019
@@ -11,6 +18,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
 - Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
 
+**Beheren belangen**:
+Het emailadres van contacten wordt alleen verplicht als het contact gekoppeld is als contactAanvraag of contactNetinformatie. (ID 3577, ID 3676)
+
+**Bug-fix**:
+- Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind januari 2019
@@ -34,7 +46,8 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 
 **Bug-fix**:
 - Bij het uitleveringsbestand in het JSON formaat wordt bij de 'BestandMediaTypeValue' nu altijd de correcte waarde weergegeven. (ID 3580)
-
+- De status van de BIA's van voor 28 december 2018 worden geupdate. Hierdoor krijgt een op KLIC-WIN aangesloten netbeheerder bij het opvragen van zijn openstaande BIA's via de API niet meer deze historische aanvragen te zien. (ID 3586)
+- PKIoverheid-certificaat niet meer verplicht bij PING naar de op KLICWIN aangesloten netbeheerders. (ID 3635)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 17 januari 2019; Productie: 21 januari 2019
