@@ -5,13 +5,21 @@ Het systeem van een aanvrager kan met een B2B-koppeling een gebiedsinformatie-aa
 Het aanvragen van gebiedsinformatie gebeurt met een _KlicB2BAanvraag_-bericht. Deze interface wordt binnenkort uitgebreid.  \
 Hieronder wordt een overzicht gegeven van de belangrijkste wijzigingen op de validaties die worden uitgevoerd bij een B2B-aanvraag.
 
+**Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
+- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geld voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
+
 ## B2BAanvraag, wijzigingen versie 1.1
+
+### Soort werkzaamheden
+Bij een graafmelding en een oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden (in `SoortWerkzaamheden`) worden opgegeven.
+Deze verplichting is gesteld, omdat mogelijke eis voorzorgsmaatregelen mede worden bepaald op basis van de aangegeven soorten werkzaamheden.  \
+Tevens is het geven van een toelichting op de werkzaamheden (in `Notitie`) alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven.
 
 ### Dichtstbijzijnd adres (DAS)
 
-Een dichtstbijzijnd adres kan worden geidentificeerd met een `IdentificatieBAG`.
-Hierbij wordt aangesloten op het stelsel van basisregistraties, waarbij een gegeven maar op één plek wordt geidentificeerd en beschikbaar gesteld, in dit geval de BAG (Basisregistratie Adressen en Gebouwen).
-Deze `IdentificatieBAG` is in BAG vastgelegd als identificatie van een adresseerbaar object (_Verblijfsobject_, _Ligplaats_ of _Standplaats_).  \
+Een dichtstbijzijnd adres kan worden geidentificeerd met een `IdentificatieBAG`.  \
+Hierbij wordt aangesloten op het stelsel van basisregistraties, waarbij een gegeven maar op één plek wordt geidentificeerd en beschikbaar gesteld, in dit geval de BAG (Basisregistratie Adressen en Gebouwen).  \
+Deze `IdentificatieBAG` is in BAG vastgelegd als identificatie van een adresseerbaar object (_Verblijfsobject_, _Ligplaats_ of _Standplaats_).
 
 De identificatie is leidend voor de verwerking van een Klic-aanvraag.  \
 Als er van een dichtstbijzijnd adres een `IdentificatieBAG` wordt meegegeven, wordt gecontroleerd of hiervan een bijbehorend adresseerbaar object kan worden gevonden in BAG. Als er ook overige adresgegevens zijn meegegeven, dan moeten deze exact overeenstemmen met het hoofdadres van het adresseerbare object.  \
