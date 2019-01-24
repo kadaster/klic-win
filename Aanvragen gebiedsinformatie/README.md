@@ -7,7 +7,7 @@ Een aanvrager heeft - vanuit het perspectief van het Klic-systeem - de volgende 
 - met de Klic-online applicatie; een grafisch userinterface (GUI) om de specificaties van de aanvraag in te geven
 - met een B2B-koppeling; een SOAP-interface waarmee de aanvraag wordt gespecificeerd
 
-Veel informatie over deze functionaliteit en technische toelichtingen zijn gepubliceerd op de Klic-pagina's van de Kadaster website.  \
+Veel informatie over deze functionaliteit en technische toelichtingen zijn gepubliceerd op de Klic-pagina's van de Kadaster website.
 Zie: https://www.kadaster.nl/klic.
 
 In het kader van het programma KLIC-WIN worden er ook veranderingen doorgevoerd bij het aanvragen van gebiedsinformatie. In deze map worden hierover documentatie en diverse voorbeelden beschikbaar gesteld.  \
