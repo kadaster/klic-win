@@ -1,5 +1,8 @@
 ﻿#### Aanvragen gebiedsinformatie - Overzicht wijzigingen
 
+23-01-2019
+- Controles B2B-aanvraag: aanvulling SoortWerkzaamheden
+
 09-01-2019
 - Schema-definitie KlicB2BAanvraag-1.1.xsd aangepast
   - bij _NIAdresType_ (voor adresseerbaar object) is `Huisnummer` en `Postcode` niet meer verplicht
