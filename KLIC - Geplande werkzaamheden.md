@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 23 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 24 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind februari 2019
@@ -44,8 +44,7 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 
 **Bug-fix**:
 - Bij het uitleveringsbestand in het JSON formaat wordt bij de 'BestandMediaTypeValue' nu altijd de correcte waarde weergegeven. (ID 3580)
-- De status van de BIA's van voor 28 december 2018 worden geupdate. Hierdoor krijgt een op KLIC-WIN aangesloten netbeheerder bij het opvragen van zijn openstaande BIA's via de API niet meer deze historische aanvragen te zien. (ID 3586)
-- PKIoverheid-certificaat niet meer verplicht bij PING naar de op KLICWIN aangesloten netbeheerders. (ID 3635)
+- PKIoverheid-certificaat niet meer verplicht bij PING naar de op KLIC-WIN aangesloten netbeheerders. (ID 3635)
 - Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
 
 --------------------------------------------------------------------------------------
@@ -65,6 +64,13 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Performance**:
 - Performance verbetering bij het genereren van het zipbestand met de BeheerdersinformatieLeveringen (ID 3558)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 18 januari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bug-fix**:
+- De status van de BIA's van voor 28 december 2018 zijn geupdate. Hierdoor krijgt een op KLIC-WIN aangesloten netbeheerder bij het opvragen van zijn openstaande BIA's via de API niet meer deze historische aanvragen te zien. (ID 3586)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 11 januari 2019

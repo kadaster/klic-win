@@ -17,6 +17,12 @@
 - Performance verbetering bij het genereren van het zipbestand met de BeheerdersinformatieLeveringen (ID 3558)
 
 ------------------------
+### 18 januari 2019
+
+**Bug-fix**:
+- De status van de BIA's van voor 28 december 2018 zijn geupdate. Hierdoor krijgt een op KLIC-WIN aangesloten netbeheerder bij het opvragen van zijn openstaande BIA's via de API niet meer deze historische aanvragen te zien. (ID 3586)
+
+------------------------
 ### 11 januari 2019
 
 **Bug-fixes NTD**:
