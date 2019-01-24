@@ -1,5 +1,11 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+24-01-2019
+- Voorbeeldcode in documentatie B2B-koppeling beheerdersinformatie BMKL2.0 aangepast:
+  - endpoints BMKL API's conform actuele werking
+  - waarden van waardelijsten conform actuele werking
+* Overzicht met verschillen tussen oude en actuele versie van BMKL API is verwijderd
+
 12-12-2018
 - Handleiding B2B-koppeling beheerdersinformatie BMKL2.0 aangepast:
   - overzicht basispaden voor endpoints BMKL API's in eigen map

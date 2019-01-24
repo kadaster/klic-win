@@ -112,11 +112,11 @@ Hieronder wordt een overzicht gegeven van typerende processtappen die in het BMK
 - Notificeren netbeheerder \
 Een belanghebbende netbeheerder wordt door KLIC genotificeerd dat er een beheerdersinformatie-aanvraag voor hem klaar staat.
 - Zoeken beheerderdersinformatie-aanvragen \
-Haal als belanghebbende netbeheerder een lijst met beheerdersinformatie-aanvragen op die voldoen aan opgegeven criteria (bijv. `biNotificatieStatus`=biOpen). In een beheerdersinformatie-aanvraag wordt ook de identificatie van de bijbehorende gebiedsinformatie-aanvraag genoemd (`giAanvraagId`).
+Haal als belanghebbende netbeheerder een lijst met beheerdersinformatie-aanvragen op die voldoen aan opgegeven criteria (bijv. `biNotificatieStatus`=open). In een beheerdersinformatie-aanvraag wordt ook de identificatie van de bijbehorende gebiedsinformatie-aanvraag genoemd (`giAanvraagId`).
 - Opvragen gebiedsinformatie-aanvraag \
 Haal als netbeheerder de details van één gebiedsinformatie-aanvraag op, behorend bij een beheerdersinformatie-aanvraag die in behandeling wordt genomen.
 - Bevestigen beheerdersinformatie-aanvraag \
-Bevestig de beheerdersinformatie-aanvraag door deze te markeren als 'biBevestigingOntvangen'.
+Bevestig de beheerdersinformatie-aanvraag door deze te markeren als 'bevestigingOntvangen'.
 - Aanleveren beheerdersinformatie (alleen decentraal)\
 Lever als belanghebbende netbeheerder het zipbestand met beheerdersinformatie aan voor de in behandeling genomen beheerdersinformatie-aanvraag.
 - Opvragen aanlevering(en) beheerdersinformatie (alleen decentraal)\
@@ -138,11 +138,11 @@ Het belangrijkste onderscheid ligt in het feit dat de beheerdersinformatie niet 
 - Notificeren netbeheerder \
 Een belanghebbende netbeheerder wordt door KLIC genotificeerd dat er een beheerdersinformatie-aanvraag voor hem klaar staat.
 - Zoeken beheerderdersinformatie-aanvragen \
-Haal als belanghebbende netbeheerder een lijst met beheerdersinformatie-aanvragen op die voldoen aan opgegeven criteria (bijv. `biNotificatieStatus`=biOpen). In een beheerdersinformatie-aanvraag wordt ook de identificatie van de bijbehorende gebiedsinformatie-aanvraag genoemd (`giAanvraagId`).
+Haal als belanghebbende netbeheerder een lijst met beheerdersinformatie-aanvragen op die voldoen aan opgegeven criteria (bijv. `biNotificatieStatus`=open). In een beheerdersinformatie-aanvraag wordt ook de identificatie van de bijbehorende gebiedsinformatie-aanvraag genoemd (`giAanvraagId`).
 - Opvragen gebiedsinformatie-aanvraag \
 Haal als netbeheerder de details van één gebiedsinformatie-aanvraag op, behorend bij een beheerdersinformatie-aanvraag die in behandeling wordt genomen.
 - Bevestigen beheerdersinformatie-aanvraag \
-Bevestig de beheerdersinformatie-aanvraag door deze te markeren als 'biBevestigingOntvangen'.
+Bevestig de beheerdersinformatie-aanvraag door deze te markeren als 'bevestigingOntvangen'.
 - Opvragen beheerdersinformatie-aanvraag \
 Haal de status van de beheerdersinformatie-aanvraag op; hiermee is inzichtelijk of de aanlevering al is verwerkt t.b.v. de uitlevering.
 - Opvragen uitgeleverde beheerdersinformatie \
@@ -170,7 +170,7 @@ Het aanleveren van beheerdersinformatie gaat volgens de stappen, zoals genoemd i
 
 1. Het opvragen van openstaande beheerdersinformatie-aanvragen.
 2. Het ophalen van de gebiedsinformatie-aanvraag bij een beheerdersinformatie-aanvraag waarvoor nog beheerdersinformatie moet worden aangeleverd.
-3. Het bevestigen van deze beheerdersinformatie-aanvraag, door deze te markeren als 'biBevestigingOntvangen'
+3. Het bevestigen van deze beheerdersinformatie-aanvraag, door deze te markeren als 'bevestigingOntvangen'
 4. Het aanleveren van het zipbestand met beheerdersinformatie voor de bevestigde gebiedsinformatie-aanvraag
 
 ### Controleren of de aanlevering met beheerdersinformatie valide is (enkel decentraal)
@@ -206,7 +206,7 @@ Voorbeeld:
 
 **Request**  
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=open
 -X GET
 -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
 -H 'Accept: application/json'
@@ -294,9 +294,9 @@ klic.beheerdersinformatie.readonly
 
 **_voorbeeld: Zoeken openstaande beheerdersinformatie-aanvragen_**
 
-In dit voorbeeld wordt gezocht naar alle beheerdersinformatie-aanvragen voor de ingelogde netbeheerder met de status "open". Hiervoor wordt de parameter `biNotificatieStatus` met de waarde `biOpen` toegevoegd aan het request.
+In dit voorbeeld wordt gezocht naar alle beheerdersinformatie-aanvragen voor de ingelogde netbeheerder met de status "open". Hiervoor wordt de parameter `biNotificatieStatus` met de waarde `open` toegevoegd aan het request.
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=open&limiet=5
  -X GET
  -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
  -H 'Accept: application/json'
@@ -307,29 +307,29 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 {
     "_links": {
         "next": {
-            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5&offset=5"
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=open&limiet=5&offset=5"
         },
         "self": {
-            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=biOpen&limiet=5"
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?biNotificatieStatus=open&limiet=5"
         }
     },
     "beheerdersinformatieAanvragen": [
         {
-	        "biAanvraagId" : "330d0526-0586-4843-ad86-04d8969fc768",
-            "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
-            "bronhoudercode" : "nbact2",
-            "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biOpen",
-            "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-            "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
+	        "biAanvraagId": "330d0526-0586-4843-ad86-04d8969fc768",
+            "giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
+            "bronhoudercode": "KL0002",
+            "biNotificatieStatus": "https://api.kadaster.nl/klic/v1/cl/biNotificatieStatussen/open",
+            "biProductieStatus": "https://api.kadaster.nl/klic/v1/cl/biProductieStatussen/wachtOpAntwoord",
+            "datumGenotificeerd": "2017-11-03T10:38:44+01:00",
             "mutatieDatum":"2017-11-03T10:38:44.653+01:00"
         },{
-            "biAanvraagId" : "130k5426-0586-4843-ad86-04d89623fd28",
-            "giAanvraagId" : "8dc933bd-3907-40ee-84b0-5f54ah37a4d1",
-            "bronhoudercode" : "nbact2",
-            "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
-            "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biWachtOpAntwoord",
-            "datumGenotificeerd" : "2017-11-03T10:43:25+01:00",
-            "datumBevestigingOntvangen" : "2017-11-03T10:55:36+01:00",
+            "biAanvraagId": "130k5426-0586-4843-ad86-04d89623fd28",
+            "giAanvraagId": "8dc933bd-3907-40ee-84b0-5f54ah37a4d1",
+            "bronhoudercode": "KL0002",
+            "biNotificatieStatus": "https://api.kadaster.nl/klic/v1/cl/biNotificatieStatussen/bevestigingOntvangen",
+            "biProductieStatus": "https://api.kadaster.nl/klic/v1/cl/biProductieStatussen/wachtOpAntwoord",
+            "datumGenotificeerd": "2017-11-03T10:43:25+01:00",
+            "datumBevestigingOntvangen": "2017-11-03T10:55:36+01:00",
             "mutatieDatum":"2017-11-03T10:55:36.399+01:00"
         },{
             //overige 3 beheerdersinformatie-aanvragen uit resultaatlijst...
@@ -368,13 +368,13 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 **_response_**
 ```json
 {
-    "biAanvraagId" : "330d0526-0586-4843-ad86-04d8969fc768",
-    "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
-    "bronhoudercode" : "nbact2",
-    "biNotificatieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biNotificatieStatussen/biBevestigingOntvangen",
-    "biProductieStatus" : "https://api.kadaster.nl/klic/v2/waarde/biProductieStatussen/biGereedVoorSamenstellenProduct",
-    "datumGenotificeerd" : "2017-11-03T10:38:44+01:00",
-    "datumBevestigingOntvangen" : "2017-11-03T11:05:31+01:00",
+    "biAanvraagId": "330d0526-0586-4843-ad86-04d8969fc768",
+    "giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
+    "bronhoudercode": "KL0002",
+    "biNotificatieStatus": "https://api.kadaster.nl/klic/v1/cl/biNotificatieStatussen/bevestigingOntvangen",
+    "biProductieStatus": "https://api.kadaster.nl/klic/v1/cl/biProductieStatussen/gereedVoorSamenstellenProduct",
+    "datumGenotificeerd": "2017-11-03T10:38:44+01:00",
+    "datumBevestigingOntvangen": "2017-11-03T11:05:31+01:00",
     "mutatieDatum":"2017-11-03T11:05:31.932+01:00"
 }
 ```
@@ -409,9 +409,9 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 **Voorbeeld van response**
 ```json
 {
-    "giAanvraagId" : "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
-    "ordernummer" : "2015000924",
-    "klicMeldnummer" : "17G000649",
+    "giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
+    "ordernummer": "2015000924",
+    "klicMeldnummer": "17G000649",
     "aanvrager":{
         "contact":{
             "naam":"Aanvrager01",
@@ -419,12 +419,13 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
             "email":"klicwin@kadaster.nl"
         },
         "organisatie":{
-            "naam":"Netbeheerder Actualiseren02",
+            "naam":"Grondroerder Apeldoorn B.V.",
             "bezoekAdres":{
                 "openbareRuimteNaam":"Laan van Westenenk",
                 "huisnummer":"701",
+                "woonplaatsNaam":"Apeldoorn",
                 "postcode":"7334DP",
-                "woonplaatsNaam":"Apeldoorn"
+				"landcode": "https://api.kadaster.nl/klic/v1/cl/landcodes/NL"
             },
         },
     },
@@ -439,39 +440,39 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
             "bezoekAdres":{
                 "openbareRuimteNaam":"Hofstraat",
                 "huisnummer":"110",
-                "postcode":"7311KZ",
-                "woonplaatsNaam":"Apeldoorn"
+                "woonplaatsNaam":"Apeldoorn",
+                "postcode":"7311KZ"
             },
         },
     },
-    "aanvraagSoort":"http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding",
+    "aanvraagSoort":"https://api.kadaster.nl/klic/v1/cl/aanvraagSoorten/graafmelding",
     "aanvraagDatum":"2017-11-03T10:38:14+01",
     "mutatieDatum":"2017-11-03T10:38:14.451+01",
-    "giAanvraagStatus" : "https://api.kadaster.nl/klic/v2/waarde/giAanvraagStatussen/giOpen",
+    "giAanvraagStatus": "https://api.kadaster.nl/klic/v1/cl/giAanvraagStatussen/open",
     "soortWerkzaamheden":[
-        "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/leggenLaagspanning",
-        "http://definities.geostandaarden.nl/imkl2015/id/waarde/SoortWerkzaamhedenValue/woningbouw"
+        "https://api.kadaster.nl/klic/v1/cl/soortWerkzaamheden/leggenLaagspanning",
+        "https://api.kadaster.nl/klic/v1/cl/soortWerkzaamheden/huisaansluitingenMaken"
     ],
     "locatieWerkzaamheden":{
         "openbareRuimteNaam":"Laan van Westenenk",
         "huisnummer":"701",
-        "postcode":"7334DP",
         "woonplaatsNaam":"Apeldoorn",
+        "postcode":"7334DP",
         "BAGidAdresseerbaarObject": "0200010000130331"
     },
-    "startDatum" : "2017-11-13",
-    "eindDatum" : "2017-11-22",
+    "startDatum": "2017-11-13",
+    "eindDatum": "2017-11-22",
     "huisaansluitingAdressen":[{
        "openbareRuimteNaam":"Laan van Westenenk",
-       "postcode":"7334DP",
        "huisnummer":"701",
        "woonplaatsNaam":"Apeldoorn",
+       "postcode":"7334DP",
        "BAGidAdresseerbaarObject": "0200010000130331"
 	}, {
        "openbareRuimteNaam":"Evert van 't Landstraat",
-       "postcode":"7334DR",
        "huisnummer":"15",
        "woonplaatsNaam":"Apeldoorn",
+       "postcode":"7334DR",
        "BAGidAdresseerbaarObject": "0200010003923183"
     }],
     "graafpolygoon":{
@@ -490,7 +491,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 ### Bevestigen beheerdersinformatie-aanvraag
 
 Voordat een (decentrale) netbeheerder beheerdersinformatie kan aanleveren voor een beheerdersinformatie-aanvraag, moet de netbeheerder eerst bevestigen dat hij de beheerdersinformatie-aanvraag ontvangen heeft. \
-Dat wordt gedaan door de `biNotificatieStatus` de waarde `biBevestigingOntvangen` te geven.
+Dat wordt gedaan door de `biNotificatieStatus` de waarde `bevestigingOntvangen` te geven.
 
 Ook voor de centrale netbeheerder wordt aanbevolen om de beheerdersinformatieaanvraag te bevestigen. \
 Als een centrale netbeheerder geen ontvangstbevestiging stuurt op een aanvraag, dan blijft deze de status 'open' houden. Het Kadaster zal - ongeacht de notificatiestatus - beheerdersinformatie namens de centrale netbeheerder produceren en uitleveren.
@@ -513,7 +514,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
  -X PATCH
  -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
  -H 'Accept: application/json'
- -d "{  \"biNotificatieStatus\": \"biBevestigingOntvangen\" }"
+ -d "{  \"biNotificatieStatus\": \"bevestigingOntvangen\" }"
 ```
 
 **_response:_**
@@ -551,16 +552,16 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 HTTP/1.1 200 OK
 ```
 Wanneer de ontvangst van de beheerdersinformatie-aanvraag nog niet is bevestigd, wordt onderstaande melding teruggegeven. De beheerdersinformatie-aanvraag moet dus eerst
-bevestigd ('biBevestigingOntvangen') zijn, alvorens er beheerdersinformatie kan worden aangeleverd.
+bevestigd ('bevestigingOntvangen') zijn, alvorens er beheerdersinformatie kan worden aangeleverd.
 
 **_response:_**
 ```JSON
 {
-  "status" : 405,
-  "meldingCode" : 1000405,
-  "gebruikerMelding" : "methode niet toegestaan",
-  "ontwikkelaarMelding" : "de gebiedsinformatie-aanvraag is nog niet bevestigd",
-  "meerInformatie" : "http://developer.klic.nl/foutCode/1000405"
+  "status": 405,
+  "meldingCode": 1000405,
+  "gebruikerMelding": "methode niet toegestaan",
+  "ontwikkelaarMelding": "de gebiedsinformatie-aanvraag is nog niet bevestigd",
+  "meerInformatie": "http://developer.klic.nl/foutCode/1000405"
 }
 ```
 
@@ -590,41 +591,41 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 **_voorbeeld van response:_**
 ```json
 [{
-  "aanleveringId" : "3950e2eb-8942-4e6b-99ff-f4f06c5824db",
-  "bronhoudercode" : "nbact2",
-  "bronhouderNaam" : "Netbeheerder Actualiseren02",
-  "informatieSoort" : "beheerdersinformatie",
-  "bestandsnaam" : "nbact2_met documenten.zip",
-  "bestandsgrootte" : 40955,
-  "aanleverNummer" : 15,
-  "aanleverDatum" : "2017-11-03T16:23:53+01",
-  "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biGevalideerdZonderFouten",
-  "aanleverStatusMutatieDatum" : "2017-11-03T16:23:56.829+01",
-  "aanleverStatusHistorie" : [ {
-    "mutatieDatum" : "2017-11-03T16:23:56.829+01",
-    "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biGevalideerdZonderFouten"
+  "aanleveringId": "3950e2eb-8942-4e6b-99ff-f4f06c5824db",
+  "bronhoudercode": "KL0002",
+  "bronhouderNaam": "Netbeheerder Decentraal02",
+  "informatieSoort": "beheerdersinformatie",
+  "bestandsnaam": "KL0002_met_documenten.zip",
+  "bestandsgrootte": 40955,
+  "aanleverNummer": 15,
+  "aanleverDatum": "2017-11-03T16:23:53+01",
+  "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/biGevalideerdZonderFouten",
+  "aanleverStatusMutatieDatum": "2017-11-03T16:23:56.829+01",
+  "aanleverStatusHistorie": [ {
+    "mutatieDatum": "2017-11-03T16:23:56.829+01",
+    "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/biGevalideerdZonderFouten"
   }, {
-    "mutatieDatum" : "2017-11-03T16:23:55.744+01",
-    "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biWordtGevalideerd"
+    "mutatieDatum": "2017-11-03T16:23:55.744+01",
+    "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/biWordtGevalideerd"
   }, {
-    "mutatieDatum" : "2017-11-03T16:23:54.231+01",
-    "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biAangeleverd"
+    "mutatieDatum": "2017-11-03T16:23:54.231+01",
+    "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/biAangeleverd"
   }, {
-    "mutatieDatum" : "2017-11-03T16:23:53.470+01",
-    "aanleverStatus" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStatussen/biGestart"
+    "mutatieDatum": "2017-11-03T16:23:53.470+01",
+    "aanleverStatus": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStatus/biGestart"
   }],
-  "aanleverStappen" : [{
-    "aanleverStapAanduiding" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStapAanduidingen/biAanleveren",
-    "startDatum" : "2017-11-03T16:23:53+01",
-    "eindDatum" : "2017-11-03T16:23:54+01",
-    "stapStatus" : "succes",
-    "gebruiker" : "jvanklaveren"
+  "aanleverStappen": [{
+    "aanleverStapAanduiding": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStapAanduiding/biAanleveren",
+    "startDatum": "2017-11-03T16:23:53+01",
+    "eindDatum": "2017-11-03T16:23:54+01",
+    "stapStatus": "succes",
+    "gebruiker": "jvanklaveren"
   }, {
-    "aanleverStapAanduiding" : "https://api.kadaster.nl/klic/v2/waarde/aanleverStapAanduidingen/biValideren",
-    "startDatum" : "2017-11-03T16:23:55",
-    "eindDatum" : "2017-11-03T16:23:56",
-    "stapStatus" : "succes",
-    "gebruiker" : "system"
+    "aanleverStapAanduiding": "https://klic.kadaster.nl/klic/apidocs/v1/cl/aanleverStapAanduiding/biValideren",
+    "startDatum": "2017-11-03T16:23:55",
+    "eindDatum": "2017-11-03T16:23:56",
+    "stapStatus": "succes",
+    "gebruiker": "system"
   }]
 }]
 ```
