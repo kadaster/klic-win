@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 29 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind februari 2019
@@ -23,11 +23,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind januari 2019
+## Planning voor release - NTD: 29 januari 2019; Productie: 31 januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B-koppeling BMKL 2.0**:
-- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD omgeving. (ID 3411)  \
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD-omgeving. (ID 3411)  \
   Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 **B2B aanvraag**:
@@ -45,7 +45,7 @@ Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebieds
 **Bug-fix**:
 - Bij het uitleveringsbestand in het JSON formaat wordt bij de 'BestandMediaTypeValue' nu altijd de correcte waarde weergegeven. (ID 3580)
 - PKIoverheid-certificaat niet meer verplicht bij PING naar de op KLIC-WIN aangesloten netbeheerders. (ID 3635)
-- Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD voor KLIC-WIN uitleveringen. (ID 3665)
+- Op het moment dat de (graaf)polygoon een EV vlak raakt zonder de bijbehorende kabel of leiding, wordt na deze wijziging ook het bijbehorende utiliteitsnet uitgeleverd in de NTD-omgeving voor KLIC-WIN uitleveringen. (ID 3665)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 23 januari 2019
@@ -77,8 +77,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes NTD**:
-- Bugfix: in de NTD omgeving worden nu alle statussen in de API response als volledige URL weergegeven. (ID 3557)
-- Bugfix: in de NTD omgeving is het probleem opgelost waardoor nu tijdens het opvoeren van een BMKL 2.0 testmelding, niet meer versprongen wordt naar het beginscherm van een klasieke testmelding. (ID 3562)
+- Bugfix: in de NTD-omgeving worden nu alle statussen in de API response als volledige URL weergegeven. (ID 3557)
+- Bugfix: in de NTD-omgeving is het probleem opgelost waardoor nu tijdens het opvoeren van een BMKL 2.0 testmelding, niet meer versprongen wordt naar het beginscherm van een klasieke testmelding. (ID 3562)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 januari 2019
