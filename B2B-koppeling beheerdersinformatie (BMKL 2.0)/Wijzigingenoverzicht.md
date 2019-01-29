@@ -1,5 +1,11 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+29-01-2019
+- Presentatie over B2B-koppeling leveren beheerdersinformatie aangevuld met
+  * statusdiagrammen
+  * waarden van waardelijsten conform actuele werking
+* Handleiding B2B-koppeling aangevuld met verwijzing naar statusdiagrammen in presentatie
+
 24-01-2019
 - Voorbeeldcode in documentatie B2B-koppeling beheerdersinformatie BMKL2.0 aangepast:
   - endpoints BMKL API's conform actuele werking
