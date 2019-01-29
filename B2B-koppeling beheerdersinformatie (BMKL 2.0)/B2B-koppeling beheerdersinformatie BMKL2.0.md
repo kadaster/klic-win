@@ -11,7 +11,7 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
   - [Procesmodellen afhandelen beheerdersinformatie-aanvragen](#procesmodellen-afhandelen-beheerdersinformatie-aanvragen)
     - [Procesmodel BMKL 2.0 (decentrale netbeheerder)](#procesmodel-bmkl-20-decentrale-netbeheerder)
     - [Procesmodel BMKL 2.0 (centrale netbeheerder)](#procesmodel-bmkl-20-centrale-netbeheerder)
-    - [Use casemodel BMKL 2.0](#puse-casemodel-bmkl-20)
+    - [Use casemodel BMKL 2.0](#use-casemodel-bmkl-20)
   - [Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)](#afhandelen-beheerdersinformatie-aanvragen-enkel-decentraal)
       - [Samenstellen zipbestand](#samenstellen-zipbestand)
       - [Beheerdersinformatie en documenten aanleveren (enkel decentraal)](#beheerdersinformatie-en-documenten-aanleveren-enkel-decentraal)
@@ -64,7 +64,7 @@ informatie in de context van KLIC of INSPIRE. \
 Dit document geeft een technische beschrijving van de Web API, maar bevat geen procedurele afspraken
 zoals wettelijke termijnen waarbinnen gereageerd moet worden.
 
-Voor de beschrijving van functionaliteit die in het portaal van de Netbeheerder Testdienst (NTD) worden aangeboden, wordt verwezen naar [Netbeheerder Testdienst (NTD](Netbeheerder Testdienst (NTD).md). \
+Voor de beschrijving van functionaliteit die in het portaal van de Netbeheerder Testdienst (NTD) worden aangeboden, wordt verwezen naar [Netbeheerder Testdienst (NTD](Netbeheerder%20Testdienst%20(NTD).md). \
 Hierin wordt ook beschreven hoe een testmelding kan worden opgevoerd. \
 Ook wordt daar in algemene termen beschreven hoe technische documentatie over de API's kan worden ingezien en de werking van API's kan worden getest.
 
@@ -72,12 +72,13 @@ Ook wordt daar in algemene termen beschreven hoe technische documentatie over de
 ## Leeswijzer
 
 In de sectie [Procesmodellen afhandelen beheerdersinformatie-aanvragen](#procesmodellen-afhandelen-beheerdersinformatie-aanvragen) wordt een schematisch overzicht gegeven van het procesverloop bij het afhandelen van een beheerdersinformatie-aanvraag. \
-Hierbij wordt onderscheid gemaakt tussen een decentrale en centrale netbeheerder. Een decentrale netbeheerder zal zelf zijn beheerdersinformatie moeten samenstellen en aanleveren aan KLIC.
+Hierbij wordt onderscheid gemaakt tussen een decentrale en centrale netbeheerder. Een decentrale netbeheerder zal zelf zijn beheerdersinformatie moeten samenstellen en aanleveren aan KLIC.  \
+Meer gedetailleerde informatie over het procesverloop (met o.a. statusdiagrammen, sequencediagrammen, url-structuur) is te vinden in de presentatie op Github.
 
 De sectie [Afhandelen beheerdersinformatie-aanvragen (enkel decentraal)](#afhandelen-beheerdersinformatie-aanvragen-enkel-decentraal) beschrijft het proces
 van het aanleveren van beheerdersinformatie en bijbehorende documenten door de decentrale netbeheerder. Alle bestanden worden verpakt in één zipbestand.
 
-Om dit zipbestand aan te kunnen leveren, moet er eerst een testmelding worden opgevoerd met _"Opvoeren testmelding - BMKL 2.0 decentraal"_ (zie [Netbeheerder Testdienst (NTD](Netbeheerder Testdienst (NTD).md)). Daarmee wordt er een gebiedsinformatie-aanvraag aangemaakt
+Om dit zipbestand aan te kunnen leveren, moet er eerst een testmelding worden opgevoerd met _"Opvoeren testmelding - BMKL 2.0 decentraal"_ (zie [Netbeheerder Testdienst (NTD](Netbeheerder%20Testdienst%20(NTD).md)). Daarmee wordt er een gebiedsinformatie-aanvraag aangemaakt
 waarvoor beheerdersinformatie en de bijbehorende documenten aangeleverd kunnen worden.
 
 De sectie [Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen](#overzicht-bmkl-apis-voor-afhandelen-beheerdersinformatie-aanvragen) beschrijft de verschillende componenten van de API. \
