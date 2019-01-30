@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 29 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 30 januari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind februari 2019
@@ -23,7 +23,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - NTD: 29 januari 2019; Productie: 31 januari 2019
+## Planning voor release - 30 januari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B-koppeling BMKL 2.0**:
