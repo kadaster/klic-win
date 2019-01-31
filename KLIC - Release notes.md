@@ -1,6 +1,6 @@
 ﻿# Release notes
 
-### 30 januari 2019 ochtend: NTD (gepland: middag op Productie)
+### 30 januari 2019
 
 **B2B-koppeling BMKL 2.0**:
 - Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de NTD-omgeving. (ID 3411)  \
