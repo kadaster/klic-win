@@ -2,7 +2,7 @@
 
 Sinds het begin van 2019 stappen netbeheerders geleidelijk over naar een berichtuitwisseling die is gebaseerd op het nieuwe informatiemodel IMKL1.2 en berichtenprotocol BMKL2.0.  \
 Daarbij zijn er door ons fouten en verbeterpunten gevonden die we graag willen delen.  \
-Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, aangevuld met aanbevelingen.
+Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, soms aangevuld met aanbevelingen.
 
 - [Endpoint netbeheerder](#endpoint-netbeheerder)
   * [Naamgeving endpoint](#naamgeving-endpoint)
@@ -10,7 +10,7 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, a
 - [Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)](#afwijkingen-in-xml-gebruik-netinformatie-of-beheerdersinformatie)
   * [Datumtijd-notatie](#datumtijd-notatie)
   * [Naamgeving identifiers IMKL- en INSPIRE-features](#naamgeving-identifiers-imkl--en-inspire-features)
-  * [Nauwkeurigheid coordinaten (3 decimalen)](#nauwkeurigheid-coordinaten-3-decimalen)
+  * [Nauwkeurigheid coördinaten (3 decimalen)](#nauwkeurigheid-coordinaten-3-decimalen)
   * [Onnodig gebruik namespace-afkortingen binnen IMKL-features](#onnodig-gebruik-namespace-afkortingen-binnen-imkl-features)
   * [Niet verplichte velden met "lege" waarde](#niet-verplichte-velden-met-lege-waarde)
 - [Clippen](#clippen)
@@ -26,6 +26,7 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, a
 - [Spitsvondigheden...](#spitsvondigheden)
   * [Gebruik _ExtraGeometrie_](#gebruik-extrageometrie)
   
+---------------------------------------------------------
 ## Endpoint netbeheerder
 
 Met de sector is een protocol afgesproken hoe er gecommuniceerd wordt tussen KLIC en de netbeheerders, het zogenaamde BMKL.
@@ -48,11 +49,12 @@ Voorbeeld: "https://<deze_netbeheerder>.nl/notificatie"
 ### PKIoverheid-certificaat
 Om als netbeheerder genotificeerd te worden door KLIC, wordt niet (meer) gecontroleerd of deze een geldig PKIoverheid-certificaat heeft.
 
+---------------------------------------------------------
 ## Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)
 
 ### Datumtijd-notatie
 Bij de toepassing van IMKL zijn afspraken gemaakt over de manier waarop datumtijd-velden aangeduid dienen te worden in aangeleverde netinformatie en beheerdersinformatie.  \
-Zie daarvoor [Toelichting controles netinformatie KLIC, Tijdaanduiding](../Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#tijdaanduiding).  \
+Zie daarvoor [Toelichting controles netinformatie KLIC \/ Tijdaanduiding](../Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#tijdaanduiding).  \
 Bij het bundelen van de informatie van alle netbeheerders is er daarmee een eenduidig beeld voor de gebruikers van deze gebiedsinformatie.
 
 Er wordt dringend aanbevolen om deze voorschriften te volgen.
@@ -79,36 +81,40 @@ maar gebruik **WEL**
 ### Naamgeving identifiers IMKL- en INSPIRE-features
 
 In het IMKL-model zijn voorwaarden gesteld aan het format van de identifiers van IMKL-objecten (IMKL- en INSPIRE-features).  \
-Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1, Identificaties van objecten](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#identificaties-van-objecten).
+Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Identificaties van objecten](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#identificaties-van-objecten).
 
 Hierbij is aangegeven dat het gebruik van “.”en “-“ niet zomaar is toegestaan.  \
 De “-“ is bedoeld om onderscheid te maken tussen:
-> _<namespace>_
-> _<lokaalid>_
-> _<versie>_
+
+  * _<namespace>_
+  * _<lokaalid>_
+  * _<versie>_
+
 De “.” is bedoeld om bij _\<lokaalid\>_ onderscheid te maken tussen
-> _<bronhoudercode>_
-> _<eigen_identificatie_van_bronhouder>_
-> _<clip_volgnummer>_
+
+  * _<bronhoudercode>_
+  * _<eigen_identificatie_van_bronhouder>_
+  * _<clip_volgnummer>_
 
 Dit _<clip_volgnummer>_ wordt toegepast bij het splitsen van een _UtilityLink_-feature in meerdere _UtilityLink_-features, ieder met een geclipt deel van de geometrie (zie ook [Clippen](#clippen)).
 
 Het wordt ten sterkste aanbevolen om dit te respecteren en toe te passen, bijvoorbeeld
 
 ```xml
-    gml:id="nl.imkl-GM9991.RVV-332611"		->    gml:id="nl.imkl-GM9991.RVV_332611"
+    gml:id="nl.imkl-GM9991.RVV-332611"			->    gml:id="nl.imkl-GM9991.RVV_332611"
 
-    <!-- niet opgesplitst UtilityLink -->
+    <!-- niet opgesplitste UtilityLink -->
     gml:id="nl.imkl-KL9089.datatransport-15.ulink"	->    gml:id="nl.imkl-KL9089.datatransport_15_ulink"
     gml:id="nl.imkl-KL9528.UtilityLink-16"		->    gml:id="nl.imkl-KL9528.UtilityLink_16"
 
-    <!-- wel opgesplitst UtilityLink (versie 1) -->
+    <!-- wel opgesplitste UtilityLink (versie 1) -->
     gml:id="nl.imkl-KL9089.datatransport8-1.ulink"	->    gml:id="nl.imkl-KL9089.datatransport8_ulink.1"
 ```
 
-### Nauwkeurigheid coordinaten (3 decimalen)
-De geometrie wordt vastgelegd met het RD-coördinatenstelsel (EPSG:28992). RD-coördinaten worden weergegeven in meters met een maximale nauwkeurigheid van 3 decimalen (millimeters).  \
-Zie daarvoor [Toelichting controles netinformatie KLIC, Nauwkeurigheid coördinaten](../Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#nauwkeurigheid-coördinaten).
+### Nauwkeurigheid coördinaten (3 decimalen)
+De geometrie wordt vastgelegd met het RD-coördinatenstelsel (EPSG:28992).  \
+RD-coördinaten worden weergegeven in meters met een maximale nauwkeurigheid van 3 decimalen (millimeters).  We verzoeken dringend om coördinaten met deze nauwkeurigheid af te ronden.  \
+Zie daarvoor [Toelichting controles netinformatie KLIC \/ Nauwkeurigheid coördinaten](../Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#nauwkeurigheid-coördinaten).
 
 Gebruik dus **NIET** (als voorbeeld)
 ```xml
@@ -129,7 +135,7 @@ maar
 
 ### Onnodig gebruik namespace-afkortingen binnen IMKL-features
 In de documentatie zijn een aantal werkafspraken gemaakt t.a.v. het gebruik van namespaces en declaraties.  \
-Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1, Namespaces en declaraties](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#namespaces-en-declaraties).
+Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Namespaces en declaraties](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#namespaces-en-declaraties).
 
 Daarbij zijn ook afspraken gemaakt over standaard namespace afkortingen.  \
 Als bij aanleveringen van een feature-collection aanvullende namespace afkortingen worden gebruikt, worden deze in de verwerking door de centrale voorziening aan elk feature uit de collection toegevoegd.
@@ -171,11 +177,11 @@ Voorbeeld niet-gebruikte namespaces:
 </gml:featureMember>
 ```
 
-Het wordt ten sterkste aanbevolen om **GEEN** extra namespace-definiering te gebruiken als hiervan binnen de feature-collection geen gebruik van wordt gemaakt.  \
+Het wordt ten sterkste aanbevolen om **GEEN** extra namespace-definiering te gebruiken als hiervan binnen de feature-collection geen gebruik wordt gemaakt.  \
 Het verwijderen van niet gebruikte namespaces leidt niet tot een invalide levering (geen XSD-validatiefouten), verhoogt de leesbaarheid en beperkt de omvang van de levering.
 
 Als er binnen een feature wél gebruikt wordt gemaakt van een namespace die niet in de standaard lijst staat, kan deze bij dit feature worden gedeclareerd.  \
-Zie hiervoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1, Definiering namespaces op dieper niveau](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#definiering-namespaces-op-dieper-niveau).
+Zie hiervoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Definiering namespaces op dieper niveau](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#definiering-namespaces-op-dieper-niveau).
 
 Voorbeeld eigen namspace:
 ```xml
@@ -207,14 +213,15 @@ Voorbeeld:
 </imkl:Appurtenance>
 ```
 
+---------------------------------------------------------
 ## Clippen
 Door de kabel- en leidingsector is afgesproken dat er geen geometrie-informatie buiten de graaf- en informatiepolygoon wordt uitgeleverd aan een grondroerder. Daartoe wordt de geometrie ge-"clipt".  \
 Voor een uniforme afhandeling zal zowel de centrale voorziening, als netbeheerders die decentraal blijven aanleveren, moeten clippen.  \
-Zie ook de presentatie [Uitleveren, Clippen](../Uitleveren/25-04-10%20Clippen.pptx).
+Zie ook de presentatie [Uitleveren \/ Clippen](../Uitleveren/25-04-10%20Clippen.pptx).
 
 ### Clippen door decentrale netbeheerder
 Ook van een decentrale netbeheerder wordt verwacht dat deze geen informatie aanlevert buiten het geselecteerde gebied van de aanvraag.  \
-De geometrie moet dus worden geclipt.
+De geometrie moet dus **OOK** door de decentrale netbeheerder worden geclipt.
 
 ### Splitsen _UtilityLink_
 Een _UtilityLink_ is een INSPIRE-feature en kent een attribuut `centrelineGeometry` van het type `GM_Curve` (lijn).  \
@@ -222,15 +229,15 @@ Van dit type staan we het gebruik van `gml:LineString`  of `gml:Curve` toe.
 
 Voorbeeld:
 ```xml
-<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="nl.imkl-KL9999.W_ls118334_geo">
-    <gml:posList srsDimension="2">154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
+<gml:LineString gml:id="nl.imkl-KL9999.W_ls118334_geo" srsDimension="2" srsName="EPSG:28992">
+    <gml:posList>154430.283 389769.995 154431.859 389767.832 154430.610 389766.544</gml:posList>
 </gml:LineString>
 ```
 
 Het clippen van deze geometrie zou mogelijk leiden tot een `GM_MultiCurve` (multilijn), maar dat wordt door de typering van het `centrelineGeometry`-attribuut niet toegestaan.  \
 Er is er daarom voor gekozen om in dat geval een oorspronkelijk _UtilityLink_-object op te splitsen in twee of meer _UtilityLink_-objecten, ieder met een eigen deel van de (geclipte) geometrie.
 
-Aan de UtlityLink’s die daaruit ontstaan, is aan de oorspronkelijke gml-identificatie een volgnummer toegevoegd (beginnend met 1) en gescheiden door een “.”.  \
+Aan de _UtlityLink_’s die daaruit ontstaan, is aan de oorspronkelijke gml-identificatie een volgnummer toegevoegd (te bef=ginnen met 1) en gescheiden door een “.”.  \
 Het feature met een verwijzing naar de oorspronkelijke _UtilityLink_ is ook aangepast, zodat naar beide aangepaste _UtilityLink_’s wordt verwezen (zie feature imkl:Waterleiding).
 
 Voorbeeld van een "gesplitste" _UtilityLink_:
@@ -254,7 +261,7 @@ Voorbeeld van een "gesplitste" _UtilityLink_:
         </net:inspireId>
         ...
         <net:centrelineGeometry>
-            <gml:LineString gml:id="idm522347457968.1" srsName="urn:ogc:def:crs:EPSG::28992">
+            <gml:LineString gml:id="idm522347457968.1" srsDimension="2" srsName="EPSG:28992">
                 <gml:posList>155475.0 392260.0 155512.5 392335.0</gml:posList>
             </gml:LineString>
         </net:centrelineGeometry>
@@ -272,7 +279,7 @@ Voorbeeld van een "gesplitste" _UtilityLink_:
         </net:inspireId>
         ...
         <net:centrelineGeometry>
-            <gml:LineString gml:id="idm522347457968.2" srsName="urn:ogc:def:crs:EPSG::28992">
+            <gml:LineString gml:id="idm522347457968.2" srsDimension="2" srsName="EPSG:28992">
                 <gml:posList>155526.25 392335.0 155557.5 392260.0</gml:posList>
             </gml:LineString>
         </net:centrelineGeometry>
@@ -317,7 +324,7 @@ Voorbeeld:
     <imkl:ExtraGeometrie gml:id="nl.imkl-GM9599.ls_239694_extra">
         ...
         <imkl:vlakgeometrie2D>
-            <gml:Polygon gml:id="id-8a014baf-dc93-4caf-87aa-2b943180343e-0" srsName="EPSG:28992" srsDimension="2">
+            <gml:Polygon gml:id="id-8a014baf-dc93-4caf-87aa-2b943180343e-0" srsDimension="2" srsName="EPSG:28992">
                 <gml:exterior>
                     <gml:LinearRing>
                         <gml:posList>93337.853 435847.548 93344.755 435843.951 93344.939 435844.305 93338.037 435847.902 93337.853 435847.548</gml:posList>
@@ -332,8 +339,9 @@ Voorbeeld:
 
 ### _AanduidingEisVoorzorgsmaatregel_ (EV-vlakken)
 Een _AanduidingEisVoorzorgsmaatregel_-object heeft (nu) een geometrie van het type `GM_Surface`.  \
-Omdat het clippen van deze geometrie mogelijk tot een `GM_MultiSurface` zou kunnen leiden, wordt er (nu) niet geclipt.  \
+Omdat het clippen van deze geometrie mogelijk tot een `GM_MultiSurface` zou kunnen leiden, wordt er (nu) niet geclipt.
 
+---------------------------------------------------------
 ## Magere vulling van attributen (datakwaliteit)
 
 ### Gebruik `nilValue` en onbekende waarde
@@ -369,6 +377,7 @@ Een _Rioolleiding_ behorend bij een `rioolOnderOverOfOnderdruk` zonder druk:
     ...
 ```  
 
+---------------------------------------------------------
 ## Spitsvondigheden...
 Bij het steekproefsgewijs doornemen of toetsen van aangeleverde netinformatie of beheerdersinformatie zijn we tegen verrassende implementatiekeuzes van netbeheerders aangelopen.
 
