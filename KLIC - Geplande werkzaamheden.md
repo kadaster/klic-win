@@ -1,14 +1,22 @@
-﻿# Geplande werkzaamheden (bijgewerkt 30 januari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 12 februari 2019)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind februari 2019
+## Planning voor release - april 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio februari 2019
+## Planning voor release - eind februari 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Performance verbeteringen**:
+- Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
+- Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 18 februari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B-koppeling BMKL 2.0**:
