@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 12 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 14 februari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april 2019
@@ -16,7 +16,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 18 februari 2019
+## Planning voor release - NTD: 14 februari 2019; Productie: 18 februari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B-koppeling BMKL 2.0**:
