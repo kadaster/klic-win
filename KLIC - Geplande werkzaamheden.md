@@ -1,4 +1,30 @@
-﻿# Geplande werkzaamheden (bijgewerkt 14 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 18 februari 2019)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 1 juli 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Nieuwe Kadaster KLIC vector-viewer**:
+Oplevering van nieuwe Kadaster KLIC vector-viewer op basis van een uitlevering 
+- met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering en annotatie van netbeheerders)
+- met een BGT-achtergrondkaart in PNG-formaat en als vectorinformatie
+- met geselecteerd gebied in PNG-formaat en als vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+
+**Uitlevering zipbestand**:
+Het zipbestand met de de Klic-uitlevering wordt aangepast:
+- in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering en annotatie) niet meer uitgeleverd
+- de BGT-achtergrondkaart wordt ook als vectorinformatie uitgeleverd
+Binnenkort wordt daarvoor gepubliceerd:
+- de aangepaste schema-definitie voor de leveringsinformatie (LI.xml)
+- uitgewerkte voorbeelden van uitleveringen
+
+--------------------------------------------------------------------------------------
+## Planning voor release - juni 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Terugmeldvoorziening**:
+- Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
+  - De pilot zal met ketenpartners worden georganiseerd
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april 2019
