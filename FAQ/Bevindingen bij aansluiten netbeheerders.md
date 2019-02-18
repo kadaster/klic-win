@@ -83,20 +83,20 @@ maar gebruik **WEL**
 In het IMKL-model zijn voorwaarden gesteld aan het format van de identifiers van IMKL-objecten (IMKL- en INSPIRE-features).  \
 Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Identificaties van objecten](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#identificaties-van-objecten).
 
-Hierbij is aangegeven dat het gebruik van “.”en “-“ niet zomaar is toegestaan.  \
+Hierbij is aangegeven dat het gebruik van “.” en “-“ niet zomaar is toegestaan.  \
 De “-“ is bedoeld om onderscheid te maken tussen:
 
-  * _<namespace>_
-  * _<lokaalid>_
-  * _<versie>_
+  * _\<namespace\>_
+  * _\<lokaalid\>_
+  * _\<versie\>_
 
 De “.” is bedoeld om bij _\<lokaalid\>_ onderscheid te maken tussen
 
-  * _<bronhoudercode>_
-  * _<eigen_identificatie_van_bronhouder>_
-  * _<clip_volgnummer>_
+  * _\<bronhoudercode\>_
+  * _\<eigen_identificatie_van_bronhouder\>_
+  * _\<clip_volgnummer\>_
 
-Dit _<clip_volgnummer>_ wordt toegepast bij het splitsen van een _UtilityLink_-feature in meerdere _UtilityLink_-features, ieder met een geclipt deel van de geometrie (zie ook [Clippen](#clippen)).
+Dit _\<clip_volgnummer\>_ wordt toegepast bij het splitsen van een _UtilityLink_-feature in meerdere _UtilityLink_-features, ieder met een geclipt deel van de geometrie (zie ook [Clippen](#clippen)).
 
 Het wordt ten sterkste aanbevolen om dit te respecteren en toe te passen, bijvoorbeeld
 
@@ -237,10 +237,10 @@ Voorbeeld:
 Het clippen van deze geometrie zou mogelijk leiden tot een `GM_MultiCurve` (multilijn), maar dat wordt door de typering van het `centrelineGeometry`-attribuut niet toegestaan.  \
 Er is er daarom voor gekozen om in dat geval een oorspronkelijk _UtilityLink_-object op te splitsen in twee of meer _UtilityLink_-objecten, ieder met een eigen deel van de (geclipte) geometrie.
 
-Aan de _UtlityLink_’s die daaruit ontstaan, is aan de oorspronkelijke gml-identificatie een volgnummer toegevoegd (te bef=ginnen met 1) en gescheiden door een “.”.  \
+Aan de _UtlityLink_’s die daaruit ontstaan, is aan de oorspronkelijke gml-identificatie een volgnummer toegevoegd (te beginnen met volgnummer 1) en gescheiden door een “.”.  \
 Het feature met een verwijzing naar de oorspronkelijke _UtilityLink_ is ook aangepast, zodat naar beide aangepaste _UtilityLink_’s wordt verwezen (zie feature imkl:Waterleiding).
 
-Voorbeeld van een "gesplitste" _UtilityLink_:
+Voorbeeld van een "gesplitste" _UtilityLink_ bij een waterleiding:
 ```xml
 <gml:featureMember>
     <imkl:Waterleiding gml:id="nl.imkl-KL9999.WL_00287">
@@ -287,6 +287,10 @@ Voorbeeld van een "gesplitste" _UtilityLink_:
     </us-net-common:UtilityLink>
 </gml:featureMember>
 ```
+
+Visualisatievoorbeeld van een "gesplitste" _UtilityLink_'s bij _Telecommunicatiekabel_´s:
+![Visualisatievoorbeeld gesplitste UtilityLink´s (datatransport)](images/Gesplitste-UtilityLink-s(datatransport).jpg "Gesplitste UtilityLink´s (datatransport)")
+
 
 ## Niet geclipte geometrie (centrale netbeheerder)
 Voor de features _AanduidingEisVoorzorgsmaatregel_ en _ExtraGeometrie_ zijn volgens het huidige IMKL geen multigeometrieën toegestaan.  \
@@ -385,3 +389,6 @@ Bij het steekproefsgewijs doornemen of toetsen van aangeleverde netinformatie of
 Bij enkele beheerders van rioolleidingen is aan (elk) _Rioolleiding_-object een object gekoppeld van het type _ExtraGeometrie_ (vlak, attribuuttype `GM_Surface`).  \
 In de visualisatie is de rioolleiding daardoor zichtbaar als een dikke leiding (vlakvullend).  \
 Omdat _ExtraGeometrie_-objecten (nog) niet geclipt worden (zie hierboven), zijn deze dikke leidingen ook buiten het graafgebied zichtbaar.
+
+Zie onderstaand voorbeeld met het effect voor visualisatie:
+![GM9200 - RioolVrijVerval met ExtraGeometrie](images/GM9200-RioolVrijVerval-met-ExtraGeometrie.jpg "RioolVrijVerval met ExtraGeometrie")
