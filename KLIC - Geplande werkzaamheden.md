@@ -1,8 +1,9 @@
-﻿# Geplande werkzaamheden (bijgewerkt 18 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 20 februari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
-Voor deze release zijn de volgende onderwerpen gepland:
+Per 1 juli 2019 zijn de oude Klic-standaarden niet meer geldig.  \
+Voor deze release zijn daarom de volgende onderwerpen gepland:
 
 **Nieuwe Kadaster KLIC vector-viewer**:
 - Oplevering van nieuwe Kadaster KLIC vector-viewer op basis van een uitlevering 
