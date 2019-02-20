@@ -1,12 +1,17 @@
 ﻿**Bevindingen bij aansluiten netbeheerders**
 
-Sinds het begin van 2019 stappen netbeheerders geleidelijk over naar een berichtuitwisseling die is gebaseerd op het nieuwe informatiemodel IMKL1.2 en berichtenprotocol BMKL2.0.  \
+Sinds het begin van 2019 stappen netbeheerders geleidelijk over naar een berichtuitwisseling die is gebaseerd op het nieuwe informatiemodel IMKL1.2 en berichtenprotocol BMKL 2.0.  \
 Daarbij zijn er door ons fouten en verbeterpunten gevonden die we graag willen delen.  \
 Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, soms aangevuld met aanbevelingen.
 
-- [Endpoint netbeheerder](#endpoint-netbeheerder)
-  * [Naamgeving endpoint](#naamgeving-endpoint)
-  * [PKIoverheid-certificaat](#pkioverheid-certificaat)
+- [Aansluitproces van netbeheerders](#aansluitproces-van-netbeheerders)
+  * [Autoriseren serviceprovider](#autoriseren-serviceprovider)
+  * [Beheren en beoordelen belangen](#beheren-en-beoordelen-belangen)
+    - [Belangen van gemeentes](#belangen-van-gemeentes)
+  * [Aanvinken van de juiste diensten in "Mijn Kadaster"](#aanvinken-van-de-juiste-diensten-in-mijn-kadaster)
+  * [Endpoint netbeheerder](#endpoint-netbeheerder)
+    - [Naamgeving endpoint](#naamgeving-endpoint)
+    - [PKIoverheid-certificaat](#pkioverheid-certificaat)
 - [Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)](#afwijkingen-in-xml-gebruik-netinformatie-of-beheerdersinformatie)
   * [Datumtijd-notatie](#datumtijd-notatie)
   * [Naamgeving identifiers IMKL- en INSPIRE-features](#naamgeving-identifiers-imkl--en-inspire-features)
@@ -27,27 +32,57 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, s
   * [Gebruik _ExtraGeometrie_](#gebruik-extrageometrie)
   
 ---------------------------------------------------------
-## Endpoint netbeheerder
+## Aansluitproces van netbeheerders
+Om aan te sluiten op het nieuwe informatiemodel en de gegevensuitwisseling volgens BMKL 2.0 moeten door de netbeheerder (of zijn servicerprovider) een aantal stappen worden doorlopen.  \
+Op de website van Kadaster KLIC is hierover meer beschreven. Zie [Aansluiten netbeheerder op KLIC-WIN](https://zakelijk.kadaster.nl/aansluiten-bestaande-netbeheerder-op-klic-win).
+
+Op de pagina [KLIC-diensten voor netbeheerders](https://zakelijk.kadaster.nl/klic-diensten-voor-netbeheerders) wordt een toelichting met klantinstructies gegeven over diensten die door de netbeheerder langsgelopen moeten worden om aan te sluiten.
+
+Hieronder staan een aantal punten van aandacht waar netbeheerders tegen aan zijn gelopen.
+
+### Autoriseren serviceprovider
+Maakt de netbeheerder gebruik van de diensten van een serviceprovider dan dient de autorisatie voor die betreffende serviceprovider binnen Mijn Kadaster op de juiste manier te zijn ingesteld.
+
+Afhankelijk van de diensten die de serviceprovider mag uitvoeren, moeten verschillende vinkjes worden gezet.  \
+Als u overstapt op een andere serviceprovider, moet u de autorisaties voor de oude serviceprovider uitschakelen.
+
+### Beheren en beoordelen belangen
+De contactgegevens van een belang moeten worden aangevuld met "Contacten netinformatie" (G/C/O) en "Contact storing/beschadiging". Daarvoor moet eerst een nieuwe **belangversie** worden aangemaakt (op basis van een kopie van een bestaande versie van een productiebelang).  \
+Dit is een goed moment om het belanggebied te controleren.  \
+Pas als het belang is goedgekeurd (met "Beoordelen belangen") wordt deze in productie genomen.
+
+#### Belangen van gemeentes
+Het belanggebied van gemeentes is gelijk aan de gemeentegrens (specifieke gebruikersfunctie).  \
+Aan het belang van een gemeente moet ook het thema `wees` zijn toegevoegd. Dit maakt het verwerken en beheren van weesleidingen veel eenvoudiger.
+
+### Aanvinken van de juiste diensten in "Mijn Kadaster"
+Tijdens het aansluitproces heeft KLIC de juiste diensten voor het klantprofiel van een netbeheerder geactiveerd in "Mijn Kadaster".  \
+De netbeheerder moet vervolgesn zelf deze diensten aanvinken voor zijn gebruikers. Dit kan Kadaster-KLIC niet doen!
+
+![Aanvinken dienstengebruiker (Mijn Kadaster](images/Aanvinken-diensten-gebruiker-Mijn-Kadaster.jpg "Aanvinken dienstengebruiker (Mijn Kadaster")
+
+### Endpoint netbeheerder
 
 Met de sector is een protocol afgesproken hoe er gecommuniceerd wordt tussen KLIC en de netbeheerders, het zogenaamde BMKL.
 Hierbij is aangegeven dat een netbeheerder onverwijld genotificeerd wordt over een gebiedsinformatie-aanvraag waar deze netbeheerder belanghebbend bij is.
 
-Dit protocol is gebaseerd op wetgeving. In het nieuwe BMKL2.0 is KLIC dus verplicht om de netbeheerder te notificeren als deze belanghebbend is bij een aanvraag.
+Dit protocol is gebaseerd op wetgeving. In het nieuwe BMKL 2.0 is KLIC dus verplicht om de netbeheerder te notificeren als deze belanghebbend is bij een aanvraag.
 Hiervoor zal het endpoint door het Kadaster worden aangepast tijdens het aansluiten van de netbeheerder.
 Aan het endpoint ("url") worden eisen gesteld.
 
 Als de netbeheerder wordt genotificeerd, wordt door KLIC niet gecontroleerd of de netbeheerder op dit endpoint bereikbaar is.
 Het moment dat een netbeheerder wordt genotificeerd, wordt bij de _BeheerdersinformatieAanvraag_  geregistreerd als `datumGenotificeerd`. 
 
-### Naamgeving endpoint
+#### Naamgeving endpoint
 Om over te schakelen naar BMKL 2.0 moet een netbeheerder een endpoint opgeven waarop deze genotificeerd moet worden.  \
 Dit endpoint moet een syntactisch correct endpoint te zijn.  \
 Deze moet beginnen met "http://" of "https://" en worden gevolgd door domeinnaam-locatie.
 
 Voorbeeld: "https://<deze_netbeheerder>.nl/notificatie"
 
-### PKIoverheid-certificaat
-Om als netbeheerder genotificeerd te worden door KLIC, wordt niet (meer) gecontroleerd of deze een geldig PKIoverheid-certificaat heeft.
+#### PKIoverheid-certificaat
+Om als netbeheerder genotificeerd te worden door KLIC, wordt niet (meer) gecontroleerd of deze een geldig PKIoverheid-certificaat heeft.  \
+Als een netbeheerder volledig is overgestapt op BMKL 2.0, dan is voor de gegevensuitwisseling met KLIC geen geldig PKIoverheid-certificaat meer nodig.
 
 ---------------------------------------------------------
 ## Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)
@@ -288,7 +323,7 @@ Voorbeeld van een "gesplitste" _UtilityLink_ bij een waterleiding:
 </gml:featureMember>
 ```
 
-Visualisatievoorbeeld van een "gesplitste" _UtilityLink_'s bij _Telecommunicatiekabel_´s:
+Visualisatievoorbeeld van "gesplitste" _UtilityLink_'s bij _Telecommunicatiekabel_'s:
 ![Visualisatievoorbeeld gesplitste UtilityLink´s (datatransport)](images/Gesplitste-UtilityLink-s(datatransport).jpg "Gesplitste UtilityLink´s (datatransport)")
 
 
