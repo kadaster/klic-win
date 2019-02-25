@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 20 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
@@ -35,8 +35,19 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
 
 --------------------------------------------------------------------------------------
+## Planning voor release - medio maart 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Actualeren documenten**:
+- Performane verbetering en robuustere afhandeling.
+
+--------------------------------------------------------------------------------------
 ## Planning voor release - eind februari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
+
+**Actualiseren netinformatie**:
+- Specificatie bij één van de onbekende technische fouten: Als er een onjuiste alias gebruikt wordt voor de namespace van 'imkl'. (ID 3702, ID 3733)
+- Bugfix: het is nu niet meer mogelijk om als service provider onder de login van een klant, informatie van een andere klant te plaatsen in de tijdelijke validatie tabellen. (ID 3742)
 
 **Performance verbeteringen**:
 - Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
