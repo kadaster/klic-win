@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 26 februari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
@@ -26,6 +26,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
+  - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april 2019
@@ -52,6 +53,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Performance verbeteringen**:
 - Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
 - Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
+- Bugfix: Het verwerken van geuploade documenten kon op de NTD tot een Out-Of-Memory probleem leiden. Dit is nu opgelost. (ID 3772)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 14 februari 2019; Productie: 18 februari 2019
