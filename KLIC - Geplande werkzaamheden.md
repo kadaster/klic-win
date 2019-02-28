@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 28 februari 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
@@ -39,11 +39,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Planning voor release - medio maart 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Actualeren documenten**:
-- Performane verbetering en robuustere afhandeling.
+**Actualiseren documenten**:
+- Performance verbetering en robuustere afhandeling.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind februari 2019
+## Planning voor release - NTD: 1 maart 2019; Productie: 2 maart 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren netinformatie**:
