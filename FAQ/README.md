@@ -9,5 +9,7 @@ Op basis van contacten met de sector proberen we deze informatie verder aan te v
 We nodigen u uit om suggesties of aanbevelingen te geven, zodat we u nog beter van dienst kunnen zijn. Dit mag via GitHub, maar ook via klic@kadaster.nl.
 
 Mocht u als netbeheerder/serviceprovider vragen hebben over het aansluiten op het nieuwe KLIC (o.a. het gebruik van Mijn Kadaster), schroom dan niet om contact op te nemen met
+
 	KCC van het Kadaster: **0800-00 80**, **optie 2**
+
 elke werkdag bereikbaar van **08:00 tot 17:00 uur**. Zij kunnen u indien gewenst ondersteunen.
