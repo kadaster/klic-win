@@ -12,6 +12,7 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, s
   * [Endpoint netbeheerder](#endpoint-netbeheerder)
     - [Naamgeving endpoint](#naamgeving-endpoint)
     - [PKIoverheid-certificaat](#pkioverheid-certificaat)
+  * [Website KLIC](#website-klic)
 - [Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)](#afwijkingen-in-xml-gebruik-netinformatie-of-beheerdersinformatie)
   * [Datumtijd-notatie](#datumtijd-notatie)
   * [Naamgeving identifiers IMKL- en INSPIRE-features](#naamgeving-identifiers-imkl--en-inspire-features)
@@ -33,7 +34,7 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, s
   
 ---------------------------------------------------------
 ## Aansluitproces van netbeheerders
-Om aan te sluiten op het nieuwe informatiemodel en de gegevensuitwisseling volgens BMKL 2.0 moeten door de netbeheerder (of zijn servicerprovider) een aantal stappen worden doorlopen.  \
+Om aan te sluiten op het nieuwe informatiemodel en de gegevensuitwisseling volgens BMKL 2.0 moeten door de netbeheerder (of zijn serviceprovider) een aantal stappen worden doorlopen.  \
 Op de website van Kadaster KLIC is hierover meer beschreven. Zie [Aansluiten netbeheerder op KLIC-WIN](https://zakelijk.kadaster.nl/aansluiten-bestaande-netbeheerder-op-klic-win).
 
 Op de pagina [KLIC-diensten voor netbeheerders](https://zakelijk.kadaster.nl/klic-diensten-voor-netbeheerders) wordt een toelichting met klantinstructies gegeven over diensten die door de netbeheerder langsgelopen moeten worden om aan te sluiten.
@@ -52,13 +53,14 @@ Dit is een goed moment om het belanggebied te controleren.  \
 Pas als het belang is goedgekeurd (met "Beoordelen belangen") wordt deze in productie genomen.
 
 #### Belangen van gemeentes
-Het belanggebied van gemeentes is gelijk aan de gemeentegrens (specifieke gebruikersfunctie).  \
-Aan het belang van een gemeente moet ook het thema `wees` zijn toegevoegd. Dit maakt het verwerken en beheren van weesleidingen veel eenvoudiger.
+Het belanggebied van gemeentes is gelijk aan de gemeentegrens (specifieke gebruikersfunctie in de dienst "Klic Beheren belang").  \
+Aan het belang van een gemeente wordt geadviseerd om ook het thema `wees` toe te voegen. Dit maakt het verwerken en beheren van weesleidingen veel eenvoudiger.
 
 ### Aanvinken van de juiste diensten in "Mijn Kadaster"
 Tijdens het aansluitproces heeft KLIC de juiste diensten voor het klantprofiel van een netbeheerder geactiveerd in "Mijn Kadaster".  \
 De netbeheerder moet vervolgesn zelf deze diensten aanvinken voor zijn gebruikers. Dit kan Kadaster-KLIC niet doen!
 
+In geval van keuze voor centrale voorziening:
 ![Aanvinken dienstengebruiker (Mijn Kadaster](images/Aanvinken-diensten-gebruiker-Mijn-Kadaster.jpg "Aanvinken dienstengebruiker (Mijn Kadaster")
 
 ### Endpoint netbeheerder
@@ -68,7 +70,7 @@ Hierbij is aangegeven dat een netbeheerder onverwijld genotificeerd wordt over e
 
 Dit protocol is gebaseerd op wetgeving. In het nieuwe BMKL 2.0 is KLIC dus verplicht om de netbeheerder te notificeren als deze belanghebbend is bij een aanvraag.
 Hiervoor zal het endpoint door het Kadaster worden aangepast tijdens het aansluiten van de netbeheerder.
-Aan het endpoint ("url") worden eisen gesteld.
+Aan het endpoint ("URL") worden eisen gesteld.
 
 Als de netbeheerder wordt genotificeerd, wordt door KLIC niet gecontroleerd of de netbeheerder op dit endpoint bereikbaar is.
 Het moment dat een netbeheerder wordt genotificeerd, wordt bij de _BeheerdersinformatieAanvraag_  geregistreerd als `datumGenotificeerd`. 
@@ -83,6 +85,20 @@ Voorbeeld: "https://<deze_netbeheerder>.nl/notificatie"
 #### PKIoverheid-certificaat
 Om als netbeheerder genotificeerd te worden door KLIC, wordt niet (meer) gecontroleerd of deze een geldig PKIoverheid-certificaat heeft.  \
 Als een netbeheerder volledig is overgestapt op BMKL 2.0, dan is voor de gegevensuitwisseling met KLIC geen geldig PKIoverheid-certificaat meer nodig.
+
+### Website KLIC
+
+Als alternatief voor het meesturen van algemene of "nietBetrokken" - bijlagen kan de netbeheerder een `website KLIC` opgeven. Dit is een website van de netbeheerder met specifieke informatie voor de Klic-sector.  \
+Deze URL wordt opgenomen in de LI.pdf (leveringsbrief) en  de GI.xml (_GebiedsinformatieLevering_). Hiermee kan het aantal bijlage(n) bij een levering worden gereduceerd.
+
+Via de dienst "Klic Beheer communicatie" in het Mijn Kadaster-portaal kunt u als netbeheerder een website KLIC opgeven.  \
+De eisen met betrekking tot de in te vullen website KLIC (URL) zijn:
+  - moet syntactisch correct zijn
+  - moet beginnen met "http://" of "https://"
+  - gevolgd door domeinnaam-locatie (host-naam en .nl o.i.d.)
+
+Voorbeeld schermafdruk:
+![Selecteren communicatiegegevens - website KLIC](images/Selecteren-communicatiegegevens-website-KLIC.jpg "Selecteren communicatiegegevens - website KLIC")
 
 ---------------------------------------------------------
 ## Afwijkingen in xml-gebruik (netinformatie of beheerdersinformatie)
@@ -212,13 +228,13 @@ Voorbeeld niet-gebruikte namespaces:
 </gml:featureMember>
 ```
 
-Het wordt ten sterkste aanbevolen om **GEEN** extra namespace-definiering te gebruiken als hiervan binnen de feature-collection geen gebruik wordt gemaakt.  \
+Het wordt ten sterkste aanbevolen om **GEEN** extra namespace-definiëring te gebruiken als hiervan binnen de feature-collection geen gebruik wordt gemaakt.  \
 Het verwijderen van niet gebruikte namespaces leidt niet tot een invalide levering (geen XSD-validatiefouten), verhoogt de leesbaarheid en beperkt de omvang van de levering.
 
 Als er binnen een feature wél gebruikt wordt gemaakt van een namespace die niet in de standaard lijst staat, kan deze bij dit feature worden gedeclareerd.  \
 Zie hiervoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Definiering namespaces op dieper niveau](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#definiering-namespaces-op-dieper-niveau).
 
-Voorbeeld eigen namspace:
+Voorbeeld eigen namespace:
 ```xml
 <gml:featureMember>
     <imkl:Utiliteitsnet gml:id="nl.imkl-KL3131.UNET_gasHogeDruk_4">
@@ -325,7 +341,6 @@ Voorbeeld van een "gesplitste" _UtilityLink_ bij een waterleiding:
 
 Visualisatievoorbeeld van "gesplitste" _UtilityLink_'s bij _Telecommunicatiekabel_'s:
 ![Visualisatievoorbeeld gesplitste UtilityLink´s (datatransport)](images/Gesplitste-UtilityLink-s(datatransport).jpg "Gesplitste UtilityLink´s (datatransport)")
-
 
 ## Niet geclipte geometrie (centrale netbeheerder)
 Voor de features _AanduidingEisVoorzorgsmaatregel_ en _ExtraGeometrie_ zijn volgens het huidige IMKL geen multigeometrieën toegestaan.  \
