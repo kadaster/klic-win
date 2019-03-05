@@ -1,13 +1,31 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+08-03-2019
+* Presentatie over WIBON-levering NA overgangsperiode toegevoegd
+
+05-03-2019
+* Presentatie over WIBON-levering (voor en tijdens overgangsperiode) geactualiseerd
+  - WION gewijzigd naar WIBON
+  - explicieter aangegeven dat de producten zijn beschreven zoals ze worden samengesteld vóór de overgangsperiode of tijdens de overgangsperiode
+* Indeling gebiedsinformatie (voor en tijdens overgangsperiode) geactualiseerd
+  - leveringsinformatie: versie 2.1
+* Presentatie over WIBON-levering NA overgangsperiode toegevoegd
+* Indeling gebiedsinformatie NA overgangsperiode toegevoegd
+  - leveringsinformatie: versie 2.2
+
+* Map met voorbeelden van gebruik BGT als achtergrondkaart toegevoegd
+* 6 voorbeelden toegevoegd van gebruik in Klic-online, ontvangstbevestiging en levering (oude en nieuwe zip-structuur)  \
+(tracémelding te groot om te publiceren)
+
 06-09-2018
 * Map met voorbeelden van gebruik BGT als achtergrondkaart toegevoegd
-* 7 voorbeelden toegevoegd van gebruik in Klic-online, ontvangstbevestiging en levering (oude en nieuwe zip-structuur)
+* 6 voorbeelden toegevoegd van gebruik in Klic-online, ontvangstbevestiging en levering (oude en nieuwe zip-structuur)  \
+(tracémelding te groot om te publiceren)
 
 13-06-2018
 * Aanpassing voorbeeld 6 vanwege onjuiste bestandverwijzingen
 
-  16-05-2018
+16-05-2018
 * Klicnummer toegevoegd aan bestandsnaam van meegeleverde bijlagen (t.b.v. uniekheid op downloadserver); aanpassingen doorgevoerd in:
   * Indeling gebiedsinformatie (.pdf)
   * Presentatie WION levering - producten
