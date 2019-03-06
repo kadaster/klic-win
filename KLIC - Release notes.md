@@ -1,5 +1,18 @@
 ﻿# Release notes
 
+### 1 maart 2019 in NTD (4/11 maart 2019 op Productie)
+
+**Actualiseren netinformatie**:
+- Actualiseren netinformatie: Specificatie bij één van de onbekende technische fouten: Als er een onjuiste alias gebruikt wordt voor de namespace van 'imkl'. (ID 3702, ID 3733)
+- Bugfix: Actualiseren netinformatie: Het is nu niet meer mogelijk om als service provider onder de login van een klant, informatie van een andere klant te plaatsen in de tijdelijke validatie tabellen. (ID 3742)
+
+**Performance verbeteringen**:
+- Actualiseren netinformatie: Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
+- Bugfix: Het verwerken van geuploade documenten kon op de NTD tot een Out-Of-Memory probleem leiden. Dit is nu opgelost. (ID 3772)
+- Actualiseren documenten: Performance verbetering 
+- Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
+
+------------------------
 ### 18 februari 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 14 februari beschikbaar.
 

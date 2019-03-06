@@ -1,22 +1,20 @@
-﻿# Geplande werkzaamheden (bijgewerkt 28 februari 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 6 maart 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
 Per 1 juli 2019 zijn de oude Klic-standaarden niet meer geldig.  \
 Voor deze release zijn daarom de volgende onderwerpen gepland:
 
-**Nieuwe Kadaster KLIC vector-viewer**:
-- Oplevering van nieuwe Kadaster KLIC vector-viewer op basis van een uitlevering 
-  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering en annotatie van netbeheerders)
-  - met een BGT-achtergrondkaart in PNG-formaat en als vectorinformatie
-  - met geselecteerd gebied in PNG-formaat en als vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+**Nieuwe Kadaster Klic-vectorviewer**:
+- Oplevering van nieuwe Kadaster Klic-vectorviewer op basis van een uitlevering 
+  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
+  - met een BGT-achtergrondkaart in PNG-formaat
+  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 
 **Uitlevering zipbestand**:
 - Het zipbestand met de de Klic-uitlevering wordt aangepast:
-  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering en annotatie) niet meer uitgeleverd
-  - de BGT-achtergrondkaart wordt ook als vectorinformatie uitgeleverd
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd
 - Binnenkort wordt daarvoor gepubliceerd:
-  - de aangepaste schema-definitie voor de leveringsinformatie (LI.xml)
   - uitgewerkte voorbeelden van uitleveringen
 
 --------------------------------------------------------------------------------------
@@ -43,17 +41,18 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Performance verbetering en robuustere afhandeling.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - NTD: 1 maart 2019; Productie: 2 maart 2019
+## Planning voor release - NTD: 1 maart 2019; Productie: 4/11 maart 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren netinformatie**:
-- Specificatie bij één van de onbekende technische fouten: Als er een onjuiste alias gebruikt wordt voor de namespace van 'imkl'. (ID 3702, ID 3733)
-- Bugfix: het is nu niet meer mogelijk om als service provider onder de login van een klant, informatie van een andere klant te plaatsen in de tijdelijke validatie tabellen. (ID 3742)
+- Actualiseren netinformatie: Specificatie bij één van de onbekende technische fouten: Als er een onjuiste alias gebruikt wordt voor de namespace van 'imkl'. (ID 3702, ID 3733)
+- Bugfix: Actualiseren netinformatie: Het is nu niet meer mogelijk om als service provider onder de login van een klant, informatie van een andere klant te plaatsen in de tijdelijke validatie tabellen. (ID 3742)
 
 **Performance verbeteringen**:
-- Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
-- Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
+- Actualiseren netinformatie: Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
 - Bugfix: Het verwerken van geuploade documenten kon op de NTD tot een Out-Of-Memory probleem leiden. Dit is nu opgelost. (ID 3772)
+- Actualiseren documenten: Performance verbetering 
+- Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 14 februari 2019; Productie: 18 februari 2019
