@@ -58,9 +58,9 @@ Aan het belang van een gemeente wordt geadviseerd om ook het thema `wees` toe te
 
 ### Aanvinken van de juiste diensten in "Mijn Kadaster"
 Tijdens het aansluitproces heeft KLIC de juiste diensten voor het klantprofiel van een netbeheerder geactiveerd in "Mijn Kadaster".  \
-De netbeheerder moet vervolgesn zelf deze diensten aanvinken voor zijn gebruikers. Dit kan Kadaster-KLIC niet doen!
-
+De netbeheerder moet vervolgens zelf deze diensten aanvinken voor zijn gebruikers. Dit kan Kadaster-KLIC niet doen!  \
 In geval van keuze voor centrale voorziening:
+
 ![Aanvinken dienstengebruiker (Mijn Kadaster](images/Aanvinken-diensten-gebruiker-Mijn-Kadaster.jpg "Aanvinken dienstengebruiker (Mijn Kadaster")
 
 ### Endpoint netbeheerder
