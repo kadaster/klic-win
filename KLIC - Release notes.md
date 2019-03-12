@@ -1,6 +1,7 @@
 ﻿# Release notes
 
-### 1 maart 2019 in NTD (4/11 maart 2019 op Productie)
+### 4/11 maart 2019
+	In de NTD-omgeving zijn de wijzigingen reeds per 1 maart beschikbaar.
 
 **Actualiseren netinformatie**:
 - Actualiseren netinformatie: Specificatie bij één van de onbekende technische fouten: Als er een onjuiste alias gebruikt wordt voor de namespace van 'imkl'. (ID 3702, ID 3733)

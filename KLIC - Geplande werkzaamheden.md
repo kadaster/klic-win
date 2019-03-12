@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 maart 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 12 maart 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
@@ -27,15 +27,26 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - april 2019
+## Planning voor release - medio/eind april 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Synchronisatie API**:
 - Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
 
 --------------------------------------------------------------------------------------
+## Planning voor release - begin april 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bugfixes**:
+- Er is een extra validatie op de voorzorgsmaatregelen toegevoegd: iedere 'voorzorgsmaatregelToelichting' moet genoemd worden bij 'voorzorgsmaatregelBeslissingsregel' en andersom. (ID 3752)
+- In de NTD-omgeving wordt vanaf nu de naam + relatienummer van de Aanvrager (NTD-gebruiker) overgenomen in de GI.xml het EV sjabloon en de GebiedsinformatieAanvragen API. Voorheen werd deze in de NTD gevuld met een default waarde. (ID 3689)
+
+--------------------------------------------------------------------------------------
 ## Planning voor release - medio maart 2019
 Voor deze release zijn de volgende onderwerpen gepland:
+
+**Voorzorgsmaatregelen (EV)**:
+- Bugfix: Vulling van placeholers bij EV bijlage. Bij placeholcer "Werk-adres" wordt nu niet meer de woonplaats gevuld.
 
 **Actualiseren documenten**:
 - Performance verbetering en robuustere afhandeling.
