@@ -1,5 +1,14 @@
 ﻿# Release notes
 
+### 14 maart 2019 in NTD (Productie gepland op: 18 maart 2019)
+
+**Voorzorgsmaatregelen (EV)**:
+- Bugfix: Vulling van placeholers bij EV bijlage. Bij placeholcer "Werk-adres" wordt nu niet meer de woonplaats gevuld. (ID 3776)
+
+**Actualiseren documenten**:
+- Performance verbetering en robuustere afhandeling.
+
+------------------------
 ### 4/11 maart 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 1 maart beschikbaar.
 
