@@ -1,9 +1,14 @@
 ﻿# Release notes
 
-### 14 maart 2019 in NTD (Productie gepland op: 18 maart 2019)
+### 20 maart 2019
+	In de NTD-omgeving zijn de wijzigingen reeds per 14 maart beschikbaar.
+
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 **Voorzorgsmaatregelen (EV)**:
-- Bugfix: Vulling van placeholers bij EV bijlage. Bij placeholcer "Werk-adres" wordt nu niet meer de woonplaats gevuld. (ID 3776)
+- Bugfix: Vulling van placeholders bij EV bijlage. Bij placeholder "Werk-adres" wordt nu niet meer de woonplaats gevuld. (ID 3776)
 
 **Actualiseren documenten**:
 - Performance verbetering en robuustere afhandeling.

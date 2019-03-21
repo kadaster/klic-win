@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 14 maart 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 21 maart 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2019
@@ -42,14 +42,18 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - In de NTD-omgeving wordt vanaf nu de naam + relatienummer van de Aanvrager (NTD-gebruiker) overgenomen in de GI.xml het EV sjabloon en de GebiedsinformatieAanvragen API. Voorheen werd deze in de NTD gevuld met een default waarde. (ID 3689)
 
 **Uitlevering zipbestand**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering.
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 14 maart 2019; Productie: 20 maart 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
+**B2B-koppeling BMKL 2.0**:
+- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
+  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
+
 **Voorzorgsmaatregelen (EV)**:
-- Bugfix: Vulling van placeholers bij EV bijlage. Bij placeholcer "Werk-adres" wordt nu niet meer de woonplaats gevuld. (ID 3776)
+- Bugfix: Vulling van placeholders bij EV bijlage. Bij placeholder "Werk-adres" wordt nu niet meer de woonplaats gevuld. (ID 3776)
 
 **Actualiseren documenten**:
 - Performance verbetering en robuustere afhandeling.
@@ -71,10 +75,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 14 februari 2019; Productie: 18 februari 2019
 Voor deze release zijn de volgende onderwerpen gepland:
-
-**B2B-koppeling BMKL 2.0**:
-- Aan het zipbestand met de BeheerdersinformatieLeveringen wordt nu ook een LI.xml toegevoegd in de Productie omgeving. (ID 3411)  \
-  Naar aanleiding van de Keten Acceptatietesten geprioriteerd.
 
 **Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
 - Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
