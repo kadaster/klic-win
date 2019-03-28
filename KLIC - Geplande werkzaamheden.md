@@ -34,7 +34,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin april 2019
+## Planning voor release - NTD: 28 maart 2019; Productie: 2 april 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes**:

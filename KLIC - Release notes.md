@@ -1,5 +1,13 @@
 ﻿# Release notes
 
+### 28 maart 2019 in NTD (Productie gepland op: 2 april 2019)
+
+**Bug-fixes**:
+- Er is een extra validatie op de voorzorgsmaatregelen toegevoegd: iedere 'voorzorgsmaatregelToelichting' moet genoemd worden bij 'voorzorgsmaatregelBeslissingsregel' en andersom. (ID 3752)
+- In de NTD-omgeving wordt vanaf nu de naam + relatienummer van de Aanvrager (NTD-gebruiker) overgenomen in de GI.xml het EV sjabloon en de GebiedsinformatieAanvragen API. Voorheen werd deze in de NTD gevuld met een default waarde. (ID 3689)
+
+------------------------
+
 ### 20 maart 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 14 maart beschikbaar.
 
