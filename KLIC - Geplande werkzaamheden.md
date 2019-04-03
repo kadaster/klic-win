@@ -1,24 +1,7 @@
-﻿# Geplande werkzaamheden (bijgewerkt 21 maart 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 3 april 2019)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 1 juli 2019
-Per 1 juli 2019 zijn de oude Klic-standaarden niet meer geldig.  \
-Voor deze release zijn daarom de volgende onderwerpen gepland:
-
-**Nieuwe Kadaster Klic-vectorviewer**:
-- Oplevering van nieuwe Kadaster Klic-vectorviewer op basis van een uitlevering 
-  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
-  - met een BGT-achtergrondkaart in PNG-formaat
-  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
-
-**Uitlevering zipbestand**:
-- Het zipbestand met de de Klic-uitlevering wordt aangepast:
-  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd
-- Binnenkort wordt daarvoor gepubliceerd:
-  - uitgewerkte voorbeelden van uitleveringen
-
---------------------------------------------------------------------------------------
-## Planning voor release - juni 2019
+## Planning voor release - september 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Terugmeldvoorziening**:
@@ -27,11 +10,49 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio/eind april 2019
+## Planning voor release - 1 juli 2019
+Per 1 juli 2019 zijn de oude Klic-standaarden niet meer geldig.  \
+Voor deze release zijn daarom de volgende onderwerpen gepland:
+
+**Nieuwe Kadaster KLIC-viewer**:
+- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
+  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
+  - met een BGT-achtergrondkaart in PNG-formaat
+  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+
+**Uitlevering zipbestand**:
+- Het zipbestand met de Klic-uitlevering wordt aangepast (ID 3849):
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd.
+- Binnenkort wordt daarvoor gepubliceerd:
+  - uitgewerkte voorbeelden van uitleveringen
+
+**Leverings email**:
+- Aan de leveringsmail wordt een link toegevoegd waarmee de levering gedurende 20 werkdagen on-line bekeken kan worden met de Kadaster KLIC-viewer. (ID 3897)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - begin mei 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Synchronisatie API**:
-- Voor Agentschap Telecom wordt een API beschikbaar gesteld om gevens van organisaties te synchroniseren met hun eigen registratie. (ID 3502)
+**Aanleveren netinformatie**:
+- Bij het aanleveren van netinformatie wordt een validatie toegevoegd of een feature label niet de maximale lengte van 200 tekens overschrijdt. (ID 3978)
+
+**Bug-fixes**:
+- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - medio april 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Voorzorgsmaatregelen (EV)**:
+- Bij het aanleveren van een EV-vlak in de netinformatie moet de **`netbeheerderNetAanduiding`** in combinatie met **het `thema` van het `Utiliteitsnet`** - bekend zijn bij de aangeleverde voorzorgsmaatregelen. (ID 3546)  \
+  Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen). 
+
+**Uitlevering zipbestand**:
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
+
+**Bug-fixes**:
+- In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 28 maart 2019; Productie: 2 april 2019
@@ -40,9 +61,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Bug-fixes**:
 - Er is een extra validatie op de voorzorgsmaatregelen toegevoegd: iedere 'voorzorgsmaatregelToelichting' moet genoemd worden bij 'voorzorgsmaatregelBeslissingsregel' en andersom. (ID 3752)
 - In de NTD-omgeving wordt vanaf nu de naam + relatienummer van de Aanvrager (NTD-gebruiker) overgenomen in de GI.xml het EV sjabloon en de GebiedsinformatieAanvragen API. Voorheen werd deze in de NTD gevuld met een default waarde. (ID 3689)
-
-**Uitlevering zipbestand**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 14 maart 2019; Productie: 20 maart 2019

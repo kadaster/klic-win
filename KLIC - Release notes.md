@@ -1,6 +1,7 @@
 ﻿# Release notes
 
-### 28 maart 2019 in NTD (Productie gepland op: 2 april 2019)
+### 2 april 2019
+	In de NTD-omgeving zijn de wijzigingen reeds per 28 maart beschikbaar.
 
 **Bug-fixes**:
 - Er is een extra validatie op de voorzorgsmaatregelen toegevoegd: iedere 'voorzorgsmaatregelToelichting' moet genoemd worden bij 'voorzorgsmaatregelBeslissingsregel' en andersom. (ID 3752)
