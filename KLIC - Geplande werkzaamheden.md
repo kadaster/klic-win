@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 3 april 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 10 april 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -27,7 +27,7 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
   - uitgewerkte voorbeelden van uitleveringen
 
 **Leverings email**:
-- Aan de leveringsmail wordt een link toegevoegd waarmee de levering gedurende 20 werkdagen on-line bekeken kan worden met de Kadaster KLIC-viewer. (ID 3897)
+- De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin mei 2019
@@ -35,13 +35,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Aanleveren netinformatie**:
 - Bij het aanleveren van netinformatie wordt een validatie toegevoegd of een feature label niet de maximale lengte van 200 tekens overschrijdt. (ID 3978)
-
-**Bug-fixes**:
-- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
-
---------------------------------------------------------------------------------------
-## Planning voor release - medio april 2019
-Voor deze release zijn de volgende onderwerpen gepland:
 
 **Voorzorgsmaatregelen (EV)**:
 - Bij het aanleveren van een EV-vlak in de netinformatie moet de **`netbeheerderNetAanduiding`** in combinatie met **het `thema` van het `Utiliteitsnet`** - bekend zijn bij de aangeleverde voorzorgsmaatregelen. (ID 3546)  \
@@ -51,8 +44,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
 
 **Bug-fixes**:
+- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
 - In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
-
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 28 maart 2019; Productie: 2 april 2019
