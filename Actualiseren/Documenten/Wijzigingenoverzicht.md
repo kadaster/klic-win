@@ -1,5 +1,9 @@
 ﻿#### Actualiseren documenten - Overzicht wijzigingen
 
+24-04-2019
+* Documentatie over controles van documenten aangevuld
+  - De bestandsnamen binnen het zipbestand moeten uniek zijn.
+
 18-12-2018
 * Documentatie over controles van documenten aangevuld
 

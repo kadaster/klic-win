@@ -7,6 +7,8 @@ Hieronder wordt een overzicht gegeven van de belangrijkste validaties die worden
 
 ## Aanduidingen en beslissingsregels bij voorzorgsmaatregelen
 
+- De bestandsnamen binnen het zipbestand moeten uniek zijn.
+
 - Er wordt een XSD-validatie uitgevoerd op de "voorzorgsmaatregelen.xml" in het zipbestand van de aanlevering.
 
 - Er is een controle op `bronhoudercode` in _VoorzorgsmaatregelenBeheer_: de bronhoudercode moet overeenstemmen met de bronhouder die (namens wie) de voorzorgsmaatregelen aanlevert (worden aangeleverd).  \

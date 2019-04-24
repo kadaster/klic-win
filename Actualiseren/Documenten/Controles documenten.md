@@ -4,6 +4,8 @@ De belangrijkste uitgangspunten met betrekking tot de documenten-validatie zijn:
 
 - Het upload-bestand is een zipbestand.
 
+- De bestandsnamen binnen het zipbestand zijn uniek.
+
 - In het zipbestand zit exact 1 XML-bestand (ook wel de documentenbeheer.xml).  \
 Dit bestand beschrijft de documenten die in het zipbestand worden aangeleverd (meta-informatie).
 

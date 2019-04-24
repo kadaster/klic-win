@@ -1,5 +1,9 @@
 ﻿#### Toepassing IMKL - Overzicht wijzigingen
 
+24-04-2019
+* Documentatie met toelichting over controles netinformatie aangepast:
+  - De bestandsnamen binnen het zipbestand moeten uniek zijn. 
+
 18-12-2018
 * Documentatie met toelichting over controles netinformatie aangepast:
   - maximale bestandsgrootte zipbestand beheerdersinformatie
