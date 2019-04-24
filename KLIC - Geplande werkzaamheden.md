@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 april 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 24 april 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -30,22 +30,29 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin mei 2019
+## Planning voor release - NTD: 25 april 2019; Productie: 29 april 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Aanleveren netinformatie**:
 - Bij het aanleveren van netinformatie wordt een validatie toegevoegd of een feature label niet de maximale lengte van 200 tekens overschrijdt. (ID 3978)
+- Bij het aanleveren van een ZIP bestand (Documenten, Netinformatie, Voorzorgsmaatregelen) wordt gecontroleerd of ieder bestandsnaam in de ZIP uniek is. (ID 3995)
 
 **Voorzorgsmaatregelen (EV)**:
 - Bij het aanleveren van een EV-vlak in de netinformatie moet de **`netbeheerderNetAanduiding`** in combinatie met **het `thema` van het `Utiliteitsnet`** - bekend zijn bij de aangeleverde voorzorgsmaatregelen. (ID 3546)  \
   Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen). 
 
-**Uitlevering zipbestand**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
-
 **Bug-fixes**:
 - Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
 - In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 24 april Github update:
+
+**Uitlevering zipbestand**:
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
+  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 28 maart 2019; Productie: 2 april 2019

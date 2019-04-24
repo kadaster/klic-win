@@ -1,5 +1,13 @@
 ﻿# Release notes
 
+## Github update 24 april:
+
+**Uitlevering zipbestand**:
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
+  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uileveringen in versie 2.2.
+
+------------------------
+
 ### 2 april 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 28 maart beschikbaar.
 
