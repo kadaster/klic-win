@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 april 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 26 april 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -30,7 +30,17 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - NTD: 25 april 2019; Productie: 29 april 2019
+## Planning voor release - medio mei 2019
+Voor deze release zijn daarom de volgende onderwerpen gepland:
+
+**Actualiseren**:
+- Bij het actualiseren van documenten en netinformatie loopt de validatie soms dusdanig snel dat de processtatus updates elkaar soms inhaalden. Hierdoor werd in de API niet altijd de juiste status weergegeven. Het updaten van statussen is meer robuust gemaakt, waardoor dit niet meer kan gebeuren. (ID 3843, ID 4070, ID 4075, ID 4076)
+
+**Bug-fix**:
+- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - NTD: 25 april 2019; Productie: 1 mei 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Aanleveren netinformatie**:
@@ -42,14 +52,14 @@ Voor deze release zijn de volgende onderwerpen gepland:
   Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen). 
 
 **Bug-fixes**:
-- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
 - In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
+- In de NTD omgeving kon een testmelding vastlopen als er een informatiepolygoon was opgegeven met een ongeldige geometrie. Voor dit optionele veld wordt nu gecontroleerd of de geometrie valide is, als deze is ingevuld. (ID 4051)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 24 april Github update:
 
 **Uitlevering zipbestand**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)  \
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
 
 

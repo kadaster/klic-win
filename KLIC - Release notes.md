@@ -1,9 +1,25 @@
 ﻿# Release notes
 
-## Github update 24 april:
+### 25 april 2019 in NTD (Productie gepland op: 1 mei 2019)
+
+**Aanleveren netinformatie**:
+- Bij het aanleveren van netinformatie wordt een validatie toegevoegd of een feature label niet de maximale lengte van 200 tekens overschrijdt. (ID 3978)
+- Bij het aanleveren van een ZIP bestand (Documenten, Netinformatie, Voorzorgsmaatregelen) wordt gecontroleerd of ieder bestandsnaam in de ZIP uniek is. (ID 3995)
+
+**Voorzorgsmaatregelen (EV)**:
+- Bij het aanleveren van een EV-vlak in de netinformatie moet de **`netbeheerderNetAanduiding`** in combinatie met **het `thema` van het `Utiliteitsnet`** - bekend zijn bij de aangeleverde voorzorgsmaatregelen. (ID 3546)  \
+  Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen). 
+
+**Bug-fixes**:
+- In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
+- In de NTD omgeving kon een testmelding vastlopen als er een informatiepolygoon was opgegeven met een ongeldige geometrie. Voor dit optionele veld wordt nu gecontroleerd of de geometrie valide is, als deze is ingevuld. (ID 4051)
+
+
+------------------------
+### Github update 24 april:
 
 **Uitlevering zipbestand**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)
+- Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)  \
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uileveringen in versie 2.2.
 
 ------------------------
