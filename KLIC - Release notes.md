@@ -1,6 +1,7 @@
 ﻿# Release notes
 
-### 25 april 2019 in NTD (Productie gepland op: 1 mei 2019)
+### 1 mei 2019
+	In de NTD-omgeving zijn de wijzigingen reeds per 25 april beschikbaar.
 
 **Aanleveren netinformatie**:
 - Bij het aanleveren van netinformatie wordt een validatie toegevoegd of een feature label niet de maximale lengte van 200 tekens overschrijdt. (ID 3978)
@@ -16,7 +17,7 @@
 
 
 ------------------------
-### Github update 24 april:
+### Github update 24 april
 
 **Uitlevering zipbestand**:
 - Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)  \
