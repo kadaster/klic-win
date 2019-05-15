@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 april 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 15 mei 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -29,15 +29,25 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 **Leverings email**:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 
+** Het BIL zipbestand**:
+- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de Klic-uitlevering.
+- Binnenkort wordt daarvoor gepubliceerd:
+  - uitgewerkte voorbeelden van uitleveringen
+
 --------------------------------------------------------------------------------------
-## Planning voor release - medio mei 2019
+## Planning voor release - 21 mei 2019
 Voor deze release zijn daarom de volgende onderwerpen gepland:
 
 **Actualiseren**:
 - Bij het actualiseren van documenten en netinformatie loopt de validatie soms dusdanig snel dat de processtatus updates elkaar soms inhaalden. Hierdoor werd in de API niet altijd de juiste status weergegeven. Het updaten van statussen is meer robuust gemaakt, waardoor dit niet meer kan gebeuren. (ID 3843, ID 4070, ID 4075, ID 4076)
+- Performance verbetering bij het controleren of er vanuit de netinformatie naar bestaande documenten wordt verwezen. (ID 3979)
 
 **Bug-fix**:
-- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit wordt opgelost. (ID 4016)
+- Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit is opgelost. (ID 4016)
+- De performance voor het ophalen van actualiseren geschiedenis is verbeterd. Voorheen kon dit soms zo lang duren dat een timeout optrad. Dit is opgelost. (ID 4166)
+
+**Publicatie**:
+- Er komt een BETA-versie beschikbaar van de online Kadaster KLIC-viewer.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 25 april 2019; Productie: 1 mei 2019
