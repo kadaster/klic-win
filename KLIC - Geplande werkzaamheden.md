@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 mei 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 17 mei 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
