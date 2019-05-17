@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 15 mei 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 19 mei 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -36,7 +36,7 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 21 mei 2019
-Voor deze release zijn daarom de volgende onderwerpen gepland:
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren**:
 - Bij het actualiseren van documenten en netinformatie loopt de validatie soms dusdanig snel dat de processtatus updates elkaar soms inhaalden. Hierdoor werd in de API niet altijd de juiste status weergegeven. Het updaten van statussen is meer robuust gemaakt, waardoor dit niet meer kan gebeuren. (ID 3843, ID 4070, ID 4075, ID 4076)
@@ -46,8 +46,13 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 - Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit is opgelost. (ID 4016)
 - De performance voor het ophalen van actualiseren geschiedenis is verbeterd. Voorheen kon dit soms zo lang duren dat een timeout optrad. Dit is opgelost. (ID 4166)
 
-**Publicatie**:
-- Er komt een BETA-versie beschikbaar van de online Kadaster KLIC-viewer.
+--------------------------------------------------------------------------------------
+## Planning voor release - 17 mei 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Publicatie op Github**:
+- Er komt een BETA-versie beschikbaar van de online Kadaster KLIC-viewer.  \
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 25 april 2019; Productie: 1 mei 2019

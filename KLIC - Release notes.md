@@ -1,5 +1,13 @@
 ﻿# Release notes
 
+------------------------
+### Github update 17 mei
+
+**BETA-versie online Kadaster KLIC-viewer**:
+- Er is een BETA-versie beschikbaar van de online Kadaster KLIC-viewer.  \
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
+
+------------------------
 ### 1 mei 2019
 	In de NTD-omgeving zijn de wijzigingen reeds per 25 april beschikbaar.
 
