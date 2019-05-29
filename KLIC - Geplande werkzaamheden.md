@@ -35,7 +35,7 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
   - uitgewerkte voorbeelden van uitleveringen
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 21 mei 2019
+## Planning voor release - 3 juni 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren**:
