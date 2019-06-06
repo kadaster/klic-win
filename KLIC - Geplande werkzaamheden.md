@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 17 mei 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 6 juni 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -23,19 +23,25 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
 **Uitlevering zipbestand**:
 - Het zipbestand met de Klic-uitlevering wordt aangepast (ID 3849):
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd.
-- Binnenkort wordt daarvoor gepubliceerd:
-  - uitgewerkte voorbeelden van uitleveringen
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
 **Leverings email**:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 
-** Het BIL zipbestand**:
-- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de Klic-uitlevering.
+**Het BIL zipbestand**:
+- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
 - Binnenkort wordt daarvoor gepubliceerd:
   - uitgewerkte voorbeelden van uitleveringen
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 21 mei 2019
+## Planning voor release - 11 juni 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Uitlevering zipbestand**:
+- Spaties in bestandsnamen van bijlagen in de uitlevering worden vanaf nu vervangen door een '+' teken, waardoor deze ook in de KLIC-viewer te openen zijn. (ID 4247)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 3 juni 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren**:

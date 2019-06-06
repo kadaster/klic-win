@@ -1,8 +1,7 @@
 ﻿# Release notes
 
 ------------------------
-### 21 mei 2019
-Voor deze release zijn de volgende onderwerpen gepland:
+### 3 juni 2019
 
 **Actualiseren**:
 - Bij het actualiseren van documenten en netinformatie loopt de validatie soms dusdanig snel dat de processtatus updates elkaar soms inhaalden. Hierdoor werd in de API niet altijd de juiste status weergegeven. Het updaten van statussen is meer robuust gemaakt, waardoor dit niet meer kan gebeuren. (ID 3843, ID 4070, ID 4075, ID 4076)
