@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 juni 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 12 juni 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -34,7 +34,7 @@ Voor deze release zijn daarom de volgende onderwerpen gepland:
   - uitgewerkte voorbeelden van uitleveringen
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 11 juni 2019
+## Planning voor release - 24 juni 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Uitlevering zipbestand**:
