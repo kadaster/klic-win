@@ -1,4 +1,25 @@
-﻿# Geplande werkzaamheden (bijgewerkt 12 juni 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 13 juni 2019)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 1 november 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Nieuwe Kadaster KLIC-viewer**:
+- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
+  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
+  - met een BGT-achtergrondkaart in PNG-formaat
+  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/)
+
+**Uitlevering zipbestand**:
+- Het zipbestand met de KLIC-uitlevering wordt aangepast (ID 3849):
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd.
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+**Het BIL zipbestand**:
+- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
+- Binnenkort wordt daarvoor gepubliceerd:
+  - uitgewerkte voorbeelden van uitleveringen
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - september 2019
@@ -9,27 +30,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - de pilot zal met ketenpartners worden georganiseerd
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
---------------------------------------------------------------------------------------
-## Planning voor release - 1 juli 2019
-Per 1 juli 2019 zijn de oude Klic-standaarden niet meer geldig.  \
-Voor deze release zijn daarom de volgende onderwerpen gepland:
-
-**Nieuwe Kadaster KLIC-viewer**:
-- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
-  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
-  - met een BGT-achtergrondkaart in PNG-formaat
-  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
-
-**Uitlevering zipbestand**:
-- Het zipbestand met de Klic-uitlevering wordt aangepast (ID 3849):
-  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd.
-- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
-
 **Leverings email**:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
-
-**Het BIL zipbestand**:
-- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
 - Binnenkort wordt daarvoor gepubliceerd:
   - uitgewerkte voorbeelden van uitleveringen
 
