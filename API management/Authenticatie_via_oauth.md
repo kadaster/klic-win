@@ -62,16 +62,23 @@ Ga naar: https://authorization.kadaster.nl/auth/oauth/v2/authorize?response_type
 
 <img src="images/login.png" />
 
+Na het inloggen verschijnt onderstaand scherm:
+
+<img src="images/consent.png" />
+
+Klik op **GRANT** als de gegevens kloppen.
+
+
 De gebruiker wordt daarna doorgestuurd naar de redirect_uri. Uit de request parameters kan de authorization code gehaald worden.
 Bijvoorbeeld:    
-http://localhost:14057/authorize/?code=42283687-7c09-4018-8a7a-9e9533366dbb&scope=klic.ntd.centraal  
+http://localhost:14057/authorize/?code=42283687-7c09-4018-8a7a-9e9533366dbb 
 Deze code is 30 seconden geldig, haal daarom direct daarna een access code op.  
 
 #### Access token opvragen
 
 Met het client id, client secret en authorization token kunnen we een access token opvragen.  
 **request (POST)**    
-https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&client_secret=[client_secret]&grant_type=authorization_code&code=[authorisation token]&redirect_uri=[redirect url]  
+https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&client_secret=[client_secret]&grant_type=authorization_code&code=[authorisation_token]&redirect_uri=[redirect_url]  
 **response**  
 ```json
 {
@@ -96,7 +103,7 @@ https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerde
 #### Access token verversen
 Het access token is 1 uur geldig. Als het access token verlopen is dan kan een nieuw access token en refresh token opgevraagd worden.  
 **request (POST)**    
-https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&client_secret=[client_secret]&grant_type=refresh_token&refresh_token=[refresh token]  
+https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&client_secret=[client_secret]&grant_type=refresh_token&refresh_token=[refresh_token]  
 **response**
 ```json
 {
@@ -109,4 +116,4 @@ https://authorization.kadaster.nl/auth/oauth/v2/token?client_id=[client_id]&clie
 ```
 ### Voorbeeld client applicatie
 
-Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](./Voorbeeldapllicatie_oauth.net/KlicOauthExample).
+Er is een voorbeeld client applicatie in c# beschikbaar op [KlicOauthExample](/API%20management/Voorbeelden/KlicOauthExample).
