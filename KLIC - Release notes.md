@@ -1,6 +1,12 @@
 ﻿# Release notes
 
 ------------------------
+### 24 juni 2019
+
+**Uitlevering zipbestand**:
+- Spaties in bestandsnamen van bijlagen in de uitlevering worden vanaf nu vervangen door een '+' teken, waardoor deze ook in de KLIC-viewer te openen zijn. (ID 4247)
+
+------------------------
 ### 3 juni 2019
 
 **Actualiseren**:

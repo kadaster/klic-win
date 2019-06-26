@@ -1,15 +1,8 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 juni 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 26 juni 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 november 2019
 Voor deze release zijn de volgende onderwerpen gepland:
-
-**Nieuwe Kadaster KLIC-viewer**:
-- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
-  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
-  - met een BGT-achtergrondkaart in PNG-formaat
-  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
-- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/)
 
 **Uitlevering zipbestand**:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast (ID 3849):
@@ -34,6 +27,23 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - De inhoud van de leveringsmail wordt aangepast. (ID 3897)
 - Binnenkort wordt daarvoor gepubliceerd:
   - uitgewerkte voorbeelden van uitleveringen
+
+**Nieuwe Kadaster KLIC-viewer**:
+- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
+  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
+  - met een BGT-achtergrondkaart in PNG-formaat
+  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - begin juli 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Publicatie op Github**:
+- Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer. 
+
+**Bugfix**:
+- Er traden problemen op bij zoeken en verwijderen van belangen met een apostrof in de omschrijving. Deze zijn verholpen. (ID 4042)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juli 2019
