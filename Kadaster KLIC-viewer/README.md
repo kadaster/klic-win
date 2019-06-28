@@ -22,7 +22,8 @@ De volgende functies zijn beschikbaar in deze BETA-versie:
   - de leveringsbrief en de gelaagde PDF uitprinten
   - de door de netbeheerder geleverde bijlagen uitprinten
   - met de functie “Kaartselectie” een gebied aangeven waarvan de kaartlagen op een aangegeven schaal en papierformaat moeten worden uitgeprint.  \
-  De uitvoer bestaat uit een overzichtskaart, een verzamelkaart en een themakaart per netbeheerder/thema.
+  De uitvoer bestaat uit een overzichtskaart, een verzamelkaart en een themakaart per netbeheerder/thema.  \
+  Let wel: het opbouwen van deze pdf is erg gevoelig voor verstoringen of muisbewegingen. Dit wordt momenteel robuuster gemaakt.
 * Met behulp van een klik op de kaart kunt u attribuutinformatie van de geraakte kabel- en leidingobjecten opvragen (op basis van het Informatiemodel Kabels en Leidingen – IMKL).
 
 De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-viewer (BETA)](https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering).
