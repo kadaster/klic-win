@@ -1,6 +1,43 @@
 ﻿# Release notes
 
 ------------------------
+### 2 juli 2019
+
+**Publicatie op Github**:
+- Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer. 
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
+
+**Bugfix**:
+- Er traden problemen op bij zoeken en verwijderen van belangen met een apostrof in de omschrijving. Deze zijn verholpen. (ID 4042)
+
+**De autorisatie  methode wordt geüpdatet**:
+- Het inlog scherm zier er anders uit. Na het opgeven van je wachtwoord, verschijnt een scherm om de autorisatie te bevestigen. Hierop staan de scopes die je hebt aangevraagd en waarvoor je autorisatie hebt.
+- Bij het ophalen van een token via `grant_type= authorization_code` en `grant_type= refresh_token`:
+  - Als de gebruiker doorgestuurd is naar de  redirect_uri dan worden de scopes waarvoor een gebruiker geautoriseerd is alleen nog maar teruggegeven in de body van de response; en niet meer in de URL parameters 
+- Bij het ophalen van een token via `grant_type=password`:
+  - De parameters `username`, `password`, `client_id`, `client_secret`, `grant_type` en `scope` kunnen niet meer opgegeven worden in de URL parameters, maar alleen nog maar in de body.
+
+- Sommige responses voor foutsituaties zijn gewijzigd:
+
+|Foutsituatie                                                                |Tot 2 juli 2019                                                                                                                                                                                                                |Vanaf 2 juli 2019                                                                                                                                                         |
+|--------------------------------------------------------------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Ophalen van token waarbij er 1 niet bestaande scope is meegegeven           |HTTP 403 <br> `{`<br> `error: "invalid request",`<br> `error_description: "The requested SCOPE is not valid"`<br> `}`                                                                                                          |HTTP 400 <br> `{`<br> `error: "invalid_scope",`<br> `error_description: "No registered scope value for this client has been requested"`<br> `}`                           |
+|Ophalen van token waarbij er meerdere niet bestaande scopes zijn meegegeven |HTTP 200 <br> `{`<br> `access_token: " eb7929c4-4259-442c-931f-14fba228a6aa",`<br> `token_type: "Bearer",` <br> `expires_in: 3600,`<br> `refresh_token: " 29786b93-24ca-4e91-9c8c-b87715f48ba9",` <br> `scope: "oob"` <br> `}` |HTTP 400 <br> `{`<br> `error: "invalid_scope",`<br> `error_description: "No registered scope value for this client has been requested"`<br> `}`                           |
+|Aanroepen API's met een ongeldige token                                     |HTTP 401 <br> `{`<br> `error: "invalid_request",`<br> `error_description: "Validation error"`<br> `}`                                                                                                                          |HTTP 401 <br> `{`<br> `error: "invalid_token",`<br> `error_description: "The access token provided is expired, revoked, malformed, or invalid for other reasons"`<br> `}` |
+|Aanroepen API's met een verlopen token                                      |HTTP 400 <br> `{`<br> `error: "Token retrieval error",`<br> `error_description: "The requested token could not be retrieved"`<br> `}`                                                                                          |HTTP 401 <br> `{`<br> `error: "invalid_token",`<br> `error_description: "The access token provided is expired, revoked, malformed, or invalid for other reasons"`<br> `}` |
+|Ophalen token met een verkeerd userid en/of password.                       |HTTP 400 <br> `{`<br> `error: "invalid_grant",`<br> `error_description: "Resource Owner authentication failed"`<br> `}`                                                                                                        |HTTP 401 <br> `{`<br> `error: "invalid_request",`<br> `error_description: "The resource owner could not be authenticated due to missing or invalid credentials"`<br> `}`  |
+
+Zie [deze link op GitHub](API%20management/Authenticatie_via_oauth.md) voor een beschrijving van de Authenticatie via OAuth voor de KLIC API's. 
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - NTD: 20 juni 2019; Productie: 24 juni 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Uitlevering zipbestand**:
+- Spaties in bestandsnamen van bijlagen in de uitlevering worden vanaf nu vervangen door een '+' teken, waardoor deze ook in de KLIC-viewer te openen zijn. (ID 4247)
+
+------------------------
 ### 24 juni 2019
 
 **Uitlevering zipbestand**:

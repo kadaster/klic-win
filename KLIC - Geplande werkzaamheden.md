@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 juni 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 3 juli 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 november 2019
@@ -36,18 +36,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin juli 2019
+## Planning voor release - 2 juli 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Publicatie op Github**:
 - Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer. 
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 **Bugfix**:
 - Er traden problemen op bij zoeken en verwijderen van belangen met een apostrof in de omschrijving. Deze zijn verholpen. (ID 4042)
-
---------------------------------------------------------------------------------------
-## Planning voor release - 2 juli 2019
-Voor deze release zijn de volgende onderwerpen gepland:
 
 **De autorisatie  methode wordt geüpdatet**:
 - Het inlog scherm zier er anders uit. Na het opgeven van je wachtwoord, verschijnt een scherm om de autorisatie te bevestigen. Hierop staan de scopes die je hebt aangevraagd en waarvoor je autorisatie hebt.
