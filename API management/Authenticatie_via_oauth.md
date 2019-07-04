@@ -79,7 +79,7 @@ Deze code is 30 seconden geldig, haal daarom direct daarna een access code op.
 Met het client id, client secret en authorization token kunnen we een access token opvragen.  
 **request (POST)**    
 ***URL***: https://authorization.kadaster.nl/auth/oauth/v2/token  
-***Header***: Geef in de header als ContentType `application/x-www-form-urlencoded` mee. 
+***Header***: Geef in de header als ContentType `application/x-www-form-urlencoded` mee.  
 ***Body***: De parameters moeten in de body meegegeven worden. Zie voorbeeld:
 ```
 client_id=[client_id]&client_secret=[client_secret]&grant_type=authorization_code&code=[authorisation_token]&redirect_uri=[redirect_url]
@@ -110,7 +110,7 @@ https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerde
 Het access token is 1 uur geldig. Als het access token verlopen is dan kan een nieuw access token en refresh token opgevraagd worden.  
 **request (POST)**    
 ***URL***: https://authorization.kadaster.nl/auth/oauth/v2/token  
-***Header***: Geef in de header als ContentType `application/x-www-form-urlencoded` mee. 
+***Header***: Geef in de header als ContentType `application/x-www-form-urlencoded` mee.  
 ***Body***: De parameters moeten in de body meegegeven worden. Zie voorbeeld:
 ```
 client_id=[client_id]&client_secret=[client_secret]&grant_type=refresh_token&refresh_token=[refresh_token]  
