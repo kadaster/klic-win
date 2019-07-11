@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 3 juli 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 11 juli 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 november 2019
@@ -24,16 +24,23 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 **Leverings email**:
-- De inhoud van de leveringsmail wordt aangepast. (ID 3897)
-- Binnenkort wordt daarvoor gepubliceerd:
-  - uitgewerkte voorbeelden van uitleveringen
+- De inhoud van de leveringsemail wordt aangepast. (ID 3897)
+- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20september%202019).pdf).
 
 **Nieuwe Kadaster KLIC-viewer**:
 - Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
   - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
   - met een BGT-achtergrondkaart in PNG-formaat
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
-- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 11 juli 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Publicatie op Github**:
+- Er is een voorbeeld gepubliceerd van de leveringsemail zoals die er per september uit komt te zien.  \
+  Zie [deze link op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20september%202019).pdf).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juli 2019

@@ -1,4 +1,10 @@
 ﻿# Release notes
+------------------------
+### 11 juli 2019
+
+**Publicatie op Github**:
+- Er is een voorbeeld gepubliceerd van de leveringsemail zoals die er per september uit komt te zien.  \
+  Zie [deze link op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20september%202019).pdf).
 
 ------------------------
 ### 2 juli 2019
