@@ -26,7 +26,7 @@ De volgende functies zijn beschikbaar in deze BETA-versie:
   Let wel: het opbouwen van deze pdf is erg gevoelig voor verstoringen of muisbewegingen. Dit wordt momenteel robuuster gemaakt.
 * Met behulp van een klik op de kaart kunt u attribuutinformatie van de geraakte kabel- en leidingobjecten opvragen (op basis van het Informatiemodel Kabels en Leidingen – IMKL).
 
-De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-viewer (BETA)](https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering).
+De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-viewer (BETA)](https://www.acceptatie.klicviewer.nl/klic-viewer/).
 
 Een levering van gebiedsinformatie is te openen door een zogenaamde GUID in te vullen bij de KLIC melding code.  \
 Kopieer hiervoor één van onderstaande GUID's:
