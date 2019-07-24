@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 11 juli 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 24 juli 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 november 2019
@@ -33,6 +33,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - met een BGT-achtergrondkaart in PNG-formaat
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
+
+--------------------------------------------------------------------------------------
+## Planning voor NTD onderhoud - 25 juli 2019
+
+
+**Onderhoud KLIC Netbeheerder Testdienst**:
+- Onbeschikbaarheid NTD verwacht van 10.00 tot 12.00.
+- Alle test data wordt gewist  \
+  Zie de [storingen en onderhoud website van het Kadaster](https://zakelijk.kadaster.nl/-/onderhoud-klic-netbeheerder-testdienst-nt-1) voor meer details.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 11 juli 2019
