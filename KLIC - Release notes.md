@@ -1,5 +1,14 @@
 ﻿# Release notes
 ------------------------
+### 28 augustus 2019
+
+**Publicatie op Github**:
+- Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende Beheerders Informatie Leveringen. (ID 3849)  \
+  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
+- Update van de BETA-versie van de Kadaster KLIC-viewer. 
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
+
+------------------------
 ### 11 juli 2019
 
 **Publicatie op Github**:

@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 juli 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 28 augustus 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 november 2019
@@ -33,6 +33,16 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - met een BGT-achtergrondkaart in PNG-formaat
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 28 augustus 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Publicatie op Github**:
+- Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende Beheerders Informatie Leveringen. (ID 3849)  \
+  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
+- Update van de BETA-versie van de Kadaster KLIC-viewer. 
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor NTD onderhoud - 25 juli 2019

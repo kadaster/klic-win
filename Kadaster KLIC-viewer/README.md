@@ -15,15 +15,13 @@ Zorg dat u tijdig een passende viewer gebruiksklaar heeft.
 
 Er is een BETA-versie beschikbaar van de online Kadaster KLIC-viewer waarin een aantal leveringen zoals die **_na_** de overgangsperiode geleverd worden, te bekijken zijn.  \
 De volgende functies zijn beschikbaar in deze BETA-versie:
-* Met behulp van “Menu” kunt u een KLIC-melding openen.
-* Met behulp van “Weergave” kunt u de netinformatie per netbeheerder/thema inzien en Annotatie, Maatvoering en GeselecteerdGebied aan- en uitzetten.
-* Met behulp van “Docs” kunt u de leveringsbrief, de gelaagde PDF en de door de netbeheerder geleverde bijlagen inzien.
+* Met behulp van “Menu” kunt u een (nieuwe) KLIC-melding openen.
+* Met behulp van “Weergave” kunt u de netinformatie per netbeheerder/thema inzien en Annotatie, Maatvoering, EigenTopo en GeselecteerdGebied aan- en uitzetten.
+* Met behulp van “Docs” kunt u de leveringsbrief en de door de netbeheerder geleverde bijlagen inzien.
+  - Printen op basis van selectie van bijlagen of printen van alle bijlagen.
+* Met behulp van “Meten” kunt u afstanden meten.
 * Met behulp van “Printen” kunt u
-  - de leveringsbrief en de gelaagde PDF uitprinten
-  - de door de netbeheerder geleverde bijlagen uitprinten
-  - met de functie “Kaartselectie” een gebied aangeven waarvan de kaartlagen op een aangegeven schaal en papierformaat moeten worden uitgeprint.  \
-  De uitvoer bestaat uit een overzichtskaart, een verzamelkaart en een themakaart per netbeheerder/thema.  \
-  Let wel: het opbouwen van deze pdf is erg gevoelig voor verstoringen of muisbewegingen. Dit wordt momenteel robuuster gemaakt.
+  - met de functie “Kaartselectie” een gebied aangeven waarvan de kaartlagen op een aangegeven schaal en papierformaat moeten worden uitgeprint. De uitvoer bestaat uit een overzichtskaart, een verzamelkaart en een themakaart per netbeheerder/thema. 
 * Met behulp van een klik op de kaart kunt u attribuutinformatie van de geraakte kabel- en leidingobjecten opvragen (op basis van het Informatiemodel Kabels en Leidingen – IMKL).
 
 De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-viewer (BETA)](https://www.acceptatie.klicviewer.nl/klic-viewer/).
@@ -36,9 +34,16 @@ Kopieer hiervoor één van onderstaande GUID's:
 Mogelijk geeft uw browser een melding over het ontbreken van een beveiligingscertificaat. U kunt dan kiezen voor de optie “Doorgaan naar deze website”.  \
 Voor een goede werking van de demo van de BETA-versie adviseren we het gebruik van Chrome als browser.
 
-Binnenkort komt gefaseerd beschikbaar:
-* Meten functionaliteit, om afstanden te meten.
-* Printen op basis van selectie van bijlagen of printen van alle bijlagen.
-* Een Windows executable voor de installatie op een desktop.  
+
+De BETA-versie van de Windows variant van de Kadaster KLIC-viewer is op te vragen door een e-mail naar klic@kadaster.nl te sturen. 
+
+
+Een levering van gebiedsinformatie is te openen door een zogenaamde GUID in te vullen bij de KLIC melding code.  \
+Kopieer hiervoor één van onderstaande GUID's:
+* voorbeeld levering 3:
+https://service10.acceptatie.kadaster.nl/gds2/download/public/8ae6bea9-229d-497e-a54a-5f0768cbe621
+* voorbeeld levering 4: https://service10.acceptatie.kadaster.nl/gds2/download/public/80c8d3dc-9cf8-4604-9c72-ff2d43da6ecc
+Na het kopiëren wordt de levering gedownloaded, uitgepakt en opgebouwd.
+
 
 U kunt de ontwikkelingen van de Kadaster KLIC-viewer via de [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) volgen op GitHub.
