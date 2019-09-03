@@ -7,3 +7,10 @@ Zie toelichtende informatie in de map [klic-win/Uitleveren](../../../../tree/mas
 
 In deze map staan 11 voorbeelden gepubliceerd die geautomatiseerd samengesteld zijn op de testomgeving van het Kadaster. Van de leveringen zijn zowel het zipbestand als de Ontvangstbevestiging gepubliceerd.  \
 Grote voorbeeldbestanden kunnen opgevraagd worden door een email te sturen naar klic@kadaster.nl.
+
+
+In de subfolders staan voorbeelden waarvan het volgende is gepubliceerd:
+- Ontvangsbevestigingsemail
+- Leveringsemail
+- Leveringsbestand (ZIP)
+- De bijbehorende Beheerders Informatie Leveringen (ZIP)

@@ -1,27 +1,31 @@
-﻿# Geplande werkzaamheden (bijgewerkt 28 augustus 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 3 september 2019)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 1 november 2019
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**Uitlevering zipbestand**:
-- Het zipbestand met de KLIC-uitlevering wordt aangepast (ID 3849):
-  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd.
-- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
-
-**Het BIL zipbestand**:
-- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
-- Binnenkort wordt daarvoor gepubliceerd:
-  - uitgewerkte voorbeelden van uitleveringen
-
---------------------------------------------------------------------------------------
-## Planning voor release - september 2019
-Voor deze release zijn de volgende onderwerpen gepland:
+## Planning voor release - 2020
 
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 1 november 2019
+Voor deze productie release zijn de volgende onderwerpen gepland:
+
+**Uitlevering zipbestand**:
+- Het zipbestand met de KLIC-uitlevering wordt aangepast in productie (ID 3849):
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+**Het BIL zipbestand**:
+- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+  - De release voor NTD is gepland op 13 september.
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - september 2019
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Leverings email**:
 - De inhoud van de leveringsemail wordt aangepast. (ID 3897)
@@ -34,6 +38,18 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
 
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 12 september 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bug-fixes**:
+- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet geptached is. (ID 4531)
+- Extra validaties toegevoegd om beter om te gaan met dubbele of te late netbeheerder levering (Centrale Netbeheerders) of het te laat ophalen van het BIL zip-bestand. (ID 4641, ID 4449)
+
+**NTD**:
+- Ter voorbereiding op de aanpassing van 1 november wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232)
+
 --------------------------------------------------------------------------------------
 ## Planning voor release - 28 augustus 2019
 Voor deze release zijn de volgende onderwerpen gepland:
@@ -41,7 +57,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Publicatie op Github**:
 - Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende Beheerders Informatie Leveringen. (ID 3849)  \
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
-- Update van de BETA-versie van de Kadaster KLIC-viewer. 
+- Update van de BETA-versie van de Kadaster KLIC-viewer (Online en Windows).  \
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 --------------------------------------------------------------------------------------
@@ -69,7 +85,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer. 
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
-**Bugfix**:
+**Bug-fix**:
 - Er traden problemen op bij zoeken en verwijderen van belangen met een apostrof in de omschrijving. Deze zijn verholpen. (ID 4042)
 
 **De autorisatie  methode wordt geüpdatet**:
