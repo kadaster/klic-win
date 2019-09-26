@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 september 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 26 september 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
@@ -16,7 +16,7 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 
 **Leverings email**:
 - De inhoud van de leveringsemail wordt aangepast. (ID 3897)
-- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20september%202019).pdf).
+- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
 
 **Nieuwe Kadaster KLIC-viewer**:
 - Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
@@ -43,7 +43,7 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes / Performance**:
-- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet geptached is. (ID 4531)
+- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet gepatched is. (ID 4531)
 - Performanceverbetering voor de Serviceprovider bij het ophalen van de lijst waarvoor de Serviceprovider geautoriseerd is (bijvoorbeeld Belangenbeheer). (ID 3605)
 - Achtergrondkaart bij het controleren van netinformatie (actualiseren) is hersteld. (ID 4809)
 
