@@ -45,7 +45,8 @@ Een levering van gebiedsinformatie is op twee manieren te openen.
 Kopieer hiervoor één van onderstaande GUID's:
 * voorbeeld levering 1: https://service10.acceptatie.kadaster.nl/gds2/download/public/ca075438-1d35-4a51-86b3-db36d0534635 
 * voorbeeld levering 2: https://service10.acceptatie.kadaster.nl/gds2/download/public/22a98394-0d05-4a4c-9b69-942b12021a3c
-Na het kopiëren wordt de levering gedownloaded, uitgepakt en opgebouwd.
+
+   Na het kopiëren wordt de levering gedownloaded, uitgepakt en opgebouwd.
 
 2) Lokaal een KLIC-levering openen met behulp van Map Selecteren.
 Gebruik hiervoor één van onderstaande voorbeeld KLIC-levering mappen, nadat u deze heeft uitgepakt.
