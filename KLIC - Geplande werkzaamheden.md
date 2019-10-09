@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 september 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 9 oktober 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
@@ -7,6 +7,15 @@
 - Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
   - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - januari 2020
+
+**KvkNummer (Kamer van Koophandel)**:
+- Het wordt mogelijk om een KvkNummer van de aanvrager en het KvkNummer van de opdrachtgever (in geval van Graafmelding) op te geven.
+- Het KvkNummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, GI.xml en de GebiedsinformatieAanvragen API.
+- Er worden voorbeeldbestanden op de GitHub gepubliceerd.
+- De aanpassingen worden eerst in NTD beschikbaar gesteld.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio december 2019
@@ -37,15 +46,25 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 - Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
+--------------------------------------------------------------------------------------
+## Planning voor release - begin november 2019
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**NTD**:
+- In de NTD is het niet meer mogelijk om een klasieke testmelding (BMKL 1.2) te doen. (ID 4418)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin oktober 2019
+## Planning voor release - 7 oktober 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes / Performance**:
 - Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet gepatched is. (ID 4531)
 - Performanceverbetering voor de Serviceprovider bij het ophalen van de lijst waarvoor de Serviceprovider geautoriseerd is (bijvoorbeeld Belangenbeheer). (ID 3605)
 - Achtergrondkaart bij het controleren van netinformatie (actualiseren) is hersteld. (ID 4809)
+
+**Publicatie op Github**:
+- Update van de BETA-versie van de Kadaster KLIC-viewer (Online en Windows).  \
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 28 augustus 2019

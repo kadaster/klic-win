@@ -1,5 +1,17 @@
 ﻿# Release notes
 ------------------------
+### 7 oktober 2019
+
+**Bug-fixes / Performance**:
+- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet gepatched is. (ID 4531)
+- Performanceverbetering voor de Serviceprovider bij het ophalen van de lijst waarvoor de Serviceprovider geautoriseerd is (bijvoorbeeld Belangenbeheer). (ID 3605)
+- Achtergrondkaart bij het controleren van netinformatie (actualiseren) is hersteld. (ID 4809)
+
+**Publicatie op Github**:
+- Update van de BETA-versie van de Kadaster KLIC-viewer (Online en Windows).  \
+  Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
+
+------------------------
 ### 28 augustus 2019
 
 **Publicatie op Github**:
@@ -7,6 +19,12 @@
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
 - Update van de BETA-versie van de Kadaster KLIC-viewer. 
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
+
+------------------------
+### 26 augustus 2019
+
+**Bug-fix**:
+- Extra validaties toegevoegd om beter om te gaan met dubbele of te late netbeheerder levering (Centrale Netbeheerders) of het te laat ophalen van het BIL zip-bestand. (ID 4641, ID 4449)
 
 ------------------------
 ### 11 juli 2019
