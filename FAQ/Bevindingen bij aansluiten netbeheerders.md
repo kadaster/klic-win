@@ -1,8 +1,8 @@
 ﻿**Bevindingen bij aansluiten netbeheerders**
 
-Sinds het begin van 2019 stappen netbeheerders geleidelijk over naar een berichtuitwisseling die is gebaseerd op het nieuwe informatiemodel IMKL1.2 en berichtenprotocol BMKL 2.0.  \
+Sinds het begin van 2019 zijn netbeheerders geleidelijk overgestapt naar een berichtuitwisseling die is gebaseerd op het nieuwe informatiemodel IMKL1.2 en berichtenprotocol BMKL 2.0.  \
 Daarbij zijn er door ons fouten en verbeterpunten gevonden die we graag willen delen.  \
-Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, soms aangevuld met aanbevelingen.
+Hieronder geven we een overzicht van belangrijke bevindingen, soms aangevuld met aanbevelingen.
 
 - [Aansluitproces van netbeheerders](#aansluitproces-van-netbeheerders)
   * [Autoriseren serviceprovider](#autoriseren-serviceprovider)
@@ -19,6 +19,11 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, s
   * [Nauwkeurigheid coördinaten (3 decimalen)](#nauwkeurigheid-coordinaten-3-decimalen)
   * [Onnodig gebruik namespace-afkortingen binnen IMKL-features](#onnodig-gebruik-namespace-afkortingen-binnen-imkl-features)
   * [Niet verplichte velden met "lege" waarde](#niet-verplichte-velden-met-lege-waarde)
+- [Beperken omvang xml-bestanden (netinformatie of beheerdersinformatie)](#beperken-omvang-xml-bestanden-netinformatie-of-beheerdersinformatie)
+  * [Gebruik standaard namespace-afkortingen](#gebruik-standaard-namespace-afkortingen)
+  * [Efficienter gebruik _Maatvoering_- en _Annotatie_-objecten](#efficienter-gebruik-maatvoering--en-annotatie-objecten)
+    - [Voorkom onnodig gebruik van objecten](#voorkom-onnodig-gebruik-van-objecten)
+    - [Specificeer een pijlpunt niet m.b.v. lijnstukken](#specificeer-een-pijlpunt-niet-mbv-lijnstukken)
 - [Clippen](#clippen)
   * [Clippen door decentrale netbeheerder](#clippen-door-decentrale-netbeheerder)
   * [Splitsen _UtilityLink_](#splitsen-utilitylink)
@@ -31,6 +36,10 @@ Hieronder geven we een overzicht van de belangrijkste bevindingen tot nog toe, s
   * [Ontbreken van "echte" waarden](#ontbreken-van-echte-waarden)
 - [Spitsvondigheden...](#spitsvondigheden)
   * [Gebruik _ExtraGeometrie_](#gebruik-extrageometrie)
+  
+- [Bijlagen](#bijlagen)
+  * [Bijlage A - Gebruik standaard namespace-afkortingen](#bijlage-a---gebruik-standaard-namespace-afkortingen)
+  * [Bijlage B - Voorbeeld met juist gebruik van maatvoering](#bijlage-b---voorbeeld-met-juist-gebruik-van-maatvoering)
   
 ---------------------------------------------------------
 ## Aansluitproces van netbeheerders
@@ -186,9 +195,12 @@ maar
 
 ### Onnodig gebruik namespace-afkortingen binnen IMKL-features
 In de documentatie zijn een aantal werkafspraken gemaakt t.a.v. het gebruik van namespaces en declaraties.  \
-Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Namespaces en declaraties](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#namespaces-en-declaraties).
+Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Namespaces en declaraties](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#namespaces-en-declaraties).  \
+Daarbij zijn ook afspraken gemaakt over standaard namespace afkortingen.
 
-Daarbij zijn ook afspraken gemaakt over standaard namespace afkortingen.  \
+Het gebruik van deze standaard namespace-afkortingen geeft meerdere voordelen.  \
+In [Bijlage A - Gebruik standaard namespace-afkortingen](#bijlage-a---gebruik-standaard-namespace-afkortingen) wordt inzichtelijk gemaakt dat het toepassen hiervan ook een aanzienlijke beperking oplevert van de grootte van de XML-bestanden!
+
 Als bij aanleveringen van een feature-collection aanvullende namespace afkortingen worden gebruikt, worden deze in de verwerking door de centrale voorziening aan elk feature uit de collection toegevoegd.
 Het is immers mogelijk dat binnen dit feature gebruik wordt gemaakt van deze namespace afkorting.  \
 Daarmee wordt elke feature "opgeblazen" met alle extra genoemde namespace-afkortingen, ongeacht het feit of ze daadwerkelijk worden gebruikt.
@@ -229,7 +241,7 @@ Voorbeeld niet-gebruikte namespaces:
 ```
 
 Het wordt ten sterkste aanbevolen om **GEEN** extra namespace-definiëring te gebruiken als hiervan binnen de feature-collection geen gebruik wordt gemaakt.  \
-Het verwijderen van niet gebruikte namespaces leidt niet tot een invalide levering (geen XSD-validatiefouten), verhoogt de leesbaarheid en beperkt de omvang van de levering.
+Het verwijderen van niet gebruikte namespaces leidt niet tot een invalide levering (geen XSD-validatiefouten), maar verhoogt wél de leesbaarheid en beperkt de omvang van de levering.
 
 Als er binnen een feature wél gebruikt wordt gemaakt van een namespace die niet in de standaard lijst staat, kan deze bij dit feature worden gedeclareerd.  \
 Zie hiervoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Definiering namespaces op dieper niveau](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#definiering-namespaces-op-dieper-niveau).
@@ -263,6 +275,54 @@ Voorbeeld:
     ...
 </imkl:Appurtenance>
 ```
+
+---------------------------------------------------------
+## Beperken omvang xml-bestanden (netinformatie of beheerdersinformatie)
+De wijze waarop volgens het nieuwe IMKL-model gebiedsinformatie wordt uitgewisseld in de KLIC-keten, kan leiden tot omvangrijke xml-bestanden.
+De keten is er bij gebaat, als de omvang van deze bestanden kan worden gereduceerd.  \
+Hieronder worden een aantal mogelijkheden aangereikt die kunnen leiden tot een beperking van de omvang.
+
+### Gebruik standaard namespace-afkortingen
+Zoals al eerder in dit document is aangegeven, zijn een aantal werkafspraken gemaakt t.a.v. het gebruik van namespaces en declaraties.  \
+Zie daarvoor [Hints en tips bij het gebruik van IMKL2015 v1.2.1 \/ Namespaces en declaraties](../Toepassing%20IMKL/Hints%20en%20tips%20bij%20gebruik%20van%20IMKL%20v1.2.1.md#namespaces-en-declaraties).
+
+Het toepassen van deze standaard namespace-afkortingen kan leiden tot een aanzienlijke beperking van de grootte van de XML-bestanden!  \
+Zie ook [Bijlage A - Gebruik standaard namespace-afkortingen](#bijlage-a---gebruik-standaard-namespace-afkortingen).
+
+### Efficienter gebruik _Maatvoering_- en _Annotatie_-objecten
+In het IMKL zijn diverse mogelijkheden aangereikt om _Maatvoering_- en _Annotatie_-objecten te gebruiken.  \
+De typering daarvan is aan te geven met het element `maatvoeringsType`, respectievelijk `annotatieType`.
+De visualisatie van deze objecten op de kaart is afhankelijk van deze typering. Zie daarvoor de visualisatiebeschrijving bij de laatste versie van het IMKL (zie [IMKL Handreiking visualisatie](https://github.com/Geonovum/imkl2015/tree/master/visualisatie)).
+
+Er zijn netbeheerders die op een ongewenste manier annotaties of maatvoeringen specificeren. Zie uitsnede uit het IMKL: \
+![IMKL - Maatvoering en Annotatie](images/IMKL-Maatvoering-en-Annotatie.jpg "IMKL - Maatvoering en Annotatie")
+
+#### Voorkom onnodig gebruik van objecten
+
+Uit de visualisatie valt af te leiden, dat er typeringen zijn die een **lijn in combinatie met één of twee pijlpunten** afbeelden. Zie onderstaande situaties.
+
+Het `maatvoeringsType` "**maatvoeringspijl**" visualiseert met één _Maatvoering_-object een lijn ("maatvoerings(hulp)lijn") met beide pijlpunten ("maatvoeringspijlpunt"). Als we de feitelijke maatvoering met een _Maatvoering_-object van het type "maatvoeringslabel" aanduiden, dan neemt het aantal objecten voor deze visualisatie dus af van 4 naar 2! \
+Van 4 naar 2 objecten: \
+![Maatvoering - 4 objecten](images/maatvoering-4-objecten.jpg "Maatvoering - 4 objecten")
+![Maatvoering - 2 objecten](images/maatvoering-2-objecten.jpg "Maatvoering - 2 objecten")
+
+Zie ook [Bijlage B - Voorbeeld met juist gebruik van maatvoering](#bijlage-b---voorbeeld-met-juist-gebruik-van-maatvoering).
+
+Het `annotatieType` "**annotatiepijlEnkelgericht**" visualiseert met één _Annotatie_-object een lijn ("annotatielijn") met één pijlpunt ("annotatiepijlpunt").
+
+Het `annotatieType` "**annotatiepijlDubbelgericht**" visualiseert met één _Annotatie_-object een lijn met beide pijlpunten:
+
+#### Specificeer een pijlpunt niet m.b.v. lijnstukken
+
+Uit de documentatie valt af te leiden, hoe een pijlpunt bij annotatie of maatvoering gevisualiseerd wordt. Hierboven is aangegeven dat wordt aangeraden om daarvoor een type te gebruiken die een lijn in combinatie met één of twee pijlpunten afbeelden. \
+In praktijk hebben we voorbeelden aangetroffen dat een pijlpunt is aangeleverd als een lijnstuk met 3 vertices... \
+Dit is onjuist, omdat
+- dit een afwijkende visualisatie geeft
+- niet gebruik wordt gemaakt van de mogelijkheden om met één object een lijn en pijlpunt(en) te combineren (reductie aantal objecten!)
+
+Onderstaand is een voorbeeld van een **onjuiste** toepassing:
+![Maatvoering - pijlpunt onjuist](images/maatvoering-pijlpunt-onjuist.jpg "Maatvoering - pijlpunt onjuist")
+
 
 ---------------------------------------------------------
 ## Clippen
@@ -440,5 +500,127 @@ Bij enkele beheerders van rioolleidingen is aan (elk) _Rioolleiding_-object een 
 In de visualisatie is de rioolleiding daardoor zichtbaar als een dikke leiding (vlakvullend).  \
 Omdat _ExtraGeometrie_-objecten (nog) niet geclipt worden (zie hierboven), zijn deze dikke leidingen ook buiten het graafgebied zichtbaar.
 
-Zie onderstaand voorbeeld met het effect voor visualisatie:
+Zie onderstaand voorbeeld met het effect voor visualisatie: \
 ![GM9200 - RioolVrijVerval met ExtraGeometrie](images/GM9200-RioolVrijVerval-met-ExtraGeometrie.jpg "RioolVrijVerval met ExtraGeometrie")
+
+---------------------------------------------------------
+## Bijlagen
+
+### Bijlage A - Gebruik standaard namespace-afkortingen
+Hieronder is een voorbeeld uit een productielevering met **onjuist** gebruik van namespace-afkortingen:
+```xml
+<gml:featureMember>
+  <imkl:Appurtenance gml:id="nl.imkl-KL8851.19954798_200" xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2">
+    <net:beginLifespanVersion xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0">1900-01-01T01:00:00</net:beginLifespanVersion>
+    <net:inspireId xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0">
+      <base:Identifier xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3">
+        <base:localId>KL8851.19954798_200</base:localId>
+        <base:namespace>nl.imkl</base:namespace>
+      </base:Identifier>
+    </net:inspireId>
+    <net:inNetwork n1:href="nl.imkl-KL8851.geulen" xmlns:n1="http://www.w3.org/1999/xlink" xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" />
+    <net:geometry xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0">
+      <gml:Point srsName="EPSG:28992" gml:id="geomid.nl.imkl.KL8851.19954798_200">
+        <gml:pos srsDimension="2">132733.934 399531.492</gml:pos>
+      </gml:Point>
+    </net:geometry>
+    <us-net-common:currentStatus n1:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional" xmlns:n1="http://www.w3.org/1999/xlink" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:validFrom nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:validTo nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:verticalPosition nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="UNKNOWN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="UNKNOWN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:appurtenanceType n1:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/GTWP" xmlns:n1="http://www.w3.org/1999/xlink" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+  </imkl:Appurtenance>
+</gml:featureMember>
+```
+Omdat de namespaces 
+```xml
+    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" 
+    xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+    xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" 
+```
+al binnen de KLIC-levering zijn gedefinieerd, moeten ze binnen de elementen **NIET OPNIEUW** worden gedefinieerd.  \
+Dit leidt tot onderstaande vereenvoudiging:
+```xml
+<gml:featureMember>
+  <imkl:Appurtenance gml:id="nl.imkl-KL8851.19954798_200">
+    <net:beginLifespanVersion>1900-01-01T01:00:00</net:beginLifespanVersion>
+    <net:inspireId>
+      <base:Identifier>
+        <base:localId>KL8851.19954798_200</base:localId>
+        <base:namespace>nl.imkl</base:namespace>
+      </base:Identifier>
+    </net:inspireId>
+    <net:inNetwork xlink:href="nl.imkl-KL8851.geulen"/>
+    <net:geometry>
+      <gml:Point srsName="EPSG:28992" gml:id="geomid.nl.imkl.KL8851.19954798_200">
+        <gml:pos srsDimension="2">132733.934 399531.492</gml:pos>
+      </gml:Point>
+    </net:geometry>
+    <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
+    <us-net-common:validFrom nilReason="UNKNOWN" xsi:nil="true"/>
+    <us-net-common:validTo nilReason="UNKNOWN" xsi:nil="true"/>
+    <us-net-common:verticalPosition nilReason="UNKNOWN" xsi:nil="true"/>
+    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="UNKNOWN"/>
+    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="UNKNOWN"/>
+    <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/GTWP"/>
+  </imkl:Appurtenance>
+</gml:featureMember>
+```
+NB. De datakwaliteit in bovenstaand voorbeeld is nu buiten beschouwing gelaten...
+
+
+### Bijlage B - Voorbeeld met juist gebruik van maatvoering
+Hieronder is een voorbeeld op basis van een productielevering met juist gebruik van _Maatvoering_-objecten:
+
+```xml
+<gml:featureMember>
+<imkl:Maatvoering gml:id="nl.imkl-KL8881.MAAT_G_Header_LD_1_31046155">
+	<imkl:identificatie>
+		<imkl:NEN3610ID>
+			<imkl:namespace>nl.imkl</imkl:namespace>
+			<imkl:lokaalID>KL8881.MAAT_G_Header_LD_1_31046155</imkl:lokaalID>
+		</imkl:NEN3610ID>
+	</imkl:identificatie>
+	<imkl:beginLifespanVersion>2019-06-19T13:15:06+02:00</imkl:beginLifespanVersion>
+	<imkl:inNetwork xlink:href="nl.imkl-KL8881.UNET_oilGasChemicalsGLD_5"></imkl:inNetwork>
+	<imkl:maatvoeringsType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl"></imkl:maatvoeringsType>
+	<imkl:ligging>
+		<gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" gml:id="MAAT_G_Header_LD_1_31046155_1_GeoSeq_1">
+			<gml:posList>56466.359 427599.278 56463.776 427597.732</gml:posList>
+		</gml:LineString>
+	</imkl:ligging>
+</imkl:Maatvoering>
+</gml:featureMember>
+
+<gml:featureMember>
+<imkl:Maatvoering gml:id="nl.imkl-KL8881.MAAT_G_Label_LD_1_51310894">
+	<imkl:identificatie>
+		<imkl:NEN3610ID>
+			<imkl:namespace>nl.imkl</imkl:namespace>
+			<imkl:lokaalID>KL8881.MAAT_G_Label_LD_1_51310894</imkl:lokaalID>
+		</imkl:NEN3610ID>
+	</imkl:identificatie>
+	<imkl:beginLifespanVersion>2019-06-19T13:15:06+02:00</imkl:beginLifespanVersion>
+	<imkl:label> 3.0 </imkl:label>
+	<imkl:inNetwork xlink:href="nl.imkl-KL8881.UNET_oilGasChemicalsGLD_5"></imkl:inNetwork>
+	<imkl:maatvoeringsType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringslabel"></imkl:maatvoeringsType>
+	<imkl:rotatiehoek uom="urn:ogc:def:uom:OGC::deg">59</imkl:rotatiehoek>
+	<imkl:labelpositie>
+		<imkl:Labelpositie>
+			<imkl:aangrijpingHorizontaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/1"></imkl:aangrijpingHorizontaal>
+			<imkl:aangrijpingVerticaal xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/LabelpositieValue/1"></imkl:aangrijpingVerticaal>
+		</imkl:Labelpositie>
+	</imkl:labelpositie>
+	<imkl:ligging>
+		<gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="MAAT_G_Label_LD_1_51310894_1_GeoSeq_1">
+			<gml:pos>56465.667 427598.697</gml:pos>
+		</gml:Point>
+	</imkl:ligging>
+</imkl:Maatvoering>
+</gml:featureMember>
+```
