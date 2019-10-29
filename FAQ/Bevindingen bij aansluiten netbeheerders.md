@@ -315,13 +315,14 @@ Het `annotatieType` "**annotatiepijlDubbelgericht**" visualiseert met één _Ann
 #### Specificeer een pijlpunt niet m.b.v. lijnstukken
 
 Uit de documentatie valt af te leiden, hoe een pijlpunt bij annotatie of maatvoering gevisualiseerd wordt. Hierboven is aangegeven dat wordt aangeraden om daarvoor een type te gebruiken die een lijn in combinatie met één of twee pijlpunten afbeelden. \
-In praktijk hebben we voorbeelden aangetroffen dat een pijlpunt is aangeleverd als een lijnstuk met 3 vertices... \
+In praktijk hebben we voorbeelden aangetroffen dat een pijlpunt is aangeleverd als een lijnstuk met 3 of 4 vertices... \
 Dit is onjuist, omdat
 - dit een afwijkende visualisatie geeft
 - niet gebruik wordt gemaakt van de mogelijkheden om met één object een lijn en pijlpunt(en) te combineren (reductie aantal objecten!)
 
-Onderstaand is een voorbeeld van een **onjuiste** toepassing:
+Onderstaand enkele voorbeelden van een **onjuiste** toepassing:
 ![Maatvoering - pijlpunt onjuist](images/maatvoering-pijlpunt-onjuist.jpg "Maatvoering - pijlpunt onjuist")
+![Maatvoering - pijlpunt onjuist (2)](images/maatvoering-pijlpunt-onjuist-2.jpg "Maatvoering - pijlpunt onjuist (2)")
 
 
 ---------------------------------------------------------
