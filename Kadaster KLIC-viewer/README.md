@@ -29,8 +29,8 @@ De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-v
 
 Een levering van gebiedsinformatie is te openen door een zogenaamde GUID in te vullen bij de KLIC melding code.  \
 Kopieer hiervoor één van onderstaande GUID's:
-* voorbeeld levering 1: https://service10.test.kadaster.nl/klic-viewer/uitlevering/fe8d1c20-bd94-447d-939f-f2c5d53b904a 
-* voorbeeld levering 2: https://service10.test.kadaster.nl/klic-viewer/uitlevering/ad480701-d9e8-49d4-87a6-356f1b5adf87
+* voorbeeld levering 1: https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering/fe8d1c20-bd94-447d-939f-f2c5d53b904a 
+* voorbeeld levering 2: https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering/ad480701-d9e8-49d4-87a6-356f1b5adf87
 
 Mogelijk geeft uw browser een melding over het ontbreken van een beveiligingscertificaat. U kunt dan kiezen voor de optie “Doorgaan naar deze website”.  \
 Voor een goede werking van de demo van de BETA-versie adviseren we het gebruik van Chrome als browser.
@@ -54,3 +54,4 @@ Gebruik hiervoor één van onderstaande voorbeeld KLIC-levering mappen, nadat u 
 * [voorbeeld levering 2](../../../raw/master/Kadaster%20KLIC-viewer/voorbeeld%20levering%202%20Levering_19G002540_1.zip)
 
 U kunt de ontwikkelingen van de Kadaster KLIC-viewer via de [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) volgen op GitHub.
+
