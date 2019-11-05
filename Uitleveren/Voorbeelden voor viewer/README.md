@@ -33,6 +33,8 @@ Daarvoor zijn handmatig wijzigingen doorgevoerd in
 - gebiedsinformatielevering (GI.xml)
 - de netbeheerdermap is verwijderd;
 
+Ook de gelaagdePDF (LP.pdf) is uit de leveringen gehaald, omdat daarin mogelijk rasterkaarten zijn opgenomen van netbeheerder(s) die geen toestemming hebben gegeven.
+
 Aangezien de aanvragen zijn ingediend tijdens de overgangsperiode, hebben de leveringen het formaat van versie 2.1.  \
 Om te voldoen aan het formaat van versie 2.2 zijn handmatig de volgende wijzigingen doorgevoerd in de leveringen:
 - leveringsinformatie (LI.xml): `version` =  2.2
@@ -41,8 +43,6 @@ Om te voldoen aan het formaat van versie 2.2 zijn handmatig de volgende wijzigin
 - in de map _bronnen_ is de rasterkaart met het geselecteerde gebied (SEL.png) verwijderd
 - in de netbeheerdermappen zijn de rasterkaarten (PNG-bestanden) verwijderd
 - de netbeheerdermappen zelf zijn ook verwijderd als de netbeheerder geen bijlagen heeft;
-
-Ook de gelaagdePDF (met rasterkaarten) (LP.pdf) is uit alle leveringen gehaald.
 
 Hieronder is een overzicht van enkele kenmerken van de (bewerkte) leveringen (versie 2.2).
 
