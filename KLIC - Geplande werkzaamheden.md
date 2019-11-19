@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 9 oktober 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 19 november 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
@@ -6,16 +6,30 @@
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
-  - er wordt gebruik gemaakt van de generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+  - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - januari 2020
+## Planning voor release - eind februari 2020
 
-**KvkNummer (Kamer van Koophandel)**:
-- Het wordt mogelijk om een KvkNummer van de aanvrager en het KvkNummer van de opdrachtgever (in geval van Graafmelding) op te geven.
-- Het KvkNummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, GI.xml en de GebiedsinformatieAanvragen API.
+**Kvk-nummer (Kamer van Koophandel)**:
+- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens).
+- In het geval van een Graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
+- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - medio januari 2020
+
+**Kvk-nummer (Kamer van Koophandel)**:
+- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van Graafmelding) op te geven.
+- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API.
 - Er worden voorbeeldbestanden op de GitHub gepubliceerd.
-- De aanpassingen worden eerst in NTD beschikbaar gesteld.
+- De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
+
+**Ontvangstbevestiging**:
+- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen.
+
+**Bugfix**:
+- Er konden dubbele vermeldingen naar bestanden in de Li.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio december 2019
@@ -23,7 +37,7 @@ De inhoud van deze release is afhankelijk van het einde van de overgangsperiode.
 Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
 
 
-**Leverings email**:
+**Leveringsemail**:
 - De inhoud van de leveringsemail wordt aangepast. (ID 3897)
 - Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
 
@@ -47,18 +61,18 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin november 2019
-Voor deze release zijn de volgende onderwerpen gepland:
+## Planning voor release - 29 oktober 2019
+Voor deze release is het volgende onderwerp gepland:
 
 **NTD**:
-- In de NTD is het niet meer mogelijk om een klasieke testmelding (BMKL 1.2) te doen. (ID 4418)
+- In de NTD is het niet meer mogelijk om een klassieke testmelding (BMKL 1.2) te doen. (ID 4418)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 7 oktober 2019
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Bug-fixes / Performance**:
-- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet gepatched is. (ID 4531)
+- Centrale netbeheerders kunnen een BMKL-alert krijgen, ook als er niet gepatched is. (ID 4531)
 - Performanceverbetering voor de Serviceprovider bij het ophalen van de lijst waarvoor de Serviceprovider geautoriseerd is (bijvoorbeeld Belangenbeheer). (ID 3605)
 - Achtergrondkaart bij het controleren van netinformatie (actualiseren) is hersteld. (ID 4809)
 

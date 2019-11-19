@@ -1,9 +1,15 @@
 ﻿# Release notes
 ------------------------
+### 29 oktober 2019
+
+**NTD**:
+- In de NTD is het niet meer mogelijk om een klassieke testmelding (BMKL 1.2) te doen. (ID 4418)
+
+------------------------
 ### 7 oktober 2019
 
 **Bug-fixes / Performance**:
-- Centrale netbeheerders kunnen een BMKL-alert krijgen krijgen, ook als er niet gepatched is. (ID 4531)
+- Centrale netbeheerders kunnen een BMKL-alert krijgen, ook als er niet gepatched is. (ID 4531)
 - Performanceverbetering voor de Serviceprovider bij het ophalen van de lijst waarvoor de Serviceprovider geautoriseerd is (bijvoorbeeld Belangenbeheer). (ID 3605)
 - Achtergrondkaart bij het controleren van netinformatie (actualiseren) is hersteld. (ID 4809)
 
