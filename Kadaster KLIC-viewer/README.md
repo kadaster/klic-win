@@ -17,12 +17,13 @@ Er is een BETA-versie beschikbaar van de online Kadaster KLIC-viewer waarin een 
 De volgende functies zijn beschikbaar in deze BETA-versie:
 * Met behulp van “Menu” kunt u een (nieuwe) KLIC-melding openen.
 * Met behulp van “Weergave” kunt u de netinformatie per netbeheerder/thema inzien en Annotatie, Maatvoering, EigenTopo, Extra Geometrie, EV aanduiding en GeselecteerdGebied aan- en uitzetten.
-* Met behulp van “Docs” kunt u de leveringsbrief en de door de netbeheerder geleverde bijlagen inzien.
+* Met behulp van “Documenten” kunt u de leveringsbrief en de door de netbeheerder geleverde bijlagen inzien.
   - Printen op basis van selectie van bijlagen of printen van alle bijlagen.
 * Met behulp van “Meten” kunt u afstanden meten.
 * Met behulp van “Printen” kunt u
   - met de functie “Kaartselectie” een gebied aangeven waarvan de kaartlagen op een aangegeven schaal en papierformaat moeten worden uitgeprint. De uitvoer bestaat uit een overzichtskaart, een verzamelkaart en een themakaart per netbeheerder/thema. 
-* Met behulp van een klik op de kaart kunt u attribuutinformatie van de geraakte kabel- en leidingobjecten opvragen (op basis van het Informatiemodel Kabels en Leidingen – IMKL).  \
+  - met de functie "Bladindeling" bladen selecteren.
+* Met behulp van een klik op de kaart kunt u attribuutinformatie van de geraakte kabel- en leidingobjecten opvragen (op basis van het Informatiemodel Kabels en Leidingen – IMKL).  
   - Let op: Op dit moment is er een bevinding op deze functionaliteit waardoor het niet optimaal werkt. Je moet eerst je browser verkleinen en daarna maximaliseren om het werkend te krijgen. Deze bevinding wordt zo snel mogelijk opgelost.
 
 De BETA-versie van de online KLIC-viewer is te openen met de link [online KLIC-viewer (BETA)](https://www.acceptatie.klicviewer.nl/klic-viewer/).
@@ -43,15 +44,15 @@ Een levering van gebiedsinformatie is op twee manieren te openen.
 
 1) Door een zogenaamde GUID in te vullen bij Link uit KLIC-levering.  
 Kopieer hiervoor één van onderstaande GUID's:
-* voorbeeld levering 1: https://service10.acceptatie.kadaster.nl/gds2/download/public/ca075438-1d35-4a51-86b3-db36d0534635 
-* voorbeeld levering 2: https://service10.acceptatie.kadaster.nl/gds2/download/public/22a98394-0d05-4a4c-9b69-942b12021a3c
+* voorbeeld levering 1: https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering/fe8d1c20-bd94-447d-939f-f2c5d53b904a 
+* voorbeeld levering 2: https://service10.acceptatie.kadaster.nl/klic-viewer/uitlevering/ad480701-d9e8-49d4-87a6-356f1b5adf87
 
    Na het kopiëren wordt de levering gedownloaded, uitgepakt en opgebouwd.
 
 2) Lokaal een KLIC-levering openen met behulp van Map Selecteren.
 Gebruik hiervoor één van onderstaande voorbeeld KLIC-levering mappen, nadat u deze heeft uitgepakt.
-* [voorbeeld levering 1](../../../raw/master/Kadaster%20KLIC-viewer/voorbeeld%20levering%201%20Levering_19G002541_1.zip)
-* [voorbeeld levering 2](../../../raw/master/Kadaster%20KLIC-viewer/voorbeeld%20levering%202%20Levering_19G002540_1.zip)
+* [voorbeeld levering 1](../../../raw/master/Kadaster%20KLIC-viewer/Voorbeeld_1_Levering_19G004307_1.zip)
+* [voorbeeld levering 2](../../../raw/master/Kadaster%20KLIC-viewer/Voorbeeld_2_Levering_19G004306_1.zip)
 
 U kunt de ontwikkelingen van de Kadaster KLIC-viewer via de [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) volgen op GitHub.
 
