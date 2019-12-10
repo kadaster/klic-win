@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 november 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 10 december 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
@@ -9,30 +9,28 @@
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind februari 2020
+## Planning voor release - eind april 2020
 
-**Kvk-nummer (Kamer van Koophandel)**:
-- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens).
-- In het geval van een Graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
-- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API.
+**Informatiepolygoon**:
+- Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
+- De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio januari 2020
+## Planning voor release - begin maart 2020
 
 **Kvk-nummer (Kamer van Koophandel)**:
-- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van Graafmelding) op te geven.
-- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API.
+- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
+- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
+- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
+
+**Informatiepolygoon in NTD**:
+- In de NTD wordt het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
+- De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)
 - Er worden voorbeeldbestanden op de GitHub gepubliceerd.
 - De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
 
-**Ontvangstbevestiging**:
-- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen.
-
-**Bugfix**:
-- Er konden dubbele vermeldingen naar bestanden in de Li.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
-
 --------------------------------------------------------------------------------------
-## Planning voor release - medio december 2019
+## Planning voor release - begin 2020
 De inhoud van deze release is afhankelijk van het einde van de overgangsperiode.  \
 Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
 
@@ -57,8 +55,23 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
 **Het BIL zipbestand**:
-- Het zipbestand met de Beheerders Informatie Levering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
+- Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - medio januari 2020
+
+**Kvk-nummer (Kamer van Koophandel)**:
+- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van graafmelding) op te geven. (ID 4981)
+- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API. (ID 4670, ID 4671)
+- Er worden voorbeeldbestanden op de GitHub gepubliceerd.
+- De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
+
+**Ontvangstbevestiging**:
+- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
+
+**Bugfix**:
+- Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 29 oktober 2019
@@ -85,7 +98,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Publicatie op Github**:
-- Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende Beheerders Informatie Leveringen. (ID 3849)  \
+- Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende BeheerdersinformatieLeveringen. (ID 3849)  \
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
 - Update van de BETA-versie van de Kadaster KLIC-viewer (Online en Windows).  \
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
@@ -238,7 +251,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Controle minimaal één type soort werkzaamheden bij graafmelding en oriëntatieverzoek**:
-- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie Klic-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
+- Bij het opvoeren van een graafmelding of oriëntatieverzoek moet er altijd minimaal één soort werkzaamheden worden opgegeven. Tevens is het geven van een toelichting van de werkzaamheden alleen mogelijk als er minimaal één soort werkzaamheden is opgegeven. Dit geldt voor aanvragen via de web applicatie KLIC-online en aanvragen via een B2B aanvraag-kanaal. (ID 2533)
 
 **Beheren belangen**:
 - Het emailadres van contacten wordt alleen verplicht als het contact gekoppeld is als contactAanvraag of contactNetinformatie. (ID 3577, ID 3676)
@@ -541,9 +554,9 @@ Ter voorbereiding op de KLIC-WIN implementatie wordt binnenkort mogelijk gemaakt
 De Basisregistratie Grootschalige Topografie (BGT) leidt tot een gedetailleerde digitale kaart van Nederland. De GBKN achtergrondkaart die gebruikt wordt binnen KLIC, zal vervangen worden door een BGT achtergrondkaart.
 
 Deze nieuwe achtergondkaart zal op 3 plaatsen binnen KLIC gebruikt gaan worden:
-- Klic-online (bij het doen van een graafmelding, oriëntatieverzoek en calamiteitenmelding);</br>
+- KLIC-online (bij het doen van een graafmelding, oriëntatieverzoek en calamiteitenmelding);</br>
   Als achtergrondkaart wordt hier de visualisatie van "BGT omtrekgericht" gebruikt. (ID 2161)
-- In de Klic-ontvangstbevestiging;</br>
+- In de KLIC-ontvangstbevestiging;</br>
   Als achtergrondkaart wordt ook hier de "BGT omtrekgericht" gebruikt.  (ID 2162)
 - Binnen de Klic-levering;</br>
   Als achtergrondkaart wordt hier de visualisatie van "BGT pastel" gebruikt. (ID 2163)
