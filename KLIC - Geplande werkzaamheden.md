@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 december 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 18 december 2019)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
@@ -46,9 +46,6 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
 
-**NTD**:
-- Ter voorbereiding op de afloop van de overgangsperiode, wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
-
 **Uitlevering zipbestand**:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast in productie (ID 3849):
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
@@ -72,6 +69,16 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 
 **Bugfix**:
 - Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 8 januari 2020
+Voor deze release is het volgende onderwerp gepland:
+
+**NTD**:
+- Ter voorbereiding op de afloop van de overgangsperiode, wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 29 oktober 2019
