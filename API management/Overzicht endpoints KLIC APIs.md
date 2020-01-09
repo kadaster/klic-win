@@ -70,7 +70,16 @@ Deze resource-structuur is benaderbaar met de volgende endpoints (host + base ur
 ### Data synchronisatie (Agentschap Telecom)
 
 Voor data synchronisatie ten behoeve van Agentschap Telecom worden de API's voor de resource "gebiedsinformatieAanvragen" gebruikt.  \
-Zie daarvoor [B2B-koppeling beheerdersinformatie (BMKL 2.0)](#b2b-koppeling-beheerdersinformatie-bmkl-20). 
+Zie daarvoor [B2B-koppeling beheerdersinformatie (BMKL 2.0)](#b2b-koppeling-beheerdersinformatie-bmkl-20).
+
+Het opvragen van stamgegevens van netbeheerders gebeurt op basis van de resource "organisaties".
+Deze resource is benaderbaar met de volgende endpoints (host + base url):
+
+|Omgeving                      |Host                           |Base url	                  |
+|------------------------------|-------------------------------|------------------------------|	
+|Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/leveren/api/v2/web     |
+|Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web |
+ 
 
 ### Upload servlet
 
