@@ -22,8 +22,10 @@ Deze map bevat:
 		- leveringsinformatie: versie 2.2
 * schemadefinitie betreffende de metagegevens van de leveringsinformatie (Leveringsinformatie.xsd)
 * regels bij clippen van netwerkgegevens
-* map met diverse voorbeelden
-* map met voorbeelden van het gebruik van BGT als achtergrondkaart
+* map met voorbeelden van leveringen volgens versie 2.2 (alleen vectordata)
+* map met voorbeelden van het toepassen van het KvK-nummer
+* map met praktijkvoorbeelden van aanvragen met varierende aanvraagsoort en gebiedsomvang (t.b.v. KLIC-viewer bouwers)
+* map met diverse voorbeelden uit overgangsperiode (v2.1)
 
 Een _beheerdersinformatieLevering_ is een "uitsnede" van een _gebiedsinformatieLevering_ met alleen de informatie die de centrale voorziening namens een netbeheerder uitlevert.  \
 In de map [B2B-koppeling beheerdersinformatie (BMKL 2.0)](../../../tree/master/B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)) zijn daarvan verschillende voorbeelden opgenomen.
