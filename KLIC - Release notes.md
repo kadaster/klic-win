@@ -1,5 +1,20 @@
 ﻿# Release notes
 ------------------------
+### 9 januari 2020 (NTD)
+
+**BIL zip-bestand in versie 2.2**:
+- Ter voorbereiding op de afloop van de overgangsperiode (1 maart 2020), wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+**KvK-nummer (Kamer van Koophandel)**:
+- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van graafmelding) op te geven. (ID 4981)
+- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API. (ID 4670, ID 4671)
+- De aanpassingen zijn eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
+
+
+------------------------
 ### 29 oktober 2019
 
 **NTD**:

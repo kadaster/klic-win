@@ -1,7 +1,8 @@
-﻿# Geplande werkzaamheden (bijgewerkt 18 december 2019)
+﻿# Geplande werkzaamheden (bijgewerkt 9 januari 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
@@ -10,6 +11,7 @@
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind april 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
@@ -17,11 +19,13 @@
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin maart 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Kvk-nummer (Kamer van Koophandel)**:
 - In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
 - In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
 - Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
+- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 **Informatiepolygoon in NTD**:
 - In de NTD wordt het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
@@ -30,10 +34,24 @@
 - De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin 2020
+## Planning voor release - 1 maart 2020
 De inhoud van deze release is afhankelijk van het einde van de overgangsperiode.  \
 Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
 
+
+**Uitlevering zipbestand**:
+- Het zipbestand met de KLIC-uitlevering wordt aangepast in productie (ID 3849):
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+**Het BIL zipbestand**:
+- Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 20 januari 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Leveringsemail**:
 - De inhoud van de leveringsemail wordt aangepast. (ID 3897)
@@ -46,23 +64,12 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
 
-**Uitlevering zipbestand**:
-- Het zipbestand met de KLIC-uitlevering wordt aangepast in productie (ID 3849):
-  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
-  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
 
-**Het BIL zipbestand**:
-- Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
-  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio januari 2020
-
-**Kvk-nummer (Kamer van Koophandel)**:
-- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van graafmelding) op te geven. (ID 4981)
-- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API. (ID 4670, ID 4671)
-- Er worden voorbeeldbestanden op de GitHub gepubliceerd.
-- De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
+## Planning voor release - 14 januari 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Ontvangstbevestiging**:
 - Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
@@ -71,14 +78,19 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 - Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 8 januari 2020
-Voor deze release is het volgende onderwerp gepland:
+## Planning voor release - 9 januari 2020 (NTD)
+Voor deze release zijn de volgende onderwerpen gepland:
 
-**NTD**:
-- Ter voorbereiding op de afloop van de overgangsperiode, wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
+**BIL zip-bestand in versie 2.2**:
+- Ter voorbereiding op de afloop van de overgangsperiode (1 maart 2020), wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
+**KvK-nummer (Kamer van Koophandel)**:
+- Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van graafmelding) op te geven. (ID 4981)
+- Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API. (ID 4670, ID 4671)
+- De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 29 oktober 2019
