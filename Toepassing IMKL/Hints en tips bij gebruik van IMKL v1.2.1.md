@@ -131,7 +131,7 @@ Op dit moment ondersteunt het Kadaster de imkl/2015/wion/1.2 namespace.
 
 ### Default namespace
 Het is niet de bedoeling dat in een aangeleverde XML-dataset een default namespace wordt gebruikt.
-De Klic-programmatuur gaat uit van de voorgedefinieerde afkortingen voor namespaces, zoals hierboven gespecificeerd.
+De KLIC-programmatuur gaat uit van de voorgedefinieerde afkortingen voor namespaces, zoals hierboven gespecificeerd.
 
 Voorbeeld *onjuist* gebruik:
 ```xml
@@ -143,7 +143,7 @@ Voorbeeld *onjuist* gebruik:
 
 ### Definiering namespaces op dieper niveau
 Het is mogelijk om op een dieper niveau eigen namespaces te definieren.
-De Klic-programmatuur zal deze namespaces respecteren en opnemen in de uitlevering van gebiedsinformatie.
+De KLIC-programmatuur zal deze namespaces respecteren en opnemen in de uitlevering van gebiedsinformatie.
 
 Voorbeeld eigen namespace:
 ```xml
@@ -159,6 +159,34 @@ Voorbeeld eigen namespace:
         </us-net-common:disclaimer>
         ...
     </imkl:Utiliteitsnet>
+</gml:featureMember>
+```
+
+Het is NIET de bedoeling om op een dieper niveau namespaces te definieren die vervolgens niet worden gebruikt binnen het feature.  \
+Weliswaar is dit XML-syntactisch gezien mogelijk, maar wél overbodig, het geeft non-informatie en verstoord een uniform beeld bij gebruikers (met name software-bouwers) van de gebiedsinformatie.
+
+Voorbeeld van **ongewenst gebruik** van eigen namespace-afkortingen:
+```xml
+<gml:featureMember>
+<imkl:Mantelbuis 
+	xmlns:bu-core2d="http://inspire.ec.europa.eu/schemas/bu-core2d/4.0" 
+	xmlns:us-govserv="http://inspire.ec.europa.eu/schemas/us-govserv/4.0" 
+	xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+	xmlns:gn="http://inspire.ec.europa.eu/schemas/gn/4.0" 
+	xmlns:ad="http://inspire.ec.europa.eu/schemas/ad/4.0" 
+	xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
+	xmlns:cp="http://inspire.ec.europa.eu/schemas/cp/4.0" 
+	xmlns:gts="http://www.isotc211.org/2005/gts" 
+	xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" 
+	xmlns:gss="http://www.isotc211.org/2005/gss" 
+	xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+	xmlns:act-core="http://inspire.ec.europa.eu/schemas/act-core/4.0" 
+	xmlns:bu-base="http://inspire.ec.europa.eu/schemas/bu-base/4.0" 
+	xmlns:gco="http://www.isotc211.org/2005/gco" 
+	xmlns:au="http://inspire.ec.europa.eu/schemas/au/4.0" 
+	xmlns:tn="http://inspire.ec.europa.eu/schemas/tn/4.0" gml:id="nl.imkl-KL9988.Mantelbuis-1786">
+        ...
+    </imkl:Mantelbuis>
 </gml:featureMember>
 ```
 
@@ -341,7 +369,7 @@ In het IMKL zijn veel extra validatieregels vastgelegd als "OCL-constraint". Zie
 
 Met deze constraints kunnen regels worden gedefinieerd waarbij bijzondere condities of afhankelijkheden tussen verschillende elementen worden aangegeven.
 Het uitvoeren van deze validatieregels dient te gebeuren met specifiek daarvoor bedoelde software (bijv. Schematron) en vraagt de nodige systeemresources.  
-In het Klic-systeem zijn deze controles geimplementeerd in de eigen software.
+In het KLIC-systeem zijn deze controles geimplementeerd in de eigen software.
 
 Voorbeeld bij IMKL-feature `ContainerLeidingelement` (abstract) met constraint "RotatiehoekEenheidDegrees":
 ```xml
@@ -369,7 +397,7 @@ not(self.bijlage.oclIsTypeOf(EisVoorzorgsmaatregelBijlage))
 ```
 
 ### Toelichting controles netinformatie KLIC
-In de publicatie [Toelichting controles netinformatie KLIC](Toelichting%20controles%20netinformatie%20KLIC.md) wordt een toelichting gegeven op controles die door het Klic-systeem worden uitgevoerd bij aanlevering van IMKL-netinformatie.
+In de publicatie [Toelichting controles netinformatie KLIC](Toelichting%20controles%20netinformatie%20KLIC.md) wordt een toelichting gegeven op controles die door het KLIC-systeem worden uitgevoerd bij aanlevering van IMKL-netinformatie.
 
 Netbeheerders krijgen in het nieuwe KLIC de keuze om centraal te gaan, waarbij ze hun netinformatie in een centrale voorziening zetten, of decentraal te gaan waarbij ze - net als in de oude situatie - per gebiedsinformatie-aanvraag beheerdersinformatie aanleveren aan het Kadaster.
 
