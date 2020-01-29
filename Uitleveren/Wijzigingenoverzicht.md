@@ -1,5 +1,18 @@
 ﻿#### Uitleveren gebiedsinformatie - Overzicht wijzigingen
 
+29-01-2020
+* Datum einde overgangsperiode vastgesteld op 29 februari 2020;
+* Stijl aangepast van "Klic-" naar "KLIC-";
+* doorgevoerd in de volgende presentaties:
+  - WIBON-levering tijdens overgangsperiode
+  - WIBON-levering producten NA overgangsperiode
+  - gebiedsindeling tijdens overgangsperiode
+  - gebiedsindeling NA overgangsperiode
+
+05-03-2019
+* Presentatie over WIBON-levering (voor en tijdens overgangsperiode) geactualiseerd
+  - WION gewijzigd naar WIBON
+  - explicieter aangegeven dat de producten zijn beschreven zoals ze worden samengesteld vóór de overgangsperiode of tijdens de overgangsperiode
 08-03-2019
 * Presentatie over WIBON-levering NA overgangsperiode toegevoegd
 
