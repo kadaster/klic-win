@@ -1,24 +1,20 @@
-﻿# Geplande werkzaamheden (bijgewerkt 9 januari 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 29 januari 2020)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 2020
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**Terugmeldvoorziening**:
-- Pilot voor het automatiseren van fase 1 van het proces "Afwijkende situatie" (Terugmeldvoorziening)
-  - de pilot zal met ketenpartners worden georganiseerd
-  - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
-
---------------------------------------------------------------------------------------
-## Planning voor release - eind april 2020
+## Planning voor release - eind april / mei 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.
 
+**Terugmeldvoorziening**:
+- Pilot voor het automatiseren van fase 1 ("niet gevonden net") van het proces "Afwijkende situatie" (Terugmeldvoorziening)
+  - de pilot zal met ketenpartners worden georganiseerd
+  - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
 --------------------------------------------------------------------------------------
-## Planning voor release - begin maart 2020
+## Planning voor release - maart / april 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Kvk-nummer (Kamer van Koophandel)**:
@@ -48,6 +44,15 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 - Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 februari 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Ontvangstbevestiging**:
+- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
+
+**Bugfix**:
+- Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 20 januari 2020
@@ -65,17 +70,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
 
 Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
-
-
---------------------------------------------------------------------------------------
-## Planning voor release - 14 januari 2020
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**Ontvangstbevestiging**:
-- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
-
-**Bugfix**:
-- Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 9 januari 2020 (NTD)

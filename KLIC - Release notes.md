@@ -1,4 +1,21 @@
 ﻿# Release notes
+
+------------------------
+### 20 januari 2020 
+
+**Leveringsemail**:
+- De inhoud van de leveringsemail is aangepast. (ID 3897)
+- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
+
+**Nieuwe Kadaster KLIC-viewer**:
+- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
+  - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
+  - met een BGT-achtergrondkaart in PNG-formaat
+  - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [beschikbaar op GitHub](/Kadaster%20KLIC-viewer/).
+
+Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
+
 ------------------------
 ### 9 januari 2020 (NTD)
 
