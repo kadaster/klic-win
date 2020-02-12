@@ -1,6 +1,15 @@
 ﻿# Release notes
 
 ------------------------
+### 2 februari 2020 
+
+**Ontvangstbevestiging**:
+- Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
+
+**Bugfix**:
+- Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
+
+------------------------
 ### 20 januari 2020 
 
 **Leveringsemail**:

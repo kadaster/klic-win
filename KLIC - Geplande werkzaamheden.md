@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 29 januari 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 12 februari 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind april / mei 2020
@@ -7,6 +7,14 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.
+
+**KvK-nummer (Kamer van Koophandel)**:
+
+Op verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de implementatie samengevoegd met de Informatiepolygoon.
+- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
+- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
+- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
+- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 ("niet gevonden net") van het proces "Afwijkende situatie" (Terugmeldvoorziening)
@@ -17,17 +25,25 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Planning voor release - maart / april 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kvk-nummer (Kamer van Koophandel)**:
-- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
-- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
-- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
-- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
-
 **Informatiepolygoon in NTD**:
 - In de NTD wordt het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)
 - Er worden voorbeeldbestanden op de GitHub gepubliceerd.
 - De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 maart 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer**:
+- In de Kadaster KLIC-viewer worden en aantal functionele verbeteringen doorgevoerd. Onder andere:
+  - Het is mogelijk in menu Weergave om de BGT kaartachtergrond uit te schakelen.
+  - Betere toelichting over aantal EV aanduidingen per netbeheerder.
+  - Het installatiepakker voor Windows is veel kleiner qua MB.
+  - De gebruiker kan tijdens zelf bepalen in welke map/netwerkschijf de viewer wordt geïnstalleerd in het geval van het installeren in Windows.
+  - Bugfix: In de Windows versie werden EV en Extra Geometrie toggles meer dan 1 keer getoond. 
+  - Bugfix: Betere afhandeling 502 foutmelding
+- Mogelijkheid voor de netbeheerders om uitgepakte beheerdersinformatieleveringen (BIL) te bekijken in de Windows versie van de viewer. In eerste instantie kan dit nog alleen met beheerdersinformatieleveringen van maximaal 20 werkdagen oud. 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 maart 2020
