@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  bestandsnaam: KlicB2BBetrokkenBeheerders-1.1.xsd  -->
+<!--  bron: Kadaster-KLIC  -->
+<!--
+ [1.1] 12-02-2020 ________________________________________________________________________________
+Versie			: 1.1
+Datum			: 12-02-2020
+Toelichting:	
+Dit schema melding wordt gebruikt om bij een calamiteitenmelding de netbeheerders met een belang terug te geven aan de aanvrager.
+
+Onderstaande nieuwe attribuut is optioneel:
+Bij ContactPerThema een indicatie of het thema van het belang van een netbeheerder alleen in de informatiepolygoon zit, of ook in de graafpolygoon.
+__________________________________________________________________________________________________ 
+-->
+
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BBetrokkenBeheerders/20150311" targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BBetrokkenBeheerders/20150311" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.1">
+	<xsd:element name="KlicB2BBetrokkenBeheerders" type="tns:KlicB2BBetrokkenBeheerdersType">
+		<xsd:annotation>
+			<xsd:documentation>Terugkoppeling van betrokken (net)beheerders bij een Klic-B2B-aanvraag voor gebiedsinformatie  (KlicB2BAanvraag).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="KlicB2BBetrokkenBeheerdersType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van de terugkoppeling van betrokken (net)beheerders bij een Klic-B2B-aanvraag voor gebiedsinformatie  (KlicB2BAanvraag).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Procesverwerking" type="tns:ProcesverwerkingType">
+				<xsd:annotation>
+					<xsd:documentation>Terugkoppeling van het resultaat bij bepaling van betrokken beheerders.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BetrokkenBeheerders" type="tns:BetrokkenBeheerdersType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Overzicht van netbeheerders of beheerders veiligheidsgebied die betrokken zijn bij een gebiedsinformatie-aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BetrokkenBeheerdersType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van netbeheerders of beheerders veiligheidsgebied die betrokken zijn bij een gebiedsinformatie-aanvraag.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Klantreferentie" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Eigen referentie die de klant bij de aanvraag heeft meegegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AanvraagDatumtijd" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Datumtijd waarop de order als aanvraag bij het Kadaster is geregistreerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VeiligheidsgebiedBetrokken" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>Is bij de betreffende aanvraag een veiligheidsgebied betrokken? Hierbij geldt voor de sector een speciale wijze van afhandeling.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Beheerder" type="tns:BetrokkenBeheerderType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Lijst van beheerders betrokken bij de gebiedsinformatie-aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BetrokkenBeheerderType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van een netbeheerder of beheerder veiligheidsgebied die betrokken is bij een gebiedsinformatie-aanvraag.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Relatienummer" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identificatie van de (net)beheerder zoals deze bij Kadaster relatiebeheer bekend is.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Bedrijfsnaam" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Bedrijfsnaam van de netbeheerder of beheerder veiligheidsgebied.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ContactPerThema" type="tns:ContactPerThemaType" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Contactgegevens (meldadres) waarmee contact opgenomen kan worden wanneer een belang van een bepaald thema is geraakt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactPerThemaType">
+		<xsd:annotation>
+			<xsd:documentation>Contactgegevens van de (net)beheerder waarmee de graafsector in contact kan treden voor nadere informatie over het geraakte belang (thema).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Themanaam" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Naam van het thema (volgens BMKL) van het geraakte belang van een (net)beheerder. In geval van een veiligheidsgebied wordt als thema "veiligheidsgebied" aangegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ThemaAlleenInInformatiepolygoon" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Indicatie of het thema van het belang van een netbeheerder alleen in de informatiepolygoon zit, of ook in de graafpolygoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Naam" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>De naam van de contactpersoon bij de (net)beheerder voor het betreffende thema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Initialen" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Initialen bij de naam van de contactpersoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Aanhef" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Aanhef bij de naam van de contactpersoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Telefoon" type="xsd:string" minOccurs="1" maxOccurs="2">
+				<xsd:annotation>
+					<xsd:documentation>Het telefoonnummer van de contactpersoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Email" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Het e-mailadres van de contactpersoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Fax" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Faxnummer van de contactpersoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ProcesverwerkingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van het resultaat bij de bepaling van betrokken (net) beheerders.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ProcesVerwerkingCode" type="xsd:string" default="1">
+				<xsd:annotation>
+					<xsd:documentation>Dit element geeft het resultaat van de verwerking aan: goed of fout. De default waarde is 1. Dit betekent dat het verzoek succesvol is verwerkt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SeverityCode" type="tns:SeverityCodeType" default="INFO">
+				<xsd:annotation>
+					<xsd:documentation>Dit element wordt gebruikt om de ernst van een fout aan te geven. De standaard classificaties worden gebruikt: SECURITY, FATAL, ERROR, WARNING, INFO. De default is INFO.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Melding" type="tns:MeldingType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Dit element kan worden gebruikt om een melding, in het bijzonder een foutmelding, terug te koppelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MeldingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van een teruggekoppelde melding, in het bijzonder een foutmelding.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string"/>
+			<xsd:element name="Omschrijving" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="SeverityCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Indicatie van de ernst van een fout.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SECURITY"/>
+			<xsd:enumeration value="FATAL"/>
+			<xsd:enumeration value="ERROR"/>
+			<xsd:enumeration value="WARNING"/>
+			<xsd:enumeration value="INFO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
