@@ -17,6 +17,7 @@ Deze map bevat:
 * B2B-koppeling voor afhandelen gebiedsinformatie-aanvraag 
   * [B2B-koppeling gebiedsinformatie-aanvraag (KLIC B2B-aanvraag)](B2B-koppeling%20gebiedsinformatie-aanvraag%20(KLIC%20B2B-aanvraag).md) met wijzigingen voor versie 1.1
   * [KlicB2BAanvraag-1.1.xsd](KlicB2BAanvraag-1.1.xsd): schema-definitie voor de nieuwe versie van B2B-aanvraag (versie 1.1)
-  * [Controles bij B2B-koppeling gebiedsinformatie-aanvraag](Controles%20bij%20B2B-koppeling%20gebiedsinformatie-aanvraag.md) van de wijzigingen voor versie 1.1
+  * [KlicB2BBetrokkenBeheerders-1.1.xsd](KlicB2BBetrokkenBeheerders-1.1.xsd): Dit schema wordt gebruikt om bij een calamiteitenmelding de netbeheerders met een belang terug te geven aan de aanvrager. (versie 1.1)
+  * [Controles B2B-koppeling gebiedsinformatie-aanvraag](Controles%20B2B-koppeling%20gebiedsinformatie-aanvraag.md) van de wijzigingen voor versie 1.1
 * map met diverse voorbeelden
   * gebruik KlicB2BAanvraag, versie 1.1

@@ -486,6 +486,16 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
         },
         "coordinates":[ [ [ 153606.0, 391101.0 ], [ 153594.0, 391095.0 ], [ 153602.0, 391080.0 ], [ 153622.0, 391094.0 ], [ 153606.0, 391101.0 ] ] ]
     }
+    "informatiepolygoon":{
+        "type":"Polygon",
+        "crs":{
+            "type":"name",
+            "properties":{
+                "name":"EPSG:28992"
+            }
+        },
+        "coordinates":[ [ [ 153606.0, 391101.0 ], [ 153594.0, 391095.0 ], [ 153602.0, 391080.0 ], [ 153622.0, 391094.0 ], [ 153606.0, 391101.0 ] ] ]
+    }
 }
 ```
 

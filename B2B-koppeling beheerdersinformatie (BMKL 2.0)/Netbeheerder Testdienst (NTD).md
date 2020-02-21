@@ -144,8 +144,10 @@ In dit scherm moet minimaal de volgende gegevens worden ingevoerd:
 - _Endpoint:_ dit betreft het adres van uw eigen webservice waarop u een notificatie wilt ontvangen als er een gebiedsinformatie-aanvraag voor u als belanghebbende klaarstaat.
 - _Meldingsoort:_ het soort melding; Graafmelding, Calamiteitenmelding of Orientatieverzoek
 - _Gebiedspolygoon (WKT):_ de gebiedspolygoon in Well Known Text (WKT)
+- _Informatiepolygoon (WKT):_ de informatiepolygoon in Well Known Text (WKT); optioneel op te voeren bij graafmelding en calamiteitenmelding.
 
-:information_source: De informatiepolygoon (WKT) wordt nu nog niet ondersteund / gebruikt. In een latere release zal de informatiepolygoonfunctionaliteit worden toegevoegd.
+:information_source: Bekijk de [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) en de [release notes](KLIC%20-%20Release%20notes.md) over wanneer de informatiepolygoonfunctionaliteit gebruikt kan worden.  
+
 
 Kies daarna "Verder".
 

@@ -65,8 +65,19 @@ Het KvK-nummer van opdrachtgevers is niet bekend bij het Kadaster-KLIC.
 
 ### Informatiepolygoon
 
-Voor een graafmelding en een calamiteitenmelding gaat de mogelijkheid worden geboden om rond het graafgebied een ruimer gebied aan te geven waarover informatie wordt gewenst. Dit gebied wordt gespecificeerd met een `informatiepolygoon`. \
-Een opgegeven informatiegebied moet een graafgebied volledig omvatten.
+Voor een graafmelding en een calamiteitenmelding gaat de mogelijkheid worden geboden om rond het graafgebied een ruimer gebied aan te geven waarover informatie wordt gewenst. Dit gebied wordt gespecificeerd met een `informatiepolygoon`.  \
+Een opgegeven informatiegebied moet een graafgebied volledig omvatten: niets van de graafpolygoon mag buiten de informatiepolygoon liggen.
 
-Voorlopig wordt alleen gevalideerd of een eventueel opgegeven informatiepolygoon geometrisch valide is.  \
-Het veld wordt voorlopig nog niet gebruikt in het Klic-proces.
+De volgende validaties zijn van toepassing:  \
+|Validatie                             | Omschrijving                                                                                                                                                        |
+|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Type aanvraagsoort                    | Informatiepolygoon alleen bij graafmelding en calamiteitenmelding (niet bij oriëntatieverzoek).                                                                     |
+|Geometrisch valide                    | Geometrische afspraken die van toepassing zijn op graafpolygoon gelden ook voor informatiepolygoon, denk aan kruisende lijnen, geen gaten.                          |
+|Geen decimalen                        | Net als een graafpolygoon is het voor de coordinaten van een informatiepolygoon alleen toegestaan om deze in gehele meters op te geven; decimalen niet toegestaan.  |
+|Maximale omvang                       | Net als een graafpolygoon mag de informatiepolygoon maximaal 500x500 meter zijn.                                                                                    | 
+|Maximale aantal punten                | De informatiepolygoon mag uit maximaal 200 punten bestaan.                                                                                                          |
+|Relatie met graafpolygoon             | Niets van de graafpolygoon ligt buiten informatiepolygoon.                                                                                                          |
+|Maximale afstand t.o.v. graafpolygoon | Maximale afstand tot de graafpolygoon is 100 meter, waarbij het toegestaan is dat eventuele gaten gevuld worden.                                                    |
+|Alleen eenvoudige informatiebuffer    | Als de combinatie van graafpolygoon en informatiepolygoon leiden tot een `geometrieVoorVisualisatie` die een meervoudig polygoon is, wordt de aanvraag afgekeurd.   |
+
+

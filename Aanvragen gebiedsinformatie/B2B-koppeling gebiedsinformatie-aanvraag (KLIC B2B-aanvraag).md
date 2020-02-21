@@ -55,10 +55,10 @@ De identificatie is leidend voor de verwerking van een Klic-aanvraag.  \
 Als er van een huisaansluitschets-adres een `IdentificatieBAG` wordt meegegeven, hoeven geen overige adresgegevens te worden meegegeven. Het eventueel meegegeven adres moet het hoofdadres zijn van het adresseerbare object en overeenstemmen met de adresgegevens zoals deze in BAG zijn vastgelegd.
 Is er geen `IdentificatieBAG` meegegeven, dan moeten minimaal een `huisnummer` en `postcode` worden meegegeven voor de bepaling van een geldig dichtsbijzijnd adres.
 
-- `Informatiepolygoon`;
-de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.  \
+- `Informatiepolygoon`;  \
+de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt.  \
 Voor een graafmelding en een calamiteitenmelding moet er een mogelijkheid worden geboden om rond het graafgebied een ruimer gebied aan te geven waarover informatie wordt gewenst.  \
-Een opgegeven informatiegebied moet een graafgebied volledig omvatten.
+Een opgegeven informatiegebied moet een graafgebied volledig omvatten: niets van de graafpolygoon mag buiten de informatiepolygoon liggen.
 
 ## Implementatie
 

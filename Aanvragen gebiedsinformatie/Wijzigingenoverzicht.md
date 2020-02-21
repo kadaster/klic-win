@@ -1,5 +1,8 @@
 ﻿#### Aanvragen gebiedsinformatie - Overzicht wijzigingen
 
+21-02-2020
+- Update tbv Informatiepolygoon
+
 23-01-2019
 - Controles B2B-aanvraag: aanvulling SoortWerkzaamheden
 

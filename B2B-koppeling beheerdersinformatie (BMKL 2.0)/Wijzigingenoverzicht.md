@@ -1,5 +1,8 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0) - Overzicht wijzigingen
 
+21-02-2020
+- Update tbv Informatiepolygoon
+
 29-01-2019
 - Presentatie over B2B-koppeling leveren beheerdersinformatie aangevuld met
   * statusdiagrammen
