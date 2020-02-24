@@ -6,8 +6,8 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
-- De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.
-  Zie de [documentatie op HitHub]() voor een overzicht van de wijzigingen
+- De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
+  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen
 
 **KvK-nummer (Kamer van Koophandel)**:
 
