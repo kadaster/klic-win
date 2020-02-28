@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 februari 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 28 februari 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -7,6 +7,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
+  Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen
 
 **KvK-nummer (Kamer van Koophandel)**:
@@ -15,7 +16,7 @@ Op verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de implementatie samenge
 - In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
 - In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
 - Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
-- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Geplande wijzigingen/Informatiepolygoon/).
+- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
 ## Planning voor release - eind april 2020
