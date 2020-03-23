@@ -26,7 +26,7 @@ In [dit document](Beschrijving%205%20scenarios%20thema%20BGI%20versus%20Graafpol
 
 
 ## Implementatiekeuzes:
-- In de _GebiedsinformatieAanvraag_ API zal altijd een informatiepolygoon getoond worden voor aanvragen die gedaan zijn na de implementatie. Als de informatiepolygoon niet is opgegeven in de aanvraag, wordt de geometrie van de graafpolygoon ook als informatiepolygoon getoond.
+- In de _GebiedsinformatieAanvraag_ API zal altijd een informatiepolygoon getoond worden. Als de informatiepolygoon niet is opgegeven in de aanvraag, wordt de geometrie van de graafpolygoon ook als informatiepolygoon getoond.
 - Gerelateerd aan [IMKL issue 240](https://github.com/Geonovum/imkl2015-review/issues/240) zijn de volgende keuzes gemaakt:
   - In de _GebiedsinformatieLevering_ (GI.xml) wordt de informatiepolygoon niet getoond als de graafpolygoon gelijk is aan de informatiepolygoon.
   - Er is voor de B2B-aanvraag een extra validatie regel toegevoegd ter voorkoming van invalide IMKL: Als de combinatie van graafpolygoon en informatiepolygoon leidt tot een `geometrieVoorVisualisatie` die een meervoudig polygoon is, wordt de aanvraag afgekeurd.

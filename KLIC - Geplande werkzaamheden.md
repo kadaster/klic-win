@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 28 februari 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 23 maart 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -32,14 +32,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - maart / april 2020
+## Planning voor release - 23 maart 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon in NTD**:
 - In de NTD wordt het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
-- De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)
-- Er worden voorbeeldbestanden op de GitHub gepubliceerd.
-- De aanpassingen worden eerst in NTD beschikbaar gesteld en na minimaal 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
+- De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)  \
+  Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
+  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen  \
+  De aanpassingen worden eerst in NTD beschikbaar gesteld en na minimaal 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 17 maart 2020
@@ -48,6 +49,9 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **eHerkenning**:
 - Per 17 maart aanstaande bieden wij naast de reguliere inlogmogelijkheid op Mijn Kadaster, ook eHerkenning aan als inlog voor Mijn Kadaster.
 Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
+
+**Calamiteitenmelding **:
+- Als een calamiteitenmelding na de 2e uitlevering (45 minuten) compleet wordt, zal er direct een complete levering uitgeleverd worden.
 
 
 --------------------------------------------------------------------------------------
