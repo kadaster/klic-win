@@ -1,6 +1,61 @@
 ﻿# Release notes
 
 ------------------------
+### 23 maart 2020
+
+**Informatiepolygoon in NTD**:
+- In de NTD is het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
+- De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)  \
+  Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
+  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen  \
+  De aanpassingen zijn eerst in NTD beschikbaar gesteld en na minimaal 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
+
+------------------------
+### 7 maart 2020
+
+**eHerkenning**:
+- Per 17 maart bieden wij naast de reguliere inlogmogelijkheid op Mijn Kadaster, ook eHerkenning aan als inlog voor Mijn Kadaster.
+Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
+
+**Calamiteitenmelding **:
+- Als een calamiteitenmelding na de 2e uitlevering (45 minuten) compleet wordt, zal er direct een complete levering uitgeleverd worden.
+
+------------------------
+### 2 maart 2020
+
+**Kadaster KLIC-viewer (versie 5.3.1)**:
+- In de Kadaster KLIC-viewer zijn een aantal functionele verbeteringen doorgevoerd. Onder andere:
+  - Het is mogelijk in menu Weergave om de BGT kaartachtergrond uit te schakelen.
+  - In het Feature informatie resultaten schertm is een kleurcode geralateerd aan het thema zichtbaar.
+  - Betere toelichting over aantal EV aanduidingen per netbeheerder.
+  - Het installatiepakker voor Windows is veel kleiner qua MB.
+  - De gebruiker kan tijdens zelf bepalen in welke map/netwerkschijf de viewer wordt geïnstalleerd in het geval van het installeren in Windows.
+  - Bij het openen van een levering is het nu mogelijk met om de leveringslink te plakken via een menu als gedrukt wordt op de rechtermuisknop.
+  - Het KLIC-meldnummer is zichtbaar in de menubalk.
+  - In het print-menu kun je ook kiezen voor A1 en A2 (staand/liggend)
+  - In het print-menu kun je ook kiezen voor schaal 1:200
+  - Het print-menu opent nu standaard in het bladindeling scherm
+  - Bugfix: In de Windows versie werden EV en Extra Geometrie toggles meer dan 1 keer getoond. 
+  - Bugfix: Betere afhandeling 502 foutmelding
+  - Bugfix: Bij het opslaan/downloaden van een PDF staat de extentie van het bestand nu standaard ingesteld.
+- Mogelijkheid voor de netbeheerders om uitgepakte beheerdersinformatieleveringen (BIL) te bekijken in de Windows versie van de viewer.  
+
+------------------------
+### 1 maart 2020
+De inhoud van deze release is afhankelijk van het einde van de overgangsperiode.  \
+Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2019/05/29/gebiedsinformatie-en-viewers)
+
+
+**Uitlevering zipbestand**:
+- Het zipbestand met de KLIC-uitlevering is aangepast in productie (ID 3849):
+  - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+**Het BIL zipbestand**:
+- Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder is in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+
+------------------------
 ### 2 februari 2020 
 
 **Ontvangstbevestiging**:

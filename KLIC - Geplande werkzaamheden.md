@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 23 maart 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 25 maart 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -30,6 +30,10 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Kadaster KLIC-viewer**:
 - Beschikbaar op MacOS
 
+**Bugfix**:
+- Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \
+  Voor een overzicht van controles en validaties zie: [deze pagina op github](Toepassing%20IMKL/Toelichting%20controles%20netinformatie)
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 23 maart 2020
@@ -58,7 +62,7 @@ Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
 ## Planning voor release - 2 maart 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer**:
+**Kadaster KLIC-viewer (versie 5.3.1)**:
 - In de Kadaster KLIC-viewer worden en aantal functionele verbeteringen doorgevoerd. Onder andere:
   - Het is mogelijk in menu Weergave om de BGT kaartachtergrond uit te schakelen.
   - In het Feature informatie resultaten schertm is een kleurcode geralateerd aan het thema zichtbaar.
