@@ -8,8 +8,8 @@ Dit document geeft een handleiding voor het gebruik van portaalfuncties van de N
   - [Documentatie over gebruik BMKL API's](#documentatie-over-gebruik-bmkl-apis)
       - [REST interfaces](#rest-interfaces)
 	  - [KLIC API Documentatie](#klic-api-documentatie)
-        - [API Testfaciliteit](#api-testfaciliteit)
-		- [API Specificatie document](#api-specificatie-document)
+			- [API Testfaciliteit](#api-testfaciliteit)
+			- [API Specificatie document](#api-specificatie-document)
 	  - [Swagger UI](#swagger-ui)
 	  - [OAuth token meegeven](#oauth-token-meegeven)
   - [Opvoeren testmelding](#opvoeren-testmelding)
@@ -50,7 +50,7 @@ De API's zijn onderverdeeld naar
 - "aanleveringen"
 - "uploaden" en
 - “beheerdersinformatie”
-en de meeste endpoints zijn meteen uit te proberen via de aangeboden interface.eerdere regels.
+en de meeste endpoints zijn meteen uit te proberen via de aangeboden interface.
 
 ### KLIC API Documentatie
 
@@ -60,7 +60,7 @@ De API Documentatie is beschikbaar via een Swagger-implementatie. Deze is te ber
 
 _Figuur 1 KLIC API documentatie_
 
-Het klikken van de link brengt u naar de overzichtspagina van de API Documentatie. /
+Het klikken van de link brengt u naar de overzichtspagina van de API Documentatie.
 Voor de verschillende onderdelen vindt u een link naar:
 
 #### API Testfaciliteit ####
@@ -82,7 +82,7 @@ De "API Testfaciliteit" link brengt u naar een Swagger pagina waar alle services
 De link 'API Testfaciliteit' brengt u naar een overzicht van alle endpoints die in dit document beschreven zijn.
 De applicatie biedt een overzicht van de endpoints van de verschillende API’s en hoe deze endpoints gebruikt kunnen worden.
 Al deze endpoints zijn meteen uit te proberen via de aangeboden interface. Met uitzondering van het downloaden van de aangeleverde beheerdersinformatie, deze zal via
-een browsers of via CURL moeten worden uitgevoerd aangezien Swagger ZIP responses niet ondersteunt.
+een browser of via CURL moeten worden uitgevoerd aangezien Swagger ZIP responses niet ondersteunt.
 
 ### OAuth token meegeven ###
 
@@ -94,7 +94,7 @@ Wanneer de extensie geïnstalleerd is, is naast de adresbalk een icoon toegevoeg
 
 _Figuur 3 ModHeader en Oauth_
 
-Vul bij `Request Headers` "Authorization" in en als waarde "Bearer " plus het OAuth token (net als bij de curl-commandos).
+Vul bij `Request Headers` "Authorization" in en als waarde "Bearer" plus het OAuth token (net als bij de curl-commandos).
 Optioneel kan een filter toegevoegd worden. Een filter zorgt ervoor dat de Authorization-token alleen voor bepaalde URLs wordt meegegeven.
 Dit is sterk aan te raden omdat anders andere diensten die gebruik maken van OAuth (Google-diensten bijvoorbeeld) niet meer correct zullen werken.
 Om een filter toe te voegen klik op `+` en kies Filter. Selecteer `URL Pattern` en vul een patroon in dat uniek is voor de B2B-koppeling,
@@ -122,31 +122,31 @@ _Figuur 4 Mijn Kadaster - Klic Netbeheerder Testdienst_
 Vervolgens opent zich het "Klic Netbeheerder Testdienst" portaalscherm met hierop alle opties die binnen de NTD beschikbaar worden gesteld,
 mits u hiervoor geautoriseerd bent. Op dit portaalscherm vindt u de links waar u een testmelding kunt opvoeren:
 
-- "Opvoeren testmelding - BMKL 2.0 centraal (b&egrave;ta-versie)" waar u als centrale netbeheerder een testmelding kunt opvoeren
-- "Opvoeren testmelding - BMKL 2.0 decentraal (b&egrave;ta-versie)" waar u als decentrale netbeheerder een testmelding kunt opvoeren
+- "Opvoeren testmelding - BMKL 2.0 centraal " waar u als centrale netbeheerder een testmelding kunt opvoeren
+- "Opvoeren testmelding - BMKL 2.0 decentraal " waar u als decentrale netbeheerder een testmelding kunt opvoeren
 
 ![mijnKadaster](images/NTD-Portaal-BMKL20-TestMelding.png "NTD Portaal - Testmelding")
 
-_Figuur 5 Optie voor opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie)_
+_Figuur 5 Optie voor opvoeren testmelding - BMKL 2.0_
 
 ### Opvoeren testmelding - 1 van 5
 
-Nadat u de link "Opvoeren testmelding - BMKL 2.0 centraal (b&egrave;ta-versie)" of "Opvoeren testmelding - BMKL 2.0 decentraal (b&egrave;ta-versie)" heeft aangeklikt opent zich het 1e scherm van het opvoeren van een testmelding.
+Nadat u de link "Opvoeren testmelding - BMKL 2.0 centraal" of "Opvoeren testmelding - BMKL 2.0 decentraal" heeft aangeklikt opent zich het 1e scherm van het opvoeren van een testmelding.
 
 ![mijnKadaster](images/NTD-Testmelding-BMKL20-1.png "NTD Portaal - Testmelding opvoeren 1")
 
-_Figuur 6 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 1_
+_Figuur 6 Opvoeren testmelding - BMKL 2.0 - scherm 1_
 
 U maakt de keuze, of u een testcase uitvoert voor een Graafmelding, Orientatieverzoek of Calamiteitenmelding.
 Kies voor een test met een Graafmelding, de meldingssoort ‘Graafmelding’. In dit voorbeeld wordt uitgegaan van een Graafmelding.
 
 In dit scherm moet minimaal de volgende gegevens worden ingevoerd:
 - _Endpoint:_ dit betreft het adres van uw eigen webservice waarop u een notificatie wilt ontvangen als er een gebiedsinformatie-aanvraag voor u als belanghebbende klaarstaat.
+- _KvK-nummer:_ Kvk nummer dat wordt gebruikt bij de aanvrager en opdrachtgever
 - _Meldingsoort:_ het soort melding; Graafmelding, Calamiteitenmelding of Orientatieverzoek
 - _Gebiedspolygoon (WKT):_ de gebiedspolygoon in Well Known Text (WKT)
 - _Informatiepolygoon (WKT):_ de informatiepolygoon in Well Known Text (WKT); optioneel op te voeren bij graafmelding en calamiteitenmelding.
-
-:information_source: Bekijk de [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) en de [release notes](KLIC%20-%20Release%20notes.md) over wanneer de informatiepolygoonfunctionaliteit gebruikt kan worden.  
+- _Genereer Informatiepolygoon op basis van buffer:_ vult het informatiepolygoon veld in Well Known Text met de geselecteerde buffer
 
 
 Kies daarna "Verder".
@@ -157,7 +157,7 @@ Nadat alle gegevens zijn ingevoerd en de knop "Verder" is geklikt opent zich het
 
 ![mijnKadaster](images/NTD-Testmelding-BMKL20-2.png "NTD Portaal - Testmelding opvoeren 2")
 
-_Figuur 7 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 2_
+_Figuur 7 Opvoeren testmelding - BMKL 2.0 - scherm 2_
 
 ### Opvoeren testmelding - 3 van 5
 
@@ -165,7 +165,7 @@ Controleer het gegeven BAG-adres en pas deze, indien nodig, aan. Selecteer Ja of
 
 ![mijnKadaster](images/NTD-Testmelding-BMKL20-3.png "NTD Portaal - Testmelding opvoeren 3")
 
-_Figuur 8 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 3_
+_Figuur 8 Opvoeren testmelding - BMKL 2.0 - scherm 3_
 
 Indien gekozen is om huisaansluitschetsen toe te voegen kunt u deze in het volgende scherm aanvragen.
 
@@ -173,7 +173,7 @@ Indien gekozen is om huisaansluitschetsen toe te voegen kunt u deze in het volge
 
 ![mijnKadaster](images/NTD-Testmelding-BMKL20-4.png "NTD Portaal - Testmelding opvoeren 4")
 
-_Figuur 9 Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 4_
+_Figuur 9 Opvoeren testmelding - BMKL 2.0 - scherm 4_
 
 In dit voorbeeld is gekozen om huisaansluitschetsen toe te voegen. U kunt deze in het volgende scherm aanvragen.
 Klik nu op de button “Start test”. Dit zorgt er voor dat er een gebiedsinformatie-aanvraag wordt ingeschoten waarmee de testmelding is gedaan.
@@ -186,4 +186,4 @@ Wanneer het bericht succesvol is verzonden, verschijnt onderstaand scherm.
 
 ![mijnKadaster](images/NTD-Testmelding-BMKL20-5.png "NTD Portaal - Testmelding opvoeren 5")
 
-_Figuur 10  Opvoeren testmelding - BMKL 2.0 (b&egrave;ta-versie) - scherm 5_
+_Figuur 10  Opvoeren testmelding - BMKL 2.0 - scherm 5_
