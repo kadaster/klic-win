@@ -18,18 +18,19 @@ Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en i
 
 Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 
-- Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (concept 14-02-2020)](IMKL_vertaaltabel_2020-02-14%20-%20publicatie.pdf)  \
+- Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (versie 01-04-2020)](IMKL_vertaaltabel_2020-04-01%20-%20publicatie.pdf)  \
+  Deze versie is door de commissie vastgesteld en wordt voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **metainformatie:** metagegevens en uitleg over dit document
   - **conventies:** uitgangspunten en uniformering bij IMKL-vertaling
   - **vertaaltabel:** de term in het model en de vertaling daarvan;  \
-    de modeltermen zijn gebaseerd op [IMKL2015 v 1.2.1.1_object-attributen-ExtraRegels.xlsx](https://github.com/Geonovum/imkl2015/blob/master/regels/1.2.1.1/IMKL2015%20v%201.2.1.1_object-attributen-ExtraRegels.xlsx), aangevuld met relevante objecttypen en complexe datatypen die nog in INSPIRE-US zijn genoemd;
+    de modeltermen zijn gebaseerd op [IMKL2015 v 1.2.1.1_object-attributen-ExtraRegels.xlsx](https://github.com/Geonovum/imkl2015/blob/master/regels/1.2.1.1/IMKL2015%20v%201.2.1.1_object-attributen-ExtraRegels.xlsx), aangevuld met geaccordeerde toevoegingen voor de nieuwe versie van het IMKL en aangevuld met relevante objecttypen en complexe datatypen die nog in INSPIRE-US zijn genoemd;
   - **IMKL waardelijsten**: waarden uit waardelijsten zoals gedefinieerd in IMKL (incl. [GWSW](https://data.gwsw.nl), INSPIRE-US-deel);  \
     zie [imkl-waardelijsten-1.2.1.1.rdf](https://github.com/Geonovum/imkl2015/blob/master/waardelijst/1.2.1.1/imkl-waardelijsten-1.2.1.1.rdf), aangevuld met INSPIRE-enumerations die gebruikt worden in het IMKL: http://inspire.ec.europa.eu/enumeration;
   - **IMKL concepten**:  \
     gedefinieerde termen in conceptenbibliotheek https://definities.geostandaarden.nl/doc/begrippenkader/imkl;
 	de termen zijn als referentie gebruikt
-- Prioritering van attributen; zie [Eisen overheid ordening attributen (concept 19-02-2020)](Eisen%20overheid%20ordening%20attributen%20(concept%202020-02-19)%20-%20publicatie.pdf)  \
+- Prioritering van attributen; zie [Eisen overheid ordening attributen (concept 04-01-2020)](Eisen%20overheid%20ordening%20attributen%20(concept%202020-04-01)%20-%20publicatie.pdf)  \
   Toelichting per onderdeel:
   - **Prioritering (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
     attributen van IMKL-objecten die niet in een kaartlaag worden weergegeven, zijn niet uitgewerkt;
@@ -39,5 +40,5 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 18-02-2020)](GitHub%20geregistreerde%20issues%202020-02-18%20v1.3%20-%20publicatie.pdf)
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 01-04-2020)](GitHub%20geregistreerde%20issues%202020-04-01%20v1.7%20-%20publicatie.pdf)
 
