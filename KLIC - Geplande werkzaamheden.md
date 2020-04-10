@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 maart 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 10 april 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -19,6 +19,13 @@ Op verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de implementatie samenge
 - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
+## Planning voor release - begin mei 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer**:
+- Beschikbaar op MacOS
+
+-------------------------------------------------------------------------------------
 ## Planning voor release - eind april 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
@@ -28,12 +35,27 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 **Kadaster KLIC-viewer**:
-- Beschikbaar op MacOS
+- Printen: de optie om te printen op schaal 1:400 is toegevoegd
+- Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
+
+-------------------------------------------------------------------------------------
+## Planning voor release - 21 april 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Informatiepolygoon**:
+- De 'KlicB2BBetrokkenBeheerders' response in het geval van een Calamiteitenmelding bij B2B TEST-aanvraag is gereed voor de informatiepolygoon: Er wordt een boolean getoond die aangeeft of een belang alleen betrekking heeft of de informatiepolygoon of ook op het graafgebied. (ID 5372)
 
 **Bugfix**:
 - Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \
-  Voor een overzicht van controles en validaties zie: [deze pagina op github](Toepassing%20IMKL/Toelichting%20controles%20netinformatie)
+  Voor een overzicht van controles en validaties zie: [deze pagina op github](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md)
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 10 april 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Publicatie op Github**:
+- Publicatie extra voorbeeldbestanden met informatiepolygoon.  \
+  zie [deze link op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/) voor de voorbeelden.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 23 maart 2020
@@ -54,7 +76,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Per 17 maart aanstaande bieden wij naast de reguliere inlogmogelijkheid op Mijn Kadaster, ook eHerkenning aan als inlog voor Mijn Kadaster.
 Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
 
-**Calamiteitenmelding **:
+**Calamiteitenmelding**:
 - Als een calamiteitenmelding na de 2e uitlevering (45 minuten) compleet wordt, zal er direct een complete levering uitgeleverd worden.
 
 
