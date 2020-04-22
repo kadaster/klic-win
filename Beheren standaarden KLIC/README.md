@@ -6,7 +6,7 @@ De KLIC-dienst verzorgt de informatie-uitwisseling over de ligging van kabels en
 - het visualiseren van deze objecten (presentatiemodel PMKL)
 - berichtuitwisseling (berichtenmodel BMKL)
 
-In de [presentatie van 31 januari 2020](KLIC-standaarden%20KLIC%20bijeenkomst%2031%20januari%202020.ppsx) wordt hierover een en ander toegelicht.  \
+In de [presentatie van de KLIC-bijeenkomst](Beheren%20KLIC-standaarden%20(context).ppsx) wordt hierover een en ander toegelicht.  \
 Daarin is ook aangegeven dat er soms behoefte is om de huidige versie van de standaarden aan te passen, bijv. vanwege onvolkomenheden of aanvullende wensen.  \
 Voor het doorvoeren van wijzigingen op deze standaarden zijn procesafspraken gemaakt. Zie daarvoor o.a.
 
@@ -18,7 +18,7 @@ Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en i
 
 Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 
-- Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (versie 01-04-2020)](IMKL_vertaaltabel_2020-04-01%20-%20publicatie.pdf)  \
+- Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (vastgesteld)](IMKL-vertaaltabel%20-%20publicatie.pdf)  \
   Deze versie is door de commissie vastgesteld en wordt voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **metainformatie:** metagegevens en uitleg over dit document
@@ -30,15 +30,16 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   - **IMKL concepten**:  \
     gedefinieerde termen in conceptenbibliotheek https://definities.geostandaarden.nl/doc/begrippenkader/imkl;
 	de termen zijn als referentie gebruikt
-- Prioritering van attributen; zie [Eisen overheid ordening attributen (concept 04-01-2020)](Eisen%20overheid%20ordening%20attributen%20(concept%202020-04-01)%20-%20publicatie.pdf)  \
+- Ordening van attributen per IMKL-object; zie [Eisen overheid ordening attributen (concept 20-04-2020)](Eisen%20overheid%20ordening%20attributen%20(concept).xlsx)  \
   Toelichting per onderdeel:
-  - **Prioritering (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
+  - **Ordening (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
     attributen van IMKL-objecten die niet in een kaartlaag worden weergegeven, zijn niet uitgewerkt;
-  - **Prio per entiteit:** overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening per entiteit; deze ordening is afgeleid van het eerste overzicht
+  - **Ordening (TCS) (NL)**: overzicht van alle IMKL-objecten waarbij de vertaaltabel is toegepast op de attributen (systeembreed);  \
+  - **Ordening per entiteit:** overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening per entiteit; deze ordening is afgeleid van het eerste overzicht
+  - **Voorbeelden per entiteit:** voorbeelden van ordening bij een verscheidenheid aan IMKL-objecten waarbij de vertaaltabel is toegepast op de attribuutnamen en de waarden uit de waardelijsten
 - Issue-lijst (GitHub geregistreerde issues)
   - Issues IMKL en PMKL (visualisatie);  \
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 01-04-2020)](GitHub%20geregistreerde%20issues%202020-04-01%20v1.7%20-%20publicatie.pdf)
-
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 20-04-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
