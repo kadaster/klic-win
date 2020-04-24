@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 april 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 24 april 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -22,13 +22,6 @@ Op verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de implementatie samenge
 ## Planning voor release - begin mei 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer**:
-- Beschikbaar op MacOS
-
--------------------------------------------------------------------------------------
-## Planning voor release - eind april 2020
-Voor deze release zijn de volgende onderwerpen gepland:
-
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 ("niet gevonden net") van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
@@ -37,9 +30,10 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Kadaster KLIC-viewer**:
 - Printen: de optie om te printen op schaal 1:400 is toegevoegd
 - Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
+- Kadaster KLIC-viewer beschikbaar op MacOS
 
 -------------------------------------------------------------------------------------
-## Planning voor release - 21 april 2020
+## Planning voor release - 28 april 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon**:
