@@ -1,8 +1,8 @@
-﻿# Geplande werkzaamheden (bijgewerkt 24 april 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 29 april 2020)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 2 juni 2020
-Voor deze release zijn de volgende onderwerpen gepland:
+## Planning voor release - medio september 2020
+Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang van de Informatiepolygoon verplaatst naar medio september 2020.
 
 **Informatiepolygoon**:
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
@@ -10,9 +10,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen
 
-**KvK-nummer (Kamer van Koophandel)**:
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 juni 2020
+Voor deze release zijn de volgende onderwerpen gepland:
 
-Op verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de implementatie samengevoegd met de Informatiepolygoon.
+**KvK-nummer (Kamer van Koophandel)**:
 - In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
 - In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
 - Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
@@ -28,8 +30,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 **Kadaster KLIC-viewer**:
-- Printen: de optie om te printen op schaal 1:400 is toegevoegd
-- Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
 - Kadaster KLIC-viewer beschikbaar op MacOS
 
 -------------------------------------------------------------------------------------
@@ -38,6 +38,10 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Informatiepolygoon**:
 - De 'KlicB2BBetrokkenBeheerders' response in het geval van een Calamiteitenmelding bij B2B TEST-aanvraag is gereed voor de informatiepolygoon: Er wordt een boolean getoond die aangeeft of een belang alleen betrekking heeft of de informatiepolygoon of ook op het graafgebied. (ID 5372)
+
+**Kadaster KLIC-viewer**:
+- Printen: de optie om te printen op schaal 1:400 is toegevoegd
+- Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
 
 **Bugfix**:
 - Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \

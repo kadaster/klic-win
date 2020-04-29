@@ -1,6 +1,20 @@
 ﻿# Release notes
 
 ------------------------
+### 28 april 2020
+
+**Informatiepolygoon**:
+- De 'KlicB2BBetrokkenBeheerders' response in het geval van een Calamiteitenmelding bij B2B TEST-aanvraag is gereed voor de informatiepolygoon: Er wordt een boolean getoond die aangeeft of een belang alleen betrekking heeft of de informatiepolygoon of ook op het graafgebied. (ID 5372)
+
+**Kadaster KLIC-viewer**:
+- Printen: de optie om te printen op schaal 1:400 is toegevoegd
+- Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
+
+**Bugfix**:
+- Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \
+  Voor een overzicht van controles en validaties zie: [deze pagina op github](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md)
+
+------------------------
 ### 23 maart 2020
 
 **Informatiepolygoon in NTD**:
@@ -17,7 +31,7 @@
 - Per 17 maart bieden wij naast de reguliere inlogmogelijkheid op Mijn Kadaster, ook eHerkenning aan als inlog voor Mijn Kadaster.
 Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
 
-**Calamiteitenmelding **:
+**Calamiteitenmelding**:
 - Als een calamiteitenmelding na de 2e uitlevering (45 minuten) compleet wordt, zal er direct een complete levering uitgeleverd worden.
 
 ------------------------
