@@ -38,5 +38,5 @@ Het betreft de volgende aanvragen;:
   - 20G006147 - een graafmelding waarbij netbeheerder met bronhoudercode nbact6 thema datatransport en warmte aanlevert waarbij datatransport alleen binnen informatiebuffer ligt.
 
 *Demo 24 april 2020*:
-- zie ook [klic-win/Geplande wijzigingen/Informatiepolygoon/Demo 24 april 2020](../../Geplande wijzigingen/Informatiepolygoon/Demo%2024%20april%202020) met drie voorbeelden zoals gepresenteerd op 24 april 2020
+- zie ook [klic-win/Geplande wijzigingen/Informatiepolygoon/Demo 24 april 2020](../../Geplande%20wijzigingen/Informatiepolygoon/Demo%2024%20april%202020) met drie voorbeelden zoals gepresenteerd op 24 april 2020
 

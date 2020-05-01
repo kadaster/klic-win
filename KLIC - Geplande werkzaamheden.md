@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 29 april 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 30 april 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -42,6 +42,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Kadaster KLIC-viewer**:
 - Printen: de optie om te printen op schaal 1:400 is toegevoegd
 - Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
+- Bugfix: Schaalbalk bij printen naar pdf (ID 5443)
 
 **Bugfix**:
 - Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \

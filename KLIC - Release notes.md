@@ -9,9 +9,10 @@
 **Kadaster KLIC-viewer**:
 - Printen: de optie om te printen op schaal 1:400 is toegevoegd
 - Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
+- Bugfix: Schaalbalk bij printen naar pdf (ID 5443)
 
 **Bugfix**:
-- Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID: 5373)  \
+- Herstellen controle bij aanleveringen: Voor Curves wordt gecontroleerd dat de segmenten (<gml:LineStringSegment>) aan elkaar vast zitten (beginnen waar het vorige segment eindigt). (ID 5373)  \
   Voor een overzicht van controles en validaties zie: [deze pagina op github](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md)
 
 ------------------------
