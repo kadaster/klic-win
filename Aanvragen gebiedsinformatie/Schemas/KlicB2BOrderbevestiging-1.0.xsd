@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129" targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.1">
+	<xsd:element name="KlicB2BOrderbevestiging" type="tns:KlicB2BOrderbevestigingType">
+		<xsd:annotation>
+			<xsd:documentation>Terugkoppeling van een verzoek om gebiedsinformatie aan te vragen (KlicB2BAanvraag).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="KlicB2BOrderbevestigingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van de terugkoppeling van een verzoek om gebiedsinformatie aan te vragen (KlicB2BAanvraag).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Procesverwerking" type="tns:ProcesverwerkingType">
+				<xsd:annotation>
+					<xsd:documentation>Terugkoppeling van het resultaat van een ingediende aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Orderbevestiging" type="tns:OrderbevestigingType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Kenmerken van een in bewerking genomen order die als bevestiging naar de aanvrager worden teruggekoppeld.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrderbevestigingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van een in bewerking genomen order die als bevestiging naar de aanvrager worden teruggekoppeld.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="OrderID" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>OrderID (ordernummer) van de order, zoals deze uitgegeven is door Ordermanagement van het Kadaster.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Klantreferentie" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Eigen referentie die de klant bij de aanvraag heeft meegegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AanvraagDatumtijd" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Datumtijd waarop de order als aanvraag bij het Kadaster is geregistreerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ProcesverwerkingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van het resultaat bij een verzoek om gebiedsinformatie aan te vragen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ProcesVerwerkingCode" type="xsd:string" default="1">
+				<xsd:annotation>
+					<xsd:documentation>Dit element geeft het resultaat van de verwerking aan: goed of fout. De default waarde is 1. Dit betekent dat het verzoek succesvol is verwerkt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SeverityCode" type="tns:SeverityCodeType" default="INFO">
+				<xsd:annotation>
+					<xsd:documentation>Dit element wordt gebruikt om de ernst van een fout aan te geven. De standaard classificaties worden gebruikt: SECURITY, FATAL, ERROR, WARNING, INFO. De default is INFO.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Melding" type="tns:MeldingType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Dit element kan worden gebruikt om een melding, in het bijzonder een foutmelding, terug te koppelen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MeldingType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van een teruggekoppelde melding, in het bijzonder een foutmelding.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string"/>
+			<xsd:element name="Omschrijving" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="SeverityCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Indicatie van de ernst van een fout.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SECURITY"/>
+			<xsd:enumeration value="FATAL"/>
+			<xsd:enumeration value="ERROR"/>
+			<xsd:enumeration value="WARNING"/>
+			<xsd:enumeration value="INFO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
