@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="KlicB2BAanvraagService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814"
+	targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814">
+
+	<wsdl:documentation>
+		Deze interface is nagenoeg gelijk aan KlicB2BAanvraag, het enig wezenlijke verschil is het Action attribuut.
+		In deze wsdl heeft het action attribuut de waarde "KLIC-B2B-TESTAANVRAAG".
+		
+		Met behulp van het action attribuut met als waarde "KLIC-B2B-TESTAANVRAAG" is het mogelijk om een
+		testaanvraag te doen bedoeld om dit koppelvlak, inclusief terugkoppeling, te testen op hetzelfde Kadaster
+		endpoint als een reguliere melding.
+		Aanvragen die worden gedaan met dit action attribuut zullen niet leiden tot een daadwerkelijke KLIC melding.
+		
+		Na het doen van een testaanvraag zal asynchroon een KlicB2BOrderbevestiging bericht worden teruggestuurd
+		naar het antwoordadres (endpoint) dat is meegegeven in het WS-Addressing ReplyTo attribuut van de testaanvraag.
+		
+		De KlicB2BOrderbevestiging is bij een inhoudelijk correcte testaanvraag een dummy response, deze aanvraag
+		zal dus niet resulteren in een daadwerkelijk KLIC melding.
+		Indien de aanvraag inhoudelijk incorrect is, zal het teruggekoppelde KlicB2BOrderbevestiging bericht een overzicht
+		bevatten van geconstateerde fouten.
+		
+		Indien de aanvraag een correcte "Klic levering calamiteit" betreft, zal asynchroon eveneens een
+		KlicB2BBetrokkenBeheerders bericht worden teruggestuurd naar het antwoordadres (endpoint) dat is meegegeven
+		in het WS-Addressing ReplyTo attribuut van de testaanvraag.
+	</wsdl:documentation>
+
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import
+				namespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814"
+				schemaLocation="KlicB2BAanvraag-1.1.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="KlicB2BAanvraag">
+		<wsdl:part name="parameters" element="tns:KlicB2BAanvraag"/>
+	</wsdl:message>
+	
+	<wsdl:portType name="KlicB2BTestAanvraagService">
+		<wsdl:operation name="KlicB2BTestAanvraag">
+			<wsdl:input message="tns:KlicB2BAanvraag" wsam:Action="KLIC-B2B-TESTAANVRAAG" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="KlicB2BTestAanvraagServiceBinding" type="tns:KlicB2BTestAanvraagService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="KlicB2BTestAanvraag">
+			<soap:operation soapAction="KLIC-B2B-TESTAANVRAAG" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="KlicB2BTestAanvraagService">
+		<wsdl:port name="KlicB2BTestAanvraagPort10" binding="tns:KlicB2BTestAanvraagServiceBinding">
+			<soap:address location="https://service10.kadaster.nl/klic/klic-b2baanvraag/service" />
+		</wsdl:port>
+		<wsdl:port name="KlicB2BTestAanvraagPort30" binding="tns:KlicB2BTestAanvraagServiceBinding">
+			<soap:address location="https://service30.kadaster.nl/klic/klic-b2baanvraag/service" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
