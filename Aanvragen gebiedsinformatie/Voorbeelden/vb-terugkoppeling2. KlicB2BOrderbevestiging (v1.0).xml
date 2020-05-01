@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: [Voorbeeld terugkoppeling 2.] KlicB2BOrderbevestiging (v1.0).xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld van een orderbevestiging op een gebiedsinformatie-aanvraag die
+werd aangeboden met B2B-koppeling volgens SOAP (met WS-adressing) met 
+- uuid: 92cd6169-367d-4cd7-8441-6176db7f5030
+waarin validatiefouten zijn geconstateerd.
+
+Versie van KlicB2BOrderbevestiging: 1.0.
+Terugkoppeling:
+- foutmelding: COR0144
+ _____________________________________________________________________ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:Action>KLIC-B2B-ONTVANGSTBEVESTIGING</wsa:Action>
+		<wsa:MessageID>87405c9c-a1fa-456f-a3b8-325c896a0816</wsa:MessageID>
+		<wsa:To>http://localhost:9999/klic/mock/mockservices</wsa:To>
+		<wsa:RelatesTo>uuid:92cd6169-367d-4cd7-8441-6176db7f5030</wsa:RelatesTo>
+	</soapenv:Header>
+	<soapenv:Body>
+		<KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
+			<Procesverwerking>
+				<ProcesVerwerkingCode>0</ProcesVerwerkingCode>
+				<SeverityCode>ERROR</SeverityCode>
+				<Melding>
+					<Code>COR0144</Code>
+					<Omschrijving>Het adres van de opdrachtgever met postcode/aanduiding (7334XX 701) is niet bekend in BAG.</Omschrijving>
+				</Melding>
+			</Procesverwerking>
+		</KlicB2BOrderbevestiging>
+	</soapenv:Body>
+</soapenv:Envelope>
