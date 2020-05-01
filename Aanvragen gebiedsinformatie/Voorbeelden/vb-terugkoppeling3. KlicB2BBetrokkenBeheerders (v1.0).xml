@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: [Voorbeeld terugkoppeling 3.] KlicB2BBetrokkenBeheerders (v1.0).xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld van een terugkoppeling met een overzicht van belanghebbende (net)beheerders
+op een calamiteitenmelding. Deze werd aangeboden met B2B-koppeling volgens SOAP (met
+WS-adressing) met 
+- aanvraagdatumtijd: 2020-03-22T15:55:12
+- klantreferentie: Ons Ordernr: 1234567
+
+Versie van KlicB2BBetrokkenBeheerders: 1.0.
+Terugkoppeling:
+- veiligheidsgebied betrokken: neen
+- netbeheerder 12345678: thema's: gas hoge druk, gas lage druk
+- netbeheerder 87654321: thema: datatransport
+ _____________________________________________________________________ -->
+ 
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:Action>KLIC-B2B-BETROKKENBEHEERDERS</wsa:Action>
+		<wsa:MessageID>809d3720-c927-44ec-88c8-6586e06004da</wsa:MessageID>
+		<wsa:To>http://localhost:8888/klic/mock/mockservices</wsa:To>
+		<wsa:RelatesTo>uuid:38ba3f00-9c98-4e84-9cad-e37c683bb6ac</wsa:RelatesTo>
+	</soapenv:Header>
+	<soapenv:Body>
+		<KlicB2BBetrokkenBeheerders xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BBetrokkenBeheerders/20150311">
+			<Procesverwerking>
+				<ProcesVerwerkingCode>1</ProcesVerwerkingCode>
+				<SeverityCode>INFO</SeverityCode>
+			</Procesverwerking>
+			<BetrokkenBeheerders>
+				<Klantreferentie>Ons Ordernr: 1234567</Klantreferentie>
+				<AanvraagDatumtijd>2020-03-22T15:55:12.606+02:00</AanvraagDatumtijd>
+				<VeiligheidsgebiedBetrokken>false</VeiligheidsgebiedBetrokken>
+				<Beheerder>
+					<Relatienummer>12345678</Relatienummer>
+					<Bedrijfsnaam>Gasbeheer B.V.</Bedrijfsnaam>
+					<ContactPerThema>
+						<Themanaam>gas hoge druk</Themanaam>
+						<Naam>Janssen</Naam>
+						<Initialen>P.J.</Initialen>
+						<Aanhef>Mijnheer</Aanhef>
+						<Telefoon>012-3456789</Telefoon>
+						<Email>calamiteit@gasbeheer.net</Email>
+					</ContactPerThema>
+					<ContactPerThema>
+						<Themanaam>gas lage druk</Themanaam>
+						<Naam>Pietersen</Naam>
+						<Initialen>A.</Initialen>
+						<Aanhef>Nevrouw</Aanhef>
+						<Telefoon>012-9876543</Telefoon>
+						<Email>annie.pietersen@gasbeheer.net</Email>
+					</ContactPerThema>
+				</Beheerder>
+				<Beheerder>
+					<Relatienummer>87654321</Relatienummer>
+					<Bedrijfsnaam>Dutch Telecom</Bedrijfsnaam>
+					<ContactPerThema>
+						<Themanaam>datatransport</Themanaam>
+						<Naam>Spiner</Naam>
+						<Initialen>B.</Initialen>
+						<Telefoon>0123-112233</Telefoon>
+						<Email>Brent.Spiner@dutchtele.com</Email>
+					</ContactPerThema>
+				</Beheerder>
+			</BetrokkenBeheerders>
+		</KlicB2BBetrokkenBeheerders>
+	</soapenv:Body>
+</soapenv:Envelope>
