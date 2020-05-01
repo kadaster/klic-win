@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions name="KlicB2BOrderbevestiging"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:bev="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129"
+	xmlns:bet="http://www.kadaster.nl/schemas/klic/KlicB2BBetrokkenBeheerders/20150311"
+	xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestigingAsync"
+	targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestigingAsync">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import
+				namespace="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129"
+				schemaLocation="KlicB2BOrderbevestiging-1.0.xsd" />
+			<xsd:import
+				namespace="http://www.kadaster.nl/schemas/klic/KlicB2BBetrokkenBeheerders/20150311"
+				schemaLocation="KlicB2BBetrokkenBeheerders-1.1.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="KlicB2BOrderbevestiging">
+		<wsdl:part name="parameters" element="bev:KlicB2BOrderbevestiging" />
+	</wsdl:message>
+
+	<wsdl:message name="KlicB2BBetrokkenBeheerders">
+		<wsdl:part name="parameters" element="bet:KlicB2BBetrokkenBeheerders" />
+	</wsdl:message>
+
+
+	<wsdl:portType name="KlicB2BOrderbevestigingService">
+		<wsdl:operation name="KlicB2BOrderbevestiging">
+			<wsdl:input message="tns:KlicB2BOrderbevestiging" wsam:Action="KLIC-B2B-ONTVANGSTBEVESTIGING" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:portType name="KlicB2BBetrokkenBeheerdersService">
+		<wsdl:operation name="KlicB2BBetrokkenBeheerders">
+			<wsdl:input message="tns:KlicB2BBetrokkenBeheerders" wsam:Action="KLIC-B2B-BETROKKENBEHEERDERS" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+
+	<wsdl:binding name="KlicB2BOrderbevestigingServiceBinding" type="tns:KlicB2BOrderbevestigingService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="KlicB2BOrderbevestiging">
+			<soap:operation	soapAction="KLIC-B2B-ONTVANGSTBEVESTIGING" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:binding name="KlicB2BBetrokkenBeheerdersServiceBinding" type="tns:KlicB2BBetrokkenBeheerdersService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="KlicB2BBetrokkenBeheerders">
+			<soap:operation	soapAction="KLIC-B2B-BETROKKENBEHEERDERS" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+
+	<wsdl:service name="KlicB2BOrderbevestiging">
+		<wsdl:port name="KlicB2BOrderbevestigingPort10" binding="tns:KlicB2BOrderbevestigingServiceBinding">
+			<soap:address location="https://service10.kadaster.nl/klic/KlicB2BOrderbevestigingService/20140814" />
+		</wsdl:port>
+		<wsdl:port name="KlicB2BOrderbevestigingPort30" binding="tns:KlicB2BOrderbevestigingServiceBinding">
+			<soap:address location="https://service30.kadaster.nl/klic/KlicB2BOrderbevestigingService/20140814" />
+		</wsdl:port>
+	</wsdl:service>
+
+	<wsdl:service name="KlicB2BBetrokkenBeheerders">
+		<wsdl:port name="KlicB2BBetrokkenBeheerdersPort10" binding="tns:KlicB2BBetrokkenBeheerdersServiceBinding">
+			<soap:address location="https://service10.kadaster.nl/klic/KlicB2BBetrokkenBeheerdersService/20150311" />
+		</wsdl:port>
+		<wsdl:port name="KlicB2BBetrokkenBeheerdersPort30" binding="tns:KlicB2BBetrokkenBeheerdersServiceBinding">
+			<soap:address location="https://service30.kadaster.nl/klic/KlicB2BBetrokkenBeheerdersService/20150311" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>
