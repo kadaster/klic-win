@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- bestandsnaam: [Voorbeeld terugkoppeling 1.] KlicB2BOrderbevestiging (v1.0).xml -->
+<!-- bron: Kadaster-KLIC -->
+<!-- _____________________________________________________________________
+Toelichting:
+Voorbeeld van een orderbevestiging op een gebiedsinformatie-aanvraag die
+werd aangeboden met B2B-koppeling volgens SOAP (met WS-adressing) met 
+- aanvraagdatumtijd: 2020-04-22T08:33:36
+- klantreferentie: Ons Ordernr: 1234567
+
+Versie van KlicB2BOrderbevestiging: 1.0.
+Terugkoppeling:
+- ordernummer: 1234567890
+ _____________________________________________________________________ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:Action>KLIC-B2B-ONTVANGSTBEVESTIGING</wsa:Action>
+		<wsa:MessageID>ed897cd6-06e0-40a5-b209-4701ba340378</wsa:MessageID>
+		<wsa:To>http://localhost:8888/klic/mock/mockservices</wsa:To>
+		<wsa:RelatesTo>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:RelatesTo>
+	</soapenv:Header>
+	<soapenv:Body>
+		<KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
+			<Procesverwerking>
+				<ProcesVerwerkingCode>1</ProcesVerwerkingCode>
+				<SeverityCode>INFO</SeverityCode>
+			</Procesverwerking>
+			<Orderbevestiging>
+				<OrderID>1234567890</OrderID>
+				<Klantreferentie>Ons Ordernr: 1234567</Klantreferentie>
+				<AanvraagDatumtijd>2020-04-22T08:33:36.580+02:00</AanvraagDatumtijd>
+			</Orderbevestiging>
+		</KlicB2BOrderbevestiging>
+	</soapenv:Body>
+</soapenv:Envelope>
