@@ -1,6 +1,7 @@
 ﻿#### Aanvragen gebiedsinformatie - Schema's
 
-Voor het gebruik van de B2B-koppeling voor aanvragen van gebiedsinformatie zijn schema-definities ("XSD's") opgesteld.
+Voor het gebruik van de B2B-koppeling voor aanvragen van gebiedsinformatie zijn schema-definities ("XSD's") opgesteld.  \
+In het document [Schemawijzigingen KLIC B2B-aanvraag](Schemawijzigingen%20KLIC%20B2B-aanvraag.md) wordt een overzicht gegeven van de recente wijzigingen in deze schema-definities.
 
 Deze B2B-koppeling is momenteel geimplementeerd op basis van het SOAP-protocol en kent onderstaande interfaces:
 - _KlicB2BAanvraag_ (KlicB2BAanvraag-1.1.xsd)  \
@@ -19,4 +20,4 @@ met berichten van Kadaster KLIC naar de aanvrager (orderbevestiging en eventueel
 - _KlicB2BTestAanvraag-1.1.wsdl_  \
 bericht van de aanvrager naar Kadaster KLIC voor het testen van het (technische) koppelvlak met het Kadaster.
 
-De definities van de vorige versie van de KLIC B2B-terugkoppeling (v1.0) zijn te vinden in de betreffende submap.
+De definities van de vorige versie zijn te vinden in de submap: [Aanvragen gebiedsinformatie/Schemas/KLIC B2B-terugkoppeling 1.0](../../../../tree/master/Aanvragen%20gebiedsinformatie/Schemas/KLIC%20B2B-terugkoppeling%201.0).
