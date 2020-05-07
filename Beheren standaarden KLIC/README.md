@@ -2,7 +2,7 @@
 
 De KLIC-dienst verzorgt de informatie-uitwisseling over de ligging van kabels en leidingen in de graafsector, met als primair doel het voorkomen van graafschade. Ten behoeve van uniformiteit en eenduidigheid zijn daarvoor standaarden ontwikkeld. Denk daarbij aan standaarden voor
 
-- het modelleren van IMKL-objecten (informatiemodel IMKL)..
+- het modelleren van IMKL-objecten (informatiemodel IMKL)
 - het visualiseren van deze objecten (presentatiemodel PMKL)
 - berichtuitwisseling (berichtenmodel BMKL)
 
@@ -12,6 +12,13 @@ Voor het doorvoeren van wijzigingen op deze standaarden zijn procesafspraken gem
 
 - [Wijzigingsproces standaarden KLIC](Wijzigingsproces%20standaarden%20KLIC.md)
 - toelichting op [documentatie en versiebeheer](../API%20management/API-documentatie%20en%20versiebeheer.md) van KLIC API's
+
+Uitgangspunten met betrekking tot de wijzigingen zijn:
+- maximaal 1 major aanpassing van de KLIC-standaarden per jaar;
+- ruim van te voren communiceren of er wel of niet geplande wijzigingen voorzien zijn op de KLIC-standaarden;
+- wijzigingen en het wijzigingsproces zijn inzichtelijk voor de gebruikers;
+
+In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, BMKL en PMKL) doorgevoerd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden wordt verwacht in **2021**.
 
 Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de <u>T</u>echnische <u>C</u>ommissie <u>S</u>tandaarden (TCS).  \
 Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en issue's die in deze commissie worden behandeld. Let wel, dat dit concept-uitwerkingen (kunnen) zijn die nog definitief vastgesteld moeten worden door besluitvormende organen (BAO KLIC, KGO KLIC).
@@ -34,7 +41,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   Toelichting per onderdeel:
   - **Ordening (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
     attributen van IMKL-objecten die niet in een kaartlaag worden weergegeven, zijn niet uitgewerkt;
-  - **Ordening (TCS) (NL)**: overzicht van alle IMKL-objecten waarbij de vertaaltabel is toegepast op de attributen (systeembreed);  \
+  - **Ordening (TCS) (NL)**: overzicht van alle IMKL-objecten waarbij de vertaaltabel is toegepast op de attributen (systeembreed);
   - **Ordening per entiteit:** overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening per entiteit; deze ordening is afgeleid van het eerste overzicht
   - **Voorbeelden per entiteit:** voorbeelden van ordening bij een verscheidenheid aan IMKL-objecten waarbij de vertaaltabel is toegepast op de attribuutnamen en de waarden uit de waardelijsten
 - Issue-lijst (GitHub geregistreerde issues)
@@ -43,3 +50,5 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
   - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 20-04-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
+
+Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
