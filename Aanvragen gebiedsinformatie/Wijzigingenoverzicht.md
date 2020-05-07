@@ -1,7 +1,18 @@
 ﻿#### Aanvragen gebiedsinformatie - Overzicht wijzigingen
 
+28-04-2020
+- Aparte map aangemaakt met schema's (XSD's, WSDL's)
+  - nieuwste versies in map `Schemas`
+  - oude versie (actueel t/m voorjaar 2020) in submap `KLIC B2B-terugkoppeling 1.0`
+- Map met voorbeelden aangevuld met voorbeelden over terugkoppeling
+- Informatie uit oude toelichting (op website) overgenomen in één nieuw document: de technische toelichting over "B2B-koppeling gebiedsinformatie-aanvraag (KLIC B2B-aanvraag)"
+- Controles uit oude toelichting (op website) overgenomen in "Controles B2B-koppeling gebiedsinformatie-aanvraag" en verder gecompleteerd
+- README's geactualiseerd
+
 21-02-2020
-- Update tbv Informatiepolygoon
+- Schema-definitie KlicB2BBetrokkenBeheerders-1.1.xsd toegevoegd
+  - gebaseerd op KlicB2BBetrokkenBeheerders-1.0.xsd
+  - attribuut _ThemaAlleenInInformatiepolygoon_ toegevoegd bij _ContactPerThema_ tbv informatiepolygoon
 
 23-01-2019
 - Controles B2B-aanvraag: aanvulling SoortWerkzaamheden
