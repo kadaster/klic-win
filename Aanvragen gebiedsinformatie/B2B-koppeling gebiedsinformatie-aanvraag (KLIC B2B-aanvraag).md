@@ -26,7 +26,7 @@ Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kad
 ### 1.1 Inleiding
 
 Via een B2B-koppeling kan door een extern systeem een bericht aan het Kadaster worden aangeboden met daarin een aanvraag voor gebiedsinformatie, kortweg een KLIC B2B-aanvraag.  \
-De KLIC B2B-aanvraag ondersteunt daarbij de volgende aanvraagsoorten: een graafmelding, een calamiteitenmelding, of een oriëntatieverzoek.
+De KLIC B2B-aanvraag ondersteunt daarbij de volgende aanvraagsoorten: een graafmelding, een calamiteitenmelding of een oriëntatieverzoek.
 
 Nadat een bericht is ontvangen en gecontroleerd, wordt aan het externe systeem teruggekoppeld of de aanvraag in verwerking is genomen of dat de aanvraag is afgekeurd. Dit gebeurt door een bericht terug te sturen van het type KLIC B2B-orderbevestiging.  \
 Indien de aanvraag een calamiteitenmelding betreft die in verwerking is genomen, wordt door het Kadaster - na de orderbevestiging - nog een additioneel bericht terug gestuurd van het type KLIC B2B-betrokkenBeheerders. In dit bericht wordt teruggekoppeld welke netbeheerders met welke thema's een belang hebben in het aangevraagde gebied.
@@ -34,7 +34,7 @@ Indien de aanvraag een calamiteitenmelding betreft die in verwerking is genomen,
 De uitwisseling van berichten is geheel asynchroon op basis van SOAP. Het response op een bericht dat technisch in orde is en voldoet aan het schema, is een leeg bericht met een technische HTTP 200 of 202 statuscode (geaccepteerd).  \
 Zie onderstaand sequence diagram.
 
-![Berichtenstroom KLIC B2B-aanvraag](images/Fig.1%20Berichtenstroom%20KLIC%20B2B-aanvraag.png "Berichtenstroom KLIC B2B-aanvraag")
+![Berichtenstroom KLIC B2B-aanvraag](images/Fig.1%20Berichtenstroom%20KLIC%20B2B-aanvraag.png "Berichtenstroom KLIC B2B-aanvraag")  \
 _Figuur 1 Berichtenstroom KLIC B2B-aanvraag_
 
 ### 1.2 Gebruik WS-Addressing bij aanvraag
@@ -46,17 +46,17 @@ Het antwoordadres is een webservice endpoint dat meegegeven moet worden via het 
 Tevens moet in de WS-Addressing header via het `wsa:Action` attribuut worden meegegeven of het een reguliere B2B-aanvraag betreft of een B2B-aanvraag bedoeld om de berichtuitwisseling te testen.  \
 De volgende waarden kunnen meegegeven worden in het `wsa:Action` attribuut uit WS-Addressing:
 
-- KLIC-B2B-AANVRAAG		voor een regulier aanvraag
-- KLIC-B2B-TESTAANVRAAG	voor het testen van het koppelvlak
+- KLIC-B2B-AANVRAAG - voor een reguliere aanvraag
+- KLIC-B2B-TESTAANVRAAG - voor het testen van het koppelvlak
 
 Andere waarden worden niet geaccepteerd en geven een foutmelding.
 
-De berichtenuitwisseling is idempotent. Dat wil zeggen dat een al eerder aangeboden bericht met een B2B-aanvraag niet opnieuw in verwerking wordt genomen, maar op dezelfde wijze reageert als bij de eerste keer dat het bericht wordt aangeboden.
+De berichtenuitwisseling is idempotent. Dat wil zeggen dat een al eerder aangeboden bericht met een B2B-aanvraag niet opnieuw in verwerking wordt genomen, maar op dezelfde wijze reageert als bij de eerste keer dat het bericht werd aangeboden.
 De initiële B2B-orderbevestiging (plus het eventuele bericht met B2B-betrokkenBeheerders) wordt dan opnieuw teruggestuurd.  \
 Om een B2B-aanvraag uniek te identificeren moet in het `wsa:MessageID` attribuut van de WS-Addressing header een unieke identificatie worden meegestuurd.
 Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te gebruiken:
 
-- Java:	_java.util.UUID.randomUUID().toString();_  \
+- Java:	_java.util.UUID.randomUUID().toString();_
 - C#:	_System.Guid.NewGuid().ToString("D")_
 
 ### 1.3 Overzicht van de WS-Addressing attributen bij aanvraag
@@ -115,7 +115,7 @@ Voorbeeld van WS-Addressing bij een response op bovenstaande aanvraag:
 In de B2B-orderbevestiging wordt in de sectie `Procesverwerking` aangegeven of de aanvraag voor gebiedsinformatie succesvol in verwerking is genomen door middel van de elementen `ProcesVerwerkingCode`, `SeverityCode` en `Melding`.
 
 De `ProcesVerwerkingCode` geeft het resultaat van de verwerking aan: goed (1) of fout (0). De default waarde is 1. Dit betekent dat het verzoek succesvol in verwerking is genomen.  \
-De `SeverityCode` wordt gebruikt om de ernst van een fout aan te geven. De standaard classificaties die worden gebruikt: SECURITY, FATAL, ERROR, WARNING, INFO. De default waarde is INFO.  \
+De `SeverityCode` wordt gebruikt om de ernst van een fout aan te geven. De standaard classificaties die worden gebruikt, zijn: SECURITY, FATAL, ERROR, WARNING, INFO. De default waarde is INFO.  \
 Het attribuut `Melding` kan meerdere keren voorkomen en wordt gebruikt om specifieke foutmeldingen terug te koppelen, zoals bijvoorbeeld validatiefouten.
 
 | _Procesverwerking_ attribuut  | Toelichting                                                  |
@@ -134,17 +134,17 @@ Indien een aanvraag succesvol in verwerking is genomen, wordt in het bericht met
 
 Voorbeeld van een B2B-orderbevestiging, inclusief _Procesverwerking_-attributen:
 ```xml
-	<KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
-	  <Procesverwerking>
-		<ProcesVerwerkingCode>1</ProcesVerwerkingCode>
-		<SeverityCode>INFO</SeverityCode>
-	  </Procesverwerking>
-	  <Orderbevestiging>
-		<OrderID>1234567890</OrderID>
-		<Klantreferentie>Project APD-3661</Klantreferentie>
-		<AanvraagDatumtijd>2020-04-29T18:03:36.580+02:00</AanvraagDatumtijd>
-	  </Orderbevestiging>
-	</KlicB2BOrderbevestiging>
+    <KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
+      <Procesverwerking>
+        <ProcesVerwerkingCode>1</ProcesVerwerkingCode>
+        <SeverityCode>INFO</SeverityCode>
+      </Procesverwerking>
+      <Orderbevestiging>
+        <OrderID>1234567890</OrderID>
+        <Klantreferentie>Project APD-3661</Klantreferentie>
+        <AanvraagDatumtijd>2020-04-29T18:03:36.580+02:00</AanvraagDatumtijd>
+      </Orderbevestiging>
+    </KlicB2BOrderbevestiging>
 ```
 Voorbeeld van een B2B-orderbevestiging waarbij fouten zijn gevonden bij het valideren van de aanvraag:
 ```xml
@@ -165,9 +165,12 @@ Voorbeeld van een B2B-orderbevestiging waarbij fouten zijn gevonden bij het vali
 
 Voor het gebruik van de nieuwste interfaces voor de KLIC B2B-koppeling dient u gebruik te maken van de volgende WSDL’s plus bijbehorende XSD’s:
 
-- KlicB2BAanvraag-1.1.wsdl (bericht van aanvrager naar Kadaster, in het figuur 1 aangegeven als 1a)
-- KlicB2BTestAanvraag-1.1.wsdl (bericht van aanvrager naar Kadaster t.b.v. de communicatietest van het koppelvlak, in het figuur 1 aangegeven als 1a)
-- KlicB2B-terugkoppeling-1.1.wsdl (berichten van Kadaster naar aanvrager, in het figuur 1 aangegeven als 2a en 3a)
+- KlicB2BAanvraag-1.1.wsdl  \
+bericht van aanvrager naar Kadaster, in figuur 1 aangegeven als 1a
+- KlicB2BTestAanvraag-1.1.wsdl  \
+bericht van aanvrager naar Kadaster t.b.v. de communicatietest van het koppelvlak, in figuur 1 aangegeven als 1a
+- KlicB2B-terugkoppeling-1.1.wsdl  \
+berichten van Kadaster naar aanvrager, in figuur 1 aangegeven als 2a en 3a.
 
 Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Aanvragen gebiedsinformatie/Schemas](../../../tree/master/Aanvragen%20gebiedsinformatie/Schemas).
 
@@ -222,15 +225,15 @@ Zie daarvoor [Controles B2B-koppeling gebiedsinformatie-aanvraag](Controles%20B2
 ---------------------------------------------------------
 ## 6. Beveiliging
 
-Het technische koppelvlak bij het Kadaster voldoet aan de Digikoppeling standaard. De Digikoppeling stelt met name eisen aan het gebruik van http over TLS (rfc2818) en het gebruik van PKIoverheid certificaten voor de authenticatie.  \
+Het technische koppelvlak bij het Kadaster voldoet aan de Digikoppeling standaard. Digikoppeling stelt met name eisen aan het gebruik van http over TLS (rfc2818) en het gebruik van PKIoverheid certificaten voor de authenticatie.  \
 Voor de B2B-aanvraag-dienst dient de aanvrager te beschikken over een PKIoverheid server-certificaat uit de G3 root (zie onderstaande figuur 2).
 
 Informatie over het PKIoverheid certificaat kunt u vinden op http://www.pkioverheid.nl/
 
-![Schematische weergave beveiliging](images/Fig.2%20Schematische%20weergave%20beveiliging.png "Schematische weergave beveiliging")
+![Schematische weergave beveiliging](images/Fig.2%20Schematische%20weergave%20beveiliging.png "Schematische weergave beveiliging")  \
 _Figuur 2 Schematische weergave beveiliging_
 
-Voor zowel het verzenden als het ontvangen van informatie kan de B2B-aanvraag-dienst alleen communiceren met de standaard https-poort (443).
+Voor zowel het verzenden, als het ontvangen van informatie kan de B2B-aanvraag-dienst alleen communiceren met de standaard https-poort (443).
 
 ### 6.1 Van Kadaster naar aanvrager
 
