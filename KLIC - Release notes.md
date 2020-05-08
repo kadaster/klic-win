@@ -6,7 +6,7 @@
 **Informatiepolygoon**:
 - De 'KlicB2BBetrokkenBeheerders' response in het geval van een Calamiteitenmelding bij B2B TEST-aanvraag is gereed voor de informatiepolygoon: Er wordt een boolean getoond die aangeeft of een belang alleen betrekking heeft of de informatiepolygoon of ook op het graafgebied. (ID 5372)
 
-**Kadaster KLIC-viewer**:
+**Kadaster KLIC-viewer (versie 5.4.3 / 5.4.7)**:
 - Printen: de optie om te printen op schaal 1:400 is toegevoegd
 - Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
 - Bugfix: Schaalbalk bij printen naar pdf (ID 5443)

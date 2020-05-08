@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 30 april 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 8 mei 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -21,16 +21,20 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
-## Planning voor release - begin mei 2020
+## Planning voor release - medio mei 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer**:
+- Kadaster KLIC-viewer beschikbaar op MacOS
+
+-------------------------------------------------------------------------------------
+## Planning voor release - 30 april 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Terugmeldvoorziening**:
 - Pilot voor het automatiseren van fase 1 ("niet gevonden net") van het proces "Afwijkende situatie" (Terugmeldvoorziening)
   - de pilot zal met ketenpartners worden georganiseerd
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
-
-**Kadaster KLIC-viewer**:
-- Kadaster KLIC-viewer beschikbaar op MacOS
 
 -------------------------------------------------------------------------------------
 ## Planning voor release - 28 april 2020
@@ -39,7 +43,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Informatiepolygoon**:
 - De 'KlicB2BBetrokkenBeheerders' response in het geval van een Calamiteitenmelding bij B2B TEST-aanvraag is gereed voor de informatiepolygoon: Er wordt een boolean getoond die aangeeft of een belang alleen betrekking heeft of de informatiepolygoon of ook op het graafgebied. (ID 5372)
 
-**Kadaster KLIC-viewer**:
+**Kadaster KLIC-viewer**  (versie 5.4.3 / 5.4.7):
 - Printen: de optie om te printen op schaal 1:400 is toegevoegd
 - Helpfunctionaliteit: Er is een help-button toegevoegd op het scherm waarin je een levering kunt selecteren, zodat ook vanuit dit scherm uitleg over de viewer gevonden kan worden.
 - Bugfix: Schaalbalk bij printen naar pdf (ID 5443)
