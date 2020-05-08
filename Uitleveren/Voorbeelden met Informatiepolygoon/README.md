@@ -40,3 +40,5 @@ Het betreft de volgende aanvragen;:
 *Demo 24 april 2020*:
 - zie ook [klic-win/Geplande wijzigingen/Informatiepolygoon/Demo 24 april 2020](../../Geplande%20wijzigingen/Informatiepolygoon/Demo%2024%20april%202020) met drie voorbeelden zoals gepresenteerd op 24 april 2020
 
+*EV scenario's* (zoals beschreven in [dit pdf-document](../../Geplande%20wijzigingen/Informatiepolygoon/Beschrijving%205%20scenarios%20thema%20BGI%20versus%20Graafpolygoon%20en%20Informatiepolygoon%20(2016-10-02).pdf) ):
+- zie ook [klic-win/Geplande wijzigingen/Informatiepolygoon/Scenario's EV-bepaling](../../Geplande%20wijzigingen/Informatiepolygoon/Scenario's%20EV-bepaling)
