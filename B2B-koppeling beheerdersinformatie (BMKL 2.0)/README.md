@@ -1,12 +1,11 @@
 ﻿#### B2B-koppeling beheerdersinformatie (BMKL 2.0)
 
-Met de introductie van IMKL v1.2 gaat er ook een wijziging plaatsvinden van de berichtenuitwisseling tussen Kadaster-KLIC en netbeheerders ten aanzien van beheerdersinformatie. Deze nieuwe wijze van berichtenuitwisseling wordt ook wel BMKL2.0 genoemd.  
-Dit heeft zowel impact voor de decentrale, als de centrale netbeheerders.  
-In deze map worden documentatie en diverse voorbeelden beschikbaar gesteld om de werking en de toepassing van deze nieuwe functionaliteit toe te lichten.    
+De berichtenuitwisseling tussen Kadaster-KLIC en netbeheerders ten aanzien van beheerdersinformatie gedraagt zich volgens de BMKL 2.0 standaard. Zowel decentrale, als centrale netbeheerders hebben hier mee te maken.  \
+In deze map worden documentatie en diverse voorbeelden beschikbaar gesteld om de werking en de toepassing van deze functionaliteit toe te lichten.    
 
 Deze map bevat:
 * algemene toelichting over:
-    * de nieuwe berichtenuitwisseling [B2B-koppeling Leveren beheerdersinformatie (BMKL2.0)](B2B-koppeling%20Leveren%20beheerdersinformatie%20(BMKL2.0).ppsx)
+    * de berichtenuitwisseling [B2B-koppeling Leveren beheerdersinformatie (BMKL2.0)](B2B-koppeling%20Leveren%20beheerdersinformatie%20(BMKL2.0).ppsx)
 	* de werking van de [Netbeheerder Testdienst (NTD)](Netbeheerder%20Testdienst%20(NTD).md)
 * technische toelichting op de werking van het berichtenprotocol (API's) tussen KLIC en de netbeheerders:
     * [B2B-koppeling beheerdersinformatie BMKL 2.0](B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md)
