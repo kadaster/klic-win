@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 8 mei 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 20 mei 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -8,7 +8,15 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
-  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen
+  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - juni 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer**:
+- Kadaster KLIC-viewer beschikbaar op MacOS.
+- Nieuws notificatie functionaliteit beschikbaar.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -21,11 +29,21 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
-## Planning voor release - medio mei 2020
+## Planning voor release - NTD: 25 mei 2020; Productie: 26 mei 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer**:
-- Kadaster KLIC-viewer beschikbaar op MacOS
+**Actualiseren netinformatie**:
+- Validatie toegevoegd in het proces actualiseren Netinformatie voor Centrale netbeheerders: bij de `VoorzorgsmaatregelBeslissingsregel`-s moet een geldige `netbeheerderWerkaanduiding` worden aangegeven. De `netbeheerderWerkaanduiding` is geldig als deze bekend is bij `WerkzaamhedenAanduiding`-en. (ID: 5156)
+
+**Ontvangstbevestiging / Leveringsbrief**: 
+- In de Ontvangstbevestiging wordt nu ook de 'geschatte einddatum werkzaamheden' getoond zoals die is opgegeven tijdens de aanvraag. (ID: 5530)
+- In de Leveringsbrief staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID: 5521)
+
+**Beheren belangen**:
+- Beheren belangen proces robuuster gemaakt: een belang kan pas beoordeeld worden nadat bij KLIC de technische bewerking van de belangengeometrie is afgerond. (ID: KLCW-5316)
+
+**Bugfix NTD**:
+- In de NTD moest ten onrechte het soort werkzaamheden worden opgegeven bij een calamiteitenmelding. Dat is nu opgelost. (ID 5419)
 
 -------------------------------------------------------------------------------------
 ## Planning voor release - 30 april 2020
