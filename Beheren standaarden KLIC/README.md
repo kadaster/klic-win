@@ -20,13 +20,29 @@ Uitgangspunten met betrekking tot de wijzigingen zijn:
 
 In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, BMKL en PMKL) doorgevoerd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden wordt verwacht in **2021**.
 
+## Onderwerpen TCS
+
 Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de <u>T</u>echnische <u>C</u>ommissie <u>S</u>tandaarden (TCS).  \
 Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en issue's die in deze commissie worden behandeld. Let wel, dat dit concept-uitwerkingen (kunnen) zijn die nog definitief vastgesteld moeten worden door besluitvormende organen (BAO KLIC, KGO KLIC).
 
 Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 
+- Issue-lijst (GitHub geregistreerde issues)
+  - Issues IMKL en PMKL (visualisatie);  \
+    voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
+  - Issues BMKL, REST-API’s;  \
+    voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 20-05-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
+- Transformatieregels  \
+  Het voorstel ligt om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
+  Gedurende deze periode zal een KLIC-levering dan in zowel de huidige, als de nieuwe versie van het IMKL worden uitgeleverd.
+  In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
+  - Overzicht van transformatieregels per IMKL-issue; zie [Introductie van transformatieregels (concept 26-05-20200](Introductie%20transformatieregels.ppsx));  \
+
+Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvorming.
+
 - Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (vastgesteld)](IMKL-vertaaltabel%20-%20publicatie.pdf)  \
-  Deze versie is door de commissie vastgesteld en wordt voorgelegd voor besluitvorming.  \
+  Status: vastgesteld door de commissie vastgesteld en voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **metainformatie:** metagegevens en uitleg over dit document
   - **conventies:** uitgangspunten en uniformering bij IMKL-vertaling
@@ -37,18 +53,13 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   - **IMKL concepten**:  \
     gedefinieerde termen in conceptenbibliotheek https://definities.geostandaarden.nl/doc/begrippenkader/imkl;
 	de termen zijn als referentie gebruikt
-- Ordening van attributen per IMKL-object; zie [Eisen overheid ordening attributen (concept 20-04-2020)](Eisen%20overheid%20ordening%20attributen%20(concept).xlsx)  \
+- Ordening van attributen per IMKL-object; zie [Eisen overheid ordening attributen (vastgesteld 15-05-2020)](Eisen%20overheid%20ordening%20attributen%20(concept).xlsx)  \
+  Status: vastgesteld door de commissie vastgesteld en voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **Ordening (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
     attributen van IMKL-objecten die niet in een kaartlaag worden weergegeven, zijn niet uitgewerkt;
   - **Ordening (TCS) (NL)**: overzicht van alle IMKL-objecten waarbij de vertaaltabel is toegepast op de attributen (systeembreed);
   - **Ordening per entiteit:** overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening per entiteit; deze ordening is afgeleid van het eerste overzicht
   - **Voorbeelden per entiteit:** voorbeelden van ordening bij een verscheidenheid aan IMKL-objecten waarbij de vertaaltabel is toegepast op de attribuutnamen en de waarden uit de waardelijsten
-- Issue-lijst (GitHub geregistreerde issues)
-  - Issues IMKL en PMKL (visualisatie);  \
-    voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
-  - Issues BMKL, REST-API’s;  \
-    voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 20-04-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
 
 Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
