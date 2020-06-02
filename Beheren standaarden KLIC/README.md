@@ -32,12 +32,12 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 20-05-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (concept 27-05-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)
 - Transformatieregels  \
   Het voorstel ligt om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
   Gedurende deze periode zal een KLIC-levering dan in zowel de huidige, als de nieuwe versie van het IMKL worden uitgeleverd.
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
-  - Overzicht van transformatieregels per IMKL-issue; zie [Introductie van transformatieregels (concept 26-05-20200](Introductie%20transformatieregels.ppsx));  \
+  - Overzicht van transformatieregels per IMKL-issue; zie [Introductie van transformatieregels (concept 26-05-20200](Introductie%20transformatieregels.ppsx))
 
 Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvorming.
 
