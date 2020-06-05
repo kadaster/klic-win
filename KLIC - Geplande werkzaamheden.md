@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 20 mei 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 5 juni 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -11,12 +11,20 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - juni 2020
+## Planning voor release - 30 juni 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Kadaster KLIC-viewer**:
 - Kadaster KLIC-viewer beschikbaar op MacOS.
 - Nieuws notificatie functionaliteit beschikbaar.
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 8 juni 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+Bugfix:
+- Het systeem is robuuster gemaakt zodat er niet meer een inconsitent ordernummer in een email verstuurd wordt. (ID 5575, [ID#88](https://github.com/kadaster/klic-win/issues/88))
+- In de leveringsmail staat nu alle tekst weer op de juiste plaats. (ID 5576)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juni 2020
@@ -29,7 +37,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
-## Planning voor release - NTD: 25 mei 2020; Productie: 26 mei 2020
+## Planning voor release - 26 mei 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Actualiseren netinformatie**:
@@ -40,7 +48,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - In de Leveringsbrief staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID: 5521)
 
 **Beheren belangen**:
-- Beheren belangen proces robuuster gemaakt: een belang kan pas beoordeeld worden nadat bij KLIC de technische bewerking van de belangengeometrie is afgerond. (ID: KLCW-5316)
+- Beheren belangen proces robuuster gemaakt: een belang kan pas beoordeeld worden nadat bij KLIC de technische bewerking van de belangengeometrie is afgerond. (ID: 5316)
 
 **Bugfix NTD**:
 - In de NTD moest ten onrechte het soort werkzaamheden worden opgegeven bij een calamiteitenmelding. Dat is nu opgelost. (ID 5419)

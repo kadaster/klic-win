@@ -1,6 +1,39 @@
 ﻿# Release notes
 
 ------------------------
+### 2 juni 2020
+
+**KvK-nummer (Kamer van Koophandel)**:
+- In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
+- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
+- Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
+- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
+
+------------------------
+### 26 mei 2020
+
+**Actualiseren netinformatie**:
+- Validatie toegevoegd in het proces actualiseren Netinformatie voor Centrale netbeheerders: bij de `VoorzorgsmaatregelBeslissingsregel`-s moet een geldige `netbeheerderWerkaanduiding` worden aangegeven. De `netbeheerderWerkaanduiding` is geldig als deze bekend is bij `WerkzaamhedenAanduiding`-en. (ID: 5156)
+
+**Ontvangstbevestiging / Leveringsbrief**: 
+- In de Ontvangstbevestiging wordt nu ook de 'geschatte einddatum werkzaamheden' getoond zoals die is opgegeven tijdens de aanvraag. (ID: 5530)
+- In de Leveringsbrief staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID: 5521)
+
+**Beheren belangen**:
+- Beheren belangen proces robuuster gemaakt: een belang kan pas beoordeeld worden nadat bij KLIC de technische bewerking van de belangengeometrie is afgerond. (ID: 5316)
+
+**Bugfix NTD**:
+- In de NTD moest ten onrechte het soort werkzaamheden worden opgegeven bij een calamiteitenmelding. Dat is nu opgelost. (ID 5419)
+
+------------------------
+### 30 april 2020
+
+**Terugmeldvoorziening**:
+- Pilot voor het automatiseren van fase 1 ("niet gevonden net") van het proces "Afwijkende situatie" (Terugmeldvoorziening)
+  - de pilot zal met ketenpartners worden georganiseerd
+  - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
+------------------------
 ### 28 april 2020
 
 **Informatiepolygoon**:
