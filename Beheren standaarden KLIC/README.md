@@ -32,25 +32,27 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 15-06-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 23-06-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
     Let wel:
     - issues met prioriteit 'volgende' worden meegenomen in de volgende release van de standaarden;
     - van de oranje-gemarkeerde issues wordt nog een behandeling van de TCS gevraagd.
 
 - Versie update strategie  \
-  Het voorstel ligt om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
+  De TCS stelt voor om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
   Ook afnemers worden in de gelegenheid gesteld om tijdens een overgangsperiode over te schakelen naar een nieuwe versie van de standaarden.  \
+  Tevens is voorgesteld om deze overgang te laten gelden voor alle standaarden, dus zowel IMKL, als PMKL, als BMKL.  \
   Voor deze overgang zijn een aantal scenario's bekeken en is (door vrijwel alle stakeholders) een voorkeur uitgesproken voor scenario 1 (zie presentatie). Gedurende deze periode zal een KLIC-levering dan in zowel de huidige, als de nieuwe versie van het IMKL worden uitgeleverd.
-  - Voor een toelichting op de scenario's, zie: [KLIC versie update strategie](KLIC%20versie%20update%20strategie%20(2020-06-05).ppsx).
+  - Voor een toelichting op de scenario's, zie: [KLIC versie update strategie (vastgesteld)](KLIC%20versie%20update%20strategie%20(TCS).ppsx).
 
 - Transformatieregels  \
   Tijdens de overgangsperiode zal een KLIC-levering in zowel de huidige versie (IMKL 1.2.1), als de nieuwe versie (IMKL 2.0) worden uitgeleverd.  \
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
-  - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (concept 05-06-2020)](IMKL%20transformatieregels%20(2020-06-05).ppsx).
+  - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 19-06-2020)](IMKL%20transformatieregels%20(TCS).ppsx).
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 16-06-2020)](Overzicht%20BMKL-issues%20(TCS)%202020-06-16.xslx)  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 23-06-2020)](Overzicht%20BMKL-issues%20(TCS).xslx)  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
+  Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
   Toelichting per onderdeel:
   - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API
   - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL  
@@ -63,7 +65,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 	- de gewenste situatie (aangepaste attribuutlijst)
 	- opmerkingen over de wijziging (met een referentie naar het GitHub-issue)
 	- voorbeeldbericht van de huidige situatie
-	- voorbeeldbericht van de gewenste situatie  \
+	- voorbeeldbericht van de gewenste situatie
 
 Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvorming.
 
