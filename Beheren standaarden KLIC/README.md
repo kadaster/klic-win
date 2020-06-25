@@ -54,13 +54,15 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
   Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
   Toelichting per onderdeel:
-  - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API
-  - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL  
+  - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API;  \
+  let wel: voor de oranje gemarkeerde issues moet nog besluitvorming plaatsvinden in het TCS
+  - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL;
+  voor een aantal opties moet nog een definitieve keuze worden gemaakt (blauwe markering)  
   - **Aanpassingen per API:**  \
   Vervolgens zijn er tabbladen gemaakt met relevante API’s die momenteel door KLIC worden beschikbaar gesteld voor externe gebruikers.  \
-  Opgemerkt moet worden dat bij de analyse alle huidige API’s zijn meegenomen, maar daarvan zijn momenteel enkele buiten scope van BMKL gehouden (blauwe tabbladen).  \
-  Ook mogelijke verbeterpunten voor het gebruik van referenties naar KLIC-waardelijsten (bijv. url-paden, etc.) zijn nog niet meegenomen (blauw gemarkeerd).  \
-  Per tabblad (dus per API) wordt een overzicht gegeven van:
+  Opgemerkt moet worden dat bij de analyse alle huidige BMKL-API’s zijn meegenomen, maar ook verbeteringen op andere API’s + B2B-aanvraag worden aanbevolen (blauwe tabbladen).  \
+  Ook mogelijke verbeterpunten voor het gebruik van referenties naar KLIC-waardelijsten (bijv. url-paden, etc.) en statussen worden aanbevolen (blauw gemarkeerd).  \
+  Per tabblad (dus per API + B2B-aanvraag) wordt een overzicht gegeven van:
     - de huidige situatie (huidige attribuutlijst)
 	- de gewenste situatie (aangepaste attribuutlijst)
 	- opmerkingen over de wijziging (met een referentie naar het GitHub-issue)
@@ -91,3 +93,4 @@ Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvormi
   - **Voorbeelden per entiteit:** voorbeelden van ordening bij een verscheidenheid aan IMKL-objecten waarbij de vertaaltabel is toegepast op de attribuutnamen en de waarden uit de waardelijsten
 
 Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
+
