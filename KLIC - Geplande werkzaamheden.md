@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 5 juni 2020)
+# Geplande werkzaamheden (bijgewerkt 25 juni 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -11,12 +11,18 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 30 juni 2020
+## Planning voor release - NTD: 25 juni 2020; Productie: 30 juni 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
+**Aanleveren netinformatie in NTD**:
+- Validatie toegevoegd op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving. (ID 5478)
+
 **Kadaster KLIC-viewer**:
-- Kadaster KLIC-viewer beschikbaar op MacOS.
-- Nieuws notificatie functionaliteit beschikbaar.
+- Kadaster KLIC-viewer beschikbaar op MacOS. Deze wordt beschikbaar gesteld op [https://zakelijk.kadaster.nl/klic-viewer](https://zakelijk.kadaster.nl/klic-viewer) (ID 5300)
+- Nieuws notificatie functionaliteit beschikbaar voor bijvoorbeeld algemene KLIC nieuws en KLIC-viewer nieuws. (ID 5457)
+- In de viewer staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID 5374)
+
+	In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor de eerste week van augustus up-te-daten naar KLIC-Viewer versie 5.5.8.  Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 6 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 8 juni 2020
