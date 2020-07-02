@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 25 juni 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 2 juli 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -10,6 +10,19 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
+
+--------------------------------------------------------------------------------------
+## Planning voor release - eind juli 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Extra validaties op aangeleverde netinformatie/documenten**:
+- Bestandnamen van aangeleverde ZIPs worden nu afgekeuerd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097)
+- Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: Een IMKL-object mag maar gekoppeld worden aan één netwerk. (ID 5634)
+
+
+**Centrale uitleveringen**:
+- Als er binnen de polygoon van een gebiedsinformatie-aanvraag bij een centrale netbeheerder voor een thema enkel Annotatie en/of Maatvoering aanwezig zijn (en geen "assets"), dan wordt voor dit thema helemaal geen data uitgeleverd.  (ID 3162)
+
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 25 juni 2020; Productie: 30 juni 2020
 Voor deze release zijn de volgende onderwerpen gepland:
@@ -17,18 +30,21 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Aanleveren netinformatie in NTD**:
 - Validatie toegevoegd op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving. (ID 5478)
 
+**Aanleveren netinformatie**:
+- Voor decentrale aanleveringen is er geen beperking meer van 50 MB, echter dit is wel de wenselijke maximale omvang.
+
 **Kadaster KLIC-viewer**:
 - Kadaster KLIC-viewer beschikbaar op MacOS. Deze wordt beschikbaar gesteld op [https://zakelijk.kadaster.nl/klic-viewer](https://zakelijk.kadaster.nl/klic-viewer) (ID 5300)
 - Nieuws notificatie functionaliteit beschikbaar voor bijvoorbeeld algemene KLIC nieuws en KLIC-viewer nieuws. (ID 5457)
 - In de viewer staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID 5374)
 
-	In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor de eerste week van augustus up-te-daten naar KLIC-Viewer versie 5.5.8.  Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 6 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
+	In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor september up-te-daten naar KLIC-Viewer versie 5.5.8. Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 10 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 8 juni 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-Bugfix:
+**Bugfix**:
 - Het systeem is robuuster gemaakt zodat er niet meer een inconsitent ordernummer in een email verstuurd wordt. (ID 5575, [ID#88](https://github.com/kadaster/klic-win/issues/88))
 - In de leveringsmail staat nu alle tekst weer op de juiste plaats. (ID 5576)
 

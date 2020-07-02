@@ -150,7 +150,7 @@ Dit bestand bevat de beslissingsregels voor de bepaling van voorzorgsmaatregelen
 Tevens moeten bij de voorzorgsmaatregelen één of meerdere EV-sjablonen meegeleverd worden waar naar gerefereerd wordt vanuit de voorzorgsmaatregelen xml.  
 
 #### Zipbestand decentraal
-* Het aangeleverde zipbestand mag maximaal 50 MB groot zijn (conform het huidige BMKL).
+* Er is geen beperkende validatie op de omvang, echter er is wel een richtlijn van maximaal 50 MB omwille van de stabiliteit.
 
 ### XML
 

@@ -1,4 +1,26 @@
 ﻿# Release notes
+------------------------
+### 30 juni 2020
+
+**Aanleveren netinformatie in NTD**: (reeds per 25 juni beschikbaar)
+- Validatie toegevoegd op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving. (ID 5478)
+
+**Aanleveren netinformatie**:
+- Voor decentrale aanleveringen is er geen beperking meer van 50 MB, echter dit is wel de wenselijke maximale omvang.
+
+**Kadaster KLIC-viewer (versie 5.5.8)**:
+- Kadaster KLIC-viewer beschikbaar op MacOS. Deze wordt beschikbaar gesteld op [https://zakelijk.kadaster.nl/klic-viewer](https://zakelijk.kadaster.nl/klic-viewer) (ID 5300)
+- Nieuws notificatie functionaliteit beschikbaar voor bijvoorbeeld algemene KLIC nieuws en KLIC-viewer nieuws. (ID 5457)
+- In de viewer staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID 5374)
+
+	In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor september up-te-daten naar KLIC-Viewer versie 5.5.8. Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 10 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
+
+------------------------
+### 8 juni 2020
+
+**Bugfix**:
+- Het systeem is robuuster gemaakt zodat er niet meer een inconsitent ordernummer in een email verstuurd wordt. (ID 5575, [ID#88](https://github.com/kadaster/klic-win/issues/88))
+- In de leveringsmail staat nu alle tekst weer op de juiste plaats. (ID 5576)
 
 ------------------------
 ### 2 juni 2020
