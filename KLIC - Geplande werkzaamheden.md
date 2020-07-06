@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 2 juli 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 6 juli 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -10,18 +10,32 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 8 september 2020
+
+**Kadaster KLIC-viewer**:
+- Ter bevordering van het gebruikersgemak wordt er een markering op de kaart getoond op de plek waar een gebruiker geklikt heeft. (ID 4223)
+
+	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind juli 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Extra validaties op aangeleverde netinformatie/documenten**:
-- Bestandnamen van aangeleverde ZIPs worden nu afgekeuerd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097)
+- Bestandnamen van aangeleverde ZIPs worden nu afgekeurd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097)
 - Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: Een IMKL-object mag maar gekoppeld worden aan één netwerk. (ID 5634)
 
 
 **Centrale uitleveringen**:
 - Als er binnen de polygoon van een gebiedsinformatie-aanvraag bij een centrale netbeheerder voor een thema enkel Annotatie en/of Maatvoering aanwezig zijn (en geen "assets"), dan wordt voor dit thema helemaal geen data uitgeleverd.  (ID 3162)
+
+--------------------------------------------------------------------------------------
+## Planning - 10 juli 2020
+
+**Nieuwe KLIC-standaarden**:
+- Oplevering van de nieuwe KLIC-standaarden ter review.
+  (Link wordt gepubliceerd)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 25 juni 2020; Productie: 30 juni 2020
