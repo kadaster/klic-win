@@ -7,5 +7,5 @@ Kijk voor de planning van de in productiename op de [geplande werkzaamheden](../
 Documentatie over de informatiepolygoon is [onder deze link](../../../tree/master/Geplande%20wijzigingen/Informatiepolygoon) te vinden.
 
 
-## Terugmelden Afwijkende Sitiatie
-Documentatie over de informatiepolygoon is [onder deze link](../../../tree/master/Geplande%20wijzigingen/Terugmelden%20Afwijkende%20Sitiatie) te vinden.
+## Terugmelden Afwijkende Situatie
+Documentatie over de vernieuwing van het terugmelden van een afwijkende situatie is [onder deze link](../../../tree/master/Geplande%20wijzigingen/Terugmelden%20Afwijkende%20Situatie) te vinden.
