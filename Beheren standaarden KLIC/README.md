@@ -24,7 +24,7 @@ In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BM
 
 Aan de hand van aangedragen issue's heeft de Technische Commissie Standaarden wijzigingen op de KLIC-standaarden voorgesteld.  \
 Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van deze standaarden.  \
-We willen u vragen deze aanpassingen te reviewen. Meer info, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20ONSULTATIE.md).
+We willen u vragen deze aanpassingen te reviewen. Meer info, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20CONSULTATIE.md).
 
 ## Onderwerpen TCS
 
@@ -56,7 +56,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
   - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 19-06-2020)](IMKL%20transformatieregels%20(TCS).ppsx).
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 03-07-2020)](Overzicht%20BMKL-issues%20(TCS).xslx)  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 03-07-2020)](Overzicht%20BMKL-issues%20(TCS).xlsx)  \
   Status: vastgesteld door de commissie en voorgelegd ter consultatie.  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
