@@ -18,7 +18,13 @@ Uitgangspunten met betrekking tot de wijzigingen zijn:
 - ruim van te voren communiceren of er wel of niet geplande wijzigingen voorzien zijn op de KLIC-standaarden;
 - wijzigingen en het wijzigingsproces zijn inzichtelijk voor de gebruikers;
 
-In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, BMKL en PMKL) doorgevoerd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden wordt verwacht in **2021**.
+In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BMKL) doorgevoerd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden wordt verwacht in **2021**.
+
+## Consultatie
+
+Aan de hand van aangedragen issue's heeft de Technische Commissie Standaarden wijzigingen op de KLIC-standaarden voorgesteld.  \
+Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van deze standaarden.  \
+We willen u vragen deze aanpassingen te reviewen. Meer info, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20ONSULTATIE.md).
 
 ## Onderwerpen TCS
 
@@ -32,10 +38,11 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 23-06-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 09-07-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
     Let wel:
     - issues met prioriteit 'volgende' worden meegenomen in de volgende release van de standaarden;
     - van de oranje-gemarkeerde issues wordt nog een behandeling van de TCS gevraagd.
+  - Status: vastgesteld door de commissie en voorgelegd ter consultatie.
 
 - Versie update strategie  \
   De TCS stelt voor om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
@@ -49,19 +56,21 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
   - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 19-06-2020)](IMKL%20transformatieregels%20(TCS).ppsx).
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 23-06-2020)](Overzicht%20BMKL-issues%20(TCS).xslx)  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 03-07-2020)](Overzicht%20BMKL-issues%20(TCS).xslx)  \
+  Status: vastgesteld door de commissie en voorgelegd ter consultatie.  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
-  Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
+  Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
   Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
   Toelichting per onderdeel:
   - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API;  \
   let wel: voor de oranje gemarkeerde issues moet nog besluitvorming plaatsvinden in het TCS
   - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL;
-  voor een aantal opties moet nog een definitieve keuze worden gemaakt (blauwe markering)  
+  let wel: naast de API's die tot het BMKL gerekend worden, worden ook de andere API's tussen Kadaster KLIC en netbeheerders aangepast t.b.v. eenduidigheid.  \
+  Dit geldt ook voor de B2B-aanvraag.
   - **Aanpassingen per API:**  \
   Vervolgens zijn er tabbladen gemaakt met relevante API’s die momenteel door KLIC worden beschikbaar gesteld voor externe gebruikers.  \
-  Opgemerkt moet worden dat bij de analyse alle huidige BMKL-API’s zijn meegenomen, maar ook verbeteringen op andere API’s + B2B-aanvraag worden aanbevolen (blauwe tabbladen).  \
-  Ook mogelijke verbeterpunten voor het gebruik van referenties naar KLIC-waardelijsten (bijv. url-paden, etc.) en statussen worden aanbevolen (blauw gemarkeerd).  \
+  Bij de analyse zijn alle huidige BMKL-API’s meegenomen, maar ook verbeteringen op andere API’s en de B2B-aanvraag.  \
+  Ook mogelijke verbeterpunten voor het gebruik van referenties naar KLIC-waardelijsten (bijv. url-paden, etc.) en statussen zijn voorgesteld (blauw gemarkeerd).  \
   Per tabblad (dus per API + B2B-aanvraag) wordt een overzicht gegeven van:
     - de huidige situatie (huidige attribuutlijst)
 	- de gewenste situatie (aangepaste attribuutlijst)
@@ -72,7 +81,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvorming.
 
 - Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (vastgesteld)](IMKL-vertaaltabel%20-%20publicatie.pdf)  \
-  Status: vastgesteld door de commissie vastgesteld en voorgelegd voor besluitvorming.  \
+  Status: vastgesteld door de commissie en voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **metainformatie:** metagegevens en uitleg over dit document
   - **conventies:** uitgangspunten en uniformering bij IMKL-vertaling
@@ -84,7 +93,7 @@ Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvormi
     gedefinieerde termen in conceptenbibliotheek https://definities.geostandaarden.nl/doc/begrippenkader/imkl;
 	de termen zijn als referentie gebruikt
 - Ordening van attributen per IMKL-object; zie [Eisen overheid ordening attributen (vastgesteld 15-05-2020)](Eisen%20overheid%20ordening%20attributen%20(concept).xlsx)  \
-  Status: vastgesteld door de commissie vastgesteld en voorgelegd voor besluitvorming.  \
+  Status: vastgesteld door de commissie en voorgelegd voor besluitvorming.  \
   Toelichting per onderdeel:
   - **Ordening (TCS)**: overzicht van alle IMKL-objecten (inclusief INSPIRE-US) met hun attributen en ordening (systeembreed);  \
     attributen van IMKL-objecten die niet in een kaartlaag worden weergegeven, zijn niet uitgewerkt;
@@ -93,4 +102,3 @@ Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvormi
   - **Voorbeelden per entiteit:** voorbeelden van ordening bij een verscheidenheid aan IMKL-objecten waarbij de vertaaltabel is toegepast op de attribuutnamen en de waarden uit de waardelijsten
 
 Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
-
