@@ -1,4 +1,17 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 juli 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 15 juli 2020)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - begin januari 2021
+Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
+
+*Uitlevering*:
+- Het zipbestand met de KLIC-uitlevering wordt aangepast in productie:
+  - de Gelaagde pdf wordt niet meer meegeleverd. 
+- De leveringsemail wordt aangepast:
+  - tekstuele wijzigingen
+  - de tweede link die in de email staat en verwijst naar een web-service zal niet meer ondersteund worden.
+Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio september 2020
@@ -19,7 +32,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind juli 2020
+## Planning voor release - augustus 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Extra validaties op aangeleverde netinformatie/documenten**:
