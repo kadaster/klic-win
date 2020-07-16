@@ -1,7 +1,7 @@
-﻿# Geplande werkzaamheden (bijgewerkt 15 juli 2020)
+# Geplande werkzaamheden (bijgewerkt 15 juli 2020)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin januari 2021
+## Planning voor release - begin 2021
 Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
 
 *Uitlevering*:
