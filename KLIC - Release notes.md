@@ -1,5 +1,11 @@
 ﻿# Release notes
 ------------------------
+### 25 juli 2020
+
+**Extra validatie op aangeleverde netinformatie**:
+- Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: een IMKL-object mag maar gekoppeld worden aan één netwerk (ID 5634).
+
+------------------------
 ### 30 juni 2020
 
 **Aanleveren netinformatie in NTD**: (reeds per 25 juni beschikbaar)
