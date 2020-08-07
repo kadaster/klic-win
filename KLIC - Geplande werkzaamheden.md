@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 22 juli 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 6 augustus 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -51,7 +51,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
-## Planning voor release - - NTD: 13 augustus 2020; Productie: 18 augustus 2020
+## Planning voor release - NTD: 13 augustus 2020; Productie: 18 augustus 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Extra validaties op aangeleverde netinformatie/documenten**:
