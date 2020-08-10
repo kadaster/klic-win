@@ -36,6 +36,10 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
+**Groepering foutmeldingen bij actualiseren netinformatie**
+- Foutmeldingen van dezelfde categorieën en type worden gegroepeerd. Er worden nu maximaal 50 meldingen per groep weergegeven. Voorheen werden de eerste 1000 foutmeldingen weergegeven onafhankelijk van de categorie en type. Hierdoor krijgt de gebruiker overzichtelijker en mogelijk meer verschillende feedback op de aanlevering (ID 3291).  \
+Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 niet-blokkerende waarschuwingen (ID 5709).
+
 --------------------------------------------------------------------------------------
 ## Planning voor release - 8 september 2020
 
@@ -47,7 +51,6 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 - Er komt een knop waarmee in één keer de melding gecentreerd en het standaard zoom niveau wordt getoond op het scherm. (ID 5143)
 - De meetresultaten die door een gebruiker zijn toegevoegd, kunnen uit en aan gezet worden. Hiervoor is een extra kaartlaag `Meetresultaten` toegevoegd aan het kaartlagen overzicht in het weergave menu. (ID 5617)
 
-
 	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 --------------------------------------------------------------------------------------
@@ -55,17 +58,14 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Extra validaties op aangeleverde netinformatie/documenten**:
-- Bestandnamen van aangeleverde ZIPs worden nu afgekeurd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097)
+- Bestandnamen van aangeleverde ZIPs worden nu afgekeurd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097).
 
 **Aanleveren netinformatie in NTD**:
-- Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) toegevoegd op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen. De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving. (ID 5577)
+- Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) toegevoegd op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen. De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
 - Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: Een IMKL-object mag maar gekoppeld worden aan één netwerk (ID 5634).
 
 **Centrale uitleveringen**:
-- Als er binnen de polygoon van een gebiedsinformatie-aanvraag bij een centrale netbeheerder voor een thema enkel Annotatie en/of Maatvoering aanwezig zijn (en geen "assets"), dan wordt voor dit thema helemaal geen data uitgeleverd.  (ID 3162)
-
-**Groepering foutmeldingen bij actualiseren netinformatie**
-- Foutmeldingen van dezelfde categorieën en type worden gegroepeerd. Er worden nu maximaal 50 meldingen per groep weergegeven. Voorheen werden de eerste 1000 foutmeldingen weergegeven onafhankelijk van de categorie en type. Hierdoor krijgt de gebruiker overzichtelijker en mogelijk meer verschillende feedback op de aanlevering. Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 niet-blokkerende waarschuwingen. (ID 5709, ID 3291)
+- Als er binnen de polygoon van een gebiedsinformatie-aanvraag bij een centrale netbeheerder voor een thema enkel Annotatie en/of Maatvoering aanwezig zijn (en geen "assets"), dan wordt voor dit thema helemaal geen data uitgeleverd (ID 3162).
 
 --------------------------------------------------------------------------------------
 ## Planning - 10 juli 2020
