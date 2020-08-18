@@ -1,5 +1,24 @@
 ﻿# Release notes
 ------------------------
+### 18 augustus 2020
+
+**Aanleveren netinformatie in NTD**: (reeds per 13 augustus beschikbaar)
+- Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) toegevoegd op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen.  \
+De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
+Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
+- Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: een IMKL-object mag maar gekoppeld worden aan één netwerk (ID 5634).
+- In de NTD-schermen voor het actualiseren van netinformatie en documenten wordt nu in beide gevallen gewaarschuwd dat de statussen van toepassing zijn voor de NTD (ID 5524).
+
+**Extra validaties op aangeleverde netinformatie/documenten**:
+- Bestandsnamen van aangeleverde zipbestanden worden nu afgekeurd met een foutmelding als ze niet aan de voorwaarden voldoen. Zie [uitleg over zipbestand-eigenschappen op deze Github pagina](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#zipbestand-eigenschappen) (ID 5097).
+
+**Centrale uitleveringen**:
+- Als er binnen de polygoon van een gebiedsinformatie-aanvraag bij een centrale netbeheerder voor een thema enkel _Annotatie_ en/of _Maatvoering_ aanwezig zijn (en geen "assets"), dan wordt voor dit thema helemaal geen data uitgeleverd (ID 3162).
+
+**Bugfix**
+- De BMKL-API voor het opvragen van een beheerdersinformatieLevering(/zip) geeft nu een http 400 bij een ongeldige combinatie van `giAanvraagId` en `biAanvraagId` (ID 3469).
+
+------------------------
 ### 25 juli 2020
 
 **Extra validatie op aangeleverde netinformatie**:
