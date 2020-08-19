@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 augustus 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 19 augustus 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
