@@ -36,10 +36,6 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 
-**Groepering foutmeldingen bij actualiseren netinformatie**
-- Foutmeldingen van dezelfde categorieën en type worden gegroepeerd. Er worden nu maximaal 50 meldingen per groep weergegeven. Voorheen werden de eerste 1000 foutmeldingen weergegeven onafhankelijk van de categorie en type. Hierdoor krijgt de gebruiker overzichtelijker en mogelijk meer verschillende feedback op de aanlevering (ID 3291).  \
-Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 niet-blokkerende waarschuwingen (ID 5709).
-
 --------------------------------------------------------------------------------------
 ## Planning voor release - 8 september 2020
 
@@ -53,6 +49,15 @@ Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 ni
 
 	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
+--------------------------------------------------------------------------------------
+## Planning voor release - NTD: 27 augustus 2020
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Groepering foutmeldingen bij actualiseren netinformatie**
+- Foutmeldingen van dezelfde categorieën en type worden gegroepeerd. Er worden nu maximaal 50 meldingen per groep weergegeven. Voorheen werden de eerste 1000 foutmeldingen weergegeven onafhankelijk van de categorie en type. Hierdoor krijgt de gebruiker overzichtelijker en mogelijk meer verschillende feedback op de aanlevering (ID 3291).  \
+Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 niet-blokkerende waarschuwingen (ID 5709).
+  
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 13 augustus 2020; Productie: 18 augustus 2020
 Voor deze release zijn de volgende onderwerpen gepland:
