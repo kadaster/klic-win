@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 augustus 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 21 augustus 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -45,7 +45,6 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 - Printen op schaal 1:4000 is toegevoegd. (ID 5619)
 - Voor het aan en uit zetten van netbeheerders en kaartlagen in het weergave menu is het nu mogelijk om op de hele regel te klikken, in plaats van alleen op de checkbox. (ID 4645)
 - Er komt een knop waarmee in één keer de melding gecentreerd en het standaard zoom niveau wordt getoond op het scherm. (ID 5143)
-- De meetresultaten die door een gebruiker zijn toegevoegd, kunnen uit en aan gezet worden. Hiervoor is een extra kaartlaag `Meetresultaten` toegevoegd aan het kaartlagen overzicht in het weergave menu. (ID 5617)
 
 	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
