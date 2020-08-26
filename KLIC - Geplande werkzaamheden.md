@@ -6,7 +6,7 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 
 *Uitlevering*:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast in productie:
-  - de Gelaagde pdf wordt niet meer meegeleverd. 
+  - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd. 
 - De leveringsemail wordt aangepast:
   - tekstuele wijzigingen
   - de tweede link die in de email staat en verwijst naar een web-service zal niet meer ondersteund worden.
@@ -56,6 +56,13 @@ Voor deze release is het volgende onderwerp gepland:
 **Groepering foutmeldingen bij actualiseren netinformatie**
 - Foutmeldingen van dezelfde categorieën en type worden gegroepeerd. Er worden nu maximaal 50 meldingen per groep weergegeven. Voorheen werden de eerste 1000 foutmeldingen weergegeven onafhankelijk van de categorie en type. Hierdoor krijgt de gebruiker overzichtelijker en mogelijk meer verschillende feedback op de aanlevering (ID 3291).  \
 Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 niet-blokkerende waarschuwingen (ID 5709).
+
+**Actualiseren netinformatie / documenten**:
+- De schermen voor het actualiseren van netinformatie en documenten zijn nu meer in lijn gebracht.  \
+Bovendien zijn de namen van de kolommen duidelijker gemaakt en is de aanleverdatum als kolom toegevoegd (ID 4517).
+
+**Bugfix**:
+- Een aanlevering van netinformatie met een dubbele quote in de gml:id resulteert nu (altijd) in een validatiefout(ID 5630).
   
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 13 augustus 2020; Productie: 18 augustus 2020
