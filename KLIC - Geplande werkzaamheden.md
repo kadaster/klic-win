@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 21 augustus 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 26 augustus 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -62,7 +62,7 @@ Tevens wordt het hierdoor mogelijk om aanleveringen te doen met meer dan 1000 ni
 Bovendien zijn de namen van de kolommen duidelijker gemaakt en is de aanleverdatum als kolom toegevoegd (ID 4517).
 
 **Bugfix**:
-- Een aanlevering van netinformatie met een dubbele quote in de gml:id resulteert nu (altijd) in een validatiefout(ID 5630).
+- Een aanlevering van netinformatie met een dubbele quote in de gml:id resulteert nu (altijd) in een validatiefout (ID 5630).
   
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 13 augustus 2020; Productie: 18 augustus 2020
