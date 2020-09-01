@@ -1,5 +1,19 @@
 ﻿# Release notes
 ------------------------
+### 1 september 2020
+
+Op 27 augustus 2020 is in de NTD de functionaliteit uitgerold zoals genoemd in de geplande werkzaamheden. Zie [Planning voor release - NTD: 27 augustus 2020](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release---ntd-27-augustus-2020).  \
+Dit heeft bij een aantal grote netbeheerders geleid tot onverwachte performanceproblemen bij het actualiseren van netinformatie op de **NTD**.
+
+We hebben daarom moeten besluiten om deze uitrol terug te draaien naar de NTD-versie zoals deze op 13 augustus 2020 beschikbaar was.  \
+Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
+
+**Aanleveren netinformatie in NTD**:
+- Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen.  \
+De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
+Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
+- Validatie op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5478).
+
 ### 18 augustus 2020
 
 **Aanleveren netinformatie in NTD**: (reeds per 13 augustus beschikbaar)
