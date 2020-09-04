@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 augustus 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 4 september 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -27,7 +27,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - De validatie van toegestane emailadressen in de aanvraag via het B2B-kanaal wordt verruimd. (ID 5589)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - medio september 2020
+## Planning voor release - 22 september 2020
 Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang van de Informatiepolygoon verplaatst naar medio september 2020.
 
 **Informatiepolygoon**:
@@ -50,6 +50,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 27 augustus 2020
+	Let op: deze release is teruggedraaid per 1 september. Zie [release notes van 1 september 2020](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Release%20notes.md#1-september-2020).
 
 Voor deze release is het volgende onderwerp gepland:
 
