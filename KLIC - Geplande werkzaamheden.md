@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 4 september 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 16 september 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -35,6 +35,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
   Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
+- De Kadaster KLIC-viewer is reeds geschikt voor het gebruik van de informatiepolygoon. Hiervoor hoeft u geen speciale update te doen.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 8 september 2020
