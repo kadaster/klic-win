@@ -23,8 +23,8 @@ In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BM
 ## Consultatie
 
 Aan de hand van aangedragen issue's heeft de Technische Commissie Standaarden wijzigingen op de KLIC-standaarden voorgesteld.  \
-Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van deze standaarden.  \
-We willen u vragen deze aanpassingen te reviewen. Meer info, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20CONSULTATIE.md).
+Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van de standaarden en ter consultatie voorgelegd, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20CONSULTATIE.md).  \
+De commissie heeft de aandachtspunten uit de terugkoppeling ondertussen in behandeling genomen.
 
 ## Onderwerpen TCS
 
@@ -38,11 +38,12 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 09-07-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 04-09-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
     Let wel:
+    - issues zijn aangevuld en bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS;
     - issues met prioriteit 'volgende' worden meegenomen in de volgende release van de standaarden;
     - van de oranje-gemarkeerde issues wordt nog een behandeling van de TCS gevraagd.
-  - Status: vastgesteld door de commissie en voorgelegd ter consultatie.
+  - Status: aandachtspunten uit de consultatie zijn in behandeling bij de commissie en de stakeholders.
 
 - Versie update strategie  \
   De TCS stelt voor om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
@@ -56,8 +57,8 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
   - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 19-06-2020)](IMKL%20transformatieregels%20(TCS).ppsx).
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 03-07-2020)](Overzicht%20BMKL-issues%20(TCS).xlsx)  \
-  Status: vastgesteld door de commissie en voorgelegd ter consultatie.  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 04-09-2020)](Overzicht%20BMKL-issues%20(TCS).xlsx)  \
+  Status: issues zijn bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS.  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
   Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
