@@ -1,5 +1,28 @@
 ﻿# Release notes
 ------------------------
+### 22 september 2020
+Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang van de Informatiepolygoon verplaatst naar medio september 2020.
+
+**Informatiepolygoon**:
+- Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
+- De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
+  Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
+  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
+- De Kadaster KLIC-viewer is reeds geschikt voor het gebruik van de informatiepolygoon. Hiervoor hoeft u geen speciale update te doen.
+
+--------------------------------------------------------------------------------------
+### 8 september 2020
+
+**Kadaster KLIC-viewer**:
+- Ter bevordering van het gebruikersgemak wordt er een markering op de kaart getoond op de plek waar een gebruiker geklikt heeft. (ID 4223)
+- In het menu bij de gebiedsinformatie-aanvraag wordt nu indien bekend ook het KvK-nummer van de aanvrager en opdrachtgever getoond. (ID 5010)
+- Printen op schaal 1:4000 is toegevoegd. (ID 5619)
+- Voor het aan en uit zetten van netbeheerders en kaartlagen in het weergave menu is het nu mogelijk om op de hele regel te klikken, in plaats van alleen op de checkbox. (ID 4645)
+- Er komt een knop waarmee in één keer de melding gecentreerd en het standaard zoom niveau wordt getoond op het scherm. (ID 5143)
+
+	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
+
+------------------------
 ### 1 september 2020
 
 Op 27 augustus 2020 is in de NTD de functionaliteit uitgerold zoals genoemd in de geplande werkzaamheden. Zie [Planning voor release - NTD: 27 augustus 2020](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release---ntd-27-augustus-2020).  \
@@ -14,6 +37,7 @@ De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een an
 Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
 - Validatie op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5478).
 
+------------------------
 ### 18 augustus 2020
 
 **Aanleveren netinformatie in NTD**: (reeds per 13 augustus beschikbaar)

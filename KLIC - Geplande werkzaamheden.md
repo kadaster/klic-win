@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 september 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 23 september 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -23,8 +23,13 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - de pilot zal met ketenpartners worden georganiseerd
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
-**B2B aanvraag**:
-- De validatie van toegestane emailadressen in de aanvraag via het B2B-kanaal wordt verruimd. (ID 5589)
+--------------------------------------------------------------------------------------
+## Planning voor release - begin oktober 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Leveringsmail**:
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, wordt de tekstuele verwijzing naar deze pdf in de leveringsmail nu al niet meer opgenomen. Het betreft twee zinnen die niet meer opgenomen worden. [Bekijk het voorbeeld](Uitleveren/KLIC%20leveringsmail%20-%20zonder%20verwijzing%20naar%20LP-pdf.pdf) om te zien hoe de leveringsmail er na deze release uit ziet. (ID 5920)
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 22 september 2020

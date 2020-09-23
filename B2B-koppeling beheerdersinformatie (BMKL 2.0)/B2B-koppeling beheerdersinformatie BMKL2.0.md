@@ -421,6 +421,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
         },
         "organisatie":{
             "naam":"Grondroerder Apeldoorn B.V.",
+            "kvkNummer": "12345678",
             "bezoekAdres":{
                 "openbareRuimteNaam":"Laan van Westenenk",
                 "huisnummer":"701",
@@ -438,6 +439,7 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
         },
         "organisatie":{
             "naam":"Kadaster",
+            "kvkNummer": "98765432",
             "bezoekAdres":{
                 "openbareRuimteNaam":"Hofstraat",
                 "huisnummer":"110",

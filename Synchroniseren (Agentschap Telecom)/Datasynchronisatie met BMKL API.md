@@ -141,6 +141,7 @@ Content-Type: application/json
             },
             "organisatie":{
                 "naam":"Netbeheerder Actualiseren01",
+                "kvkNummer": "12345678",
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Laan van Westenenk",
                     "huisnummer":"701",
@@ -157,6 +158,7 @@ Content-Type: application/json
             },
             "organisatie":{
                 "naam":"Kadaster",
+                "kvkNummer": "98765432",
                 "bezoekAdres":{
                     "openbareRuimteNaam":"Hofstraat",
                     "huisnummer":"110",
