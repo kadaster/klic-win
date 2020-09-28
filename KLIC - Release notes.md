@@ -1,9 +1,15 @@
 ﻿# Release notes
 ------------------------
 ### 22 september 2020
-Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang van de Informatiepolygoon verplaatst naar medio september 2020.
+> Doordat er soms technische onvolkomenheden optraden na deze release, is uit voorzorg tijdelijk de **functionaliteit om een informatiepolygoon te gebruiken uitgezet**. 
+> Na analyse (en mogelijk software aanpassing) zal de functionaliteit weer aangezet worden. 
+
+
+
+
 
 **Informatiepolygoon**:
+
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
@@ -227,7 +233,6 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 - De aanpassingen zijn eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
 - Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
-
 ------------------------
 ### 29 oktober 2019
 
@@ -297,7 +302,6 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 
 Zie [deze link op GitHub](API%20management/Authenticatie_via_oauth.md) voor een beschrijving van de Authenticatie via OAuth voor de KLIC API's. 
 
-
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 20 juni 2019; Productie: 24 juni 2019
 Voor deze release zijn de volgende onderwerpen gepland:
@@ -322,7 +326,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Het kan soms voorkomen dat een BeheerdersinformatieAanvraag de status "Open" heeft, terwijl de aanvraag wel bevestigd is door de netbeheerder. Dit is opgelost. (ID 4016)
 - De performance voor het ophalen van actualiseren geschiedenis is verbeterd. Voorheen kon dit soms zo lang duren dat een timeout optrad. Dit is opgelost. (ID 4166)
 
-
 ------------------------
 ### Github update 17 mei
 
@@ -345,7 +348,6 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Bug-fixes**:
 - In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
 - In de NTD omgeving kon een testmelding vastlopen als er een informatiepolygoon was opgegeven met een ongeldige geometrie. Voor dit optionele veld wordt nu gecontroleerd of de geometrie valide is, als deze is ingevuld. (ID 4051)
-
 
 ------------------------
 ### Github update 24 april
@@ -497,7 +499,7 @@ Voor Agentschap Telecom zijn de API’s live gezet om KLIC procesgegevens te syn
 ### release IMKL v1.2.1.2 - 13 december 2018
 Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op het IMKL.  \
 De voorgestelde wijzigingen zijn geaccordeerd door Werkgroep standaarden KLIC en het BAO KLIC.
- 
+
 **[IMKL2015/visualisatie](https://github.com/Geonovum/imkl2015/tree/master/visualisatie)** (versie 1.2.1.2) en
 **[IMKL2015/symbool](https://github.com/Geonovum/imkl2015/tree/master/symbool)** (versie 1.2.1.2):
 - Aanpassingen van de visualisatie (en gebruikte symbolen) zijn beschreven in [IMKL2015-Handreiking-visualisatie_1.2.1.2.pdf](https://github.com/Geonovum/imkl2015/blob/master/visualisatie/1.2.1.2/IMKL2015-Handreiking-visualisatie_1.2.1.2.pdf)
@@ -582,7 +584,7 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 ------------------------
 ### release IMKL v1.2.1.1 - 3 december 2018
 Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op beschrijvingen van het IMKL.  \
- 
+
 **[IMKL2015/regels](https://github.com/Geonovum/imkl2015/tree/master/regels)** (versie 1.2.1.1):
 - Aanpassingen van extra regels zijn beschreven in [IMKL2015 v 1.2.1.1_object-attributen-ExtraRegels.xlsx](https://github.com/Geonovum/imkl2015/blob/master/regels/1.2.1.1/IMKL2015%20v%201.2.1.1_object-attributen-ExtraRegels.xlsx);  \
 De aanpassingen zijn geel gemarkeerd in het document.
