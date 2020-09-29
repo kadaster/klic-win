@@ -1,7 +1,12 @@
 ﻿# Release notes
+
+------------------------
+### 29 september 2020
+Bugfix release informatiepolygoon
+
 ------------------------
 ### 22 september 2020
-> Doordat er soms technische onvolkomenheden optraden na deze release, is uit voorzorg tijdelijk de **functionaliteit om een informatiepolygoon te gebruiken uitgezet**. 
+> Doordat er soms technische onvolkomenheden optraden na deze release, is uit voorzorg tijdelijk **de functionaliteit om een informatiepolygoon te gebruiken uitgezet**. 
 > Na analyse (en mogelijk software aanpassing) zal de functionaliteit weer aangezet worden. 
 
 
