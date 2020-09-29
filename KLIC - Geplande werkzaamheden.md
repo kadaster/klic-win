@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 23 september 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 29 september 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - begin 2021
@@ -29,6 +29,11 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Leveringsmail**:
 - Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, wordt de tekstuele verwijzing naar deze pdf in de leveringsmail nu al niet meer opgenomen. Het betreft twee zinnen die niet meer opgenomen worden. [Bekijk het voorbeeld](Uitleveren/KLIC%20leveringsmail%20-%20zonder%20verwijzing%20naar%20LP-pdf.pdf) om te zien hoe de leveringsmail er na deze release uit ziet. (ID 5920)
+
+--------------------------------------------------------------------------------------
+##  Bugfix release Informatiepolygoon – 29 september 2020 (12:00 uur)
+
+De bug m.b.t. het aanvragen van een informatiepolygoon is met deze release verholpen. Na het uitrollen van deze release is het weer mogelijk om deze functionaliteit te gebruiken.
 
 
 --------------------------------------------------------------------------------------
