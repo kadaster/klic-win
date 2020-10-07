@@ -1,7 +1,7 @@
-﻿# Geplande werkzaamheden (bijgewerkt 29 september 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 7 oktober 2020)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin 2021
+## Planning voor release - 2 februari 2021
 Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
 
 *Uitlevering*:
@@ -14,7 +14,7 @@ Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - november 2020
+## Planning voor release - 17 november 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Terugmeldvoorziening**:
@@ -24,17 +24,23 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - begin oktober 2020
+## Planning voor release - 20 oktober 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Leveringsmail**:
-- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, wordt de tekstuele verwijzing naar deze pdf in de leveringsmail nu al niet meer opgenomen. Het betreft twee zinnen die niet meer opgenomen worden. [Bekijk het voorbeeld](Uitleveren/KLIC%20leveringsmail%20-%20zonder%20verwijzing%20naar%20LP-pdf.pdf) om te zien hoe de leveringsmail er na deze release uit ziet. (ID 5920)
+**Leveringsmail (LP.pdf)**:
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, komt een vooraankondiging op de Gelaagde PDF (LP.pdf) te staan. 
 
 --------------------------------------------------------------------------------------
 ##  Bugfix release Informatiepolygoon – 29 september 2020 (12:00 uur)
 
 De bug m.b.t. het aanvragen van een informatiepolygoon is met deze release verholpen. Na het uitrollen van deze release is het weer mogelijk om deze functionaliteit te gebruiken.
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 24 september 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Leveringsmail**:
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, wordt de tekstuele verwijzing naar deze pdf in de leveringsmail nu al niet meer opgenomen. Het betreft twee zinnen die niet meer opgenomen worden. [Bekijk het voorbeeld](Uitleveren/KLIC%20leveringsmail%20-%20zonder%20verwijzing%20naar%20LP-pdf.pdf) om te zien hoe de leveringsmail er na deze release uit ziet. (ID 5920)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 22 september 2020
