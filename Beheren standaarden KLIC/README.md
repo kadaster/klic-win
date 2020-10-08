@@ -20,11 +20,15 @@ Uitgangspunten met betrekking tot de wijzigingen zijn:
 
 In **2020** worden de gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BMKL) doorgevoerd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden wordt verwacht in **2021**.
 
-## Consultatie
+## Consultatie en Release Candidate
 
 Aan de hand van aangedragen issue's heeft de Technische Commissie Standaarden wijzigingen op de KLIC-standaarden voorgesteld.  \
-Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van de standaarden en ter consultatie voorgelegd, zie [KLIC-standaarden TER CONSULTATIE](_KLIC-standaarden%20TER%20CONSULTATIE.md).  \
-De commissie heeft de aandachtspunten uit de terugkoppeling ondertussen in behandeling genomen.
+Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van de standaarden en in juli/augustus 2020 ter consultatie voorgelegd.
+De commissie heeft de aandachtspunten uit de terugkoppeling behandeld. De aanpassingen worden verwerkt in een nieuwe versie: de Release Candidate.  \
+Zie de website van Geonovum: https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen
+
+Indien geen storende bevindingen meer worden gedaan en de minister zijn definitieve goedkeuring zal geven, leidt dit tot een nieuwe versie van de KLIC-standaarden.  \
+Dit betreft dan IMKL 2.0, PMKL 2.0 en BMKL 2.1. 
 
 ## Onderwerpen TCS
 
@@ -38,12 +42,16 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
   - Issues BMKL, REST-API’s;  \
     voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 04-09-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
+  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 08-10-2020)](GitHub%20geregistreerde%20issues%20-%20overzicht.pdf)  \
     Let wel:
     - issues zijn aangevuld en bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS;
     - issues met prioriteit 'volgende' worden meegenomen in de volgende release van de standaarden;
-    - van de oranje-gemarkeerde issues wordt nog een behandeling van de TCS gevraagd.
-  - Status: aandachtspunten uit de consultatie zijn in behandeling bij de commissie en de stakeholders.
+    - de oranje-gemarkeerde issues ("parkeren") zijn nog een behandeling bij de TCS of TCS-werkgroepen;  \
+	  de resultaten uit deze werkgroepen zullen niet meer worden meegenomen in de nieuwe versie.
+  - Status: aandachtspunten uit de consultatie zijn behandeld door de commissie en de stakeholders;
+    aanpassingen worden verwerkt in de Release Candidate.
+  - Geonovum is bezig om de aanpassingen door te voeren en te publiceren;  \
+    zie: https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen
 
 - Versie update strategie  \
   De TCS stelt voor om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
@@ -57,14 +65,14 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
   - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 19-06-2020)](IMKL%20transformatieregels%20(TCS).ppsx).
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 04-09-2020)](Overzicht%20BMKL-issues%20(TCS).xlsx)  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 08-10-2020)](Overzicht%20BMKL-issues%20(TCS).xlsx)  \
   Status: issues zijn bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS.  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
   Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
   Toelichting per onderdeel:
   - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API;  \
-  let wel: voor de oranje gemarkeerde issues moet nog besluitvorming plaatsvinden in het TCS
+  let wel: alle ingediende issues zijn behandeld door het TCS en worden meegenomen in de volgende versie
   - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL;
   let wel: naast de API's die tot het BMKL gerekend worden, worden ook de andere API's tussen Kadaster KLIC en netbeheerders aangepast t.b.v. eenduidigheid.  \
   Dit geldt ook voor de B2B-aanvraag.
@@ -79,7 +87,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 	- voorbeeldbericht van de huidige situatie
 	- voorbeeldbericht van de gewenste situatie
 
-Van onderstaande onderwerpen is een concept opgeleverd voor verdere besluitvorming.
+Van onderstaande onderwerpen is door de TCS een concept opgeleverd. Na definitieve besluitvorming van Agentschap Telecom, zullen deze worden opgenomen in de nieuwe versie van de standaarden.
 
 - Vertaling van begrippen in de Nederlandse taal; zie [IMKL vertaaltabel (vastgesteld)](IMKL-vertaaltabel%20-%20publicatie.pdf)  \
   Status: vastgesteld door de commissie en voorgelegd voor besluitvorming.  \
