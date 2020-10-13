@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 7 oktober 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 13 oktober 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -24,11 +24,16 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 20 oktober 2020
+## Planning voor release - NTD: 15 oktober 2020; Productie: 20 oktober 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Leveringsmail (LP.pdf)**:
 - Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, komt een vooraankondiging op de Gelaagde PDF (LP.pdf) te staan. 
+
+**Bugfix van teruggedraaide release (oorspronkelijk 27 augustus)**:
+- Groepering foutmeldingen bij actualiseren netinformatie
+- Schermaanpassingen Actualiseren netinformatie / documenten
+- Validatiefout bij aanlevering van netinformatie met een dubbele quote in de gml:id
 
 --------------------------------------------------------------------------------------
 ##  Bugfix release Informatiepolygoon – 29 september 2020 (12:00 uur)
@@ -67,7 +72,8 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 27 augustus 2020
-	Let op: deze release is teruggedraaid per 1 september. Zie [release notes van 1 september 2020](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Release%20notes.md#1-september-2020).
+> Let op: deze release is teruggedraaid per 1 september. Zie [release notes van 1 september 2020](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Release%20notes.md#1-september-2020).  \
+> Deze release is op 15 oktober op de NTD opnieuw doorgevoerd.
 
 Voor deze release is het volgende onderwerp gepland:
 
