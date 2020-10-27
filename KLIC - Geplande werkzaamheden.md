@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 13 oktober 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 27 oktober 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -14,13 +14,22 @@ Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 17 november 2020
+## Planning voor release - 24 november 2020
 Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer**:
+- De leesbaarheid van de schaalbalk is verbeterd (id 5275).
+- Het menu item `Menu` is hernoemd naar `Meer` met aangepast icoon (id 5828).
+- Als een gebruiker de meten-functionaliteit heeft gebruikt, is de weergave hiervan uit en aan te zetten in het tabblad `KAARTLAGEN` onder het menu-item `Weergave` (id 5617).
+- De responsiviteit van de viewer is verbeterd.
+- Het is nu mogelijk om parameters mee te geven tijdens het opstarten van het installatiebestand (bv locatie voor de installatie) (id 5529).
+- Diverse bugfixes.
+
 
 **Terugmeldvoorziening**:
 - Vervolg pilot voor het automatiseren van deel 1 (melden afwijkende ligging)
-  - inclusief melden van onbekend net en afwijkende ligging
-  - de pilot zal met ketenpartners worden georganiseerd
+  - betreft melden van onbekend net, melden niet gevonden net en melden afwijkende ligging.
+  - de pilot zal met ketenpartners worden georganiseerd.
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
 
 --------------------------------------------------------------------------------------
