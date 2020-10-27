@@ -1,8 +1,30 @@
 ﻿# Release notes
+------------------------
+
+### 20 oktober 2020
+_NTD reeds per 15 oktober beschikbaar_
+
+**Leveringsmail (LP.pdf)**:
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, komt een vooraankondiging op de Gelaagde PDF (LP.pdf) te staan. 
+
+**Bugfix van teruggedraaide release (oorspronkelijk 27 augustus)**:
+- Groepering foutmeldingen bij actualiseren netinformatie
+- Schermaanpassingen Actualiseren netinformatie / documenten
+- Validatiefout bij aanlevering van netinformatie met een dubbele quote in de gml:id
+
+--------------------------------------------------------------------------------------
 
 ------------------------
 ### 29 september 2020
+
 Bugfix release informatiepolygoon
+
+------------------------
+### 24 september 2020
+
+**Leveringsmail**:
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, wordt de tekstuele verwijzing naar deze pdf in de leveringsmail nu al niet meer opgenomen. Het betreft twee zinnen die niet meer opgenomen worden. [Bekijk het voorbeeld](Uitleveren/KLIC%20leveringsmail%20-%20zonder%20verwijzing%20naar%20LP-pdf.pdf) om te zien hoe de leveringsmail er na deze release uit ziet. (ID 5920)
+
 
 ------------------------
 ### 22 september 2020
