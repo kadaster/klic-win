@@ -1,5 +1,4 @@
 # Parameters meegeven in commandline bij installeren Kadaster KLIC-viewer
-> Deze functionaliteit is vanaf november 2020 beschikbaar.
 
 ## NSIS KLIC-viewer Installer Opties
 

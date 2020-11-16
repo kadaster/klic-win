@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 30 oktober 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 16 november 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -17,12 +17,12 @@ Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-
 ## Planning voor release - 24 november 2020
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer**:
+**Kadaster KLIC-viewer (versie 5.7.20 )**:
 - De leesbaarheid van de schaalbalk is verbeterd (id 5275).
 - Het menu item `Menu` is hernoemd naar `Meer` met aangepast icoon (id 5828).
 - Als een gebruiker de meten-functionaliteit heeft gebruikt, is de weergave hiervan uit en aan te zetten in het tabblad `KAARTLAGEN` onder het menu-item `Weergave` (id 5617).
 - De responsiviteit van de viewer is verbeterd.
-- Het is nu mogelijk om parameters mee te geven tijdens het opstarten van het installatiebestand (bv locatie voor de installatie) (id 5529). Zie de [documentatie op GitHub](Kadaster%20KLIC-viewer/Kadaster%20KLIC-viewer%20installatie%20opties.md) voor een beschrijving van de opties.
+- Verbetering bij het meegeven van parameters tijdens het opstarten van het installatiebestand (bv locatie voor de installatie) (id 5529). Zie de [documentatie op GitHub](Kadaster%20KLIC-viewer/Kadaster%20KLIC-viewer%20installatie%20opties.md) voor een beschrijving van de opties.
 - Diverse bugfixes.
 
 
