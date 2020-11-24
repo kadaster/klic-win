@@ -1,6 +1,25 @@
 ﻿# Release notes
 ------------------------
 
+## 24 november 2020
+
+**Kadaster KLIC-viewer ([versie 5.7.20](https://www.kadaster.nl/klicviewer) )**:
+- De leesbaarheid van de schaalbalk is verbeterd (id 5275).
+- Het menu item `Menu` is hernoemd naar `Meer` met aangepast icoon (id 5828).
+- Als een gebruiker de meten-functionaliteit heeft gebruikt, is de weergave hiervan uit en aan te zetten in het tabblad `KAARTLAGEN` onder het menu-item `Weergave` (id 5617).
+- De responsiviteit van de viewer is verbeterd.
+- Verbetering bij het meegeven van parameters tijdens het opstarten van het installatiebestand (bv locatie voor de installatie) (id 5529). Zie de [documentatie op GitHub](Kadaster%20KLIC-viewer/Kadaster%20KLIC-viewer%20installatie%20opties.md) voor een beschrijving van de opties.
+- Diverse bugfixes.
+
+
+**Terugmeldvoorziening**:
+- Vervolg pilot voor het automatiseren van deel 1 (melden afwijkende ligging)
+  - betreft melden van onbekend net, melden niet gevonden net en melden afwijkende ligging.
+  - de pilot zal met ketenpartners worden georganiseerd.
+  - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
+
+------------------------
 ### 20 oktober 2020
 _NTD reeds per 15 oktober beschikbaar_
 
@@ -12,7 +31,6 @@ _NTD reeds per 15 oktober beschikbaar_
 - Schermaanpassingen Actualiseren netinformatie / documenten
 - Validatiefout bij aanlevering van netinformatie met een dubbele quote in de gml:id
 
---------------------------------------------------------------------------------------
 
 ------------------------
 ### 29 september 2020
