@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 november 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 25 november 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -12,6 +12,13 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
   - de tweede link die in de email staat en verwijst naar een web-service zal niet meer ondersteund worden.
 Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 14 december 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Wijziging in afzenderadres van emails**:
+- Het afzender-emailadres verandert. Waar nu de afzender "noreply@kadaster.nl" is, wordt dat vanaf deze release "klic@kadaster.nl". Dit geldt voor alle emails verstuurd vanuit het KLIC-systeem.  \
+  Mocht u regels in uw emailprogramma hebben toegevoegd op basis van het huidige afzenderadres, dient u hier rekening mee te houden.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 24 november 2020
@@ -31,6 +38,20 @@ Voor deze release zijn de volgende onderwerpen gepland:
   - betreft melden van onbekend net, melden niet gevonden net en melden afwijkende ligging.
   - de pilot zal met ketenpartners worden georganiseerd.
   - er wordt gebruik gemaakt van het generieke terugmeldsysteem van het Kadaster. Voor meer informatie zie [de website van Geoforum](https://geoforum.nl/t/terugmelding-api-beschikbaar-in-acceptatie-omgeving/2251).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 16 november 2020
+
+**Nieuwe KLIC-standaarden**:
+- Oplevering van de nieuwe KLIC-standaarden.  \
+  De nieuwe versies van de standaarden lagen in juli en augustus 2020 in consultatie, in oktober zijn deze als release candidate gepubliceerd en nu is de versie ter vaststelling uitgebracht.  Het Kadaster stelt samen met het KLIC gebruikersoverleg een planning op voor de implementatie.  \
+  Zie [dit nieuwsbericht](https://www.kadaster.nl/-/nieuwe-versie-informatiestandaarden-beschikbaar?redirect=%2Fzakelijk%2Fregistraties%2Flandelijke-voorzieningen%2Fklic%2Fklic-nieuws).
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 11 november 2020
+
+**Performance verbetering**:
+- De performance van de BMKL-API is verbeterd (id 6086).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 15 oktober 2020; Productie: 20 oktober 2020
