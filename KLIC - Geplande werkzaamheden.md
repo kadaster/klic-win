@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 november 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 11 december 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -7,10 +7,17 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 *Uitlevering*:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast in productie:
   - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd. 
-- De leveringsemail wordt aangepast:
-  - tekstuele wijzigingen
-  - de tweede link die in de email staat en verwijst naar een web-service zal niet meer ondersteund worden.
+- De layout en de inhoud van de ontvangstbevestiging en de leveringsmail worden gemoderniseerd.
+  - Tevens zal de tweede link die in de leveringsemail staat en verwijst naar een web-service niet meer ondersteund worden.
 Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 15 december 2020
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**KLIC-online** (bij het doen van een graafmelding en oriëntatieverzoek):
+- Bij het opgeven van de soort werkzaamheden staat nu expliciet vermeld dat er maximaal 6 soorten graafwerkzaamheden opgegeven kunnen worden.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 14 december 2020
