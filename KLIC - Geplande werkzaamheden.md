@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 11 december 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 21 december 2020)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -11,6 +11,16 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
   - Tevens zal de tweede link die in de leveringsemail staat en verwijst naar een web-service niet meer ondersteund worden.
 Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
 
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 19 januari 2021
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer (versie 5.8.x)**:
+- Er wordt een extra print-optie toegevoegd om een overzichtskaart te genereren. Dit is één pagina waarop alle netbeheerders/thema zichtbaar zijn, zonder annotatie en maatvoering. (ID 6133)
+- Bij het meten worden nu ook de de afstanden van de deelstukken weergegeven. (ID 4792)
+- De meetresultaten worden mee geprint, als de weergave aan staat in het tabblad `KAARTLAGEN` onder het menu-item `Weergave`.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 15 december 2020
