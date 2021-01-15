@@ -5,10 +5,10 @@
 Voor deze release zijn de volgende onderwerpen gepland:
 
 
-*Vernieuwing proces eenmalige melder (particulier)*:
+**Vernieuwing proces eenmalige melder (particulier)**:
 - De éénmalige gebruiker kan door middel van selfservice een KLIC-melding doen in plaats van het webformulier. 
 
-*Vernieuwing front-end applicatie onder Mijn Kadaster*.
+**Vernieuwing front-end applicatie onder Mijn Kadaster**.
 - Door middel van periodieke releases zullen de KLIC-applicaties voldoen aan de overheidseisen met betrekking tot de toegankelijkheid (WCAG 2.1). Dit zijn aanpassingen m.b.t. web-richtlijnen, zie: [https://www.rijksoverheid.nl/toegankelijkheid ](https://www.rijksoverheid.nl/toegankelijkheid)
 
 
@@ -17,7 +17,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Planning voor release - 2 februari 2021
 Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
 
-*Uitlevering*:
+**Uitlevering**:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast in productie:
   - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd. 
 - De layout en de inhoud van de ontvangstbevestiging en de leveringsmail worden gemoderniseerd.
