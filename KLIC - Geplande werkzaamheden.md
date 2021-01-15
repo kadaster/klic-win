@@ -1,4 +1,17 @@
-﻿# Geplande werkzaamheden (bijgewerkt 21 december 2020)
+﻿# Geplande werkzaamheden (bijgewerkt 15 januari 2021)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - april/mei 2021
+Voor deze release zijn de volgende onderwerpen gepland:
+
+
+*Vernieuwing proces eenmalige melder (particulier)*:
+- De éénmalige gebruiker kan door middel van selfservice een KLIC-melding doen in plaats van het webformulier. 
+
+*Vernieuwing front-end applicatie onder Mijn Kadaster*.
+- Door middel van periodieke releases zullen de KLIC-applicaties voldoen aan de overheidseisen met betrekking tot de toegankelijkheid (WCAG 2.1). Dit zijn aanpassingen m.b.t. web-richtlijnen, zie: [https://www.rijksoverheid.nl/toegankelijkheid ](https://www.rijksoverheid.nl/toegankelijkheid)
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
@@ -10,6 +23,7 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 - De layout en de inhoud van de ontvangstbevestiging en de leveringsmail worden gemoderniseerd.
   - Tevens zal de tweede link die in de leveringsemail staat en verwijst naar een web-service niet meer ondersteund worden.
 Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
+Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
 
 
 
