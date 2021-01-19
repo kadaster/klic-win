@@ -31,7 +31,7 @@ Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/K
 ## Planning voor release - 19 januari 2021
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer (versie 5.8.x)**:
+**Kadaster KLIC-viewer (versie 5.8.0)**:
 - Er wordt een extra print-optie toegevoegd om een overzichtskaart te genereren. Dit is één pagina waarop alle netbeheerders/thema zichtbaar zijn, zonder annotatie en maatvoering. (ID 6133)
 - Bij het meten worden nu ook de de afstanden van de deelstukken weergegeven. (ID 4792)
 - De meetresultaten worden mee geprint, als de weergave aan staat in het tabblad `KAARTLAGEN` onder het menu-item `Weergave`.

@@ -1,6 +1,27 @@
 ﻿# Release notes
 ------------------------
 
+## 19 januari 2021
+
+**Kadaster KLIC-viewer ([versie 5.8.0](https://www.kadaster.nl/klicviewer) )**:
+- Er wordt een extra print-optie toegevoegd om een overzichtskaart te genereren. Dit is één pagina waarop alle netbeheerders/thema zichtbaar zijn, zonder annotatie en maatvoering. (ID 6133)
+- Bij het meten worden nu ook de de afstanden van de deelstukken weergegeven. (ID 4792)
+- De meetresultaten worden mee geprint, als de weergave aan staat in het tabblad `KAARTLAGEN` onder het menu-item `Weergave`.
+
+------------------------
+## 15 december 2020
+
+**KLIC-online** (bij het doen van een graafmelding en oriëntatieverzoek):
+- Bij het opgeven van de soort werkzaamheden staat nu expliciet vermeld dat er maximaal 6 soorten graafwerkzaamheden opgegeven kunnen worden.
+
+------------------------
+## 14 december 2020
+
+**Wijziging in afzenderadres van emails**:
+- Het afzender-emailadres verandert. Waar nu de afzender "noreply@kadaster.nl" is, wordt dat vanaf deze release "klic@kadaster.nl". Dit geldt voor alle emails verstuurd vanuit het KLIC-systeem.  \
+  Mocht u regels in uw emailprogramma hebben toegevoegd op basis van het huidige afzenderadres, dient u hier rekening mee te houden.
+
+------------------------
 ## 24 november 2020
 
 **Kadaster KLIC-viewer ([versie 5.7.20](https://www.kadaster.nl/klicviewer) )**:
