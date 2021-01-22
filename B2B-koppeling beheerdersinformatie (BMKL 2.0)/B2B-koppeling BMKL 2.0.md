@@ -1,4 +1,4 @@
-﻿# B2B-koppeling BMKL 2.0
+# B2B-koppeling BMKL 2.0
 
 Dit document biedt een handleiding voor het als decentrale netbeheerder aanleveren van beheerdersinformatie via de B2B-koppeling volgens BMKL 2.0. \
 Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan maken.
@@ -32,6 +32,11 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
       - [Aanleveren beheerdersinformatie (enkel decentraal)](#aanleveren-beheerdersinformatie-enkel-decentraal)
       - [Opvragen aanleveringen beheerdersinformatie (enkel decentraal)](#opvragen-aanleveringen-beheerdersinformatie-enkel-decentraal)
       - [Opvragen uitgeleverde beheerdersinformatie](#opvragen-uitgeleverde-beheerdersinformatie)
+  - [Overzicht BMKL API's voor afhandelen afwijkende situatie](#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+      - [Zoeken terugmeldingen](#zoeken-terugmeldingen)
+      - [Bevestigen terugmelding](#bevestigen-terugmelding)
+      - [Afwijzen terugmelding](#afwijzen-terugmelding)
+      - [Claimen terugmeling](#claimen-terugmelding)
 
 ---------------------------------------------------------
 ## Context
@@ -421,7 +426,6 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
         },
         "organisatie":{
             "naam":"Grondroerder Apeldoorn B.V.",
-            "kvkNummer": "12345678",
             "bezoekAdres":{
                 "openbareRuimteNaam":"Laan van Westenenk",
                 "huisnummer":"701",
@@ -439,7 +443,6 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
         },
         "organisatie":{
             "naam":"Kadaster",
-            "kvkNummer": "98765432",
             "bezoekAdres":{
                 "openbareRuimteNaam":"Hofstraat",
                 "huisnummer":"110",
@@ -673,4 +676,293 @@ curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatie
 
 **_response:_**
 
-Deze aanroep levert een zipbestand op met daarin de beheerdersinformatie zoals die naar de aanvrager wordt uitgeleverd. Dit zijn alleen gegevens van de netbeheerder die bij de meegegeven `biAanvraagId` horen. Het is dus een uitsnede van de volledige uitlevering zoals die naar de aanvrager gaat.
+Deze aanroep levert een zipbestand op met daarin de beheerdersinformatie zoals die naar de aanvrager wordt uitgeleverd. Dit zijn alleen gegevens van de netbeheerder die bij de meegegeven `giAanvraagId` horen. Het is dus een uitsnede van de volledige uitlevering zoals die naar de aanvrager gaat.
+
+## Overzicht BMKL APIs voor afhandelen afwijkende situatie
+
+### Zoeken terugmeldingen
+
+NB: Dit is een concept ontwerp
+Het endpoint voor het opvragen van de lijst met terugmeldingen van de netbeheerder,
+kan aangeroepen worden met of zonder `giAanvraagId`. De aanroep zonder `giAanvraagId` kan worden aangeroepen met verschillende parameters om zo naar één specifieke, of een bepaalde set terugmeldingen te kunnen zoeken.
+Het systeem haalt alle terugmeldingen op die voldoen aan de criteria en waarvoor de ingelogde gebruiker geautoriseerd is.
+
+De pad-parameter `giAanvraagId` is verplicht maar mag `-` zijn. In dat geval worden terugmeldingen gezocht over alle
+gebiedsinformatie aanvragen waar de netbeheerder belanghebbend bij is.
+
+**_pad:_**
+```sh
+GET /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/
+```
+
+**_benodigde scope:_**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
+
+**_voorbeeld: Zoeken openstaande terugmeldingen_**
+
+In dit voorbeeld wordt gezocht naar alle terugmeldingen voor de ingelogde netbeheerder met de status "open". Hiervoor wordt de parameter `tmNotificatieStatus` met de waarde `open` toegevoegd aan het request.
+```sh
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/terugmeldingen?tmNotificatieStatus=open&limiet=5
+ -X GET
+ -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
+ -H 'Accept: application/json'
+```
+
+**_response_**
+```json
+{
+    "_links": {
+        "next": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/terugmeldingen?tmNotificatieStatus=open&limiet=5&offset=5"
+        },
+        "self": {
+            "href": "https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/-/terugmeldingen?tmNotificatieStatus=open&limiet=5"
+        }
+    },
+    "terugmeldingen": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    190054.5687500001,
+                    351343.7984374998
+                ]
+            },
+            "properties": {
+                "tijdstipWijziging": null,
+                "gewijzigdDoor": null,
+                "bron": "KLIC-viewer",
+                "product": null,
+                "registratie": "KLIC",
+                "doorgestuurdNaar": null,
+                "locatieLink": "https://bagviewer.kadaster.nl/#?geometry.x=190054.57&geometry.y=351343.80&zoomlevel=7",
+                "tijdstipRegistratie": "2020-11-26T10:20:48.082+01:00",
+                "meldingsNummer": 71905,
+                "meldingsNummerVolledig": "KLIC0071905",
+                "bronhoudernaam": "Kadaster",
+                "bronhoudercode": "K0001",
+                "objectType": "Rioolleiding",
+                "omschrijving": "Afwijkende ligging.\n2 meter meer naar het noorden.",
+                "secundair": {
+                    "situatie": "afwijkende ligging",
+                    "getekendeFeatureCoordinaten": [
+                        [
+                            190050.84125000008,
+                            351344.25124999974
+                        ],
+                        [
+                            190058.29625000007,
+                            351343.3456249998
+                        ]
+                    ],
+                    "gml_id": "nl.imkl-GM1641.236640",
+                    "pipeDiameter": "125.0",
+                    "netbeheerder": "Gemeente Maasgouw",
+                    "color": "#ba38a8",
+                    "inspireId.Identifier.localId": "GM1641.236640",
+                    "warningType.nil": "true",
+                    "validFrom": "1900-01-01T00:00:00.000Z",
+                    "klicmeldnummer": "19G002541",
+                    "referentie": "Industrieweg Maasbracht meld1",
+                    "beginLifespanVersion": "1900-01-01T00:00:00.000Z",
+                    "terugmelder": "Justin",
+                    "telefoonnummer": "0123456789",
+                    "thema": "rioolVrijverval",
+                    "featureType": "Rioolleiding",
+                    "pipeDiameter.uom": "urn:ogc:def:uom:OGC::mm",
+                    "soortBijlage": "ligging",
+                    "verticalPosition": "underground",
+                    "geoNauwkeurigheidXY": "http://definities.geostandaarden.nl/imkl2015/id/waarde/NauwkeurigheidXYvalue/onbekend",
+                    "inNetwork": "nl.imkl-GM1641.Maasgouw_RVV",
+                    "currentStatus": "http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional",
+                    "inspireId.Identifier.namespace": "nl.imkl",
+                    "bedrijfsnaam": "Kadaster",
+                    "warningType.nilReason": "unknown",
+                    "sewerWaterType": "http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/combined",
+                    "buismateriaalType": "http://definities.geostandaarden.nl/imkl2015/id/waarde/PipeMaterialTypeIMKLValue/PVC"
+                },
+                "bijlagen": [
+                    {
+                        "url": "https://service10.kadaster.nl/gds2/download/public/0b09e9de-d59d-4e73-95f2-83e77744fe2b",
+                        "naam": "foto1.jpg"
+                    },
+                    {
+                        "url": "https://service10.kadaster.nl/gds2/download/public/dae2a4e3-dca1-4bd7-ac76-6ba22850b3a9",
+                        "naam": "screenshot markering.jpg"
+                    }
+                ],
+                "tijdstipStatusWijziging": null,
+                "email": "Justin.Roodenburg@kadaster.nl",
+                "objectId": "nl.imkl-GM1641.236640",
+                "toelichting": null,
+                "status": "Nieuw",
+                "statusCode": "NIEUW"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    190050.02750000008,
+                    351343.92312499974
+                ]
+            },
+            "properties": {
+                "tijdstipWijziging": null,
+                "gewijzigdDoor": null,
+                "bron": "KLIC-viewer",
+                "product": null,
+                "registratie": "KLIC",
+                "doorgestuurdNaar": null,
+                "locatieLink": "https://bagviewer.kadaster.nl/#?geometry.x=190050.03&geometry.y=351343.92&zoomlevel=7",
+                "tijdstipRegistratie": "2020-11-26T10:25:58.070+01:00",
+                "meldingsNummer": 71906,
+                "meldingsNummerVolledig": "KLIC0071906",
+                "bronhoudernaam": "Kadaster",
+                "bronhoudercode": "K0001",
+                "objectType": "",
+                "omschrijving": "er ligt hier een groene kabel in mijn graafgebied, lijkt mij een data-kabel. ongeveer 30 cm diep, met een dikte van  halve cm",
+                "secundair": {
+                    "situatie": "onbekend net",
+                    "getekendeFeatureCoordinaten": [
+                        [
+                            190050.72312500008,
+                            351342.03968749975
+                        ],
+                        [
+                            190050.89375000008,
+                            351343.47031249973
+                        ],
+                        [
+                            190049.16125000006,
+                            351345.8065624997
+                        ]
+                    ],
+                    "netbeheerder": "KPN",
+                    "terugmelder": "Justin",
+                    "telefoonnummer": "0123456789",
+                    "bedrijfsnaam": "Kadaster",
+                    "thema": "datatransport",
+                    "klicmeldnummer": "19G002541",
+                    "referentie": "Industrieweg Maasbracht meld2"
+                },
+                "bijlagen": [
+                    {
+                        "url": "https://service10.kadaster.nl/gds2/download/public/00c912bf-8232-4078-b06a-b0c040e52172",
+                        "naam": "screenshot markering.jpg"
+                    },
+                    {
+                        "url": "https://service10.kadaster.nl/gds2/download/public/0e4a1d63-9815-49de-ab3a-b88f09ace0df",
+                        "naam": "foto1.jpg"
+                    }
+                ],
+                "tijdstipStatusWijziging": null,
+                "email": "Justin.Roodenburg@kadaster.nl",
+                "objectId": "",
+                "toelichting": null,
+                "status": "Nieuw",
+                "statusCode": "NIEUW"
+            }
+        },{
+            //overige 3 terugmeldingen uit resultaatlijst...
+        }
+    ]
+}
+```
+
+### Bevestigen terugmelding
+
+Een netbeheerder moet de netbeheerder bevestigen dat hij de terugmelding ontvangen heeft. \
+Dat wordt gedaan door de `tmNotificatieStatus` de waarde `bevestigingOntvangen` te geven.
+
+**_pad:_**
+```
+PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
+```
+
+**_benodigde scope:_**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
+
+**_voorbeeld:_**
+```sh
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/terugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+ -X PATCH
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
+ -d "{  \"tmNotificatieStatus\": \"bevestigingOntvangen\" }"
+```
+
+**_response:_**
+```json
+HTTP/1.1 200 OK
+```
+
+### Afwijzen terugmelding
+
+Een netbeheerder kan aangeven dat een terugmelding geen betrekking heeft op zijn netwerk door `isGeclaimd` de waarde `nee` te geven.
+
+**_pad:_**
+```
+PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
+```
+
+**_benodigde scope:_**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
+
+**_voorbeeld:_**
+```sh
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/terugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+ -X PATCH
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
+ -d "{  \"isGeclaimd\": \"nee\" }"
+```
+
+**_response:_**
+```json
+HTTP/1.1 200 OK
+```
+
+### Claimen terugmelding
+
+Een netbeheerder kan aangeven dat een terugmelding geen betrekking heeft op zijn netwerk door `isGeclaimd` de waarde `ja` te geven.
+
+**_pad:_**
+```
+PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
+```
+
+**_benodigde scope:_**
+```
+klic.beheerdersinformatie
+of
+klic.beheerdersinformatie.readonly
+```
+
+**_voorbeeld:_**
+```sh
+curl https://service10.kadaster.nl/klic/ntd/leveren/api/v2/web/gebiedsinformatieAanvragen/4c8353bd-3907-40ee-84b0-5f54ac38d4d1/terugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+ -X PATCH
+ -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
+ -H 'Accept: application/json'
+ -d "{  \"isGeclaimd\": \"ja\" }"
+```
+
+**_response:_**
+```json
+HTTP/1.1 200 OK
+```

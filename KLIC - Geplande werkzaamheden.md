@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 15 januari 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 22 januari 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april/mei 2021
@@ -25,7 +25,21 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
 Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 26 januari 2021
+Voor deze release is het volgende onderwerpen gepland:
 
+**Aanleveren (centraal en decentraal)**:
+- Ter voorbereiding op de upgrade van de standaarden, zijn aanleveringen van bestanden met een bestandnaam die eindigt op `_v2` of `_V2` niet meer toegestaan.
+  * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 22 januari 2021
+Voor deze release is het volgende onderwerpen gepland:
+
+**API's voor afhandelen afwijkende situatie**:
+- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling beheerdersinformatie%20(BMKL2.0)/B2B-koppeling%20BMKL%202.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
+  Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 19 januari 2021
