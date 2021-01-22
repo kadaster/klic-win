@@ -38,7 +38,7 @@ Voor deze release is het volgende onderwerpen gepland:
 Voor deze release is het volgende onderwerpen gepland:
 
 **API's voor afhandelen afwijkende situatie**:
-- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling beheerdersinformatie%20(BMKL2.0)/B2B-koppeling%20BMKL%202.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
+- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL2.0)/B2B-koppeling%20BMKL%202.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
   Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
 
 --------------------------------------------------------------------------------------
