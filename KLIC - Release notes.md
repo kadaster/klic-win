@@ -1,6 +1,31 @@
 ﻿# Release notes
 ------------------------
+## 2 februari 2021
+Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
 
+**Uitlevering**:
+- Het zipbestand met de KLIC-uitlevering is aangepast in productie:
+  - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd. 
+- De layout en de inhoud van de ontvangstbevestiging en de leveringsmail zijn gemoderniseerd.
+  - Tevens zal de tweede link die in de leveringsemail staat en verwijst naar een web-service niet meer ondersteund worden.
+Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
+Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
+
+------------------------
+## 26 januari 2021
+
+**Aanleveren (centraal en decentraal)**:
+- Ter voorbereiding op de upgrade van de standaarden, zijn aanleveringen van bestanden met een bestandnaam die eindigt op `_v2` of `_V2` niet meer toegestaan.
+  * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
+
+------------------------
+## 22 januari 2021 (publicatie documentatie)
+
+**API's voor afhandelen afwijkende situatie**:
+- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).  \
+  Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
+
+------------------------
 ## 19 januari 2021
 
 **Kadaster KLIC-viewer ([versie 5.8.0](https://www.kadaster.nl/klicviewer) )**:
