@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 22 januari 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 10 februari 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april/mei 2021
@@ -11,6 +11,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Vernieuwing front-end applicatie onder Mijn Kadaster**.
 - Door middel van periodieke releases zullen de KLIC-applicaties voldoen aan de overheidseisen met betrekking tot de toegankelijkheid (WCAG 2.1). Dit zijn aanpassingen m.b.t. web-richtlijnen, zie: [https://www.rijksoverheid.nl/toegankelijkheid ](https://www.rijksoverheid.nl/toegankelijkheid)
 
+--------------------------------------------------------------------------------------
+## Planning voor release - april 2021
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer**:
+De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-platform beschikbaar gesteld. 
+- Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als App beschikbaar gesteld. In de eerste release zal dit een Android App zijn. Daarna komt een IOS variant beschikbaar.
+  - Merk op dat je vanaf 1 april 2021 verplicht bent om een digitaal hulpmiddel bij je moet hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
+  - Lees ook de toelichting van Agentschap Telecom over de verplichting vanaf 1 april 2021: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers).  
 
 
 --------------------------------------------------------------------------------------
@@ -38,7 +47,7 @@ Voor deze release is het volgende onderwerpen gepland:
 Voor deze release is het volgende onderwerpen gepland:
 
 **API's voor afhandelen afwijkende situatie**:
-- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
+- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).  \
   Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
 
 --------------------------------------------------------------------------------------
