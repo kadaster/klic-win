@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 10 februari 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - april/mei 2021
@@ -21,6 +21,11 @@ De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-pla
   - Merk op dat je vanaf 1 april 2021 verplicht bent om een digitaal hulpmiddel bij je moet hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
   - Lees ook de toelichting van Agentschap Telecom over de verplichting vanaf 1 april 2021: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers).  
 
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 maart 2021
+Voor deze release is het volgende onderwerp gepland:
+
+- Geen functionele aanpassingen, enkel technische aanpassingen ter voorbereiding op de upgrade van de standaarden.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2021
