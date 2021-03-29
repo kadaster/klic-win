@@ -12,14 +12,15 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Door middel van periodieke releases zullen de KLIC-applicaties voldoen aan de overheidseisen met betrekking tot de toegankelijkheid (WCAG 2.1). Dit zijn aanpassingen m.b.t. web-richtlijnen, zie: [https://www.rijksoverheid.nl/toegankelijkheid ](https://www.rijksoverheid.nl/toegankelijkheid)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - april 2021
-Voor deze release is het volgende onderwerp gepland:
+## Planning voor release – 7 april 2021
 
-**Kadaster KLIC-viewer**:
-De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-platform beschikbaar gesteld. 
+Voor deze release is het volgende onderwerp gepland:
+Kadaster KLIC-viewer (versie 5.9)
+
+De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-platform beschikbaar gesteld.
 - Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als App beschikbaar gesteld. In de eerste release zal dit een Android App zijn. Daarna komt een IOS variant beschikbaar.
-  - Merk op dat je vanaf 1 april 2021 verplicht bent om een digitaal hulpmiddel bij je moet hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
-  - Lees ook de toelichting van Agentschap Telecom over de verplichting vanaf 1 april 2021: [https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers).  
+	-Merk op dat je vanaf [1 april 2021](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers) verplicht bent om een digitaal hulpmiddel bij je te hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
+Tevens is de performance van kaartlagen uit en aanzetten is verhoogd voor alle platformen (ID 5298)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 maart 2021
