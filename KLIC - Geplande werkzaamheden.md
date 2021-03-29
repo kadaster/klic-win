@@ -19,7 +19,7 @@ Kadaster KLIC-viewer (versie 5.9)
 
 De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-platform beschikbaar gesteld.
 - Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als App beschikbaar gesteld. In de eerste release zal dit een Android App zijn. Daarna komt een IOS variant beschikbaar.
-	-Merk op dat je vanaf [1 april 2021](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers) verplicht bent om een digitaal hulpmiddel bij je te hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
+  -Merk op dat je vanaf [1 april 2021](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers) verplicht bent om een digitaal hulpmiddel bij je te hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
 Tevens is de performance van kaartlagen uit en aanzetten is verhoogd voor alle platformen (ID 5298)
 
 --------------------------------------------------------------------------------------
