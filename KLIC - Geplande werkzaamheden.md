@@ -1,15 +1,31 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 7 April 2021)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - april/mei 2021
+## Planning voor release - eind mei 2021
+
 Voor deze release zijn de volgende onderwerpen gepland:
 
-
 **Vernieuwing proces eenmalige melder (particulier)**:
-- De éénmalige gebruiker kan door middel van selfservice een KLIC-melding doen in plaats van het webformulier. 
+- De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier
 
-**Vernieuwing front-end applicatie onder Mijn Kadaster**.
-- Door middel van periodieke releases zullen de KLIC-applicaties voldoen aan de overheidseisen met betrekking tot de toegankelijkheid (WCAG 2.1). Dit zijn aanpassingen m.b.t. web-richtlijnen, zie: [https://www.rijksoverheid.nl/toegankelijkheid ](https://www.rijksoverheid.nl/toegankelijkheid)
+--------------------------------------------------------------------------------------
+## Planning voor release – Netbeheerder Testdienst (NTD): medio mei 2021
+
+In verband met de upgrade van de KLIC-standaarden komt actualiseren voor versie 2 beschikbaar. 
+Met deze aanpassing is het mogelijk om centraal en decentraal aan te leveren met de geüpgrade versie inclusief validatie op basis van de geüpgrade IMKL standaard. 
+Testen in de NTD in de huidige versie blijft ongewijzigd beschikbaar. 
+Vanaf medio juni 2021 zal de Beheerdersinformatielevering (BIL.ZIP) beide versies bevatten. 
+Let op dus bij het testen van de huidige versie én testen van de geüpgrade versie worden 2 XML’s in de BIL.ZIP opgenomen!
+
+--------------------------------------------------------------------------------------
+## Planning voor release – medio april 2021
+Voor deze release is het volgende onderwerp gepland:
+- De inhoud van de leveringsmail is aangepast.
+
+Voorbeelden:
+[Complete levering](Uitleveren/KLIC complete levering 1 980708428010 21C000981 Ref.pdf).
+[Deel levering](Uitleveren/KLIC deellevering 1 980708428310 21G000765 Ref voorbeeld tekst.pdf).
+[Levering leeg](Uitleveren/KLIC levering (leeg) 1 980708428410 21G000766 Ref voorbeeld tekst.pdf).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 7 april 2021
