@@ -23,9 +23,9 @@ Voor deze release is het volgende onderwerp gepland:
 - De inhoud van de leveringsmail is aangepast.
 
 Voorbeelden:
-[Complete levering](Uitleveren/KLIC%20complete%20levering%201%20980708428010%2021C000981%20Ref.pdf) .
-[Deel levering](Uitleveren/KLIC%20deellevering%201%20980708428310%2021G000765%20Ref%20voorbeeld%20tekst.pdf) .
-[Levering leeg](Uitleveren/KLIC%20levering%20(leeg)%201%20980708428410%2021G000766%20Ref%20voorbeeld%20tekst.pdf) .
+- [Complete levering](Uitleveren/KLIC%20complete%20levering%201%20980708428010%2021C000981%20Ref.pdf)
+- [Deel levering](Uitleveren/KLIC%20deellevering%201%20980708428310%2021G000765%20Ref%20voorbeeld%20tekst.pdf)
+- [Levering leeg](Uitleveren/KLIC%20levering%20(leeg)%201%20980708428410%2021G000766%20Ref%20voorbeeld%20tekst.pdf)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 7 april 2021
