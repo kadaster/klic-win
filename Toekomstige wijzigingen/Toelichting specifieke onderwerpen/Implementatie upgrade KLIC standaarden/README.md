@@ -1,60 +1,143 @@
-# Implementatie upgrade KLIC standaarden
+# Nieuwe versie informatiestandaarden
 
-Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de <u>T</u>echnische <u>C</u>ommissie <u>S</u>tandaarden (TCS).  \
-Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en issue's die in deze commissie worden behandeld. Let wel, dat dit concept-uitwerkingen (kunnen) zijn die nog definitief vastgesteld moeten worden door besluitvormende organen (BAO KLIC, KGO KLIC).
+Over de manier waarop informatie in de KLIC-registratie wordt vastgelegd, gepresenteerd en uitgewisseld, zijn afspraken gemaakt. Deze zijn vastgelegd in het Informatiemodel Kabels en Leidingen (IMKL) en Berichtenprotocol (BMKL). Hiervoor is een nieuwe versie opgesteld. De aanpassingen aan de standaard zijn voorbereid door de Technische Commissie Standaarden KLIC (TCS).
 
-Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
+## Over TCS
+In de TCS zitten vertegenwoordigers van afnemers (namens grondroerders), bronhouders (namens netbeheerders), gemeenten, Agentschap Telecom, Geonovum, Kadaster. De Technische commissie standaarden (TCS) beoordeelt IMKL, Visualisatiemodel en BMKL. De commissie bekijkt of de standaarden in de praktijk voldoen en zorgt voor de nodige aanpassingen. Ook zorgt de commissie voor een goede doorontwikkeling van de standaarden.
 
-- Issue-lijst (GitHub geregistreerde issues)
-  - Issues IMKL en PMKL (visualisatie);  \
-    voor voortgang per issue, zie https://github.com/Geonovum/imkl2015-review/issues
-  - Issues BMKL, REST-API’s;  \
-    voor voortgang per issue, zie https://github.com/kadaster/klic-win/issues
-  - Overzicht issues met prioriteit, zie [GitHub geregistreerde issues (status 10-02-2021)](../../Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Upgrade%20KLIC%20standaarden%20GitHub%20geregistreerde%20issues%2020210210.pdf)  \
-    Let wel:
-    - issues zijn aangevuld en bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS;
-    - issues met prioriteit 'volgende' worden meegenomen in de volgende release van de standaarden;
-    - de oranje-gemarkeerde issues ("parkeren") zijn nog een behandeling bij de TCS of TCS-werkgroepen;  \
-	  de resultaten uit deze werkgroepen zullen niet meer worden meegenomen in de nieuwe versie.
-  - Status: aandachtspunten uit de consultatie zijn behandeld door de commissie en de stakeholders;
-    aanpassingen worden verwerkt in de Release Candidate.
-  - Geonovum is bezig om de aanpassingen door te voeren en te publiceren;  \
-    zie: https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen
+## Achtergrond 
+De nieuwe versies van de standaarden lagen in juli en augustus 2020 in consultatie, in oktober zijn deze als release candidate gepubliceerd en op 10 november 2020 is de versie vastgestelde versie.  \
+Het Kadaster heeft samen met het KLIC gebruikersoverleg een planning opgesteld voor de implementatie. Op deze pagina staat een toelichting op de wijzigingen en de implementatie strategie.
 
-- Versie update strategie  \
-  De TCS stelt voor om de overgang naar een nieuwe versie van het IMKL (IMKL v1.2.1 -> IMKL v2.0) geleidelijk te laten verlopen. Netbeheerders krijgen de mogelijkheid om tijdens een overgangsperiode over te schakelen naar aanlevering van netinformatie/beheerdersinformatie in de nieuwe versie.  \
-  Ook afnemers worden in de gelegenheid gesteld om tijdens een overgangsperiode over te schakelen naar een nieuwe versie van de standaarden.  \
-  Tevens is voorgesteld om deze overgang te laten gelden voor alle standaarden, dus zowel IMKL, als PMKL, als BMKL.  \
-  Voor deze overgang zijn een aantal scenario's bekeken en is (door vrijwel alle stakeholders) een voorkeur uitgesproken voor scenario 1 (zie presentatie). Gedurende deze periode zal een KLIC-levering dan in zowel de huidige, als de nieuwe versie van het IMKL worden uitgeleverd.
-  - Voor een toelichting op de scenario's, zie: [KLIC versie update strategie (vastgesteld)](../../Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/KLIC%20versie%20update%20strategie%20(TCS).pdf).
-
-- Transformatieregels  \
-  Tijdens de overgangsperiode zal een KLIC-levering in zowel de huidige versie (IMKL 1.2.1), als de nieuwe versie (IMKL 2.0) worden uitgeleverd.  \
-  In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
-  - Overzicht van transformatieregels per IMKL-issue; zie [IMKL transformatieregels (vastgesteld 11-02-2021)](../../Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/IMKL%20transformatieregels%20(TCS)%20v1.1.pdf).
-
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 10-02-2021)](../../Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Overzicht%20BMKL-issues%20(TCS)%2020210210.xlsx)  \
-  Status: issues zijn bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS.  \
-  Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
-  Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
-  Denk daarbij ook aan het doorvoeren van een aangepaste hostname en base-path voor de KLIC-API's.  \
-  Toelichting per onderdeel:
-  - **Overzicht:** een overzicht van issues die (mogelijk) impact hebben op de BMKL-API;  \
-  let wel: alle ingediende issues zijn behandeld door het TCS en worden meegenomen in de volgende versie
-  - **Toelichting:** hier wordt aangegeven wat we in scope hebben genomen voor de nieuwe versie van het BMKL;
-  let wel: naast de API's die tot het BMKL gerekend worden, worden ook de andere API's tussen Kadaster KLIC en netbeheerders aangepast t.b.v. eenduidigheid.  \
-  Dit geldt ook voor de B2B-aanvraag.
-  - **Aanpassingen per API:**  \
-  Vervolgens zijn er tabbladen gemaakt met relevante API’s die momenteel door KLIC worden beschikbaar gesteld voor externe gebruikers.  \
-  Bij de analyse zijn alle huidige BMKL-API’s meegenomen, maar ook verbeteringen op andere API’s en de B2B-aanvraag.  \
-  Ook mogelijke verbeterpunten voor het gebruik van referenties naar KLIC-waardelijsten (bijv. url-paden, etc.) en statussen zijn voorgesteld (blauw gemarkeerd).  \
-  Per tabblad (dus per API + B2B-aanvraag) wordt een overzicht gegeven van:
-    - de huidige situatie (huidige attribuutlijst)
-	- de gewenste situatie (aangepaste attribuutlijst)
-	- opmerkingen over de wijziging (met een referentie naar het GitHub-issue)
-	- voorbeeldbericht van de huidige situatie
-	- voorbeeldbericht van de gewenste situatie
+## Nieuwe versie standaard.
+IMKL versie 2.0 is gepubliceerd op de [website van Geonovum](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).  \
+Een nieuwe versie van het berichtenmodel (BMKL versie 2.1) en een toelichting op de wijzigingen van de IMKL/PMKL/BMKL-standaarden vindt u op [deze GitHub pagina van het Kadaster](Gewijzigde%20BMKL.md).
 
 
 
-Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
+# Toelichting implementatie Upgrade Standaarden
+
+Op deze pagina staat een toelichting op de wijzigingen en de implementatie strategie van de upgrade van de standaarden.
+
+## Overgangsperiode
+
+**Uitgangspunten**:
+- Nieuw informatiemodel wordt live gebracht, huidig model blijft nog 4 maanden (overgangsperiode) beschikbaar om de overgang te faciliteren.  \
+  ![Overgangsperiode](bijlagen/Overgangsperiode.png "Overgangsperiode")  
+- Gedurende de overgangsperiode vindt de uitlevering aan Grondroerders plaats, zowel in het huidige informatiemodel als in het nieuwe informatiemodel: In de ZIP-levering zitten 2 XML’s die beide de complete set aan data representeren
+- Het Kadaster transformeert de aangeleverde versie van de net-informatie naar het andere model (V1 -> V2, of V2 -> V1)
+- Beide volledige versies worden in één Zip uitgeleverd, vanaf start tot eind van de overgangsperiode.
+
+**Kenmerken van de overgangsperiode**:
+- De Leverings-/BIL-Zip wijzigt bij start en einde van de overgangsperiode
+- Tijdens de overgangsperiode worden beide versies tegelijkertijd ondersteund en uitgeleverd
+- Netbeheerders kiezen zelf wanneer ze V1 of V2 aanleveren
+  - Bij onoverkomelijke problemen kan een Netbeheerder (tijdelijk) weer aanleveren in V1
+- Grondroerder kan in deze periode zelf kiezen wanneer hij versie 2 wil gebruiken
+- In de uitlevering naar Grondroerders (Zip-levering) zitten 2 XML’s (V1 én V2).
+- In de uitlevering naar Netbeheerders (BIL-Zip) zitten 2 XML’s (V1 én V2). 
+  - Beide versies representeren dus de complete set aan data 
+  - Afnemers hebben daarbij de mogelijk zelf te bepalen wanneer zij (gedurende de overgangsperiode) overgaan naar de nieuwe uitlevering
+  - Afnemers (bv viewers) kunnen tijdens de overgangsperiode zelf bepalen op welke XML ze acteren
+- Centraal aangeleverde netinformatie (van Netbeheerders aan Kadaster) wordt alleen opgeslagen in aangeleverde versie
+- Gedurende de overgangsperiode transformeert het Kadaster de informatie van de netbeheerder en levert in beide versies van het informatiemodel uit
+
+**Planning**:
+- Start overgang: maandag 3 januari 2022
+- Einde overgang: vrijdag 1 april 2022 (beoogd)
+
+**Gekozen strategie**:
+- [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie. 
+
+**Transformatie tijdens de overgang door het Kadaster**:
+- Tijdens de overgangsperiode zal een KLIC-levering in zowel de huidige versie (IMKL 1.2.1), als de nieuwe versie (IMKL 2.0) worden uitgeleverd.
+- In transformatieregels wordt per IMKL-issue aangegeven hoe deze transformatie tussen beide versies zal worden uitgevoerd.
+- De transformatie regels zoals vastgesteld door de TCS [zijn hier te vinden](Transformatieregels%20versie%201.2.pdf).
+
+
+## Aanleveringen
+V1 kan tot het einde van de overgangsperiode aangeleverd worden zoals men gewend is (kleine uitzondering: het aanleveringsbestand mag sinds 26 januari 2021 niet eindigen op `_V2.zip`)  \
+V2 aanleveringen: er komt een extra endpoint beschikbaar om V2 aanleveringen te doen. Het bestand moet voldoen aan nieuwe standaard  en het bestandsnaam van het aangeleverde moet eindigen op `_V2.zip`  \
+  \
+V1-API staat open tot het einde van de overgang.  \
+V2-API staat open vanaf het begin van de overgangsperiode.
+
+
+## Uitlevering
+Aan het begin van de overgang wordt er een extra XML in de zip geplaatst.  \
+Na de overgang verdwijnen de Leveringsindex-xml (LI.xml)  en de GebiedsInformatie-xml (GI.xml) met V1 versie.  \
+![Inhoud_LeveringsZIP](bijlagen/Inhoud_LeveringsZIP.png "Inhoud_LeveringsZIP")
+
+## Gefaseerde oplevering
+
+In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
+- **Mijlpaal 1**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard in de NTD
+- **Mijlpaal 2**: Gi.xml in de BIL-zip in 2 versies beschikbaar in NTD
+- **Mijlpaal 3**: API in versie 2 beschikbaar naast de huidige API in de NTD
+![Mijlpalen.png](bijlagen/Mijlpalen.png "Mijlpalen.png")
+
+
+## De wijzigingen:
+Hieronder staan de links naar de ingebrachte issues die in scope zijn van deze update. Tevens is er voor een aantal issues een beschrijving vanuit het Kadaster toegevoegd.  \
+Een pdf versie met de issues die in scope zijn van deze update, [is hier te vinden](Upgrade%20KLIC%20standaarden%20GitHub%20geregistreerde%20issues%2020210210.pdf).  \
+Merk op dat de IMKL specificatie (inclusief bijlagen) leidend is zoals die gepubliceerd is op de [website van Geonovum](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).
+
+| Nr   | Titel                                                                                                | Issue beschrijving                                                | Wijziging                                                                                                                               | Beschrijving Kadaster                        | 
+|------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| #193 | Storing en Beschadigingsnummer zijn opgenomen, maar dit moet één nummer worden: beschadigingsnummer. | [details](https://github.com/Geonovum/imkl2015-review/issues/193) | Geen onderscheid meer tussen contactStoring en contactBeschadiging.                                                                     | [beschrijving](bijlagen/193_beschrijving.md) |
+| #239 | Beperking aan aantal tekens voor attribuut 'label'                                                   | [details](https://github.com/Geonovum/imkl2015-review/issues/239) | Attribuut 'label' maximaal 40 tekens.                                                                                                   |                                              |
+| #283 | Nauwkeurigheid van (RD)-coördinaten in 3 decimalen                                                   | [details](https://github.com/Geonovum/imkl2015-review/issues/283) | Nauwkeurigheid van (RD)-coördinaten in maximaal 3 decimalen.                                                                            | [beschrijving](bijlagen/283_beschrijving.md) |
+| #282 | Afsluiters niet (altijd) zichtbaar in een KLIC-viewer                                                | [details](https://github.com/Geonovum/imkl2015-review/issues/282) | Rotatiehoek verplicht bij afsluiters.                                                                                                   | [beschrijving](bijlagen/282_beschrijving.md) |
+| #304 | Koppelen van leidingelement aan een BGT-object o.b.v. BGT-identifier                                 | [details](https://github.com/Geonovum/imkl2015-review/issues/304) | Koppelen van een net-element aan een BGT-object o.b.v. BGT-identifier.                                                                  |                                              |
+| #195 | Niet betrokken bijlage uit het IMKL halen (KLO-werkgroep "reduceren documenten")                     | [details](https://github.com/Geonovum/imkl2015-review/issues/195) | Bijlage van type “nietBetrokken” niet meer toegestaan.                                                                                  |                                              |
+| #192 | Website links van netbeheerders: Eén URL van de netbeheerder registreren i.p.v. Algemene bijlage.    | [details](https://github.com/Geonovum/imkl2015-review/issues/192) | Maximaal één bijlage van het type ‘algemeen’.                                                                                           |                                              |
+| #197 | Enkele attributen van Bijlage optioneel                                                              | [details](https://github.com/Geonovum/imkl2015-review/issues/197) | Attributen ‘bestandLocatie’ en ‘bestandMediaType’ van Bijlage optioneel bij centrale aanleveringen.                                     |                                              |
+| #215 | Postcode is geen verplicht attribuut van een adres                                                   | [details](https://github.com/Geonovum/imkl2015-review/issues/215) | 1) Adres: postcode geen verplicht attribuut; 2) Adres: BAGidAdresseerbaarObject wordt BAGid; 3)adres: andere volgorde van de atributen. |                                              |
+| #303 | Consequenter gebruik van waarden uit waardelijst "Landcodes"                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/303) | waardenlijst: Landcode via URI.                                                                                                         |                                              |
+| #310 | Landcode: hoe opnemen? als uri of als waarde                                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/310) | waardenlijst: Landcode via URI.                                                                                                         |                                              |
+| #277 | Waardelijst VoidReasonValue niet gepubliceerd op geostandaarden                                      | [details](https://github.com/Geonovum/imkl2015-review/issues/277) | Waardenlijst VoidReasonValue niet gepubliceerd op geostandaarden.                                                                       |                                              |
+| #308 | Waardelijst rdf: Links naar GWSW objecten aanpassen                                                  | [details](https://github.com/Geonovum/imkl2015-review/issues/308) | Waardenlijst: gewijzigde URI.                                                                                                           |                                              |
+| #311 | Inspectieput ontbreekt bij SewerAppurtenanceValue                                                    | [details](https://github.com/Geonovum/imkl2015-review/issues/311) | Waardenlijst: toevoegen  Inspectieput.                                                                                                  |                                              |
+| #250 | Appurtenance-type voor leidingelementen van thema wees of overig ontbreken.                          | [details](https://github.com/Geonovum/imkl2015-review/issues/250) | AppurtenanceType voor leidingelementen van thema Overig toegevoegd.                                                                     |                                              |
+| #198 | standaard namespace afkortingen in XML datasets                                                      | [details](https://github.com/Geonovum/imkl2015-review/issues/198) | Standaard namespaces en aliassen in XML datasets.                                                                                       |                                              |
+| #294 | Onjuist gebruik `srsName` bij geometrie                                                              | [details](https://github.com/Geonovum/imkl2015-review/issues/294) | Valideren op juist gebruik `srsName` bij geometrie.                                                                                     |                                              |
+| #296 | Aanpassing naamgeving eisVoorzorgsmaatregel bij Belanghebbende                                       | [details](https://github.com/Geonovum/imkl2015-review/issues/296) | Belanghebbende attribuut 'eisVoorzorgsmaatregel'  wordt 'indicatieEisVoorzorgsmaatregel'.                                               |                                              |
+| #210 | Gebruik multi-geometrieën bij AanduidingEisVoorzorgzorgsmaatregel en ExtraGeometrie                  | [details](https://github.com/Geonovum/imkl2015-review/issues/210) | Bij AanduidingEisVoorzorgzorgsmaatregel en ExtraGeometrie is voor de geometrie nu ook een  'multivalk' toegstaan.                       |                                              |
+| #194 | Extra Detail Informatie: “Overige” aanpassen in “Specifieke netinformatie”                           | [details](https://github.com/Geonovum/imkl2015-review/issues/194) |                                                                                                                                         |                                              |
+| #305 | Thema en waarde voor "(vloeibare) biomassa                                                           | [details](https://github.com/Geonovum/imkl2015-review/issues/305) |                                                                                                                                         |                                              |
+| #268 | Documentation on EisVoorzorgsmaatregelBijlage elements seems incorrect                               | [details](https://github.com/Geonovum/imkl2015-review/issues/268) |                                                                                                                                         |                                              |
+| #214 | UML Constraint: fout bij Objecttype Gebiedsinformatielevering                                        | [details](https://github.com/Geonovum/imkl2015-review/issues/214) |                                                                                                                                         |                                              |
+| #191 | IMKL2015 v 1.2.1 Constraint op Annotatie.rotatiehoek                                                 | [details](https://github.com/Geonovum/imkl2015-review/issues/191) |                                                                                                                                         |                                              |
+| #190 | IMKL2015 v1.2.1 Constraint op Maatvoering.rotatiehoek                                                | [details](https://github.com/Geonovum/imkl2015-review/issues/190) |                                                                                                                                         |                                              |
+| #213 | ExtraRegels: Tabblad Maatvoering                                                                     | [details](https://github.com/Geonovum/imkl2015-review/issues/213) |                                                                                                                                         |                                              |
+|   |                                                                                                      |   |                                                                                                                                         |                                              |
+| #285 | Versienummer opnemen in de gebiedsinformatie-levering / beheerdersinformatie                         | [details](https://github.com/Geonovum/imkl2015-review/issues/285) |                                                                                                                                         |                                              |
+| #295 | Aanpassen format voor KLIC-meldnummer                                                                | [details](https://github.com/Geonovum/imkl2015-review/issues/295) |                                                                                                                                         |                                              |
+| #312 | Referentie in KLIC-melding verplicht maken                                                           | [details](https://github.com/Geonovum/imkl2015-review/issues/312) |                                                                                                                                         |                                              |
+| #199 | Impact WIBON (breedband) op de KLIC standaarden (KLIC-WIN)                                           | [details](https://github.com/Geonovum/imkl2015-review/issues/199) |                                                                                                                                         |                                              |
+| #298 | Mogelijk maken om een 2e telefoonnummer op te geven bij aanvrager in KLIC proces                     | [details](https://github.com/Geonovum/imkl2015-review/issues/298) |                                                                                                                                         |                                              |
+| #280 | Organisatie heeft maar maximaal 1 e-mailadres                                                        | [details](https://github.com/Geonovum/imkl2015-review/issues/280) |                                                                                                                                         |                                              |
+| #219 | locatieWerkzaamheden specificeren als Adres                                                          | [details](https://github.com/Geonovum/imkl2015-review/issues/219) |                                                                                                                                         |                                              |
+| #286 | Meeleveren BGT-achtergrondkaart in ander formaat                                                     | [details](https://github.com/Geonovum/imkl2015-review/issues/286) |                                                                                                                                         |                                              |
+| #240 | Definitie geometrieVoorVisualisatie (van Informatiepolygoon)                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/240) |                                                                                                                                         |                                              |
+|   |                                                                                                      |   |                                                                                                                                         |                                              |
+| #251 | Visualisatie ExtraDetailinfo                                                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/251) |                                                                                                                                         |                                              |
+| #279 | Visualisatie EV aanduiding vlakken - Lijndikte buitenlijn is te dik                                  | [details](https://github.com/Geonovum/imkl2015-review/issues/279) |                                                                                                                                         |                                              |
+| #289 | Maatvoeringspijl arrows in 1.2.1.3 style sheet                                                       | [details](https://github.com/Geonovum/imkl2015-review/issues/289) |                                                                                                                                         |                                              |
+| #290 | Labels overlapping (annotatie / maatvoering)                                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/290) |                                                                                                                                         |                                              |
+| #284 | ExtraDetailinfo styles different on zoom level                                                       | [details](https://github.com/Geonovum/imkl2015-review/issues/284) |                                                                                                                                         |                                              |
+| #278 | Beschrijving hoe Lijnobject met status "projected" gevisualiseerd moet worden is niet eenduidig      | [details](https://github.com/Geonovum/imkl2015-review/issues/278) |                                                                                                                                         |                                              |
+| #246 | Aanvullingen/verbeteringen tabblad SymboolAppurtenance                                               | [details](https://github.com/Geonovum/imkl2015-review/issues/246) |                                                                                                                                         |                                              |
+| #232 | xml:lang="nl" toevoegen aan skos:waardelijst                                                         | [details](https://github.com/Geonovum/imkl2015-review/issues/232 ) |                                                                                                                                         |                                              |
+| #275 | URL Attributes - reading labels and matching SLDs                                                    | [details](https://github.com/Geonovum/imkl2015-review/issues/275 ) |                                                                                                                                         |                                              |
+|   |                                                                                                      |   |                                                                                                                                         |                                              |
+| #64  | Verkeerde waarden werkzaamheden bij gebruik BMKL-API                                                 | [details](https://github.com/kadaster/klic-win/issues/64) |                                                                                                                                         |                                              |
+| #85  | BMKL: Attribuut `extraEmail` ontbreekt in GET gebiedsinformatieaanvragen                             | [details](https://github.com/kadaster/klic-win/issues/85) |                                                                                                                                         |                                              |
+| #89  | BMKL: relatienummer alleen van toepassing bij Aanvrager                                              | [details](https://github.com/kadaster/klic-win/issues/89) |                                                                                                                                         |                                              |
+| #90  | Aanpassing naamgeving statussen bij samenstellen beheerdersinformatie                                | [details](https://github.com/kadaster/klic-win/issues/90) |                                                                                                                                         |                                              |
+| #91  | BMKL: refereer in GebiedsinformatieAanvraag naar bestaande IMKL-waardelijsten                        | [details](https://github.com/kadaster/klic-win/issues/91) |                                                                                                                                         |                                              |
+| #92  | BMKL: definities en naamgeving attributen GebiedsinformatieAanvraag conform IMKL                     | [details](https://github.com/kadaster/klic-win/issues/92) |                                                                                                                                         |                                              |
+| #94  | Toepassen nieuwe hostname/base-url voor KLIC-API's                                                   | [details](https://github.com/kadaster/klic-win/issues/94) |                                                                                                                                         |                                              |
+| #95  | Eenduidigheid in naamgeving status beheerdersinformatie ("bi") en gebiedsinformatie ("gi")           | [details](https://github.com/kadaster/klic-win/issues/95) |                                                                                                                                         |                                              |
+| #97  | Aanlever-API, eenduidige naamgeving bij verschillende informatiesoorten                              | [details](https://github.com/kadaster/klic-win/issues/97) |                                                                                                                                         |                                              |
+| #98  | Aanlever-API: consequenter gebruik van waarden uit waardelijsten                                     | [details](https://github.com/kadaster/klic-win/issues/98) |                                                                                                                                         |                                              |
