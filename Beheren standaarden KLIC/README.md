@@ -37,10 +37,10 @@ Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en i
 Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 
 - Continu beheer van issue-lijst (GitHub geregistreerde issues)
-  - Issues IMKL en PMKL (visualisatie);  \
-  - Issues BMKL, REST-API’s;  \
-  - Nieuwe (waarde)lijst soort werkzaamheden;  \
-  - Vastleggen mantelbuizen waar meerdere kabels en leidingen doorheen gaan;  \
+  - Issues IMKL en PMKL (visualisatie);  
+  - Issues BMKL, REST-API’s;  
+  - Nieuwe (waarde)lijst soort werkzaamheden;  
+  - Vastleggen mantelbuizen waar meerdere kabels en leidingen doorheen gaan;  
 
 Van onderstaande onderwerpen is door de TCS een concept opgeleverd. Na definitieve besluitvorming van Agentschap Telecom, zullen deze worden opgenomen in de nieuwe versie van de standaarden.
 
