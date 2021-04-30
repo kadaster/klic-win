@@ -462,9 +462,9 @@ Omdat het clippen van deze geometrie mogelijk tot een `GM_MultiSurface` zou kunn
 ### Gebruik `nilValue` en onbekende waarde
 Voorbeelden:
 ```xml
-    <us-net-common:warningType xsi:nil="true" nilReason="unknown"></us-net-common:warningType>
+    <us-net-common:warningType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown"></us-net-common:warningType>
     ...
-    <us-net-common:warningType xsi:nil="true" nilReason="missing"></us-net-common:warningType>
+    <us-net-common:warningType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"></us-net-common:warningType>
 ```
 
 ### Ontbreken van "echte" waarden
@@ -526,11 +526,11 @@ Hieronder is een voorbeeld uit een productielevering met **onjuist** gebruik van
       </gml:Point>
     </net:geometry>
     <us-net-common:currentStatus n1:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional" xmlns:n1="http://www.w3.org/1999/xlink" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
-    <us-net-common:validFrom nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
-    <us-net-common:validTo nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
-    <us-net-common:verticalPosition nilReason="UNKNOWN" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
-    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="UNKNOWN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
-    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="UNKNOWN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:validFrom nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:validTo nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:verticalPosition nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
+    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
     <us-net-common:appurtenanceType n1:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/GTWP" xmlns:n1="http://www.w3.org/1999/xlink" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" />
   </imkl:Appurtenance>
 </gml:featureMember>
@@ -563,11 +563,11 @@ Dit leidt tot onderstaande vereenvoudiging:
       </gml:Point>
     </net:geometry>
     <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional"/>
-    <us-net-common:validFrom nilReason="UNKNOWN" xsi:nil="true"/>
-    <us-net-common:validTo nilReason="UNKNOWN" xsi:nil="true"/>
-    <us-net-common:verticalPosition nilReason="UNKNOWN" xsi:nil="true"/>
-    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="UNKNOWN"/>
-    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="UNKNOWN"/>
+    <us-net-common:validFrom nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true"/>
+    <us-net-common:validTo nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true"/>
+    <us-net-common:verticalPosition nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown" xsi:nil="true"/>
+    <us-net-common:utilityFacilityReference xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown"/>
+    <us-net-common:governmentalServiceReference xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown"/>
     <us-net-common:appurtenanceType xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/TelecommunicationsAppurtenanceTypeIMKLValue/GTWP"/>
   </imkl:Appurtenance>
 </gml:featureMember>
