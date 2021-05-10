@@ -1,0 +1,485 @@
+<!-- bestandsnaam: KlicB2BAanvraag-1.2.xsd -->
+<!-- bron: Kadaster-KLIC -->
+<!-- [1.1] 09-01-2019 ________________________________________________________________________________
+     [1.2] 07-05-2021 ________________________________________________________________________________
+Versie			: 1.2
+Datum			: 07-05-2021
+Door				: Kadaster 
+Toelichting	:
+Dit schema definieert de gebiedsinformatie-aanvraag zoals die door een aanvrager met een B2B-koppeling kan worden aangeboden.
+Deze versie is nog gebaseerd op het gebruik van een SOAP-interface.
+
+Onderstaande nieuwe attributen zijn optioneel:
+	- KvkNummer (van aanvrager)
+	- KvkNummer (van opdrachtgever)
+	- VoorbereidingMedegebruikFysiekeInfrastructuur, of
+	  VoorbereidingCoordinatieCivieleWerken
+	- Informatiepolygoon
+	- IdentificatieBAG (bij dichtsbijzijnd adres) en IdentificatieBAG (bij huisaansluitschets adres)
+	  Van deze adressen (NIAdresTpe) zijn de elementen Huisnummer en Postcode niet meer verplicht.
+  - ExtraNaam (van aanvrager)
+  - ExtraTelefoon (van aanvrager)
+  - Locatieomschrijving (van productspecificatie)
+
+Let op:
+Functionaliteit om gebruik te maken van deze attributen in KLIC zal gefaseerd beschikbaar worden gesteld.
+_____________________________________________________________________________________________________ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814" targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814">
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="../gml/3.1.1/base/gml.xsd"/>
+	<xsd:element name="KlicB2BAanvraag" type="tns:KlicB2BAanvraagType">
+		<xsd:annotation>
+			<xsd:documentation>versie 1.1</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="KlicB2BAanvraagType">
+		<xsd:annotation>
+			<xsd:documentation>Modellering van de aanvraag van gebiedsinformatie over kabels en leidingen die via het B2B-bestelkanaal bij het Kadaster wordt ingediend.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:annotation>
+				<xsd:documentation>Order met een specifieke gebiedsinformatie-aanvraag.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="Order" type="tns:OrderType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrderType">
+		<xsd:sequence>
+			<xsd:element name="Klant" type="tns:AanvragerType"/>
+			<xsd:element name="Klantreferentie" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Orderregel" type="tns:OrderregelType" minOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AanvragerType">
+		<xsd:annotation>
+			<xsd:documentation>Kenmerken van een klant die een aanvraag indient.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Relatienummer" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identificatie van de klant zoals deze bij Kadaster relatiebeheer bekend is.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="KvkNummer" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>KvK nummer (Kamer van Koophandel) van de aanvrager (zolang deze niet is geactualiseerd in relatiebeheer).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Contactgegevens" type="tns:ContactgegevensType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Contactgegevens van de aanvrager waarmee de graafsector in contact kan treden bij correspondentie over de betreffende gebiedsinformatie-aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExtraNaam" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Additionele naam (behorend bij ExtraTelefoon en ExtraEmail).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExtraTelefoon" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Additioneel telefoonnummer  (behorend bij ExtraNaam en ExtraEmail).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExtraEmail" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Additioneel e-mail adres. (behorend bij ExtraNaam en ExtraTelefoon).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactgegevensType">
+		<xsd:annotation>
+			<xsd:documentation>Contactgegevens van de aanvrager waarmee de graafsector in contact kan treden voor nadere informatie over de aanvraag.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Naam" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>De naam van de aanvrager (medewerker bij klant).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Telefoon" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Het telefoonnummer van de aanvrager.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Email" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Het e-mailadres van de aanvrager.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Fax" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Faxnummer van de aanvrager.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrderregelType">
+		<xsd:annotation>
+			<xsd:documentation>Orderregel met een specifieke gebiedsinformatie-aanvraag.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ID" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identificatie die door de klant aan de orderregel is gegeven.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Product" type="tns:KlicProductType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Aangevraagd product</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Productdetails" type="tns:GebiedsinformatieAanvraagType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Aanvullende kenmerken over het aangevraagde product</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="KlicProductType">
+		<xsd:annotation>
+			<xsd:documentation>Lijst van producten waarvoor gebiedsinformatie over kabels en leidingen kan worden aangevraagd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Klic levering graafmelding">
+				<xsd:annotation>
+					<xsd:documentation>Product voor het bestellen en leveren van gebiedsinformatie bij een graafmelding.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Klic levering orientatieverzoek">
+				<xsd:annotation>
+					<xsd:documentation>Product voor het bestellen en leveren van gebiedsinformatie bij een orientatieverzoek.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Klic levering calamiteit">
+				<xsd:annotation>
+					<xsd:documentation>Product voor het bestellen en leveren van gebiedsinformatie bij een calamiteitenmelding.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Klic levering agrariersmelding">
+				<xsd:annotation>
+					<xsd:documentation>Product voor het bestellen en leveren van gebiedsinformatie in het kader van de agrariersregeling.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="GebiedsinformatieAanvraagType">
+		<xsd:annotation>
+			<xsd:documentation>Specifieke kenmerken bij een aanvraag van gebiedsinformatie.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="KlantSpecificatie" type="tns:KlantSpecificatieType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Specifieke klantkenmerken  bij een aanvraag van gebiedsinformatie.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ProductSpecificatie" type="tns:ProductSpecificatieType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Specifieke kenmerken van het gevraagde product bij een aanvraag van gebiedsinformatie.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="KlantSpecificatieType">
+		<xsd:annotation>
+			<xsd:documentation>Bevat gegevens van de klant</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Opdrachtgever" type="tns:OpdrachtgeverType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Gegevens van de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ProductSpecificatieType">
+		<xsd:annotation>
+			<xsd:documentation>Bevat de productspecificatie ingegeven door de klant.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Gebiedspolygoon" type="gml:PolygonType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>De polygoon die het gebied aangeeft waarvoor een aanvraag wordt gedaan. Bij G/C: graafpolygoon, bij O: orientatiepolygoon</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Informatiepolygoon" type="gml:PolygonType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Bij G/C: de polygoon die het ruimere gebied aangeeft waarover informatie wordt aangevraagd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VoorbereidingMedegebruikFysiekeInfrastructuur" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Voorbereiding op een verzoek tot medegebruik van fysieke infrastructuur (in het kader van EU-stimulering breedband).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VoorbereidingCoordinatieCivieleWerken" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Voorbereiding op een verzoek tot coördinatie van civiele werken (in het kader van EU-stimulering breedband).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Werkzaamheden" type="tns:WerkzaamhedenType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Gegevens omtrent te verrichten werkzaamheden in het graaf- of orientatiegebied.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Locatieadres" type="tns:NlAdresType">
+				<xsd:annotation>
+					<xsd:documentation>Dichtstbijzijnd adres (DAS) van de gebiedspolygoon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Locatieomschrijving" type="xsd:string"  minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Een omschrijving van de locatie van de werkzaamheden waar de gebiedsinformatie-aanvraag voor is ingediend.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HuisaansluitschetsAdres" type="tns:NlAdresType" minOccurs="0" maxOccurs="100">
+				<xsd:annotation>
+					<xsd:documentation>Lijst met adressen waarvoor de aanvrager huisaansluitschetsen wenst te ontvangen.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OpdrachtgeverType">
+		<xsd:annotation>
+			<xsd:documentation>De gegevens van de opdrachtgever van de grondroerder (definitie volgens BMKL).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Naam" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Naam van de contactpersoon bij de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Bedrijfsnaam" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>De bedrijfsnaam van de opdrachtgever zoals die in het handelsverkeer wordt gehanteerd.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="KvkNummer" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>KvK nummer (Kamer van Koophandel) van de opdrachtgever voor de aanvraag.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Adres" type="tns:AdresType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Adresgegevens van de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Telefoon" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Telefoonnummer van de contactpersoon van de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Email" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>E-mailadres van de contactpersoon van de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Fax" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Faxnummer van de contactpersoon van de opdrachtgever.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AdresType">
+		<xsd:annotation>
+			<xsd:documentation>De adresgegevens van een persoon of een bedrijf. 
+Let op: In deze modellering wordt al rekening gehouden met het attribuut "Huisletter" dat BAG expliciet onderkent.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Straat" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Straatnaam (zonder huisnummer)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Huisnummer" type="xsd:int" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Huisnummer van een straat</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Huisletter" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Dit attribuut wordt expliciet onderkend bij het specificeren van een adres volgens BAG.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Huisnummertoevoeging" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>De eventuele toevoeging aan het huisnummer.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Postcode" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Postcode</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Plaats" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Plaatsnaam</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Landcode" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Land, aangeduid met zijn 2-letterige afkorting volgens ISO 3166-standaard.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NlAdresType">
+		<xsd:annotation>
+			<xsd:documentation>De adresgegevens van een Dichtstbijzijnd adres of huisaansluitschetsen.
+Dit zijn altijd adressen binnen Nederland en hebben dus geen Landcode.  
+Let op: In deze modellering wordt al rekening gehouden met het attribuut "Huisletter" dat BAG expliciet onderkent.
+Van het BAG-object kan nu ook het BAGid worden meegegeven (van het adresseerbare object)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Straat" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Straatnaam (zonder huisnummer)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Huisnummer" type="xsd:int" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Huisnummer van een straat</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Huisletter" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Dit attribuut wordt expliciet onderkend bij het specificeren van een adres volgens BAG.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Huisnummertoevoeging" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>De eventuele toevoeging aan het huisnummer.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Postcode" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Postcode</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Plaats" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Plaatsnaam</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IdentificatieBAG" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Voor DAS en HAS: BAGid van het adresseerbare object</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WerkzaamhedenType">
+		<xsd:annotation>
+			<xsd:documentation>De set van relevante gegevens van de aanvraag nodig voor het uitsturen van een graafbericht.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="AanvangGraafwerkzaamheden" type="xsd:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Datum waarop met de graafwerkzaamheden wordt begonnen. Alleen verplicht in geval van een graafmelding.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EindeWerkzaamheden" type="xsd:date" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Geschatte datum waarop de graafwerkzaamheden worden beeindigd. Alleen verplicht in geval van een graafmelding.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SoortWerkzaamheden" type="tns:SoortGraafwerkzaamhedenType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Bevat de soort(en) werkzaamheden die in het kader van de gebiedsinformatie-aanvraag worden verricht.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Notitie" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Ruimte om extra informatie over de voorgenomen werkzaamheden mee te delen aan de betrokken netbeheerders.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="SoortGraafwerkzaamhedenType">
+		<xsd:annotation>
+			<xsd:documentation>Lijst van soorten werkzaamheden die in het kader van de gebiedsinformatie-aanvraag kunnen worden verricht.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Aarding slaan"/>
+			<xsd:enumeration value="Archeologisch onderzoek"/>
+			<xsd:enumeration value="Baggerwerk"/>
+			<xsd:enumeration value="Bestratingswerk"/>
+			<xsd:enumeration value="Bodemonderzoek/sonderingen"/>
+			<xsd:enumeration value="Bodemsanering"/>
+			<xsd:enumeration value="Bomen rooien/planten"/>
+			<xsd:enumeration value="Bouwwerkzaamheden"/>
+			<xsd:enumeration value="CAI kabel leggen"/>
+			<xsd:enumeration value="Damwand/beschoeiing slaan"/>
+			<xsd:enumeration value="Diepploegen"/>
+			<xsd:enumeration value="Drainage"/>
+			<xsd:enumeration value="Duikers leggen enz."/>
+			<xsd:enumeration value="Funderingswerk"/>
+			<xsd:enumeration value="Gasleiding leggen"/>
+			<xsd:enumeration value="Grondwerk/bouwrijp maken"/>
+			<xsd:enumeration value="Handholes plaatsen"/>
+			<xsd:enumeration value="HDPE buis leggen"/>
+			<xsd:enumeration value="Heien"/>
+			<xsd:enumeration value="Hekwerk plaatsen"/>
+			<xsd:enumeration value="Hovenierswerkzaamheden"/>
+			<xsd:enumeration value="Huisaansluitingen maken"/>
+			<xsd:enumeration value="Kabels/leidingen leggen"/>
+			<xsd:enumeration value="Kabels/leidingen verleggen"/>
+			<xsd:enumeration value="Leggen hoogspanning"/>
+			<xsd:enumeration value="Leggen laagspanning"/>
+			<xsd:enumeration value="Leggen middenspanning"/>
+			<xsd:enumeration value="Mantelbuis leggen"/>
+			<xsd:enumeration value="O.V.werkzaamheden"/>
+			<xsd:enumeration value="Palen/masten plaatsen/verwijderen"/>
+			<xsd:enumeration value="Persing/boring"/>
+			<xsd:enumeration value="Proefsleuven graven"/>
+			<xsd:enumeration value="Reconstructiewerkzaamheden"/>
+			<xsd:enumeration value="Rioleringswerkzaamheden"/>
+			<xsd:enumeration value="Ruilverkaveling"/>
+			<xsd:enumeration value="Sloopwerkzaamheden"/>
+			<xsd:enumeration value="Stadsverwarming leggen"/>
+			<xsd:enumeration value="Stobben frezen"/>
+			<xsd:enumeration value="Tanks/putten/containers in- of uitgraven"/>
+			<xsd:enumeration value="Telefoonkabel leggen"/>
+			<xsd:enumeration value="Trafostations plaatsen"/>
+			<xsd:enumeration value="Verwijderen kabels/leidingen"/>
+			<xsd:enumeration value="Vijver graven"/>
+			<xsd:enumeration value="Voerkuilen graven"/>
+			<xsd:enumeration value="Waterbouwkundige werken"/>
+			<xsd:enumeration value="Waterleiding leggen"/>
+			<xsd:enumeration value="Wegenbouw"/>
+			<xsd:enumeration value="Werk aan bestaande leiding"/>
+			<xsd:enumeration value="Woningbouw"/>
+			<xsd:enumeration value="Woonrijp maken"/>
+			<xsd:enumeration value="Zinker maken"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

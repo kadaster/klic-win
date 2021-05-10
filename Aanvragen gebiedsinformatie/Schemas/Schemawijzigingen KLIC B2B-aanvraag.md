@@ -7,9 +7,26 @@ Let wel dat de WSDL's ook worden/zijn aangepast, zodat ze verwijzen naar de juis
 
 - [KlicB2BAanvraag](#klicb2baanvraag)
   -[Wijzigingen KlicB2BAanvraag-1.1](#wijzigingen-klicb2baanvraag-11)
+  -[Wijzigingen KlicB2BAanvraag-1.2](#wijzigingen-klicb2baanvraag-12)
 - [KlicB2BBetrokkenBeheerders](#klicb2bbetrokkenbeheerders)
   -[Wijzigingen KlicB2BBetrokkenBeheerders-1.1](#wijzigingen-klicb2bbetrokkenbeheerders-11)
 - [Implementatie](#implementatie)
+
+---------------------------------------------------------
+## KlicB2BAanvraag
+
+### Wijzigingen KlicB2BAanvraag-1.2
+
+In de nieuwe versie van het interface _KlicB2BAanvraag_ zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd:
+
+- `ExtraNaam` van aanvrager;  \
+Additionele naam (behorend bij ExtraTelefoon en ExtraEmail).
+
+- `ExtraTelefoon` van aanvrager;  \
+Additioneel telefoonnummer  (behorend bij ExtraNaam en ExtraEmail).
+
+- `Locatieomschrijving` van productspecificatie;  \
+Een omschrijving van de locatie van de werkzaamheden waar de gebiedsinformatie-aanvraag voor is ingediend.
 
 ---------------------------------------------------------
 ## KlicB2BAanvraag
