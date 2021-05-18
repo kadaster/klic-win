@@ -1,7 +1,7 @@
-﻿# Geplande werkzaamheden (bijgewerkt 9 April 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 18 Mei 2021)
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind mei 2021
+## Planning voor release - eind juni 2021
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
@@ -9,13 +9,17 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier
 
 --------------------------------------------------------------------------------------
-## Planning voor release – Netbeheerder Testdienst (NTD): medio mei 2021
+## Planning voor release – Netbeheerder Testdienst (NTD): 20 mei 2021
 
 In verband met de upgrade van de KLIC-standaarden komt actualiseren voor versie 2 beschikbaar.  \
 Met deze aanpassing is het mogelijk om centraal en decentraal aan te leveren met de geüpgrade versie inclusief validatie op basis van de geüpgrade IMKL standaard.  \
 Testen in de NTD in de huidige versie blijft ongewijzigd beschikbaar.  \
-Vanaf medio juni 2021 zal de Beheerdersinformatielevering (BIL.ZIP) beide versies bevatten.  \
-Let op dus bij het testen van de huidige versie én testen van de geüpgrade versie worden 2 XML’s in de BIL.ZIP opgenomen!
+Vanaf medio juli 2021 zal de Beheerdersinformatielevering (BIL.ZIP) beide versies bevatten.  \
+Let op dus bij het testen van de huidige versie én testen van de geüpgrade versie worden 2 XML’s in de BIL.ZIP opgenomen!  \
+  \
+Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - medio mei 2021
@@ -183,7 +187,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 ## Planning voor release - 8 september 2020
 
 **Kadaster KLIC-viewer**:
-- Ter bevordering van het gebruikersgemak wordt er een markering op de kaart getoond op de plek waar een gebruiker geklikt heeft. (ID 4223)
+- Ter bevordering van het gebruikersgemak wordt er een markering op de kaart getoond op de plek waar een gebruiker geklikt heeft. (ID 4223)
 - In het menu bij de gebiedsinformatie-aanvraag wordt nu indien bekend ook het KvK-nummer van de aanvrager en opdrachtgever getoond. (ID 5010)
 - Printen op schaal 1:4000 is toegevoegd. (ID 5619)
 - Voor het aan en uit zetten van netbeheerders en kaartlagen in het weergave menu is het nu mogelijk om op de hele regel te klikken, in plaats van alleen op de checkbox. (ID 4645)

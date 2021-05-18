@@ -77,6 +77,55 @@ In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
 ![Mijlpalen.png](bijlagen/Mijlpalen.png "Mijlpalen.png")
 
 
+### Toelichting Mijlpaal 1:
+**Doel**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard in de NTD.  
+  \
+Vanaf 20 mei 2021 is het mogelijk om IMKL versie 2.0 in de NTD aan te leveren en te laten valideren.  \
+De netbeheerder moet netinformatie samenstellen volgens de nieuwe specificatie. Het aan te leveren ZIP-bestand dient te eindigen op `_V2.zip`.  \
+
+**Aanleveren centraal via NTD**:  \
+ Het selecteren van bestanden blijft gelijk. Als het bestand eindigd op `_V2.zip`, wordt het tegen MKL versie 2.0 gevalideerd. Eindigt het bestand niet op `_V2.zip`, dan wordt het gevalideerd tegen IMKL versie 1.2.1 (huidig).
+![NTD_actualiseren-netinformatie](bijlagen/NTD_actualiseren-netinformatie.png "NTD_actualiseren-netinformatie")
+
+**Aanleveren centraal via endpoint**:  \
+Het actualiseren van netinformatie gebeurt op basis van de resource "aanleveringen/netinformatie".  \
+Deze resource is benaderbaar met de volgende endpoints (host + base url):
+
+|IMKL versie |Omgeving                      |Host                           |Base url                           | Beschikbaarheid    | 
+|------------|------------------------------|-------------------------------|-----------------------------------|--------------------|
+|v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/v2/        |  vanaf 20 mei 2021 |
+
+Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op `_V2.zip`  \
+  \
+Het actualiseren van documenten gebeurt op basis van de resource "aanleveringen/documenten".  \
+Deze resource is benaderbaar met de volgende endpoints (host + base url):
+
+
+|IMKL versie |Omgeving                      |Host                           |Base url                           | Beschikbaarheid    | 
+|------------|------------------------------|-------------------------------|-----------------------------------|--------------------|
+|v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/v2/        |  vanaf 20 mei 2021 |
+
+Merk op dat documenten die via het V1-endpoint zijn opgeleverd, ook bruikbaar blijven vanuit aanleveringen in IMKL versie 2.0.
+
+
+**Aanleveren decentraal via endpoint**:  \
+De B2B-koppeling voor het afhandelen van gebiedsinformatie en beheerdersinformatie gebeurt met de resource "gebiedsinformatieAanvragen".  \
+Deze resource-structuur is benaderbaar met de volgende endpoints (host + base url):
+
+|IMKL versie |Omgeving                      |Host                           |Base url                      | Beschikbaarheid    | 
+|------------|------------------------------|-------------------------------|------------------------------|--------------------|
+|v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/bmkl/v2/           |  vanaf 20 mei 2021 |
+
+Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op `_V2.zip`.
+
+**Uitleveringen - BIL-zip**  \
+Uitleveringen bevatten de GI-xml volgens IMKL versie 1.2.1.  \
+Als er aangeleverd is in versie 2.0, staat deze getransformeerd naar versie 1.2.1 in de BIL-zip.  \
+Voor aanleveringen in versie 1.2.1 wijzigt er niets ten opzichte van voor de implmentatie van 20 mei 2021.
+
 ## De wijzigingen:
 Hieronder staan de links naar de ingebrachte issues die in scope zijn van deze update. Tevens is er voor een aantal issues een beschrijving vanuit het Kadaster toegevoegd.  \
 Een pdf versie met de issues die in scope zijn van deze update, [is hier te vinden](Upgrade%20KLIC%20standaarden%20GitHub%20geregistreerde%20issues%2020210210.pdf).  \
