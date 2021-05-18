@@ -4,7 +4,7 @@ Voor het gebruik van de B2B-koppeling voor aanvragen van gebiedsinformatie zijn 
 In het document [Schemawijzigingen KLIC B2B-aanvraag](Schemawijzigingen%20KLIC%20B2B-aanvraag.md) wordt een overzicht gegeven van de recente wijzigingen in deze schema-definities.
 
 Deze B2B-koppeling is momenteel geimplementeerd op basis van het SOAP-protocol en kent onderstaande interfaces:
-- _KlicB2BAanvraag_ (KlicB2BAanvraag-1.1.xsd)  \
+- _KlicB2BAanvraag_ (KlicB2BAanvraag-1.2.xsd)  \
 voor het aanvragen van gebiedsinformatie.
 - _KlicB2BOrderbevestiging_ (KlicB2BOrderbevestiging-1.0.xsd)  \
 voor het terugkoppelen door het Kadaster van order-informatie van een succesvolle aanvraag.  \
@@ -13,7 +13,7 @@ Als er fouten worden geconstateerd, worden deze hiermee ook teruggekoppeld.
 voor een overzicht van beheerders met een belang bij een calamiteitenmelding.
 
 De interfaces van de webservices voor het gebruik van deze KLIC B2B-koppeling zijn beschreven in onderstaande WSDL's (Web Service Description Language):
-- _KlicB2BAanvraag-1.1.wsdl_  \
+- _KlicB2BAanvraag-1.2.wsdl_  \
 bericht van de aanvrager naar Kadaster KLIC voor het aanvragen van gebiedsinformatie ("KLIC-melding").
 - _KlicB2B-terugkoppeling-1.1.wsdl_  \
 met berichten van Kadaster KLIC naar de aanvrager (orderbevestiging en eventueel overzicht betrokken beheerders).
