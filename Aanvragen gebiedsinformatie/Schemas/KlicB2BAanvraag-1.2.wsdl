@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="KlicB2BAanvraagService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:tns="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814"
+	targetNamespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814">
+
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import
+				namespace="http://www.kadaster.nl/schemas/klic/KlicB2BAanvraag/20140814"
+				schemaLocation="KlicB2BAanvraag-1.2.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="KlicB2BAanvraag">
+		<wsdl:part name="parameters" element="tns:KlicB2BAanvraag"/>
+	</wsdl:message>
+	
+	<wsdl:portType name="KlicB2BAanvraagService">
+		<wsdl:operation name="KlicB2BAanvraag">
+			<wsdl:input message="tns:KlicB2BAanvraag" wsam:Action="KLIC-B2B-AANVRAAG" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="KlicB2BAanvraagServiceBinding" type="tns:KlicB2BAanvraagService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="KlicB2BAanvraag">
+			<soap:operation soapAction="KLIC-B2B-AANVRAAG" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="KlicB2BAanvraagService">
+		<wsdl:port name="KlicB2BAanvraagPort10" binding="tns:KlicB2BAanvraagServiceBinding">
+			<soap:address location="https://service10.kadaster.nl/klic/klic-b2baanvraag/service" />
+		</wsdl:port>
+		<wsdl:port name="KlicB2BAanvraagPort30" binding="tns:KlicB2BAanvraagServiceBinding">
+			<soap:address location="https://service30.kadaster.nl/klic/klic-b2baanvraag/service" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

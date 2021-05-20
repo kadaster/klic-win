@@ -14,6 +14,29 @@ Let wel dat de WSDL's ook worden/zijn aangepast, zodat ze verwijzen naar de juis
 ---------------------------------------------------------
 ## KlicB2BAanvraag
 
+### Wijzigingen KlicB2BAanvraag-1.2
+
+- `ExtraEmail` van Aanvrager: \
+Gemarkeerd als 'OBSOLETE'. Dit is vervangen door `Email` in het nieuwe attribuut `ExtraContact`
+
+- `ExtraContact` van Aanvrager \
+Nieuw optioneel attribuut. Extra contactgegevens van de aanvrager waarmee de graafsector in contact kan treden voor nadere informatie over de aanvraag.
+
+- `Fax` van Contactegegevens \
+Gemarkeerd als 'OBSOLETE'.
+
+- `ExtraContactType`
+Nieuw type toegevoegd. Extra contactgegevens van de aanvrager waarmee de graafsector in contact kan treden voor nadere informatie over de aanvraag.
+
+- `Locatieomschrijving` van ProductSpecificate
+Nieuw optioneel attribuut. Nadere omschrijving van de locatie waar de werkzaamheden plaatsvinden.
+
+- `Huisnummer` van Adres
+Optioneel gemaakt.
+
+- `Postcode` van Adres
+Optioneel gemaakt.
+
 ### Wijzigingen KlicB2BAanvraag-1.1
 
 In de nieuwe versie van het interface _KlicB2BAanvraag_ zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd:
