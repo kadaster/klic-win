@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 18 Mei 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 21 Mei 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind juni 2021
@@ -7,6 +7,21 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Vernieuwing proces eenmalige melder (particulier)**:
 - De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 26 mei 2021
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Kadaster KLIC-viewer (versie 5.10.x)**:
+- De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
+- De attributen en waarden zullen op de vastgestelde vaste volgorde worden getoond (ook wel ordening genoemd).  \ 
+De Technische Commissie Standaarden KLIC (TCS) heeft deze volgorde vastgesteld. De gebruiker ziet de belangrijkste attributen en waarden bovenaan in de resultaten na een klik op de kabels of leidingen (id 6340).  \
+U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid ordening attributen (vastgesteld 15-05-2020).
+- Betere werking van de “Backbutton” in de Android App (id 6565).
+- In het Printen menu wordt de optie “Overzichtskaart” als 1e optie getoond 
+(id 6575).
+- Diverse bugfixes.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – Netbeheerder Testdienst (NTD): 20 mei 2021
@@ -19,22 +34,6 @@ Let op dus bij het testen van de huidige versie én testen van de geüpgrade ver
   \
 Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
 
-
-
---------------------------------------------------------------------------------------
-## Planning voor release - medio mei 2021
-
-Voor deze release zijn de volgende onderwerpen gepland:
-
-**Kadaster KLIC-viewer:**
-- De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
-- De attributen en waarden zullen op de vastgestelde vaste volgorde worden getoond (ook wel ordening genoemd).  \ 
-De Technische Commissie Standaarden KLIC (TCS) heeft deze volgorde vastgesteld. De gebruiker ziet de belangrijkste attributen en waarden bovenaan in de resultaten na een klik op de kabels of leidingen (id 6340).  \
-U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid ordening attributen (vastgesteld 15-05-2020).
-- Betere werking van de “Backbutton” in de Android App (id 6565).
-- In het Printen menu wordt de optie “Overzichtskaart” als 1e optie getoond 
-(id 6575).
-- Diverse bugfixes.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 12 april 2021
