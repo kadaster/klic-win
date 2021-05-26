@@ -1,4 +1,15 @@
-﻿# Geplande werkzaamheden (bijgewerkt 21 Mei 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 26 Mei 2021)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – Netbeheerder Testdienst (NTD): medio juli 2021
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL ZIP) zit.  \
+Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  \
+  \
+Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden. 
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - eind juni 2021
@@ -13,15 +24,26 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
-**Kadaster KLIC-viewer (versie 5.10.x)**:
+**Kadaster KLIC-viewer (versie 5.10.0)**:
 - De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
-- De attributen en waarden zullen op de vastgestelde vaste volgorde worden getoond (ook wel ordening genoemd).  \ 
+- De attributen en waarden zullen op de vastgestelde vaste volgorde worden getoond (ook wel ordening genoemd).   
 De Technische Commissie Standaarden KLIC (TCS) heeft deze volgorde vastgesteld. De gebruiker ziet de belangrijkste attributen en waarden bovenaan in de resultaten na een klik op de kabels of leidingen (id 6340).  \
 U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid ordening attributen (vastgesteld 15-05-2020).
 - Betere werking van de “Backbutton” in de Android App (id 6565).
 - In het Printen menu wordt de optie “Overzichtskaart” als 1e optie getoond 
 (id 6575).
 - Diverse bugfixes.
+
+
+--------------------------------------------------------------------------------------
+## Planning aanpassing documentatie – 21 mei 2021
+
+Door de upgrade van de KLIC-standaarden zullen gefaseerd een aantal aanpassingen doorgevoerd worden in het B2B aanvraag proces. Hiervoor is een nieuwe versie opgesteld. De nieuwe versie heeft impact op de KLIC-aanvraag (KLIC-melding).  
+
+- Per 21 mei 2021 is de [nieuwe XSD v1.2](Aanvragen%20gebiedsinformatie/Schemas/) beschikbaar.
+- In Q3 2021 zal het mogelijk zijn om in een Acceptatieomgeving van het Kadaster testen uit te voeren. Dit is onderdeel van het programma “[implementatie upgrade KLIC standaarden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/)”.
+- Per 3 januari 2022 wordt het verplicht om de nieuwe XSD v1.2 te gebruiken. 
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – Netbeheerder Testdienst (NTD): 20 mei 2021

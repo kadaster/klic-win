@@ -11,7 +11,8 @@ Veel informatie over deze functionaliteit is gepubliceerd op de KLIC-pagina's va
 
 De toelichting op de werking van de KLIC B2B-aanvraag is te vinden op deze GitHub-pagina's.  \
 In het kader van het programma KLIC-WIN worden er ook veranderingen doorgevoerd bij het aanvragen van gebiedsinformatie. In deze map worden hierover documentatie en diverse voorbeelden beschikbaar gesteld.  \
-De beschikbaar gestelde functionaliteit zal zich steeds verder ontwikkelen op basis van een Agile-aanpak.
+De beschikbaar gestelde functionaliteit zal zich steeds verder ontwikkelen op basis van een Agile-aanpak.  \
+Per 3 januari 2022 wordt het verplicht om de [nieuwe XSD v1.2](Schemas/) te gebruiken.
 
 Deze map bevat:
 * B2B-koppeling voor afhandelen gebiedsinformatie-aanvraag 
