@@ -1,10 +1,12 @@
-﻿# Geplande werkzaamheden (bijgewerkt 02 Juni 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 8 Juni 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – medio juli 2021
-Voor deze release is het volgende onderwerp gepland: Kadaster KLIC-viewer (iOS)
-Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.
-De Kadaster KLIC-viewer is sinds [1 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar. 
+Voor deze release is het volgende onderwerp gepland: 
+
+**Kadaster KLIC-viewer (iOS)**:
+- Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.  \
+  De Kadaster KLIC-viewer is sinds [1 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar. 
 
 
 --------------------------------------------------------------------------------------
@@ -19,12 +21,12 @@ Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelich
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - eind juni 2021
+## Planning voor release - 29 juni 2021
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Vernieuwing proces eenmalige melder (particulier)**:
-- De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier
+- De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 26 mei 2021
