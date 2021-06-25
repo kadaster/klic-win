@@ -21,7 +21,7 @@ Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelich
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - 29 juni 2021
+## Planning voor release - 1 juli 2021
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
