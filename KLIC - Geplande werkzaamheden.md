@@ -1,12 +1,20 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 Juni 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 28 Juni 2021)
 
 --------------------------------------------------------------------------------------
-## Planning voor release – medio juli 2021
-Voor deze release is het volgende onderwerp gepland: 
+## Planning voor release – 20 juli 2021
 
-**Kadaster KLIC-viewer (iOS)**:
-- Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.  \
-  De Kadaster KLIC-viewer is sinds [1 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar. 
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer (iOS):**
+
+1.	Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.
+De Kadaster KLIC-viewer is sinds [1 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
+2.	Met de sector [afgestemde vertaling](https://github.com/kadaster/klic-win/blob/master/Beheren standaarden KLIC/Eisen overheid ordening attributen (concept).xlsx) van attribuutwaarden worden geïmplementeerd bij het klikken op de kaart informatie (Feature informatie). 
+Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
+3.	Inkorten lange URL waarden bij het klikken op de kaart informatie (Feature informatie) (4022).
+4.	Extra Detailinformatie PDF bestanden zal een link worden, waardoor het makkelijker te openen is bij het klikken op de kaart informatie (Feature informatie) (4477).
+5.	Bij het gebruik van de Kadaster KLIC-viewer App (IOS en Android) zal de toestel kort trillen indien er een Eis Voorzorgsmaatregel (EV) van toepassing is bij de geopende KLIC-levering (6844).
+6.	Diverse bugfixes.
 
 
 --------------------------------------------------------------------------------------
