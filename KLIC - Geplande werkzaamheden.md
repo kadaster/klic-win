@@ -1,9 +1,9 @@
-﻿# Geplande werkzaamheden (bijgewerkt 9 Juli 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 9 juli 2021)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – Netbeheerder Testdienst (NTD): medio augustus 2021
 
-Voor deze release zijn de volgende onderwerpen gepland:
+Voor deze release is het volgende onderwerp gepland:
 
 In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
 Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  \
@@ -19,19 +19,19 @@ Voor deze release is het volgende onderwerp gepland:
 **Kadaster KLIC-viewer (iOS):**
 
 1.	Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.
-De Kadaster KLIC-viewer is sinds [1 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
+De Kadaster KLIC-viewer is sinds [7 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
 2.	Met de sector [afgestemde vertaling](https://github.com/kadaster/klic-win/blob/master/Beheren%20standaarden%20KLIC/Eisen%20overheid%20ordening%20attributen%20(concept).xlsx) van attribuutwaarden worden geïmplementeerd bij het klikken op de kaart informatie (Feature informatie). 
 Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
 3.	Inkorten lange URL waarden bij het klikken op de kaart informatie (Feature informatie) (4022).
 4.	Extra Detailinformatie PDF bestanden zal een link worden, waardoor het makkelijker te openen is bij het klikken op de kaart informatie (Feature informatie) (4477).
-5.	Bij het gebruik van de Kadaster KLIC-viewer App (IOS en Android) zal de toestel kort trillen indien er een Eis Voorzorgsmaatregel (EV) van toepassing is bij de geopende KLIC-levering (6844).
+5.	Bij het gebruik van de Kadaster KLIC-viewer App (iOS en Android) zal de smartphone of tablet kort trillen indien er een Eis Voorzorgsmaatregel (EV) van toepassing is bij de geopende KLIC-levering (6844).
 6.	Diverse bugfixes.
 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – Netbeheerder Testdienst (NTD): 14 juli 2021
 
-Voor deze release zijn de volgende onderwerpen gepland:
+Voor deze release is het volgende onderwerp gepland:
 
 In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL ZIP) zit.  \
 Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  \
@@ -42,7 +42,7 @@ Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelich
 --------------------------------------------------------------------------------------
 ## Planning voor release - 1 juli 2021
 
-Voor deze release zijn de volgende onderwerpen gepland:
+Voor deze release is het volgende onderwerp gepland:
 
 **Vernieuwing proces eenmalige melder (particulier)**:
 - De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier.
@@ -50,7 +50,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 --------------------------------------------------------------------------------------
 ## Planning voor release - 26 mei 2021
 
-Voor deze release zijn de volgende onderwerpen gepland:
+Voor deze release is het volgende onderwerp gepland:
 
 **Kadaster KLIC-viewer (versie 5.10.0)**:
 - De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
