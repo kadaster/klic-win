@@ -1,4 +1,15 @@
-﻿# Geplande werkzaamheden (bijgewerkt 28 Juni 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 9 Juli 2021)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – Netbeheerder Testdienst (NTD): medio augustus 2021
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
+Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  \
+  \
+Zie ook [de toelichting op de derde mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-3) van de upgrade van de standaarden. 
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 20 juli 2021
@@ -18,7 +29,7 @@ Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – Netbeheerder Testdienst (NTD): medio juli 2021
+## Planning voor release – Netbeheerder Testdienst (NTD): 14 juli 2021
 
 Voor deze release zijn de volgende onderwerpen gepland:
 

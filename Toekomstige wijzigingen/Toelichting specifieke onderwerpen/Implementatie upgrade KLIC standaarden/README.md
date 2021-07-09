@@ -6,12 +6,12 @@ Over de manier waarop informatie in de KLIC-registratie wordt vastgelegd, gepres
 In de TCS zitten vertegenwoordigers van afnemers (namens grondroerders), bronhouders (namens netbeheerders), gemeenten, Agentschap Telecom, Geonovum, Kadaster. De Technische commissie standaarden (TCS) beoordeelt IMKL, Visualisatiemodel en BMKL. De commissie bekijkt of de standaarden in de praktijk voldoen en zorgt voor de nodige aanpassingen. Ook zorgt de commissie voor een goede doorontwikkeling van de standaarden.
 
 ## Achtergrond 
-De nieuwe versies van de standaarden lagen in juli en augustus 2020 in consultatie, in oktober zijn deze als release candidate gepubliceerd en op 10 november 2020 is de versie vastgestelde versie.  \
+De nieuwe versies van de standaarden lagen in juli en augustus 2020 in consultatie, in oktober zijn deze als release candidate gepubliceerd en op 10 november 2020 is de versie vastgesteld.  \
 Het Kadaster heeft samen met het KLIC gebruikersoverleg een planning opgesteld voor de implementatie. Op deze pagina staat een toelichting op de wijzigingen en de implementatie strategie.
 
-## Nieuwe versie standaard.
-IMKL versie 2.0 is gepubliceerd op de [website van Geonovum](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).  \
-Een nieuwe versie van het berichtenmodel (BMKL versie 2.1) en een toelichting op de wijzigingen van de IMKL/PMKL/BMKL-standaarden vindt u op [deze GitHub pagina van het Kadaster](Gewijzigde%20BMKL.md).
+## Nieuwe versie standaarden.
+IMKL versie 2.0 en PMKL versie 2.0 zijn gepubliceerd op de [website van Geonovum](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).  \
+Een nieuwe versie van het berichtenmodel (BMKL versie 2.1) en een toelichting op de wijzigingen van de BMKL-standaarden vindt u op [deze GitHub pagina van het Kadaster](Gewijzigde%20BMKL.md). De wijzigingen ten opzichte van BMKL 2.0 hebben betrekking op de endpoints, de labels in de berichten en de waarden(lijsten) in de berichten.
 
 
 
@@ -44,7 +44,7 @@ Op deze pagina staat een toelichting op de wijzigingen en de implementatie strat
 
 **Planning**:
 - Start overgang: maandag 3 januari 2022
-- Einde overgang: vrijdag 1 april 2022 (beoogd)
+- Einde overgang: vrijdag 30 april 2022 (beoogd)
 
 **Gekozen strategie**:
 - [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie. 
@@ -59,13 +59,15 @@ Op deze pagina staat een toelichting op de wijzigingen en de implementatie strat
 - Aanpassingen zijn in de online aanvraagportaal zichtbaar vanaf het begin van de overgangsperiode.
 
 **NTD**:
-- Aanpassingen zijn in de NTD zichtbaar na implementatie van de tweede mijlpaal.
+- Aanpassingen zijn in de NTD zichtbaar na implementatie van de tweede mijlpaal.  \
+  Voor het bekijken van de BIL-Zip in de KLIC-viewer wordt geadviseerd gebruik te maken van de nieuweste versie van de KLIC-viewer.
 
 **B2B-koppeling gebiedsinformatie-aanvraag**:  \
 Door de upgrade van de KLIC-standaarden zullen gefaseerd een aantal aanpassingen doorgevoerd worden in het B2B aanvraag proces. Hiervoor is een nieuwe versie opgesteld. De nieuwe versie heeft impact op de KLIC-aanvraag (KLIC-melding).
 - Per 21 mei 2021 is de [nieuwe XSD v1.2](../../../Aanvragen%20gebiedsinformatie/Schemas/) beschikbaar.
 - In Q3 2021 zal het mogelijk zijn om in een Acceptatieomgeving van het Kadaster testen uit te voeren. 
-- Per 3 januari 2022 wordt het verplicht om de nieuwe XSD v1.2 te gebruiken. 
+- Per 3 januari 2022 wordt het verplicht om de nieuwe XSD v1.2 te gebruiken.  \
+  Vanaf dan worden aanvragen afgekeurd waarbij geen referentieveld is opgegeven.
 
 ## Aanleveringen
 V1 kan tot het einde van de overgangsperiode aangeleverd worden zoals men gewend is (kleine uitzondering: het aanleveringsbestand mag sinds 26 januari 2021 niet eindigen op `_V2.zip`)  \
@@ -84,9 +86,12 @@ Na de overgang verdwijnen de Leveringsindex-xml (LI.xml)  en de GebiedsInformati
 
 In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
 - **Mijlpaal 1**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard in de NTD
-- **Mijlpaal 2**: Gi.xml in de BIL-zip in 2 versies beschikbaar in NTD
+- **Mijlpaal 2**: Gi.xml in de BIL-zip in 2 versies beschikbaar in NTD en aangepaste schermen in NTD
 - **Mijlpaal 3**: API in versie 2 beschikbaar naast de huidige API in de NTD
-![Mijlpalen.png](bijlagen/Mijlpalen.png "Mijlpalen.png")
+- **Mijlpaal 4**: Kadaster KLIC-viewer volgens PMKL versie 2.0 en werkt met versie IMKL 2.0
+- **Mijlpaal 5**: Start overgangsperiode
+- **Mijlpaal 6**: Na de overgangsperiode
+![Mijlpalen](bijlagen/Mijlpalen.png "Mijlpalen.png")
 
 
 ### Toelichting Mijlpaal 1:
@@ -140,7 +145,8 @@ Voor aanleveringen in versie 1.2.1 wijzigt er niets ten opzichte van voor de imp
 
 ### Toelichting Mijlpaal 2:
 **Doel**: Mogelijkheid geven aan sector om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL ZIP) zit.  
-  \
+Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen is.  
+\
 **Wijzigingen NTD testmelding**:
 - Referentie veld is toegevoegd en verplicht gesteld.
 - Mogelijkheid om een extra emailadres, een extra naam en een extra telefoon nummer (allen optioneel) op te geven.
@@ -154,9 +160,30 @@ Voor aanleveringen in versie 1.2.1 wijzigt er niets ten opzichte van voor de imp
 - Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  
   - Netinformatie (centraal aangeleverd) of Beheerdersinformatie (decentraal aangeleverd) in IMKL versie 1.2.1 staat -onveranderd- in GI_gebiedsinformatielevering.xml, en getranformeerd naar IMKL 2.0 naar GI_gebiedsinformatielevering_V2.xml.
   - Netinformatie (centraal aangeleverd) of Beheerdersinformatie (decentraal aangeleverd) in IMKL versie 2.0 staat -onveranderd- in GI_gebiedsinformatielevering_V2.xml, en getranformeerd naar IMKL 1.2.1 naar GI_gebiedsinformatielevering.xml.
-  \
+-  Voor het bekijken van de BIL-Zip in de KLIC-viewer wordt geadviseerd gebruik te maken van de nieuwste versie van de KLIC-viewer.
+  
+  
 [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie.  \
-De transformatie regels zoals vastgesteld door de TCS [zijn hier te vinden](Transformatieregels%20versie%201.2.pdf).
+De transformatie regels zoals vastgesteld door de TCS [zijn hier te vinden](Transformatieregels%20versie%201.2.pdf). 
+
+### Toelichting Mijlpaal 3:
+**Doel**: Mogelijkheid geven aan sector om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
+Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  
+
+### Toelichting Mijlpaal 4:
+**Doel**: De Kadaster KLIC-viewer visualiseert de netinformatie volgens PMKL versie 2.0. De Kadaster KLIC-viewer  maakt gebruik van de netinformatie in IMKL versie 2.0 indien beschikbaar. Meldingen met IMKL 1.2.1 kunnen ook nog geopend worden.
+
+### Toelichting Mijlpaal 5:
+**Doel**: Netbeheerders en grondroerders de mogelijkheid geven geleidelijk over te gaan naar de IMKL 2.0  \
+Start overgang: 3 januari 2022. Zie de uitleg op deze pagina.
+
+### Toelichting Mijlpaal 6:
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0.  \
+Aanleveren mag alleen nog maar in IMKL versie 2.0, viewers moeten voldoen aan de PMKL versie 2.0 en alleen de BMKL-API versie 2.1 is nog actief.  \
+Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om  "overige appurartanances" van het type "onbekend" aan te leveren.  \
+Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken, of een langer KLIC-meldnummer.  \
+Het gebruik maken van de mogelijkheid om  een langer KLIC-meldnummer te hanteren wordt minimaal 2 maanden van te voren gecommuniceerd. De verwachting is dat de overgang pas in januari 2023 zal plaats vinden.
+
 
 
 ## De wijzigingen:
