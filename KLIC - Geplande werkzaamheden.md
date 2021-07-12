@@ -1,4 +1,18 @@
-﻿# Geplande werkzaamheden (bijgewerkt 9 juli 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 12 juli 2021)
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release – medio september 2021
+
+In medio september zal er een Keten Acceptatie Test (KAT) plaatsvinden als onderdeel van de Upgrade van de Standaarden.  
+
+Aanmelden voor de KAT kan tot eind juli via klic.project@kadaster.nl
+
+Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+:white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – Netbeheerder Testdienst (NTD): medio augustus 2021
@@ -33,10 +47,15 @@ Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
 
 Voor deze release is het volgende onderwerp gepland:
 
-In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL ZIP) zit.  \
+In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL-Zip) zit.  \
 Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  \
   \
-Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden. 
+Mocht u gebruik maken van de Kadaster KLIC-viewer, dan kunt u de BIL-Zip van de NTD openen met de viewer die op 20 juli gereleased wordt. Deze zal volgens de huidige visualisatie regels het IMKL 1.2.1 presenteren.  
+
+Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden.  
+Op bovenstaande pagina zijn ook enkele **voorbeeldbestanden** te vinden.
+
+
 
 
 --------------------------------------------------------------------------------------

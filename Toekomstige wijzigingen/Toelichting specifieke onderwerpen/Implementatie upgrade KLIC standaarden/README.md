@@ -85,8 +85,8 @@ Na de overgang verdwijnen de Leveringsindex-xml (LI.xml)  en de GebiedsInformati
 ## Gefaseerde oplevering
 
 In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
-- **Mijlpaal 1**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard in de NTD
-- **Mijlpaal 2**: Gi.xml in de BIL-zip in 2 versies beschikbaar in NTD en aangepaste schermen in NTD
+- **Mijlpaal 1**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheerdersinformatie te valideren tegen de nieuwe standaard in de NTD
+- **Mijlpaal 2**: Gi.xml in de BIL-Zip in 2 versies beschikbaar in NTD en aangepaste schermen in NTD
 - **Mijlpaal 3**: API in versie 2 beschikbaar naast de huidige API in de NTD
 - **Mijlpaal 4**: Kadaster KLIC-viewer volgens PMKL versie 2.0 en werkt met versie IMKL 2.0
 - **Mijlpaal 5**: Start overgangsperiode
@@ -95,7 +95,7 @@ In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
 
 
 ### Toelichting Mijlpaal 1:
-**Doel**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard in de NTD.  
+**Doel**: Mogelijkheid geven aan sector om aangeleverde netinformatie/beheerdersinformatie te valideren tegen de nieuwe standaard in de NTD.  
   \
 Vanaf 20 mei 2021 is het mogelijk om IMKL versie 2.0 in de NTD aan te leveren en te laten valideren.  \
 De netbeheerder moet netinformatie samenstellen volgens de nieuwe specificatie. Het aan te leveren ZIP-bestand dient te eindigen op `_V2.zip`.
@@ -138,13 +138,13 @@ Deze resource-structuur is benaderbaar met de volgende endpoints (host + base ur
 
 Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op `_V2.zip`.
 
-**Uitleveringen - BIL-zip**  \
+**Uitleveringen - BIL-Zip**  \
 Uitleveringen bevatten de GI-xml volgens IMKL versie 1.2.1.  \
-Als er aangeleverd is in versie 2.0, staat deze getransformeerd naar versie 1.2.1 in de BIL-zip.  \
+Als er aangeleverd is in versie 2.0, staat deze getransformeerd naar versie 1.2.1 in de BIL-Zip.  \
 Voor aanleveringen in versie 1.2.1 wijzigt er niets ten opzichte van voor de implmentatie van 20 mei 2021.
 
 ### Toelichting Mijlpaal 2:
-**Doel**: Mogelijkheid geven aan sector om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL ZIP) zit.  
+**Doel**: Mogelijkheid geven aan sector om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL-Zip) zit.  
 Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen is.  
 \
 **Wijzigingen NTD testmelding**:
@@ -154,7 +154,7 @@ Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen i
 - Mogelijkheid om bij het Locatieadres een adres op te geven die geen postcode heeft.
 - Mogelijkheid om een Huisaansluitschets op te vragen van een adres die geen postcode heeft.
 
-**BeheerdersinformatieLevering (BIL ZIP)**:
+**BeheerdersinformatieLevering (BIL-Zip)**:
 - Er zitten twee XML bestanden in de levering zoals het tijdens de overgangsperiode op productie ook zal zijn:  \
 ![Inhoud_LeveringsZIP](bijlagen/Inhoud_LeveringsZIP.png "Inhoud_LeveringsZIP")  
 - Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  
@@ -166,9 +166,27 @@ Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen i
 [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie.  \
 De transformatie regels zoals vastgesteld door de TCS [zijn hier te vinden](Transformatieregels%20versie%201.2.pdf). 
 
+**Voorbeeldbestanden**: 
+
+ > _Het Kadaster stelt op verzoek van de sector voorbeeldbestanden beschikbaar aan de netbeheerder en de grondroerer._   \
+ _De voorbeeldbestanden wordt door het Kadaster enkel aangeboden om als hulpmiddel te worden gebruikt._  \
+ _De voorbeeldbestanden zijn aangeboden zonder enige vorm van garantie op volledigheid en juistheid. Het is geen representatieve data van kabels en leidingen en heeft op geen enkele manier een relatie met de betreffende locatie.  Het is test data om de werking van het KLIC-systeem te testen._  \
+ _Netbeheerders en grondroerders blijven te allen tijde verantwoordelijk_
+ 
+|bestand|uitleg|
+|---|---|
+|[netinformatie_TS1392](bijlagen/netinformatie_TS1392)|Netinformatie voor centrale actualisatie in versie IMKL 1.2.1; gebruikt in NTD-demo op 9 juli 2021|
+|[BeheerdersinformatieLevering_00G001694_TS1392.zip](bijlagen/BeheerdersinformatieLevering_00G001694_TS1392.zip)|BeheerdersinformatieLevering (BIL-Zip) Met daarin: Netinformatie in IMKL1.2.1 (zoals in bovenstaand bestand aangeleverd), Netinformatie IMKL 2.0, getransformeerd door het kadaster; gebruikt in NTD-demo op 9 juli 2021|
+|[Levering_21G002822_1.zip](bijlagen/Levering_21G002822_1.zip)|voorbeeld levering uit testomgeving van het Kadaster met meerdere netbeheerders; bevat IMKL1.2.1 en IMKL 2.0|
+|[BeheerdersinformatieLevering_21G002822_TS1392.zip](bijlagen/BeheerdersinformatieLevering_21G002822_TS1392.zip)|voorbeeld BeheerdersinformatieLevering (BIL-Zip) uit testomgeving van het Kadaster die hoort bij bovenstaande melding; bevat IMKL1.2.1 en IMKL 2.0|
+
+
+_Let op: Omdat deze bestanden uit de Testomgeving van het Kadaster afkomstig zijn, zijn ze **niet** met de Kadaster KLIC-viewer te openen._
+
 ### Toelichting Mijlpaal 3:
 **Doel**: Mogelijkheid geven aan sector om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
 Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  
+
 
 ### Toelichting Mijlpaal 4:
 **Doel**: De Kadaster KLIC-viewer visualiseert de netinformatie volgens PMKL versie 2.0. De Kadaster KLIC-viewer  maakt gebruik van de netinformatie in IMKL versie 2.0 indien beschikbaar. Meldingen met IMKL 1.2.1 kunnen ook nog geopend worden.
