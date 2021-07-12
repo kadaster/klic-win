@@ -175,7 +175,7 @@ De transformatie regels zoals vastgesteld door de TCS [zijn hier te vinden](Tran
  
 |bestand|uitleg|
 |---|---|
-|[netinformatie_TS1392](bijlagen/netinformatie_TS1392)|Netinformatie voor centrale actualisatie in versie IMKL 1.2.1; gebruikt in NTD-demo op 9 juli 2021|
+|[netinformatie_TS1392.zip](bijlagen/netinformatie_TS1392.zip)|Netinformatie voor centrale actualisatie in versie IMKL 1.2.1; gebruikt in NTD-demo op 9 juli 2021|
 |[BeheerdersinformatieLevering_00G001694_TS1392.zip](bijlagen/BeheerdersinformatieLevering_00G001694_TS1392.zip)|BeheerdersinformatieLevering (BIL-Zip) Met daarin: Netinformatie in IMKL1.2.1 (zoals in bovenstaand bestand aangeleverd), Netinformatie IMKL 2.0, getransformeerd door het kadaster; gebruikt in NTD-demo op 9 juli 2021|
 |[Levering_21G002822_1.zip](bijlagen/Levering_21G002822_1.zip)|voorbeeld levering uit testomgeving van het Kadaster met meerdere netbeheerders; bevat IMKL1.2.1 en IMKL 2.0|
 |[BeheerdersinformatieLevering_21G002822_TS1392.zip](bijlagen/BeheerdersinformatieLevering_21G002822_TS1392.zip)|voorbeeld BeheerdersinformatieLevering (BIL-Zip) uit testomgeving van het Kadaster die hoort bij bovenstaande melding; bevat IMKL1.2.1 en IMKL 2.0|
