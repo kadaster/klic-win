@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 12 juli 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 13 juli 2021)
 
 
 --------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – Netbeheerder Testdienst (NTD): 14 juli 2021
+## Planning voor release – Netbeheerder Testdienst (NTD): 15 juli 2021
 
 Voor deze release is het volgende onderwerp gepland:
 
