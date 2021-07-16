@@ -21,7 +21,7 @@ De informatie is ingedeeld naar onderstaande onderdelen:
   - [/ Documenten](../../tree/master/Actualiseren/Documenten)
   - [/ Netinformatie](../../tree/master/Actualiseren/Netinformatie)
   - [/ Voorzorgsmaatregelen](../../tree/master/Actualiseren/Voorzorgsmaatregelen)
-* [B2B-koppeling beheerdersinformatie (BMKL 2.0)](../../tree/master/B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)) over de berichtenuitwisseling tussen Kadaster-KLIC en netbeheerders
+* [BMKL (B2B-koppeling beheerdersinformatie)](../../tree/master/BMKL) over de berichtenuitwisseling tussen Kadaster-KLIC en netbeheerders
 * [Kadaster KLIC-viewer](../../tree/master/Kadaster%20KLIC-viewer) met de Kadaster KLIC-viewer
 * [Synchroniseren](../../tree/master/Synchroniseren%20(Agentschap%20Telecom)) over de data synchronisatie tussen KLIC en de toezichthouder Agentschap Telecom
 * [Toekomstige wijzigingen](../../tree/master/Toekomstige%20wijzigingen) met een overzicht van Toekomstige wijzigingen (Jaarplan, Productplan, Releases)
