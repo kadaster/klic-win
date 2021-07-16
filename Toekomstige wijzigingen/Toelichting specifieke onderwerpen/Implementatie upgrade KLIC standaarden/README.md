@@ -100,6 +100,9 @@ In de NTD wordt de nieuwe functionaliteit gefaseerd uitgeleverd.
 Vanaf 20 mei 2021 is het mogelijk om IMKL versie 2.0 in de NTD aan te leveren en te laten valideren.  \
 De netbeheerder moet netinformatie samenstellen volgens de nieuwe specificatie. Het aan te leveren ZIP-bestand dient te eindigen op `_V2.zip`.
 
+**Demo**: Er is een demo beschikbaar met een toelichting van mijlpaal 1.  \
+[Mijlpaal 1 demo op Youtube.](https://www.youtube.com/watch?v=6yqThNl1DXE&ab_channel=HetKadaster)
+
 **Aanleveren centraal via NTD**:  \
  Het selecteren van bestanden blijft gelijk. Als het bestand eindigd op `_V2.zip`, wordt het tegen MKL versie 2.0 gevalideerd. Eindigt het bestand niet op `_V2.zip`, dan wordt het gevalideerd tegen IMKL versie 1.2.1 (huidig).
 ![NTD_actualiseren-netinformatie](bijlagen/NTD_actualiseren-netinformatie.png "NTD_actualiseren-netinformatie")
@@ -145,7 +148,11 @@ Voor aanleveringen in versie 1.2.1 wijzigt er niets ten opzichte van voor de imp
 
 ### Toelichting Mijlpaal 2:
 **Doel**: Mogelijkheid geven aan sector om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL-Zip) zit.  
-Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen is.  
+Vanaf 15 juli 2021 staat de NTD ingesteld 'alsof' de overgangsperiode begonnen is. 
+
+**Demo**: Er is een demo beschikbaar met een toelichting van mijlpaal 2.  \
+[Mijlpaal 2 demo op Youtube.](https://youtu.be/KBvngJnwmno)
+ 
 \
 **Wijzigingen NTD testmelding**:
 - Referentie veld is toegevoegd en verplicht gesteld.
