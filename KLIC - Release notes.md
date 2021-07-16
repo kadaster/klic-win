@@ -1,7 +1,29 @@
 ﻿# Release notes
 ------------------------
 
-## 26 mei 2021 (NTD)
+### 15 juli 2021 – Netbeheerder Testdienst (NTD): 
+
+
+In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL-Zip) zit.  \
+Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  \
+  \
+Mocht u gebruik maken van de Kadaster KLIC-viewer, dan kunt u de BIL-Zip van de NTD openen met de viewer die op 20 juli gereleased wordt. Deze zal volgens de huidige visualisatie regels het IMKL 1.2.1 presenteren.  
+
+Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden.  
+Op bovenstaande pagina zijn ook enkele **voorbeeldbestanden** te vinden.
+
+
+------------------------
+### 1 juli 2021
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Vernieuwing proces eenmalige melder (particulier)**:
+- De éénmalige gebruiker kan een KLIC-melding doen door middel van selfservice in plaats van het webformulier.
+
+------------------------
+
+### 26 mei 2021 (NTD)
 
 **Kadaster KLIC-viewer ([versie 5.10.0](https://www.kadaster.nl/klicviewer) )**:
 - De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
@@ -14,8 +36,8 @@ U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid
 - Diverse bugfixes.
 
 
-
-## 20 mei 2021 (NTD)
+------------------------
+### 20 mei 2021 (NTD)
 
 **Upgrade Standaarden**:
 - Mogelijkheid om in de NTD aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard.  \
@@ -23,7 +45,7 @@ U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid
 Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
 
 ------------------------
-## 12 april 2021
+### 12 april 2021
 
 **Leveringsmail**:
 - De inhoud van de leveringsmail is aangepast.
@@ -34,7 +56,7 @@ Voorbeelden:
 - [Levering leeg](Uitleveren/KLIC%20levering%20(leeg)%201%20980708428410%2021G000766%20Ref%20voorbeeld%20tekst.pdf)
 
 ------------------------
-## 7 april 2021
+### 7 april 2021
 
 **Kadaster KLIC-viewer ([versie 5.9.4](https://www.kadaster.nl/klicviewer) )**:
 
@@ -44,12 +66,12 @@ De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-pla
 Tevens is de performance van kaartlagen uit en aanzetten is verhoogd voor alle platformen (ID 5298)
 
 ------------------------
-## 2 maart 2021
+### 2 maart 2021
 
 - Geen functionele aanpassingen, enkel technische aanpassingen ter voorbereiding op de upgrade van de standaarden.
 
 ------------------------
-## 2 februari 2021
+### 2 februari 2021
 Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLIC).
 
 **Uitlevering**:
@@ -61,21 +83,21 @@ Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-
 Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
 
 ------------------------
-## 26 januari 2021
+### 26 januari 2021
 
 **Aanleveren (centraal en decentraal)**:
 - Ter voorbereiding op de upgrade van de standaarden, zijn aanleveringen van bestanden met een bestandnaam die eindigt op `_v2` of `_V2` niet meer toegestaan.
   * dit geldt zowel voor het actualiseren (centrale netbeheerder) als het aanleveren van beheerdersinformatie (decentraal)
 
 ------------------------
-## 22 januari 2021 (publicatie documentatie)
+### 22 januari 2021 (publicatie documentatie)
 
 **API's voor afhandelen afwijkende situatie**:
 - De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).  \
   Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
 
 ------------------------
-## 19 januari 2021
+### 19 januari 2021
 
 **Kadaster KLIC-viewer ([versie 5.8.0](https://www.kadaster.nl/klicviewer) )**:
 - Er wordt een extra print-optie toegevoegd om een overzichtskaart te genereren. Dit is één pagina waarop alle netbeheerders/thema zichtbaar zijn, zonder annotatie en maatvoering. (ID 6133)
@@ -83,20 +105,20 @@ Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/K
 - De meetresultaten worden mee geprint, als de weergave aan staat in het tabblad `KAARTLAGEN` onder het menu-item `Weergave`.
 
 ------------------------
-## 15 december 2020
+### 15 december 2020
 
 **KLIC-online** (bij het doen van een graafmelding en oriëntatieverzoek):
 - Bij het opgeven van de soort werkzaamheden staat nu expliciet vermeld dat er maximaal 6 soorten graafwerkzaamheden opgegeven kunnen worden.
 
 ------------------------
-## 14 december 2020
+### 14 december 2020
 
 **Wijziging in afzenderadres van emails**:
 - Het afzender-emailadres verandert. Waar nu de afzender "noreply@kadaster.nl" is, wordt dat vanaf deze release "klic@kadaster.nl". Dit geldt voor alle emails verstuurd vanuit het KLIC-systeem.  \
   Mocht u regels in uw emailprogramma hebben toegevoegd op basis van het huidige afzenderadres, dient u hier rekening mee te houden.
 
 ------------------------
-## 24 november 2020
+### 24 november 2020
 
 **Kadaster KLIC-viewer ([versie 5.7.20](https://www.kadaster.nl/klicviewer) )**:
 - De leesbaarheid van de schaalbalk is verbeterd (id 5275).
