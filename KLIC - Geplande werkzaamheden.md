@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 13 juli 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 16 juli 2021)
 
 
 --------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ Zie ook [de toelichting op de derde mijlpaal](Toekomstige%20wijzigingen/Toelicht
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Kadaster KLIC-viewer (iOS):**
+**Kadaster KLIC-viewer (iOS, versie 5.11.):**
 
 1.	Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.
 De Kadaster KLIC-viewer is sinds [7 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
