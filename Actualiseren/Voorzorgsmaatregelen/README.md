@@ -11,7 +11,8 @@ Deze map bevat:
   * Actualiseren voorzorgsmaatregelen
   * Handreiking voor het invullen van gegeven voor EV-bepaling
 * informatie over het opstellen van een document-sjabloon voor een EV-bijlage:
-  * Invulvelden EV-sjabloon
+  * Documentatie pdf sjabloon aanmaken (ZIP)
+  * Handreiking voor het invullen van gegeven voor EV-bepaling
 * technische uitwerking met voorbeelden:
   * KlicVoorzorgsmaatregelenBeheer.xsd (schemadefinitie voor aanleveren voorzorgsmaatregelen)
   * map met diverse voorbeelden

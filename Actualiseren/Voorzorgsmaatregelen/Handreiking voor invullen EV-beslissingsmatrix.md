@@ -273,40 +273,54 @@ Voorbeeld:
 ```
 
 ## Opstellen EV-sjablonen
-In andere documentatie is aangegeven op welke wijze een EV-sjabloon kan worden opgesteld.  
+In '[documentatie_pdf_sjabloon_aanmaken.zip](documentatie_pdf_sjabloon_aanmaken.zip)' is aangegeven op welke wijze een EV-sjabloon kan worden opgesteld.  
 Daarbij is ook aangegeven welke 'placeholders' (invulvelden) zijn onderkend en door de EV-engine vervangen kunnen worden door de van toepassing zijnde werkelijke waarde.  \
 Een invulveld mag meerdere keren in een EV-sjabloon worden gebruikt. Het invulveld moet dan worden aangeduid met zijn exacte naam, of zijn naam gevolgd door een "\_"_<volgnummer>_.  \
 Het invulveld `EV-naam` kan dus meerdere keren worden gebruikt door de volgende velden bijvoorbeeld `EV-naam_1`, `EV-naam_2`, etcetera te noemen.
 
-Onderstaande placeholders zijn onderkend:
+Onderstaande placeholders zijn onderkend en dynamisch in te vullen  bij een EV-brief (per netbeheerder/thema maximaal 1 EV-brief)
 
-| gegevenscategorie          | sub-categorie   | naam placeholder     |
-|----------------------------|-----------------|------------------------------|
-| gebiedsinformatie-aanvraag | aanvraag        | Gia-klicMeldnummer |
-|                            |                 | Gia-ordernummer |
-|                            |                 | Gia-referentie |
-|                            |                 | Gia-aanvraagDatum |
-|                            | aanvrager (contactpersoon) | Avg-Contactpersoon-naam |
-|                            |                 | Avg-Contactpersoon-telefoon |
-|                            |                 | Avg-Contactpersoon-email |
-|                            | aanvrager (organisatie) | Avg-Organisatie-naam |
-|                            |                 | Avg-Adres-straat |
-|                            |                 | Avg-Adres-huisnummer |
-|                            |                 | Avg-Adres |
-|                            |                 | Avg-Adres-postcode |
-|                            |                 | Avg-Adres-woonplaats |
-|                            |                 | Avg-Adres-postcode-woonplaats |
-|                            |                 | Avg-Adres-landcode |
-| planning graafwerkzaamheden | graaflocatie (DAS) | Werk-woonplaats |
-|                            |                 | Werk-straat |
-|                            |                 | Werk-huisnummer |
-|                            |                 | Werk-adres |
-|                            | start werkzaamheden | Werk-startDatum |
-|                            | einde werkzaamheden | Werk-eindDatum |
-| eis voorzorgsmaatregel     |                 | EV-thema |
-|                            |                 | EV-eisVoorzorgsmaatregel |
-|                            |                 | EV-toelichting |
-|                            |                 | EV-naam |
-|                            |                 | EV-telefoon |
-|                            |                 | EV-email |
-| standaardfuncties          | tijdsbepaling   | Datum |
+| gegevenscategorie                | sub-categorie              | naam placeholder               | vulling                                                                                                                                              |
+| -------------------------------- | -------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| gebiedsiA7:A34nformatie-aanvraag | aanvraag                   | Gia-klicMeldnummer             | klicMeldnummer                                                                                                                                       |
+|                                  |                            | Gia-ordernummer                | ordernummer                                                                                                                                          |
+|                                  |                            | Gia-referentie                 | referentie                                                                                                                                           |
+|                                  |                            | Gia-aanvraagDatum              | aanvraagDatum (format <dd-mm-jjjj>)                                                                                                                  |
+|                                  | aanvrager (contactpersoon) | Avg-Contactpersoon-naam        | aanvrager.contactpersoon.naam                                                                                                                        |
+|                                  |                            | Avg-Contactpersoon-telefoon    | aanvrager.contactpersoon.telefoon                                                                                                                    |
+|                                  |                            | Avg-Contactpersoon-email       | aanvrager.contactpersoon.email                                                                                                                       |
+|                                  | aanvrager (organisatie)    | Avg-Organisatie-naam           | aanvrager.organisatie.naam [1]                                                                                                                       |
+|                                  |                            | Avg-Adres-straat               | aanvrager.organisatie.bezoekAdres.openbareRuimteNaam                                                                                                 |
+|                                  |                            | Avg-Adres-huisnummer           | aanvrager.organisatie.bezoekAdres.huisnummer <mark>+</mark> aanvrager.organisatie.bezoekAdres.huisletter <mark>+</mark> aanvrager.organisatie.bezoekAdres.huisnummertoevoeging |
+|                                  |                            | Avg-Adres                      | Avg-Adres-straat <mark>+</mark> Avg-Adres-huisnummer                                                                                                              |
+|                                  |                            | Avg-Adres-postcode             | aanvrager.organisatie.bezoekAdres.postcode                                                                                                           |
+|                                  |                            | Avg-Adres-woonplaats           | aanvrager.organisatie.bezoekAdres.woonplaatsNaam                                                                                                     |
+|                                  |                            | Avg-Adres-postcode-woonplaats  | Avg-Adres-postcode <mark>+</mark> Avg-Adres-woonplaats                                                                                                            |
+|                                  |                            | Avg-Adres-landcode             | aanvrager.organisatie.bezoekAdres.landcode                                                                                                           |
+| planning graafwerkzaamheden      | graaflocatie (DAS)         | Werk-woonplaats                | locatieWerkzaamheden.woonplaatsNaam                                                                                                                  |
+|                                  |                            | Werk-straat                    | locatieWerkzaamheden.openbareRuimteNaam                                                                                                              |
+|                                  |                            | Werk-huisnummer                | locatieWerkzaamheden.huisnummer <mark>+</mark> locatieWerkzaamheden.huisletter <mark>+</mark> locatieWerkzaamheden.huisnummertoevoeging                                        |
+|                                  |                            | Werk-adres                     | Werk-straat <mark>+</mark> Werk-huisnummer                                                                                                                        |
+|                                  |                            | Werk-locatie-omschrijving      | locatieOmschrijving                                                                                                                                  |
+|                                  | start werkzaamheden        | Werk-startDatum                | startDatum                                                                                                                                           |
+|                                  | einde werkzaamheden        | Werk-eindDatum                 | eindDatum                                                                                                                                            |
+| eis voorzorgsmaatregel           |                            | EV-thema                       | thema                                                                                                                                                |
+|                                  |                            | EV-eisVoorzorgsmaatregel       | eisVoorzorgsmaatregel                                                                                                                                |
+|                                  |                            | EV-toelichting                 | toelichting                                                                                                                                          |
+|                                  |                            | EV-naam                        | contactVoorzorgsmaatregel.naam                                                                                                                       |
+|                                  |                            | EV-telefoon                    | contactVoorzorgsmaatregel.telefoon                                                                                                                   |
+|                                  |                            | EV-email                       | contactVoorzorgsmaatregel.email                                                                                                                      |
+| standaardfuncties                | Tijdsbepaling              | Datum                          | today(), format `<dd-mm-jjjj>`                                                                                                                       |
+
+
+
+
+**Dynamische en niet dynamische informatie**  \
+De attributen van een gebiedsinformatie-aanvraag zoals hierboven aangegeven, worden beschikbaar gesteld voor het vullen van het EV-sjabloon.  \
+Een invulveld mag meerdere keren in een EV-sjabloon worden gebruikt. Eventueel kan dit invulveld uniek worden gemaakt door daaraan een "underscore" met volgnummer toe te voegen.  \
+De contactgegevens van een AanduidingEisVoorzorgsmaatregel waarvoor de eisVoorzorgsmaatregel is bepaald, zijn beschikbaar voor het EV-sjabloon.  \
+Let op: In principe zouden dit meerdere (verschillende) contactgegevens kunnen zijn.  \
+
+*Niet dynamische informatie*  \
+Gegevens van de netbeheerder zelf (bijv. NAW) zijn vanuit het perspectief van de netbeheerder niet dynamisch en kunnen 'hardcoded' worden opgenomen in de document-sjablonen.  \
+Ook logo's, links naar folders en andere gegevens dienen op die manier 'hardcoded' opgenomen te worden (de sjabloon moet dan dus ook afbeeldingen aankunnen).

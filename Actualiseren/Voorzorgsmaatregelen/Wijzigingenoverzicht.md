@@ -1,5 +1,9 @@
 ﻿#### Actualiseren en bepalen voorzorgsmaatregelen - Overzicht wijzigingen
 
+04-08-2021
+* Toevoeging van placeholder `Werk-locatie-omschrijving` bij EV-sjablonen
+  - Als gevolg van de upgrade naar IMKL 2.0 is het vanaf 2 januari 2022 mogelijk om optioneel een omschrijving toe te voegen bij je locatie werkzaamheden. Hiervoor is ook een placeholder toegevoegd bij de EV-sjablonen.
+
 24-04-2019
 * Documentatie over controles van voorzorgsmaatregelen uitgebreid:
   - De bestandsnamen binnen het zipbestand moeten uniek zijn.

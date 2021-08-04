@@ -131,4 +131,4 @@ Een invulveld mag meerdere keren in een EV-sjabloon worden gebruikt.  \
 Het invulveld `EV-naam` kan dus ook meerdere keren worden gebruikt door de volgende velden `EV-naam_1`, `EV-naam_2`, etcetera te noemen.
 
 
-Zie [Invulvelden EV-sjabloon](Invulvelden%20EV-sjabloon%20(2018-05-23).pdf) voor een overzicht van de te gebruiken invulvelden.
+Zie [de handreiking voo invullen EV-beslissingsmatrix, paragraaf 'Opstellen EV-sjablonen'](Handreiking%20voor%20invullen%20EV-beslissingsmatrix.md#opstellen-ev-sjablonen), voor een overzicht van de te gebruiken invulvelden.
