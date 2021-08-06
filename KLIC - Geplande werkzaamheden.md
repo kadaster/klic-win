@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 juli 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 6 augustus 2021)
 
 
 --------------------------------------------------------------------------------------
@@ -12,10 +12,20 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 
+--------------------------------------------------------------------------------------
+## Planning voor release – 12 augustus 2021
 
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer (versie 5.12.):**
+- Wijzging in het weergeven van informatie op het scherm met betrekking tot de volgorde, groepering, vertalingen en klikbaarheid van links. Zichtbaar in:
+  - Gebiedsinformatie-aanvraag menu scherm
+  - Details schermen na selectie
+- Diverse bugfixes met betrekking tot de 'recent geopend' functionaliteit.
+- De viewer is voorbereid om nieuwe leveringen mbt de standaarden upgrade (IMKL 2.0) te laten zien.
 
 --------------------------------------------------------------------------------------
-## Planning voor release – Netbeheerder Testdienst (NTD): medio augustus 2021
+## Planning voor release – Netbeheerder Testdienst (NTD): 12 augustus 2021
 
 Voor deze release is het volgende onderwerp gepland:
 
