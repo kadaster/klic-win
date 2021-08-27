@@ -3,16 +3,23 @@
 In dit document wordt een toelichting gegeven op de wijzigingen die worden/zijn doorgevoerd in de schema's die het interface met Kadaster KLIC definiëren.  \
 Let wel dat de WSDL's ook worden/zijn aangepast, zodat ze verwijzen naar de juiste versie van de schema-definitie.
 
-**Inhoudsopgave**
-
-- [KlicB2BAanvraag](#klicb2baanvraag)
-  -[Wijzigingen KlicB2BAanvraag-1.1](#wijzigingen-klicb2baanvraag-11)
-- [KlicB2BBetrokkenBeheerders](#klicb2bbetrokkenbeheerders)
-  -[Wijzigingen KlicB2BBetrokkenBeheerders-1.1](#wijzigingen-klicb2bbetrokkenbeheerders-11)
-- [Implementatie](#implementatie)
 
 ---------------------------------------------------------
 ## KlicB2BAanvraag
+
+### Toelichting overgang tussen KlicB2BAanvraag-1.1 en KlicB2BAanvraag-1.2
+
+- KlicB2BAanvraag-1.1 kan gebruikt blijven worden (backwards compatible), tot einde IMKL-upgrade overgang (1 mei 2022)
+  - Uitzondering: Meldingen vanaf 3 januari 2022 zonder referentieveld (in XSD optioneel) worden dan wél afgekeurd. Dit is vanaf 3 januari 2022 namelijk een verplicht veld.
+
+- KlicB2BAanvraag-1.2 kan vanaf medio juli 2021 al gebruikt worden; maar:
+  - Het verzoek om  de velden `telefoon van ExtraContact` en `naam van ExtraContact` pas te gebruiken vanaf 3 januari 2022, aangezien deze pas per 3 januari 2022 wordt uitgeleverd in de XML (vanaf de start van de overgangsperiode IMKL-upgrade). Deze komt wel in de Ontvangstbevestiging te staan en die inconsistentie kan leiden tot verwarring. 
+  - Let op: er is maar één extra emailadres, die op 2 manier doorgegeven kan worden. Als beide gevuld worden, wordt er maar één gebruikt: het nieuwe veld.
+
+Merk op dat vanaf IMKL 2.1 het technisch toegestaan is om adressen op te geven zonder postcode. Echter voor het aanvrager-adres en opdrachtgever-adres, behouden we deze verplichting wel.  \
+Het opgeven van een Locatieadres (DAS) zonder postcode en het opvragen van huisaansluitschetsen (HAS) van adressen zonder postcode; kan alleen indien er een BAGid van dergelijk adresseerbare object wordt opgegeven. Dit komt voor bij o.a. transformatorhuisjes.
+
+
 
 ### Wijzigingen KlicB2BAanvraag-1.2
 
@@ -104,5 +111,4 @@ Bij een calamiteitenmelding wordt dan ook de indicator `ThemaAlleenInInformatiep
 Voor een overzicht van de geplande en gerealiseerde implementaties van deze functionaliteit, zie:
 * [KLIC - Geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) 
 * [KLIC - Release notes](../KLIC%20-%20Release%20notes.md) 
-
 

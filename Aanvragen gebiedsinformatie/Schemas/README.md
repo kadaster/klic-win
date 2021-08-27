@@ -21,3 +21,6 @@ met berichten van Kadaster KLIC naar de aanvrager (orderbevestiging en eventueel
 bericht van de aanvrager naar Kadaster KLIC voor het testen van het (technische) koppelvlak met het Kadaster.
 
 De definities van de vorige versie zijn te vinden in de submap: [Aanvragen gebiedsinformatie/Schemas/KLIC B2B-terugkoppeling 1.0](../../../../tree/master/Aanvragen%20gebiedsinformatie/Schemas/KLIC%20B2B-terugkoppeling%201.0).
+
+
+De wijzigingen tussen de verschillende versies en een toelichting over de overgang naar de nieuwste versie is te vinden in: [Schemawijzigingen KLIC B2B-aanvraag.md](Schemawijzigingen%20KLIC%20B2B-aanvraag.md)
