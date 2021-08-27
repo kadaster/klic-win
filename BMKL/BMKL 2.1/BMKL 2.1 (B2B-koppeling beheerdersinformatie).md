@@ -760,6 +760,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 ```json
 {
 	"terugmeldingId": "2f157e4e-53e8-495e-9a4f-ae4692b5e6ff",
+	"giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
 	"datumAangemaakt": "2020-11-26T10:20:49+01:00",
 	"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
 	"klicmeldnummer": "19G002541",
@@ -829,19 +830,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 			"status": "Nieuw",
 			"statusCode": "NIEUW"
 		}
-	},
-	"belanghebbende_statussen": [
-		{
-			"bronhoudercode": "GM1641",
-			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
-			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen"
-		},
-		{
-			"bronhoudercode": "KL0001",
-			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
-			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen"
-		}
-	]
+	}
 }
 ```
 
