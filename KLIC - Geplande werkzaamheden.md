@@ -1,15 +1,26 @@
-﻿# Geplande werkzaamheden (bijgewerkt 6 augustus 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 27 augustus 2021)
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – medio september 2021
+## Planning Upgrade Standaarden vanaf medio september 2021
 
 In medio september zal er een Keten Acceptatie Test (KAT) plaatsvinden als onderdeel van de Upgrade van de Standaarden.  
 
-Aanmelden voor de KAT kan tot eind juli via klic.project@kadaster.nl
+Aanmelden voor de KAT kan via klic.project@kadaster.nl
 
 Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release – 28 september 2021
+
+Voor deze release is het volgende onderwerp gepland:
+
+Diverse verbeteringen:
+- Performance centraal aanleveren.
+- Textuele aanpassing in NTD schermen.
+- Aanpassing waarde van veld `positienummer` in GI.xml in NTD.
 
 
 --------------------------------------------------------------------------------------

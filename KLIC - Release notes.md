@@ -1,14 +1,31 @@
 ﻿# Release notes
 ------------------------
+### 12 augustus 2021
 
+**Kadaster KLIC-viewer (versie 5.12.):**
+- Wijzging in het weergeven van informatie op het scherm met betrekking tot de volgorde, groepering, vertalingen en klikbaarheid van links. Zichtbaar in:
+  - Gebiedsinformatie-aanvraag menu scherm
+  - Details schermen na selectie
+- Diverse bugfixes met betrekking tot de 'recent geopend' functionaliteit.
+- De viewer is voorbereid om nieuwe leveringen mbt de standaarden upgrade (IMKL 2.0) te laten zien.
+
+------------------------
+### 12 augustus 2021 (NTD)
+
+In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
+Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  \
+  \
+Zie ook [de toelichting op de derde mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-3) van de upgrade van de standaarden. 
+
+------------------------
 ### 20 juli 2021
 
 **Kadaster KLIC-viewer (iOS):**
 
 1.	Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als iOS App beschikbaar gesteld.
-      De Kadaster KLIC-viewer is sinds [7 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
-2.	Met de sector [afgestemde vertaling](https://github.com/kadaster/klic-win/blob/master/Beheren%20standaarden%20KLIC/Eisen%20overheid%20ordening%20attributen%20(concept).xlsx) van attribuutwaarden worden geïmplementeerd bij het klikken op de kaart informatie (Feature informatie).
-      Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
+De Kadaster KLIC-viewer is sinds [7 april 2021](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md#planning-voor-release--7-april-2021) als Android App beschikbaar (6343).
+2.	Met de sector [afgestemde vertaling](https://github.com/kadaster/klic-win/blob/master/Beheren%20standaarden%20KLIC/Eisen%20overheid%20ordening%20attributen%20(concept).xlsx) van attribuutwaarden worden geïmplementeerd bij het klikken op de kaart informatie (Feature informatie). 
+Met name Engelse waarden zijn vertaald naar Nederlandse waarden (5152)
 3.	Inkorten lange URL waarden bij het klikken op de kaart informatie (Feature informatie) (4022).
 4.	Extra Detailinformatie PDF bestanden zal een link worden, waardoor het makkelijker te openen is bij het klikken op de kaart informatie (Feature informatie) (4477).
 5.	Bij het gebruik van de Kadaster KLIC-viewer App (iOS en Android) zal de smartphone of tablet kort trillen indien er een Eis Voorzorgsmaatregel (EV) van toepassing is bij de geopende KLIC-levering (6844).
@@ -16,13 +33,13 @@
 
 
 ------------------------
-### 15 juli 2021 – Netbeheerder Testdienst (NTD):
+### 15 juli 2021 –(NTD)
 
 
 In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD een testmelding te doen, waarbij er 2 XML’s (V1 én V2) in de BeheerdersinformatieLevering (BIL-Zip) zit.  \
 Beide XML's representeren de complete set aan data: een XML is volgens IMKL versie 1.2.1 en de andere volgens IMKL versie 2.0.  \
-\
-Mocht u gebruik maken van de Kadaster KLIC-viewer, dan kunt u de BIL-Zip van de NTD openen met de viewer die op 20 juli gereleased wordt. Deze zal volgens de huidige visualisatie regels het IMKL 1.2.1 presenteren.
+  \
+Mocht u gebruik maken van de Kadaster KLIC-viewer, dan kunt u de BIL-Zip van de NTD openen met de viewer die op 20 juli gereleased wordt. Deze zal volgens de huidige visualisatie regels het IMKL 1.2.1 presenteren.  
 
 Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden.  
 Op bovenstaande pagina zijn ook enkele **voorbeeldbestanden** te vinden.
@@ -43,11 +60,11 @@ Voor deze release is het volgende onderwerp gepland:
 **Kadaster KLIC-viewer ([versie 5.10.0](https://www.kadaster.nl/klicviewer) )**:
 - De BeheerdersinformatieLevering (BIL ZIP) uit de Netbeheerders Testdienst (NTD) kan door netbeheerders bekeken worden met de Windows-versie van de Kadaster KLIC-viewer (id 5613).
 - De attributen en waarden zullen op de vastgestelde vaste volgorde worden getoond (ook wel ordening genoemd).   
-  De Technische Commissie Standaarden KLIC (TCS) heeft deze volgorde vastgesteld. De gebruiker ziet de belangrijkste attributen en waarden bovenaan in de resultaten na een klik op de kabels of leidingen (id 6340).  \
-  U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid ordening attributen (vastgesteld 15-05-2020).
+De Technische Commissie Standaarden KLIC (TCS) heeft deze volgorde vastgesteld. De gebruiker ziet de belangrijkste attributen en waarden bovenaan in de resultaten na een klik op de kabels of leidingen (id 6340).  \
+U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid ordening attributen (vastgesteld 15-05-2020).
 - Betere werking van de “Backbutton” in de Android App (id 6565).
-- In het Printen menu wordt de optie “Overzichtskaart” als 1e optie getoond
-  (id 6575).
+- In het Printen menu wordt de optie “Overzichtskaart” als 1e optie getoond 
+(id 6575).
 - Diverse bugfixes.
 
 
@@ -57,7 +74,7 @@ Voor deze release is het volgende onderwerp gepland:
 **Upgrade Standaarden**:
 - Mogelijkheid om in de NTD aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard.  \
 
-Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden.
+Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
 
 ------------------------
 ### 12 april 2021
@@ -78,7 +95,7 @@ Voorbeelden:
 De Kadaster KLIC-viewer kan online en offline gebruikt worden en wordt multi-platform beschikbaar gesteld.
 - Om op je mobiele device offline gebruik te kunnen maken van je KLIC-levering, wordt de Kadaster KLIC-viewer ook als App beschikbaar gesteld. In de eerste release zal dit een Android App zijn. Daarna komt een IOS variant beschikbaar.
   - Merk op dat je vanaf [1 april 2021](https://www.agentschaptelecom.nl/onderwerpen/kabels-en-leidingen/documenten/publicaties/2021/01/22/gebiedsinformatie-en-viewers) verplicht bent om een digitaal hulpmiddel bij je te hebben op de graaflocatie. Als de Kadaster KLIC-viewer App niet exact op 1 april beschikbaar is, wordt geadviseerd om de Kadaster KLIC-viewer online te gebruiken.
-    Tevens is de performance van kaartlagen uit en aanzetten is verhoogd voor alle platformen (ID 5298)
+Tevens is de performance van kaartlagen uit en aanzetten is verhoogd voor alle platformen (ID 5298)
 
 ------------------------
 ### 2 maart 2021
@@ -91,11 +108,11 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 
 **Uitlevering**:
 - Het zipbestand met de KLIC-uitlevering is aangepast in productie:
-  - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd.
+  - de Gelaagde PDF (LP.pdf) wordt niet meer meegeleverd. 
 - De layout en de inhoud van de ontvangstbevestiging en de leveringsmail zijn gemoderniseerd.
   - Tevens zal de tweede link die in de leveringsemail staat en verwijst naar een web-service niet meer ondersteund worden.
-    Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
-    Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
+Meer informatie is in [deze korte presentatie](Uitleveren/KLIC-uitleveringen%20-%20volgende%20versie.pdf) beschikbaar.
+Voorbeelden met de nieuwe layout van de [ontvangstbevestigingsmail](Uitleveren/KLIC%20ontvangstbevestigingsmail%20-%20per%202%20februari%202021.pdf) en de [leveringsmail](Uitleveren/KLIC%20leveringsmail%20-%20per%202%20februari%202021.pdf) zijn reeds [gepubliceerd op GitHub](Uitleveren/).
 
 ------------------------
 ### 26 januari 2021
@@ -156,7 +173,7 @@ Onderstaande is op 8 juli 2020 afgestemd met het KLIC gebruikersoverleg (KGO KLI
 _NTD reeds per 15 oktober beschikbaar_
 
 **Leveringsmail (LP.pdf)**:
-- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, komt een vooraankondiging op de Gelaagde PDF (LP.pdf) te staan.
+- Als voorbereiding op de wijziging van begin 2021 om de Gelaagde PDF (LP.pdf) niet meer uit te leveren, komt een vooraankondiging op de Gelaagde PDF (LP.pdf) te staan. 
 
 **Bugfix van teruggedraaide release (oorspronkelijk 27 augustus)**:
 - Groepering foutmeldingen bij actualiseren netinformatie
@@ -178,8 +195,8 @@ Bugfix release informatiepolygoon
 
 ------------------------
 ### 22 september 2020
-> Doordat er soms technische onvolkomenheden optraden na deze release, is uit voorzorg tijdelijk **de functionaliteit om een informatiepolygoon te gebruiken uitgezet**.
-> Na analyse (en mogelijk software aanpassing) zal de functionaliteit weer aangezet worden.
+> Doordat er soms technische onvolkomenheden optraden na deze release, is uit voorzorg tijdelijk **de functionaliteit om een informatiepolygoon te gebruiken uitgezet**. 
+> Na analyse (en mogelijk software aanpassing) zal de functionaliteit weer aangezet worden. 
 
 
 
@@ -203,7 +220,7 @@ Bugfix release informatiepolygoon
 - Voor het aan en uit zetten van netbeheerders en kaartlagen in het weergave menu is het nu mogelijk om op de hele regel te klikken, in plaats van alleen op de checkbox. (ID 4645)
 - Er komt een knop waarmee in één keer de melding gecentreerd en het standaard zoom niveau wordt getoond op het scherm. (ID 5143)
 
-  In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
+	In verband met technische wijzigingen aan de KLIC-viewer, wordt vanaf deze oplevering alleen nog maar KLIC-Viewer versie 5.5.8 (gereleased op 25 juni) of hoger ondersteund. Dit geldt alleen voor gebruikers van de Windows desktop versie. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 ------------------------
 ### 1 september 2020
@@ -216,8 +233,8 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 
 **Aanleveren netinformatie in NTD**:
 - Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen.  \
-  De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
-  Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
+De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
+Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
 - Validatie op de lengte van het attribuut `label` van aangeleverde features voor zowel Centrale als Decentrale aanleveringen. De lengte mag maximaal 40 tekens zijn. Indien dit overschreden wordt, krijgt de gebruiker een waarschuwing. Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5478).
 
 ------------------------
@@ -225,8 +242,8 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 
 **Aanleveren netinformatie in NTD**: (reeds per 13 augustus beschikbaar)
 - Validatie van [bestaande afspraak](Toepassing%20IMKL/Toelichting%20controles%20netinformatie%20KLIC.md#srsname) toegevoegd op het attribuut `srsName` voor zowel Centrale als Decentrale aanleveringen.  \
-  De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
-  Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
+De waarde moet `urn:ogc:def:crs:EPSG::28992` of `epsg:28992` zijn. Indien een andere waarde gebruikt wordt, krijgt de gebruiker een waarschuwing.  \
+Op termijn wordt de waarschuwing aangepast naar een 'error'-melding waarmee de aangeleverde netinformatie niet meer geaccepteerd wordt. Deze validatie zal voorafgaand aan de overgangsperiode naar de nieuwe versie van het IMKL ook doorgevoerd worden voor aanleveringen op de productie-omgeving (ID 5577).
 - Netinformatie wordt afgekeurd als een IMKL-object gekoppeld is aan meerdere netwerken: een IMKL-object mag maar gekoppeld worden aan één netwerk (ID 5634).
 - In de NTD-schermen voor het actualiseren van netinformatie en documenten wordt nu in beide gevallen gewaarschuwd dat de statussen van toepassing zijn voor de NTD (ID 5524).
 
@@ -259,7 +276,7 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 - Nieuws notificatie functionaliteit beschikbaar voor bijvoorbeeld algemene KLIC nieuws en KLIC-viewer nieuws. (ID 5457)
 - In de viewer staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID 5374)
 
-  In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor september up-te-daten naar KLIC-Viewer versie 5.5.8. Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 10 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
+	In verband met technische wijzigingen aan de KLIC-viewer verzoeken wij de gebruikers om voor september up-te-daten naar KLIC-Viewer versie 5.5.8. Dit geldt alleen voor gebruikers van de Windows desktop versie. Met de release van deze versie wordt de vorige versie van de KLIC-viewer nog 10 weken ondersteund. Heeft u de MacOS versie van de KLIC-viewer geïnstalleerd dan hoeft u niet te updaten.
 
 ------------------------
 ### 8 juni 2020
@@ -273,7 +290,7 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 
 **KvK-nummer (Kamer van Koophandel)**:
 - In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
-- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven.
+- In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
 - Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
 - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
 
@@ -283,7 +300,7 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 **Actualiseren netinformatie**:
 - Validatie toegevoegd in het proces actualiseren Netinformatie voor Centrale netbeheerders: bij de `VoorzorgsmaatregelBeslissingsregel`-s moet een geldige `netbeheerderWerkaanduiding` worden aangegeven. De `netbeheerderWerkaanduiding` is geldig als deze bekend is bij `WerkzaamhedenAanduiding`-en. (ID: 5156)
 
-**Ontvangstbevestiging / Leveringsbrief**:
+**Ontvangstbevestiging / Leveringsbrief**: 
 - In de Ontvangstbevestiging wordt nu ook de 'geschatte einddatum werkzaamheden' getoond zoals die is opgegeven tijdens de aanvraag. (ID: 5530)
 - In de Leveringsbrief staat nu een extra toelichting over de wettelijke verplichting bij een EisVoorzorgsmaatregel. (ID: 5521)
 
@@ -331,7 +348,7 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
 
 **eHerkenning**:
 - Per 17 maart bieden wij naast de reguliere inlogmogelijkheid op Mijn Kadaster, ook eHerkenning aan als inlog voor Mijn Kadaster.
-  Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
+Communicatie over eHerkenning zal via de reguliere kanalen verlopen.
 
 **Calamiteitenmelding**:
 - Als een calamiteitenmelding na de 2e uitlevering (45 minuten) compleet wordt, zal er direct een complete levering uitgeleverd worden.
@@ -351,10 +368,10 @@ Daarnaast hebben we de _**volgende validaties tijdelijk uitgezet**_:
   - In het print-menu kun je ook kiezen voor A1 en A2 (staand/liggend)
   - In het print-menu kun je ook kiezen voor schaal 1:200
   - Het print-menu opent nu standaard in het bladindeling scherm
-  - Bugfix: In de Windows versie werden EV en Extra Geometrie toggles meer dan 1 keer getoond.
+  - Bugfix: In de Windows versie werden EV en Extra Geometrie toggles meer dan 1 keer getoond. 
   - Bugfix: Betere afhandeling 502 foutmelding
   - Bugfix: Bij het opslaan/downloaden van een PDF staat de extentie van het bestand nu standaard ingesteld.
-- Mogelijkheid voor de netbeheerders om uitgepakte beheerdersinformatieleveringen (BIL) te bekijken in de Windows versie van de viewer.
+- Mogelijkheid voor de netbeheerders om uitgepakte beheerdersinformatieleveringen (BIL) te bekijken in de Windows versie van de viewer.  
 
 ------------------------
 ### 1 maart 2020
@@ -372,7 +389,7 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
 ------------------------
-### 2 februari 2020
+### 2 februari 2020 
 
 **Ontvangstbevestiging**:
 - Er zijn visuele aanpassingen in de Ontvangstbevestiging ter voorbereiding op toekomstige wijzigingen. (ID 5051)
@@ -381,14 +398,14 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 - Er konden dubbele vermeldingen naar bestanden in de LI.xml voorkomen. Dit is opgelost. (ID 5065, [ID#67](https://github.com/kadaster/klic-win/issues/67))
 
 ------------------------
-### 20 januari 2020
+### 20 januari 2020 
 
 **Leveringsemail**:
 - De inhoud van de leveringsemail is aangepast. (ID 3897)
 - Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
 
 **Nieuwe Kadaster KLIC-viewer**:
-- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering
+- Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
   - met alleen vectorinformatie (GI.xml) en PDF-bestanden (bijlagen) van netbeheerders (zónder PNG-bestanden voor ligging, maatvoering, annotatie en eigenTopo van netbeheerders)
   - met een BGT-achtergrondkaart in PNG-formaat
   - met geselecteerd gebied in vectorinformatie (in _GebiedsinformatieLevering_, GI.xml)
@@ -400,7 +417,7 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 ### 9 januari 2020 (NTD)
 
 **BIL zip-bestand in versie 2.2**:
-- Ter voorbereiding op de afloop van de overgangsperiode (1 maart 2020), wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232).
+- Ter voorbereiding op de afloop van de overgangsperiode (1 maart 2020), wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
   - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
 
@@ -434,7 +451,7 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 **Publicatie op Github**:
 - Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende Beheerders Informatie Leveringen. (ID 3849)  \
   zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
-- Update van de BETA-versie van de Kadaster KLIC-viewer.
+- Update van de BETA-versie van de Kadaster KLIC-viewer. 
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 ------------------------
@@ -454,7 +471,7 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 ### 2 juli 2019
 
 **Publicatie op Github**:
-- Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer.
+- Er komt een update van de BETA-versie beschikbaar van de online Kadaster KLIC-viewer. 
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
 **Bugfix**:
@@ -463,7 +480,7 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 **De autorisatie  methode wordt geüpdatet**:
 - Het inlog scherm zier er anders uit. Na het opgeven van je wachtwoord, verschijnt een scherm om de autorisatie te bevestigen. Hierop staan de scopes die je hebt aangevraagd en waarvoor je autorisatie hebt.
 - Bij het ophalen van een token via `grant_type= authorization_code` en `grant_type= refresh_token`:
-  - Als de gebruiker doorgestuurd is naar de  redirect_uri dan worden de scopes waarvoor een gebruiker geautoriseerd is alleen nog maar teruggegeven in de body van de response; en niet meer in de URL parameters
+  - Als de gebruiker doorgestuurd is naar de  redirect_uri dan worden de scopes waarvoor een gebruiker geautoriseerd is alleen nog maar teruggegeven in de body van de response; en niet meer in de URL parameters 
 - Bij het ophalen van een token via `grant_type=password`:
   - De parameters `username`, `password`, `client_id`, `client_secret`, `grant_type` en `scope` kunnen niet meer opgegeven worden in de URL parameters, maar alleen nog maar in de body.
 
@@ -477,7 +494,7 @@ Zie ook de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelec
 |Aanroepen API's met een verlopen token                                      |HTTP 400 <br> `{`<br> `error: "Token retrieval error",`<br> `error_description: "The requested token could not be retrieved"`<br> `}`                                                                                          |HTTP 401 <br> `{`<br> `error: "invalid_token",`<br> `error_description: "The access token provided is expired, revoked, malformed, or invalid for other reasons"`<br> `}` |
 |Ophalen token met een verkeerd userid en/of password.                       |HTTP 400 <br> `{`<br> `error: "invalid_grant",`<br> `error_description: "Resource Owner authentication failed"`<br> `}`                                                                                                        |HTTP 401 <br> `{`<br> `error: "invalid_request",`<br> `error_description: "The resource owner could not be authenticated due to missing or invalid credentials"`<br> `}`  |
 
-Zie [deze link op GitHub](API%20management/Authenticatie_via_oauth.md) voor een beschrijving van de Authenticatie via OAuth voor de KLIC API's.
+Zie [deze link op GitHub](API%20management/Authenticatie_via_oauth.md) voor een beschrijving van de Authenticatie via OAuth voor de KLIC API's. 
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - NTD: 20 juni 2019; Productie: 24 juni 2019
@@ -520,7 +537,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Voorzorgsmaatregelen (EV)**:
 - Bij het aanleveren van een EV-vlak in de netinformatie moet de **`netbeheerderNetAanduiding`** in combinatie met **het `thema` van het `Utiliteitsnet`** - bekend zijn bij de aangeleverde voorzorgsmaatregelen. (ID 3546)  \
-  Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen).
+  Zie voor meer informatie [deze link op GitHub](https://github.com/kadaster/klic-win/blob/master/Actualiseren/Voorzorgsmaatregelen/Controles%20voorzorgsmaatregelen.md#netinformatie-met-voorzorgsmaatregelen). 
 
 **Bug-fixes**:
 - In de NTD omgeving wordt nu ook voor een oriëntatieverzoek het veld "omschrijvingWerkzaamheden" in de GI.xml correct getoond. (ID 3974)
@@ -568,7 +585,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **Performance verbeteringen**:
 - Actualiseren netinformatie: Performance verbetering door nieuwe opzet van de controle kaartjes bij het actualiseren van netinformatie. (ID 2687)
 - Bugfix: Het verwerken van geuploade documenten kon op de NTD tot een Out-Of-Memory probleem leiden. Dit is nu opgelost. (ID 3772)
-- Actualiseren documenten: Performance verbetering
+- Actualiseren documenten: Performance verbetering 
 - Performance verbetering voor het ophalen van alle openstaande BIA’s via de API. (ID 3719)
 
 ------------------------
@@ -594,12 +611,12 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **B2B aanvraag**:
 
-Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorgevoerd. In de nieuwe versie van het interface KlicB2BAanvraag zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd:
+Ter voorbereiding op de KLIC-WIN implementatie wordt er een XSD aanpassing doorgevoerd. In de nieuwe versie van het interface KlicB2BAanvraag zijn de volgende optionele attributen van een gebiedsinformatie-aanvraag toegevoegd: 
 - KvkNummer van aanvrager; het KvK-nummer (Kamer van Koophandel) van de aanvrager (klant) van de aanvraag.
-- KvkNummer van opdrachtgever; het KvK-nummer (Kamer van Koophandel) van de opdrachtgever voor de aanvraag.
-- VoorbereidingMedegebruikFysiekeInfrastructuur; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot medegebruik van fysieke infrastructuur.
-- VoorbereidingCoordinatieCivieleWerken; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot coördinatie van civiele werken.
-- IdentificatieBAG van een dichtstbijzijnd adres (DAS); de identificatie van het adresseerbare object van een dichtstbijzijnd adres.
+- KvkNummer van opdrachtgever; het KvK-nummer (Kamer van Koophandel) van de opdrachtgever voor de aanvraag. 
+- VoorbereidingMedegebruikFysiekeInfrastructuur; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot medegebruik van fysieke infrastructuur. 
+- VoorbereidingCoordinatieCivieleWerken; een specifiek orientatieverzoek ter voorbereiding op een verzoek tot coördinatie van civiele werken. 
+- IdentificatieBAG van een dichtstbijzijnd adres (DAS); de identificatie van het adresseerbare object van een dichtstbijzijnd adres. 
 - Informatiepolygoon; de geometrie van het gebied (een polygoon) waarover informatie gevraagd wordt, niet zijnde het graafgebied.
 
 Op [Github](https://github.com/kadaster/klic-win/tree/master/Aanvragen%20gebiedsinformatie) is een uitgebreide toelichting over deze aanpassing.
@@ -654,7 +671,7 @@ Op 7 januari staat gepland om de eerste netbeheerder over te sluiten op het nieu
 
 
 **Tariefswijziging Klic-melding**:  \
-De [tariefswijziging die per 1 januari 2019](https://www.kadaster.nl/-/tarieven-per-1-januari-2019) van kracht is, wordt zichtbaar op het scherm getoond bij een Tracémelding.
+De [tariefswijziging die per 1 januari 2019](https://www.kadaster.nl/-/tarieven-per-1-januari-2019) van kracht is, wordt zichtbaar op het scherm getoond bij een Tracémelding. 
 
 
 **Synchronisatie API**:  \
@@ -666,11 +683,11 @@ Voor Agentschap Telecom zijn de API’s live gezet om KLIC procesgegevens te syn
 **Huisaansluitschetsen**:
 - In de productie omgeving is begin december het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 3246, ID 3457). Het betreft:
   * Voor de aanvraag voor huisaansluitschets (HAS) is er een maximum van 100 adresseerbare objecten (verblijfsobject, standplaats of ligplaats), waar dat voorheen was op basis van 100 unieke adressen. Soms is één unieke adres gerelateerd aan meerdere adresseerbare objecten in de Basisregistratie Adressen en Gebouwen (BAG). De telling van het maximum (100) is gebaseerd op adresseerbare objecten. (ID 3246, ID 3337, ID 3338, ID 3339, ID 3340, ID 3341)
-- In de productie omgeving is 22 november het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 2728). Het betreft:
-  * Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer.
-    - Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk.
-    - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
-    - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
+- In de productie omgeving is 22 november het proces rondom de aanvraag en registratie van huisaansluitschetssen gewijzigd; Deze wijziging wordt ook doorgevoerd op NTD (ID 2728). Het betreft: 
+    * Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
+        - Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
+        - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
+        - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
 
 ------------------------
 ### release IMKL v1.2.1.2 - 13 december 2018
@@ -683,19 +700,19 @@ De voorgestelde wijzigingen zijn geaccordeerd door Werkgroep standaarden KLIC en
 - Er zijn geen aanpassingen aan het UML-model of het gml-applicatieschema gedaan
 - Afgehandelde issues:
   * [Issue 221](https://github.com/Geonovum/imkl2015-review/issues/221)  \
-    Visualisatie van EV-gebieden is aangepast. Door gebruik te maken van een patroon (i.p.v. transparantie) blijft kabel- en leidinginformatie zichtbaar, ook bij meerdere, overlappende EV-gebieden.
+Visualisatie van EV-gebieden is aangepast. Door gebruik te maken van een patroon (i.p.v. transparantie) blijft kabel- en leidinginformatie zichtbaar, ook bij meerdere, overlappende EV-gebieden.
   * [Issue 223](https://github.com/Geonovum/imkl2015-review/issues/223)  \
-    De visualisatie van de kop van een mantelbuis is aangepast. De kop eindigt nu op het einde van de geometrie van de mantelbuis.
+De visualisatie van de kop van een mantelbuis is aangepast. De kop eindigt nu op het einde van de geometrie van de mantelbuis.
   * [Issue 224](https://github.com/Geonovum/imkl2015-review/issues/224)  \
-    Het symbool en de grootte voor mof is aangepast (zie SLD).
+Het symbool en de grootte voor mof is aangepast (zie SLD).
   * [Issue 225](https://github.com/Geonovum/imkl2015-review/issues/225)  \
-    De grootte van de symbolen van overige leidingelementen (_Toren_, _Mast_, _Mangat_, _Kast_, _TechnischGebouw_) is aangepast.
+De grootte van de symbolen van overige leidingelementen (_Toren_, _Mast_, _Mangat_, _Kast_, _TechnischGebouw_) is aangepast.
   * [Issue 226](https://github.com/Geonovum/imkl2015-review/issues/226)  \
-    Ook de transparantie van de symbolen van overige leidingelementen is aangepast, om eigen geometrie te kunnen zien.
+Ook de transparantie van de symbolen van overige leidingelementen is aangepast, om eigen geometrie te kunnen zien.
   * [Issue 227](https://github.com/Geonovum/imkl2015-review/issues/227)  \
-    Het aangrijpingspunt van het symbool voor een blaasgat op de leiding is verplaatst naar de onderkant.
+Het aangrijpingspunt van het symbool voor een blaasgat op de leiding is verplaatst naar de onderkant.
   * [Issue 230](https://github.com/Geonovum/imkl2015-review/issues/230)  \
-    Het label met `dieptePeil` wordt nu (onderscheidend) getoond bij de features _DiepteTovMaaiveld_ en _DiepteNAP_.
+Het label met `dieptePeil` wordt nu (onderscheidend) getoond bij de features _DiepteTovMaaiveld_ en _DiepteNAP_.
 - Onderstaande [SLD's](https://github.com/Geonovum/imkl2015/tree/master/visualisatie/1.2.1.2) zijn aangepast:
   * sld-aanduidingeisvoorzorgsmaatregel.xml
   * sld-dieptenap.xml
@@ -707,7 +724,7 @@ De voorgestelde wijzigingen zijn geaccordeerd door Werkgroep standaarden KLIC en
   * sld-mast.xml
   * sld-technischgebouw.xml
   * sld-toren.xml
-- De volgende [iconen](https://github.com/Geonovum/imkl2015/tree/master/symbool/1.2.1.2/iconen) zijn aangepast:
+- De volgende [iconen](https://github.com/Geonovum/imkl2015/tree/master/symbool/1.2.1.2/iconen) zijn aangepast: 
   * dieptenap
   * dieptetovmaaiveld
 - Map met [patronen](https://github.com/Geonovum/imkl2015/tree/master/symbool/1.2.1.2/patronen) is toegevoegd; fonts worden niet meer toegepast.
@@ -764,7 +781,7 @@ Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op 
 
 **[IMKL2015/regels](https://github.com/Geonovum/imkl2015/tree/master/regels)** (versie 1.2.1.1):
 - Aanpassingen van extra regels zijn beschreven in [IMKL2015 v 1.2.1.1_object-attributen-ExtraRegels.xlsx](https://github.com/Geonovum/imkl2015/blob/master/regels/1.2.1.1/IMKL2015%20v%201.2.1.1_object-attributen-ExtraRegels.xlsx);  \
-  De aanpassingen zijn geel gemarkeerd in het document.
+De aanpassingen zijn geel gemarkeerd in het document.
 - Er zijn geen aanpassingen aan het UML-model of het gml-applicatieschema gedaan
 - Afgehandelde issues:
   * Tabblad _Annotatie_ mist attribuut `labelpositie` met extra regels. Zie [issue 212](https://github.com/Geonovum/imkl2015-review/issues/212)
@@ -772,7 +789,7 @@ Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op 
   * Bij tabblad _Utiliteitsnet_ is afkomstklasse van attribuut `beginLifespanVersion` aangepast. Zie [issue 217](https://github.com/Geonovum/imkl2015-review/issues/217)
   * Bij tabblad _Utiliteitsnet_ maar één keer attribuut `beginLifespanVersion`. Zie [issue 218](https://github.com/Geonovum/imkl2015-review/issues/218)
   * Bij attribuut `currentStatus` (afkomst: _UtilityNetworkElement_) is nilReason niet toegestaan. Zie [issue 220](https://github.com/Geonovum/imkl2015-review/issues/220)  \
-    Hierdoor worden netwerkelementen die hiervan overerven wél gevisualiseerd met de meegeleverde SLD.
+Hierdoor worden netwerkelementen die hiervan overerven wél gevisualiseerd met de meegeleverde SLD.
   * Bij tabblad _ExtraDetailinfo_ zijn aan de attributen `bestandLocatie` en `bestandMediaType` extra regels toegevoegd. Zie [issue 222](https://github.com/Geonovum/imkl2015-review/issues/222)
 
 ------------------------
@@ -782,10 +799,10 @@ Naar aanleiding van de Keten Acceptatietesten zijn bevindingen geconstateerd op 
 **Huisaansluitschetsen**:
 
 Het proces rondom de aanvraag en registratie van HAS is wijzigd:
-- Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer.
-  - Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk.
-  - Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
-  - Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
+- Omdat ook KLIC aansluit op de wettelijke basisregistratie BAG, moet dit adres in de basisregistratie BAG bestaan. Hierdoor worden alleen nog maar hoofdadressen geaccepteerd, en geen nevenadressen meer. 
+	- Bij bestellen via de website is het selecteren van nevenadressen niet meer mogelijk. 
+	- Een B2B aanvraag met een HAS aanvraag op een nevenadres wordt afgekeurd.
+	- Een HAS die bij de netbeheerder geregistreerd staat onder het nevenadres, kan dus niet meer opgevraagd worden.
 
 
 Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huisaansluitschetsen%20in%20IMKL%20v1.2.1.md). <br>
@@ -826,7 +843,7 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - Van netbeheerder wordt de ‘WebsiteKlic’ weergegeven in de GI.xml (KLIC-WIN per 1 januari 2019) (ID 2904)
 
 **KLIC-WIN Voorzorgsmaatregelen (EV) (in de NTD)**:
-- Uitleveren EV brief: In de brief wordt locatieWerkzaamheden correct gevuld. (ID 3112)
+- Uitleveren EV brief: In de brief wordt locatieWerkzaamheden correct gevuld. (ID 3112) 
 - Aanleveren: Controleren of alle meegeleverde sjablonen gebruikt zijn in de beslisregels en een waarschuwing indien niet gebruikt. (ID 1964)
 - Aanleveren: De contactpersoon van de aanvrager wordt opgeslagen. Voorheen was er een omissie en werd de contactgegevens van de organisatie opgeslagen. (ID 2260)
 - Aanleveren: Keten Acceptaties bevinding: Bij het aanleveren van het voorzorgsmaatregelen bestand worden nu alle associaties met waardelijsten gecontroleerd. (ID 3248)
@@ -838,7 +855,7 @@ Voor meer informatie, zie [deze link op GitHub](Toepassing%20IMKL/Gebruik%20huis
 - Voor Agentschap Telecom worden API's beschikbaar gesteld om KLIC procesgegevens te synchroniseren met hun eigen registratie.
 
 **Keten Acceptatietest Bevindingen**:
-- Uitlevering (Zip) aanpassing: Visualisatie bevindingen. Zie issues 221, 223, 224, 225, 226 en 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (KLIC-WIN ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3264, ID 3265, ID 3266)
+- Uitlevering (Zip) aanpassing: Visualisatie bevindingen. Zie issues 221, 223, 224, 225, 226 en 227 op de [Github van Geonovum](https://github.com/Geonovum/imkl2015-review/issues). (KLIC-WIN ID 2838, ID 3186, ID 3207, ID 3208, ID 3209, ID 3253, ID 3264, ID 3265, ID 3266)   
 - Uitlevering (Zip) bugfix: Sommige annotaties werden niet weergegeven (ID 3292)
 - Uitlevering (Zip) bugfix: Het lettertype van het Maatvoering-/Annotatielabel is aangepast naar 'Liberation Sans' conform het visualisatie document van Geonovum. (ID 3314, ID 3296)
 - Uitlevering (Zip) bugfix: EigenTopo met status "plan" wordt nu gevisualiseerd in de png. (ID 3310)
@@ -934,7 +951,7 @@ Algemeen:
   * _ExtraGeometrie_
 - Multi-geometrieën in WIBON-features toestaan bij actualiseren/decentraal aanleveren (voor zover dit voor het geometrietype is toegestaan).
 
-WION Levering:
+WION Levering: 
 - Achtergrondkaart en selectie kaart ook meeleveren bij het opvragen van de namens de netbeheerder geleverde beheerdersinformatie.
 - Gegenereerde bestandsnamen voor uitlevering op GDS worden uniek gemaakt.
 - Gebruik default namespace voor leveringsinformatie (in LI.xml).
@@ -971,7 +988,7 @@ Algemeen:
 - Structuur verbetering in de database; hierdoor is de (eerder aangeleverde) netinformatie verwijderd.
 - Validatie op gebruik standaard (namespace)prefixes in XML berichten.
 
-WION Levering:
+WION Levering: 
 - Complementeren gebiedsinformatielevering (GI.xml).
 - Complementeren leveringsinformatie (LI.xml).
 
@@ -981,12 +998,12 @@ EV:
 
 BMKL API v2.0:
 - Agentschap Telecom (AT) leestoegang verlenen.
-- Gebiedsinformatielevering (GIL.xml) toegevoegd aan de service ‘Opvragen beheerdersinformatie-levering zoals deze voor belanghebbende netbeheerder is uitgeleverd bij de aangegeven beheerdersinformatie-aanvraag.’
+- Gebiedsinformatielevering (GIL.xml) toegevoegd aan de service ‘Opvragen beheerdersinformatie-levering zoals deze voor belanghebbende netbeheerder is uitgeleverd bij de aangegeven beheerdersinformatie-aanvraag.’ 
 - Leveringsinformatie (LI.xml) toegevoegd aan de service ‘Opvragen beheerdersinformatie-levering zoals deze voor belanghebbende netbeheerder is uitgeleverd bij de aangegeven beheerdersinformatie-aanvraag.’
 - Teksten ontwikkelaarsmelding uniform gemaakt en benaming gelijkgetrokken aan IMKL benaming.
 - Indien geen gegevens voor API call dan httpstatus 200 +lege lijst geven i.p.v. httpstatus 404.
 - Het is als Service Provider niet meer mogelijk om gebiedsinformatieAanvragen (GIA's) van meerdere netbeheerders tegelijkertijd op te vragen middels BMKL API.
-- Update BMKL API's ten aanzien van naamgeving e.d.
+- Update BMKL API's ten aanzien van naamgeving e.d. 
 
 Performance:
 - Diverse performance verbeteringen met betrekking tot levering en de gebruikerservaringen van de door netbeheerder geautoriseerde serviceprovider.
@@ -1013,9 +1030,9 @@ Indien er in de NTD de berichtenuitwisseling (BMKL) wordt getest voor de central
 ------------------------
 ### 2 januari 2018
 - KLIC is voorbereid om nieuwe orientatieverzoeken in het kader van de WIBON te kunnen afhandelen;
-  Het betreft \
-  a. voorbereiding voor medegebruik fysieke infrastructuur \
-  b. voorbereiding voor coordinatie civiele werken
+Het betreft \
+ a. voorbereiding voor medegebruik fysieke infrastructuur \
+ b. voorbereiding voor coordinatie civiele werken
 - De functionaliteit wordt geactiveerd, zodra de wetgeving in werking mag worden gesteld.
 
 ### 24 november 2017
@@ -1035,32 +1052,32 @@ Indien er in de NTD de berichtenuitwisseling (BMKL) wordt getest voor de central
 > ##### Wijzigingen in waardelijsten
 >
 > 1. http://definities.geostandaarden.nl/imkl2015/id/waardelijst/AnnotatieTypeValue \
-     > Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlDubbelgericht \
-     > Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlEnkelgericht
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlDubbelgericht \
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/AnnotatieTypeValue/annotatiepijlEnkelgericht
 >
 >
 > 2. http://definities.geostandaarden.nl/imkl2015/id/waardelijst/MaatvoeringsTypeValue \
-     > Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl
+> Toegevoegd: http://definities.geostandaarden.nl/imkl2015/id/waarde/MaatvoeringsTypeValue/maatvoeringspijl
 >
 > ##### Wijzigingen in features
 >
 > 1. Belanghebbende (XSD-wijziging) \
-     > Element “netinformatie” is hernoemd naar “utiliteitsnet”. \
-     > Element “geraaktBelangGraafpolygoon” is hernoemd naar “geraaktBelangBijGraafpolygoon”. \
-     > Element “geraaktBelangInformatiepolygoon” is hernoemd naar “geraaktBelangBijInformatiepolygoon”. \
-     > Element “geraaktBelangOrientatiepolygoon” is hernoemd naar “geraaktBelangBijOrientatiepolygoon”.
+> Element “netinformatie” is hernoemd naar “utiliteitsnet”. \
+> Element “geraaktBelangGraafpolygoon” is hernoemd naar “geraaktBelangBijGraafpolygoon”. \
+> Element “geraaktBelangInformatiepolygoon” is hernoemd naar “geraaktBelangBijInformatiepolygoon”. \
+> Element “geraaktBelangOrientatiepolygoon” is hernoemd naar “geraaktBelangBijOrientatiepolygoon”.
 >
 > 2. Diepte (XSD-wijziging) \
-     > Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
 >
 > 3. ExtraGeometrie (XSD-wijziging) \
-     > Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
 >
 > 4. Diepte (XSD-wijziging) \
-     > Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
+> Element “inNetwork” kan nu meerdere keren voorkomen (wordt nog niet ondersteund door de software)
 >
 > 5. Organisatie (XSD-wijziging) \
-     > “Organisatie” is geen gml-feature meer, maar een element dat binnen andere features kan worden gebruikt
+> “Organisatie” is geen gml-feature meer, maar een element dat binnen andere features kan worden gebruikt
 >
 >
 > ##### Nieuwe controles (naast XSD-controle)
