@@ -1,6 +1,6 @@
 # Beheren standaarden KLIC
 
-Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de Technische Commissie Standaarden (TCS).
+Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de Technische Commissie Standaarden (TCS).  \
 De KLIC-dienst verzorgt de informatie-uitwisseling over de ligging van kabels en leidingen in de graafsector, met als primair doel het voorkomen van graafschade. Ten behoeve van uniformiteit en eenduidigheid zijn daarvoor standaarden ontwikkeld. Denk daarbij aan standaarden voor
 
 - het modelleren van IMKL-objecten (informatiemodel IMKL)
@@ -43,6 +43,10 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
   - Vastleggen mantelbuizen waar meerdere kabels en leidingen doorheen gaan;
   - Onderzoek en bepalen “Relevante eigenschappen van het net”;
   - Onderzoek gebruik kabelbed(geul) door netbeheerders en de visualisatie;
+
+- Evaluatie SoortWerkzaamheden
+  - De huidige lijst met SoortWerkzaamheden is onder review bij de TCS.
+  - [Hier is een concept versie gepubliceerd](Soort%20Werkzaamheden%20-%20Concept%2025%20juni%202021.pdf) die gebruikt kan worden om binnen je eigen organisatie te bespreken.
 
 Van onderstaande onderwerpen is door de TCS een definitief ontwerp opgeleverd. Na definitieve besluitvorming van Agentschap Telecom, zullen deze worden opgenomen in de nieuwe versie van de standaarden.
 
