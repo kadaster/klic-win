@@ -11,13 +11,14 @@ Het Kadaster heeft samen met het KLIC gebruikersoverleg een planning opgesteld v
 
 ## Nieuwe versie standaarden.
 IMKL versie 2.0 en PMKL versie 2.0 zijn gepubliceerd op de [website van Geonovum](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).  \
-Een nieuwe versie van het berichtenmodel (BMKL versie 2.1) en een toelichting op de wijzigingen van de BMKL-standaarden vindt u op [deze GitHub pagina van het Kadaster](Gewijzigde%20BMKL.md). De wijzigingen ten opzichte van BMKL 2.0 hebben betrekking op de endpoints, de labels in de berichten en de waarden(lijsten) in de berichten.
+Een nieuwe versie van het berichtenmodel (BMKL versie 2.1) vindt u op [deze GitHub pagina van het Kadaster](../../../BMKL/) Een toelichting op de wijzigingen van de BMKL-standaarden vindt u op [deze GitHub pagina van het Kadaster](Gewijzigde%20BMKL.md). De wijzigingen ten opzichte van BMKL 2.0 hebben betrekking op de endpoints, de labels in de berichten en de waarden(lijsten) in de berichten. 
 
 
 
 # Toelichting implementatie Upgrade Standaarden
 
-Op deze pagina staat een toelichting op de wijzigingen en de implementatie strategie van de upgrade van de standaarden.
+Op deze pagina staat een toelichting op de wijzigingen en de implementatie strategie van de upgrade van de standaarden.  \
+Een link naar het implementatieplan en een presentatie van de hoofdlijnen van de implementatie staan genoemd bij [de toelichting van mijlpaal 5](#toelichting-mijlpaal-5)
 
 ## Overgangsperiode
 
@@ -200,13 +201,32 @@ Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.
 
 ### Toelichting Mijlpaal 5:
 **Doel**: Netbeheerders en grondroerders de mogelijkheid geven geleidelijk over te gaan naar de IMKL 2.0  \
-Start overgang: 3 januari 2022. Zie de uitleg op deze pagina.
+Start overgang: 3 januari 2022.  
+
+**Samenvatting**:
+- API: V2 naast V1
+- Aanleveren: V2 óf V1 (*documenten hóéft niet opnieuw*)
+- Uitlevering: V2-xml én V1-xml (ook BILzip)
+- Aanvraag: Referentie veld verplicht bij aanvraag (*en nog aantal optionele extra’s*)
+
+Voor meer details zie de uitleg op deze pagina. 
+
+**Documenten**:  \
+Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
+Het Implementatieplan [is hier te vinden](IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)
 
 ### Toelichting Mijlpaal 6:
-**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0.  \
-Aanleveren mag alleen nog maar in IMKL versie 2.0, viewers moeten voldoen aan de PMKL versie 2.0 en alleen de BMKL-API versie 2.1 is nog actief.  \
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0.  
+
+**Samenvatting**:  
+- API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
+- Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekerd.
+- Uitleveringen (ook BILzip) bevatten alleen nog maar IMKL versie 2.0 van de Gebiedsinformatie-xml; de Gebiedsinformatie-xml van IMKL versie 1.2.1 zit niet meer in de leveringzip (*merk op dat de V2 xml zal voldoen aan dezelfde naamgevingsconventies als tijdens de overgnagperiode, dus mét* `_V2`)
+- Viewers moeten voldoen aan de PMKL versie 2.0  
+
+
 Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om  "overige appurartanances" van het type "onbekend" aan te leveren.  \
-Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken, of een langer KLIC-meldnummer.  \
+Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer.  \
 Het gebruik maken van de mogelijkheid om  een langer KLIC-meldnummer te hanteren wordt minimaal 2 maanden van te voren gecommuniceerd. De verwachting is dat de overgang pas in januari 2023 zal plaats vinden.
 
 
