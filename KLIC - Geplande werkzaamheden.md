@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 27 augustus 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 17 september 2021)
 
 
 --------------------------------------------------------------------------------------
@@ -12,8 +12,19 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 
+
 --------------------------------------------------------------------------------------
 ## Planning voor release – 28 september 2021
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer (versie 5.13.x)**:
+- Bij recent geopende lijst met KLIC-meldingen is ook de Referentie uit de KLIC-aanvraag toegevoegd (naast KLIC-nummer) (id 6642).
+- Diverse bugfixes.
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release – NTD: 23 september 2021; Productie 28 september 2021
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -21,6 +32,7 @@ Diverse verbeteringen:
 - Performance centraal aanleveren.
 - Textuele aanpassing in NTD schermen.
 - Aanpassing waarde van veld `positienummer` in GI.xml in NTD.
+- De (optionele) velden van BAGid van het bezoekadres van de aanvrager en opdrachtgever worden in de NTD in de IMKL-Versie 2 nu weergegeven in zowel de API-V2 als de GI_V2.xml.
 
 
 --------------------------------------------------------------------------------------
@@ -28,7 +40,7 @@ Diverse verbeteringen:
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Kadaster KLIC-viewer (versie 5.12.):**
+**Kadaster KLIC-viewer (versie 5.12.1):**
 - Wijzging in het weergeven van informatie op het scherm met betrekking tot de volgorde, groepering, vertalingen en klikbaarheid van links. Zichtbaar in:
   - Gebiedsinformatie-aanvraag menu scherm
   - Details schermen na selectie
