@@ -28,7 +28,7 @@ Voor deze release is het volgende onderwerp gepland:
 **eHerkenning testfaciliteiten B2B beschikbaar**:
 - Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
 
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020]([#planning-voor-release---17-maart-2020) al geïmplementeerd.
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
 
   
 Voor meer informatie zie:
@@ -53,7 +53,7 @@ Voor deze release zijn de  volgende onderwerpen gepland:
 - Vanaf medio december zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
 
 Voor meer informatie zie:
-- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%212.1%21(B2B-koppeling%21beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
 - [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
 
 **Kadaster KLIC-viewer**:
