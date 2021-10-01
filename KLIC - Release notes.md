@@ -1,5 +1,19 @@
 ﻿# Release notes
 ------------------------
+## 28 september 2021
+    In de NTD-omgeving zijn de wijzigingen reeds per 23 september beschikbaar
+    
+**Diverse verbeteringen**:
+- Performance centraal aanleveren.
+- Textuele aanpassing in NTD schermen.
+- Aanpassing waarde van veld `positienummer` in GI.xml in NTD.
+- De (optionele) velden van BAGid van het bezoekadres van de aanvrager en opdrachtgever worden in de NTD in de IMKL-Versie 2 nu weergegeven in zowel de API-V2 als de GI_V2.xml.
+
+**Kadaster KLIC-viewer (versie 5.13.0)**:
+- Bij recent geopende lijst met KLIC-meldingen is ook de Referentie uit de KLIC-aanvraag toegevoegd (naast KLIC-nummer) (id 6642).
+- Diverse bugfixes.
+
+------------------------
 ### 12 augustus 2021
 
 **Kadaster KLIC-viewer (versie 5.12.):**

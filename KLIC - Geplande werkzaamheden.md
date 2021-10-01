@@ -1,12 +1,76 @@
-﻿# Geplande werkzaamheden (bijgewerkt 17 september 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 1 oktober 2021)
+
+--------------------------------------------------------------------------------------
+## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
+
+> Vanaf 3 januari zullen geleidelijk steeds meer netbeheerders overgaan naar aanleveren volgens de nieuwe versie van de KLIC-standaarden. Voor de grondroerders wijzigt per 3 januari 2022 **direct** de KLIC-uitlevering. Daarnaast wijzigt voor de netbeheerder hiermee ook de BILzip per 3 januari 2022.
+
+**Samenvatting van de wijzigingen bij aanvang van de overgangsperiode**:
+- Uitlevering: V1-xml én V2-xml (ook in BILzip)
+- Aanvraag: Referentie veld verplicht bij aanvraag (en nog aantal optionele extra’s)
+- API: V2 naast V1
+- Aanleveren: V1 óf V2 (documenten hóéft niet opnieuw)
+- Voor meer details zie de uitleg [op deze pagina](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden).
+
+**Documenten**:  \
+Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
+Het Implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)
+
+  \
+Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+:white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+--------------------------------------------------------------------------------------
+## Planning voor release – eind december 2021
+
+Voor deze release is het volgende onderwerp gepland:
+
+**eHerkenning testfaciliteiten B2B beschikbaar**:
+- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020]([#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+  
+Voor meer informatie zie:
+- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
+- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
 
 --------------------------------------------------------------------------------------
-## Planning Upgrade Standaarden vanaf medio september 2021
+## Planning Upgrade Standaarden - medio december 2021
 
-In medio september zal er een Keten Acceptatie Test (KAT) plaatsvinden als onderdeel van de Upgrade van de Standaarden.  
+Voor deze release zijn de  volgende onderwerpen gepland:
 
-Aanmelden voor de KAT kan via klic.project@kadaster.nl
+**Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 5, start overgangsperiode (3 januari 2022).
+
+
+  Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+
+**Planning vernieuwing Afwijkende Situatie**:
+- Vanaf medio december zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+Voor meer informatie zie:
+- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%212.1%21(B2B-koppeling%21beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
+
+**Kadaster KLIC-viewer**:
+- De Kadaster KLIC-viewer zal op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd worden. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
+
+Voor meer informatie zie:
+- [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+
+
+
+--------------------------------------------------------------------------------------
+## Planning Upgrade Standaarden vanaf 13 september 2021
+
+Op 13 september is een Keten Acceptatie Test (KAT) gestart als onderdeel van de Upgrade van de Standaarden.  
+
+Aanmelden voor de KAT kan nog via klic.project@kadaster.nl
 
 Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
@@ -18,7 +82,7 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Kadaster KLIC-viewer (versie 5.13.x)**:
+**Kadaster KLIC-viewer (versie 5.13.0)**:
 - Bij recent geopende lijst met KLIC-meldingen is ook de Referentie uit de KLIC-aanvraag toegevoegd (naast KLIC-nummer) (id 6642).
 - Diverse bugfixes.
 
