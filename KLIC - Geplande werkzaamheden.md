@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 15 oktober 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 1 november 2021)
 
 --------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
@@ -71,7 +71,6 @@ Voor deze release is het volgende onderwerp gepland:
 **KLIC-online** (bij het doen van een graafmelding en oriëntatieverzoek):
 - Opvallende melding als gebruiker aanvangsdatum binnen 3 dagen kiest bij een graafmelding.  \
   Het KLIC gebruikersoverleg (KGO KLIC) heeft extra aandacht gevraagd voor het EV proces in KLIC-online. Gebruikers die binnen 3 dagen een datum kiezen realiseren zich wellicht niet dat er een EV van toepassing kan zijn.  \
-   De indruk kan gewekt worden dat als je de startdatum van 'morgen' kiest, dat er daarmee zou het dus ook mogen.  \
    De volgende melding wordt getoond:  \
     ![Graven Binnen 3 Werkdagen](Aanvragen%20gebiedsinformatie/images/GravenBinnen3Werkdagen.png "Graven Binnen 3 Werkdagen")  
 

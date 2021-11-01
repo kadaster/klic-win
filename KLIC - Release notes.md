@@ -1,5 +1,15 @@
 ﻿# Release notes
 ------------------------
+## 26 oktober 2021
+
+**KLIC-online** (bij het doen van een graafmelding en oriëntatieverzoek):
+- Opvallende melding als gebruiker aanvangsdatum binnen 3 dagen kiest bij een graafmelding.  \
+  Het KLIC gebruikersoverleg (KGO KLIC) heeft extra aandacht gevraagd voor het EV proces in KLIC-online. Gebruikers die binnen 3 dagen een datum kiezen realiseren zich wellicht niet dat er een EV van toepassing kan zijn.  \
+   De volgende melding wordt getoond:  \
+    ![Graven Binnen 3 Werkdagen](Aanvragen%20gebiedsinformatie/images/GravenBinnen3Werkdagen.png "Graven Binnen 3 Werkdagen")  
+
+
+------------------------
 ## 28 september 2021
     In de NTD-omgeving zijn de wijzigingen reeds per 23 september beschikbaar
     

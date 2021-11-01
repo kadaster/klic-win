@@ -15,9 +15,6 @@ In overleg met het KLIC Gebruikersoverleg (KGO KLIC) start KLIC de vernieuwing v
 - Volg de [Geplande Werkzaamgeden pagina van deze Github](https://github.com/kadaster/klic-win/blob/master/KLIC%20-%20Geplande%20werkzaamheden.md) voor updates over de planning. 
 
 ## Presentaties
-- [Technische informatiebijeenkomst over de pilot afwijkende situatie op woensdag 3 april 2019](https://zakelijk.kadaster.nl/documents/20838/88029/Technische+informatiebijeenkomst+over+de+pilot+afwijkende+situatie+op+woensdag+3+april+2019/21091e85-c373-6ce7-bf78-1084cace7cb9)
-- [Presentatie workshop afwijkende situatie API 12 juni 2019](https://zakelijk.kadaster.nl/documents/20838/87975/Presentatie+workshop+afwijkende+situatie+API+12+juni+2019/81994b68-9f96-90f9-1d3b-308009e7e872)
-
 - [Presentatie 2019 3 april - Generieke API en KLIC API Afwijkende Situatie](2019%203%20april%20-%20Generieke%20API%20en%20KLIC%20API%20Afwijkende%20Situatie.pdf)
 - [Presentatie 2019 3 april - KLIC API voor afwijkende situatie Pilot](2019%203%20april%20-%20KLIC%20API%20voor%20afwijkende%20situatie%20Pilot.pdf)
 - [Presentatie 2019 12 juni - KLIC API voor afwijkende situatie Samenvatting Proces en Pilot bijeenkomst](2019%2012%20juni%20-%20KLIC%20API%20voor%20afwijkende%20situatie%20Samenvatting%20Proces%20en%20Pilot%20bijeenkomst.pdf)
