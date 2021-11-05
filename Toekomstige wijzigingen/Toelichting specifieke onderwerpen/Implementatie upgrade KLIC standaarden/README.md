@@ -211,6 +211,15 @@ Start overgang: 3 januari 2022.
 
 Voor meer details zie de uitleg op deze pagina. 
 
+**Voorbeeldbestanden**: 
+
+ > _Het Kadaster stelt op verzoek van de sector voorbeeldbestanden beschikbaar aan de netbeheerder en de grondroerer._   \
+ _De voorbeeldbestanden wordt door het Kadaster enkel aangeboden om als hulpmiddel te worden gebruikt._  \
+  _Netbeheerders en grondroerders blijven te allen tijde verantwoordelijk_
+  
+  De voorbeeld bestanden zijn de vinden in de folder [Uitleveren](../../../Uitleveren/Voorbeelden%20Overgangsperiode).
+ 
+
 **Documenten**:  \
 Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
 Het Implementatieplan [is hier te vinden](IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)

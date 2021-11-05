@@ -62,6 +62,11 @@ Voor meer informatie zie:
 Voor meer informatie zie:
 - [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
 
+--------------------------------------------------------------------------------------
+## Planning aanpassing documentatie – 5 november 2021
+
+Ten behoeve van de implementatie van de upgrade van de KLIC-standaarden zijn een aantal voorbeeld uitleveringen gepubliceerd.  \
+Zie [Uitleveren / Voorbeelden Overgangsperiode](Uitleveren/Voorbeelden%20Overgangsperiode).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 26 oktober 2021
