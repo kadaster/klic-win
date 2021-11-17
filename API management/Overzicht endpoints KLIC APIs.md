@@ -32,8 +32,9 @@ Per te benaderen "resource" worden de endpoints samengesteld op basis van
 - base url
 - /resource (objectenstructuur)
 
-De API voor de resource "gebiedsinformatieAanvragen" wordt bijvoorbeeld voluit voor de productieomgeving KLIC:  \
-  "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen" (beschikbaar tot 30 april 2022)
+De API voor de resource `gebiedsinformatieAanvragen` wordt bijvoorbeeld voluit voor de productieomgeving KLIC:  \
+  "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen" (beschikbaar tot 30 april 2022)  \
+   "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen" (beschikbaar vanaf 3 januari 2022)
 
 De documentatie over de werking van deze interfaces is beschikbaar in de vorm van Swagger specificatie. Deze documentatie is te vinden bij de “KLIC API documentatie”-applicatie die in de Netbeheerder Testdienst beschikbaar wordt gesteld.
 
@@ -44,13 +45,14 @@ Voor een meer uitgebreide documentatie en toelichting over de functionaliteit en
 
 ### B2B-koppeling actualiseren netinformatie
 
-Het actualiseren van netinformatie gebeurt op basis van de resource "aanleveringen/netinformatie".  \
+Het actualiseren van netinformatie gebeurt op basis van de resource `aanleveringen/netinformatie`.  \
 Deze resource is benaderbaar met de volgende endpoints (host + base url):
 
 |IMKL versie |Omgeving                      |Host                           |Base url                           | Beschikbaarheid    | 
 |------------|------------------------------|-------------------------------|-----------------------------------|--------------------|
 |v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/api/v2/web     |  tot 30 april 2022 |
 |v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/v2/            |  vanaf 3 januari 2022 |
 |v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/v2/        |  vanaf 20 mei 2021 |
 
 Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op "_V2.zip".
@@ -58,7 +60,7 @@ Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 forma
 
 ### B2B-koppeling actualiseren documenten
 
-Het actualiseren van documenten gebeurt op basis van de resource "aanleveringen/documenten".  \
+Het actualiseren van documenten gebeurt op basis van de resource `aanleveringen/documenten`.  \
 Deze resource is benaderbaar met de volgende endpoints (host + base url):
 
 
@@ -66,6 +68,7 @@ Deze resource is benaderbaar met de volgende endpoints (host + base url):
 |------------|------------------------------|-------------------------------|-----------------------------------|--------------------|
 |v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/api/v2/web     |  tot 30 april 2022 |
 |v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/v2/            | vanaf 3 januari 2022 |
 |v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/v2/        |  vanaf 20 mei 2021 |
 
 Merk op dat documenten die via het V1-endpoint zijn opgeleverd, ook bruikbaar blijven vanuit aanleveringen in IMKL versie 2.0.
@@ -73,44 +76,63 @@ Merk op dat documenten die via het V1-endpoint zijn opgeleverd, ook bruikbaar bl
 
 ### B2B-koppeling beheerdersinformatie (BMKL 2.0)
 
-De B2B-koppeling voor het afhandelen van gebiedsinformatie en beheerdersinformatie gebeurt met de resource "gebiedsinformatieAanvragen".  \
+De B2B-koppeling voor het afhandelen van gebiedsinformatie en beheerdersinformatie gebeurt met de resource `gebiedsinformatieAanvragen`.  \
 Deze resource-structuur is benaderbaar met de volgende endpoints (host + base url):
 
 |IMKL versie |Omgeving                      |Host                           |Base url                      | Beschikbaarheid    | 
 |------------|------------------------------|-------------------------------|------------------------------|--------------------|
 |v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/leveren/api/v2/web     |  tot 30 april 2022 |
 |v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web |  tot 30 april 2022 |
+|v2.0        |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/ntd/bmkl/v2/           |  vanaf 3 januari 2022 |
 |v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/bmkl/v2/           |  vanaf 20 mei 2021 |
 
 Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op "_V2.zip".
 
 ### Data synchronisatie (Agentschap Telecom)
 
-Voor data synchronisatie ten behoeve van Agentschap Telecom worden de API's voor de resource "gebiedsinformatieAanvragen" gebruikt.  \
+Voor data synchronisatie ten behoeve van Agentschap Telecom worden de API's voor de resource `gebiedsinformatieAanvragen` gebruikt.  \
 Zie daarvoor [B2B-koppeling beheerdersinformatie (BMKL 2.0)](#b2b-koppeling-beheerdersinformatie-bmkl-20).
 
-Het opvragen van stamgegevens van netbeheerders gebeurt op basis van de resource "organisaties".
+Het opvragen van stamgegevens van netbeheerders gebeurt op basis van de resource `organisaties`.
 Deze resource is benaderbaar met de volgende endpoints (host + base url):
 
-|IMKL versie |Omgeving                      |Host                           |Base url                      | Beschikbaarheid    | 
-|------------|------------------------------|-------------------------------|------------------------------|--------------------|
-|v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/leveren/api/v2/web     |  tot 30 april 2022 |
-|v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web |  tot 30 april 2022 |
+|IMKL versie    |Omgeving                      |Host                           |Base url                      |
+|---------------|------------------------------|-------------------------------|------------------------------|
+|v1.2.1 en v2.0 |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/leveren/api/v2/web     | 
+|v1.2.1 en v2.0 |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web | 
 
 
 ### Upload servlet
 
 Het endpoint voor het (in fragmenten) uploaden van data ("Upload servlet") wordt teruggegeven bij het verzoek om netinformatie of documenten te actualiseren.
 
-Het uploaden gebeurt met de resource "upload".
+Het uploaden gebeurt met de resource `upload`.
 Deze resource is benaderbaar met de volgende endpoints (host + base url):
 
-|IMKL versie |Omgeving                      |Host                           |Base url                                  | Beschikbaarheid    | 
-|------------|------------------------------|-------------------------------|------------------------------------------|--------------------|
-|v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/upload/api/v2/web     |  tot 30 april 2022 |
-|v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/upload/api/v2/web |  tot 30 april 2022 |
+|IMKL versie    |Omgeving                      |Host                           |Base url                                  | 
+|---------------|------------------------------|-------------------------------|------------------------------------------|
+|v1.2.1 en v2.0 |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/actualiseren/upload/api/v2/web     |
+|v1.2.1 en v2.0 |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/actualiseren/upload/api/v2/web |
+
+Merk op dat de bestandsnaam voor aanleveringen van netinformatie volgens het IMKL versie 2.0 formaat, dient te eindigen op "_V2.zip".
 
 ### OAuth Authorization
 
 Het OAuth Authorization endpoint voor alle KLIC-omgevingen is:
 - https://authorization.kadaster.nl/auth/oauth/v2/
+
+### Waardelijsten
+
+In de BMKL-API worden meerdere waardelijsten onderkend. De toegestande waarde per waardelijst zijn vanaf 14 december 2021 te raadplegen middels onderstaande links:
+
+|IMKL versie | waardelijst              | link                                                                    |
+|------------|--------------------------|-------------------------------------------------------------------------|
+|v2.0        | giAanvraagStatussen      | https://api.klic.kadaster.nl/waardelijsten/v2/giAanvraagStatussen/      |
+|v2.0        | biNotificatieStatussen   | https://api.klic.kadaster.nl/waardelijsten/v2/biNotificatieStatussen    |
+|v2.0        | biProductieStatussen     | https://api.klic.kadaster.nl/waardelijsten/v2/biProductieStatussen/     |
+|v2.0        | aanleverStapAanduidingen | https://api.klic.kadaster.nl/waardelijsten/v2/aanleverStapAanduidingen/ |
+|v2.0        | aanleverStapStatussen    | https://api.klic.kadaster.nl/waardelijsten/v2/aanleverStapStatussen/    |
+|v2.0        | aanleverStatussen        | https://api.klic.kadaster.nl/waardelijsten/v2/aanleverStatussen/        |
+|v2.0        | informatieSoorten        | https://api.klic.kadaster.nl/waardelijsten/v2/informatieSoorten/        |
+|v2.0        | meldingGradaties         | https://api.klic.kadaster.nl/waardelijsten/v2/meldingGradaties/         |
+|v2.0        | statistiekSoorten        | https://api.klic.kadaster.nl/waardelijsten/v2/statistiekSoorten/        |
