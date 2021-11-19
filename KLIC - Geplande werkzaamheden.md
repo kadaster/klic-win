@@ -1,6 +1,44 @@
-﻿# Geplande werkzaamheden (bijgewerkt 1 november 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 19 november 2021)
 
 --------------------------------------------------------------------------------------
+
+## Planning voor release – februari 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+
+**Planning vernieuwing Afwijkende Situatie**:
+- Vanaf medio december zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+Voor meer informatie zie:
+- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – januari/februari 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**eHerkenning testfaciliteiten B2B beschikbaar**:
+- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+  
+Voor meer informatie zie:
+- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
+- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release – begin januari 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Aanpassing proces eenmalige melder (particulier)**:
+- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces enigszins aangepast worden. Er wordt een download portaal geïmplementeerd om de KLIC-uitlevering te downloaden met behulp van een code voor de KLIC-uitlevering van een eenmalige melder. Dit geldt ook voor de Kadaster KLIC-viewer.
+
+------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
 
 > Vanaf 3 januari zullen geleidelijk steeds meer netbeheerders overgaan naar aanleveren volgens de nieuwe versie van de KLIC-standaarden. Voor de grondroerders wijzigt per 3 januari 2022 **direct** de KLIC-uitlevering. Daarnaast wijzigt voor de netbeheerder hiermee ook de BILzip per 3 januari 2022.
@@ -21,23 +59,7 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – eind december 2021
-
-Voor deze release is het volgende onderwerp gepland:
-
-**eHerkenning testfaciliteiten B2B beschikbaar**:
-- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
-
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
-
-  
-Voor meer informatie zie:
-- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
-- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
-
-
---------------------------------------------------------------------------------------
-## Planning Upgrade Standaarden - medio december 2021
+## Planning Upgrade Standaarden - 14 december 2021
 
 Voor deze release zijn de  volgende onderwerpen gepland:
 
@@ -49,12 +71,6 @@ Voor deze release zijn de  volgende onderwerpen gepland:
   [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 
-**Planning vernieuwing Afwijkende Situatie**:
-- Vanaf medio december zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
-
-Voor meer informatie zie:
-- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
-- [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
 
 **Kadaster KLIC-viewer**:
 - De Kadaster KLIC-viewer zal op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd worden. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.

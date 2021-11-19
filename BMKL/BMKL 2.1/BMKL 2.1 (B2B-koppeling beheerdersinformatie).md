@@ -23,6 +23,7 @@ Ook worden de services beschreven waarvan een centrale netbeheerder gebruik kan 
       - [Pagineren](#pagineren)
       - [CURL](#curl)
       - [KLIC API Documentatie](#klic-api-documentatie)
+      - [Gebruik van URL-parameters bij de API's](#gebruik-van-url-parameters-bij-de-apis)
   - [Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen](#overzicht-bmkl-apis-voor-afhandelen-beheerdersinformatie-aanvragen)
       - [Zoeken beheerdersinformatie-aanvragen](#zoeken-beheerdersinformatie-aanvragen)
       - [Opvragen beheerdersinformatie-aanvraag](#opvragen-beheerdersinformatie-aanvraag)
@@ -244,6 +245,17 @@ Let wel, niet alle services zijn geautoriseerd om door netbeheerders gebruikt te
 ![mijnKadaster](bijlagen/KLIC-API-documentatie-BMKL21-swagger.png "NTD Portaal - API Documentatie detail")
 
 _Figuur 3 API Documentatie Beheerdersinformatie / BMKL 2.1 (detail)_
+
+### Gebruik van URL-parameters bij de API's
+
+In de verschillende API's is het mogelijk om filter-criteria toe te passen met behulp van URL-parameters.  \
+In de Swagger-implementatie zoals [hierboven beschreven](#klic-api-documentatie), worden de verschillende parameters per API weergegeven.  \
+Bij het gebruik van de `datumVanaf` en/of `datumTot` filters is de parameter `datumType` verplicht, omdat er in sommige API's meerdere datumvelden ontsloten worden. 
+
+![Swagger](bijlagen/Swagger-SelectieParameters-fragment.png "Swagger - Selectie Parameters (fragment gebiedsinformatieAanvragen)")
+
+_Figuur 4 Swagger - Selectie Parameters (fragment gebiedsinformatieAanvragen)_
+
 
 ---------------------------------------------------------
 ## Overzicht BMKL API's voor afhandelen beheerdersinformatie-aanvragen ##

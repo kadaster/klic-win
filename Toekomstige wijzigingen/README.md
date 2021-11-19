@@ -1,6 +1,6 @@
 ﻿# KLIC-WIN - Overzicht van toekomstige wijzigingen.
 
-* [Jaarplan 2021](../../master/Toekomstige%20wijzigingen/Jaarplan%202021.pdf) Jaarplan 2021 met de planning voor 2021. Een globaal overzicht over de afgeronde en komende wijzigingen.
+* [Jaarplan 2022](../../master/Toekomstige%20wijzigingen/Jaarplan%202022.pdf) Jaarplan 2022 met de planning voor 2022. Een globaal overzicht over de afgeronde en komende wijzigingen.
 * [Productplan KLIC](../../master/Toekomstige%20wijzigingen/Productplan%20KLIC.pdf) Productplan KLIC waarin de grotere releases worden toegelicht.
 
 * [Toelichting specifieke onderwerpen](../../master/Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen) Toelichting specifieke onderwerpen. Met (per grotere release) meer toelichting over grotere releases die eraan komen wordt gegeven. 
