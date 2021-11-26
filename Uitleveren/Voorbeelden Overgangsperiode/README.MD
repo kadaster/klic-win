@@ -26,3 +26,22 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 | [	21C006242	](	Levering_21C006242_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807117423_10%2021C006242%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
 | [	21G004571	](	Levering_21G004571_2.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807117411_10%2021G004571%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
 | [	21G004573	](	Levering_21G004573_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807117413_10%2021G004573%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21C006906 (deellevering 1)	](	Levering_21C006906_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124657_10%2021C006906%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21C006906 (deellevering 2)	](	Levering_21C006906_2.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124657_10%2021C006906%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21C006907	](	Levering_21C006907_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124658_10%2021C006907%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21C006908	](	Levering_21C006908_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124660_10%2021C006908%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21G005272	](	Levering_21G005272_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124656_10%2021G005272%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21O002464	](	Levering_21O002464_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124651_10%2021O002464%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21O002466	](	Levering_21O002466_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124653_10%2021O002466%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21O002468	](	Levering_21O002468_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124655_10%2021O002468%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21O002469	](	Levering_21O002469_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124659_10%2021O002469%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	nee	 | 	ja	 | 
+| [	21C006978	](	Levering_21C006978_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124979_10%2021C006978%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21C006979	](	Levering_21C006979_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124980_10%2021C006979%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21C006980	](	Levering_21C006980_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124981_10%2021C006980%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21G005331	](	Levering_21G005331_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124978_10%2021G005331%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21O002488	](	Levering_21O002488_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124975_10%2021O002488%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21O002489	](	Levering_21O002489_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124976_10%2021O002489%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+| [	21O002490	](	Levering_21O002490_1.zip	) | [	Ontvangstbevestiging	](	KLIC-ontvangstbevestiging_%209807124977_10%2021O002490%20Ref_%20Voorbeeldbestand%20KAT.msg	) | 	ja	 | 	ja	 | 
+
+
+
