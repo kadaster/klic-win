@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 19 november 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 26 november 2021)
 
 --------------------------------------------------------------------------------------
 
@@ -8,7 +8,7 @@ Voor deze release is het volgende onderwerp gepland:
 
 
 **Planning vernieuwing Afwijkende Situatie**:
-- Vanaf medio december zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+- Vanaf februari zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
 
 Voor meer informatie zie:
 - [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
@@ -35,8 +35,8 @@ Voor meer informatie zie:
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Aanpassing proces eenmalige melder (particulier)**:
-- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces enigszins aangepast worden. Er wordt een download portaal geïmplementeerd om de KLIC-uitlevering te downloaden met behulp van een code voor de KLIC-uitlevering van een eenmalige melder. Dit geldt ook voor de Kadaster KLIC-viewer.
+**Aanpassing proces eenmalige melder (via Selfservice/webwinkel)**:
+- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces via Selfservice enigszins aangepast worden. Voor specifiek deze aanvragers wordt een toegangscode vereist voor het downloaden van de KLIC-levering. De toegangscode staat in de KLIC-ontvangstbevestiging. Bij het downloaden van de zip wordt om deze code gevraagd. Bij gebruik van de downloadlink in de Kadaster KLIC-viewer wordt ook om de toegangscode gevraagd..
 
 ------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
