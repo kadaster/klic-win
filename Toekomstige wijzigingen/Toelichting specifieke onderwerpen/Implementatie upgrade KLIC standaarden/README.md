@@ -47,6 +47,10 @@ Een link naar het implementatieplan en een presentatie van de hoofdlijnen van de
 - Start overgang: maandag 3 januari 2022
 - Einde overgang: vrijdag 30 april 2022 (beoogd)
 
+Het moment van aanvragen van een KLIC-melding is het ijkpunt om te bepalen of een KLIC-melding in de periode 'voor-', 'tijdens-' of 'na-'  de overgangsperiode valt.  \
+Een KLIC-melding die gedaan wordt op of na 3 januari 0:00 uur wordt beschouwd als "tijdens de overgangsperiode", en wordt dan in beide versies uitgeleverd.  \
+Een KLIC-melding die gedaan wordt op of voor 2 januari 23:59 uur wordt beschouwd als "voor de overgangsperiode", en wordt dan in alleen V1 uitgeleverd; ook als de daadwerkelijke levering pas op na 3 januari plaatsvindt. Voor een decentrale netbeheerder geldt dat aanlevering in IMKL 2.0 voor deze melding nog niet mogelijk is en zal dus afgehandeld moeten worden in volgens IMKL 1.2.1. \
+
 **Gekozen strategie**:
 - [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie. 
 
@@ -201,7 +205,10 @@ Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.
 
 ### Toelichting Mijlpaal 5:
 **Doel**: Netbeheerders en grondroerders de mogelijkheid geven geleidelijk over te gaan naar de IMKL 2.0  \
-Start overgang: 3 januari 2022.  
+**Start overgang**: maandag 3 januari 2022.   
+**Aanvraag moment is ijkpunt**: Het moment van aanvragen van een KLIC-melding is het ijkpunt om te bepalen of een KLIC-melding in de periode 'voor-', 'tijdens-' of 'na-'  de overgangsperiode valt.  \
+Een KLIC-melding die gedaan wordt op of na 3 januari 0:00 uur wordt beschouwd als "tijdens de overgangsperiode", en wordt dan in beide versies uitgeleverd.  \
+Een KLIC-melding die gedaan wordt op of voor 2 januari 23:59 uur wordt beschouwd als "voor de overgangsperiode", en wordt dan in alleen V1 uitgeleverd; ook als de daadwerkelijke levering pas op na 3 januari plaatsvindt. Voor een decentrale netbeheerder geldt dat aanlevering in IMKL 2.0 voor deze melding nog niet mogelijk is en zal dus afgehandeld moeten worden in volgens IMKL 1.2.1. 
 
 **Samenvatting**:
 - API: V2 naast V1

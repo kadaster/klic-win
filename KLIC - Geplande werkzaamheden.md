@@ -1,4 +1,5 @@
-﻿# Geplande werkzaamheden (bijgewerkt 26 november 2021)
+﻿\
+# Geplande werkzaamheden (bijgewerkt 8 december 2021)
 
 --------------------------------------------------------------------------------------
 
@@ -36,7 +37,7 @@ Voor meer informatie zie:
 Voor deze release is het volgende onderwerp gepland:
 
 **Aanpassing proces eenmalige melder (via Selfservice/webwinkel)**:
-- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces via Selfservice enigszins aangepast worden. Voor specifiek deze aanvragers wordt een toegangscode vereist voor het downloaden van de KLIC-levering. De toegangscode staat in de KLIC-ontvangstbevestiging. Bij het downloaden van de zip wordt om deze code gevraagd. Bij gebruik van de downloadlink in de Kadaster KLIC-viewer wordt ook om de toegangscode gevraagd..
+- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces via Selfservice enigszins aangepast worden. Voor specifiek deze aanvragers wordt een toegangscode vereist voor het downloaden van de KLIC-levering. De toegangscode staat in de KLIC-ontvangstbevestiging. Bij het downloaden van de zip wordt om deze code gevraagd. Bij gebruik van de downloadlink in de Kadaster KLIC-viewer wordt ook om de toegangscode gevraagd.
 
 ------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
@@ -59,6 +60,15 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 :white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 --------------------------------------------------------------------------------------
+## Planning Upgrade Standaarden - 21 december 2021
+
+**Kadaster KLIC-viewer**:
+- De Kadaster KLIC-viewer zal op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd worden. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
+
+Voor meer informatie zie:
+- [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+--------------------------------------------------------------------------------------
 ## Planning Upgrade Standaarden - 14 december 2021
 
 Voor deze release zijn de  volgende onderwerpen gepland:
@@ -69,14 +79,6 @@ Voor deze release zijn de  volgende onderwerpen gepland:
 
   Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
   [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
-
-
-
-**Kadaster KLIC-viewer**:
-- De Kadaster KLIC-viewer zal op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd worden. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
-
-Voor meer informatie zie:
-- [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
 
 --------------------------------------------------------------------------------------
 ## Planning aanpassing documentatie – 5 november 2021
