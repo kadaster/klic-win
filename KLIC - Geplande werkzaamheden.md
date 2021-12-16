@@ -1,5 +1,23 @@
-﻿\
-# Geplande werkzaamheden (bijgewerkt 8 december 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 16 december 2021)
+--------------------------------------------------------------------------------------
+
+## Planning voor release – begin mei 2022
+
+| Eind april 2022 : *Einde overgangsperiode upgrade KLIC-standaarden.* |
+|------|
+
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden#toelichting-mijlpaal-6).
+
+**Samenvatting**:
+- API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
+- Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekeurd.
+- Uitleveringen (ook BILzip) bevatten alleen nog maar IMKL versie 2.0 van de Gebiedsinformatie-xml; de Gebiedsinformatie-xml van IMKL versie 1.2.1 zit niet meer in de leveringzip (*merk op dat de V2 xml zal voldoen aan dezelfde naamgevingsconventies als tijdens de overgangsperiode, dus mét* `_V2`)
+- Viewers moeten voldoen aan de PMKL versie 2.0
+- Implementatie op productie van bevindingen uit de Keten Acceptatie Testen (KAT)
+
+
+Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om "overige appurtenances" van het type "onbekend" aan te leveren.  \
+Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer. 
 
 --------------------------------------------------------------------------------------
 
@@ -29,6 +47,28 @@ N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-re
 Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – januari/februari 2022
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Bevindingen Keten Acceptatie Testen (KAT) van Upgrade Standaarden**.
+- **In XML altijd Landcode opgeven**  \
+  Er is een inconsistentie ontdekt tussen het UML-model en de XSD met betrekking tot de verplichting van de landcode als onderdeel van een adres. Gezien de impact is besloten om geen wijzigen door te voeren in de XSD en deze dus leidend te laten zijn.  \
+  Dit heeft tot gevolg dat er ook voor adressen die altijd Nederlandse adressen zijn (locatieWerkzaamheden-adres en Huisaansluitschets-adressen) in de leverings-XML een landcode in het adres-object getoond wordt. (id 7338)  \
+Deze wijziging heeft impact op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
+  Met deze release wordt dit in de NetbeheerdersTestDient (NTD) beschikbaar gesteld. 
+
+- **Aanvraag met RD-coördinaten in maximaal 3 decimalen**  \
+Volgens de IMKL-standaard worden RD-coördinaten uitgewisseld met maximaal 3 decimalen. Voor de polygonen uit de gebiedsinformatie aanvraag zijn er tot op heden echter alleen maar coördinaten met 0 decimalen uitgewissel omdat aanvragen met (graaf)polygonen in decimalen afgekeurd werden.  \
+Genoemde validatie is echter niet in lijn met het IMKL en daarom wordt het na deze implementatie goedgekeurd als er een graafpolygoon, oriëntatiepolygoon en/of informatiepolygoon wordt aangevraagd met 0,1,2 of 3 decimalen.  \
+Deze wijziging heeft impact op de GebiedsinformatieAanvragen-API en op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
+Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om testmeldingen te doen met polygonen tot 3 decimalen. 
+
+- **Visualisatie Extra Detail infoformatie in de Kadaster KLIC-viewer**  \
+Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard.  Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
+Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en 7358)
 
 
 --------------------------------------------------------------------------------------
@@ -71,7 +111,7 @@ Voor meer informatie zie:
 --------------------------------------------------------------------------------------
 ## Planning Upgrade Standaarden - 14 december 2021
 
-Voor deze release zijn de  volgende onderwerpen gepland:
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Upgrade KLIC-standaarden**:
 - Voorbereidingen t.b.v. Mijlpaal 5, start overgangsperiode (3 januari 2022).

@@ -49,7 +49,7 @@ Een link naar het implementatieplan en een presentatie van de hoofdlijnen van de
 
 Het moment van aanvragen van een KLIC-melding is het ijkpunt om te bepalen of een KLIC-melding in de periode 'voor-', 'tijdens-' of 'na-'  de overgangsperiode valt.  \
 Een KLIC-melding die gedaan wordt op of na 3 januari 0:00 uur wordt beschouwd als "tijdens de overgangsperiode", en wordt dan in beide versies uitgeleverd.  \
-Een KLIC-melding die gedaan wordt op of voor 2 januari 23:59 uur wordt beschouwd als "voor de overgangsperiode", en wordt dan in alleen V1 uitgeleverd; ook als de daadwerkelijke levering pas op na 3 januari plaatsvindt. Voor een decentrale netbeheerder geldt dat aanlevering in IMKL 2.0 voor deze melding nog niet mogelijk is en zal dus afgehandeld moeten worden in volgens IMKL 1.2.1. \
+Een KLIC-melding die gedaan wordt op of voor 2 januari 23:59 uur wordt beschouwd als "voor de overgangsperiode", en wordt dan in alleen V1 uitgeleverd; ook als de daadwerkelijke levering pas op na 3 januari plaatsvindt. Voor een decentrale netbeheerder geldt dat aanlevering in IMKL 2.0 voor deze melding nog niet mogelijk is en zal dus afgehandeld moeten worden in volgens IMKL 1.2.1. 
 
 **Gekozen strategie**:
 - [Zie deze presentatie](KLIC%20versie%20update%20strategie%20(TCS).pdf) voor een toelichting op de gekozen strategie. 
@@ -234,14 +234,15 @@ Het Implementatieplan [is hier te vinden](IMPLEMENTATIEPLAN%20upgrade%20standaar
 ### Toelichting Mijlpaal 6:
 **Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0.  
 
-**Samenvatting**:  
-- API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
-- Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekerd.
-- Uitleveringen (ook BILzip) bevatten alleen nog maar IMKL versie 2.0 van de Gebiedsinformatie-xml; de Gebiedsinformatie-xml van IMKL versie 1.2.1 zit niet meer in de leveringzip (*merk op dat de V2 xml zal voldoen aan dezelfde naamgevingsconventies als tijdens de overgnagperiode, dus mét* `_V2`)
-- Viewers moeten voldoen aan de PMKL versie 2.0  
+**Samenvatting**:
+- API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
+- Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekeurd.
+- Uitleveringen (ook BILzip) bevatten alleen nog maar IMKL versie 2.0 van de Gebiedsinformatie-xml; de Gebiedsinformatie-xml van IMKL versie 1.2.1 zit niet meer in de leveringzip (*merk op dat de V2 xml zal voldoen aan dezelfde naamgevingsconventies als tijdens de overgangsperiode, dus mét* `_V2`)
+- Viewers moeten voldoen aan de PMKL versie 2.0
+- Implementatie op productie van bevindingen uit de Keten Acceptatie Testen (KAT)
 
 
-Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om  "overige appurartanances" van het type "onbekend" aan te leveren.  \
+Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om "overige appurtenances" van het type "onbekend" aan te leveren.  \
 Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer.  \
 Het gebruik maken van de mogelijkheid om  een langer KLIC-meldnummer te hanteren wordt minimaal 2 maanden van te voren gecommuniceerd. De verwachting is dat de overgang pas in januari 2023 zal plaats vinden.
 
