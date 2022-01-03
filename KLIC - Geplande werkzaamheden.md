@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 16 december 2021)
+﻿# Geplande werkzaamheden (bijgewerkt 3 januari 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – begin mei 2022
@@ -6,7 +6,7 @@
 | Eind april 2022 : *Einde overgangsperiode upgrade KLIC-standaarden.* |
 |------|
 
-**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden#toelichting-mijlpaal-6).
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
 
 **Samenvatting**:
 - API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
@@ -72,12 +72,24 @@ Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – begin januari 2022
+## Planning voor release – 18 januari 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
 **Aanpassing proces eenmalige melder (via Selfservice/webwinkel)**:
 - In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces via Selfservice enigszins aangepast worden. Voor specifiek deze aanvragers wordt een toegangscode vereist voor het downloaden van de KLIC-levering. De toegangscode staat in de KLIC-ontvangstbevestiging. Bij het downloaden van de zip wordt om deze code gevraagd. Bij gebruik van de downloadlink in de Kadaster KLIC-viewer wordt ook om de toegangscode gevraagd.
+
+**Kadaster KLIC-viewer (versie 5.15)**:
+- Aanpassing voor proces eenmalige melder (via Selfservice/webwinkel) zoals hierboven benoemd.
+- Het kan voorkomen dat informatie afgedekt wordt door de weergave van extradetailinfo tijdens het printen. Met deze wijziging wordt de extradetailinfo niet meer getoond in de geproduceerde PDF's.
+
+--------------------------------------------------------------------------------------
+## Planning voor release – 4 januari 2022
+
+**Kadaster KLIC-viewer (versie 5.14.1)**:
+- Update met betrekking tot weergave van extradetailinfo. Ten behoeve van het gebruikersgemak wordt de toggle voor het weergeven van de extradetailinformatie standaard uitgezet. Deze is aan te zetten via het menu "Weergave" in het tabblad "Kaartlagen".  \
+  Let op: Deze aanpassing heeft geen invloed op de printfunctionaliteit; de extradetailinformatie wordt hierin getoond. Vanaf de release van 18 januari wordt deze niet meer getoond bij het printen.
+
 
 ------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
