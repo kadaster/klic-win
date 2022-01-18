@@ -29,7 +29,7 @@ Wordt er ook nog de _/S_ optie meegegeven dan installeert hij zonder GUI.
 
 
 
-Bij de installatie van KLIC-viewer wordt er automatisch een snelkoppeling op het Bureaublad en een snelkoppeling in het StartMenu gezet onder de folder 'Kadaster'.
+Bij de installatie van de Kadaster KLIC-viewer wordt er automatisch een snelkoppeling op het Bureaublad en een snelkoppeling in het StartMenu gezet onder de folder 'Kadaster'.
 
 Let er op dat dit commando moet worden uitgevoerd in een Powershell die draait met Administrator rechten; anders kan de `/AllUsers` niet worden uitgevoerd. De `/CurrentUser` optie werkt dan wel.
 
@@ -51,5 +51,12 @@ Ga naar:
 Zoek dan de wees entry en verwijder hem. Hij verdwijnt dan uit de lijst met entries in Apps / Features.
 
 
+## Installatie op een Netwerk Share
 
+Het installeren van de Kadaster KLIC-viewer op een netwerk share wordt niet ondersteund. 
+
+  De Kadaster KLIC-viewer is een Electron app. Kort gezegd is dat een webapplicatie verpakt in een uitgeklede Chrome browser.  \
+Het lijkt er op dat er een beperking in chromium zit en dat dit een security gerelateerde keuze is. Zie ook https://bugs.chromium.org/p/chromium/issues/detail?id=103902#c27  \
+Wij adviseren om de Kadaster KLIC-viewer op elke client te installeren via de standaard installatie procedure.  \
+Zelfs als het zou lukken om de huidige versie op een share te installeren dan is er geen enkele garantie dat dit blijft werken na de volgende update. 
 

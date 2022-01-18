@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 3 januari 2022)
+﻿# Geplande werkzaamheden (bijgewerkt 18 januari 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – begin mei 2022
@@ -21,10 +21,20 @@ Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals 
 
 --------------------------------------------------------------------------------------
 
+## Planning voor release – eind april 2022
+
+
+**Bevinding Keten Acceptatie Testen (KAT) van Upgrade Standaarden**.
+- **Visualisatie Extra Detail infoformatie in de Kadaster KLIC-viewer**  \
+Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard.  Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
+Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en 7358)
+
+
+--------------------------------------------------------------------------------------
+
 ## Planning voor release – februari 2022
 
 Voor deze release is het volgende onderwerp gepland:
-
 
 **Planning vernieuwing Afwijkende Situatie**:
 - Vanaf februari zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
@@ -66,11 +76,6 @@ Genoemde validatie is echter niet in lijn met het IMKL en daarom wordt het na de
 Deze wijziging heeft impact op de GebiedsinformatieAanvragen-API en op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
 Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om testmeldingen te doen met polygonen tot 3 decimalen. 
 
-- **Visualisatie Extra Detail infoformatie in de Kadaster KLIC-viewer**  \
-Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard.  Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
-Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en 7358)
-
-
 --------------------------------------------------------------------------------------
 ## Planning voor release – 18 januari 2022
 
@@ -94,7 +99,7 @@ Voor deze release is het volgende onderwerp gepland:
 ------------------------------------------------------------------------------------
 ## Start overgangsperiode Upgrade Standaarden - 3 januari 2022
 
-> Vanaf 3 januari zullen geleidelijk steeds meer netbeheerders overgaan naar aanleveren volgens de nieuwe versie van de KLIC-standaarden. Voor de grondroerders wijzigt per 3 januari 2022 **direct** de KLIC-uitlevering. Daarnaast wijzigt voor de netbeheerder hiermee ook de BILzip per 3 januari 2022.
+> Vanaf 3 januari gaan geleidelijk steeds meer netbeheerders over naar aanleveren volgens de nieuwe versie van de KLIC-standaarden. Voor de grondroerders wijzigt per 3 januari 2022 **direct** de KLIC-uitlevering. Daarnaast wijzigt voor de netbeheerder hiermee ook de BILzip per 3 januari 2022.
 
 **Samenvatting van de wijzigingen bij aanvang van de overgangsperiode**:
 - Uitlevering: V1-xml én V2-xml (ook in BILzip)
@@ -115,7 +120,7 @@ Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strate
 ## Planning Upgrade Standaarden - 21 december 2021
 
 **Kadaster KLIC-viewer**:
-- De Kadaster KLIC-viewer zal op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd worden. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
+- De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
 
 Voor meer informatie zie:
 - [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl

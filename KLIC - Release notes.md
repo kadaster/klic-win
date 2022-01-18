@@ -1,4 +1,61 @@
 ﻿# Release notes
+
+------------------------
+## 18 januari 2022
+
+
+**Aanpassing proces eenmalige melder (via Selfservice/webwinkel)**:
+- In verband met eisen vanuit de Overheid m.b.t. veilig uitwisselen van gegevens zal het proces via Selfservice enigszins aangepast worden. Voor specifiek deze aanvragers wordt een toegangscode vereist voor het downloaden van de KLIC-levering. De toegangscode staat in de KLIC-ontvangstbevestiging. Bij het downloaden van de zip wordt om deze code gevraagd. Bij gebruik van de downloadlink in de Kadaster KLIC-viewer wordt ook om de toegangscode gevraagd.
+
+**Kadaster KLIC-viewer (versie 5.15)**:
+- Aanpassing voor proces eenmalige melder (via Selfservice/webwinkel) zoals hierboven benoemd.
+- Het kan voorkomen dat informatie afgedekt wordt door de weergave van extradetailinfo tijdens het printen. Met deze wijziging wordt de extradetailinfo niet meer getoond in de geproduceerde PDF's.
+
+
+------------------------
+## 4 januari 2022
+
+**Kadaster KLIC-viewer (versie 5.14.1)**:
+- Update met betrekking tot weergave van extradetailinfo. Ten behoeve van het gebruikersgemak wordt de toggle voor het weergeven van de extradetailinformatie standaard uitgezet. Deze is aan te zetten via het menu "Weergave" in het tabblad "Kaartlagen".  \
+  Let op: Deze aanpassing heeft geen invloed op de printfunctionaliteit; de extradetailinformatie wordt hierin getoond. Vanaf de release van 18 januari wordt deze niet meer getoond bij het printen.
+
+
+------------------------
+## 3 januari 2022
+
+> Vanaf 3 januari gaan geleidelijk steeds meer netbeheerders over naar aanleveren volgens de nieuwe versie van de KLIC-standaarden. Voor de grondroerders wijzigt per 3 januari 2022 **direct** de KLIC-uitlevering. Daarnaast wijzigt voor de netbeheerder hiermee ook de BILzip per 3 januari 2022.
+
+**Samenvatting van de wijzigingen bij aanvang van de overgangsperiode**:
+- Uitlevering: V1-xml én V2-xml (ook in BILzip)
+- Aanvraag: Referentie veld verplicht bij aanvraag (en nog aantal optionele extra’s)
+- API: V2 naast V1
+- Aanleveren: V1 óf V2 (documenten hóéft niet opnieuw)
+- Voor meer details zie de uitleg [op deze pagina](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden).
+
+**Documenten**:  \
+Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
+Het Implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)
+
+  \
+Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+:white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+
+------------------------
+## 21 december 2021
+
+**Kadaster KLIC-viewer (versie 5.14.0)**:
+- De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen gefaseerd verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.
+
+Voor meer informatie zie:
+- [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+------------------------
+## 14 december 2021
+
+**Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 5, start overgangsperiode (3 januari 2022).
+
 ------------------------
 ## 26 oktober 2021
 
