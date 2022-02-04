@@ -32,7 +32,7 @@ Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en
 
 --------------------------------------------------------------------------------------
 
-## Planning voor release – februari 2022
+## Planning voor release – maart 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -44,7 +44,23 @@ Voor meer informatie zie:
 - [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
 
 --------------------------------------------------------------------------------------
-## Planning voor release – januari/februari 2022
+## Planning voor release – 8 maart 2022
+
+
+**Planning vernieuwing generieke Mijn Kadaster portaal**:  \
+Vanaf 8 maart zal het algemene Mijn Kadaster portaal vernieuwd worden.  \
+Na het inloggen in Mijn Kadaster zijn dit de verandering: 
+- De vormgeving is opgefrist en sluit aan op de (al vernieuwde) kadaster websites;
+- Het menu is aangepast waardoor de gebruikers makkelijker kunnen navigeren;
+- Op de homepage van Mijn Kadaster kunnen de gebruikers veelgebruikte applicaties als favoriet vastzetten.  
+
+De specifieke KLIC applicaties in Mijn Kadaster blijven hetzelfde.
+
+
+
+--------------------------------------------------------------------------------------
+
+## Planning voor release – februari/maart 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -59,7 +75,7 @@ Voor meer informatie zie:
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
 --------------------------------------------------------------------------------------
-## Planning voor release – januari/februari 2022
+## Planning voor release – 18 februari 2022
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
@@ -75,6 +91,19 @@ Volgens de IMKL-standaard worden RD-coördinaten uitgewisseld met maximaal 3 dec
 Genoemde validatie is echter niet in lijn met het IMKL en daarom wordt het na deze implementatie goedgekeurd als er een graafpolygoon, oriëntatiepolygoon en/of informatiepolygoon wordt aangevraagd met 0,1,2 of 3 decimalen.  \
 Deze wijziging heeft impact op de GebiedsinformatieAanvragen-API en op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
 Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om testmeldingen te doen met polygonen tot 3 decimalen. 
+
+**Toelichting Testen in NTD**:  \
+Na deze release kan de gebruiker zelf bepalen of hij coordinaten ingeeft met 0, 1, 2 en/of 3 decimalen.  \
+De gebruiker kan tevens met een checkbox aangeven of hij wil dat in de Gebiedsinformatie-xml de landcode wordt aangevuld bij de Huisaansluitschetsen (HAS) en het dichtstbijzijnd adres (DAS).  \
+Ook kan de gebruiker de sitatie simuleren na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er geclipt is op de `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  
+
+
+Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. \
+Zie onderstaand figuur:  \
+ ![Testparameters NTD](Aanvragen%20gebiedsinformatie/images/testparametersNTD.png "Testparameters NTD")   \
+ *fragment van NTD scherm "Opvoeren testmelding" (stap 1) ter illustratie* 
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 18 januari 2022
