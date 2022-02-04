@@ -75,7 +75,7 @@ Voor meer informatie zie:
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
 --------------------------------------------------------------------------------------
-## Planning voor release – 18 februari 2022
+## Planning voor release – 8 februari 2022
 
 Voor deze release zijn de volgende onderwerpen gepland:
 
@@ -95,7 +95,6 @@ Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om test
 **Toelichting Testen in NTD**:  \
 Na deze release kan de gebruiker zelf bepalen of hij coordinaten ingeeft met 0, 1, 2 en/of 3 decimalen.  \
 De gebruiker kan tevens met een checkbox aangeven of hij wil dat in de Gebiedsinformatie-xml de landcode wordt aangevuld bij de Huisaansluitschetsen (HAS) en het dichtstbijzijnd adres (DAS).  \
-Ook kan de gebruiker de sitatie simuleren na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er geclipt is op de `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  
 
 
 Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. \
