@@ -1,6 +1,34 @@
 ﻿# Release notes
 
 ------------------------
+## 8 februari 2022
+
+**Bevindingen Keten Acceptatie Testen (KAT) van Upgrade Standaarden**.
+- **In XML altijd Landcode opgeven**  \
+  Er is een inconsistentie ontdekt tussen het UML-model en de XSD met betrekking tot de verplichting van de landcode als onderdeel van een adres. Gezien de impact is besloten om geen wijzigen door te voeren in de XSD en deze dus leidend te laten zijn.  \
+  Dit heeft tot gevolg dat er ook voor adressen die altijd Nederlandse adressen zijn (locatieWerkzaamheden-adres en Huisaansluitschets-adressen) in de leverings-XML een landcode in het adres-object getoond wordt. (id 7338)  \
+Deze wijziging heeft impact op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
+  Met deze release wordt dit in de NetbeheerdersTestDient (NTD) beschikbaar gesteld. 
+
+- **Aanvraag met RD-coördinaten in maximaal 3 decimalen**  \
+Volgens de IMKL-standaard worden RD-coördinaten uitgewisseld met maximaal 3 decimalen. Voor de polygonen uit de gebiedsinformatie aanvraag zijn er tot op heden echter alleen maar coördinaten met 0 decimalen uitgewissel omdat aanvragen met (graaf)polygonen in decimalen afgekeurd werden.  \
+Genoemde validatie is echter niet in lijn met het IMKL en daarom wordt het na deze implementatie goedgekeurd als er een graafpolygoon, oriëntatiepolygoon en/of informatiepolygoon wordt aangevraagd met 0,1,2 of 3 decimalen.  \
+Deze wijziging heeft impact op de GebiedsinformatieAanvragen-API en op de GebiedsInformatieLevering-XML (in zowel de leverings-ZIP als de BeheerdersinformatieLevering-ZIP).  \
+Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om testmeldingen te doen met polygonen tot 3 decimalen. 
+
+**Toelichting Testen in NTD**:  \
+Na deze release kan de gebruiker zelf bepalen of hij coordinaten ingeeft met 0, 1, 2 en/of 3 decimalen.  \
+De gebruiker kan tevens met een checkbox aangeven of hij wil dat in de Gebiedsinformatie-xml de landcode wordt aangevuld bij de Huisaansluitschetsen (HAS) en het dichtstbijzijnd adres (DAS).
+
+
+Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. \
+Zie onderstaand figuur:  \
+ ![Testparameters NTD](Aanvragen%20gebiedsinformatie/images/testparametersNTD.png "Testparameters NTD")   \
+ *fragment van NTD scherm "Opvoeren testmelding" (stap 1) ter illustratie* 
+
+
+
+------------------------
 ## 18 januari 2022
 
 

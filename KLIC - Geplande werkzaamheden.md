@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 18 januari 2022)
+﻿# Geplande werkzaamheden (bijgewerkt 11 februari 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – begin mei 2022
@@ -94,7 +94,7 @@ Met deze release komt in de NetbeheerdersTestDient (NTD) de mogelijkheid om test
 
 **Toelichting Testen in NTD**:  \
 Na deze release kan de gebruiker zelf bepalen of hij coordinaten ingeeft met 0, 1, 2 en/of 3 decimalen.  \
-De gebruiker kan tevens met een checkbox aangeven of hij wil dat in de Gebiedsinformatie-xml de landcode wordt aangevuld bij de Huisaansluitschetsen (HAS) en het dichtstbijzijnd adres (DAS).  \
+De gebruiker kan tevens met een checkbox aangeven of hij wil dat in de Gebiedsinformatie-xml de landcode wordt aangevuld bij de Huisaansluitschetsen (HAS) en het dichtstbijzijnd adres (DAS).
 
 
 Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. \
