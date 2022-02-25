@@ -1,4 +1,4 @@
-﻿# Geplande werkzaamheden (bijgewerkt 11 februari 2022)
+﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – begin mei 2022
@@ -19,15 +19,8 @@
 Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om "overige appurtenances" van het type "onbekend" aan te leveren.  \
 Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer. 
 
---------------------------------------------------------------------------------------
 
-## Planning voor release – eind april 2022
-
-
-**Bevinding Keten Acceptatie Testen (KAT) van Upgrade Standaarden**.
-- **Visualisatie Extra Detail infoformatie in de Kadaster KLIC-viewer**  \
-Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard.  Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
-Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en 7358)
+:bulb: Zie ook het **schematische overzicht** rond het einde van de overgangsperiode bij de  [toelichting van Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
 
 
 --------------------------------------------------------------------------------------
@@ -36,12 +29,89 @@ Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Planning vernieuwing Afwijkende Situatie**:
-- Vanaf februari zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+**eHerkenning testfaciliteiten B2B beschikbaar**:
+- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
 
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+  
 Voor meer informatie zie:
-- [BMKL 2.1 specificatie](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
+- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+
+--------------------------------------------------------------------------------------
+
+## Planning voor release – 22 maart 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 6, einde  overgangsperiode (30 april 2022).
+
+
+  Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+ :white_check_mark:  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+--------------------------------------------------------------------------------------
+
+## Planning voor release – Netbeheerder Testdienst (NTD): 17 maart 2022
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Voorbereiding einde overgangsperiode**: 
+- Vanaf 17 maart kunnen netbeheerders in de Netbeheerder Testdienst (NTD) de sitatie simuleren van na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er multivlakken zijn toegestaan voor `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  \
+Dat betekend dat vanuit de Centrale Voorziening geclipt zal worden en dat een decentrale netbeheerder, beheerdersinformatie kan aanleveren met multi-vlakken.  \
+  Zie https://github.com/Geonovum/imkl2015-review/issues/210 
+  
+ 
+  Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. Zie onderstaand figuur:  \
+   ![Testparameters NTD](Aanvragen%20gebiedsinformatie/images/testparametersNTD2.png "Testparameters NTD")   \
+   *fragment van NTD scherm "Opvoeren testmelding" (stap 1) ter illustratie* 
+
+**Planning vernieuwing Afwijkende Situatie**:
+- Vanaf 17 maart zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+  Voor meer informatie zie:
+- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
 - [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
+
+  Zie onderstaand figuur:  \
+   ![Melden Afwijkende situatie op NTD](Terugmelden%20Afwijkende%20Situatie/images/stappen-testmelding-afwijkende-situatie-op-NTD.png "Afwijkende situatie testen op NTD")   \
+   *Stappen voor testen afwijkende situatie op NTD ter illustratie* 
+   
+  Toelichting:
+- Stap 1: Bestaand NTD proces
+- Stap 2 en 3: Melden afwijkende functionaliteit alleen beschikbaar in nieuwste versie van de Kadaster KLIC-viewer in het geval van het openen van een BIL.zip uit de NTD (in de EXE of DMG).  \
+  Voor melden via de API zie: [deze Github pagina](Terugmelden%20Afwijkende%20Situatie/). Gebruik het test-endpoint: `https://api.acceptatie.kadaster.nl/tms/v1/terugmeldingen`
+- Stap 4: Zie hiervoor de specificatie op:  [deze Github pagina](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
+
+--------------------------------------------------------------------------------------
+## Planning voor release – 8 maart 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer**:
+- **Wettelijke toegankelijkheidseisen**:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+- **Visualisatie Extra Detail informatie**:  \
+Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard. 
+Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
+Met deze release zal dit opgelost worden in de Kadaster KLIC-viewer. (id 7312 en 7358)  \
+Dit was een Keten Acceptatie Testen (KAT) bevinding van Upgrade Standaarden.
+
+- **Bugfix**:  \
+De BIL (Beheerdersinformatielevering) uit de NTD kan weer bekeken worden met deze versie van de Exe viewer (id 7517).
+
+- **Testen vernieuwde terugmeldvoorziening**:  \
+  Met deze versie van de Kadaster KLIC-viewer kan je met de Exe en DMG een terugmelding van een afwijkende situatie testen als netbeheerder.  \
+De terugmelding kan met een BIL.zip uit de NTD omgeving (Netbeheerder testdienst) worden opgevoerd.  \
+Vanaf 17 maart zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar komen om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 8 maart 2022
@@ -56,23 +126,9 @@ Na het inloggen in Mijn Kadaster zijn dit de verandering:
 
 De specifieke KLIC applicaties in Mijn Kadaster blijven hetzelfde.
 
+Voor meer informatie zie [deze pagina van het Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/vernieuwing-mijn-kadaster).
 
 
---------------------------------------------------------------------------------------
-
-## Planning voor release – februari/maart 2022
-
-Voor deze release is het volgende onderwerp gepland:
-
-**eHerkenning testfaciliteiten B2B beschikbaar**:
-- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
-
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
-
-  
-Voor meer informatie zie:
-- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
-- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – 8 februari 2022
@@ -162,8 +218,9 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Voorbereidingen t.b.v. Mijlpaal 5, start overgangsperiode (3 januari 2022).
 
 
+
   Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
-  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+:white_check_mark:   [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
 
 --------------------------------------------------------------------------------------
 ## Planning aanpassing documentatie – 5 november 2021
@@ -373,7 +430,7 @@ Voor deze release is het volgende onderwerpen gepland:
 Voor deze release is het volgende onderwerpen gepland:
 
 **API's voor afhandelen afwijkende situatie**:
-- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)/B2B-koppeling%20beheerdersinformatie%20BMKL2.0.md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).  \
+- De documentatie voor de API's voor het afhandelen van afwijkende situaties is [gepubliceerd op de GitHub](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).  \
   Dit betreft de specificatie van de API die nog ontwikkeld moet worden (*gepland in 2021*).
 
 --------------------------------------------------------------------------------------

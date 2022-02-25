@@ -246,6 +246,9 @@ Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan om
 Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer.  \
 Het gebruik maken van de mogelijkheid om  een langer KLIC-meldnummer te hanteren wordt minimaal 2 maanden van te voren gecommuniceerd. De verwachting is dat de overgang pas in januari 2023 zal plaats vinden.
 
+  ![Einde overgangsperiode](bijlagen/Detail-mijlpaal6.png "Details rond einde overgangsperiode")  
+*Schematisch overzicht met betrekking tot het in gebruikname van functionaliteit rond het einde van van de overgangsperiode*
+
 
 
 ## De wijzigingen:
