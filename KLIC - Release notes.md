@@ -1,6 +1,28 @@
 ﻿# Release notes
 
 ------------------------
+## 8 maart 2022
+
+**Kadaster KLIC-viewer**:
+- **Wettelijke toegankelijkheidseisen**:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+- **Visualisatie Extra Detail informatie**:  \
+Er is ontdekt dat in de Kadaster KLIC-viewer het ExtraDetailinfo-vlak iets groter gevisualiseerd wordt dan bedoeld is in de visualisatie standaard. 
+Tevens blijkt dat om sommige schaalniveaus het icoontje behorend bij de Extra Detailinfo te groot wordt weergegeven in de Kadaster KLIC-viewer.  \
+Met deze release is dit opgelost in de Kadaster KLIC-viewer. (id 7312 en 7358)  \
+Dit was een Keten Acceptatie Testen (KAT) bevinding van Upgrade Standaarden.
+
+- **Bugfix**:  \
+De BIL (Beheerdersinformatielevering) uit de NTD kan weer bekeken worden met deze versie van de Exe viewer (id 7517).
+
+- **Testen vernieuwde terugmeldvoorziening**:  \
+  Met deze versie van de Kadaster KLIC-viewer kan je met de Exe en DMG een terugmelding van een afwijkende situatie testen als netbeheerder.  \
+De terugmelding kan met een BIL.zip uit de NTD omgeving (Netbeheerder testdienst) worden opgevoerd.  \
+Vanaf 17 maart zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar komen om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+------------------------
 ## 8 februari 2022
 
 **Bevindingen Keten Acceptatie Testen (KAT) van Upgrade Standaarden**.
