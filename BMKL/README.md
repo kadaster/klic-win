@@ -9,9 +9,9 @@ In de map [BMKL 2.1](BMKL%202.1/README.md) staat de specificatie van BMKL 2.1, d
 
 **Overzicht van de wijzigingen tussen BMKL 2.0 en BMKL 2.1**:  \
 Voorbeelden van de nieuwe versie van het berichtenmodel (BMKL versie 2.1) en een toelichting op de wijzigingen van de BMKL-standaarden vindt u op onderstaande GitHub pagina van het Kadaster. De wijzigingen ten opzichte van BMKL 2.0 hebben betrekking op de endpoints, de labels in de berichten en de waarden(lijsten) in de berichten: \
-[Wijzigingen van de BMKL-standaarden](..\Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Gewijzigde%20BMKL.md)
+[Wijzigingen van de BMKL-standaarden](../Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Gewijzigde%20BMKL.md)
 
 **Overzicht van endpoints**:  \
 Een overzicht met endpoints van KLIC API's is hier te vinden:  \
-[Overzicht API endpoints](..\API%20management/Overzicht%20endpoints%20KLIC%20APIs.md)
+[Overzicht API endpoints](../API%20management/Overzicht%20endpoints%20KLIC%20APIs.md)
 
