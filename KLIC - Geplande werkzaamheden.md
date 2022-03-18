@@ -1,4 +1,12 @@
-﻿# Geplande werkzaamheden (bijgewerkt 25 februari 2022)
+# Geplande werkzaamheden (bijgewerkt 17 maart 2022)
+--------------------------------------------------------------------------------------
+
+## Planning voor release – juli 2022 (Vernieuwing frontend livegang)
+
+
+Frontend vernieuwing livegang gepland in juli 2022.\
+Meer informatie volgt
+
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – begin mei 2022
