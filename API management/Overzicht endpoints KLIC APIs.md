@@ -83,7 +83,7 @@ Deze resource-structuur is benaderbaar met de volgende endpoints (host + base ur
 |------------|------------------------------|-------------------------------|------------------------------|--------------------|
 |v1.2.1      |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/leveren/api/v2/web     |  tot 30 april 2022 |
 |v1.2.1      |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/leveren/api/v2/web |  tot 30 april 2022 |
-|v2.0        |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/ntd/bmkl/v2/           |  vanaf 3 januari 2022 |
+|v2.0        |Productieomgeving KLIC        | https://service10.kadaster.nl | /klic/bmkl/v2/               |  vanaf 3 januari 2022 |
 |v2.0        |Netbeheerder Testdienst (NTD) | https://service10.kadaster.nl | /klic/ntd/bmkl/v2/           |  vanaf 20 mei 2021 |
 
 Merk op dat de bestandsnaam voor aanleveringen volgens het IMKL versie 2.0 formaat, dient te eindigen op "_V2.zip".
