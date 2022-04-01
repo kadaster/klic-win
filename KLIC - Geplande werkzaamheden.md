@@ -1,11 +1,28 @@
-# Geplande werkzaamheden (bijgewerkt 17 maart 2022)
+# Geplande werkzaamheden (bijgewerkt 1 april 2022)
 --------------------------------------------------------------------------------------
 
-## Planning voor release – juli 2022 (Vernieuwing frontend livegang)
+## Planning voor release – juli 2022
 
+Voor deze release is het volgende onderwerp gepland:
 
-Frontend vernieuwing livegang gepland in juli 2022.\
-Meer informatie volgt
+**Vernieuwing aanvraag via KLIC-online**: 
+-   De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Meer informatie volgt
+--------------------------------------------------------------------------------------
+## Planning voor release – juni 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**eHerkenning testfaciliteiten B2B beschikbaar**:
+- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+  
+Voor meer informatie zie:
+- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
+- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
 --------------------------------------------------------------------------------------
 
@@ -28,27 +45,20 @@ Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan om
 Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer. 
 
 
-:bulb: Zie ook het **schematische overzicht** rond het einde van de overgangsperiode bij de  [toelichting van Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
+:bulb: Zie ook het **schematische overzicht** rond het einde van de overgangsperiode bij de  [toelichting van Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).  
 
-
---------------------------------------------------------------------------------------
-
-## Planning voor release – maart 2022
-
-Voor deze release is het volgende onderwerp gepland:
-
-**eHerkenning testfaciliteiten B2B beschikbaar**:
-- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
-
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
-
-  
-Voor meer informatie zie:
-- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
-- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+![Einde overgangsperiode](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/bijlagen/Detail-mijlpaal6.png "Details rond einde overgangsperiode")  
+*Schematisch overzicht met betrekking tot het in gebruikname van functionaliteit rond het einde van de overgangsperiode*
 
 --------------------------------------------------------------------------------------
+## Planning aanpassing documentatie – 1 april 2022
 
+- Ten behoeve van de implementatie van de upgrade van de KLIC-standaarden zijn een aantal voorbeeld uitleveringen gepubliceerd voor ná de overgangsperiode.  \
+Zie [Uitleveren / Voorbeelden IMKL v2.0](Uitleveren/Voorbeelden%20IMKL%20v2.0).
+- Publicatie van de resultaten van de diverse werkgroepen met betrekking tot 'Beheren van de Standaarden'.  \
+Zie [Beheren standaarden KLIC](Beheren%20standaarden%20KLIC/README.md).
+
+--------------------------------------------------------------------------------------
 ## Planning voor release – 22 maart 2022
 
 Voor deze release is het volgende onderwerp gepland:

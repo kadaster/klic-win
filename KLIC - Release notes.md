@@ -1,4 +1,44 @@
-﻿# Release notes
+# Release notes
+------------------------
+## 22 maart 2022
+
+**Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 6, einde  overgangsperiode (30 april 2022).
+
+
+  Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+ :white_check_mark:  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+
+------------------------
+## 17 maart 2022 - Netbeheerder Testdienst (NTD): 
+
+**Voorbereiding einde overgangsperiode**: 
+- Vanaf 17 maart kunnen netbeheerders in de Netbeheerder Testdienst (NTD) de sitatie simuleren van na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er multivlakken zijn toegestaan voor `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  \
+Dat betekend dat vanuit de Centrale Voorziening geclipt zal worden en dat een decentrale netbeheerder, beheerdersinformatie kan aanleveren met multi-vlakken.  \
+  Zie https://github.com/Geonovum/imkl2015-review/issues/210 
+  
+ 
+  Deze keuze is per test in te stellen op het eerste scherm bij het doen van de aanvraag. Zie onderstaand figuur:  \
+   ![Testparameters NTD](Aanvragen%20gebiedsinformatie/images/testparametersNTD2.png "Testparameters NTD")   \
+   *fragment van NTD scherm "Opvoeren testmelding" (stap 1) ter illustratie* 
+
+**Planning vernieuwing Afwijkende Situatie**:
+- Vanaf 17 maart zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
+
+  Voor meer informatie zie:
+- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
+
+  Zie onderstaand figuur:  \
+   ![Melden Afwijkende situatie op NTD](Terugmelden%20Afwijkende%20Situatie/images/stappen-testmelding-afwijkende-situatie-op-NTD.png "Afwijkende situatie testen op NTD")   \
+   *Stappen voor testen afwijkende situatie op NTD ter illustratie* 
+   
+  Toelichting:
+- Stap 1: Bestaand NTD proces
+- Stap 2 en 3: Melden afwijkende functionaliteit alleen beschikbaar in nieuwste versie van de Kadaster KLIC-viewer in het geval van het openen van een BIL.zip uit de NTD (in de EXE of DMG).  \
+  Voor melden via de API zie: [deze Github pagina](Terugmelden%20Afwijkende%20Situatie/). Gebruik het test-endpoint: `https://api.acceptatie.kadaster.nl/tms/v1/terugmeldingen`
+- Stap 4: Zie hiervoor de specificatie op:  [deze Github pagina](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie).
 
 ------------------------
 ## 8 maart 2022
