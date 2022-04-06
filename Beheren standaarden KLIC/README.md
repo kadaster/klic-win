@@ -50,12 +50,12 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 - Resultaten werkgroep Soort werkzaamheden
   - De huidige lijst met Soort werkzaamheden is geupdate en de resultaten kunnen beoordeeld worden door de sector.
   - [Hier is de versie gepubliceerd](Soort%20Werkzaamheden%201%20april%202022.pdf) met een toelichting.
-  - Eventuele feedback kan via je [teschnische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
+  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
   
 - Resultaten werkgroep Kabelbed
   - De informatievoorziening  m.b.t. een kabelbed moet verbeterd worden.
   - De werkgroep heeft een voorstel uitgewerkt die [hier gepubliceerd is](Kabelbed%201%20april%202022.pdf).
-  - Eventuele feedback kan via je [teschnische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
+  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
   
 - Resultaten werkgroep relevante eigenschappen van het net
   - Bij het gebruik van de viewers moet voor de grondroerder nog beter de belangrijkste attributen als eerst getoond worden.
@@ -65,7 +65,7 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     - De restricties van de attributen
     - Welke attributen relevante eigenschappen van het net zijn
   - [Hier is een concept versie gepubliceerd](Relevante%20eigenschappen%20van%20het%20net%201%20april%202022.xlsx) die gebruikt kan worden om binnen je eigen organisatie te bespreken.
-  - Eventuele feedback kan via je [teschnische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
+  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
   
 - Resultaten werkgroep mantelbuizen
   - Bij het aanleveren van mantelbuizen kan het voorkomen dat één netbeheerder meerdere thema’s in één mantelbuis heeft of meerder netbeheerders gebruik maken van dezelfde mantelbuis
@@ -75,6 +75,6 @@ Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
     - Meerdere netbeheerders gebruiken dezelfde mantelbuis (aanleveren)
     - Impact op het IMKL en PMKL
   - [Hier is een concept versie gepubliceerd](Mantelbuizen%201%20april%202022.pdf) die gebruikt kan worden om binnen je eigen organisatie te bespreken.
-  - Eventuele feedback kan via je [teschnische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
+  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
 
 Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.

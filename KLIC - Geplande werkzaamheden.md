@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 1 april 2022)
+# Geplande werkzaamheden (bijgewerkt 6 april 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – juli 2022
@@ -8,7 +8,7 @@ Voor deze release is het volgende onderwerp gepland:
 **Vernieuwing aanvraag via KLIC-online**: 
 -   De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
 Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
-- Meer informatie volgt
+- Bekijk [de presentatie met een impressie](Aanvragen%20gebiedsinformatie/images/Impressie-Vernieuwd-Graafmelding.pdf) van de graafmelding schermen.
 --------------------------------------------------------------------------------------
 ## Planning voor release – juni 2022
 
@@ -33,6 +33,7 @@ Voor meer informatie zie:
 
 **Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
 
+
 **Samenvatting**:
 - API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
 - Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekeurd.
@@ -45,11 +46,30 @@ Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan om
 Daarnaast zijn er een aantal zaken die gecontroleerd zullen plaats vinden zoals het clippen op EV vlakken (gerelateerd aan issue 210), of een langer KLIC-meldnummer. 
 
 
+
 :bulb: Zie ook het **schematische overzicht** rond het einde van de overgangsperiode bij de  [toelichting van Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).  
 
 ![Einde overgangsperiode](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/bijlagen/Detail-mijlpaal6.png "Details rond einde overgangsperiode")  
 *Schematisch overzicht met betrekking tot het in gebruikname van functionaliteit rond het einde van de overgangsperiode*
 
+**Toeliching ijkpunt KLIC-aanvragen**:  \
+Net als bij de start van de overgangsperiode, is het moment van aanvragen van een KLIC-melding het ijkpunt om te bepalen of een KLIC-melding in de periode 'voor-', 'tijdens-' of 'na-' de overgangsperiode valt.  \
+Een KLIC-melding die gedaan wordt op of na 1 mei 0:00 uur wordt beschouwd als "na de overgangsperiode", en wordt dan alleen in versie 2 uitgeleverd.  \
+Een KLIC-melding die gedaan wordt op of voor 30 april 23:59 uur wordt beschouwd als "tijdens de overgangsperiode", en wordt dan in beide versies uitgeleverd; ook als de daadwerkelijke levering pas op na 1 mei plaatsvindt.
+
+--------------------------------------------------------------------------------------
+## Planning voor release – NTD: 21 april 2022; Productie 26 april 2022
+ 
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 6, einde  overgangsperiode (30 april 2022).
+
+
+  Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
+ :white_check_mark:  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+ 
 --------------------------------------------------------------------------------------
 ## Planning aanpassing documentatie – 1 april 2022
 
