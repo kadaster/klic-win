@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 6 april 2022)
+# Geplande werkzaamheden (bijgewerkt 25 april 2022)
 --------------------------------------------------------------------------------------
 
 ## Planning voor release – juli 2022
@@ -69,6 +69,9 @@ Voor deze release is het volgende onderwerp gepland:
 
   Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
  :white_check_mark:  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+ 
+ **Kadaster KLIC-viewer (versie 5.17)**:
+- Diverse bugfixes
  
 --------------------------------------------------------------------------------------
 ## Planning aanpassing documentatie – 1 april 2022
