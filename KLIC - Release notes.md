@@ -1,5 +1,43 @@
 # Release notes
 ------------------------
+## 3 mei 2022
+
+**Upgrade KLIC-standaarden**:
+- Clippen van EV-vlakken en Extrageometrie vanuit de Centrale Voorziening.
+
+*Per 10 mei is het voor decentrale netbeheerders toegestaan om multi-vlakken aan te leveren voor EV's en ExtraGeometrieën.*
+
+------------------------
+## 1 mei 2022
+
+| Eind april 2022 : *Einde overgangsperiode upgrade KLIC-standaarden.* |
+|------|
+
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
+
+
+**Samenvatting**:
+- API: alleen de V2 API kan nog gebruikt worden; de V1 API gaat uit.
+- Aanleveren mag alleen nog maar in IMKL versie 2.0; aanleveringen in IMKL versie 1.2.1 worden afgekeurd.
+- Uitleveringen (ook BILzip) bevatten alleen nog maar IMKL versie 2.0 van de Gebiedsinformatie-xml; de Gebiedsinformatie-xml van IMKL versie 1.2.1 zit niet meer in de leveringzip (*merk op dat de V2 xml zal voldoen aan dezelfde naamgevingsconventies als tijdens de overgangsperiode, dus mét* `_V2`)
+- Viewers moeten voldoen aan de PMKL versie 2.0
+- Implementatie op productie van bevindingen uit de Keten Acceptatie Testen (KAT) (o.a. toevoeging van landcode voor HAS en DAS)
+
+
+Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan omdat het transformeren naar IMKL 1.2.1 dan niet mogelijk is. Ná de overgangsperiode kan er bijvoorbeeld gebruik gemaakt worden van de mogelijkheid om "overige appurtenances" van het type "onbekend" aan te leveren.  
+
+
+------------------------
+## 26 april 2022
+ In de NTD-omgeving zijn de wijzigingen reeds per 21 april beschikbaar
+ 
+ **Upgrade KLIC-standaarden**:
+- Voorbereidingen t.b.v. Mijlpaal 6, einde  overgangsperiode (30 april 2022).
+
+**Kadaster KLIC-viewer (versie 5.17)**:
+- Diverse bugfixes
+
+------------------------
 ## 22 maart 2022
 
 **Upgrade KLIC-standaarden**:
