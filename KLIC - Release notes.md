@@ -13,7 +13,7 @@
 | Eind april 2022 : *Einde overgangsperiode upgrade KLIC-standaarden.* |
 |------|
 
-**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
+**Doel**: Niet meer ondersteunen van IMKL versie 1.2.1 en PMKL 1.2.1 en BMKL 2.0. en doorvoeren aanpassingen zoals afgesproken in [Mijlpaal 6 van het programma](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden#toelichting-mijlpaal-6).
 
 
 **Samenvatting**:
@@ -45,7 +45,7 @@ Tot het einde van de overgangsperiode worden een aantal zaken niet toegestaan om
 
 
   Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
- :white_check_mark:  [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+ :white_check_mark:  [/Wijzigingen / Archief / Upgrade KLIC standaarden /](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden/) 
 
 ------------------------
 ## 17 maart 2022 - Netbeheerder Testdienst (NTD): 
@@ -66,7 +66,7 @@ Dat betekend dat vanuit de Centrale Voorziening geclipt zal worden en dat een de
   Voor meer informatie zie:
 - [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
 - Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
-- [Toelichting toekomstige wijzigingen](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Terugmelden%20Afwijkende%20Situatie)
+- [Toelichting wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
 
   Zie onderstaand figuur:  \
    ![Melden Afwijkende situatie op NTD](Terugmelden%20Afwijkende%20Situatie/images/stappen-testmelding-afwijkende-situatie-op-NTD.png "Afwijkende situatie testen op NTD")   \
@@ -158,15 +158,15 @@ Zie onderstaand figuur:  \
 - Aanvraag: Referentie veld verplicht bij aanvraag (en nog aantal optionele extra’s)
 - API: V2 naast V1
 - Aanleveren: V1 óf V2 (documenten hóéft niet opnieuw)
-- Voor meer details zie de uitleg [op deze pagina](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden).
+- Voor meer details zie de uitleg [op deze pagina](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden#toelichting-implementatie-upgrade-standaarden).
 
 **Documenten**:  \
-Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
-Het Implementatieplan [is hier te vinden](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)
+Een presentatie met de hoofdlijnen van het implementatieplan [is hier te vinden](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden/Implementatie%20hoofdlijnen%20KLIC%20standaarden-sept21.pdf)  \
+Het Implementatieplan [is hier te vinden](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden/IMPLEMENTATIEPLAN%20upgrade%20standaarden%20KLIC-1.1.pdf)
 
   \
 Alles over het **IMKL versie 2.0**, de overgangsperiode, de implementatie strategie en inzicht in de wijzigingen; is te vinden op de speciale pagina van deze Github:  \
-:white_check_mark: [/Toekomstige wijzigingen / Toelichting specifieke onderwerpen / Implementatie upgrade KLIC standaarden /](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/) 
+:white_check_mark: [/Wijzigingen / Archief / Upgrade KLIC standaarden /](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden/) 
 
 
 ------------------------
@@ -224,7 +224,7 @@ Voor meer informatie zie:
 In verband met de upgrade van de KLIC-standaarden wordt aan de sector de mogelijkheid gegeven om in de NTD gebruik te maken van de nieuwe API's. De nieuwe endpoints zijn naast de huidige endpoints te gebruiken.  \
 Beide API’s kunnen gebruikt worden voor alle dossiers/meldingen op te vragen.  \
   \
-Zie ook [de toelichting op de derde mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-3) van de upgrade van de standaarden. 
+Zie ook [de toelichting op de derde mijlpaal](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden#toelichting-mijlpaal-3) van de upgrade van de standaarden. 
 
 ------------------------
 ### 20 juli 2021
@@ -250,7 +250,7 @@ Beide XML's representeren de complete set aan data: een XML is volgens IMKL vers
   \
 Mocht u gebruik maken van de Kadaster KLIC-viewer, dan kunt u de BIL-Zip van de NTD openen met de viewer die op 20 juli gereleased wordt. Deze zal volgens de huidige visualisatie regels het IMKL 1.2.1 presenteren.  
 
-Zie ook [de toelichting op de tweede mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden.  
+Zie ook [de toelichting op de tweede mijlpaal](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden#toelichting-mijlpaal-2) van de upgrade van de standaarden.  
 Op bovenstaande pagina zijn ook enkele **voorbeeldbestanden** te vinden.
 
 
@@ -283,7 +283,7 @@ U kunt de vastgestelde ordening bekijken op de pagina van de TCS (Eisen overheid
 **Upgrade Standaarden**:
 - Mogelijkheid om in de NTD aangeleverde netinformatie/beheersersinformatie te valideren tegen de nieuwe standaard.  \
 
-Zie ook [de toelichting op de eerste mijlpaal](Toekomstige%20wijzigingen/Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
+Zie ook [de toelichting op de eerste mijlpaal](Wijzigingen/Archief/Upgrade%20KLIC%20standaarden#toelichting-mijlpaal-1) van de upgrade van de standaarden. 
 
 ------------------------
 ### 12 april 2021
