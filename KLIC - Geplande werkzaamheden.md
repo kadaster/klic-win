@@ -1,7 +1,17 @@
-# Geplande werkzaamheden (bijgewerkt 25 april 2022)
+# Geplande werkzaamheden (bijgewerkt 8 juni 2022)
 --------------------------------------------------------------------------------------
 
-## Planning voor release – juli 2022
+
+## Planning voor release – 1 januari 2023
+
+**Verlenging KLIC-meldnummer**:
+- Het KLIC-meldnummer wordt per 1 januari 2023 met een nummer uitgebreid, om op die manier meer KLIC-meldingen per jaar te kunnen ondersteunen.  \
+  Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 nummers)   \
+  Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
+  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 nummers)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – medio augustus 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -10,11 +20,12 @@ Voor deze release is het volgende onderwerp gepland:
 Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
 - Bekijk [de presentatie met een impressie](Aanvragen%20gebiedsinformatie/images/Impressie-Vernieuwd-Graafmelding.pdf) van de graafmelding schermen.
 --------------------------------------------------------------------------------------
-## Planning voor release – juni 2022
+## Planning voor release – tweede helft 2022
+> De exacte planning is afhankelijk van de ingangsdatum van de wet
 
 Voor deze release is het volgende onderwerp gepland:
 
-**eHerkenning testfaciliteiten B2B beschikbaar**:
+**Wdo (Wet digitale overheid) testfaciliteiten B2B beschikbaar**:
 - Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
 
 N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
@@ -23,6 +34,26 @@ N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-re
 Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+--------------------------------------------------------------------------------------
+## Planning voor release – NTD: 23 juni 2022; Productie: 28 juni 2022
+
+Voor deze release zijn de volgende onderwerpen gepland
+
+**Netbeheerder Test Dienst**:
+- In de NTD wordt de het mogelijk om te testen met een langer KLIC-meldnummer, op aangeven van de gebruiker. (id 6837)  \
+   Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 nummers)   \
+  Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
+  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 nummers)
+- Opschonen zaken die betrekking hebben op V1 (IMKL v1.2.1) (id 6881)
+
+**KLIC-online** (bij het doen van een graafmelding, calimiteitenmelding en oriëntatieverzoek):
+- De validaties met betrekking tot emailadressen (bv extra emailadres of opdrachtever emailadres) zijn aangepast en consistent gemaakt. Het is toegestaan om een '+' teken en een '&' teken te gebruiken.
+
+**Kadaster KLIC-viewer**:
+- Het uitzetten en zichtbaar maken van de graafpolygoon en de informatiepolygoon in het kaartlagen-tabblad onder weergave-menu wordt gewijzigd. Hierdoor blijft altijd de grens van het  graafgebied zichtbaar. (id 7812)
+- Diverse bug fixes.
+
+
 
 --------------------------------------------------------------------------------------
 
@@ -563,7 +594,7 @@ Op dringend verzoek van het KLIC gebruikersoverleg (KGO KLIC) is de live-gang va
 - Het wordt mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De wijzigingen zullen ook betrekking hebben op: KLIC-online, Ontvangstbevestiging, Gelaagde pdf, GI.xml LI.pdf.  \
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
-  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen.
+  Zie de [documentatie op GitHub](Wijzigingen/Archief/Informatiepolygoon/) voor een overzicht van de wijzigingen.
 - De Kadaster KLIC-viewer is reeds geschikt voor het gebruik van de informatiepolygoon. Hiervoor hoeft u geen speciale update te doen.
 
 --------------------------------------------------------------------------------------
@@ -650,7 +681,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - In een KLIC-melding wordt het KvK-nummer van de aanvrager zoals bekend bij het Kadaster opgenomen. Het wijzigen van de klantgegevens gaat via een [formulier](https://formulieren.kadaster.nl/wijzigen_klantgegevens). (ID 4942)
 - In het geval van een graafmelding kan optioneel het KvK-nummer van de opdrachtgever worden opgeven. 
 - Het KvK-nummer wordt indien aanwezig weergegeven in de Ontvangstbevestiging, de GI.xml en de GebiedsinformatieAanvragen API. (ID 4669, ID 4670, ID 4671)
-- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
+- Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Archief/Voorbeelden%20met%20KvK-nummer/).
 
 -------------------------------------------------------------------------------------
 ## Planning voor release - 26 mei 2020
@@ -710,7 +741,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - In de NTD wordt het mogelijk om een informatiepolygoon op te geven bij een graafmelding en een calamiteitenmelding.
 - De informatiepolygoon is zichtbaar in de BMKL-API. (GebiedsInformatieAanvraag, BeheerdersinformatieLevering e.d.)  \
   Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20Informatiepolygoon/).  \
-  Zie de [documentatie op GitHub](Geplande%20wijzigingen/Informatiepolygoon/) voor een overzicht van de wijzigingen  \
+  Zie de [documentatie op GitHub](Wijzigingen/Archief/Informatiepolygoon/) voor een overzicht van de wijzigingen  \
   De aanpassingen worden eerst in NTD beschikbaar gesteld en na minimaal 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast.
 
 --------------------------------------------------------------------------------------
@@ -755,11 +786,11 @@ Zie de berichtgeving van Agentschap Telecom op: [https://www.agentschaptelecom.n
 **Uitlevering zipbestand**:
 - Het zipbestand met de KLIC-uitlevering wordt aangepast in productie (ID 3849):
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
-  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Archief/Voorbeelden%20levering%20v2.2/).
 
 **Het BIL zipbestand**:
 - Het zipbestand met de BeheerdersinformatieLevering van een specifieke netbeheerder wordt in productie aangepast in lijn met de wijzigingen in de KLIC-uitlevering.
-  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Archief/Voorbeelden%20levering%20v2.2/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 februari 2020
@@ -777,7 +808,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Leveringsemail**:
 - De inhoud van de leveringsemail wordt aangepast. (ID 3897)
-- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
+- Hiervoor is een voorbeeld [beschikbaar op GitHub](/Uitleveren/Archief/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
 
 **Nieuwe Kadaster KLIC-viewer**:
 - Oplevering van nieuwe Kadaster KLIC-viewer op basis van een uitlevering 
@@ -795,13 +826,13 @@ Voor deze release zijn de volgende onderwerpen gepland:
 **BIL zip-bestand in versie 2.2**:
 - Ter voorbereiding op de afloop van de overgangsperiode (1 maart 2020), wordt in de NTD het BIL zip-bestand in versie 2.2 uitgeleverd. (ID 4232). 
   - in het zipbestand worden de PNG-bestanden van netbeheerders (rasterbestanden voor ligging, maatvoering, annotatie en eigenTopo) niet meer uitgeleverd in productie.
-  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20levering%20v2.2/).
+  - Hiervoor zijn reeds uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Archief/Voorbeelden%20levering%20v2.2/).
 
 **KvK-nummer (Kamer van Koophandel)**:
 - Het wordt in de NTD mogelijk om een KvK-nummer van de aanvrager en het KvK-nummer van de opdrachtgever (in geval van graafmelding) op te geven. (ID 4981)
 - Het KvK-nummer wordt indien aanwezig weergegeven in de GI.xml en de GebiedsinformatieAanvragen API. (ID 4670, ID 4671)
 - De aanpassingen worden eerst in NTD beschikbaar gesteld en na 6 weken in de reguliere omgeving. In de reguliere omgeving wordt naast bovengenoemde ook de Ontvangstbevestiging aangepast. (ID 5006, ID 5007, ID 4669)
-- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Voorbeelden%20met%20KvK-nummer/).
+- Hiervoor zijn uitgewerkte voorbeelden van de uitleveringen [gepubliceerd op GitHub](Uitleveren/Archief/Voorbeelden%20met%20KvK-nummer/).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 29 oktober 2019
@@ -829,7 +860,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Publicatie op Github**:
 - Publicatie voorbeeldbestanden nieuwe uitlevering, inclusief bijbehorende BeheerdersinformatieLeveringen. (ID 3849)  \
-  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
+  zie [deze link op GitHub](Uitleveren/Archief/Voorbeelden%20levering%20v2.2/) voor voorbeelden van uitleveringen in versie 2.2.
 - Update van de BETA-versie van de Kadaster KLIC-viewer (Online en Windows).  \
   Zie [deze link op GitHub](/Kadaster%20KLIC-viewer/).
 
@@ -855,7 +886,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Publicatie op Github**:
 - Er is een voorbeeld gepubliceerd van de leveringsemail zoals die er per september uit komt te zien.  \
-  Zie [deze link op GitHub](/Uitleveren/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20september%202019).pdf).
+  Zie [deze link op GitHub](/Uitleveren/Archief/Voorbeeld%20vernieuwde%20leveringsemail%20(verwacht%20december%202019).pdf).
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 2 juli 2019
@@ -936,7 +967,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 
 **Uitlevering zipbestand**:
 - Publicatie voorbeeldbestanden nieuwe uitlevering. (ID 3849)  \
-  zie [deze link op GitHub](https://github.com/kadaster/klic-win/tree/master/Uitleveren/Voorbeelden%20levering%20v2.2) voor voorbeelden van uitleveringen in versie 2.2.
+  zie [deze link op GitHub](Uitleveren/Archief/Voorbeelden%20levering%20v2.2/) voor voorbeelden van uitleveringen in versie 2.2.
 
 
 
