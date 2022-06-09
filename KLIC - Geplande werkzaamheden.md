@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 8 juni 2022)
+﻿# Geplande werkzaamheden (bijgewerkt 8 juni 2022)
 --------------------------------------------------------------------------------------
 
 
@@ -6,9 +6,9 @@
 
 **Verlenging KLIC-meldnummer**:
 - Het KLIC-meldnummer wordt per 1 januari 2023 met een nummer uitgebreid, om op die manier meer KLIC-meldingen per jaar te kunnen ondersteunen.  \
-  Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 nummers)   \
+  Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 cijfers)   \
   Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
-  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 nummers)
+  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – medio augustus 2022
