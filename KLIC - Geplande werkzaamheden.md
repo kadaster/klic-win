@@ -5,7 +5,7 @@
 ## Planning voor release – 1 januari 2023
 
 **Verlenging KLIC-meldnummer**:
-- Het KLIC-meldnummer wordt per 1 januari 2023 met een nummer uitgebreid, om op die manier meer KLIC-meldingen per jaar te kunnen ondersteunen.  \
+- Het KLIC-meldnummer wordt per 1 januari 2023 met 1 cijfer uitgebreid, om op die manier meer KLIC-meldingen per jaar te kunnen ondersteunen.  \
   Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 cijfers)   \
   Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
@@ -41,9 +41,9 @@ Voor deze release zijn de volgende onderwerpen gepland
 
 **Netbeheerder Test Dienst**:
 - In de NTD wordt de het mogelijk om te testen met een langer KLIC-meldnummer, op aangeven van de gebruiker. (id 6837)  \
-   Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 nummers)   \
+   Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 cijfers)   \
   Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
-  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 nummers)
+  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 - Opschonen zaken die betrekking hebben op V1 (IMKL v1.2.1) (id 6881)
 
 **KLIC-online** (bij het doen van een graafmelding, calimiteitenmelding en oriëntatieverzoek):
