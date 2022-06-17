@@ -12,6 +12,8 @@
 	- [GebiedsinformatieLevering](#versie-gebiedsinformatielevering)
 	- [Belang](#versie-belang)
   - [BeginLifespanVersion](#beginlifespanversion)
+- [Afspraken](#afspraken)
+  - [Keuze Thema](#keuze-thema)
 
 ## Inleiding
 
@@ -222,3 +224,52 @@ Voor de featuretypes die in het Klic-proces door het Kadaster worden aangemaakt,
 | Belang                       | het object Belang wordt overgenomen uit de centrale voorziening; daarmee wordt de `beginLifespanVersion` ook overgenomen  |
 | Beheerder                    | laatste mutatiedatum van een feature uit de Klic-registratie  |
 </PRE></BODY></HTML>
+
+## Afspraken
+
+Voor het beheren van standaarden en het beoordelen van de issue's is een commissie ingesteld als vertegenwoordiging van de graafsector: de Technische Commissie Standaarden (TCS).
+
+Behandeling van een onderwerp kan bijvoorbeeld leiden tot een wijziging in de standaarden, maar het kan bijvoorbeeld ook leiden tot werkafspraken of advies. Hieronder zijn dergelijke onderwerpen toegelicht.
+
+### Keuze Thema
+
+IMKL bevat een strikte bepering in het te kiezen thema's. Deze lijst is zorgvuldig tot stand gekomen. Voor sommige type kabels/leidingen is het echter niet altijd duidelijk onder welk thema die hoort. Hieronder een toelichting van besproken onderwerpen.
+
+#### Waterstofgas
+> zie ook: https://github.com/kadaster/klic-win/issues/96
+
+In termen van objectklassen hoort een waterstofleiding tot de objectklasse *OilGasChemicalsPipe* (INSPIRE) / *OlieGasChemicalienPijpleiding* (IMKL ) met het producttype `hydrogen`. Dit producttype is door het TCS vertaald naar `waterstof`.
+Na onderzoek door het TCS is aangegeven dat een waterstofleiding valt onder het IMKL-thema `buisleidingGevaarlijkeInhoud`, mits wordt voldaan aan een aantal voorwaarden zoals aangegeven in het Revb (o.a. minimum diameter en druk).  
+
+
+**Bevindingen onderzoek / voorwaarden**: 
+- De WIBON verwijst in artikel 1 naar artikel 12.12 tweede lid van de Wet milieubeheer (WMB). In dit artikel staat dat bij of krachtens algemene maatregel van bestuur (AMvB) onder meer categorieën van buisleidingen worden aangewezen waarover het register gegevens bevat. Met register wordt hier bedoeld het Registratiebesluit externe veiligheid.
+- Artikel 6 van dit Registratiebesluit stelt: “*Als categorieën van buisleidingen als bedoeld in artikel 12.12, tweede lid, van de Wet milieubeheer worden aangewezen de categorieën van buisleidingen waarop het Besluit externe veiligheid buisleidingen van toepassing is.*” 
+- Artikel 2 van het Bevb geeft aan waarop het Bevb van toepassing is en er wordt in dit artikel verwezen naar een regeling, zijnde de Regeling externe veiligheid buisleidingen, afgekort: Revb. De eerste versie van de Revb is van 30 december 2010 en deze is op 17 juni 2014 gewijzigd. Per die datum is, onder meer, waterstof onder de Revb gebracht. In de publicatie over e toelichting van de gewijzigde Revb staat op bladzijde 5 aangegeven dat waterstof onder de categorie “brandbare stoffen” valt.
+- In de Revb zoals die nu geldt stat in artikel 2 dat de Revb van toepassing is voor: “buisleidingen voor brandbare stoffen met een uitwendige diameter van 70 mm of meer of een binnendiameter van 50 mm of meer en een druk van 1.600 kPa of meer;”
+
+Samengevat moet de betreffende buisleiding, naast bepaalde diameters, wel een druk hebben van 1.600 kPa (= 16 bar) of meer om geduid te worden onder het thema “buisleiding met gevaarlijke inhoud”. Is de druk lager dan 16 bar, dan valt de betreffende buisleiding niet onder het thema: “buisleiding met gevaarlijke inhoud”.  
+
+*Zie ook: https://github.com/kadaster/klic-win/issues/96 waarin links zijn opgenomen naar de documenten waarnaar hierboven verwezen wordt*
+
+#### (Vloeibare) biomassa
+
+> zie ook https://github.com/Geonovum/imkl2015-review/issues/305
+
+**Overwegingen**:
+- Er is geen appart thema voor (vloeibare) biomassa.  \
+Omdat deze leidingen ook onder druk staan is het niet wenselijk is deze onder thema "overig" uit te wisselen.
+
+- In de definities van Insipre wordt er bij riool gesproken over *afvalwater* en daardoor is dit niet 100% passend. Om dit wel sluitend te krijgen zou je Inspire moeten aanpassen, voor de Nederlande GWSW situatie.
+- Het maakt voor de grondroerder niet uit of er hemelwater of oppervlaktewater door een (bv een duiker) stroomt. En wat betreft graafschade is de impact voor het raken van een huishoudelijk afvalwater persleiding of een biomassa leiding raakt het is allebei ernstig.
+
+**Conclusie**:  \
+"Vloeibare biomassa" implementeren als Rioolleiding (thema: rioolOnderOverOfOnderdruk)
+
+"Vloeibare biomassa" past bij gebrek aan thema's het beste onder riool onder over- of onderdruk. Vooral omdat deze leidingen ook onder druk staan en het daarom niet wenselijk is deze onder thema "overig" uit te wisselen.
+
+
+
+
+
+
