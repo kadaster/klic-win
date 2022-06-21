@@ -1,7 +1,7 @@
-﻿# Geplande werkzaamheden (bijgewerkt 8 juni 2022)
+# Geplande werkzaamheden (bijgewerkt 20 juni 2022)
 --------------------------------------------------------------------------------------
 
-
+ 
 ## Planning voor release – 1 januari 2023
 
 **Verlenging KLIC-meldnummer**:
@@ -47,13 +47,7 @@ Voor deze release zijn de volgende onderwerpen gepland
 - Opschonen zaken die betrekking hebben op V1 (IMKL v1.2.1) (id 6881)
 
 **KLIC-online** (bij het doen van een graafmelding, calimiteitenmelding en oriëntatieverzoek):
-- De validaties met betrekking tot emailadressen (bv extra emailadres of opdrachtever emailadres) zijn aangepast en consistent gemaakt. Het is toegestaan om een '+' teken en een '&' teken te gebruiken.
-
-**Kadaster KLIC-viewer**:
-- Het uitzetten en zichtbaar maken van de graafpolygoon en de informatiepolygoon in het kaartlagen-tabblad onder weergave-menu wordt gewijzigd. Hierdoor blijft altijd de grens van het  graafgebied zichtbaar. (id 7812)
-- Diverse bug fixes.
-
-
+- De validaties met betrekking tot emailadressen (bv extra emailadres of opdrachtever emailadres) zijn aangepast en consistent gemaakt. Het is toegestaan om een '+' teken en een '&' teken te gebruiken. (id 7817)
 
 --------------------------------------------------------------------------------------
 
