@@ -1,6 +1,6 @@
 # Afwijkende situatie
 
-| Deze pagina beschrijft functionaliteit die de tweede helft van 2022 beschikbaar komt. <br>  Tot die tijd kan er alleen gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). <br> Er komt ook een testfase waarin de mogelijkheid wordt geboden terugmeldingen te doen. Hiervoor zal er een eigen end-point gecommuniceerd worden. <br> Houdt [de geplande werkzaamgeden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
+| Deze pagina beschrijft functionaliteit die de tweede helft van 2022 beschikbaar komt. <br>  Tot die tijd kan er alleen gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). <br> Er komt ook een testfase waarin de mogelijkheid wordt geboden terugmeldingen te doen. Hiervoor zal er een eigen end-point gecommuniceerd worden. <br> Houdt [de geplande werkzaamheden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
 |------|
 
 ## Uitleg Afwijkende Situatie
@@ -56,14 +56,14 @@ https://formulieren.kadaster.nl/aanvragen_api_key_terumelding_api
 | objectId                    | hier behoort het GML-id van de kabel/leiding waarop de terugmelding betrekking heeft                                                                                       | verplicht                        | niet van toepassing                                      | verplicht                       | 
 | objectType                  | hier behoort het feature type (zoals genoemd in de klic-melding) van de kabel/leiding waarop de terugmelding betrekking heeft                                             | verplicht                        | niet van toepassing                                      | verplicht                       | 
 | netbeheerder                | hier behoort de bronhoudercode of de naam op exact de manier waarop die ook in de KLIC-melding genoemd wordt.                                                              | verplicht                        | optioneel: het betreft dan een "vermoedelijke bronhouder"| verplicht                       | 
-| thema                       | hier behoort het thema (zoals genoemd in de klic-melding) van de kabel/leiding waarop de terugmelding betrekking heeft                                                     | verplicht                        | optioneel: het betreft dan een "vermoedelijk thema"      | verplicht                       | 
+| thema                       | hier behoort het thema (zoals genoemd in de klic-melding) van de kabel/leiding waarop de terugmelding betrekking heeft. Let op: het formaat moet een URI zijn zoals in het IMKL gebruikt wordt.                                                     | verplicht                        | optioneel: het betreft dan een "vermoedelijk thema"      | verplicht                       | 
 | omschrijving                | omschrijving van de afwijkende ligging. Hier kan kan ook kleur, materiaal diameter etc. in het geval van een `onbekend net`                                                 | verplicht                        | verplicht (denk aan kleur, materiaal, diameter, etc.)    | verplicht                       | 
 | terugmelder                 | de naam van de terugmelder                                                                                                                                                  | verplicht                        | verplicht                                                | verplicht                       | 
 | bedrijfsnaam                | eventueel bedrijfsnaam waarvoor de terugmelder werkt                                                                                                                       | optioneel                        | optioneel                                                | optioneel                       | 
 | email                       | emailadres van de terugmelder, voor bevestigingsmail van de terugmelding en waarmee  de netbeheerder eventueel contact kan opnemen.                                       | verplicht                        | verplicht                                                | verplicht                       | 
 | telefoonnummer              | telefoonnummer van de terugmelder, zodat de netbeheerder eventueel contact kan opnemen.                                                                                    | optioneel                        | optioneel                                                | optioneel                       | 
 | referentie                  | hier kan optioneel een referentie opgegeven worden waarmee de voortgang van deze terugmelding voor de terugmelder (of terugmelder app) te volgen is                      | optioneel                        | optioneel                                                | optioneel                       | 
-| getekendeFeatureCoordinaten | een lijst van coördinaten in RD formaat in de buurt van de terugmelding. Kan gebruikt worden als de terugmelder in de app bijvoorbeeld de werkelijke ligging getekend heeft.| optioneel                        | optioneel                                                | optioneel                       | 
+| getekendeGeometrie | In GEOJSON formaat (inclusief type) de coördinaten in RD formaat in de buurt van de terugmelding. Kan gebruikt worden als de terugmelder in de app bijvoorbeeld de werkelijke ligging getekend heeft.| optioneel                        | optioneel                                                | optioneel, bijvoorbeeld een polygoon waar gezocht is         | 
 
 
 
@@ -102,24 +102,26 @@ https://formulieren.kadaster.nl/aanvragen_api_key_terumelding_api
 				"objectId": "nl.imkl-TS1381.BGI_ogc00001-f",                // vullen met GMLid; optioneel bij `onbekend net`
 				"objectType": "OlieGasChemicalienPijpleiding",              // vullen met FeatureType; optioneel bij `onbekend net`
 				"netbeheerder": "Netbeheerder Regressie05",                 // mag BHC of de naam exact zoals die in de melding staat; optioneel bij `onbekend net`
-				"thema": "buisleidingGevaarlijkeInhoud",                    // optioneel bij `onbekend net`
+				"thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/buisleidingGevaarlijkeInhoud",                    // optioneel bij `onbekend net`
 				"omschrijving": "Omschrijving van de afwijkende ligging.",
 				"terugmelder": "G. Raver",
 				"bedrijfsnaam": "Kadaster Graafbedrijf",                    // optioneel 
 				"email": "klic@kadaster.nl",
 				"telefoonnummer": "0612345678",                             // optioneel 
 				"referentie": "Hoofdstraat Apeldoorn januari",              // optioneel 
-
-				"getekendeFeatureCoordinaten": [                            // optioneel 
-					[
+				"getekendeGeometrie": {                            //  (GEOJSON formaat) optioneel
+					"type": "LineString",
+					"coordinates": [
+					  [
 						155049.15,
 						387936.48
-					],
-					[
+					  ],
+					  [
 						155065.36,
 						387936.4
-					]
-				]
+					  ]
+				        ]
+				}
 			}
 		}
 	]

@@ -72,12 +72,12 @@ Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te 
 Voorbeeld van WS-Addressing bij een aanvraag:
 ```xml
   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
-  <wsa:Action>KLIC-B2B-AANVRAAG</wsa:Action>
-  <wsa:ReplyTo>
-    <wsa:Address>https://data.networkoperator.nl/klic/soap/v1</wsa:Address>
-  </wsa:ReplyTo>
-  <wsa:MessageID>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:MessageID>
-</soapenv:Header>
+    <wsa:Action>KLIC-B2B-AANVRAAG</wsa:Action>
+    <wsa:ReplyTo>
+      <wsa:Address>https://data.networkoperator.nl/klic/soap/v1</wsa:Address>
+    </wsa:ReplyTo>
+    <wsa:MessageID>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:MessageID>
+  </soapenv:Header>
 ```
 
 ### 1.4 Terugkoppeling door het Kadaster
@@ -87,7 +87,7 @@ Met dit attribuut kan door de aanvrager de relatie worden gelegd tussen de B2B-a
 
 De volgende waarde wordt door het Kadaster meegegeven in het `wsa:Action` attribuut uit WS-Addressing bij een teruggekoppeld bericht:
 
-- KLIC-B2B-ONTVANGSTBEVESTIGING - voor het bericht met de B2B-orderbevestiging
+- KLIC-B2B-ONTVANGSTBEVESTIGING - voor het bericht met de B2B-orderbevestiging 
 - KLIC-B2B-BETROKKENBEHEERDERS - voor het bericht met B2B-betrokkenBeheerders
 
 ### 1.5 Overzicht van de WS-Addressing attributen bij terugkoppeling
@@ -103,11 +103,11 @@ De volgende waarde wordt door het Kadaster meegegeven in het `wsa:Action` attrib
 Voorbeeld van WS-Addressing bij een response op bovenstaande aanvraag:
 ```xml
   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
-  <wsa:Action>KLIC-B2B-ONTVANGSTBEVESTIGING</wsa:Action>
-  <wsa:MessageID>ed897cd6-06e0-40a5-b209-4701ba340378</wsa:MessageID>
-  <wsa:To>https://data.networkoperator.nl/klic/soap/v1</wsa:To>
-  <wsa:RelatesTo>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:RelatesTo>
-</soapenv:Header>
+    <wsa:Action>KLIC-B2B-ONTVANGSTBEVESTIGING</wsa:Action>
+    <wsa:MessageID>ed897cd6-06e0-40a5-b209-4701ba340378</wsa:MessageID>
+    <wsa:To>https://data.networkoperator.nl/klic/soap/v1</wsa:To>
+    <wsa:RelatesTo>uuid:3a2714da-0ba5-4633-9ee2-f2090dc12f75</wsa:RelatesTo>
+  </soapenv:Header>
 ```
 
 ### 1.6 Terugkoppeling procesverwerking
@@ -135,29 +135,29 @@ Indien een aanvraag succesvol in verwerking is genomen, wordt in het bericht met
 Voorbeeld van een B2B-orderbevestiging, inclusief _Procesverwerking_-attributen:
 ```xml
     <KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
-  <Procesverwerking>
-    <ProcesVerwerkingCode>1</ProcesVerwerkingCode>
-    <SeverityCode>INFO</SeverityCode>
-  </Procesverwerking>
-  <Orderbevestiging>
-    <OrderID>1234567890</OrderID>
-    <Klantreferentie>Project APD-3661</Klantreferentie>
-    <AanvraagDatumtijd>2020-04-29T18:03:36.580+02:00</AanvraagDatumtijd>
-  </Orderbevestiging>
-</KlicB2BOrderbevestiging>
+      <Procesverwerking>
+        <ProcesVerwerkingCode>1</ProcesVerwerkingCode>
+        <SeverityCode>INFO</SeverityCode>
+      </Procesverwerking>
+      <Orderbevestiging>
+        <OrderID>1234567890</OrderID>
+        <Klantreferentie>Project APD-3661</Klantreferentie>
+        <AanvraagDatumtijd>2020-04-29T18:03:36.580+02:00</AanvraagDatumtijd>
+      </Orderbevestiging>
+    </KlicB2BOrderbevestiging>
 ```
 Voorbeeld van een B2B-orderbevestiging waarbij fouten zijn gevonden bij het valideren van de aanvraag:
 ```xml
     <KlicB2BOrderbevestiging xmlns="http://www.kadaster.nl/schemas/klic/KlicB2BOrderbevestiging/20150129">
-  <Procesverwerking>
-    <ProcesVerwerkingCode>0</ProcesVerwerkingCode>
-    <SeverityCode>ERROR</SeverityCode>
-    <Melding>
-      <Code>COR0144</Code>
-      <Omschrijving>Het adres van de opdrachtgever met postcode/aanduiding (7334XX 701) is niet bekend in BAG.</Omschrijving>
-    </Melding>
-  </Procesverwerking>
-</KlicB2BOrderbevestiging>
+      <Procesverwerking>
+        <ProcesVerwerkingCode>0</ProcesVerwerkingCode>
+        <SeverityCode>ERROR</SeverityCode>
+        <Melding>
+          <Code>COR0144</Code>
+          <Omschrijving>Het adres van de opdrachtgever met postcode/aanduiding (7334XX 701) is niet bekend in BAG.</Omschrijving>
+        </Melding>
+      </Procesverwerking>
+    </KlicB2BOrderbevestiging>
 ```
 
 ---------------------------------------------------------
@@ -166,11 +166,11 @@ Voorbeeld van een B2B-orderbevestiging waarbij fouten zijn gevonden bij het vali
 Voor het gebruik van de nieuwste interfaces voor de KLIC B2B-koppeling dient u gebruik te maken van de volgende WSDL’s plus bijbehorende XSD’s:
 
 - KlicB2BAanvraag-1.1.wsdl  \
-  bericht van aanvrager naar Kadaster, in figuur 1 aangegeven als 1a
+bericht van aanvrager naar Kadaster, in figuur 1 aangegeven als 1a
 - KlicB2BTestAanvraag-1.1.wsdl  \
-  bericht van aanvrager naar Kadaster t.b.v. de communicatietest van het koppelvlak, in figuur 1 aangegeven als 1a
+bericht van aanvrager naar Kadaster t.b.v. de communicatietest van het koppelvlak, in figuur 1 aangegeven als 1a
 - KlicB2B-terugkoppeling-1.1.wsdl  \
-  berichten van Kadaster naar aanvrager, in figuur 1 aangegeven als 2a en 3a.
+berichten van Kadaster naar aanvrager, in figuur 1 aangegeven als 2a en 3a.
 
 Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Aanvragen gebiedsinformatie/Schemas](../../../tree/master/Aanvragen%20gebiedsinformatie/Schemas).
 
@@ -225,23 +225,29 @@ Zie daarvoor [Controles B2B-koppeling gebiedsinformatie-aanvraag](Controles%20B2
 ---------------------------------------------------------
 ## 6. Beveiliging
 
-Het technische koppelvlak bij het Kadaster voldoet aan de Digikoppeling standaard. Digikoppeling stelt met name eisen
-aan het gebruik van http over TLS (rfc2818) en het gebruik van PKIoverheid certificaten voor de authenticatie.
+Het technische koppelvlak bij het Kadaster voldoet aan de Digikoppeling standaard. Digikoppeling stelt met name eisen aan het gebruik van http over TLS (rfc2818) en het gebruik van PKIoverheid certificaten voor de authenticatie.  \
+Voor de B2B-aanvraag-dienst dient de aanvrager te beschikken over een PKIoverheid server-certificaat uit de G3 root (zie onderstaande figuur 2).
 
 Informatie over het PKIoverheid certificaat kunt u vinden op http://www.pkioverheid.nl/
+
+![Schematische weergave beveiliging](images/Fig.2%20Schematische%20weergave%20beveiliging.png "Schematische weergave beveiliging")  \
+_Figuur 2 Schematische weergave beveiliging_
 
 Voor zowel het verzenden, als het ontvangen van informatie kan de B2B-aanvraag-dienst alleen communiceren met de standaard https-poort (443).
 
 ### 6.1 Van Kadaster naar aanvrager
-Voor het indienen van de B2B-aanvraag is, conform de voorschriften, een certificaat onder de root “Staat der Nederlanden Private Root CA G1” ('private root') in gebruik.
-Het betreft hier service30.kadaster.nl. Om gebruik te kunnen maken van de B2B-aanvraag-dienst, dient u certificaten uit de “private root” te vertrouwen.
-Het OIN van het Kadaster is “00000001802327497000”.  
-Alle gegevens in het certificaat kunnen in de loop van de tijd veranderen. Het certificaat kan verlopen, het Kadaster kan een ander certificaat-uitgever (CA) gaan gebruiken, etc.
-Het OIN van het Kadaster blijft echter altijd gelijk.
+
+Bij het versturen van het bericht van het Kadaster naar de aanvrager wordt gebruik gemaakt van een tweezijdige TLS verbinding.  \
+De aanvrager heeft hiervoor een PKIoverheid server-certificaat op zijn server geïnstalleerd. De server van de aanvrager vertrouwt certificaten van PKIoverheid uit de G3 root.  \
+De B2B-aanvraag-dienst vertrouwt certificaten van PKI-overheid uit de G3 root en gebruikt een PKIoverheid certificaat uit de G3 root om zich te identificeren.
+
+Conform Digikoppeling/PKIoverheid hoort, nadat er een tweezijdige TLS verbinding tot stand is gekomen, alleen het OIN gebuikt te worden als identiteit van het Kadaster. Het OIN staat in het onderwerp van het certificaat onder “SERIALNUMBER”.  \
+Het OIN van het Kadaster is “00000001802327497000”.  \
+Alle gegevens in het certificaat kunnen in de loop van de tijd veranderen. Het certificaat kan verlopen, het Kadaster kan een ander certificaat-uitgever (CA) gaan gebruiken, etc. Het OIN van het Kadaster blijft echter altijd gelijk.
 
 ### 6.2 Van aanvrager naar Kadaster
-Bij het versturen van de B2B-aanvraag naar het Kadaster wordt gebruik gemaakt van HTTP Basic Authentication (gebruik van gebruikersnaam en wachtwoord).
-De https (enkelzijdig TLS) verbinding is conform Digikoppeling standaard RFC 2818 http over TLS.
+
+Bij het versturen van de B2B-aanvraag naar het Kadaster wordt gebruik gemaakt van HTTP Basic Authentication (gebruik van gebruikersnaam en wachtwoord). De https (enkelzijdig TLS) verbinding is conform Digikoppeling standaard RFC 2818 http over TLS.  \
 De gebruikersnaam en wachtwoord kunnen door de aanvrager in het Mijn Kadaster-portaal zelf beheerd worden.
 
 ### 6.3 IP-adressen en logische namen
