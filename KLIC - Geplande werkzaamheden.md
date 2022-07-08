@@ -52,7 +52,7 @@ Voor deze release zijn de volgende onderwerpen gepland
   De reguliere expressie is: 
 
   ```
-  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$
+  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,25}$
   ```
  
   Het volgende is hierbij toegestaan:
