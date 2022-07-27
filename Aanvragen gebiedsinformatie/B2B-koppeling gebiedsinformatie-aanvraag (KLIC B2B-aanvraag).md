@@ -234,7 +234,7 @@ Voor zowel het verzenden, als het ontvangen van informatie kan de B2B-aanvraag-d
 
 ### 6.1 Van Kadaster naar aanvrager
 Voor het indienen van de B2B-aanvraag is, conform de voorschriften, een certificaat onder de root “Staat der Nederlanden Private Root CA G1” ('private root') in gebruik.
-Het betreft hier service30.kadaster.nl. Om gebruik te kunnen maken van de B2B-aanvraag-dienst, dient u certificaten uit de “private root” te vertrouwen.
+Het betreft hier service10.kadaster.nl. Om gebruik te kunnen maken van de B2B-aanvraag-dienst, dient u certificaten uit de “private root” te vertrouwen.
 Het OIN van het Kadaster is “00000001802327497000”.  
 Alle gegevens in het certificaat kunnen in de loop van de tijd veranderen. Het certificaat kan verlopen, het Kadaster kan een ander certificaat-uitgever (CA) gaan gebruiken, etc.
 Het OIN van het Kadaster blijft echter altijd gelijk.
