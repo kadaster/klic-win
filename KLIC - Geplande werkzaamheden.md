@@ -11,15 +11,6 @@
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 
 --------------------------------------------------------------------------------------
-## Planning voor release – medio augustus 2022
-
-Voor deze release is het volgende onderwerp gepland:
-
-**Vernieuwing aanvraag via KLIC-online**: 
--   De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
-Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
-- Bekijk [de presentatie met een impressie](Aanvragen%20gebiedsinformatie/images/Impressie-Vernieuwd-Graafmelding.pdf) van de graafmelding schermen.
---------------------------------------------------------------------------------------
 ## Planning voor release – tweede helft 2022
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
 
@@ -35,6 +26,15 @@ Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 --------------------------------------------------------------------------------------
+## Planning voor release – medio augustus 2022
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Vernieuwing aanvraag via KLIC-online**: 
+-   De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Bekijk [de presentatie met een impressie](Aanvragen%20gebiedsinformatie/images/Impressie-Vernieuwd-Graafmelding.pdf) van de graafmelding schermen.
+--------------------------------------------------------------------------------------
 ## Planning voor release – NTD: 23 juni 2022; Productie: 28 juni 2022
 
 Voor deze release zijn de volgende onderwerpen gepland
@@ -47,7 +47,21 @@ Voor deze release zijn de volgende onderwerpen gepland
 - Opschonen zaken die betrekking hebben op V1 (IMKL v1.2.1) (id 6881)
 
 **KLIC-online** (bij het doen van een graafmelding, calimiteitenmelding en oriëntatieverzoek):
-- De validaties met betrekking tot emailadressen (bv extra emailadres of opdrachtever emailadres) zijn aangepast en consistent gemaakt. Het is toegestaan om een '+' teken en een '&' teken te gebruiken. (id 7817)
+- De validaties met betrekking tot emailadressen (bv extra emailadres of opdrachtever emailadres) zijn aangepast en consistent gemaakt. Het is toegestaan om een '+' teken en een '&' teken te gebruiken. (id 7817)  \
+  Er wordt gebruik gemaakt van een marktconforme (en bewezen) email validatie van de OWASP (Open Web Application Security Project).  \
+  De reguliere expressie is: 
+
+  ```
+  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,25}$
+  ```
+ 
+  Het volgende is hierbij toegestaan:
+  - Kleine letters:   a-z
+  - hoofdetters:   A-Z
+  - cijfers:   0-9
+  - speciale tekens:   _ + & * -  
+ 
+  De maximale lengte is 70 tekens.
 
 --------------------------------------------------------------------------------------
 

@@ -115,12 +115,40 @@ Er moet een geldig telefoonnummer en/of e-mailadres geregistreerd zijn (melding:
 ### 2.4 Contactgegevens aanvrager
 De verplichte velden voor de contactpersoon van de aanvragende organisatie worden geborgd door de XML-schema-definitie.
 
-Het e-mailadres van de aanvrager (`Klant.Contactgegevens.Email`) moet syntactisch juist zijn (melding: COR0112).
+Het e-mailadres van de aanvrager (`Klant.Contactgegevens.Email`) moet syntactisch juist zijn (melding: COR0112).  \
+  Er wordt gebruik gemaakt van een marktconforme (en bewezen) email validatie van de OWASP (Open Web Application Security Project).  \
+  De reguliere expressie is: 
+
+  ```
+  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,25}$
+  ```
+ 
+  Het volgende is hierbij toegestaan:
+  - Kleine letters:   a-z
+  - hoofdetters:   A-Z
+  - cijfers:   0-9
+  - speciale tekens:   _ + & * -  
+ 
+  De maximale lengte is 70 tekens.
 
 Het telefoonnummer van de aanvrager (`Klant.Contactgegevens.Telefoon`) mag geen ongeldige tekens bevatten (melding: COR0195).
 
 ### 2.5 Extra e-mailadres
-Het opgegeven extra e-mailadres (`Klant.ExtraEmail`) moet syntactisch juist zijn (melding: COR0111).
+Het opgegeven extra e-mailadres (`Klant.ExtraEmail`) moet syntactisch juist zijn (melding: COR0111).  \
+Er wordt gebruik gemaakt van een marktconforme (en bewezen) email validatie van de OWASP (Open Web Application Security Project).  \
+  De reguliere expressie is: 
+
+  ```
+  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,25}$
+  ```
+ 
+  Het volgende is hierbij toegestaan:
+  - Kleine letters:   a-z
+  - hoofdetters:   A-Z
+  - cijfers:   0-9
+  - speciale tekens:   _ + & * -  
+ 
+  De maximale lengte is 70 tekens.
 
 
 ---------------------------------------------------------
@@ -149,7 +177,21 @@ Eveneens moeten contactgegevens van de opdrachtgever juist zijn ingevuld. Dit ge
 - naam van contactpersoon bij opdrachtgever (`Opdrachtgever.Naam`) moet zijn ingevuld (melding: COR0133)
 - telefoonnummer van contactpersoon bij opdrachtgever (`Opdrachtgever.Telefoon`) moet zijn ingevuld (melding: COR0134)
 - e-mailadres van contactpersoon bij opdrachtgever (`Opdrachtgever.Email`) moet zijn ingevuld (melding: COR0135)
-- e-mailadres van contactpersoon bij opdrachtgever (`Opdrachtgever.Email`) moet syntactisch correct zijn (melding: COR0136).
+- e-mailadres van contactpersoon bij opdrachtgever (`Opdrachtgever.Email`) moet syntactisch correct zijn (melding: COR0136).  \
+Er wordt gebruik gemaakt van een marktconforme (en bewezen) email validatie van de OWASP (Open Web Application Security Project).  \
+  De reguliere expressie is: 
+
+  ```
+  ^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,25}$
+  ```
+ 
+  Het volgende is hierbij toegestaan:
+  - Kleine letters:   a-z
+  - hoofdetters:   A-Z
+  - cijfers:   0-9
+  - speciale tekens:   _ + & * -  
+ 
+  De maximale lengte is 70 tekens.
 
 De adresgegevens van de opdrachtgever (`Opdrachtgever.Adres`) moeten ook juist ingevuld te zijn. Dit geeft de volgende validaties:
 - valideer of de postcode (`Postcode`) is ingevuld (melding: COR0140)
