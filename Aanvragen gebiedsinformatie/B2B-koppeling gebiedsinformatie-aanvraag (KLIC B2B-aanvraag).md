@@ -223,7 +223,7 @@ Zie daarvoor de map: [Aanvragen gebiedsinformatie/Voorbeelden](../../../tree/mas
 ---------------------------------------------------------
 ## 5. Validaties
 
-De controles die worden uitgevoerd op een B2B-aanvraag van gebiedsinformatie zijn uitgewerkt in een apart dpcument.  \
+De controles die worden uitgevoerd op een B2B-aanvraag van gebiedsinformatie zijn uitgewerkt in een apart document.  \
 Zie daarvoor [Controles B2B-koppeling gebiedsinformatie-aanvraag](Controles%20B2B-koppeling%20gebiedsinformatie-aanvraag.md).
 
 ---------------------------------------------------------
