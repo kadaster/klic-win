@@ -180,6 +180,10 @@ Berichten dienen te worden samengesteld m.b.v. de UTF-8 karakterset.
 Bij de implementatie dient u er rekening mee te houden dat de z.g. namespace-prefix conform de XML-standaard (zie http://www.w3.org/TR/xmlschema-0/#NS) niet een vaste waarde heeft.  \
 De namespace-prefix kan dan ook per bericht anders zijn. We adviseren u om uw webservice zelf op dit aspect te controleren, zodat u niet onverwacht met problemen in de berichtuitwisseling wordt geconfronteerd.
 
+Let ook op de SOAPAction HTTP-header die moet worden meegestuurd. Zoals gespecificeerd in de WSDL kunnen hier
+twee mogelijke waarden worden gebruikt: `KLIC-B2B-TESTAANVRAAG` voor het doen van een test aanvraag
+of `KLIC-B2B-AANVRAAG` voor een reguliere aanvraag. Zonder deze HTTP-header met een van deze twee waarden zal altijd een HTTP-500 status code worden geretourneerd.
+
 ---------------------------------------------------------
 ## 3. Voorbeeldberichten
 
