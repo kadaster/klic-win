@@ -728,31 +728,32 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 	},
 	"beheerdersTerugmeldingen": [
 		{
+			"terugmeldingId": "138",
+	        "beheerdersTerugmeldingId": "546",
 			"bronhoudercode": "GM1641",
-			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
 			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen",
-			"beheerdersTerugmeldingId": "be2057ab-0af3-410f-a5e6-7878bb271076",
-			"terugmeldingId": "2f157e4e-53e8-495e-9a4f-ae4692b5e6ff",
-			"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
-			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen"
+			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
+			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen",
+			"mutatieDatum": "2020-11-26T10:20:49.123+01:00"
 		},
 		{
+			"terugmeldingId": "126
+			"beheerdersTerugmeldingId": "504",
 			"bronhoudercode": "KL1001",
-			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
 			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen",
-			"beheerdersTerugmeldingId": "818da869-b379-4ec3-abd2-b8c3b4d9fd06",
-			"terugmeldingId": "2f157e4e-53e8-495e-9a4f-ae4692b5e6ff",
-			"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
-			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen"
+			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
+			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen",
+						"mutatieDatum": "2020-11-26T10:20:49.123+01:00"
 		},
 		{
+	        "terugmeldingId": "106",
+	        "beheerdersTerugmeldingId": "431",
 			"bronhoudercode": "KL1001",
-			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
 			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen",
-			"beheerdersTerugmeldingId": "4d733cca-5612-447c-a5bf-2fb020743caf",
-			"terugmeldingId": "f4eb214a-017b-454c-a678-0a90c58d6666",
-			"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
-			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen"
+			"datumGenotificeerd": "2020-11-26T10:20:49+01:00",
+					"terugmeldingId": "f4eb214a-017b-454c-a678-0a90c58d6666",
+			"tmClaimStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/ClaimStatussen/tcsOpen",
+			"mutatieDatum": "2020-11-26T10:20:49.123+01:00"
 		}
 	]
 }
@@ -762,7 +763,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 
 Nadat is gezocht naar alle terugmeldingen voor de ingelogde netbeheerder met de status "open". Kan de bijbehorende terugmelding van de grondroerder opgevraagd worden.
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/2f157e4e-53e8-495e-9a4f-ae4692b5e6ff
+curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/123
  -X GET
  -H "Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de"
  -H 'Accept: application/json'
@@ -771,7 +772,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 **_response_**
 ```json
 {
-	"terugmeldingId": "2f157e4e-53e8-495e-9a4f-ae4692b5e6ff",
+	"terugmeldingId": "123",
 	"giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
 	"datumAangemaakt": "2020-11-26T10:20:49+01:00",
 	"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
@@ -787,44 +788,49 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 			]
 		},
 		"properties": {
-			"tijdstipWijziging": null,
-			"gewijzigdDoor": null,
-			"bron": "KLIC-viewer",
-			"product": null,
+			"meldingsNummerVolledig": "KLIC0071906",
+			"meldingsNummer": 71906,
+			"tijdstipWijziging": "2020-11-26T14:15:02.659406+02:00",
+			"bron": "Kadaster KLIC-viewer",
 			"registratie": "KLIC",
-			"doorgestuurdNaar": null,
 			"locatieLink": "https://bagviewer.kadaster.nl/#?geometry.x=190050.03&geometry.y=351343.92&zoomlevel=7",
 			"tijdstipRegistratie": "2020-11-26T10:25:58.070+01:00",
-			"meldingsNummer": 71906,
-			"meldingsNummerVolledig": "KLIC0071906",
 			"bronhoudernaam": "Kadaster",
 			"bronhoudercode": "K0001",
 			"objectType": "",
 			"omschrijving": "er ligt hier een groene kabel in mijn graafgebied, lijkt mij een data-kabel. ongeveer 30 cm diep, met een dikte van een halve cm",
+			"tijdstipStatusWijziging": "2020-11-26T14:15:02.659406+02:00",
+            "objectId": "",
+            "status": "Nieuw",
+			"statusCode": "NIEUW"
+			"doorgestuurdNaar": null,
+            "gewijzigdDoor":"0000302114@pmkKLICbeheer",
 			"secundair": {
 				"situatie": "onbekend net",
-				"getekendeFeatureCoordinaten": [
-					[
-						190050.72312500009,
-						351342.03968749978
-					],
-					[
-						190050.89375000009,
-						351343.47031249976
-					],
-					[
-						190049.16125000007,
-						351345.8065624997
-					]
-				],
 				"netbeheerder": "KPN",
-				"terugmelder": "G. Raver",
-				"telefoonnummer": "0123456789",
+			    "klicmeldnummer": "19G002541",
+			    "referentie": "Industrieweg Maasbracht meld2",
+			    "terugmelder": "G. Raver",
+                "telefoonnummer": "0123456789",
+				"thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/datatransport",
 				"bedrijfsnaam": "Kadaster",
-				"thema": "datatransport",
-				"klicmeldnummer": "19G002541",
-				"referentie": "Industrieweg Maasbracht meld2"
-			},
+				"getekendeGeometrie": {
+				    "type": "LineString",
+				    "coordinates": [
+    					[
+    						190050.72312500009,
+    						351342.03968749978
+    					],
+    					[
+    						190050.89375000009,
+    						351343.47031249976
+    					],
+    					[
+    						190049.16125000007,
+    						351345.8065624997
+    					]
+			    	]
+			    },
 			"bijlagen": [
 				{
 					"url": "https://service10.kadaster.nl/gds2/download/public/00c912bf-8232-4078-b06a-b0c040e52172",
@@ -835,12 +841,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 					"naam": "foto1.jpg"
 				}
 			],
-			"tijdstipStatusWijziging": null,
-			"email": "noreply@kadaster.nl",
-			"objectId": "",
-			"toelichting": null,
-			"status": "Nieuw",
-			"statusCode": "NIEUW"
+			"email": "noreply@kadaster.nl
 		}
 	}
 }
@@ -859,13 +860,11 @@ PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
 **_benodigde scope:_**
 ```
 klic.beheerdersinformatie
-of
-klic.beheerdersinformatie.readonly
 ```
 
 **_voorbeeld:_**
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/146
  -X PATCH
  -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
  -H 'Accept: application/json'
@@ -889,13 +888,11 @@ PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
 **_benodigde scope:_**
 ```
 klic.beheerdersinformatie
-of
-klic.beheerdersinformatie.readonly
 ```
 
 **_voorbeeld:_**
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/146
  -X PATCH
  -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
  -H 'Accept: application/json'
@@ -919,13 +916,11 @@ PATCH /gebiedsinformatieAanvragen/{giAanvraagId}/terugmeldingen/{terugmeldingId}
 **_benodigde scope:_**
 ```
 klic.beheerdersinformatie
-of
-klic.beheerdersinformatie.readonly
 ```
 
 **_voorbeeld:_**
 ```sh
-curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/330d0526-0586-4843-ad86-04d8969fc768
+curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/-/beheerdersTerugmeldingen/146
  -X PATCH
  -H 'Authorization: Bearer 1d021976-91c8-4b46-ab9b-529088d0f3de'
  -H 'Accept: application/json'
