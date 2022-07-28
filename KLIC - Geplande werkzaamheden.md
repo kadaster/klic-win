@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 20 juni 2022)
+# Geplande werkzaamheden (bijgewerkt 28 juli 2022)
 --------------------------------------------------------------------------------------
 
  
@@ -25,6 +25,21 @@ N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-re
 Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+--------------------------------------------------------------------------------------
+## Planning KAT terugmelden afwijkende situatie – start 31 augustus 2022
+
+Voor het testen van het terugmelden van afwijkende situatie en afhandelen daarvan wordt er een Keten Acceptatie Test (KAT) georganiseerd. Deze start woensdag  31 augustus en duurt twee weken.  \
+Wilt u deelnemen aan de KAT van de afwijkende situatie, meldt u dan aan via klic@kadaster.nl .  \
+U krijgt dan de juiste gegevens en instructies inclusief een specifieke versie van de Kadaster KLIC-viewer die geschikt is voor deze testperiode.  
+
+Na het oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland op begin oktober.  
+
+Voor meer informatie zie:
+- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
+
+
 --------------------------------------------------------------------------------------
 ## Planning voor release – medio augustus 2022
 
