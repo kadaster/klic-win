@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 17 augustus 2022)
+# Geplande werkzaamheden (bijgewerkt 24 augustus 2022)
 --------------------------------------------------------------------------------------
 
  
@@ -41,7 +41,7 @@ Voor meer informatie zie:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – 23 augustus 2022
+## Planning voor release – 25 augustus 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
