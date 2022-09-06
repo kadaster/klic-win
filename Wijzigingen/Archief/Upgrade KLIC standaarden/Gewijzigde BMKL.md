@@ -1,7 +1,7 @@
 # Upgrade KLIC standaarden - wijzigingen Berichtenmodel Kabels en Leidingen (BMKL)
 
 
-- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 10-02-2021)](../../Toelichting%20specifieke%20onderwerpen/Implementatie%20upgrade%20KLIC%20standaarden/Overzicht%20BMKL-issues%20(TCS)%2020210210.xlsx)  \
+- Wijzigingen op de berichtuitwisseling; zie [Overzicht BMKL-issues (status 10-02-2021)](Overzicht%20BMKL-issues%20(TCS)%2020210210.xlsx)  \
   Status: issues zijn bijgewerkt n.a.v. de consultatie en de terugkoppeling uit de TCS.  \
   Bij de Github-issues zijn enkele verbetervoorstellen ingediend voor een nieuwe versie van het BMKL. Daarnaast kunnen wijzigingen van het nieuwe IMKL consequenties hebben voor uit te wisselen gegevens in de API-berichten.  \
   Ook is nog even kritisch gekeken naar verbeterpunten die al bij de implementatie van het programma KLIC-WIN zouden worden opgepakt, maar toen onder tijdsdruk zijn blijven liggen. Van de meest relevante verbeterpunten zijn ook daarvoor issues aangemaakt.  \
