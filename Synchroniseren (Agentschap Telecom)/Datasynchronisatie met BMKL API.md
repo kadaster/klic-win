@@ -71,10 +71,10 @@ Voor synchronisatie wordt pagineren op basis van een mutatiedatum gebruikt. In d
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "collection":[
@@ -122,10 +122,10 @@ Content-Type: application/json
 {
    "_links":{
       "self":{
-         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
       },
       "next":{
-         "href":"https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:15:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+         "href":"https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:15:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
       }
    },
    "gebiedsinformatieAanvragen":[
@@ -238,10 +238,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:55:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen?datumType=mutatieDatum&datumVanaf=2018-07-01T19:55:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieAanvragen": [{
@@ -299,10 +299,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:00:00%2B02&datumTot=2018-07-01T20:00:00%2B02"
         },
         "next": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/beheerdersinformatieAanvragen/-/beheerdersinformatieLevering?datumType=mutatieDatum&datumVanaf=2018-07-01T19:05:22.323%2B02&datumTot=2018-07-01T20:00:00%2B02"
         }
     },
     "beheerdersinformatieLeveringen": [{
@@ -343,10 +343,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         },
         "next": {
-            "href": "https://service10.kadaster.nl/klic/leveren/api/v2/web/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
         }
     },
     "gebiedsinformatieLeveringen": [{

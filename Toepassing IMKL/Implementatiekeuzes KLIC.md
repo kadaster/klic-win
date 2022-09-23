@@ -268,7 +268,59 @@ Omdat deze leidingen ook onder druk staan is het niet wenselijk is deze onder th
 
 "Vloeibare biomassa" past bij gebrek aan thema's het beste onder riool onder over- of onderdruk. Vooral omdat deze leidingen ook onder druk staan en het daarom niet wenselijk is deze onder thema "overig" uit te wisselen.
 
+### Gebruik voidable
 
+> zie ook https://github.com/Geonovum/imkl2015-review/issues/313  \
+> zie ook https://github.com/Geonovum/imkl2015-review/issues/277
+
+Bij attributen en associaties die het stereotype "\<\<voidable\>\>" hebben kan, indien het van
+toepassing is, geen waarde worden ingevuld. Optioneel kan er ook een reden opgenomen worden waarom
+er geen waarde is ingevuld.  
+De benoemde redenen volgens INSPIRE zijn:
+- `Unknown`: Waarde onbekend: De waarde is bij de zender niet bekend.
+- `Unpopulated`: Niet ondersteund: De zender houdt in zijn registratie geen waarde voor dit attribuut bij.
+Geldt voor alle objecten van dit objecttype.
+- `Withheld`: Niet geautoriseerd: De zender vindt dat de ontvanger niet geautoriseerd is om de waarde te
+kennen. Waarde is vertrouwelijk en wordt niet uitgewisseld.
+
+Zie: http://inspire.ec.europa.eu/codelist/VoidReasonValue/
+
+NB. In de XSD wordt gerefereerd naar de waardelijst `gml:NilReasonEnumaration`.
+Deze heeft andere mogelijk in te vullen waarden. Het is een werkafsrpaak om de door INSPIRE voorgeschreven waarden te gebruiken in de vorm van URI's, zoals deze ook in de [IMKL-Waardelijsten-2.0.xml](https://register.geostandaarden.nl/waardelijst/imkl/2.0.0/IMKL-Waardelijsten-2.0.xml) zijn opgenomen bij `VoidReasonValue`. Op deze werkafspraak wordt niet  gevalideerd tijdens het aanleveren of actualiseren. 
+
+#### NilReason opgegeven
+Bij verplichte attributen die aangegeven zijn als "\<\<voidable\>\>" moet
+- óf een waarde worden ingevuld,
+- óf een NilReason worden opgegeven als de waarde ontbreekt. De opgave van de reden is overigens optioneel.
+
+Voorbeeld foutmelding: Attribuut `us-net-common:verticalPosition` heeft geen waarde en geen NilReason.
+
+In onderstaande XML-gegevensset zijn enkele verplichte attributen van een rioolleiding ingevuld met geldige referenties naar codelijsten:
+```xml
+    ...
+    <!-- attribuutwaarden toegekend -->
+    <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/projected"/>
+    <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+    <us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeValue/net"/>
+    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm">12</us-net-common:pipeDiameter>
+    <us-net-sw:sewerWaterType xlink:href="http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary"/>
+    ...
+```
+Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven:
+```xml
+    ...
+    <!-- attribuutwaarden met NilReason -->
+    <us-net-common:currentStatus xsi:nil="true"/>
+    <us-net-common:verticalPosition xsi:nil="true"/>
+    <!-- attribuutwaarden met NilReason en opgave van reden -->
+    <us-net-common:warningType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown"/>
+    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm" xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"/>
+    <us-net-sw:sewerWaterType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Withheld""/>
+    ...
+```
+
+NB. Het attribuut `pipeDiameter` van een object _Pipe_ moet verplicht ingevuld worden, maar is "voidable". Ook de parameter `uom` bij het attribuut `pipeDiameter` is verplicht.  \
+Dit betekent dat het attribuut `pipeDiameter` met de parameter `uom` ingevuld **moet** worden, óók als er geen waarde voor de diameter wordt meegegeven.
 
 
 

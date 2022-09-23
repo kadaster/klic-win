@@ -272,7 +272,8 @@ kennen. Waarde is vertrouwelijk en wordt niet uitgewisseld.
 Zie: http://inspire.ec.europa.eu/codelist/VoidReasonValue/
 
 NB. In de XSD wordt gerefereerd naar de waardelijst `gml:NilReasonEnumaration`.
-Deze heeft andere mogelijk in te vullen waarden. We bevelen aan om de door INSPIRE voorgeschreven waarden te gebruiken.
+Deze heeft andere mogelijk in te vullen waarden. Het is een werkafsrpaak om de door INSPIRE voorgeschreven waarden te gebruiken in de vorm van URI's, zoals deze ook in de [IMKL-Waardelijsten-2.0.xml](https://register.geostandaarden.nl/waardelijst/imkl/2.0.0/IMKL-Waardelijsten-2.0.xml) zijn opgenomen bij `VoidReasonValue`. Op deze werkafspraak wordt niet  gevalideerd tijdens het aanleveren of actualiseren. 
+
 
 ### Geen NilReason opgegeven
 Bij verplichte attributen die aangegeven zijn als "\<\<voidable\>\>" moet
@@ -299,9 +300,9 @@ Voorbeelden van syntactisch juiste invullingen als een NilReason wordt opgegeven
     <us-net-common:currentStatus xsi:nil="true"/>
     <us-net-common:verticalPosition xsi:nil="true"/>
     <!-- attribuutwaarden met NilReason en opgave van reden -->
-    <us-net-common:warningType xsi:nil="true" nilReason="Unknown"/>
-    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm" xsi:nil="true" nilReason="Unpopulated"/>
-    <us-net-sw:sewerWaterType xsi:nil="true" nilReason="Withheld"/>
+    <us-net-common:warningType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown"/>
+    <us-net-common:pipeDiameter uom="urn:ogc:def:uom:OGC::cm" xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated"/>
+    <us-net-sw:sewerWaterType xsi:nil="true" nilReason="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Withheld""/>
     ...
 ```
 
