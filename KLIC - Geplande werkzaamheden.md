@@ -1,6 +1,22 @@
-# Geplande werkzaamheden (bijgewerkt 9 september 2022)
+# Geplande werkzaamheden (bijgewerkt 10 oktober 2022)
 --------------------------------------------------------------------------------------
+## Planning voor release januari 2023
 
+**Terugmelden afwijkende situatie**:  \
+Na het afronden van de Keten Acceptatie Test (KAT) in oktober 2022 en het aansluitend oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland in januari 2023.
+
+Voor meer informatie zie:
+- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
+
+Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
+
+**Fasering**:
+- In januari 2023 start de overgangsfase van 6 maanden. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
+
+
+--------------------------------------------------------------------------------------
  
 ## Planning voor release – 1 januari 2023
 
@@ -11,6 +27,7 @@
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 
 --------------------------------------------------------------------------------------
+
 ## Planning voor release – tweede helft 2022
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
 
@@ -26,24 +43,16 @@ Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 --------------------------------------------------------------------------------------
-## Planning voor release medio oktober 2022
 
-**Terugmelden afwijkende situatie**  \
-Na het afronden van de Keten Acceptatie Test (KAT) en het oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland in oktober.
+## Planning KAT terugmelden afwijkende situatie – 22 september 2022
 
-Voor meer informatie zie:
-- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
-- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
-- [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
+Voor het testen van het terugmelden van afwijkende situatie en afhandelen daarvan wordt er een Keten Acceptatie Test (KAT) georganiseerd. Deze start 22 september en duurt 4 weken (verlenging van 2 weken).  \
+Tijdens de KAT worden afwijkende meldingen met het nieuwe technische protocol gemeld en door netbeheerders afgehandeld met het nieuwe technische protocol.
 
---------------------------------------------------------------------------------------
-## Planning KAT terugmelden afwijkende situatie – medio september 2022
+De ketentester zal met een specifieke versie van de Kadaster KLIC-viewer die geschikt is voor deze testperiode de afwijkende situatie melden.  
 
-Voor het testen van het terugmelden van afwijkende situatie en afhandelen daarvan wordt er een Keten Acceptatie Test (KAT) georganiseerd. Deze start medio septermber en duurt twee weken.  \
-Wilt u deelnemen aan de KAT van de afwijkende situatie, meldt u dan aan via klic@kadaster.nl .  \
-U krijgt dan de juiste gegevens en instructies inclusief een specifieke versie van de Kadaster KLIC-viewer die geschikt is voor deze testperiode.  
+Na het oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland in januari 2023.  
 
-Na het oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland in oktober.  
 
 Voor meer informatie zie:
 - [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
