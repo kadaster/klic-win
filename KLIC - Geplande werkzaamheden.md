@@ -1,4 +1,20 @@
-# Geplande werkzaamheden (bijgewerkt 10 oktober 2022)
+# Geplande werkzaamheden (bijgewerkt 1 november 2022)
+--------------------------------------------------------------------------------------
+## Planning voor release – 2023
+> De exacte planning is afhankelijk van de ingangsdatum van de wet
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Wdo (Wet digitale overheid) testfaciliteiten B2B beschikbaar**:
+- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+  
+Voor meer informatie zie:
+- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
+- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+
 --------------------------------------------------------------------------------------
 ## Planning voor release januari 2023
 
@@ -17,7 +33,6 @@ Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
 
 
 --------------------------------------------------------------------------------------
- 
 ## Planning voor release – 1 januari 2023
 
 **Verlenging KLIC-meldnummer**:
@@ -27,21 +42,16 @@ Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 
 --------------------------------------------------------------------------------------
-
-## Planning voor release – tweede helft 2022
-> De exacte planning is afhankelijk van de ingangsdatum van de wet
+## Planning voor release – 15 november 2022
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Wdo (Wet digitale overheid) testfaciliteiten B2B beschikbaar**:
-- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+**Kadaster KLIC-viewer**:
+- Bij een KLIC-melding met een informatiepolygoon: In het kaartlagen menu is de keuze over het weergeven van de graafpolygoon en informatiepolygoon aangepast, waardoor de grens tussen deze twee altijd zichtbaar blijft (ID 7812).
+- Bugfix: Met deze versie van de Kadaster KLIC-viewer kan je (weer) met de Exe en DMG een terugmelding van een afwijkende situatie testen als netbeheerder.  \
+De terugmelding kan met een BIL.zip uit de NTD omgeving (Netbeheerder testdienst) worden opgevoerd (ID 8229).
+- Ketenacceptatietest (KAT) bevindingen en andere bugfixes.
 
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
-
-  
-Voor meer informatie zie:
-- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
-- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 --------------------------------------------------------------------------------------
 
 ## Planning KAT terugmelden afwijkende situatie – 22 september 2022
