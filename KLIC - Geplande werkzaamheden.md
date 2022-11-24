@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 1 november 2022)
+# Geplande werkzaamheden (bijgewerkt 24 november 2022)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
@@ -22,7 +22,7 @@ Voor meer informatie zie:
 Na het afronden van de Keten Acceptatie Test (KAT) in oktober 2022 en het aansluitend oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland in januari 2023.
 
 Voor meer informatie zie:
-- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- [Melden afwijkende situatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
 - Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
 - [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
 
@@ -42,6 +42,14 @@ Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
 
 --------------------------------------------------------------------------------------
+## Planning aanpassing documentatie – 24 november 2022
+
+- Ten behoeve van de implementatie van het verlengen van het KLIC-meldnummer per 1 januari 2023, zijn een aantal voorbeeld uitleveringen gepubliceerd met een langer KLIC-meldnummer.  \
+Zie [Uitleveren / Langer KLIC-meldnummer](Uitleveren/Langer%20KLIC-meldnummer).
+
+--------------------------------------------------------------------------------------
+
+
 ## Planning voor release – 15 november 2022
 
 Voor deze release is het volgende onderwerp gepland:
@@ -65,7 +73,7 @@ Na het oplossen van eventuele bevindingen is de livegang van het vernieuwde proc
 
 
 Voor meer informatie zie:
-- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- [Melden afwijkende situatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
 - Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
 - [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
 
@@ -184,7 +192,7 @@ Voor deze release is het volgende onderwerp gepland:
 Voor deze release zijn de volgende onderwerpen gepland:
 
 **Voorbereiding einde overgangsperiode**: 
-- Vanaf 17 maart kunnen netbeheerders in de Netbeheerder Testdienst (NTD) de sitatie simuleren van na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er multivlakken zijn toegestaan voor `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  \
+- Vanaf 17 maart kunnen netbeheerders in de Netbeheerder Testdienst (NTD) de situatie simuleren van na de overgangsperiode waarin er alleen nog maar een V2-xml in de beheerdersinformatieLevering (BIL-Zip) zit en waarbij er multivlakken zijn toegestaan voor `AanduidingEisVoorzorgzorgsmaatregel` en `ExtraGeometrie`.  \
 Dat betekend dat vanuit de Centrale Voorziening geclipt zal worden en dat een decentrale netbeheerder, beheerdersinformatie kan aanleveren met multi-vlakken.  \
   Zie https://github.com/Geonovum/imkl2015-review/issues/210 
   
@@ -197,7 +205,7 @@ Dat betekend dat vanuit de Centrale Voorziening geclipt zal worden en dat een de
 - Vanaf 17 maart zal in de Netbeheerder Testdienst (NTD) functionaliteit beschikbaar zijn om het vernieuwde proces rondom 'Afwijkende Situaties' te testen. Dat wil zeggen dat de netbeheerder een afwijkende melding kan simuleren en deze daarna zelf kan afhandelen door middel van een REST API.
 
   Voor meer informatie zie:
-- [Melden afwijkende sitatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- [Melden afwijkende situatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
 - Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
 - [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
 
@@ -1219,7 +1227,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - Wijziging in de Scopes van OAuth: De benaming van de scope `klic.ntd` in de NTD-omgeving wijzigt. De scope `klic.ntd` zal worden vervangen door: `klic.ntd.centraal`, `klic.ntd.gebiedsinformatieaanvraag.readonly`, `klic.ntd.beheerdersinformatie`, `klic.ntd.beheerdersinformatie.readonly`. (ID 3231, ID 3353)
 - De responses van alle BMKL api's bevatten het veld "mutatiedatum". Deze wordt soms gevuld met de default waarde '1999-12-31T23:59:59+01:00'. De Mutatiedatum van de API's krijgen de timestamp van de laatste wijziging. (ID 2673)
 - Het veld `giAanvraagStatus` in de GebiedsinformatieAanvragen API wordt met de juiste status gevuld, in plaats van een default waarde `open`. (ID 1992)
-- Wanneer je het BIL zip-bestand ophaalt middels de API, kijgt het bestand een naam die is opgebouwd uit "BeheerdersinformatieLevering", het Klicmeldnummer en de bronhoudercode. Bijvoorbeeld: `BeheerdersinformatieLevering_19G003456_kl4141.zip`. (ID 3448)
+- Wanneer je het BIL zip-bestand ophaalt middels de API, kijgt het bestand een naam die is opgebouwd uit "BeheerdersinformatieLevering", het KLIC-meldnummer en de bronhoudercode. Bijvoorbeeld: `BeheerdersinformatieLevering_19G003456_kl4141.zip`. (ID 3448)
 - Bugfix: Als er bij het opvragen van BeheerdersinformatieAanvraag ook een giAanvraagId wordt opgegeven, wordt vanaf nu alleen de BeheerdersinformatieAanvraag gefilterd met de opgegeven giAanvraagId. (ID 3468)
 - BeheerdersinformatieLeveringen worden alleen uitgeleverd in de API als er een levering is geweest. (ID 3278)
 
