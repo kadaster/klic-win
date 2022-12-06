@@ -26,6 +26,14 @@ Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder beken
 
 ## Fasering
 - De vernieuwing zal gefaseerd ontworpen, ontwikkeld en geïmplementeerd worden. Dit zal in overleg met het KLIC Gebruikersoverleg plaatsvinden. 
+- In januari 2023 start de overgangsfase van 6 maanden. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
+- Wijzigingen vanaf de start van de overgangsfase (10 januari):
+  - De mail notificatie is aangepast. Een netbeheerder wordt genotificeerd dat er voor de netbeheerder een Afwijkende Situatie is gemeld.
+  - In de mail notificatie worden geen bijlagen meer opgenomen met de Afwijkende Situatie stukken. 
+  - Door deze mail notificatie wordt de netbeheerder op de hoogste gesteld van een Afwijkende Situatie.  \
+  De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
+  De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
+  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden. 
 - Volg de [Geplande Werkzaamgeden pagina van deze Github](../../KLIC%20-%20Geplande%20werkzaamheden.md) voor updates over de planning. 
 
 ## Presentaties

@@ -1,8 +1,7 @@
 # Afwijkende situatie
 
-| Deze pagina beschrijft functionaliteit die de tweede helft van 2022 beschikbaar komt. <br>  Tot die tijd kan er alleen gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). <br> Er komt ook een testfase waarin de mogelijkheid wordt geboden terugmeldingen te doen. Hiervoor zal er een eigen end-point gecommuniceerd worden. <br> Houdt [de geplande werkzaamheden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
+| Deze pagina beschrijft functionaliteit die vanaf 10 januari 2023 beschikbaar komt. <br>  Tot die tijd kan er alleen gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). <br>  Houdt [de geplande werkzaamheden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
 |------|
-
 ## Uitleg Afwijkende Situatie
 Soms ligt een kabel of leiding niet op de plek waar deze volgens de informatie zou moeten liggen. Of iemand vindt een net dat niet op de geleverde informatie staat. Dit zijn zogenoemde afwijkende situaties. Het gaat altijd om een verschil tussen de geleverde KLIC-melding en de daadwerkelijke situatie in de grond. Een terugmelding is dus altijd gerelateerd aan een KLIC-melding.
 
@@ -21,17 +20,58 @@ Na uw melding kunt u verder met uw werkzaamheden.
 ### Doel:
 Wanneer u een afwijkende situatie aan ons doorgeeft, verzoeken wij de netbeheerder dit te corrigeren. Mocht onduidelijk blijven wie de beheerder is van de kabel of leiding, zal de gemeente dit als weesleiding op moeten nemen. U kunt eventueel op de hoogte worden gehouden van uw terugmelding.
 
-### Hoe te melden:
-- via een webformulier van het kadaster op deze pagina:   \
+---
+
+## Vernieuwing Afwijkende situatie
+
+In overleg met het KLIC Gebruikersoverleg (KGO KLIC) heeft KLIC het proces 'Terugmelden Afwijkende Situatie' vernieuwd. Doel is het vereenvoudigen van het melden en afhandelen van afwijkingen op liggingsgegevens van netinformatie. Er wordt een REST API ontworpen en ontwikkeld voor het proces. 
+
+### Toelichting vernieuwde proces
+- Het vernieuwde proces is vergelijkbaar met het huidige proces van terugmelden.
+- Zie [https://zakelijk.kadaster.nl/melden-afwijkende-situatie-professionele-graver](https://zakelijk.kadaster.nl/melden-afwijkende-situatie-professionele-graver) voor een uitleg.
+- Het vernieuwde proces maakt gebruik van de reeds bestaande mogelijkheden voor terugmelden binnen het Kadaster (bv voor BAG terugmeldingen).  \
+Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder bekend (meestal de gemeente). Bij KLIC is de bronhouder echter niet (altijd) bekend: *Er is sprake van een ‘claim-proces’*. Dit claim-proces bestaat reeds in het huidige terugmeldproces en wordt in het vernieuwde proces gefaciliteerd via een API.
+
+### Fasering
+- In januari 2023 start de overgangsfase van 6 maanden. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
+- Wijzigingen vanaf de start van de overgangsfase (10 januari):
+  - De mail notificatie is aangepast. Een netbeheerder wordt genotificeerd dat er voor de netbeheerder een Afwijkende Situatie is gemeld.
+  - In de mail notificatie worden geen bijlagen meer opgenomen met de Afwijkende Situatie stukken. 
+  - Door deze mail notificatie wordt de netbeheerder op de hoogste gesteld van een Afwijkende Situatie.  \
+  De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
+  De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
+  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden. 
+
+---
+
+## Melden (grondroerder) en claim-proces (netbeheerder)
+
+### Hoe te melden (grondroerder):
+Een afwijkende situatie doorgeven aan het Kadaster kan op de volgende wijze:
+- Via een webformulier van het kadaster op deze pagina:   \
   https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie
-- via de Kadaster KLIC-viewer (vanaf medio 2022)
-- Als u gebruik maakt van een applicatie die aangesloten is op de terugmeld API (vanaf medio 2022).
+- Via de nieuwste versie van de Kadaster KLIC-viewer (vanaf 10 januari 2023)
+- Als u gebruik maakt van een applicatie die aangesloten is op de terugmeld API (vanaf 10 januari 2023).  \
+Zie de API-specificatie hieronder.
 
-### Afhandeling van terugmeldingen:
-- Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder bekend (meestal de gemeente); echter bij KLIC is de bronhouder niet (altijd) bekend.	Er is sprake van een ‘claim-proces. Hierbij worden alle vermoedelijke netbeheerders genotificeerd over de terugmelding en kunnen de bronhouders aangeven of de terugmelding betrekking heeft op hun netinformatie. De netbeheerders zijn er dan zelf verantwoordelijk voor hun administratie aan te passen indien dat van toepassing is.
-- Dit 'claim proces' is onderdeel van het berichten-protocol voor netbeheerders. zie daarvoor [de berschrijving van BMKL 2.1](https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+### Afhandeling van terugmeldingen (netbeheerder):
+Bij terugmeldingen binnen het Kadaster is over het algemeen de bronhouder bekend (meestal de gemeente); echter bij KLIC is de bronhouder niet (altijd) bekend. Er is sprake van een ‘claim-proces. Hierbij worden alle vermoedelijke netbeheerders genotificeerd over de terugmelding en kunnen de bronhouders aangeven of de terugmelding betrekking heeft op hun netinformatie. De netbeheerders zijn er dan zelf verantwoordelijk voor hun administratie aan te passen indien dat van toepassing is.
 
-# Als software ontwikkelaar aansluiten op de terugmeld API
+Toelichting vernieuwde afhandeling an terugmeldingen
+- Een netbeheerder wordt via de email genotificeerd dat er voor de netbeheerder een Afwijkende Situatie is gemeld. In de email notificatie worden geen bijlagen meer opgenomen met de Afwijkende Situatie stukken. Deze email notificatie wordt conform het huidige proces gestuurd naar het contact-netinformatie emailadres en kan niet uitgezet worden.
+  - De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
+    Dit 'claim proces' is onderdeel van het berichten-protocol voor netbeheerders. zie daarvoor [de berschrijving van BMKL 2.1](https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+  - De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
+    Deze applicatie van het Kadaster wordt vanaf 10 januari 2023 beschikbaar gesteld. Om deze zichtbaar te maken in de mijn.kadaster omegeving, moet de eerste mijn.kadaster-beheerder artikel 'KLIC webservice' en 'beheren terugmelding netbeheerder'  toevoegen aan gebruiker om toegang te krijgen tot het terugmeldingen beheerscherm.  \
+        *Door het toekennen van artikel 'KLIC webservice' kan deze gebruiker ook gebruik maken van de BMKL API, voorzowel het afhandelen van terugmeldingen via de API, als het afhandelen van KLIC-meldingen (bv downloaden beheerdersinformatielevering).*  \
+       *Door het toekennen van artikel 'beheren terugmelding netbeheerder' krijgt de gebruiker een 'tegel' op zijn scherm als hij inlogt op mijn.kadaster (maar zonder 'KLIC webservice' heeft hij geen rechten om er gebruik van te maken).*
+  
+
+---
+# Als software ontwikkelaar aansluiten op de terugmeld API (grondroerder)
+
+Om het terugmelden te integreren in je sofware, dient een software ontwikkelaar aan te sluiten op de terugmeld API van het Kadaster. Hieronder staan de specificaties, afspraken, en het authorisatie proces beschreven.  \
+Graag willen we bij het eerste aansluiten op de API controleren dat de Terugmelding aan de KLIC afspraken voldoet. Daarom vragen wij u dan even contact op te nemen via klic@kadaster.nl om uw terugmelding te controleren.
 
 ## API-specificatie voor doen van een terugmelding afwijkende situatie
 In de basis gebeurt het terugmelden van een afwijkende situatie voor KLIC via de generieke terugmeld-API van het kadaster.  \
