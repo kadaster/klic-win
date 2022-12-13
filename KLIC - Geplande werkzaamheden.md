@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 6 december 2022)
+# Geplande werkzaamheden (bijgewerkt 13 december 2022)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
@@ -49,6 +49,14 @@ Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
   Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 cijfers)   \
   Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
   Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – 13 december 2022
+
+**Verlenging KLIC-meldnummer**:
+- Voorbereidingen op de wijziging van 1 januari 2023 waarbij er langere KLIC-meldnummers worden gehanteerd.
+
+Voor voorbeeld leveringen zie: [Uitleveren / Langer KLIC-meldnummer](Uitleveren/Langer%20KLIC-meldnummer) 
 
 --------------------------------------------------------------------------------------
 ## Planning aanpassing documentatie – 24 november 2022

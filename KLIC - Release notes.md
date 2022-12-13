@@ -1,10 +1,32 @@
 # Release notes
 
 ------------------------
+## 12 december 2022
+
+**Verlenging KLIC-meldnummer**:
+- Voorbereidingen op de wijziging van 1 januari 2023 waarbij er langere KLIC-meldnummers worden gehanteerd.
+
+
+------------------------
+## 15 november 2022
+
+**Kadaster KLIC-viewer**:
+- Bij een KLIC-melding met een informatiepolygoon: In het kaartlagen menu is de keuze over het weergeven van de graafpolygoon en informatiepolygoon aangepast, waardoor de grens tussen deze twee altijd zichtbaar blijft (ID 7812).
+- Bugfix: Met deze versie van de Kadaster KLIC-viewer kan je (weer) met de Exe en DMG een terugmelding van een afwijkende situatie testen als netbeheerder.  \
+De terugmelding kan met een BIL.zip uit de NTD omgeving (Netbeheerder testdienst) worden opgevoerd (ID 8229).
+- Ketenacceptatietest (KAT) bevindingen en andere bugfixes.
+
+------------------------
+## 25 augustus 2022
+
+**Vernieuwing aanvraag via KLIC-online**: 
+-   De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Bekijk [de presentatie met een impressie](Aanvragen%20gebiedsinformatie/images/Impressie-Vernieuwd-Graafmelding.pdf) van de graafmelding schermen.
+
+------------------------
 ## 28 juni 2022
     In de NTD-omgeving zijn de wijzigingen reeds per 23 juni beschikbaar
-
-Voor deze release zijn de volgende onderwerpen gepland
 
 **Netbeheerder Test Dienst**:
 - In de NTD wordt de het mogelijk om te testen met een langer KLIC-meldnummer, op aangeven van de gebruiker. (id 6837)  \
