@@ -34,7 +34,7 @@ Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder beken
   De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
   De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
   Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden. 
-- Volg de [Geplande Werkzaamgeden pagina van deze Github](../../KLIC%20-%20Geplande%20werkzaamheden.md) voor updates over de planning. 
+- Volg de [Geplande Werkzaamheden pagina van deze Github](../../KLIC%20-%20Geplande%20werkzaamheden.md) voor updates over de planning. 
 
 ## Presentaties
 - [Presentatie 2019 3 april - Generieke API en KLIC API Afwijkende Situatie](2019%203%20april%20-%20Generieke%20API%20en%20KLIC%20API%20Afwijkende%20Situatie.pdf)
