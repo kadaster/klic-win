@@ -41,6 +41,7 @@ Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder beken
 - [Presentatie 2019 3 april - KLIC API voor afwijkende situatie Pilot](2019%203%20april%20-%20KLIC%20API%20voor%20afwijkende%20situatie%20Pilot.pdf)
 - [Presentatie 2019 12 juni - KLIC API voor afwijkende situatie Samenvatting Proces en Pilot bijeenkomst](2019%2012%20juni%20-%20KLIC%20API%20voor%20afwijkende%20situatie%20Samenvatting%20Proces%20en%20Pilot%20bijeenkomst.pdf)
 - [Presentatie 2019 12 juni - Terugmelding Bronhouder API KLIC](2019%2012%20juni%20-%20Terugmelding%20Bronhouder%20API%20KLIC.pdf)
+- [Presentatie 2022 9 december - Netbeheerder Afwijkende Situatie vanaf 10 jan 2023](2022%209%20december%20-%20Netbeheerder%20Afw.%20Sit.%202023.pdf)
 
 ## Deelnemen Pilot melden Afwijkende Situatie
 -  U kunt een email sturen naar klic@kadaster.nl indien u wilt deelnemen aan de pilot van het melden van een afwijking.

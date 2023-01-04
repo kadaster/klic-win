@@ -36,7 +36,7 @@ Voor meer informatie zie:
   - Door deze mail notificatie wordt de netbeheerder op de hoogste gesteld van een Afwijkende Situatie.  \
   De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
   De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
-  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden. 
+  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden.  Bekijk ook deze [presentatie](Wijzigingen/Terugmelden%20Afwijkende%20Situatie/2022%209%20december%20-%20Netbeheerder%20Afw.%20Sit.%202023.pdf).
 
 
 Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
