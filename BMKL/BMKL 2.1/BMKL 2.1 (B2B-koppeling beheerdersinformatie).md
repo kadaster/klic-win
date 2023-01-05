@@ -737,7 +737,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 			"mutatieDatum": "2020-11-26T10:20:49.123+01:00"
 		},
 		{
-			"terugmeldingId": "126
+			"terugmeldingId": "126",
 			"beheerdersTerugmeldingId": "504",
 			"bronhoudercode": "KL1001",
 			"tmNotificatieStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/NotificatieStatussen/tnsOpen",
@@ -776,7 +776,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 	"giAanvraagId": "4c8353bd-3907-40ee-84b0-5f54ac38d4d1",
 	"datumAangemaakt": "2020-11-26T10:20:49+01:00",
 	"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
-	"klicmeldnummer": "19G002541",
+	"klicmeldnummer": "23G0002541",
 	"tmKlicTerugmeldStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/KlicTerugmeldStatussen/ktsInOnderzoek",
 	"tmsmelding": {
 		"type": "Feature",
@@ -800,21 +800,20 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 			"objectType": "",
 			"omschrijving": "er ligt hier een groene kabel in mijn graafgebied, lijkt mij een data-kabel. ongeveer 30 cm diep, met een dikte van een halve cm",
 			"tijdstipStatusWijziging": "2020-11-26T14:15:02.659406+02:00",
-            "objectId": "",
-            "status": "Nieuw",
-			"statusCode": "NIEUW"
-			"doorgestuurdNaar": null,
-            "gewijzigdDoor":"0000302114@pmkKLICbeheer",
+			"objectId": "",
+			"status": "Nieuw",
+			"statusCode": "NIEUW",
+			"gewijzigdDoor":"0000302114@tmsKLICbeheer",
 			"secundair": {
-				"situatie": "onbekend net",
-				"netbeheerder": "KPN",
+			    "situatie": "onbekend net",
+			    "netbeheerder": "KPN",
 			    "klicmeldnummer": "19G002541",
 			    "referentie": "Industrieweg Maasbracht meld2",
 			    "terugmelder": "G. Raver",
-                "telefoonnummer": "0123456789",
-				"thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/datatransport",
-				"bedrijfsnaam": "Kadaster",
-				"getekendeGeometrie": {
+			    "telefoonnummer": "0123456789",
+			    "thema": "http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/datatransport",
+			    "bedrijfsnaam": "Kadaster",
+			    "getekendeGeometrie": {
 				    "type": "LineString",
 				    "coordinates": [
     					[
@@ -829,8 +828,9 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
     						190049.16125000007,
     						351345.8065624997
     					]
-			    	]
-			    },
+				    ]
+			    }
+			},
 			"bijlagen": [
 				{
 					"url": "https://service10.kadaster.nl/gds2/download/public/00c912bf-8232-4078-b06a-b0c040e52172",
@@ -841,11 +841,16 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 					"naam": "foto1.jpg"
 				}
 			],
-			"email": "noreply@kadaster.nl
+			"email": "noreply@kadaster.nl",
+			"product": null,
+			"hoogteVanafMaaiveld": null,
+			"doorgestuurdNaar": null,
+			"toelichting": null
 		}
 	}
 }
 ```
+Let op, bovenstaande betreft een voorbeeld response. De inhoud kan per type terugmelding afwijken. Het gedeelte binnen `"tmsmelding": {}` kan aanvullende velden bevatten die niet in dit voorbeeld staan. Dat kan ook per terugmelding verschillen.
 
 ### Bevestigen terugmelding
 

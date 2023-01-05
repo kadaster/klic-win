@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 13 december 2022)
+# Geplande werkzaamheden (bijgewerkt 4 januari 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 > De exacte planning is afhankelijk van de ingangsdatum van de wet

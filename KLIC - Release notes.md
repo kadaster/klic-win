@@ -1,7 +1,16 @@
 # Release notes
 
 ------------------------
-## 12 december 2022
+## 31 december 2022
+
+**Verlenging KLIC-meldnummer**:
+- Het KLIC-meldnummer wordt per 1 januari 2023 met 1 cijfer uitgebreid, om op die manier meer KLIC-meldingen per jaar te kunnen ondersteunen.  \
+  Huidig formaat: `<jj><G/C/O><nnnnnn>` (6 cijfers)   \
+  Het nummergedeelte van het KLIC-meldnummer wordt uitgebreid van 6 naar 7 cijfers.  \
+  Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers)
+
+------------------------
+## 13 december 2022
 
 **Verlenging KLIC-meldnummer**:
 - Voorbereidingen op de wijziging van 1 januari 2023 waarbij er langere KLIC-meldnummers worden gehanteerd.
