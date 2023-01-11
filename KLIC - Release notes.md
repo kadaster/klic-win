@@ -1,6 +1,39 @@
 # Release notes
 
 ------------------------
+## 10 januari 2023
+
+**Kadaster KLIC-viewer (versie 6.0.0)**:
+- Mogelijkheid tot het doen van een terugmeldingen.
+- Bugfix waardoor niet meer onterecht de status "incompleet" in de titelbalk verschijnt.
+- Bugfix waardoor met behulp van de rechter-muisknop weer gegevens 'gekopieerd en 'geplakt' kunnen worden in het scherm voor het openen van nieuwe melding.
+- Bugfix waardoor de KLIC-viewer beter om gaat met de 'geschatte locatie'-functionaliteit van Android 12.
+
+
+**Terugmelden afwijkende situatie**:  \
+Na het afronden van de Keten Acceptatie Test (KAT) in oktober 2022 en het aansluitend oplossen van bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gereleased op 10 januari 2023.
+
+Voor meer informatie zie:
+- [Melden afwijkende situatatie via API](Terugmelden%20Afwijkende%20Situatie/) 
+- Netbeheerder afhandeling van afwijkende situatie via [BMKL-API versie 2.1](BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
+- [Wijzigingen](Wijzigingen/Terugmelden%20Afwijkende%20Situatie)
+
+
+**Fasering**:
+- In januari 2023 start de overgangsfase van 6 maanden. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
+- Wijzigingen vanaf de start van de overgangsfase (10 januari):
+  - De mail notificatie is aangepast. Een netbeheerder wordt genotificeerd dat er voor de netbeheerder een Afwijkende Situatie is gemeld.
+  - In de mail notificatie worden geen bijlagen meer opgenomen met de Afwijkende Situatie stukken. 
+  - Door deze mail notificatie wordt de netbeheerder op de hoogste gesteld van een Afwijkende Situatie.  \
+  De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
+  De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
+  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden.  Bekijk ook deze [presentatie](Wijzigingen/Terugmelden%20Afwijkende%20Situatie/2022%209%20december%20-%20Netbeheerder%20Afw.%20Sit.%202023.pdf).
+
+
+Als u vragen heeft hierover kunt u een mail sturen naar klic@kadaster.nl
+
+
+------------------------
 ## 31 december 2022
 
 **Verlenging KLIC-meldnummer**:

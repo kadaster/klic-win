@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 4 januari 2023)
+# Geplande werkzaamheden (bijgewerkt 11 januari 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
@@ -17,6 +17,13 @@ Voor meer informatie zie:
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 10 januari 2023
+
+**Kadaster KLIC-viewer (versie 6.0.0)**:
+- Mogelijkheid tot het doen van een terugmeldingen.
+- Bugfix waardoor niet meer onterecht de status "incompleet" in de titelbalk verschijnt.
+- Bugfix waardoor met behulp van de rechter-muisknop weer gegevens 'gekopieerd en 'geplakt' kunnen worden in het scherm voor het openen van nieuwe melding.
+- Bugfix waardoor de KLIC-viewer beter om gaat met de 'geschatte locatie'-functionaliteit van Android 12.
+
 
 **Terugmelden afwijkende situatie**:  \
 Na het afronden van de Keten Acceptatie Test (KAT) in oktober 2022 en het aansluitend oplossen van eventuele bevindingen is de livegang van het vernieuwde proces rondom het terugmelden van afwijkende situatie gepland op 10 januari 2023.
