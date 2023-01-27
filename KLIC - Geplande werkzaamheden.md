@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 11 januari 2023)
+# Geplande werkzaamheden (bijgewerkt 26 januari 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 > De exacte planning is afhankelijk van de ingangsdatum van de wet
@@ -14,6 +14,26 @@ N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-re
 Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+
+--------------------------------------------------------------------------------------
+## Planning voor release – NTD: 16 februari 2023; Productie: 21 februari 2023
+
+Voor deze release zijn de volgende onderwerpen gepland
+
+**Netbeheerder Test Dienst**:
+- Mogelijkheid om KLIC-meldnummer met 6 naar 7 cijfers te testen wordt verwijderd (ID 8242).  \
+Dit betreft testfunctionaliteit in de NTD die sinds [23 juni 2022](#planning-voor-release--ntd-23-juni-2022-productie-28-juni-2022) beschikbaar was.  \
+Per 1 januari 2023 is het nummergedeelte van het KLIC-meldnummer regulier en op NTD uitgebreid van 6 naar 7 cijfers. Nieuw formaat: `<jj><G/C/O><nnnnnnn>` (7 cijfers). 
+
+**Terugmelden afwijkende situatie**:
+- In Mijn Kadaster applicatie “KLIC beheren terugmelding netbeheerder” het tonen van de naam van de netbeheerder naast de bronhoudercode.
+- Aanpassingen op Mijn Kadaster applicatie “KLIC beheren terugmelding netbeheerder” omtrent toegankelijkheid [(WCAG)](https://digitoegankelijk.nl/toegankelijkheid/en-301-549-en-wcag) (ID 8318).
+
+**Overig**:
+- Mogelijk gemaakt om met KLIC-meldnummer met 7 cijfers graafschade te rapporteren (ID 8351).
+- Er worden een aantal (technische) verbeteringen doorgevoerd
+
+
 
 --------------------------------------------------------------------------------------
 ## Planning voor release - 10 januari 2023
