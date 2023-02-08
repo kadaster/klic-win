@@ -911,7 +911,7 @@ HTTP/1.1 200 OK
 
 ### Claimen terugmelding
 
-Een netbeheerder kan aangeven dat een terugmelding geen betrekking heeft op zijn netwerk door `tmClaimStatus` de waarde `tcsGeclaimd` te geven.
+Een netbeheerder kan aangeven dat een terugmelding betrekking heeft op zijn netwerk door `tmClaimStatus` de waarde `tcsGeclaimd` te geven.
 
 **_pad:_**
 ```

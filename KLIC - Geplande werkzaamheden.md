@@ -1,24 +1,40 @@
-# Geplande werkzaamheden (bijgewerkt 26 januari 2023)
+# Geplande werkzaamheden (bijgewerkt 8 februari 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
-> De exacte planning is afhankelijk van de ingangsdatum van de wet
 
-Voor deze release is het volgende onderwerp gepland:
 
-**Wdo (Wet digitale overheid) testfaciliteiten B2B beschikbaar**:
-- Ten behoeve van de beoogde aanpassingen met betrekking tot authenticatie zullen er gefaseerd testfaciliteiten beschikbaar komen voor de diverse B2B gebruikers.
+##### Beveiliging KLIC (netbeheerders en serviceproviders)
+In verband met de WDO (Wet digitale overheid) zijn er aanpassingen voorzien. Dit zijn aanpassingen met betrekking tot authenticatie. Het betreft een security upgrade bij gebruik van OAuth voor de M2M/B2B processen van KLIC, zoals de REST API’s BMKL, Actualiseren en afhandelen van terugmeldingen. Deze zullen gefaseerd georganiseerd worden. Het Kadaster wil voor de M2M/B2B gebruikers tijdig testmogelijkheden beschikbaar stellen. 
 
-N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+***Huidige situatie***  \
+Op dit moment is het niveau van berichten uitwisselen op niveau “Authorisation Grant Flow” door middel van verversen van tokens of het gebruik van een autorisatie met een Mijn Kadaster account. Dit geldt voor de zogenaamde M2M gebruikers en de interactieve gebruikers. Voor beide type gebruikers moet het niveau van berichten uitwisseling naar een hoger niveau.
+
+***Wat gaat er veranderen voor de M2M gebruikers***
+- Dit moet naar het niveau “Authorisation Client Credentials (CC) ”. Dit heeft gevolgen voor de NTD en reguliere proces (productie). 
+- Er zal een overgangsfase worden georganiseerd met een einddatum waarna alleen Client Credentials (CC) gebruik mogelijk is. 
+- De exacte planning van de einddatum is afhankelijk van de ingangsdatum van de WDO (Wet digitale overheid).
+
+***Voor de interactieve gebruikers***
+- Dit moet naar het niveau eH3. Ook hiervoor geldt dat dit gevolgen heeft voor de NTD en reguliere proces (productie). 
+- Er zal een overgangsfase worden georganiseerd met een einddatum waarna alleen autorisatie met behulp van eH3 mogelijk is. 
+- De exacte planning van de einddatum is afhankelijk van de ingangsdatum van de WDO (Wet digitale overheid).
+
+
 
   
+Beide werkzaamheden worden nog ingepland en via de gebruikelijke kanalen gecommuniceerd. \
+N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
+
+
 Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
+
 --------------------------------------------------------------------------------------
 ## Planning voor release – NTD: 16 februari 2023; Productie: 21 februari 2023
 
-Voor deze release zijn de volgende onderwerpen gepland
+Voor deze release zijn de volgende onderwerpen gepland:
 
 **Netbeheerder Test Dienst**:
 - Mogelijkheid om KLIC-meldnummer met 6 naar 7 cijfers te testen wordt verwijderd (ID 8242).  \
@@ -33,6 +49,35 @@ Per 1 januari 2023 is het nummergedeelte van het KLIC-meldnummer regulier en op 
 - Mogelijk gemaakt om met KLIC-meldnummer met 7 cijfers graafschade te rapporteren (ID 8351).
 - Er worden een aantal (technische) verbeteringen doorgevoerd
 
+
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 15 februari 2023
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+De eisen die gesteld worden aan een Mijn Kadaster wachtwoord zijn verzwaard. Vanaf 15 februari aanstaande zullen deze ook afgedwongen worden. Het kan zijn dat u of uw gebruikers het wachtwoord moeten aanpassen. De 1e beheerders zijn hierover per mail geïnformeerd. 
+
+**Wijzig Mijn Kadaster wachtwoorden zo snel mogelijk**  \
+Om het wachtwoord te wijzigen nemen gebruikers de volgende stappen:
+1.	Log in op Mijn Kadaster
+2.	Klik rechtsboven op uw naam en op ‘Profielinstellingen’
+3.	Klik rechtsboven op ‘Wachtwoord wijzigen’
+
+**Verander ook het wachtwoord van webservices**  \
+Gebruikt u webservices zoals BMKL/Actualiseren/TMS/B2B aanvraag?  \
+Na het wijzigen van het wachtwoord in Mijn Kadaster moet u ook direct het wachtwoord in de webservice wijzigen. Neem hiervoor eventueel contact op met uw eigen software leverancier.
+
+**Strengere eisen voor wachtwoord**  \
+Het nieuwe wachtwoord moet bestaan uit:
+- minimaal 1 kleine letter
+- minimaal 1 hoofdletter
+- minimaal 1 cijfer
+- minimaal 1 speciaal teken (bijvoorbeeld: ! @ # $ % ^ &)
+- minimaal 8 en maximaal 20 tekens
+
+**Vanaf 15 februari automatische melding bij inloggen Mijn Kadaster**  \
+Zijn er vanaf 15 februari nog gebruikers en beheerders met een wachtwoord dat niet aan de eisen voldoet? Dan krijgen zij een melding als ze inloggen in Mijn Kadaster. Op dat moment moet het wachtwoord gewijzigd worden. De melding kan niet worden genegeerd.
 
 
 --------------------------------------------------------------------------------------
