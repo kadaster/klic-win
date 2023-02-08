@@ -1,7 +1,7 @@
 ﻿# KLIC - technische documentatie
 
 Over de manier waarop informatie in de KLIC-registratie wordt vastgelegd, gepresenteerd en uitgewisseld, zijn afspraken gemaakt. Deze zijn vastgelegd in het Informatiemodel Kabels en Leidingen (IMKL) en het Berichtenprotocol (BMKL).  \
-IMKL versie 1.2.1 werd ondersteund tot april 2022. Vanaf 3 januari 2022 kunt u gebruik maken IMKL versie 2.0. E  
+IMKL versie 1.2.1 werd ondersteund tot april 2022. Vanaf 3 januari 2022 kunt u gebruik maken IMKL versie 2.0.
 
   \
 Op deze GitHub-pagina's wordt technische documentatie gepubliceerd over de functionaliteit die betrekking heeft op KLIC.  
