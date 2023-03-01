@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 8 februari 2023)
+# Geplande werkzaamheden (bijgewerkt 28 februari 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 
@@ -78,6 +78,19 @@ Het nieuwe wachtwoord moet bestaan uit:
 
 **Vanaf 15 februari automatische melding bij inloggen Mijn Kadaster**  \
 Zijn er vanaf 15 februari nog gebruikers en beheerders met een wachtwoord dat niet aan de eisen voldoet? Dan krijgen zij een melding als ze inloggen in Mijn Kadaster. Op dat moment moet het wachtwoord gewijzigd worden. De melding kan niet worden genegeerd.
+
+
+
+--------------------------------------------------------------------------------------
+## Presentaties KLIC bijeenkomst 10 februari 2023
+
+ 
+Vrijdag 10 februari is een KLIC bijeenkomst via Teams georganiseerd.  \
+De presentaties kunt u terugvinden in deze map: [Presentaties bijeenkomsten](Presentaties%20bijeenkomsten/KLIC%20informatiebijeenkomst/2023-02-10)
+
+Op 2 juni van 10.00 uur tot 12.00 houdt het Kadaster de volgende KLIC informatiebijeenkomst.  \
+De bijeenkomsten worden gehouden via Teams.  \
+Aanmelden kan via [https://www.kadaster.nl/-/informatiebijeenkomst-klic-juni](https://www.kadaster.nl/-/informatiebijeenkomst-klic-juni)
 
 
 --------------------------------------------------------------------------------------
