@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 28 februari 2023)
+# Geplande werkzaamheden (bijgewerkt 06 april 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 
@@ -30,6 +30,14 @@ Voor meer informatie zie:
 - [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
 - [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
 
+
+--------------------------------------------------------------------------------------
+## Planning voor release - april/mei 2023
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Beheren Terugmelden Netbeheerder**:
+- In de Mijn Kadaster applicatie 'Beheren Terugmelden Netbeheerder' wordt de naamgeving van statussen en knoppen gelijk getrokken met de terminologie uit de API. Bijvoorbeeld: `Weigeren` of `Accepteren` is na deze wijziging `Afwijzen` of `Claimen`. Het proces blijft ongewijzigd.
 
 --------------------------------------------------------------------------------------
 ## Planning voor release – NTD: 16 februari 2023; Productie: 21 februari 2023
