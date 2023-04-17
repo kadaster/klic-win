@@ -58,7 +58,7 @@ Deze klic.ntd.*-scopes mogen niet gebruikt worden bij requests naar de productie
 
 #### Authorization token opvragen
 Rechten voor gebruik van de API endpoints zijn gekoppeld aan mijn kadaster accounts. De gebruiker zal de client applicatie hiervoor éénmalig toestemming moeten geven door in te loggen via mijn kadaster.  
-Ga naar: https://authorization.kadaster.nl/auth/oauth/v2/authorize?response_type=code&client_id=[client_id]&client_secret=[client_secret]&redirect_uri=[redirect_uri]&scope=[scope]  
+Ga naar: https://authorization.kadaster.nl/auth/oauth/v2/authorize?response_type=code&client_id=[client_id]&redirect_uri=[redirect_uri]&scope=[scope]  
 
 <img src="images/login.png" />
 
