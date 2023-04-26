@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 06 april 2023)
+# Geplande werkzaamheden (bijgewerkt 26 april 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 2023
 
@@ -32,7 +32,17 @@ Voor meer informatie zie:
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release - april/mei 2023
+## Planning voor release – 23 mei 2023
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer**:
+- **Wettelijke toegankelijkheidseisen**:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+--------------------------------------------------------------------------------------
+## Planning voor release - 2 mei 2023
 
 Voor deze release is het volgende onderwerp gepland:
 
