@@ -1,6 +1,6 @@
-# Geplande werkzaamheden (bijgewerkt 26 april 2023)
+# Geplande werkzaamheden (bijgewerkt 17 mei 2023)
 --------------------------------------------------------------------------------------
-## Planning voor release – 2023
+## Planning voor release – 6 juni 2023
 
 
 ##### Beveiliging KLIC (netbeheerders en serviceproviders)
@@ -11,24 +11,20 @@ Op dit moment is het niveau van berichten uitwisselen op niveau “Authorisation
 
 ***Wat gaat er veranderen voor de M2M gebruikers***
 - Dit moet naar het niveau “Authorisation Client Credentials (CC) ”. Dit heeft gevolgen voor de NTD en reguliere proces (productie). 
-- Er zal een overgangsfase worden georganiseerd met een einddatum waarna alleen Client Credentials (CC) gebruik mogelijk is. 
-- De exacte planning van de einddatum is afhankelijk van de ingangsdatum van de WDO (Wet digitale overheid).
+- Er zal een overgangsfase van 6 maanden gelden waarna alleen Client Credentials (CC) gebruik mogelijk is. 
+
 
 ***Voor de interactieve gebruikers***
 - Dit moet naar het niveau eH3. Ook hiervoor geldt dat dit gevolgen heeft voor de NTD en reguliere proces (productie). 
-- Er zal een overgangsfase worden georganiseerd met een einddatum waarna alleen autorisatie met behulp van eH3 mogelijk is. 
-- De exacte planning van de einddatum is afhankelijk van de ingangsdatum van de WDO (Wet digitale overheid).
+- Er zal een overgangsfase van 6 maanden gelden waarna alleen autorisatie met behulp van eH3 mogelijk is. 
 
 
-
-  
-Beide werkzaamheden worden nog ingepland en via de gebruikelijke kanalen gecommuniceerd. \
 N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
 
 
-Voor meer informatie zie:
-- [Status Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/voortgang-wet-digitale-overheid/) (Wet digitale overheid) op digitaleoverheid.nl
-- [FAQ pagina eHerkenning bij Kadaster](https://www.kadaster.nl/zakelijk/mijn-kadaster/mijn-kadaster-en-eherkenning)
+Voor meer informatie:
+- Er wordt een technische bijeenkomst georganiseerd op 2 juni: zie [deze URL](https://www.kadaster.nl/-/technische-bijeenkomst-wijziging-authenticatie-klic-api-s-netbeheerders-juni).
+- Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
 
 
 --------------------------------------------------------------------------------------
