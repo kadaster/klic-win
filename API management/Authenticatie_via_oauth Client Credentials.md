@@ -134,16 +134,26 @@ Voorbeeld jwks:
      {
        "alg": "RS256",
        "e": "AQAB",
-       "n": "o80vbR0ZfMhjZWfqwPUGNkcIeUcweFyzB2S2T-hje83IOVct8gVg9FxvHPK1R
- eEW3-p7-A8GNcLAuFP_8jPhiL6LyJC3F10aV9KPQFF-w6Eq6VtpEgYSfzvFegNiPtpMWd7C43
- EDwjQ-GrXMVCLrBYxZC-P1ShyxVBOzeR_5MTC0JGiDTecr_2YT6o_3aE2SIJu4iNPgGh9Mnyx
- dBo0Uf0TmrqEIabquXA1-V8iUihwfI8qjf3EujkYi7gXXelIo4_gipQYNjr4DBNlE0__RI0kD
- U-27mb6esswnP2WgHZQPsk779fTcNDBIcYgyLujlcUATEqfCaPDNp00J6AbY6w",
+       "n": "<...cut her for readability...>-gTlQ",
        "kty": "RSA",
-       "kid": "rsa1"
+       "kid": "oude_nog_geldige_key"
+       "x5c": [
+                "MIIG<...cut her for readability...>TbQjZh0i"
+            ],
+     },
+     {
+       "alg": "RS256",
+       "e": "AQAB",
+       "n": "<...cut her for readability...>-gTlQ",
+       "kty": "RSA",
+       "kid": "nieuwe_ook_geldige_key"
+       "x5c": [
+                "MIIG<...cut her for readability...>TbQjZh0i"
+            ],
      }
    ]
- }
+}
+
 ```
 
 #### Access token gebruiken
