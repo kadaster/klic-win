@@ -1,4 +1,4 @@
-# Geplande werkzaamheden (bijgewerkt 17 mei 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 juni 2023)
 --------------------------------------------------------------------------------------
 ## Planning voor release – 6 juni 2023
 
@@ -16,7 +16,7 @@ Op dit moment is het niveau van berichten uitwisselen op niveau “Authorisation
 
 ***Voor de interactieve gebruikers***
 - Dit moet naar het niveau eH3. Ook hiervoor geldt dat dit gevolgen heeft voor de NTD en reguliere proces (productie). 
-- Er zal een overgangsfase van 6 maanden gelden waarna alleen autorisatie met behulp van eH3 mogelijk is. 
+- Er zal een overgangsfase van 6 maanden gelden waarna alleen authenticatie met behulp van eH3 mogelijk is. 
 
 
 N.B. handmatig inloggen in Mijn Kadaster is sinds [maart 2020](#planning-voor-release---17-maart-2020) al geïmplementeerd.
