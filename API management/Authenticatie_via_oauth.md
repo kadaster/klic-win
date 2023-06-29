@@ -1,4 +1,4 @@
-﻿# Authenticatie via OAuth Client Credentials voor de KLIC API's
+﻿# Authenticatie via OAuth voor de KLIC API's
 
 De KLIC REST API's zijn beveiligd middels de [OAuth 2.0](https://oauth.net/2/) specificatie.
 Dit document biedt een handleiding voor het aansluiten op de KLIC API's met OAuth.
