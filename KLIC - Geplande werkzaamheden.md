@@ -1,4 +1,27 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 23 juni 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 30 juni 2023)
+--------------------------------------------------------------------------------------
+
+## 31 december 2023: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
+
+De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat veranderen. Er zal -zoals gebruikelijk- een overgangsperiode van een half jaar gelden. Binnen de overgangsperiode kunnen zowel de oude als de nieuwe methodes gebruikt worden. Na afloop van de overgangsperiode kunnen alleen de nieuwe methodes nog gebruikt worden.  
+  \
+  De overgangsperiode start op **1 juli 2023** en zal eindigen op **31 december 2023**.
+
+**Meer informatie**
+- Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
+- Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
+- Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
+
+
+--------------------------------------------------------------------------------------
+## Release – 5 juli 2023
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer**:
+- **Wettelijke toegankelijkheidseisen**:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
 --------------------------------------------------------------------------------------
 ## 1 juli 2023: start overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
 
@@ -13,15 +36,17 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 
 
 --------------------------------------------------------------------------------------
-## Planning voor release – 5 juli 2023
 
-Voor deze release is het volgende onderwerp gepland:
+## Documentatie GebiedsinformatieAanvragen via REST API - 30 juni 2023
 
-**Kadaster KLIC-viewer**:
-- **Wettelijke toegankelijkheidseisen**:  \
-  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
-Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+**GebiedsinformatieAanvragen POST-API** : 
+- De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/)
+- Naar verwachting komt er een testomgeving in het derde kwartaal van 2023 beschikbaar.
+
+
+
 --------------------------------------------------------------------------------------
+
 ## Planning voor release – 6 juni 2023
 
 
