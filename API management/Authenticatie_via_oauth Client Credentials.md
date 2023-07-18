@@ -65,7 +65,7 @@ Deze klic.ntd.*-scopes mogen niet gebruikt worden bij requests naar de productie
 
 (stap 1,2) 
 
-Om een access token te verkrijgen dient een JWT (client assertion) samengesteld te worden welke met het PKIoverheid certificaat van de organisatie wordt ondertekend. Ter controle van de signature van het JWT dient een JWKS (idealiter via een endpoint) beschikbaar gesteld te zijn met het publieke certificaat. Het PKIoverheid certificaat moet vallen in de Hiërarchie: Staat der Nederlanden Private Root CA - G1. Tevens dient het organisatie OIN te zijn opgenomen in het subject en dit OIN in de Kadaster klant registratie bekend te zijn.
+Om een access token te verkrijgen dient een JWT (client assertion) samengesteld te worden welke met het PKIoverheid certificaat van de organisatie wordt ondertekend. Ter controle van de signature van het JWT dient een JWKS (idealiter via een endpoint) beschikbaar gesteld te zijn met het publieke certificaat. Het PKIoverheid certificaat moet vallen in de Hiërarchie: Staat der Nederlanden Private Root CA - G1. Tevens dient het organisatie-identificatienummer (OIN) of handelsregisternummer (HRN) te zijn opgenomen in het subject en dit OIN of HRN in de Kadaster klant registratie bekend te zijn.
 
 Validatie van het JWT word gedaan adhv de signature en de volgende claims worden geverifieerd:
 * **iss** *(issuer): moet gelijk zijn aan het client id*
@@ -123,7 +123,7 @@ Het token endpoint zal hierop het JWT client assertion valideren en een response
 ```
 Dit access token moet door de client apllicatie op een veilige manier bewaard worden. Het access token moet meegestuurd worden bij elke call naar de API.   
 
-De signature van de JWT wordt gecontroleerd aan de hand van de bij de client geconfigureerde JWKS (idealiter dynamisch adhv de jwks uri opgehaald). De kid in de header van de jwt geeft aan met welke key de signing is uitgevoerd en komt overeen met een kid in het jwks. Het gebruikte certificaat zal worden gecontroleerd op geldigheid en zal onderdeel moeten zijn van de **PKIoverheid chain** en het **OIN  in de Kadaster klant registratie** te zijn opgenomen.
+De signature van de JWT wordt gecontroleerd aan de hand van de bij de client geconfigureerde JWKS (idealiter dynamisch adhv de jwks uri opgehaald). De kid in de header van de jwt geeft aan met welke key de signing is uitgevoerd en komt overeen met een kid in het jwks. Het gebruikte certificaat zal worden gecontroleerd op geldigheid en zal onderdeel moeten zijn van de **PKIoverheid chain** en het **OIN of HRN in de Kadaster klant registratie** te zijn opgenomen.
 
 https://datatracker.ietf.org/doc/html/rfc7517
 
