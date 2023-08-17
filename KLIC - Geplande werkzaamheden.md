@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 30 juni 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 17 augustus 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 december 2023: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
@@ -11,6 +11,20 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
 - Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
 - Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
+
+--------------------------------------------------------------------------------------
+## Release – 14 September 2023
+
+Voor deze release is het volgende onderwerp gepland:
+
+**GebiedsinformatieAanvragen via REST API**:
+- Er komt een endpoint beschikbaar waar (met de juiste authorisatie) een testmelding gedaan kan worden.
+- De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
+- Uit deze aanvraag volgt géén levering: het productieproces is op deze testomgeving niet ingericht.
+- De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
+
+Naar verwachting komt in januari 2024 de GebiedsinformatieAanvragen via REST API beschikbaar op productie. Dan blijft er gedurende een overgangsperiode ook het huidige SOAP protocol beschikbaar.
+
 
 
 --------------------------------------------------------------------------------------
