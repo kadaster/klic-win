@@ -8,17 +8,19 @@ Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kad
 - [1. KLIC B2B-aanvraag](#1-klic-b2b-aanvraag)
   - [1.1 Inleiding](#11-inleiding)
   - [1.2 Gebruik van GUID in bericht](#12-gebruik-van-guid-in-bericht)
-  - [1.3 Modelschema](#1-3-modelschema)
-    - [1.3.1 Modelschema onderdeel "bestelling"](#1-3-1-modelschema-onderdeel-bestelling)
-    - [1.3.2 Modelschema onderdeel "testparameters"](#1-3-2-modelschema-onderdeel-testparameters)
+  - [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie)
+    - [1.3.1 Modelschema onderdeel "bestelling"](#131-modelschema-onderdeel-bestelling)
+    - [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters)
     - [1.3.3. Modelschema onderdeel "gebiedsinformatie aanvragen"](#133-modelschema-onderdeel-gebiedsinformatie-aanvragen)
-  - [1.4 Terugkoppeling door het Kadaster](#1-4-terugkoppeling-door-het-kadaster)
-  - [1.5 Validaties](#1-5-validaties)
-    - [1.5.1 Algemeen](#1-5-1-algemeen)
-    - [1.5.2 Validaties van de polygonen](#1-5-2-validaties-van-de-polygonen)
-    - [1.5.3 Aanvragen in het kader van de EU-stimulering breedband (WIBON-regelgeving)](#1-5-3-aanvragen-in-het-kader-van-de-eu-stimulering-breedband-wibon-regelgeving)
+  - [1.4 Terugkoppeling door het Kadaster](#14-terugkoppeling-door-het-kadaster)
+  - [1.5 Validaties](#15-validaties)
+    - [1.5.1 Algemeen](#151-algemeen)
+    - [1.5.2 Validaties van de polygonen](#152-validaties-van-de-polygonen)
+    - [1.5.3 Aanvragen in het kader van de EU-stimulering breedband (WIBON-regelgeving)](#153-aanvragen-in-het-kader-van-de-eu-stimulering-breedband-wibon-regelgeving)
 - [2. Endpoints](#2-endpoints)
 - [3. Authenticatie en Autorisatie](#3-authenticatie-en-Autorisatie)
+  - [3.1 Overzicht per scenario](#31-overzicht-per-scenario)
+
 
 
 ---------------------------------------------------------
@@ -45,17 +47,20 @@ Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te 
 - Java:	_java.util.UUID.randomUUID().toString();_
 - C#:	_System.Guid.NewGuid().ToString("D")_
 
-## 1.3 Modelschema
+## 1.3 Modelschema en Swagger documentatie
 
 Het modelschema voor een GIA-POST is gebaseerd op het IMKL en heeft daardoor een grote overeenkomst met de GIA-GET-API (die reeds voor netbeheerders beschikbaar is).
 
-:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.84.xlsx).
+:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.85.xlsx).
 
 Er is gekozen voor één modelschema voor alle type aanvragen. Er zijn validatie regels toegevoegd om aan de bestaande business logica te voldoen.
 In het werkblad staat in kolom E en F het modelschema inclusief een voorbeeld.  \
-Of een bepaalde regel van toepassing is, is afhankelijk van (o.a.) het type melding (graafmelding, calamiteitenmelding, oriëntatieverzoek) Dat staat toegelicht in kolom B/C/D.  \
+Of een bepaalde regel van toepassing is, is afhankelijk van (o.a.) het type melding (graafmelding, calamiteitenmelding, oriëntatieverzoek). Dat staat toegelicht in kolom B/C/D.  \
 Kolom H/I/J geeft een toelichting over de vulling van de velden.  \
 Kolom L-U geeft de validatie meldingen die voor de betreffende regel van toepassing is. 
+
+Er komt Swagger documentatie beschikbaar:  \
+*Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
 
 ### 1.3.1 Modelschema onderdeel "bestelling"
 
@@ -75,27 +80,8 @@ Als er -bijvoorbeeld door een netwerkverstoring- een bericht met hetzelfde ID me
 
 ### 1.3.2 Modelschema onderdeel "testparameters"
 
- Indien er een melding gedaan wordt in de testomgeving, dienen een aantal testparameters opgegeven te worden, ten behoeve van de verdere verwerking.  \
- Deze parameters zijn niet toegestaan op de productie omgeving. Een melding wordt dan afgekeurd.
- 
-> N.B. een endpoint waarop testmeldingen gedaan kunnen worden, wordt op een later moment gecommuniceerd.  
-
-> N.B. In eerste instantie zal er een endpoint komen waarop de aanvraag gevalideerd wordt. Op dat moment is het niet gelijk mogelijk om de verdere verwerking te testen. Voor het testen van een nieuwe applicatie om een aanvraag te doen is het vooralsnog niet relevant wat hier ingevuld wordt.  
-
-```json
-"testParameters": {
-  "centraleAanlevering": false,
-  "belanghebbendeBronhoudercodes": [
-    "string"
-  ],
-  "endpointGiaNotificatie": "string",
-  "endpointTerugmeldNotificatie": "string"
-},
-```
-
-- het veld `centraleAanlevering` dient gebuikt te worden om aan te geven of het een test betreft voor een centrale nebeheerder (`true`) of een decentrale netbeheerder (`false`). Op het NTD scherm is deze keuze ook beschikbaar.
-- het veld `belanghebbendeBronhoudercodes` dient gevuld te worden met de bronhoudercode van de netbeheerder voor wie de test is.
-- bij het veld `endpointGiaNotificatie`  moet een URL ingevuld worden waarop de netbeheerder een PING ontvangt dat er een GIA beschikbaar is. Op het NTD scherm is dit veld ook beschikbaar.
+In het geval van een Netbeheerder test (op de NTD) zijn bepaalde stuurparemters nodig. Dit wordt vooralsnog niet geimplementeerd.  \
+*Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
 
 ### 1.3.3. Modelschema onderdeel "gebiedsinformatie aanvragen"
 
@@ -108,12 +94,12 @@ bv: `"jsonPointer": "/gebiedsinformatieAanvragen/1/eindDatum"` In dit geval zit
 - Deze functionaliteit is niet toegestaan bij een calamiteitenmelding.
 - De meldingen dienen aan elkaar gerelateerd te zijn.  \
   Dat betekend identieke: `aanvraagSoort`, `aanvrager`, `opdrachtgever`, `referentie`,   `soortWerkzaamheden`, `omschrijvingWerkzaamheden`,  `startDatum`, `eindDatum`.   \
-  De locatie gerelateerde velden mogen wel verschillen (`locatieWerkzaamheden`, `locatieOmschrijving`, `huisaansluitingAdressen`, en de polygonen)
+  De locatie gerelateerde velden mogen wel verschillen (`locatieWerkzaamheden`, `locatieOmschrijving`, `huisaansluitingAdressen`, en de polygonen).
 
  
 - Er dient bij elke aanvraag een positienummer toegevoegd te worden die begint bij 10 en oploopt met 10 (dus: 0000000010, 0000000020, etc).
 - De meldingen dienen allemaal binnen een vlak van 5000x5000 meter te vallen voor een graafmelding of 10.000x10.000 voor oriëntatieverzoek.
-- Er mogen niet meer dan 100 meldingen per bestelling ingediend worden
+- Er mogen niet meer dan 100 meldingen per bestelling ingediend worden.
 
 
 ## 1.4 Terugkoppeling door het Kadaster
@@ -129,7 +115,7 @@ Als een POST bericht voldoet aan het modelschema, krijgt de gebruiker een HTTP-2
 De daadwerkelijke validatie vindt A-synchroon plaats. Het resultaat is op te halen via de `pollUrl`.  \
 *Merk op: De `pollUrl` zal ogenschijnlijk een logische opbouw hebben als combinatie van de URL en het opgegeven `postId`. Echter houdt het Kadaster zich het recht voor het `pollUrl` zonder verdere communicatie aan te passen.  Het is dus strikt noodzakelijk een implementatie te kiezen waarbij de  door het Kadaster terug geven URL gebruikt wordt voor het vervolg proces.*
 
-De terugkoppelingen bij bv onjuiste Autorisatie, onjuist gebruik van modelschema; staan opgenomen in het tabblad 'POST-response messages' van de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema](#1-3-modelschema).
+De terugkoppelingen bij bv onjuiste Autorisatie, onjuist gebruik van modelschema; staan opgenomen in het tabblad 'POST-response messages' van de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie).
 
 Op het PollUrl kunnen verschillende responses gevonden worden.
 - Melding aangenomen, maar nog niet gevalideerd (HTTP-200)
@@ -140,14 +126,14 @@ Op het PollUrl kunnen verschillende responses gevonden worden.
 
 **Validatie waarschuwingen**  \
 Naast *validatie fouten* kunnen er ook *validatie waarschuwingen* terug gekoppeld worden. Als er minimaal één fout gevonden is wordt het bericht afgekeurd. Alléén een warning is niet blokkerend voor het aannemen van de order.  \
-Voorbeelden van deze berichten en een opsomming van de validatie meldingen zijn te vinden in de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema](#1-3-modelschema).
+Voorbeelden van deze berichten en een opsomming van de validatie meldingen zijn te vinden in de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie).
 
 
 ---------------------------------------------------------
 ## 1.5 Validaties
 ### 1.5.1 Algemeen
 
-De controles die worden uitgevoerd op een B2B-aanvraag staan genoemd in de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema](#1-3-modelschema).  \
+De controles die worden uitgevoerd op een B2B-aanvraag staan genoemd in de Excelsheet die te vinden is onder paragraaf [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie).  \
 Elke regel heeft een bepaalde kardinaliteit (verplicht, verboden, optioneel, etc) die afhankelijk kan zijn van het type aanvraagsoort (graafmelding, calamiteitenmelding,  oriëntatieverzoek).  \
 Elke regel heeft een bepaalde beperking voor de vulling. Bijvoorbeeld toegestane tekens of maximale lengte.  \
 Elke regel moet voldoen aan de business logica. Bijvoorbeeld dat de aanvangsdatum van werkzaamheden in de toekomst moet liggen.
@@ -210,6 +196,8 @@ De volgende controles worden uitgevoerd:
 *Op een later moment worden de endpoints gecommuniceerd.*  \
 *Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
 
+(URL is met KLEINE letters)
+
 ---------------------------------------------------------
 ## 3. Authenticatie en Autorisatie
 
@@ -225,5 +213,28 @@ De scopes die nodig zijn voor het doen van een aanvraag zijn:
 Bij het scenario waarbij een serviceprovider de aanvraag doet in naam van een netbeheerder, dient de serviceprovider met zijn eigen gegevens in te loggen. De grondroerder die de applicatie gebruikt dient de serviceprovider te machtigingen om namens de grondroerder de aanvraag te doen.
 In het GIA-POST bericht staat in dit scenario bij de aanvrager het relatienummer van de grondroerder.  \
 Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen als dat het nu gebeurt voor netbeheerders die een serviceprovider machtigen. De beschrijving daarvoor [is hier te vinden](https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider).
+
+## 3.1 Overzicht per scenario
+
+|                                                                                                                                                                                                                                                                         Scenario:                                                          | Grondroerder die melding doet via SP-app met CC                                                                             | Grondroerder die melding doet via eigen app met CC                                                              | Grondroerder die melding doet via app met EH3 of mijn-kadasterlogin                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| **App ontwikkeld door**:                                                                                                                                                                                                                                                                                                                   | Serviceprovider                                                                                                             | Grondroerder                                                                                                    | Serviceprovider of Grondroerder                                                                               |
+| **Te gebruiken token bij de API**:<br>Zie: [deze Github pagina](../../API%20management/Authenticatie_via_oauth.md)                                                                                                                                                                                                    | Serviceprovider                                                                                                             | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
+| **Relatienummer bij aanvrager van**:<br>Je kan je relatienummer vinden door in te loggen op Mijn Kadaster op de pagina profielinstellingen onder het kopje "klantnummer"                                                                                                                                                                   | Grondroerder                                                                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
+| **Mijn kadasteraccount nodig**:<br>Zie: https://formulieren.kadaster.nl/aanmelden_klic (rol: serviceprovider)                                                                                                                                                                                                                              | Grondroerder en serviceprovider (met de rol Serviceprovider)                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
+| **PKI overheidscertificaat nodig**:<br>Zie https://www.logius.nl/domeinen/toegang/pkioverheid/aanvragen                                                                                                                                                                                                                                    | Serviceprovicer                                                                                                             | Grondroerder                                                                                                    | nvt                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
+| **Type**                                                                                                                                                                                                                                                                                                                                   | Machine 2 Machine                                                                                                           | Machine 2 Machine                                                                                               | Interactieve gebruiker                                                                                        |
+| **Oauth**:<br>Zie: [deze Github pagina](../../API%20management/Authenticatie_via_oauth.md)                                                                                                                                                                                                                            | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                                       | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                           | App ontwikkelaar: App aanmelden bij OAuth via autorisation-grant-flow                                         |
+|                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
+| **Mijn Kadasterdienst benodigd** (Serviceprovider):                                                                                                                                                                                                                                                                                        | KLIC B2B test aanvraag REST                                                                                                 | nvt                                                                                                             | nvt                                                                                                           |
+| **Mijn Kadasterdienst benodigd** (Grondroerder):                                                                                                                                                                                                                                                                                           | **Organisatie**:<br><br>- KLIC Graafmelding<br>- KLIC Calamiteite<br>- KLIC Orientatieverzoek<br>- KLIC Autoriseren SP                  | **Organisatie**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek | **Gebruiker**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek |
+| **Grondroerder mandaat geven aan serviceprovider**?<br>Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen als dat het nu gebeurt voor netbeheerders die een serviceprovider machtigen. De beschrijving daarvoor is hier te vinden. (https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider) | Ja (om dit mandaat te mogen geven heeft de grondroerder de dienst "KLIC Autoriseren SP" nodig in het Mijn Kadaster account) | nvt                                                                                                             | nvt                                                                                                           |
+
+
+
+
+
 
 

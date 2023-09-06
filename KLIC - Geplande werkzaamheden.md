@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 17 augustus 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 6 september 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 december 2023: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
@@ -13,6 +13,17 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
 
 --------------------------------------------------------------------------------------
+
+## 1 oktober 2023: Terugmelden alleen via KLIC-viewer
+
+In overleg met het KLIC Gebruikers Overleg (KGO) is bepaald dat vanaf 1 oktober het terugmelden van afwijkende situaties alleen nog kan via een KLIC-viewer. Het webformulier op de Kadasterwebsite is vanaf die datum niet meer beschikbaar.
+
+**Meer informatie**
+- Bekijk [hier het nieuwsartikel](https://www.kadaster.nl/-/vanaf-1-oktober-alleen-terugmelden-via-klic-viewer?redirect=%2Fzakelijk%2Fregistraties%2Flandelijke-voorzieningen%2Fklic%2Fklic-nieuws) op de website van het Kadaster.
+- Bekijk [hier de release beschrijving van 10 januari](#planning-voor-release---10-januari-2023) voor een toelichting op de nieuwe manier van terugmelden.
+
+
+--------------------------------------------------------------------------------------
 ## Release – 14 September 2023
 
 Voor deze release is het volgende onderwerp gepland:
@@ -23,7 +34,7 @@ Voor deze release is het volgende onderwerp gepland:
 - Uit deze aanvraag volgt géén levering: het productieproces is op deze testomgeving niet ingericht.
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 
-Naar verwachting komt in januari 2024 de GebiedsinformatieAanvragen via REST API beschikbaar op productie. Dan blijft er gedurende een overgangsperiode ook het huidige SOAP protocol beschikbaar.
+Naar verwachting komt in januari 2024 de GebiedsinformatieAanvragen via REST API beschikbaar op productie. Dan blijft er gedurende een overgangsperiode van 3 maanden ook het huidige SOAP protocol beschikbaar.
 
 
 

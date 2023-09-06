@@ -53,8 +53,8 @@ Deze fasering ziet er voorlopig als volgt uit:
 4. Het vastleggen en gebruiken van `Informatiepolygoon` bij een graafmelding of calamiteitenmelding.
 
 Voor een overzicht van de geplande en gerealiseerde implementaties van deze functionaliteit, zie:
-* [KLIC - Geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) 
-* [KLIC - Release notes](../KLIC%20-%20Release%20notes.md) 
+* [KLIC - Geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) 
+* [KLIC - Release notes](../../KLIC%20-%20Release%20notes.md) 
 
 
 ---------------------------------------------------------
@@ -94,7 +94,7 @@ Er wordt niet gecontroleerd of een eventueel ingevuld KvK-nummer bestaat in de N
 Het element `Klant.KvkNummer` mag maximaal 25 tekens bevatten (melding: COR0208).
 
 Op termijn zal het KvK-nummer worden overgenomen uit het klantenbeheer-systeem van Kadaster-KLIC.  \
-Volg [KLIC - Geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) voor de implementatiestappen.
+Volg [KLIC - Geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) voor de implementatiestappen.
 
 ### 2.3 Overige klantgegevens
 Overige gegevens van de klant worden overgenomen uit het Kadaster-portaal ten behoeve van de aanvrager-gegevens van de gebiedsinformatie-aanvraag. Het betreft:
@@ -209,7 +209,7 @@ Er wordt niet gecontroleerd of een eventueel ingevuld KvK-nummer bestaat in de N
 Het element `Opdrachtgever.KvkNummer` mag maximaal 25 tekens bevatten (melding: COR0208).
 
 Het KvK-nummer van opdrachtgevers is niet bekend bij het Kadaster-KLIC.
-Volg [KLIC - Geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) voor de implementatiestappen.
+Volg [KLIC - Geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) voor de implementatiestappen.
 
 ### 4.3 Binnenlands adres
 Er is sprake van een binnenlands adres, indien
@@ -363,7 +363,7 @@ De identificatie is leidend voor de verwerking van een KLIC-aanvraag.  \
 Als er van een dichtstbijzijnd adres een `IdentificatieBAG` wordt meegegeven, worden de volgende controles uitgevoerd:
 
 - er wordt gecontroleerd of bij deze `IdentificatieBAG` een bijbehorend adresseerbaar object kan worden gevonden in BAG (melding: COR0207) 
-- als er ook overige adresgegevens zijn meegegeven, dan moeten deze exact overeenstemmen met het hoofdadres van het adresseerbare object (melding: COR0200).  \
+- als er ook overige adresgegevens zijn meegegeven, dan moeten deze exact overeenstemmen met het hoofdadres van het adresseerbare object (melding: COR0200).
 
 Als er van een dichtstbijzijnd adres een `IdentificatieBAG` wordt meegegeven, hoeven geen overige adresgegevens te worden meegegeven. KLIC gebruikt hiervoor de bijbehorende BAG-adresgegevens.
 
@@ -408,7 +408,7 @@ Het gebruik en de controles van adresgegevens die een huisaansluitschets-adres s
 Als er van een huisaansluitschets-adres een `IdentificatieBAG` wordt meegegeven, worden de volgende controles uitgevoerd:
 
 - er wordt gecontroleerd of bij deze `IdentificatieBAG` een bijbehorend adresseerbaar object kan worden gevonden in BAG (melding: COR0201) 
-- als er ook overige adresgegevens zijn meegegeven, dan moeten deze exact overeenstemmen met het hoofdadres van het adresseerbare object (melding: COR0200).  \
+- als er ook overige adresgegevens zijn meegegeven, dan moeten deze exact overeenstemmen met het hoofdadres van het adresseerbare object (melding: COR0200).
 
 Als er van een HAS-adres een `IdentificatieBAG` wordt meegegeven, hoeven geen overige adresgegevens te worden meegegeven. KLIC gebruikt hiervoor de bijbehorende BAG-adresgegevens.
 

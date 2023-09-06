@@ -1,6 +1,6 @@
 # Afwijkende situatie
 
-| Deze pagina beschrijft functionaliteit die vanaf 10 januari 2023 beschikbaar komt. <br>  Tot die tijd kan er alleen gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). <br>  Houdt [de geplande werkzaamheden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
+| Deze pagina beschrijft functionaliteit die sinds 10 januari 2023 beschikbaar is. <br>  Tot 1 oktober 2023 kan er gebruik gemaakt worden van het [webformulier](https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie). Daarna kan er alleen nog maar gebruik gemaakt worden van terugmeldingen via een Applicatie die aangesloten is op de terugmeld API<br>  Houdt [de geplande werkzaamheden pagina](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor de planning.|
 |------|
 ## Uitleg Afwijkende Situatie
 Soms ligt een kabel of leiding niet op de plek waar deze volgens de informatie zou moeten liggen. Of iemand vindt een net dat niet op de geleverde informatie staat. Dit zijn zogenoemde afwijkende situaties. Het gaat altijd om een verschil tussen de geleverde KLIC-melding en de daadwerkelijke situatie in de grond. Een terugmelding is dus altijd gerelateerd aan een KLIC-melding.
@@ -14,8 +14,9 @@ Soms ligt een kabel of leiding niet op de plek waar deze volgens de informatie z
   Er is sprake van een onbekend net als er 1 of meerdere netten gevonden worden die niet op de gebiedsinformatie vermeld staan.
 
 ### Verplichting:  
-Volgens de Wet informatie-uitwisseling bovengrondse en ondergrondse netten en netwerken (WIBON) moet u als grondroerder afwijkende situaties aan het Kadaster melden.  \
-Na uw melding kunt u verder met uw werkzaamheden.
+Volgens de Wet informatie-uitwisseling bovengrondse en ondergrondse netten en netwerken (WIBON) moet u als grondroerder afwijkende liggingen en onbekende netten aan het Kadaster melden.  \
+Na uw melding kunt u verder met uw werkzaamheden.  \
+Het melden van een niet gevonden net dient bij de netbeheerder zelf te gebeuren.
 
 ### Doel:
 Wanneer u een afwijkende situatie aan ons doorgeeft, verzoeken wij de netbeheerder dit te corrigeren. Mocht onduidelijk blijven wie de beheerder is van de kabel of leiding, zal de gemeente dit als weesleiding op moeten nemen. U kunt eventueel op de hoogte worden gehouden van uw terugmelding.
@@ -24,23 +25,23 @@ Wanneer u een afwijkende situatie aan ons doorgeeft, verzoeken wij de netbeheerd
 
 ## Vernieuwing Afwijkende situatie
 
-In overleg met het KLIC Gebruikersoverleg (KGO KLIC) heeft KLIC het proces 'Terugmelden Afwijkende Situatie' vernieuwd. Doel is het vereenvoudigen van het melden en afhandelen van afwijkingen op liggingsgegevens van netinformatie. Er wordt een REST API ontworpen en ontwikkeld voor het proces. 
+In overleg met het KLIC Gebruikersoverleg (KGO KLIC) is KLIC het proces 'Terugmelden Afwijkende Situatie' vernieuwd. Doel is het vereenvoudigen van het melden en afhandelen van afwijkingen op liggingsgegevens van netinformatie. Er is een REST API ontworpen en ontwikkeld voor het proces. 
 
 ### Toelichting vernieuwde proces
-- Het vernieuwde proces is vergelijkbaar met het huidige proces van terugmelden.
+- Het vernieuwde proces is vergelijkbaar met het oude proces van terugmelden.
 - Zie [https://zakelijk.kadaster.nl/melden-afwijkende-situatie-professionele-graver](https://zakelijk.kadaster.nl/melden-afwijkende-situatie-professionele-graver) voor een uitleg.
-- Het vernieuwde proces maakt gebruik van de reeds bestaande mogelijkheden voor terugmelden binnen het Kadaster (bv voor BAG terugmeldingen).  \
-Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder bekend (meestal de gemeente). Bij KLIC is de bronhouder echter niet (altijd) bekend: *Er is sprake van een ‘claim-proces’*. Dit claim-proces bestaat reeds in het huidige terugmeldproces en wordt in het vernieuwde proces gefaciliteerd via een API.
+- Het vernieuwde proces maakt gebruik van andere bestaande mogelijkheden voor terugmelden binnen het Kadaster (bv voor BAG terugmeldingen).  \
+Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder bekend (meestal de gemeente). Bij KLIC is de bronhouder echter niet (altijd) bekend: *Er is sprake van een ‘claim-proces’*. Dit claim-proces bestond ook in het oude terugmeldproces en is in het vernieuwde proces gefaciliteerd via een API.
 
 ### Fasering
-- In januari 2023 start de overgangsfase van 6 maanden. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
+- In januari 2023 is de overgangsfase van 6 maanden gestart. In overleg met het KLIC Gebruikersoverleg is gekozen voor een periode van zes maanden.
 - Wijzigingen vanaf de start van de overgangsfase (10 januari):
   - De mail notificatie is aangepast. Een netbeheerder wordt genotificeerd dat er voor de netbeheerder een Afwijkende Situatie is gemeld.
   - In de mail notificatie worden geen bijlagen meer opgenomen met de Afwijkende Situatie stukken. 
   - Door deze mail notificatie wordt de netbeheerder op de hoogste gesteld van een Afwijkende Situatie.  \
   De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
   De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en bijlagen downloaden om de Afwijkende Situatie melding af te handelen.  \
-  Deze applicatie van het Kadaster zal vanaf 10 januari 2023 beschikbaar gesteld worden. 
+  Deze applicatie van het Kadaster is vanaf 10 januari 2023 beschikbaar gesteld. 
 
 ---
 
@@ -48,7 +49,7 @@ Bij terugmeldingen binnen het Kadaster is over het algemeen de brondhouder beken
 
 ### Hoe te melden (grondroerder):
 Een afwijkende situatie doorgeven aan het Kadaster kan op de volgende wijze:
-- Via een webformulier van het kadaster op deze pagina:   \
+- Tot 1 oktober 2023 kan het via een webformulier van het kadaster op deze pagina:   \
   https://www.kadaster.nl/zakelijk/informatie-per-sector/startpagina-grondroerders/melden-afwijkende-situatie
 - Via de nieuwste versie van de Kadaster KLIC-viewer (vanaf 10 januari 2023)
 - Als u gebruik maakt van een applicatie die aangesloten is op de terugmeld API (vanaf 10 januari 2023).  \
@@ -62,7 +63,7 @@ Toelichting vernieuwde afhandeling an terugmeldingen
   - De netbeheerder kan met behulp van de REST API alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
     Dit 'claim proces' is onderdeel van het berichten-protocol voor netbeheerders. zie daarvoor [de berschrijving van BMKL 2.1](https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie)
   - De netbeheerder kan ook met behulp de Kadaster applicatie in Mijn Kadaster, “KLIC beheren terugmelding netbeheerder”, alle gegevens inzien en de Afwijkende Situatie melding afhandelen.  \
-    Deze applicatie van het Kadaster wordt vanaf 10 januari 2023 beschikbaar gesteld. Om deze zichtbaar te maken in de mijn.kadaster omegeving, moet de eerste mijn.kadaster-beheerder artikel 'KLIC webservice' en 'beheren terugmelding netbeheerder'  toevoegen aan gebruiker om toegang te krijgen tot het terugmeldingen beheerscherm.  \
+    Deze applicatie van het Kadaster is vanaf 10 januari 2023 beschikbaar gesteld. Om deze zichtbaar te maken in de mijn.kadaster omegeving, moet de eerste mijn.kadaster-beheerder artikel 'KLIC webservice' en 'beheren terugmelding netbeheerder'  toevoegen aan gebruiker om toegang te krijgen tot het terugmeldingen beheerscherm.  \
         *Door het toekennen van artikel 'KLIC webservice' kan deze gebruiker ook gebruik maken van de BMKL API, voorzowel het afhandelen van terugmeldingen via de API, als het afhandelen van KLIC-meldingen (bv downloaden beheerdersinformatielevering).*  \
        *Door het toekennen van artikel 'beheren terugmelding netbeheerder' krijgt de gebruiker een 'tegel' op zijn scherm als hij inlogt op mijn.kadaster (maar zonder 'KLIC webservice' heeft hij geen rechten om er gebruik van te maken).*
   
@@ -76,7 +77,7 @@ Graag willen we bij het eerste aansluiten op de API controleren dat de Terugmeld
 ## API-specificatie voor doen van een terugmelding afwijkende situatie
 In de basis gebeurt het terugmelden van een afwijkende situatie voor KLIC via de generieke terugmeld-API van het kadaster.  \
 De specificatie hiervoor is te vinden op:  \
-https://www.pdok.nl/restful-api/-/article/terugmeldingen-1#
+https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen
 
 ###  Autorisatie voor gebruik van API:
 De API is beveiligd door middel van een API-key. U kunt een API-key opvragen voor de acceptatieomgeving (voor test- en aansluitdoeleinden) en de productie omgeving. Vraag eenvoudig uw API-key aan via API-key aanvraagformulier. U ontvangt dan binnen enkele werkdagen uw API-key.  \
@@ -86,12 +87,12 @@ https://formulieren.kadaster.nl/aanvragen_api_key_terumelding_api
 ### Specifieke afspraken voor terugmeldingen die betrekking hebben op de kabel en leiding informatie:
 
 
-| Velden                      | beschrijving/vulling                                                                                                                                                       | in geval van `afwijkende ligging`| in geval van `onbekend net`                               | in geval van `niet gevonden net`| 
+| Velden                      | beschrijving/vulling                                                                                                                                                       | in geval van `afwijkende ligging`| in geval van `onbekend net`                               | in geval van `niet gevonden net`<br> :triangular_flag_on_post: let op: de ondersteuning in de API voor deze situatie wordt uitgefaseerd. <br> De grondroerder dient direct contact op te nemen met de netbeheerder| 
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|----------------------------------------------------------|---------------------------------|
 | coordinates                 | een coördinaat in RD formaat in de buurt van de terugmelding                                                                                                               | verplicht                        | verplicht                                                | verplicht                       | 
 | Registratie                 | altijd `KLIC` voor terugmeldingen die betrekking hebben op afwijkende situaties  van Kabels en/of Leiding                                                                  | verplicht                        | verplicht                                                | verplicht                       | 
 | Bron                        | hiermee geeft u de naam van de applicatie op van waaruit de melding aangemaakt wordt.                                                                                      | verplicht                        | verplicht                                                | verplicht                       | 
-| Situatie                    | er zijn drie opties: `afwijkende ligging`, `onbekend net` en `niet gevonden net`                                                                                           | verplicht: `afwijkende ligging`  | verplicht: `onbekend net`                                | verplicht: `niet gevonden net`  | 
+| Situatie                    | er zijn drie opties: `afwijkende ligging`, `onbekend net` en `niet gevonden net`                                                                                           | verplicht: `afwijkende ligging`  | verplicht: `onbekend net`                                | verplicht: `niet gevonden net` <br> :triangular_flag_on_post: let op: wordt uiegefaserd | 
 | klicmeldnummer              | het nummer waarop de terugmelding betrekking heeft                                                                                                                         | verplicht                        | verplicht                                                | verplicht                       | 
 | objectId                    | hier behoort het GML-id van de kabel/leiding waarop de terugmelding betrekking heeft                                                                                       | verplicht                        | niet van toepassing                                      | verplicht                       | 
 | objectType                  | hier behoort het feature type (zoals genoemd in de klic-melding) van de kabel/leiding waarop de terugmelding betrekking heeft                                             | verplicht                        | niet van toepassing                                      | verplicht                       | 
