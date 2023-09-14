@@ -1,4 +1,22 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 6 september 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 september 2023)
+--------------------------------------------------------------------------------------
+
+## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
+
+Vanaf 31 maart 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
+De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/).
+
+--------------------------------------------------------------------------------------
+
+## Release - begin januari 2024
+
+Voor deze release is het volgende onderwerp gepland:
+
+**GebiedsinformatieAanvragen via REST API**:
+- Er is een endpoint beschikbaar waarmee KLIC-aanvragen kunnen worden ingediend. De werking staat beschreven bij de documentatie.
+- De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
+- Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
+- Tevens is dit de start van de overgangsperiode van 3 maanden waarin ook het huidige SOAP protocol nog beschikbaar is.
 --------------------------------------------------------------------------------------
 
 ## 31 december 2023: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
@@ -24,7 +42,7 @@ In overleg met het KLIC Gebruikers Overleg (KGO) is bepaald dat vanaf 1 oktober 
 
 
 --------------------------------------------------------------------------------------
-## Release – 14 September 2023
+## Release – 14 september 2023
 
 Voor deze release is het volgende onderwerp gepland:
 

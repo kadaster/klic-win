@@ -172,7 +172,7 @@ Voor het gebruik van de nieuwste interfaces voor de KLIC B2B-koppeling dient u g
 - KlicB2B-terugkoppeling-1.1.wsdl  \
   berichten van Kadaster naar aanvrager, in figuur 1 aangegeven als 2a en 3a.
 
-Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Aanvragen gebiedsinformatie/Schemas](/Schemas).
+Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Schemas](/Schemas).
 
 De WSDL’s zijn zoveel mogelijk getoetst op de WS-I Basic profile 1.1 standaard, waaraan de meeste softwareleveranciers zich conformeren. Vanuit het Kadaster wordt het SOAP-protocol versie 1.1 ondersteund.  \
 Berichten dienen te worden samengesteld m.b.v. de UTF-8 karakterset.
@@ -184,7 +184,7 @@ De namespace-prefix kan dan ook per bericht anders zijn. We adviseren u om uw we
 ## 3. Voorbeeldberichten
 
 Met diverse voorbeeldberichten wordt het gebruik van de KLIC B2B-koppeling voor aanvragen van gebiedsinformatie toegelicht.
-Zie daarvoor de map: [Aanvragen gebiedsinformatie/Voorbeelden](/Voorbeelden).
+Zie daarvoor de map: [Voorbeelden](/Voorbeelden).
 
 ---------------------------------------------------------
 ## 4. Interfaces
@@ -219,7 +219,7 @@ Zie daarvoor de map: [Aanvragen gebiedsinformatie/Voorbeelden](/Voorbeelden).
 ---------------------------------------------------------
 ## 5. Validaties
 
-De controles die worden uitgevoerd op een B2B-aanvraag van gebiedsinformatie zijn uitgewerkt in een apart dpcument.  \
+De controles die worden uitgevoerd op een B2B-aanvraag van gebiedsinformatie zijn uitgewerkt in een apart document.  \
 Zie daarvoor [Controles B2B-koppeling gebiedsinformatie-aanvraag](Controles%20B2B-koppeling%20gebiedsinformatie-aanvraag.md).
 
 ---------------------------------------------------------
@@ -234,7 +234,7 @@ Voor zowel het verzenden, als het ontvangen van informatie kan de B2B-aanvraag-d
 
 ### 6.1 Van Kadaster naar aanvrager
 Voor het indienen van de B2B-aanvraag is, conform de voorschriften, een certificaat onder de root “Staat der Nederlanden Private Root CA G1” ('private root') in gebruik.
-Het betreft hier service30.kadaster.nl. Om gebruik te kunnen maken van de B2B-aanvraag-dienst, dient u certificaten uit de “private root” te vertrouwen.
+Het betreft hier service10.kadaster.nl. Om gebruik te kunnen maken van de B2B-aanvraag-dienst, dient u certificaten uit de “private root” te vertrouwen.
 Het OIN van het Kadaster is “00000001802327497000”.  
 Alle gegevens in het certificaat kunnen in de loop van de tijd veranderen. Het certificaat kan verlopen, het Kadaster kan een ander certificaat-uitgever (CA) gaan gebruiken, etc.
 Het OIN van het Kadaster blijft echter altijd gelijk.

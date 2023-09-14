@@ -59,8 +59,9 @@ Of een bepaalde regel van toepassing is, is afhankelijk van (o.a.) het type meld
 Kolom H/I/J geeft een toelichting over de vulling van de velden.  \
 Kolom L-U geeft de validatie meldingen die voor de betreffende regel van toepassing is. 
 
-Er komt Swagger documentatie beschikbaar:  \
-*Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
+Er is Swagger documentatie beschikbaar in de Mijn Kadaster omgeving:  \
+:arrow_forward: [Swagger documentatie](https://service10.kadaster.nl/klic/ntd/portaal/gebiedsinformatieAanvragen/api-docs/).
+
 
 ### 1.3.1 Modelschema onderdeel "bestelling"
 
@@ -193,10 +194,16 @@ De volgende controles worden uitgevoerd:
 ---------------------------------------------------------
 ## 2. Endpoints
 
-*Op een later moment worden de endpoints gecommuniceerd.*  \
-*Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
+Het endpoint wat gebruikt kan worden voor het testen is:  \
+:arrow_forward: [https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen).
 
-(URL is met KLEINE letters)
+
+Aandachtspunten:
+- Deze URL is hoofdletter gevoelig.
+- De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
+- Als het bericht aangenomen wordt, staat er in het bericht een poll-URL. Met deze URL is het validatie resultaat op te vragen.
+- Uit deze aanvraag volgt géén levering: het productieproces is op deze testomgeving niet ingericht.
+
 
 ---------------------------------------------------------
 ## 3. Authenticatie en Autorisatie
@@ -210,7 +217,7 @@ De scopes die nodig zijn voor het doen van een aanvraag zijn:
 
 
 
-Bij het scenario waarbij een serviceprovider de aanvraag doet in naam van een netbeheerder, dient de serviceprovider met zijn eigen gegevens in te loggen. De grondroerder die de applicatie gebruikt dient de serviceprovider te machtigingen om namens de grondroerder de aanvraag te doen.
+Bij het scenario waarbij een serviceprovider de aanvraag doet in naam van een grondroerder, dient de serviceprovider met zijn eigen gegevens in te loggen. De grondroerder die de applicatie gebruikt dient de serviceprovider te machtigingen om namens de grondroerder de aanvraag te doen.
 In het GIA-POST bericht staat in dit scenario bij de aanvrager het relatienummer van de grondroerder.  \
 Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen als dat het nu gebeurt voor netbeheerders die een serviceprovider machtigen. De beschrijving daarvoor [is hier te vinden](https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider).
 
@@ -229,7 +236,7 @@ Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen al
 | **Oauth**:<br>Zie: [deze Github pagina](../../API%20management/Authenticatie_via_oauth.md)                                                                                                                                                                                                                            | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                                       | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                           | App ontwikkelaar: App aanmelden bij OAuth via autorisation-grant-flow                                         |
 |                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
 | **Mijn Kadasterdienst benodigd** (Serviceprovider):                                                                                                                                                                                                                                                                                        | KLIC B2B test aanvraag REST                                                                                                 | nvt                                                                                                             | nvt                                                                                                           |
-| **Mijn Kadasterdienst benodigd** (Grondroerder):                                                                                                                                                                                                                                                                                           | **Organisatie**:<br><br>- KLIC Graafmelding<br>- KLIC Calamiteite<br>- KLIC Orientatieverzoek<br>- KLIC Autoriseren SP                  | **Organisatie**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek | **Gebruiker**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek |
+| **Mijn Kadasterdienst benodigd** (Grondroerder):<br> `KLIC B2B test aanvraag REST` en/of `KLIC Autoriseren SP` nog niet in het KLIC-account aanwezig? Mail naar klic@kadaster.nl <br> Vermeld hierbij uw relatienummer.                                                                                                                                                                                                                                                                                           | **Organisatie**:<br><br>- KLIC Graafmelding<br>- KLIC Calamiteite<br>- KLIC Orientatieverzoek<br>- KLIC Autoriseren SP                  | **Organisatie**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek | **Gebruiker**:<br>- KLIC B2B test aanvraag REST<br>- KLIC Graafmelding<br>- KLIC Calamiteiten<br>- KLIC Orientatieverzoek |
 | **Grondroerder mandaat geven aan serviceprovider**?<br>Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen als dat het nu gebeurt voor netbeheerders die een serviceprovider machtigen. De beschrijving daarvoor is hier te vinden. (https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider) | Ja (om dit mandaat te mogen geven heeft de grondroerder de dienst "KLIC Autoriseren SP" nodig in het Mijn Kadaster account) | nvt                                                                                                             | nvt                                                                                                           |
 
 
