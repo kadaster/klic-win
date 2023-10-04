@@ -6,5 +6,5 @@ De informatie over de belanghebbende bronhouders ('netbeheerders'), hun netwerkg
 In deze map zijn diverse voorbeelden beschikbaar gesteld om de specificaties van de levering te verduidelijken.  \
 
 Een _beheerdersinformatieLevering_ is een "uitsnede" van een _gebiedsinformatieLevering_ met alleen de informatie die de centrale voorziening namens een netbeheerder uitlevert.  \
-In de map [B2B-koppeling beheerdersinformatie (BMKL 2.0)](../B2B-koppeling%20beheerdersinformatie%20(BMKL%202.0)) zijn daarvan verschillende voorbeelden opgenomen.
+In de map [B2B-koppeling beheerdersinformatie (BMKL 2.0)](../BMKL/BMKL%202.0%20(B2B-koppeling%20beheerdersinformatie)) zijn daarvan verschillende voorbeelden opgenomen.
 

@@ -172,7 +172,7 @@ Voor het gebruik van de nieuwste interfaces voor de KLIC B2B-koppeling dient u g
 - KlicB2B-terugkoppeling-1.1.wsdl  \
   berichten van Kadaster naar aanvrager, in figuur 1 aangegeven als 2a en 3a.
 
-Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Schemas](/Schemas).
+Deze WSDL’s en bijbehorende schema’s kunt u vinden in de map: [Schemas](Schemas).
 
 De WSDL’s zijn zoveel mogelijk getoetst op de WS-I Basic profile 1.1 standaard, waaraan de meeste softwareleveranciers zich conformeren. Vanuit het Kadaster wordt het SOAP-protocol versie 1.1 ondersteund.  \
 Berichten dienen te worden samengesteld m.b.v. de UTF-8 karakterset.
@@ -184,7 +184,7 @@ De namespace-prefix kan dan ook per bericht anders zijn. We adviseren u om uw we
 ## 3. Voorbeeldberichten
 
 Met diverse voorbeeldberichten wordt het gebruik van de KLIC B2B-koppeling voor aanvragen van gebiedsinformatie toegelicht.
-Zie daarvoor de map: [Voorbeelden](/Voorbeelden).
+Zie daarvoor de map: [Voorbeelden](Voorbeelden).
 
 ---------------------------------------------------------
 ## 4. Interfaces
