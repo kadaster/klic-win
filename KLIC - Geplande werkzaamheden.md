@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 september 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 4 oktober 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
@@ -29,6 +29,30 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
 - Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
 - Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
+
+--------------------------------------------------------------------------------------
+## Release – 19 oktober 2023
+
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Kadaster KLIC-viewer**:
+- Nieuwe technische eisen Android platform heeft functioneel impact voor gebruikers (ID 8818 en 8848)  
+
+    Android stelt per 1 november 2023 nieuwe eisen aan het gebruik van bestanden in applicaties. Dit heeft ook impact voor de Kadaster KLIC-viewer **Android** applicatie.  \
+Belangrijkste impact is dat na de deze viewer upgrade op 19 oktober oude leveringen (bestanden) in je Android toestel niet meer gebruikt kunnen worden. Met oude leveringen wordt bedoeld: Ouder dan 20 werkdagen (de leveringslink werkt niet meer).  \
+Houdt u aan het standaard advies: Maak een download van de Zip-file die beschikbaar is met de leveringslink. U kunt dan na 19 oktober de oude levering bekijken met de Desktop variant van de Kadaster KLIC-viewer. 
+
+
+**De volgende wijziging geldt voor alle platformen**:
+- Als gebruiker kan ik een levering uit de "recent geopend" lijst verwijderen (ID 7110). Hierdoor houdt je alleen relevante leveringen in de lijst.
+
+**Terugmelden afwijkende situatie**:  
+    Met de sector is afgesproken dat het niet mogelijk meer moet zijn om een niet gevonden net te melden als Afwijking. In dit geval moet er contact opgenomen worden met de netbeheerder waarvan de kabel of leiding niet is gevonden.
+    
+    
+**Kadaster KLIC-viewer**:
+- Als een gebruiker een Afwijkende Situatie type “Niet Gevonden” kiest, wordt een Pop-Up getoond (ID 8793).
 
 --------------------------------------------------------------------------------------
 
