@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 4 oktober 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 5 oktober 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
@@ -36,23 +36,28 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Kadaster KLIC-viewer**:
-- Nieuwe technische eisen Android platform heeft functioneel impact voor gebruikers (ID 8818 en 8848)  
+### Nieuwe versie Kadaster KLIC-viewer:
 
-    Android stelt per 1 november 2023 nieuwe eisen aan het gebruik van bestanden in applicaties. Dit heeft ook impact voor de Kadaster KLIC-viewer **Android** applicatie.  \
-Belangrijkste impact is dat na de deze viewer upgrade op 19 oktober oude leveringen (bestanden) in je Android toestel niet meer gebruikt kunnen worden. Met oude leveringen wordt bedoeld: Ouder dan 20 werkdagen (de leveringslink werkt niet meer).  \
-Houdt u aan het standaard advies: Maak een download van de Zip-file die beschikbaar is met de leveringslink. U kunt dan na 19 oktober de oude levering bekijken met de Desktop variant van de Kadaster KLIC-viewer. 
+**Het gebruik van bestanden in Android applicaties**:  
+- Opslag locatie van KLIC-viewer bestanden in Android apparaat gewijzigd. (ID 8818 en 8848) \
+Android stelt per 1 november 2023 nieuwe eisen aan het gebruik van bestanden in applicaties. Dit heeft ook impact voor de Kadaster KLIC-viewer **Android** applicatie. 
+
+  | Belangrijkste impact is dat na de deze viewer upgrade op 19 oktober oude leveringen (bestanden) in je Android toestel niet meer gebruikt kunnen worden. Met oude leveringen wordt bedoeld: Ouder dan 20 werkdagen (de leveringslink werkt niet meer). |
+|:------|
 
 
-**De volgende wijziging geldt voor alle platformen**:
-- Als gebruiker kan ik een levering uit de "recent geopend" lijst verwijderen (ID 7110). Hierdoor houdt je alleen relevante leveringen in de lijst.
+
+  > Houdt u aan het standaard advies: Maak een download van de Zip-file die beschikbaar is met de leveringslink. U kunt dan na 19 oktober de oude levering bekijken met de Desktop variant van de Kadaster KLIC-viewer.
+  
+ 
+**Mogelijkheid om levering uit de "recent geopend" lijst te verwijderen**:
+- Als gebruiker kan ik een levering uit de "recent geopend" lijst verwijderen (ID 7110).  \
+  Hierdoor houdt je alleen relevante leveringen in de lijst.
 
 **Terugmelden afwijkende situatie**:  
-    Met de sector is afgesproken dat het niet mogelijk meer moet zijn om een niet gevonden net te melden als Afwijking. In dit geval moet er contact opgenomen worden met de netbeheerder waarvan de kabel of leiding niet is gevonden.
-    
-    
-**Kadaster KLIC-viewer**:
-- Als een gebruiker een Afwijkende Situatie type “Niet Gevonden” kiest, wordt een Pop-Up getoond (ID 8793).
+
+  - Als een gebruiker een Afwijkende Situatie type “Niet Gevonden” kiest, wordt een Pop-Up getoond (ID 8793).  \
+        Met de sector is afgesproken dat het niet mogelijk meer moet zijn om een niet gevonden net te melden als Afwijking. In dit geval moet er contact opgenomen worden met de netbeheerder waarvan de kabel of leiding niet is gevonden.
 
 --------------------------------------------------------------------------------------
 
