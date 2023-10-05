@@ -42,7 +42,7 @@ Voor deze release is het volgende onderwerp gepland:
 - Opslag locatie van KLIC-viewer bestanden in Android apparaat gewijzigd. (ID 8818 en 8848) \
 Android stelt per 1 november 2023 nieuwe eisen aan het gebruik van bestanden in applicaties. Dit heeft ook impact voor de Kadaster KLIC-viewer **Android** applicatie. 
 
-  | Belangrijkste impact is dat na de deze viewer upgrade op 19 oktober oude leveringen (bestanden) in je Android toestel niet meer gebruikt kunnen worden. Met oude leveringen wordt bedoeld: Ouder dan 20 werkdagen (de leveringslink werkt niet meer). |
+| Belangrijkste impact is dat na de deze viewer upgrade op 19 oktober oude leveringen (bestanden) in je Android toestel niet meer gebruikt kunnen worden. Met oude leveringen wordt bedoeld: Ouder dan 20 werkdagen (de leveringslink werkt niet meer). |
 |:------|
 
 
