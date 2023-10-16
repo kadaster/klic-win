@@ -42,7 +42,7 @@
 * Documentatie over BMKL API geactualiseerd naar beoogde productieversie (v2)
 * Overzicht met versieverschillen BMKL API v2 t.o.v. vorige versie toegevoegd
 
-22-02-1018
+22-02-2018
 * Voorbeelden verplaatst naar aparte map
 * Oplevering grote set aan voorbeelden (1 t/m 4)
 
