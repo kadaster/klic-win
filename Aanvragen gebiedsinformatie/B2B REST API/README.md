@@ -51,7 +51,7 @@ Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te 
 
 Het modelschema voor een GIA-POST is gebaseerd op het IMKL en heeft daardoor een grote overeenkomst met de GIA-GET-API (die reeds voor netbeheerders beschikbaar is).
 
-:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.85.xlsx).
+:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.86.xlsx).
 
 Er is gekozen voor één modelschema voor alle type aanvragen. Er zijn validatie regels toegevoegd om aan de bestaande business logica te voldoen.
 In het werkblad staat in kolom E en F het modelschema inclusief een voorbeeld.  \
