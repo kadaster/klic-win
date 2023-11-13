@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 5 oktober 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 13 november 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
@@ -29,6 +29,14 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
 - Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
 - Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
+
+--------------------------------------------------------------------------------------
+## Planning voor release – eind november 2023
+
+**GebiedsinformatieAanvragen via REST API**:
+- Voorbereidingen op live-gang van vernieuwing B2B aanvraagproces (REST API).
+- Diverse bugfixes
+- Er worden een aantal technische verbetering doorgevoerd
 
 --------------------------------------------------------------------------------------
 ## Release – 19 oktober 2023
