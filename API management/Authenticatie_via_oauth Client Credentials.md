@@ -11,7 +11,6 @@ Dit document biedt een handleiding voor het aansluiten op de KLIC API's met OAut
 - [Access token opvragen](#access-token-opvragen)
 - [Access token gebruiken](#access-token-gebruiken)
 - [Access token verversen](#access-token-verversen)
-- [Voorbeeld code jwt genereren](#voorbeeld-code-jwt-genereren)
 
 #### Interactief of machine to machine
 Het gebruik vn de KLIC REST API's kunnen we opdelen in 2 scenario's
@@ -21,7 +20,7 @@ Het gebruik vn de KLIC REST API's kunnen we opdelen in 2 scenario's
 #### Werking (machine to machine)
 
 Bij elk request naar een API endpoint moet een access token in de header van het request meegestuurd worden. Om dit token te verkrijgen moeten onderstaande stappen doorlopen worden.
- 
+
 1. Client Applicatie aanmelden. Dit moet éénmalig per client apllicatie gedaan worden.   
 2. Access token opvragen. Dit token geeft toegang tot de API. Dit token is één uur geldig en zal daarna ververst moeten worden.  
 
@@ -66,7 +65,7 @@ Deze klic.ntd.*-scopes mogen niet gebruikt worden bij requests naar de productie
 
 (stap 1,2) 
 
-Om een access token te verkrijgen dient een JWT (client assertion) samengesteld te worden welke met het PKIoverheid certificaat van de organisatie wordt ondertekend. Ter controle van de signature van het JWT dient een JWKS (idealiter via een endpoint) beschikbaar gesteld te zijn met het publieke certificaat. Het PKIoverheid certificaat moet vallen in de Hiërarchie: Staat der Nederlanden Private Root CA - G1. Tevens dient het organisatie OIN te zijn opgenomen in het subject en dit OIN in de Kadaster klant registratie bekend te zijn.
+Om een access token te verkrijgen dient een JWT (client assertion) samengesteld te worden welke met het PKIoverheid certificaat van de organisatie wordt ondertekend. Ter controle van de signature van het JWT dient een JWKS (idealiter via een endpoint) beschikbaar gesteld te zijn met het publieke certificaat. Het PKIoverheid certificaat moet vallen in de Hiërarchie: Staat der Nederlanden Private Root CA - G1. Tevens dient het organisatie-identificatienummer (OIN) of handelsregisternummer (HRN) te zijn opgenomen in het subject en dit OIN of HRN in de Kadaster klant registratie bekend te zijn.
 
 Validatie van het JWT word gedaan adhv de signature en de volgende claims worden geverifieerd:
 * **iss** *(issuer): moet gelijk zijn aan het client id*
@@ -124,7 +123,7 @@ Het token endpoint zal hierop het JWT client assertion valideren en een response
 ```
 Dit access token moet door de client apllicatie op een veilige manier bewaard worden. Het access token moet meegestuurd worden bij elke call naar de API.   
 
-De signature van de JWT wordt gecontroleerd aan de hand van de bij de client geconfigureerde JWKS (idealiter dynamisch adhv de jwks uri opgehaald). De kid in de header van de jwt geeft aan met welke key de signing is uitgevoerd en komt overeen met een kid in het jwks. Het gebruikte certificaat zal worden gecontroleerd op geldigheid en zal onderdeel moeten zijn van de **PKIoverheid chain** en het **OIN  in de Kadaster klant registratie** te zijn opgenomen.
+De signature van de JWT wordt gecontroleerd aan de hand van de bij de client geconfigureerde JWKS (idealiter dynamisch adhv de jwks uri opgehaald). De kid in de header van de jwt geeft aan met welke key de signing is uitgevoerd en komt overeen met een kid in het jwks. Het gebruikte certificaat zal worden gecontroleerd op geldigheid en zal onderdeel moeten zijn van de **PKIoverheid chain** en het **OIN of HRN in de Kadaster klant registratie** te zijn opgenomen.
 
 https://datatracker.ietf.org/doc/html/rfc7517
 
@@ -166,8 +165,4 @@ https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerde
 ```
 
 #### Access token opnieuw opvragen
-Het access token is 1 uur geldig. Als het access token verlopen is dan kan een weer nieuw access token  opgevraagd worden zoals beschreven onder 'Access token opvragen'.  
-
-### Voorbeeld code jwt genereren
-
-Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [KlicOauth_CC_JWT_Example](/API%20management/Voorbeelden/KlicOauth_CC_JWT_Example).
+Het access token is 1 uur geldig. Als het access token verlopen is dan kan een weer nieuw access token  opgevraagd worden zoals beschreven onder 'Access token opvragen'.
