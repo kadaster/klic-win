@@ -11,6 +11,7 @@ Dit document biedt een handleiding voor het aansluiten op de KLIC API's met OAut
 - [Access token opvragen](#access-token-opvragen)
 - [Access token gebruiken](#access-token-gebruiken)
 - [Access token verversen](#access-token-verversen)
+- [Voorbeeld code jwt genereren](#voorbeeld-code-jwt-genereren)
 
 #### Interactief of machine to machine
 Het gebruik vn de KLIC REST API's kunnen we opdelen in 2 scenario's
@@ -166,3 +167,8 @@ https://service10.kadaster.nl/klic/api/v2/gebiedsInformatieAanvragen/netbeheerde
 
 #### Access token opnieuw opvragen
 Het access token is 1 uur geldig. Als het access token verlopen is dan kan een weer nieuw access token  opgevraagd worden zoals beschreven onder 'Access token opvragen'.
+
+
+### Voorbeeld code jwt genereren
+Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [KlicOauth_CC_JWT_Example](/API%20management/Voorbeelden/KlicOauth_CC_JWT_Example).
+
