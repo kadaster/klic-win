@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 24 november 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 7 december 2023)
 --------------------------------------------------------------------------------------
 
 ## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
@@ -6,9 +6,22 @@
 Vanaf 31 maart 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
 De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/).
 
---------------------------------------------------------------------------------------
 
-## Release - begin januari 2024
+--------------------------------------------------------------------------------------
+## 31 maart 2024: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders (gewijzigd)
+
+De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat veranderen. Er zal -zoals gebruikelijk- een overgangsperiode van een half jaar gelden. Binnen de overgangsperiode kunnen zowel de oude als de nieuwe methodes gebruikt worden. Na afloop van de overgangsperiode kunnen alleen de nieuwe methodes nog gebruikt worden.  
+  \
+  De overgangsperiode start op **1 juli 2023** en zal eindigen op **31 maart 2024** (was 31 december).  Het nieuwe einde van de overgangsperiode is in overleg met het KLIC gebruikersoverleg ([KGO KLIC]([https://www.kadaster.nl/-/klic-ledenlijst-klic-kgo)) verplaatst naar 31 maart 2024.
+
+**Meer informatie**
+- Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
+- Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
+- Technische documentatie is te vinden op [deze Github pagina](API%20management/Authenticatie_via_oauth.md).
+- Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [deze Github pagina bij KlicOauth_CC_JWT_Example](API%20management/Voorbeelden/KlicOauth_CC_JWT_Example)
+
+--------------------------------------------------------------------------------------
+## Release - 9 januari 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -17,19 +30,6 @@ Voor deze release is het volgende onderwerp gepland:
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
 - Tevens is dit de start van de overgangsperiode van 3 maanden waarin ook het huidige SOAP protocol nog beschikbaar is.
---------------------------------------------------------------------------------------
-
-## 31 december 2023: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders
-
-De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat veranderen. Er zal -zoals gebruikelijk- een overgangsperiode van een half jaar gelden. Binnen de overgangsperiode kunnen zowel de oude als de nieuwe methodes gebruikt worden. Na afloop van de overgangsperiode kunnen alleen de nieuwe methodes nog gebruikt worden.  
-  \
-  De overgangsperiode start op **1 juli 2023** en zal eindigen op **31 december 2023**.
-
-**Meer informatie**
-- Op 2 juni zijn in een technische bijeenkomst voor netbeheerders en serviceproviders de wijzigingen toegelicht. [De presentaties van deze bijeenkomst](Presentaties%20bijeenkomsten/KLIC%20Technische%20Bijeenkomst/2023-06-02) zijn beschikbaar. 
-- Testen is al mogelijk: Sinds 7 juni zijn de nieuwe methodes beschikbaar in de KLIC-systemen ([zie de releasenotes van de release van 6 juni](#planning-voor-release--6-juni-2023)). 
-- Technische documentatie is te vinden op deze [Github pagina](API%20management/Authenticatie_via_oauth.md).
-
 --------------------------------------------------------------------------------------
 ## Release – NTD: 23 november 2023; Productie: 28 november 2023
 
