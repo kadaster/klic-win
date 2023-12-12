@@ -1,6 +1,24 @@
 # Geplande en uitgevoerde werkzaamheden (bijgewerkt 7 december 2023)
 --------------------------------------------------------------------------------------
 
+## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
+Voor KLIC-relaties geldt dat zij vanaf 1 juli 2024 verplicht op [Mijn Kadaster](https://mijn.kadaster.nl/) moeten inloggen met eHerkenning op minimaal niveau EH3.  
+ 
+**Let op: Gebruikt u bijvoorbeeld ook Kadaster-on-line binnen uw organisatie?**   
+Vanaf 1 juli 2024 geldt deze verplichting ook voor gebruikers met toegang tot onderstaande Mijn Kadaster-diensten: 
+- Kadaster-on-line  
+- KIK Inzage  
+- Kadata Internet  
+
+**Bepaal de impact voor uw organisatie**  \
+Om de impact te bepalen voor uw organisatie en noodzakelijke acties uit te voeren, hebben wij voor de Mijn Kadaster KLIC 1e beheerder een [beslisboom](Wijzigingen/eHerkenning/Beslisboom-eHerkenning-1jul2024-KLIC.pdf) opgesteld.  \
+In de [beslisboom](Wijzigingen/eHerkenning/Beslisboom-eHerkenning-1jul2024-KLIC.pdf) hebben wij voor de Mijn Kadaster rollen 1e beheerder, beheerder en gebruiker de impact en acties stapsgewijs weergegeven.  
+
+**Meer informatie**:
+- Ga naar [deze GitHub pagina over eHerkenning](Wijzigingen/eHerkenning/)
+
+--------------------------------------------------------------------------------------
+
 ## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
 
 Vanaf 31 maart 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
@@ -30,6 +48,17 @@ Voor deze release is het volgende onderwerp gepland:
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
 - Tevens is dit de start van de overgangsperiode van 3 maanden waarin ook het huidige SOAP protocol nog beschikbaar is.
+
+--------------------------------------------------------------------------------------
+## Release - 11 december 2023
+
+**Standaard informatiepolygoon bij KLIC-melding via Mijn Kadaster**:  \
+Bij het doen van een Graaf- of Calamiteitmelding krijgt u in Mijn Kadaster na het sluiten van de graafpolygoon direct een informatiepolygoon. Deze informatiepolygoon is een buffer van 10 meter, deze kunt u nog groter maken of op 0 stellen.
+-	Door de informatiepolygoon krijgt u ook gegevens van de omgeving van uw graafgebied. De verkregen informatie kunt u gebruiken ter oriëntatie op de omgeving van uw werkterrein.
+-	De gegevens buiten het graafgebied, dus van de informatiepolygoon worden uitgeleverd zonder dat hiervoor een eis voorzorgsmaatregel (EV) geldt.
+-	**Let op!** U mag alleen graven binnen uw graafgebied (en dus niet in de roze informatiepolygoon)
+
+
 --------------------------------------------------------------------------------------
 ## Release – NTD: 23 november 2023; Productie: 28 november 2023
 
