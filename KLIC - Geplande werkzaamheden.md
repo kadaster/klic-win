@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 7 december 2023)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 januari 2024)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -39,7 +39,7 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [deze Github pagina bij KlicOauth_CC_JWT_Example](API%20management/Voorbeelden/KlicOauth_CC_JWT_Example)
 
 --------------------------------------------------------------------------------------
-## Release - 9 januari 2024
+## Release - begin februari 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
