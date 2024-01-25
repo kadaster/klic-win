@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 januari 2024)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 25 januari 2024)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -48,6 +48,17 @@ Voor deze release is het volgende onderwerp gepland:
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
 - Tevens is dit de start van de overgangsperiode van 3 maanden waarin ook het huidige SOAP protocol nog beschikbaar is.
+
+
+--------------------------------------------------------------------------------------
+## Release – 30 januari 2024
+
+**Verplicht opgeven opdrachtgever bij Graafmelding**:  \
+Volgens de CROW 500 is het verplicht om de opdrachtgever van de werkzaamheden te noteren.  \
+Om u te helpen dit niet over het hoofd te zien en bewust in te vullen hebben we ervoor gezorgd dat er standaard gevraagd wordt de gegevens van de opdrachtgever in te vullen.  \
+Tijdens het invoeren van uw KLIC-graafmelding krijgt u het invoerscherm Wie is uw opdrachtgever?  U vult hier de gevraagde gegevens van uw Opdrachtgever in. U kunt deze gegevens eventueel ophalen uit uw opgeslagen Contacten via het linkje ‘Mijn Contacten’.  \
+Is uw eigen organisatie ook de opdrachtgever? Selecteer dan ‘Mijn organisatie is de opdrachtgever’. De gegevens worden dan automatisch gevuld.  \
+    ![Iemand anders is de opdrachtgever](Aanvragen%20gebiedsinformatie/images/Graafmelding-opdrachtgever.png "Iemand anders is de opdrachtgever")  
 
 --------------------------------------------------------------------------------------
 ## Release - 11 december 2023
