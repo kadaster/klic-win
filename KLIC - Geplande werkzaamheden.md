@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 25 januari 2024)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 20 februari
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -19,9 +19,9 @@ In de [beslisboom](Wijzigingen/eHerkenning/Beslisboom-eHerkenning-1jul2024-KLIC.
 
 --------------------------------------------------------------------------------------
 
-## 31 maart 2024: einde overgangsperiode B2B aanvraag via SOAP
+## 1 juli 2024: einde overgangsperiode B2B aanvraag via SOAP
 
-Vanaf 31 maart 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
+Vanaf 1 juli 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
 De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/).
 
 
@@ -39,7 +39,7 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [deze Github pagina bij KlicOauth_CC_JWT_Example](API%20management/Voorbeelden/KlicOauth_CC_JWT_Example)
 
 --------------------------------------------------------------------------------------
-## Release - begin februari 2024
+## Release - medio maart 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -47,11 +47,11 @@ Voor deze release is het volgende onderwerp gepland:
 - Er is een endpoint beschikbaar waarmee KLIC-aanvragen kunnen worden ingediend. De werking staat beschreven bij de documentatie.
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
-- Tevens is dit de start van de overgangsperiode van 3 maanden waarin ook het huidige SOAP protocol nog beschikbaar is.
+- De overgangsperiode (waarin ook het huidige SOAP protocol nog beschikbaar is) eindigt op 1 juli 2024.
 
 
 --------------------------------------------------------------------------------------
-## Release – 30 januari 2024
+## Release – 6 februari 2024
 
 **Verplicht opgeven opdrachtgever bij Graafmelding**:  \
 Volgens de CROW 500 is het verplicht om de opdrachtgever van de werkzaamheden te noteren.  \
