@@ -60,7 +60,7 @@ Kolom H/I/J geeft een toelichting over de vulling van de velden.  \
 Kolom L-U geeft de validatie meldingen die voor de betreffende regel van toepassing is. 
 
 Er is Swagger documentatie beschikbaar in de Mijn Kadaster omgeving:  \
-:arrow_forward: [Swagger documentatie](https://service10.kadaster.nl/klic/ntd/portaal/gebiedsinformatieAanvragen/api-docs/).
+:arrow_forward: [Swagger documentatie](https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20aanvraag%20api).
 
 
 ### 1.3.1 Modelschema onderdeel "bestelling"
