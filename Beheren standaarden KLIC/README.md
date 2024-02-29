@@ -22,16 +22,17 @@ Uitgangspunten met betrekking tot de wijzigingen zijn:
 - ruim van te voren communiceren of er wel of niet geplande wijzigingen voorzien zijn op de KLIC-standaarden;
 - wijzigingen en het wijzigingsproces zijn inzichtelijk voor de gebruikers;
 
-In **2020** zijn de gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BMKL) vastgelegd. Het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden zal per januari **2022** mogelijk zijn.
+De afgelopen jaren zijn er weer nieuwe gewenste wijzigen op de KLIC-standaarden (IMKL, PMKL en BMKL) vastgelegd. De planning voor het daadwerkelijk implementeren en aansluiten op de gewijzigde standaarden zal in 2024 duidelijk worden.
 
-## Upgrade KLIC standaarden zijn vastgelegd
+## Traject upgrade KLIC standaarden gestart
 
 Aan de hand van aangedragen issue's heeft de Technische Commissie Standaarden wijzigingen op de KLIC-standaarden voorgesteld.  \
-Deze zijn vervolgens door Geonovum en het Kadaster verwerkt in een update van de standaarden en in juli/augustus 2020 ter consultatie voorgelegd.
-De commissie heeft de aandachtspunten uit de terugkoppeling behandeld. De aanpassingen zijn verwerkt in een nieuwe versie en definitief vastgelegd. \
-Zie de website van Geonovum: https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen en https://register.geostandaarden.nl/?url=kabelsleidingen/imkl
+Deze worden vervolgens door Geonovum en het Kadaster verwerkt in een update van de standaarden ter consultatie voorgelegd. De commissie gaat de aandachtspunten uit de terugkoppeling behandelen.
 
-Dit betreft dan IMKL 2.0, PMKL 2.0 en BMKL 2.1.
+  
+Zie de website van Geonovum: https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen  en https://register.geostandaarden.nl/?url=kabelsleidingen/imkl
+
+Er zal en sectorprogramma “Upgrade KLIC standaarden” georganiseerd worden in opdracht van het BAO KLIC. Net als in 2022 zal de implementatie gefaseerd zijn.
 
 ## Onderwerpen TCS
 
@@ -39,42 +40,63 @@ Op deze GitHub-pagina's wordt een terugkoppeling gegeven van de onderwerpen en i
 
 Hieronder worden onderwerpen genoemd die momenteel in behandeling zijn.
 
-- Continu beheer van issue-lijst (GitHub geregistreerde issues)
-  - Issues IMKL en PMKL (visualisatie);
-  - Issues BMKL, REST-API’s;
-  - Nieuwe (waarde)lijst soort werkzaamheden;
-  - Vastleggen mantelbuizen waar meerdere kabels en leidingen doorheen gaan;
-  - Onderzoek en bepalen “Relevante eigenschappen van het net”;
-  - Onderzoek gebruik kabelbed(geul) door netbeheerders en de visualisatie;
+Continu beheer van issue-lijst (GitHub geregistreerde issues)
+- Issues IMKL en PMKL (visualisatie);
+- Issues BMKL, REST-API’s;
+- Nieuwe (waarde)lijst soort werkzaamheden;
+- Vastleggen mantelbuizen waar meerdere kabels en leidingen doorheen gaan;
+- Vastleggen “Relevante eigenschappen van het net”;
+- Extra informatie vastleggen kabelbed(geul) door netbeheerders;
+- Nieuwe versie objectcatalogus
 
-- Resultaten werkgroep Soort werkzaamheden
-  - De huidige lijst met Soort werkzaamheden is geupdate en de resultaten kunnen beoordeeld worden door de sector.
-  - [Hier is de versie gepubliceerd](Soort%20Werkzaamheden%201%20april%202022.pdf) met een toelichting.
-  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
-  
-- Resultaten werkgroep Kabelbed
-  - De informatievoorziening  m.b.t. een kabelbed moet verbeterd worden.
-  - De werkgroep heeft een voorstel uitgewerkt die [hier gepubliceerd is](Kabelbed%201%20april%202022.pdf).
-  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
-  
-- Resultaten werkgroep relevante eigenschappen van het net
-  - Bij het gebruik van de viewers moet voor de grondroerder nog beter de belangrijkste attributen als eerst getoond worden.
-  - In de upgrade van de KLIC standaarden per januari 2022 is er al een sortering wettelijk vastgelegd, echter gebruikers hebben hier alweer een verdere verfijning van gewenst.
-  - De werkgroep heeft een aantal punten uitgewerkt 
-    - De naamgeving of vertaling van de attributen
-    - De restricties van de attributen
-    - Welke attributen relevante eigenschappen van het net zijn
-  - [Hier is een concept versie gepubliceerd](Relevante%20eigenschappen%20van%20het%20net%201%20april%202022.xlsx) die gebruikt kan worden om binnen je eigen organisatie te bespreken.
-  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
-  
-- Resultaten werkgroep mantelbuizen
-  - Bij het aanleveren van mantelbuizen kan het voorkomen dat één netbeheerder meerdere thema’s in één mantelbuis heeft of meerder netbeheerders gebruik maken van dezelfde mantelbuis
-  - Het huidige IMKL en PMKL is niet geschikt om hiermee om te gaan
-  - De werkgroep heeft een aantal punten uitgewerkt
-    - Éen netbeheerder meerdere thema’s in één mantelbuis (aanleveren)
-    - Meerdere netbeheerders gebruiken dezelfde mantelbuis (aanleveren)
-    - Impact op het IMKL en PMKL
-  - [Hier is een concept versie gepubliceerd](Mantelbuizen%201%20april%202022.pdf) die gebruikt kan worden om binnen je eigen organisatie te bespreken.
-  - Eventuele feedback kan via je [technische commissie lid](https://www.kadaster.nl/zakelijk/registraties/landelijke-voorzieningen/klic/klic-overlegorganen) gegeven worden
+Het complete overzicht met de [issues die behandeling zijn, is hier](https://github.com/Geonovum/imkl2015-review/issues) te vinden.  
 
-Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.
+Een aantal beoogde aanpassingen zijn door middel van een TCS KLIC werkgroep uitgewerkt met de sector. Hieronder worden deze extra toegelicht
+
+**Resultaten werkgroep Soort werkzaamheden**
+  - Dit is link naar het gerelateerde [GitHub issue #347](https://github.com/Geonovum/imkl2015-review/issues/346)  
+- De nieuwe lijst (resultaten) met Soort werkzaamheden zijn beoordeeld door de sector.
+- [Hier is de versie gepubliceerd](Soort%20Werkzaamheden%201%20april%202022.pdf) met een toelichting.
+
+
+**Resultaten werkgroep Kabelbed**
+- Dit is link naar het gerelateerde [GitHub issue #347](https://github.com/Geonovum/imkl2015-review/issues/347)  
+- De informatievoorziening m.b.t. een kabelbed moet verbeterd worden.
+- De gebruikers hebben aangegeven meer informatie te willen over de specifieke kabels in het kabelbed.
+- Een verdere detaillering van de data in een Kabelbed en hierdoor een betere representatie van de werkelijkheid.
+- De werkgroep heeft een voorstel uitgewerkt en dit is beoordeeld door de sector.
+- [Hier is de wijziging gepubliceerd](Kabelbed%201%20april%202022.pdf) met een toelichting.
+
+  
+**Resultaten werkgroep relevante eigenschappen van het net**
+- Dit is link naar het gerelateerde [GitHub issue #345](https://github.com/Geonovum/imkl2015-review/issues/345)  
+-	Bij het gebruik van de viewers moet voor de grondroerder nog beter de belangrijkste attributen als eerst getoond worden.
+-	In de upgrade van de KLIC standaarden per januari 2022 is er al een [sortering/ordening](https://register.geostandaarden.nl/visualisatie/imkl/2.0.0/IMKL-Ordening-attributen-viewer-(2020-11-05).xlsx)  wettelijk vastgelegd, echter gebruikers hebben hier alweer een verdere verfijning van gewenst.  
+-	De werkgroep heeft een aantal punten uitgewerkt
+    -	Welke attributen relevante eigenschappen van het net zijn
+    -	De naamgeving of vertaling van de attributen
+    -	De restricties van de attributen
+-	De werkgroep heeft een voorstel uitgewerkt en dit is beoordeeld door de sector.
+-	[Hier is de wijziging](Relevante%20eigenschappen%20van%20het%20net%201%20april%202022.xlsx) gepubliceerd met een toelichting.
+
+
+**Resultaten werkgroep mantelbuizen**
+- Dit is link naar het gerelateerde [GitHub issue #324](https://github.com/Geonovum/imkl2015-review/issues/324)  
+-	Bij het aanleveren van mantelbuizen kan het voorkomen dat één netbeheerder meerdere thema’s in één mantelbuis heeft of meerder netbeheerders gebruik maken van dezelfde mantelbuis
+-	Het huidige IMKL en PMKL is niet geschikt om hiermee om te gaan
+-	De werkgroep heeft een aantal punten uitgewerkt
+    -	Éen netbeheerder meerdere thema’s in één mantelbuis (aanleveren)
+    -	Meerdere netbeheerders gebruiken dezelfde mantelbuis (aanleveren)
+    -	Impact op het IMKL en PMKL
+-	De werkgroep heeft een voorstel uitgewerkt en dit is beoordeeld door de sector.
+-	[Hier is de wijziging](Mantelbuizen%201%20april%202022.pdf) gepubliceerd met een toelichting.
+
+
+**Resultaten werkgroep review objectcatalogus**
+-	Dit is link naar het gerelateerde [GitHub issue #351](https://github.com/Geonovum/imkl2015-review/issues/351)  
+-	De IMKL Objectcatalogus bevat alle objecttypen, hun attributen en relaties, waardelijsten die in IMKL voorkomen. Al deze informatie-elementen zijn voorzien van een definitie en eventueel een toelichting. Het document is daarmee een normatief onderdeel van de dataspecificatie IMKL. In de praktijk is gebleken dat niet alle termen een duidelijk begrijpbare definitie en of toelichting hebben die aansluit bij het gebruik. Een review en aanpassing waar nodig verbetert het begrip en juist gebruik van het IMKL.
+-	De werkgroep heeft een voorstel uitgewerkt en dit is beoordeeld door de sector.
+-	[Hier is de wijziging](WG%20IMKL-Objectcatalogus-2.0-review2023.pdf) gepubliceerd met een toelichting.
+
+
+ Als u vragen heeft kunt u een mail sturen naar klic@kadaster.nl.

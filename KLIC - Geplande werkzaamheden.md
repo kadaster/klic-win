@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 20 februari
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 29 februari
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -49,6 +49,15 @@ Voor deze release is het volgende onderwerp gepland:
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
 - De overgangsperiode (waarin ook het huidige SOAP protocol nog beschikbaar is) eindigt op 1 juli 2024.
 
+--------------------------------------------------------------------------------------
+## Release – 27 februari 2024
+
+**Nieuwe versie Swagger UI op de NTD**:
+- Voor diverse API's biedt het Kadaster de mogelijkheid deze te testen met behulp van Swagger UI. Hiervan is een nieuwere versie beschikbaar die een andere layout heeft gekregen.
+    - In het dropdown menu `Select a definition` kunt u kiezen voor de verschillende endpoints.
+
+**Overig**:
+- Er zijn een aantal (technische) verbeteringen doorgevoerd.
 
 --------------------------------------------------------------------------------------
 ## Release – 6 februari 2024
