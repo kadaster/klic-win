@@ -51,7 +51,7 @@ Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te 
 
 Het modelschema voor een GIA-POST is gebaseerd op het IMKL en heeft daardoor een grote overeenkomst met de GIA-GET-API (die reeds voor netbeheerders beschikbaar is).
 
-:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.87.xlsx).
+:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.88.xlsx).
 
 Er is gekozen voor één modelschema voor alle type aanvragen. Er zijn validatie regels toegevoegd om aan de bestaande business logica te voldoen.
 In het werkblad staat in kolom E en F het modelschema inclusief een voorbeeld.  \
@@ -81,8 +81,30 @@ Als er -bijvoorbeeld door een netwerkverstoring- een bericht met hetzelfde ID me
 
 ### 1.3.2 Modelschema onderdeel "testparameters"
 
-In het geval van een Netbeheerder test (op de NTD) zijn bepaalde stuurparemters nodig. Dit wordt vooralsnog niet geimplementeerd.  \
-*Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates.*
+Een netbeheerder die een test wil doen, kan ook een melding aanbieden via de REST-API. Hiervoor is een eigen endpoint beschikbaar. In het geval van een Netbeheerder test (op de NTD) zijn bepaalde stuurparemters nodig. Deze parameters zijn niet toegestaan voor grondroerder testen of op de productie omgeving. Een melding wordt dan afgekeurd.
+  
+> N.B. een endpoint waarop netbeheerder testmeldingen gedaan kunnen worden, wordt op een later moment gecommuniceerd.  
+
+> N.B. Meldingen worden op dezelfde manier verwerkt als meldingen die via het portaal zijn aangemaakt. Hiermee kan de netbeheerder een (de)centrale aanlevering  simuleren en de BeheerdersinformatieLeverings-zip downloaden
+
+De testParameter velden zijn gedocumenteerd in het Excel bestand die te vinden is in [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie).  \
+Hieronder staan de velden die alleen voor netbeheerders testen van toepassing zijn ook toegelicht:
+```json
+"testParameters": {
+  "centraleAanlevering": false,
+  "belanghebbendeBronhoudercodes": [
+    "string"
+  ],
+  "endpointGiaNotificatie": "string",
+  "endpointTerugmeldNotificatie": "string"
+},
+```
+
+- het veld `centraleAanlevering` dient gebuikt te worden om aan te geven of het een test betreft voor een centrale nebeheerder (`true`) of een decentrale netbeheerder (`false`). Deze keuze is ook op het scherm in het NTD portaal  beschikbaar.
+- het veld `belanghebbendeBronhoudercodes` dient gevuld te worden met de bronhoudercode van de netbeheerder voor wie de test is.
+- bij het veld `endpointGiaNotificatie`  moet een URL ingevuld worden waarop de netbeheerder een PING ontvangt dat er een GIA beschikbaar is. Dit veld is ook  op het scherm in het NTD portaal  beschikbaar.
+- het veld `endpointTerugmeldNotificatie` is nog niet geimplementeerd.
+
 
 ### 1.3.3. Modelschema onderdeel "gebiedsinformatie aanvragen"
 
@@ -194,8 +216,13 @@ De volgende controles worden uitgevoerd:
 ---------------------------------------------------------
 ## 2. Endpoints
 
-Het endpoint wat gebruikt kan worden voor het testen is:  \
-:arrow_forward: [https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen).
+### Grondroerders
+
+Het **test** endpoint wat door grondroerders (of door serviceproviders namens grondroerders) gebruikt kan worden voor het testen is:  \
+:arrow_forward: [https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen)  
+
+Het **productie** endpoint wat door grondroerders (of door serviceproviders namens grondroerders) gebruikt kan worden voor het testen is:  \
+:arrow_forward: [https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieaanvragen)
 
 
 Aandachtspunten:
@@ -203,7 +230,18 @@ Aandachtspunten:
 - De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
 - Als het bericht aangenomen wordt, staat er in het bericht een poll-URL. Met deze URL is het validatie resultaat op te vragen.
 - Uit deze aanvraag volgt géén levering: het productieproces is op deze testomgeving niet ingericht.
+- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))  
 
+### Netbeheerders
+Het test endpoint wat door **netbeheerders** (of door serviceproviders namens netbeheerders) gebruikt kan worden voor het testen is:  \
+:arrow_forward: [https://service10.kadaster.nl/klic/ntd/testaanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/testaanvragen/v1/gebiedsinformatieaanvragen)
+
+Aandachtspunten:
+- Deze URL is hoofdletter gevoelig.
+- De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
+- Als het bericht aangenomen wordt, staat er in het bericht een poll-URL. Met deze URL is het validatie resultaat op te vragen.
+- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))  
+- Conform de huidige werking van de NTD is het mogelijk om het aanleverproces zowel centraal an decentraal te testen en wordt er een  BeheerdersInformatieLevering-zip beschikbaar gesteld.
 
 ---------------------------------------------------------
 ## 3. Authenticatie en Autorisatie
@@ -214,6 +252,7 @@ De Authenticatie verloopt net als de ander KLIC API's via OAuth.  \
 De scopes die nodig zijn voor het doen van een aanvraag zijn:
 - Testomgeving: `klic.eto.b2baanvraag`
 - Productie: `klic.b2baanvraag`
+- NetbeheersTestDient (NTD:) `klic.ntd.gebiedsinformatieaanvraag.readonly`
 
 
 
@@ -221,13 +260,15 @@ Bij het scenario waarbij een serviceprovider de aanvraag doet in naam van een gr
 In het GIA-POST bericht staat in dit scenario bij de aanvrager het relatienummer van de grondroerder.  \
 Het autoriseren van serviceproviders zal op vergelijkbare wijze gaan verlopen als dat het nu gebeurt voor netbeheerders die een serviceprovider machtigen. De beschrijving daarvoor [is hier te vinden](https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider).
 
+Het `relatienummer` van de `aanvrager` dient uit 10 tekens te bestaan en moet aangevuld worden met voorloop-nullen.
+
 ## 3.1 Overzicht per scenario
 
 |                                                                                                                                                                                                                                                                         Scenario:                                                          | Grondroerder die melding doet via SP-app met CC                                                                             | Grondroerder die melding doet via eigen app met CC                                                              | Grondroerder die melding doet via app met EH3 of mijn-kadasterlogin                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
 | **App ontwikkeld door**:                                                                                                                                                                                                                                                                                                                   | Serviceprovider                                                                                                             | Grondroerder                                                                                                    | Serviceprovider of Grondroerder                                                                               |
 | **Te gebruiken token bij de API**:<br>Zie: [deze Github pagina](../../API%20management/Authenticatie_via_oauth.md)                                                                                                                                                                                                    | Serviceprovider                                                                                                             | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
-| **Relatienummer bij aanvrager van**:<br>Je kan je relatienummer vinden door in te loggen op Mijn Kadaster op de pagina profielinstellingen onder het kopje "klantnummer"                                                                                                                                                                   | Grondroerder                                                                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
+| **Relatienummer bij aanvrager van**:<br>Je kan je relatienummer vinden door in te loggen op Mijn Kadaster op de pagina profielinstellingen onder het kopje "klantnummer". Je geeft deze op inclusief voorloop-nullen om op 10 tekens te komen.                                                                                                                                                                    | Grondroerder                                                                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
 |                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
 | **Mijn kadasteraccount nodig**:<br>Zie: https://formulieren.kadaster.nl/aanmelden_klic (rol: serviceprovider)                                                                                                                                                                                                                              | Grondroerder en serviceprovider (met de rol Serviceprovider)                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
 | **PKI overheidscertificaat nodig**:<br>Zie https://www.logius.nl/domeinen/toegang/pkioverheid/aanvragen                                                                                                                                                                                                                                    | Serviceprovicer                                                                                                             | Grondroerder                                                                                                    | nvt                                                                                                           |

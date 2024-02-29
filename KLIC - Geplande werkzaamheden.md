@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 29 februari
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 29 februari)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -39,7 +39,7 @@ De methode waarmee ***Netbeheerders*** toegang krijgen tot de KLIC-API’s gaat 
 - Voorbeeld code voor het genereren van JWKS en JWT in java is beschikbaar op [deze Github pagina bij KlicOauth_CC_JWT_Example](API%20management/Voorbeelden/KlicOauth_CC_JWT_Example)
 
 --------------------------------------------------------------------------------------
-## Release - medio maart 2024
+## Release - 1 maart 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -48,6 +48,11 @@ Voor deze release is het volgende onderwerp gepland:
 - De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
 - Er is een testomgeving beschikbaar sinds [14 september 2023](#release--14-september-2023).
 - De overgangsperiode (waarin ook het huidige SOAP protocol nog beschikbaar is) eindigt op 1 juli 2024.
+
+**Netbeheerder testaanvragen in NTD via REST API**:
+- Het is mogelijk om middels een REST API op een eigen endpoint een testaanvraag voor netbeheerders te doen in de NTD.
+- De documentatie voor het testmelding proces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/). 
+
 
 --------------------------------------------------------------------------------------
 ## Release – 27 februari 2024
