@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 6 maart)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 19 maart)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -34,11 +34,11 @@ Voor deze release is het volgende onderwerp gepland:
 - Middels een REST-API kan de downloadlink van een KLIC levering worden opgehaald. Deze downloadlink komt overeen met de downloadlink uit de leverings email. Hiermee is na de  levering de KLICmelding 20 werkdagen te downloaden.  \
 Dit is als navolging op de live-gang van de [GebiedsinformatieAanvragen via REST API](#release---1-maart-2024) waarbij via een B2B-koppeling een bericht aan het Kadaster worden aangeboden met daarin een aanvraag voor gebiedsinformatie.
 
-Documentatie volgt nog.
+:arrow_forward: De documentatie voor het opvragen van de downloadlink voor de levering via een REST API is te vinden op deze [Github pagina](Uitleveren/B2B%20REST%20API/). 
 
 --------------------------------------------------------------------------------------
 
-## Release - april 2024
+## Release - 8 april 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -48,7 +48,7 @@ Voor deze release is het volgende onderwerp gepland:
   - Mogelijkheid om levering uit de "recent geopend" lijst te verwijderen. Als gebruiker kan ik een levering uit de "recent geopend" lijst verwijderen. Hierdoor houd je alleen relevante leveringen in de lijst. 
 
 - Het gebruik van de Kadaster KLIC-viewer online-versie:
-  - In de Kadaster KLIC-viewer is het in de online-versie mogelijk om de KLIC-uitlevering (Zipfile) via de viewer te downloaden. Als de gebruiker de levering online wil bekijken, krijgt de gebruiker de optie om deze te downloaden. De gebruiker kan hiermee de KLIC-uitlevering (Zipfile) na 20 werkdagen eventueel in de Exe-versie bekijken.
+  - In de Kadaster KLIC-viewer is het in de online-versie mogelijk om de KLIC-uitlevering (Zipfile) via de viewer te downloaden. Als de gebruiker de levering online wil bekijken, krijgt de gebruiker de optie om deze te downloaden. De gebruiker kan hiermee de KLIC-uitlevering (Zipfile) ook ná de 20e werkdag nog bekijken.
 
 --------------------------------------------------------------------------------------
 ## 31 maart 2024: einde overgangsperiode wijziging toegang KLIC-API’s Netbeheerders (gewijzigd)
