@@ -331,7 +331,7 @@ Content-Type: application/json
 ```
 
 ## gebiedsinformatieLeveringen synchroniseren
-GET /gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01  
+GET /gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02T10:00:00%2B01  
 Scope: klic.gebiedsinformatieaanvraag.readonly of klic.toezicht    
 
 ``` http
@@ -343,10 +343,10 @@ Content-Type: application/json
 {
     "_links": {
         "self": {
-            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02T10:00:00%2B01"
         },
         "next": {
-            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/gebiedsinformatieLeveringen?datumType=mutatieDatum&datumVanaf=2017-11-02T09:35:22.323%2B01&datumTot=2017-11-02T10:00:00%2B01"
         }
     },
     "gebiedsinformatieLeveringen": [{

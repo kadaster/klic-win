@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 19 maart)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 24 april)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -26,7 +26,7 @@ De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden
 
 --------------------------------------------------------------------------------------
 
-## Release - april 2024
+## Release - NTD 2 mei 2024; productie 7 mei 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
@@ -35,6 +35,17 @@ Voor deze release is het volgende onderwerp gepland:
 Dit is als navolging op de live-gang van de [GebiedsinformatieAanvragen via REST API](#release---1-maart-2024) waarbij via een B2B-koppeling een bericht aan het Kadaster worden aangeboden met daarin een aanvraag voor gebiedsinformatie.
 
 :arrow_forward: De documentatie voor het opvragen van de downloadlink voor de levering via een REST API is te vinden op deze [Github pagina](Uitleveren/B2B%20REST%20API/). 
+
+**Terugmelden afwijkende situatie**:  \
+Sinds de invoering van het terugmeldproces via de API is het de bedoeling dat een netbeheerder aangeeft of een terugmelding betrekking heeft op zijn/haar netwerk (claimen en afwijzen).  \
+Het bleek echter dat ook bij terugmeldingen van afwijkende liggingen, het voorkwam dat de netbeheerder de melding afwijst. Het proces was zo ingericht dat dan de terugmelding ook bij de andere netbeheerders uit dezelfde KLIC-melding terecht kwam ter beoordeling. Dat laatste is vanaf deze release niet meer het geval. Op het moment dat de netbeheerder de melding afwijst; wordt het proces in het geval van 'een afwijkende situatie' gestopt. De terugmelding krijgt dan ook de status `ktsAfgewezen`.  \
+**Dit betreft een nieuwe status die is toegevoegd aan de waardelijst** (https://api.klic.kadaster.nl/waardelijsten/v2/tmKlicTerugmeldStatussen/).  \
+In het geval het een terugmelding betreft over een in de grond gevonden kabel/leiding, die niet op de tekening staat (onbekend net); blijft het proces van kracht waarbij alle netbeheerders uit de KLIC-melding genotificeerd worden.
+
+Hieronder staat een overzicht van het proces bij de verschillende terugmeld scenario’s:  \
+![Terugmeldproces (versimpelde representatie](Terugmelden%20Afwijkende%20Situatie/images/terugmeldproces%20(versimpeld).png)
+
+
 
 --------------------------------------------------------------------------------------
 

@@ -777,7 +777,7 @@ curl https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-
 	"datumAangemaakt": "2020-11-26T10:20:49+01:00",
 	"mutatieDatum": "2020-11-26T10:20:49.123+01:00",
 	"klicmeldnummer": "23G0002541",
-	"tmKlicTerugmeldStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/KlicTerugmeldStatussen/ktsInOnderzoek",
+	"tmKlicTerugmeldStatus": "https://api.klic.kadaster.nl/waardelijsten/v2/tmKlicTerugmeldStatussen/ktsInOnderzoek",
 	"tmsmelding": {
 		"type": "Feature",
 		"geometry": {

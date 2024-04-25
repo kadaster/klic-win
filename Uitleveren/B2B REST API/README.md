@@ -1,15 +1,18 @@
 # B2B-koppeling gebiedsinformatie-levering (KLIC B2B-levering) via REST API
 
-| De implementatie staat gepland in april 2024. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
+| De implementatie staat gepland op 2 mei in de NTD en 7 mei in productie. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
 |------------------------------|
 
 Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kadaster KLIC voor het opvragen van de dowloadlink voor de gebiedsinformatie levering door middel van een REST-API.
 
 **Inhoudsopgave**:  
-- Inleiding
-- Gebruik API
-- Endpoints
-- Modelschema en Swagger doucmentatie
+- [Inleiding](#1-inleiding)
+- [Gebruik API](#2-gebruik-api)
+- [Endpoints](#3-endpoints)
+- [Modelschema en Swagger doucmentatie](#4-modelschemaswaggervoorbeeld-response)
+  - [voorbeeld response giAanvraag](#41-giaanvraag)
+  - [voorbeeld response gebiedsinformatieLeveringen](#42-gebiedsinformatieleveringen)
+  
 
 
 ---------------------------------------------------------
@@ -17,7 +20,7 @@ Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kad
 
 Via een B2B-koppeling kan er een KLIC-aanvragen worden ingediend. Ook kan er via een B2B-koppeling door een extern systeem een bericht aan het Kadaster worden opgevraagd met daarin de downloadlink voor een aanvraag voor gebiedsinformatie; beter bekend als de **KLIC-levering**.  \
 Er zijn twee objecten op te halen: gegevens over de aanvraag en gegevens over de levering. Beide worden ze geïdentificeerd door het giAanvraagId. Deze identifier is dezelfde idientifier als die teruggegeven wordt bij het via de API ophalen van het validatie resultaat van een aanvraag.
-([zie ook de GitHub documentatie over "aanvragen gebiedsinformatie"](../../Aanvragen%20gebiedsinformatie\B2B%20REST%20API)) \
+([zie ook de GitHub documentatie over "aanvragen gebiedsinformatie"](../../Aanvragen%20gebiedsinformatie/B2B%20REST%20API)) \
 Ook is het mogelijk om een lijst op te vragen met de leveringsobjecten via een van de endpoints.    \
 Ten behoeve van het gebruik door service providers is het mogelijk een lijst op te vragen op basis van een relatienummer. Bij het gebruik zonder de relatienummer prameter wordt alleen de meldingen getoond van de ingelogde gebruiker.
 
@@ -119,7 +122,6 @@ Hieronder staan voorbeeld responses:
        "huisnummer":"701",
        "woonplaatsNaam":"Apeldoorn",
        "postcode":"7334DP",
-
 	}, {
        "BAGid": "0200010003923183",
        "openbareRuimteNaam":"Evert van 't Landstraat",
@@ -151,7 +153,7 @@ Hieronder staan voorbeeld responses:
 ```
 
 
-:information_source: Merk op dat dit hetzelfde object is, als ingestuurd via de [GIA-POST-API](../../Aanvragen%20gebiedsinformatie\B2B%20REST%20API), aangevuld met:
+:information_source: Merk op dat dit hetzelfde object is, als ingestuurd via de [GIA-POST-API](../../Aanvragen%20gebiedsinformatie/B2B%20REST%20API), aangevuld met:
 `giAanvraagId`, `ordernummer`, `positienummer` (in geval van tracé meldingen reeds door aanvrager opgegeven), `klicMeldnummer`, `aanvraagDatum`, `mutatieDatum`, `giAanvraagStatus`.  
 
 Indien het GIA bericht opgehaald wordt direct na het insturen van de aanvraag; dan zijn een aantal velden nog niet bepaald. Het betreft `ordernummer` en `klicMeldnummer`. Deze velden zijn daarom "optioneel" in het modelschema. De velden komen beschikbaar in de API, als ze door KLIC bepaald zijn. Aangezien er gebruik gemaakt wordt van caching, dient de retry-tijd ingesteld te worden op meer dan 1 minuut.
@@ -163,24 +165,30 @@ Indien het GIA bericht opgehaald wordt direct na het insturen van de aanvraag; d
 {
     "_links": {
         "self": {
-            "href": "https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?datumVanaf=2017-11-02T09:00:00%2B01&datumTot=2017-11-02T10:00:00%2B01"
         },
         "next": {
-            "href": "https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?datumVanaf=2017-11-02TT09:35:22.323%2B01&datumTot=2017-11-02TT10:00:00%2B01"
+            "href": "https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?datumVanaf=2017-11-02T09:35:22.323%2B01&datumTot=2017-11-02T10:00:00%2B01"
         }
     },
     "gebiedsinformatieLeveringen": [{
         "giAanvraagId": "2109992d-90f6-4bc7-815e-e72a02d46220",
         "leveringsvolgnummer": "2",
+	"isVeiligheidsgebiedGeraakt": "false",
         "datumLeveringSamengesteld": "2017-11-02T09:16:01+01",
         "indicatieLeveringCompleet": "true",
         "giLeveringUrl": "https://service10.kadaster.nl/gds2/download/public/ce417a87-92cd-4c57-a70e-8a0c405b2701"
     }, {
         "giAanvraagId": "2109992d-90f6-4bc7-815e-e72a02d46220",
         "leveringsvolgnummer": "1",
+	"isVeiligheidsgebiedGeraakt": "false",
         "datumLeveringSamengesteld": "2017-11-02T09:25:01+01",
         "indicatieLeveringCompleet": "false",
         "giLeveringUrl": "https://service10.kadaster.nl/gds2/download/public/cfbdaaf6-c84b-4a05-9d71-657cd43ecf21"
+    }, {
+        "giAanvraagId": "525f1830-0b70-461e-a780-5bd4e8a90973",
+        "leveringsvolgnummer": "1",
+	"isVeiligheidsgebiedGeraakt": "true"
     }]
 } 
 ```
@@ -189,6 +197,8 @@ Indien het GIA bericht opgehaald wordt direct na het insturen van de aanvraag; d
 
  
 De `giLeveringUrl` bevat de download URL die ook in de leveringsmail verzonden is. Deze link is tot 20 werkdagen te gebruiken nadat de levering is samengesteld.
+
+In het geval er een veiligeidsgebied geraakt is (`isVeiligheidsgebiedGeraakt` is `true`), is er geen download link beschikbaar. Het reguliere proces waarbij er contact gezocht moet worden met de veilgheidsgebied beheerder dient dan gevolgd te worden.
 
 :warning: In de testomgeving is alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.
 
