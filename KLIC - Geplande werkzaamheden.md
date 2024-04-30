@@ -26,7 +26,7 @@ De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden
 
 --------------------------------------------------------------------------------------
 
-## Release - NTD 2 mei 2024; productie 7 mei 2024
+## Release - NTD en Productie 7 mei 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
