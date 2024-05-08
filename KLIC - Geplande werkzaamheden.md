@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 24 april)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 mei)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -34,7 +34,8 @@ Voor deze release is het volgende onderwerp gepland:
 - Middels een REST-API kan de downloadlink van een KLIC levering worden opgehaald. Deze downloadlink komt overeen met de downloadlink uit de leverings email. Hiermee is na de  levering de KLICmelding 20 werkdagen te downloaden.  \
 Dit is als navolging op de live-gang van de [GebiedsinformatieAanvragen via REST API](#release---1-maart-2024) waarbij via een B2B-koppeling een bericht aan het Kadaster worden aangeboden met daarin een aanvraag voor gebiedsinformatie.
 
-:arrow_forward: De documentatie voor het opvragen van de downloadlink voor de levering via een REST API is te vinden op deze [Github pagina](Uitleveren/B2B%20REST%20API/). 
+:arrow_forward: De documentatie voor het opvragen van de downloadlink voor de levering via een REST API is te vinden op deze [Github pagina](Uitleveren/B2B%20REST%20API/).   \
+[KLIC - Geplande werkzaamheden.md](KLIC%20-%20Geplande%20werkzaamheden.md)Op die pagina staan ook de relevante endpoints genoemd.
 
 **Terugmelden afwijkende situatie**:  \
 Sinds de invoering van het terugmeldproces via de API is het de bedoeling dat een netbeheerder aangeeft of een terugmelding betrekking heeft op zijn/haar netwerk (claimen en afwijzen).  \

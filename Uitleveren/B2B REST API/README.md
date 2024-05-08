@@ -1,6 +1,6 @@
 # B2B-koppeling gebiedsinformatie-levering (KLIC B2B-levering) via REST API
 
-| De implementatie staat gepland op 2 mei in de NTD en 7 mei in productie. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
+| Deze functionaliteit is sinds 7 mei 2024 beschikbaar. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
 |------------------------------|
 
 Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kadaster KLIC voor het opvragen van de dowloadlink voor de gebiedsinformatie levering door middel van een REST-API.
@@ -29,17 +29,34 @@ Authenticatie, paginering en gebruik van parameters is conform de standaarden va
 https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md
 
 # 3. Endpoints
-> De endpoints worden later gecommuniceerd.  
+
+**Testomgeving**: (met scope `klic.eto.b2baanvraag`)
+
+| Opvragen                                                                                      | Endpoint                                                                                                               |
+|:----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+| Één specifieke `gebiedsinformatieAanvraag` obv GUID                                           | https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieAanvragen/{giAanvraagId}                          |
+| Één specifieke `gebiedsinformatieLevering` obv GUID                                           | https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieleveringen?giAanvraagId={giAanvraagId}            |
+| Een lijst `gebiedsinformatieLeveringen` van de ingelogde gebruiker	                           | https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieleveringen                                        |
+| Een lijst `gebiedsinformatieLeveringen` obv relatienummer (in het geval van ServiceProviders) | https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieleveringen?relatienummerAanvrager={relatienummer} |
+
 
 :warning: Let op: In de testomgeving is alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.
 
- 
+ **Prouctie**: (met scope `klic.b2baanvraag`)
+
+| Opvragen                                                                                      | Endpoint                                                                                                               |
+|:----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+| Één specifieke `gebiedsinformatieAanvraag` obv GUID                                           | https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieAanvragen/{giAanvraagId}                          |
+| Één specifieke `gebiedsinformatieLevering` obv GUID                                           | https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?giAanvraagId={giAanvraagId}            |
+| Een lijst `gebiedsinformatieLeveringen` van de ingelogde gebruiker	                           | https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen                                        |
+| Een lijst `gebiedsinformatieLeveringen` obv relatienummer (in het geval van ServiceProviders) | https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieleveringen?relatienummerAanvrager={relatienummer} |
 
 
 # 4. Modelschema/Swagger/voorbeeld response
 
-Het modelschema is te vinden in de swagger documentatie.
-> De link naar de Swagger documentatie wordt later gecommuniceerd.  
+Het modelschema is te vinden in de Swagger documentatie.  \
+Deze is beschikbaar in de Mijn Kadaster omgeving:  \
+:arrow_forward: [Swagger documentatie](https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20levering%20api).
 
 
 Hieronder staan voorbeeld responses:
