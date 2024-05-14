@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 mei)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 mei)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -25,6 +25,15 @@ Vanaf 1 juli 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en
 De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/).
 
 --------------------------------------------------------------------------------------
+## Release - 13 mei 2024
+Voor deze release is het volgende onderwerp gepland:
+ 
+**Nieuwe versie Kadaster** KLIC-viewer (6.5):
+- Bij het aanmaken van een Overzichtskaart (PDF), is een tekst toegevoegd "De digitale informatie moet verplicht aanwezig zijn als u graaft".
+- Oplossing voor buiten beeld raken van lange netbeheerdernamen in Weergave menu kabels/Leidingen.
+- Diverse bugfixes.
+
+--------------------------------------------------------------------------------------
 
 ## Release - NTD en Productie 7 mei 2024
 
@@ -35,7 +44,7 @@ Voor deze release is het volgende onderwerp gepland:
 Dit is als navolging op de live-gang van de [GebiedsinformatieAanvragen via REST API](#release---1-maart-2024) waarbij via een B2B-koppeling een bericht aan het Kadaster worden aangeboden met daarin een aanvraag voor gebiedsinformatie.
 
 :arrow_forward: De documentatie voor het opvragen van de downloadlink voor de levering via een REST API is te vinden op deze [Github pagina](Uitleveren/B2B%20REST%20API/).   \
-[KLIC - Geplande werkzaamheden.md](KLIC%20-%20Geplande%20werkzaamheden.md)Op die pagina staan ook de relevante endpoints genoemd.
+Op die pagina staan ook de relevante endpoints genoemd.
 
 **Terugmelden afwijkende situatie**:  \
 Sinds de invoering van het terugmeldproces via de API is het de bedoeling dat een netbeheerder aangeeft of een terugmelding betrekking heeft op zijn/haar netwerk (claimen en afwijzen).  \

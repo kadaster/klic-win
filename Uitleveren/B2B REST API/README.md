@@ -42,7 +42,7 @@ https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B
 
 :warning: Let op: In de testomgeving is alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.
 
- **Prouctie**: (met scope `klic.b2baanvraag`)
+ **Productie**: (met scope `klic.b2baanvraag`)
 
 | Opvragen                                                                                      | Endpoint                                                                                                               |
 |:----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
