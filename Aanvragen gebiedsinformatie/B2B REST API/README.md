@@ -57,7 +57,7 @@ Er is gekozen voor één modelschema voor alle type aanvragen. Er zijn validatie
 In het werkblad staat in kolom E en F het modelschema inclusief een voorbeeld.  \
 Of een bepaalde regel van toepassing is, is afhankelijk van (o.a.) het type melding (graafmelding, calamiteitenmelding, oriëntatieverzoek). Dat staat toegelicht in kolom B/C/D.  \
 Kolom H/I/J geeft een toelichting over de vulling van de velden.  \
-Kolom L-U geeft de validatie meldingen die voor de betreffende regel van toepassing is.
+Kolom L-U geeft de validatie meldingen die voor de betreffende regel van toepassing is. 
 
 Er is Swagger documentatie beschikbaar in de Mijn Kadaster omgeving:  \
 :arrow_forward: [Swagger documentatie](https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20aanvraag%20api).
@@ -69,21 +69,21 @@ Een POST bericht op de GIA-API dient altijd het onderdeel `bestelling` te hebben
 
 ```json
 "bestelling": {
-"postId": "string",
-"factuurReferentie": "string",
-"factuurInkoopnummer": "string"
-},
+  "postId": "string",
+  "factuurReferentie": "string",
+  "factuurInkoopnummer": "string"
+  },
 ```
 
 - Het `postId` is een uniek ID (zie de inleiding) benodigd voor een robuuste verwerking van het bericht.  \
-  Als er -bijvoorbeeld door een netwerkverstoring- een bericht met hetzelfde ID meermaals door het Kadaster wordt ontvangen, wordt alleen het eerste bericht verwerkt. Hierdoor is het mogelijk zonder dubbele verwerking een 'retry' te versturen als het antwoord op een POST bericht niet ontvangen is.
+Als er -bijvoorbeeld door een netwerkverstoring- een bericht met hetzelfde ID meermaals door het Kadaster wordt ontvangen, wordt alleen het eerste bericht verwerkt. Hierdoor is het mogelijk zonder dubbele verwerking een 'retry' te versturen als het antwoord op een POST bericht niet ontvangen is.
 - Het `factuurReferentie` of `factuurInkoopnummer` is verplicht voor klanten die bij het Kadaster hebben aangegeven dat ze gebruik willen maken van e-facturatie. In dat geval is minimaal een van de twee verplicht en mag de andere optioneel worden ingevuld. Indien de klant geen gebruik maakt van e-facturatie, zijn beide velden optioneel.
 
 ### 1.3.2 Modelschema onderdeel "testparameters"
 
 Een netbeheerder die een test wil doen, kan ook een melding aanbieden via de REST-API. Hiervoor is een eigen endpoint beschikbaar. In het geval van een Netbeheerder test (op de NTD) zijn bepaalde stuurparemters nodig. Deze parameters zijn niet toegestaan voor grondroerder testen of op de productie omgeving. Een melding wordt dan afgekeurd.
-
-> N.B. een endpoint waarop netbeheerder testmeldingen gedaan kunnen worden, wordt op een later moment gecommuniceerd.
+  
+> N.B. een endpoint waarop netbeheerder testmeldingen gedaan kunnen worden, wordt op een later moment gecommuniceerd.  
 
 > N.B. Meldingen worden op dezelfde manier verwerkt als meldingen die via het portaal zijn aangemaakt. Hiermee kan de netbeheerder een (de)centrale aanlevering  simuleren en de BeheerdersinformatieLeverings-zip downloaden
 
@@ -91,12 +91,12 @@ De testParameter velden zijn gedocumenteerd in het Excel bestand die te vinden i
 Hieronder staan de velden die alleen voor netbeheerders testen van toepassing zijn ook toegelicht:
 ```json
 "testParameters": {
-"centraleAanlevering": false,
-"belanghebbendeBronhoudercodes": [
-"string"
-],
-"endpointGiaNotificatie": "string",
-"endpointTerugmeldNotificatie": "string"
+  "centraleAanlevering": false,
+  "belanghebbendeBronhoudercodes": [
+    "string"
+  ],
+  "endpointGiaNotificatie": "string",
+  "endpointTerugmeldNotificatie": "string"
 },
 ```
 
@@ -119,7 +119,7 @@ bv: `"jsonPointer": "/gebiedsinformatieAanvragen/1/eindDatum"` In dit geval zit
   Dat betekend identieke: `aanvraagSoort`, `aanvrager`, `opdrachtgever`, `referentie`,   `soortWerkzaamheden`, `omschrijvingWerkzaamheden`,  `startDatum`, `eindDatum`.   \
   De locatie gerelateerde velden mogen wel verschillen (`locatieWerkzaamheden`, `locatieOmschrijving`, `huisaansluitingAdressen`, en de polygonen).
 
-
+ 
 - Er dient bij elke aanvraag een positienummer toegevoegd te worden die begint bij 10 en oploopt met 10 (dus: 0000000010, 0000000020, etc).
 - De meldingen dienen allemaal binnen een vlak van 5000x5000 meter te vallen voor een graafmelding of 10.000x10.000 voor oriëntatieverzoek.
 - Er mogen niet meer dan 100 meldingen per bestelling ingediend worden.
@@ -131,7 +131,7 @@ Als een POST bericht voldoet aan het modelschema, krijgt de gebruiker een HTTP-2
 
 ```json
 {
-  "postId": "12345-12345-12345-12345-12345",
+    "postId": "12345-12345-12345-12345-12345",
     "pollUrl": "http:/[URL nader te communiceren]/[POSTid]/resultaat"
 }
 ```
@@ -144,7 +144,7 @@ Op het PollUrl kunnen verschillende responses gevonden worden.
 - Melding aangenomen, maar nog niet gevalideerd (HTTP-200)
 - Melding goedgekeurd (HTTP-200)
 - Validatie errors gevonden (HTTP-200)
-- Response Betrokken netbeheerder (HTTP-200): In het geval van een calimiteitenmeldig wordt er in dit bericht teruggekoppeld welke netbeheerders met welke thema's een belang hebben in het aangevraagde gebied.
+- Response Betrokken netbeheerder (HTTP-200): In het geval van een calimiteitenmeldig wordt er in dit bericht teruggekoppeld welke netbeheerders met welke thema's een belang hebben in het aangevraagde gebied. 
 - Niet gevonden (HTTP-404): De aanvraag is (nog) niet bekend bij het Kadaster
 
 **Validatie waarschuwingen**  \
@@ -177,7 +177,7 @@ De volgende controles worden uitgevoerd:
 - de polygoon mag geen repeterende punten hebben.
 - de coördinaten van de polygoon mogen 0, 1, 2 of 3 decimalen bevatten.
 - de geometrie mag niet meer lijnpunten bevatten dan het ingestelde maximum.  \
-  Voor de gebiedspolygoon is dit 50 voor de informatiepolygoon is dit 200.
+Voor de gebiedspolygoon is dit 50 voor de informatiepolygoon is dit 200. 
 
 **Ligging en omvang**  \
 De volgende controles worden uitgevoerd:
@@ -194,7 +194,7 @@ Voor een graafmelding en een calamiteitenmelding gaat de mogelijkheid worden geb
 Een opgegeven informatiegebied moet een graafgebied volledig omvatten: niets van de graafpolygoon mag buiten de informatiepolygoon liggen.
 
 De volgende validaties zijn van toepassing:
-- een informatiepolygoon mag alleen opgegeven worden bij een graafmelding en een calamiteitenmelding, en niet bij een oriëntatieverzoek.
+- een informatiepolygoon mag alleen opgegeven worden bij een graafmelding en een calamiteitenmelding, en niet bij een oriëntatieverzoek. 
 - niets van de graafpolygoon mag buiten de informatiepolygoon liggen.
 - de maximale afstand van de informatiepolygoon tot de graafpolygoon moet minder of gelijk zijn aan 100 meter, waarbij het is toegestaan dat eventuele gaten gevuld worden.
 - Het is niet toegestaan dat het verschil tussen het graafgebied en de informatiegebied een meervoudig polygoon betreft.
@@ -219,7 +219,7 @@ De volgende controles worden uitgevoerd:
 ### Grondroerders
 
 Het **test** endpoint wat door grondroerders (of door serviceproviders namens grondroerders) gebruikt kan worden voor het testen is:  \
-:arrow_forward: [https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen)
+:arrow_forward: [https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen)  
 
 Het **productie** endpoint wat door grondroerders (of door serviceproviders namens grondroerders) gebruikt kan worden voor het testen is:  \
 :arrow_forward: [https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieaanvragen](https://service10.kadaster.nl/klic/aanvragen/v1/gebiedsinformatieaanvragen)
@@ -230,7 +230,7 @@ Aandachtspunten:
 - De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
 - Als het bericht aangenomen wordt, staat er in het bericht een poll-URL. Met deze URL is het validatie resultaat op te vragen.
 - Uit deze aanvraag volgt géén levering: het productieproces is op deze testomgeving niet ingericht.
-- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))
+- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))  
 
 ### Netbeheerders
 Het test endpoint wat door **netbeheerders** (of door serviceproviders namens netbeheerders) gebruikt kan worden voor het testen is:  \
@@ -240,14 +240,14 @@ Aandachtspunten:
 - Deze URL is hoofdletter gevoelig.
 - De validatie van het bericht vindt plaats en de (a synchrone) terugkoppeling is zoals het op productie gaat werken.
 - Als het bericht aangenomen wordt, staat er in het bericht een poll-URL. Met deze URL is het validatie resultaat op te vragen.
-- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))
+- Voor het aanmaken van een testmelding in de NetbeheerderTestDienst (NTD) is een eigen endpoint en zijn er extra parameters in het modelschema opgenomen. (zie [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters))  
 - Conform de huidige werking van de NTD is het mogelijk om het aanleverproces zowel centraal an decentraal te testen en wordt er een  BeheerdersInformatieLevering-zip beschikbaar gesteld.
 
 ---------------------------------------------------------
 ## 3. Authenticatie en Autorisatie
 
 De Authenticatie verloopt net als de ander KLIC API's via OAuth.  \
-[De beschrijving is hier](../../API%20management/Authenticatie_via_oauth.md) te vinden.
+[De beschrijving is hier](../../API%20management/Authenticatie_via_oauth.md) te vinden.  
 
 De scopes die nodig zijn voor het doen van een aanvraag zijn:
 - Testomgeving: `klic.eto.b2baanvraag`
@@ -271,7 +271,7 @@ Het `relatienummer` van de `aanvrager` dient uit 10 tekens te bestaan en moet aa
 |                                                                                             **Relatienummer bij aanvrager van**:<br>Je kan je relatienummer vinden door in te loggen op Mijn Kadaster op de pagina profielinstellingen onder het kopje "klantnummer". Je geeft deze op inclusief voorloop-nullen om op 10 tekens te komen. | Grondroerder                                                                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
 |                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
 |                                                                                                                                                                                                                              **Mijn kadasteraccount nodig**:<br>Zie: https://formulieren.kadaster.nl/aanmelden_klic (rol: serviceprovider) | Grondroerder en serviceprovider (met de rol Serviceprovider)                                                                | Grondroerder                                                                                                    | Grondroerder                                                                                                  |
-|                                                                                                                                                                                                                                    **PKI overheidscertificaat nodig**:<br>Zie https://www.logius.nl/domeinen/toegang/pkioverheid/aanvragen | Serviceprovicer                                                                                                             | Grondroerder                                                                                                    | nvt                                                                                                           |
+|                                                                                                                                                                                                                        **PKI overheidscertificaat nodig**:<br>Zie https://www.logius.nl/domeinen/toegang/pkioverheidcertificaat-aanvragenn | Serviceprovicer                                                                                                             | Grondroerder                                                                                                    | nvt                                                                                                           |
 |                                                                                                                                                                                                                                                                                                                                            |                                                                                                                             |                                                                                                                 |                                                                                                               |
 |                                                                                                                                                                                                                                                                                                                                   **Type** | Machine 2 Machine                                                                                                           | Machine 2 Machine                                                                                               | Interactieve gebruiker                                                                                        |
 |                                                                                                                                                                                                                                                 **Oauth**:<br>Zie: [deze Github pagina](../../API%20management/Authenticatie_via_oauth.md) | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                                       | App ontwikkelaar: App aanmelden bij Oauth via CC flow                                                           | App ontwikkelaar: App aanmelden bij OAuth via autorisation-grant-flow                                         |
