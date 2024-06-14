@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 mei)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 juni)
 --------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
@@ -23,6 +23,24 @@ In de [beslisboom](Wijzigingen/eHerkenning/Beslisboom-eHerkenning-1jul2024-KLIC.
 
 Vanaf 1 juli 2024 is alleen nog maar de B2B aanvraag via REST API beschikbaar en wordt de B2B aanvraag via SOAP uitgezet.  \
 De documentatie voor het vernieuwde aanvraagproces via een REST API is te vinden op deze [Github pagina](Aanvragen%20gebiedsinformatie/).
+
+--------------------------------------------------------------------------------------
+
+## Release - Testomgeving: 20 juni 2024; Productie: 25 juni 2024
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Testomgeving - Grondroerder Aanvraag/Levering API**:
+- Er is swagger documentatie toegevoegd voor de grondroerder-endpoint `/aanvragen/v1/gebiedsinformatieaanvragen/{giAanvraagId}`. Zie https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20aanvraag%20api
+- Er is een bug opgelost in de grondroerder API voor het ophalen van de `gebiedsinformatieAanvragen` details. Er werden een aantal niet relevante attributen getoond en andere attributen ontbraken.
+- Voor testdoeleinden is er een vast `ordernummer` en een van `klicmeldnummer` toegevoegd in de grondroerder API bij het opvragen van `gebiedsinformatieAanvragen` details.
+- Voor testdoeleinden is er een vaste voorbeeld response toegevoegd bij de grondroerder API waarin de gebruiker een `gebiedsinformatieLevering` (download URL) opvraagt.
+
+**Productie - Grondroerder Aanvraag/Levering API**:
+- Bugfix in de grondroerder API voor het ophalen van de `gebiedsinformatieAanvragen` details. In het scenario dat er details van een net aangeboden GebiedsInformatieAanvraag werden opgehaald, nog voordat het productie proces gestart is, werden er een aantal niet relevante attributen getoond en andere attributen ontbraken. Dit is gecorrigeerd.
+- Aanpassing foutmeldingstekst in de grondroerder API voor het ophalen van de `gebiedsinformatieLevering` (download URL), in het scenario dat er een levering werd opgevraagd nog voordat het productie proces gestart is. De gebruiker krijgt dan een 404-foutcode. De meldingstekst die de gebruiker krijgt, legt uit dat de melding nog niet beschikbaar is. 
+
+
+
 
 --------------------------------------------------------------------------------------
 ## Release - 13 mei 2024
