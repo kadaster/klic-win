@@ -1,5 +1,20 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 14 juni)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 19 juni)
 --------------------------------------------------------------------------------------
+
+## Planning voor release – juli 2024
+
+*De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
+
+Voor deze release is het volgende onderwerp gepland:
+- Het doen van een testmelding in de NTD.
+- Bekijk [de presentatie met een impressie](BMKL/BMKL%202.1/Impressie-Vernieuwd-NTD-Aanvraag.pdf) van de NTD aanvraag schermen.
+
+Documenten actualiseren en Netinformatie actualiseren op de NTD volgen later.
+
+
+
+
+-------------------------------------------------------------------------------------
 
 ## 1 juli 2024: Deadline eHerkenning Mijn Kadaster 
 Voor KLIC-relaties geldt dat zij vanaf 1 juli 2024 verplicht op [Mijn Kadaster](https://mijn.kadaster.nl/) moeten inloggen met eHerkenning op minimaal niveau EH3.  
