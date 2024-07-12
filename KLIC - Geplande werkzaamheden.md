@@ -1,7 +1,7 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 19 juni)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 12 juli)
 --------------------------------------------------------------------------------------
 
-## Planning voor release – juli 2024
+## Planning voor release – augustus 2024
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
 
@@ -11,8 +11,13 @@ Voor deze release is het volgende onderwerp gepland:
 
 Documenten actualiseren en Netinformatie actualiseren op de NTD volgen later.
 
+-------------------------------------------------------------------------------------
 
-
+## Release - 15 juli 2024
+Voor deze release is het volgende onderwerp gepland:
+ 
+**Nieuwe versie Online Kadaster KLIC-viewer** (6.5.1.):
+- Bij de Online KLIC-viewer wordt als pilot de mogelijkheid van chat aangeboden. Deze mogelijkheid duurt naar verwachting 2 maanden. Tijdens deze periode kunnen er tijdens kantooruren vragen gesteld worden via de chat.
 
 -------------------------------------------------------------------------------------
 
@@ -61,7 +66,7 @@ Voor deze release zijn de volgende onderwerpen gepland:
 ## Release - 13 mei 2024
 Voor deze release is het volgende onderwerp gepland:
  
-**Nieuwe versie Kadaster** KLIC-viewer (6.5):
+**Nieuwe versie Kadaster KLIC-viewer** (6.5):
 - Bij het aanmaken van een Overzichtskaart (PDF), is een tekst toegevoegd "De digitale informatie moet verplicht aanwezig zijn als u graaft".
 - Oplossing voor buiten beeld raken van lange netbeheerdernamen in Weergave menu kabels/Leidingen.
 - Diverse bugfixes.
