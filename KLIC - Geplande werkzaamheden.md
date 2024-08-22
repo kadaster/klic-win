@@ -1,7 +1,21 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 12 juli)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 22 augustus)
 --------------------------------------------------------------------------------------
 
-## Planning voor release – augustus 2024
+## Planning voor release – 26 augustus 2024
+
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer**:
+
+- 	In het menu optie **Weergave**, tabblad **Kaartlagen** is een `Achtergrondkaart (Online)` koppeling toegevoegd. Als het apparaat over een internetverbinding beschikt,  wordt de achtergrondkaart vanuit PDOK getoond. Hiermee heeft de gebruiker meer kaart referentie om de polygoon en blijft hij scherp bij inzoomen.  \
+PDOK staat voor Publieke Dienstverlening Op de Kaart en is het dataportaal dat door Kadaster in opdracht van het Ministerie BZK wordt geëxploiteerd. De achtergrondkaart is een digitale kaart van Nederland waarop gebouwen, wegen, waterlopen, terreinen en spoorlijnen eenduidig zijn vastgelegd.
+-	Als een gebruiker een directe link gebruikt voor het openen van een KLIC-levering in de Online Kadaster KLIC-viewer, dan wordt automatisch de levering gedownload. Er is nu een  URL-parameter `?download=false` toegevoegd waarmee de gebruiker dat kan voorkomen. 
+
+
+-------------------------------------------------------------------------------------
+
+## Release – 22 augustus 2024
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
 
