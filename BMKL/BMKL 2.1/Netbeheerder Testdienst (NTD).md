@@ -185,7 +185,8 @@ _Figuur 8 Opvoeren testmelding - scherm 3_
 
 ### Opvoeren testmelding - 4 van 5
 
-In het volgende scherm selecteert u type netbeheerder (Centrale aanlevering of Decentrale aanlevering). U dient hier ook een Endpoint toe te voegen. Op dit adres krijgt u een melding als er een bericht voor u klaar staat.
+In het volgende scherm selecteert u type netbeheerder (Centrale aanlevering of Decentrale aanlevering). U dient hier ook een Endpoint toe te voegen. Het veld Endpoint betreft het adres van uw eigen webservice waarop u een notificatie wilt ontvangen als er een gebiedsinformatie-aanvraag voor u als belanghebbende klaarstaat. Dit betreft een verplicht veld.
+
 Na het selecteren van de type netbeheerder en invoeren van Endpoint klik op "Testmelding doen" Dit zorgt er voor dat er een gebiedsinformatie-aanvraag wordt opgevoerd waarmee de testmelding is gedaan.
 
 ![mijnKadaster](bijlagen/NTD-Testmelding-4.png "NTD Portaal - Testmelding opvoeren 4")
