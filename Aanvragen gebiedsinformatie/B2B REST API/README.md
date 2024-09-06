@@ -83,8 +83,6 @@ Als er -bijvoorbeeld door een netwerkverstoring- een bericht met hetzelfde ID me
 
 Een netbeheerder die een test wil doen, kan ook een melding aanbieden via de REST-API. Hiervoor is een eigen endpoint beschikbaar. In het geval van een Netbeheerder test (op de NTD) zijn bepaalde stuurparemters nodig. Deze parameters zijn niet toegestaan voor grondroerder testen of op de productie omgeving. Een melding wordt dan afgekeurd.
   
-> N.B. een endpoint waarop netbeheerder testmeldingen gedaan kunnen worden, wordt op een later moment gecommuniceerd.  
-
 > N.B. Meldingen worden op dezelfde manier verwerkt als meldingen die via het portaal zijn aangemaakt. Hiermee kan de netbeheerder een (de)centrale aanlevering  simuleren en de BeheerdersinformatieLeverings-zip downloaden
 
 De testParameter velden zijn gedocumenteerd in het Excel bestand die te vinden is in [1.3 Modelschema en Swagger documentatie](#13-modelschema-en-swagger-documentatie).  \
