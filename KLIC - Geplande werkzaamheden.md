@@ -1,8 +1,33 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 22 augustus)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 6 september)
 --------------------------------------------------------------------------------------
 
-## Planning voor release – 26 augustus 2024
+## Release – NTD: 5 september 2024; Productie: 10 september 2024
 
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Terugmelden via de API**:
+- Er is vorig jaar met de sector afgesproken dat het niet mogelijk meer moet zijn om een niet gevonden net te melden als Afwijking. In dit geval moet er contact opgenomen worden met de netbeheerder waarvan de kabel of leiding niet is gevonden.  \
+   In de Kadaster KLIC-viewer is dit [sinds oktober 2023](#release--19-oktober-2023) al niet meer mogelijk en wordt er een Pop-up getoond.  \
+   Met deze wijziging worden terugmeldingen van het type 'niet gevonden net' die binnenkomen via de API, ***afgewezen***. De terugmelder krijgt hiervan een email notificatie met een korte toelichting.
+
+
+**Leveringsbrief (LI-pdf)**:
+- In de leveringsbrief staan de contactgegevens van de betrokken netbeheerders.  \
+  De brieven die vanaf deze release in de levering zitten, zullen klikbare emailadressen bevatten. Dat betekend dat bij digitale verwerking, bijvoorbeeld vanuit de Kadaster KLIC-viewer, er op de link geklikt kan worden zodat de email applicatie geopend wordt met het emailadres vooraf ingevuld.
+
+--------------------------------------------------------------------------------------
+
+## Release – 4 september 2024
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (6.6.1):
+- Bugfix printfunctionaliteit in online KLIC-viewer en desktopvariant
+- Algemene technische verbeteringen
+
+--------------------------------------------------------------------------------------
+
+## Release – 26 augustus 2024
 
 Voor deze release is het volgende onderwerp gepland:
 
