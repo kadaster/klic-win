@@ -1,4 +1,36 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 6 september)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 24 oktober)
+-------------------------------------------------------------------------------------
+
+## Release – Externe Test Omgeving (ETO) medio november 2024
+
+KLIC heeft op dit moment een beperkte testomgeving in de vorm van de Netbeheerder Testdienst (NTD). In de NTD is het belangenproces niet ingericht. Ook voor grondroerders zijn er beperkte testmogelijkheden. <br>
+Dit is wel een wens vanuit de sector. Ook is in het verleden vanuit de sector is de wens geuit om een keten-testomgeving te hebben die continu beschikbaar. Dit is de aanleiding om de NTD uit te breiden tot een volledige externe testomgeving (ETO) voor extern gebruik.
+
+
+De netbeheerder krijgt het belangenproces erbij. En als grondroerder krijg je ook een fictieve ontvangstbevestiging en KLIC-levering.<br>
+
+
+Binnenkort volgt er technische en functionele documentatie hiervoor.
+
+
+| :information_source: **Let op**: Voor netbeheerders geldt dat na uitrol van de ETO het testen niet meer werkt zoals u gewend bent. <br> &nbsp; &nbsp;&nbsp;&nbsp; Alvorens een succesvolle test te kunnen doen, dient ook in de testomgeving een belang opgevoerd te worden. |
+|:------|
+
+<br>
+
+-------------------------------------------------------------------------------------
+
+
+## Release – november 2024
+
+*De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
+
+Voor deze release is het volgende onderwerp gepland:
+- Het actualiseren van documenten in de NTD.
+- Bekijk [de presentatie met een impressie](Actualiseren/Documenten/Impressie-Vernieuwd-NTD-actualiseren-documenten.pdf) van de documenten actualiseren schermen in de NTD.
+
+Netinformatie actualiseren op de NTD volgen later.
+
 --------------------------------------------------------------------------------------
 
 ## Release – NTD: 5 september 2024; Productie: 10 september 2024
