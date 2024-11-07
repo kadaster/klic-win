@@ -1,7 +1,32 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 24 oktober)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 7 november)
 -------------------------------------------------------------------------------------
 
-## Release – Externe Test Omgeving (ETO) medio november 2024
+
+## Release – 27 november 2024
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (7.0.x):
+- **Melden afwijkende situatie**:  \
+  Met de Kadaster KLIC-viewer is het mogelijk om een Afwijkende Situatie te melden. Hiervoor werd de TMS API v1 gebruikt. In verband met een nieuwe versie (v2) van de Terugmelding API is de Kadaster KLIC-viewer hierop aangepast. 
+
+  | :information_source: Belangrijkste impact is dat na deze viewer upgrade je geen Afwijkende Situatie kan melden met de oudere versies. Ons blijvend en dringend advies is om zo snel mogelijk versie 7.0 te installeren. |
+|:------|
+
+- **Externe testomgeving (ETO)**  \
+  In verband met de uitbreiding van de NTD naar een volledige externe testomgeving (ETO) voor extern gebruik, wordt de Kadaster KLIC-viewer ook aangepast. De grondroerder krijgt de mogelijkheid om via een REST API (B2B) een test KLIC-melding te doen.  \
+  Na het doen van een test KLIC-melding, volgt een e-mail met de ontvangstbevestiging en een e-mail met de levering. De ETO ontvangstbevestiging en ETO leveringsmail hebben een vereenvoudigde lay-out. Dit in verband met de eis dat het duidelijk herkenbaar moet zijn dat het om een ETO ontvangstbevestiging en ETO leveringsmail gaat. Ook het mailonderwerp is anders, deze start met “ETO TEST”.  \
+  De link om de levering te downloaden is ook via de API op te vragen, zie hierbeneden voor meer informatie. De ETO KLIC-nummers starten met 99 (in plaats van 24 bij het jaar 2024).  \
+  *Let op: De inhoud van de levering is afhankelijk van de netbeheerders die een publiek belang hebben opgevoerd in de ETO.*
+  
+- **Wettelijke toegankelijkheidseisen**:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+
+
+-------------------------------------------------------------------------------------
+
+## Release – Externe Test Omgeving (ETO) 26 november 2024
 
 KLIC heeft op dit moment een beperkte testomgeving in de vorm van de Netbeheerder Testdienst (NTD). In de NTD is het belangenproces niet ingericht. Ook voor grondroerders zijn er beperkte testmogelijkheden. <br>
 Dit is wel een wens vanuit de sector. Ook is in het verleden vanuit de sector is de wens geuit om een keten-testomgeving te hebben die continu beschikbaar. Dit is de aanleiding om de NTD uit te breiden tot een volledige externe testomgeving (ETO) voor extern gebruik.
