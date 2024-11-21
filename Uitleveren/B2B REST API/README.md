@@ -1,6 +1,6 @@
 # B2B-koppeling gebiedsinformatie-levering (KLIC B2B-levering) via REST API
 
-| Deze functionaliteit is sinds 7 mei 2024 beschikbaar. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
+| Deze functionaliteit is sinds 7 mei 2024 beschikbaar. <br> Tot de introductie ven de Externe Test Omgeving (gepland 26 november) is er beperkte testfunctionaliteit beschikbaar. <br> Houdt de pagina met [geplande werkzaamheden](../../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
 |------------------------------|
 
 Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kadaster KLIC voor het opvragen van de dowloadlink voor de gebiedsinformatie levering door middel van een REST-API.
@@ -41,7 +41,8 @@ https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B
 | Een lijst `gebiedsinformatieLeveringen` obv relatienummer (in het geval van ServiceProviders) | https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieleveringen?relatienummerAanvrager={relatienummer} |
 
 
-:warning: Let op: In de testomgeving is alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.
+:warning: Let op: Vanaf de eerste oplevering op 7 mei 2024 is in de testomgeving alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.  \
+  Vanaf de introductie van de Externe Test Omgeving (ETO) (gepland 26 novemver 2024) kunnen de daadwerkelijke objecten opgehaald worden.
 
  **Productie**: (met scope `klic.b2baanvraag`)
 
@@ -176,7 +177,10 @@ Hieronder staan voorbeeld responses:
 
 Indien het GIA bericht opgehaald wordt direct na het insturen van de aanvraag; dan zijn een aantal velden nog niet bepaald. Het betreft `ordernummer` en `klicMeldnummer`. Deze velden zijn daarom "optioneel" in het modelschema. De velden komen beschikbaar in de API, als ze door KLIC bepaald zijn. Aangezien er gebruik gemaakt wordt van caching, dient de retry-tijd ingesteld te worden op meer dan 1 minuut.
 
-:warning: In de testomgeving is het productieproces niet ingericht en wordt er geen werkelijk `ordernummer` en `klicMeldnummer` bepaald. Voor testdoeleinden zijn er daarom voor alle responses een vast klicMeldnummer (99G7654321) en een vast ordernummer (9876543210) toegevoegd. 
+:warning: Vanaf de eerste oplevering op 7 mei 2024 is in de testomgeving het productieproces niet ingericht en wordt er geen werkelijk `ordernummer` en `klicMeldnummer` bepaald. Voor testdoeleinden zijn er daarom voor alle responses een vast klicMeldnummer (99G7654321) en een vast ordernummer (9876543210) toegevoegd.  \
+  Vanaf de introductie van de Externe Test Omgeving (ETO) (gepland 26 novemver 2024) kunnen de daadwerkelijke klicMeldnummers en ordernummers opgehaald worden.
+
+
 
 ## 4.2 gebiedsinformatieLeveringen
 
@@ -219,11 +223,14 @@ De `giLeveringUrl` bevat de download URL die ook in de leveringsmail verzonden i
 
 In het geval er een veiligeidsgebied geraakt is (`isVeiligheidsgebiedGeraakt` is `true`), is er geen download link beschikbaar. Het reguliere proces waarbij er contact gezocht moet worden met de veilgheidsgebied beheerder dient dan gevolgd te worden.
 
-:warning: In de testomgeving is alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.
+:warning: Vanaf de eerste oplevering op 7 mei 2024 is n de testomgeving alleen een voorbeeld response op te halen. Dit is een vast ingestelde response ten behoeve van test doeleinden. Het ophalen van objecten op basis van een echt giAanvraagId is niet mogelijk in de testomgeving.  \
+  Vanaf de introductie van de Externe Test Omgeving (ETO) (gepland 26 novemver 2024) kunnen de daadwerkelijke objecten opgehaald worden.
 
 ## 4.3 Verschillende responses per scenario
 
-Hieronder staan voor verschillende scenario's wat kenmerken benoemd. Merk op dat in de testomgeving er geen productieproces is ingericht. Daarom is er voor de testomgeving alleen een toelichting gegeven voor het eerste scenario.
+Hieronder staan voor verschillende scenario's wat kenmerken benoemd. Merk op dat in de testomgeving het productieproces pas ingericht is vanaf de introductie van de Externe Test Omgeving (ETO) (gepland 26 novemver 2024). Hieronder staat er voor de testomgeving de secifieke toelichting voor het eerste scenario zoals het tot de intruductie van de ETO zal werken.
+
+ 
 
 | Scenario                                                                    | GI Aanvraag                                                                                                                                                                                                           | GI Levering                                                                                                                                                                                                                              |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 7 november)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 20 november)
 -------------------------------------------------------------------------------------
 
 
@@ -10,10 +10,10 @@ Voor deze release zijn de volgende onderwerpen gepland:
 - **Melden afwijkende situatie**:  \
   Met de Kadaster KLIC-viewer is het mogelijk om een Afwijkende Situatie te melden. Hiervoor werd de TMS API v1 gebruikt. In verband met een nieuwe versie (v2) van de Terugmelding API is de Kadaster KLIC-viewer hierop aangepast. 
 
-  | :information_source: Belangrijkste impact is dat na deze viewer upgrade je geen Afwijkende Situatie kan melden met de oudere versies. Ons blijvend en dringend advies is om zo snel mogelijk versie 7.0 te installeren. |
+| :information_source: Belangrijkste impact is dat na deze viewer upgrade je geen Afwijkende Situatie kan melden met de oudere versies. Ons blijvend en dringend advies is om zo snel mogelijk versie 7.0 te installeren. |
 |:------|
 
-- **Externe testomgeving (ETO)**  \
+- **Externe testomgeving (ETO)**:  \
   In verband met de uitbreiding van de NTD naar een volledige externe testomgeving (ETO) voor extern gebruik, wordt de Kadaster KLIC-viewer ook aangepast. De grondroerder krijgt de mogelijkheid om via een REST API (B2B) een test KLIC-melding te doen.  \
   Na het doen van een test KLIC-melding, volgt een e-mail met de ontvangstbevestiging en een e-mail met de levering. De ETO ontvangstbevestiging en ETO leveringsmail hebben een vereenvoudigde lay-out. Dit in verband met de eis dat het duidelijk herkenbaar moet zijn dat het om een ETO ontvangstbevestiging en ETO leveringsmail gaat. Ook het mailonderwerp is anders, deze start met “ETO TEST”.  \
   De link om de levering te downloaden is ook via de API op te vragen, zie hierbeneden voor meer informatie. De ETO KLIC-nummers starten met 99 (in plaats van 24 bij het jaar 2024).  \
@@ -26,17 +26,18 @@ Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-va
 
 -------------------------------------------------------------------------------------
 
-## Release – Externe Test Omgeving (ETO) 26 november 2024
+## Release – 26 november 2024: Externe Test Omgeving (ETO)
+
+ 
 
 KLIC heeft op dit moment een beperkte testomgeving in de vorm van de Netbeheerder Testdienst (NTD). In de NTD is het belangenproces niet ingericht. Ook voor grondroerders zijn er beperkte testmogelijkheden. <br>
-Dit is wel een wens vanuit de sector. Ook is in het verleden vanuit de sector is de wens geuit om een keten-testomgeving te hebben die continu beschikbaar. Dit is de aanleiding om de NTD uit te breiden tot een volledige externe testomgeving (ETO) voor extern gebruik.
+Dit is wel een wens vanuit de sector. Ook is in het verleden vanuit de sector de wens geuit om een keten-testomgeving te hebben die continu beschikbaar is. Dit is de aanleiding om de NTD uit te breiden tot een volledige externe testomgeving (ETO) voor extern gebruik.
 
 
 De netbeheerder krijgt het belangenproces erbij. En als grondroerder krijg je ook een fictieve ontvangstbevestiging en KLIC-levering.<br>
 
 
-Binnenkort volgt er technische en functionele documentatie hiervoor.
-
+:arrow_forward: De technische en functionele documentatie voor het gebruik van de ETO is te vinden op deze [Github pagina](Externe%20Test%20Omgeving%20(ETO)).  
 
 | :information_source: **Let op**: Voor netbeheerders geldt dat na uitrol van de ETO het testen niet meer werkt zoals u gewend bent. <br> &nbsp; &nbsp;&nbsp;&nbsp; Alvorens een succesvolle test te kunnen doen, dient ook in de testomgeving een belang opgevoerd te worden. |
 |:------|
@@ -46,7 +47,7 @@ Binnenkort volgt er technische en functionele documentatie hiervoor.
 -------------------------------------------------------------------------------------
 
 
-## Release – november 2024
+## Release – 13 november 2024
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
 

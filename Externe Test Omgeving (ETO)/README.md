@@ -24,8 +24,8 @@ Hieronder staat een overzicht van de functionaliteit op de ETO per rol. Servicep
 | **Afhandelen terugmelding**                  | via API                                                   |   -                                          |
 
 
-In het geval van Netbeheerders geldt dat de eerste gebruiker de rechten “KLIC netbeheerder testdienst” aan moet zetten per gebruiker om de tegels in Mijn Kadaster zichtbaar te maken.
- ![Schermimpressie netbeheerder tegels in Mijn Kadaster](bijlagen/Schermimpressie%20netbeheerder%20tegels%20in%20Mijn%20Kadaster.png)
+In het geval van Netbeheerders geldt dat de eerste beheerder in Mijn Kadaster de rechten “KLIC Externe Testomgeving” aan moet zetten per gebruiker om de tegels in Mijn Kadaster zichtbaar te maken.
+ ![Schermimpressie netbeheerder tegels in Mijn Kadaster](bijlagen/Schermimpressie%20netbeheerder%20tegels%20in%20Mijn%20Kadaster.png)  \
 *Schermimpressie tegels in Mijn Kadaster voor netbeheerder*
 
 ## Verschillen ETO en regulier
@@ -52,7 +52,16 @@ Netbeheerders die niet gekozen hebben voor een publiek belang worden niet gebrui
 
 :information_source: *Merk op dat als geen enkele netbeheerder zou kiezen voor een publiek belang, het voor de grondroerder niet mogelijk is om een representatieve test te doen in de ETO.*
 
- 
+ ### Publieke belangen
+Zoals beschreven, zijn we voor een representatieve werking  afhankelijk van de testdata die netbeheerders beschikbaar willen stellen.  \
+Om gelijk vanaf de introductie te kunnen testen, is er door het Kadaster een fictief (en publiek) belang met fictieve netinformatie opgevoerd. Deze ligt in de buurt van Best.  \
+Indien een testmelding gedaan wordt in onderstaand gebied, wordt het Kadaster-belang geraakt en heeft de grondroerder in ieder geval geen lege levering.  \
+ ![Kadaster test-belang in de buurt van Best](bijlagen/KadasterTestBelang.png)  \
+ *Kadaster test-belang in de buurt van Best*
+ ```json
+"coordinates": [ [ [154755, 388295], [154755, 387836], [155200, 387836], [155200, 388295], [154755, 388295] ] ]
+```
+
 
 
 ## Verschil met NTD
@@ -73,7 +82,7 @@ Bij het opvoeren van een belang in de ETO krijgt de netbeheerder de keuze om zij
 - Netbeheerders die niet gekozen hebben voor een publiek belang worden niet gebruikt voor grondroerders testen. De netbeheerder kan wel zelf via de netbeheerder testschermen of via de netbeheerder test-API, gebruik maken van dit belang.
 - Merk op dat als geen enkele netbeheerder zou kiezen voor een publiek belang, het voor de grondroerder niet mogelijk is om een representatieve test te doen in de ETO.
  
- ![Netbeheerder keuze publiek belang](bijlagen/Netbeheerder%20keuze%20publiek%20belang.png)
+ ![Netbeheerder keuze publiek belang](bijlagen/Netbeheerder%20keuze%20publiek%20belang.png)  \
 *Keuze publiek of niet bij het opvoeren van een belang in de ETO*
 
 
@@ -83,7 +92,7 @@ Dit kan met een tegel in Mijn Kadaster en via de API waarvoor scope `klic.ntd.ce
 Voor het gebruik via de API is het endpoint:  \
 https://service10.kadaster.nl/klic/ntd/actualiseren/v2/  \
 Swagger documentatie is te vinden via: https://service10.kadaster.nl/klic/api-docs/  \
-Een beschrijving is te vinden op [deze Github pagina](..\Actualiseren). 
+Een beschrijving is te vinden op [deze Github pagina](../Actualiseren). 
 
 
 Let op: als u gekozen heeft voor een publiek belang, wordt de aangeleverde netinformatie en documenten ook bij testen door grondroerders uitgeleverd, indien er een testmelding binnen uw publieke belang gebeurt.
@@ -95,7 +104,7 @@ Het decentraal aanleveren gaat via de BMKL-API, waarvoor scope `klic.ntd.beheerd
 Voor het gebruik via de API is het endpoint:  \
 https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/  \
 Swagger documentatie is te vinden via: https://service10.kadaster.nl/klic/api-docs/  \
-Een beschrijving is te vinden op [deze Github pagina](..\BMKL\BMKL%202.1\BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md).  
+Een beschrijving is te vinden op [deze Github pagina](../BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md).  
 
 ## Testmelding voor netbeheerder 
 Voor testdoeleinden kan een netbeheerder een testmelding in de ETO doen. Bijvoorbeeld om te kijken hoe zijn netinformatie uitgeleverd wordt vanuit de Centrale Voorziening, door te testen hoe een BILzip gedownload kan worden via de BMKL-API, of om het proces te kunnen testen van het decentraal aanleveren via de BMKL-API.
@@ -104,10 +113,10 @@ Het doen van een netbeheerder-testmelding kan met een tegel in Mijn Kadaster en 
 Voor het gebruik via de API is het endpoint:  \
 https://service10.kadaster.nl/klic/ntd/testaanvragen/v1/gebiedsinformatieaanvragen  \
 Swagger documentatie is te vinden via : https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20aanvraag%20api  \
-Een beschrijving is te vinden op [deze Github pagina](..\Aanvragen%20gebiedsinformatie\B2B%20REST%20API) 
+Een beschrijving is te vinden op [deze Github pagina](../Aanvragen%20gebiedsinformatie/B2B%20REST%20API) 
 
 
-Zowel het proces van centrale netbeheerders als het proces van decentrale netbeheerders is te testen, onafhankelijk van de rol in het reguliere proces. Daarom dient er bij iedere netbeheerders test aangegeven te worden of het een centrale of decentrale test betreft. Netbeheerders hebben daarom een extra scherm in de Mijn Kadaster testschermen, en in het modelschema voor het doen van een melding via de API zijn er voor netbeheerders testen een extra velden opgenomen. [Zie deze beschrijing](..\Aanvragen%20gebiedsinformatie\B2B%20REST%20API#132-modelschema-onderdeel-testparameters) voor meer details.  
+Zowel het proces van centrale netbeheerders als het proces van decentrale netbeheerders is te testen, onafhankelijk van de rol in het reguliere proces. Daarom dient er bij iedere netbeheerders test aangegeven te worden of het een centrale of decentrale test betreft. Netbeheerders hebben daarom een extra scherm in de Mijn Kadaster testschermen, en in het modelschema voor het doen van een melding via de API zijn er voor netbeheerders testen een extra velden opgenomen. [Zie deze beschrijing](../Aanvragen%20gebiedsinformatie/B2B%20REST%20API#132-modelschema-onderdeel-testparameters) voor meer details.  
    
    ![Testparamters bij doen van netbeheerder testaanvraag](bijlagen/Testparamters%20bij%20doen%20van%20netbeheerder%20testaanvraag.png)
 *Keuze centraal of decentraal per test op te geven. Links Mijn Kadaster schermen, rechts fragment modelschema voor API.*
@@ -126,7 +135,7 @@ De beheerdersinformatie leverings-zip (BILzip) is te downloaden via de BMKL API.
 
 ## Terugmeldproces op testmelding BILzip
 ### Testterugmelding aanmaken
-Een netbeheerder kan het terugmeldproces testen door eerst een terugmelding aan te maken op de BILzip. Het terugmeldproces kan getest worden via de API, of vanuit de desktop versie van de Kadaster KLIC Viewer. Voor het doen van een terugmelding via de API dient apart autorisatie aangevraagd te worden voor het test-endpoint van de generieke terugmeldservice. Zie voor meer informatie [deze Github pagina](..\Terugmelden%20Afwijkende%20Situatie#autorisatie-voor-gebruik-van-api).
+Een netbeheerder kan het terugmeldproces testen door eerst een terugmelding aan te maken op de BILzip. Het terugmeldproces kan getest worden via de API, of vanuit de desktop versie van de Kadaster KLIC Viewer. Voor het doen van een terugmelding via de API dient apart autorisatie aangevraagd te worden voor het test-endpoint van de generieke terugmeldservice. Zie voor meer informatie [deze Github pagina](../Terugmelden%20Afwijkende%20Situatie#autorisatie-voor-gebruik-van-api).
 
 Let op: er worden geen e-mails verstuurd vanuit de testomgeving met betrekking tot het terugmeldproces.  \
 Indien een netbeheerder gekozen heeft voor publiek belang, kan er ook een testterugmelding in het systeem staan die door de grondroerder is aangemaakt.
@@ -136,11 +145,11 @@ Indien een netbeheerder gekozen heeft voor publiek belang, kan er ook een testte
 Het afhandelen van de terugmelding door de netbeheerder gebeurt op een ETO-specifiek endpoint:  \
 https://service10.kadaster.nl/klic/ntd/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/  \
 Hiervoor is scope `klic.ntd.beheerdersinformatie` nodig.  \
-Een beschrijving is te vinden op [deze Github pagina](..\BMKL\BMKL%202.1\BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie). 
+Een beschrijving is te vinden op [deze Github pagina](../BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#overzicht-bmkl-apis-voor-afhandelen-afwijkende-situatie). 
 
 ## Serviceprovider namens Netbeheerder
 Een serviceprovider kan namens de netbeheerder in de ETO dezelfde handelingen uitvoeren als in productie. Hij logt in als zichzelf en geeft op namens welke netbeheerder hij een actie doet. Zie hiervoor de reguliere documentatie.  \
-Voor het inregelen van de machtigen dient de netbeheerder in de applicatie “autoriseren serviceprovider”  de dienst “netbeheerder test dienst” aan te zetten. De Service provider is dan voor alle functies binnen de ETO gemachtigd. Een beschrijving is [hier te vinden]( https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider). 
+Voor het inregelen van de machtigen dient de netbeheerder in de applicatie “autoriseren serviceprovider”  de dienst “Externe Test Omgeving” aan te zetten. De Service provider is dan voor alle functies binnen de ETO gemachtigd. Een beschrijving is [hier te vinden]( https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider). 
 
 ----
 # Grondroerder functionaliteit
@@ -149,7 +158,7 @@ Het doen van een ETO-testmelding kan via de API waarvoor scope `klic.eto.b2baanv
 Voor het gebruik via de API is het endpoint:  \
 https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieaanvragen  \
 Swagger documentatie is te vinden via : https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20aanvraag%20api  \
-Een beschrijving is te vinden op [deze Github pagina](..\Aanvragen%20gebiedsinformatie\B2B%20REST%20API).
+Een beschrijving is te vinden op [deze Github pagina](../Aanvragen%20gebiedsinformatie/B2B%20REST%20API).
 
 Na het doen van een testmelding, volgt een e-mail met de ontvangstbevestiging en een e-mail met de leveringsmail. Het mailonderwerp start met “ETO TEST”.  \
 De link om de levering te downloaden is ook via de API op te vragen, zie hier beneden voor meer informatie.
@@ -166,13 +175,13 @@ Voor het downloaden via de API is scope `klic.eto.b2baanvraag` nodig.  \
 Het endpoint van de API is:  \
 https://service10.kadaster.nl/klic/ntd/aanvragen/v1/gebiedsinformatieleveringen  \
 Swagger documentatie is te vinden via : https://service10.kadaster.nl/klic/api-docs/?urls.primaryName=B2B%20levering%20api  \
-Een beschrijving is te vinden op [deze Github pagina](..\Uitleveren\B2B%20REST%20API).
+Een beschrijving is te vinden op [deze Github pagina](../Uitleveren/B2B%20REST%20API).
 
 
 :information_source: *Let op: De inhoud van de levering is afhankelijk van de netbeheerders die een publiek belang hebben opgevoerd in de ETO.*
 
 ## Terugmelden op ETO Zip levering
-Het terugmeldproces kan getest worden via de API, of vanuit de Kadaster KLIC Viewer. Voor het doen van een terugmelding via de API dient apart autorisatie aangevraagd te worden voor het test-endpoint van de generieke terugmeldservice. Zie hiervoor [deze Github pagina](  \Terugmelden%20Afwijkende%20Situatie#autorisatie-voor-gebruik-van-api).  \
+Het terugmeldproces kan getest worden via de API, of vanuit de Kadaster KLIC Viewer. Voor het doen van een terugmelding via de API dient apart autorisatie aangevraagd te worden voor het test-endpoint van de generieke terugmeldservice. Zie hiervoor [deze Github pagina](../Terugmelden%20Afwijkende%20Situatie#autorisatie-voor-gebruik-van-api).  \
 Deze testterugmeldingen zijn in de testomgeving zichtbaarvoor de netbeheerders uit de testmelding.
 
 Let op: er worden geen e-mails verstuurd vanuit de testomgeving met betrekking tot het terugmeldproces.
