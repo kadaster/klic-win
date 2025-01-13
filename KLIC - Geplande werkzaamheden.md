@@ -1,6 +1,20 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 20 november)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 13 januari)
 -------------------------------------------------------------------------------------
 
+
+## Release – 13 januari 2025
+
+Voor deze release zijn is het volgende onderwerp gepland:
+
+**Verandering in Front-end Externe Test Omgeving (ETO)**:
+- Verandering van de naamgeving van de ETO (Externe Test Omgeving) op de Kadaster website. De huidige ETO wordt op verschillende plekken nog aangeduid als NTD. Dit wordt nu overal gewijzigd in ETO.  
+- Ook wordt op het beginscherm direct aandacht gevraagd voor het aanmaken van een belang om te kunnen testen. 
+
+:arrow_forward: De technische en functionele documentatie voor het gebruik van de ETO is te vinden op deze [Github pagina](Externe%20Test%20Omgeving%20(ETO)).  
+
+
+
+-------------------------------------------------------------------------------------
 
 ## Release – 27 november 2024
 
