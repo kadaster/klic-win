@@ -1,4 +1,28 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 13 januari)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 30 januari)
+-------------------------------------------------------------------------------------
+
+
+## Release – 11 februari 2025
+
+Voor deze release zijn is het volgende onderwerp gepland:
+
+**Veiligheidsgebied geometrie beschikbaar stellen voor B2B REST API KLIC-aanvraag gebruiker)**:
+
+- Als het graafgebied van een KLIC-melding een veiligheidsgebied (BVG) overlapt, wordt de melding niet naar de grondroerder gestuurd maar naar de veiligheidsgebied beheerder. De grondroerder moet dan in contact treden met de veiligheidsgebied beheerder voor de levering.  \
+Vaak is dit onnodig veel hand werk, aangezien de grondroerder in de praktijk ook zijn graafgebied om het veiligheidsgebied heen had kunnen tekenen.  \
+Daarvoor moet de grondroerder (via de applicatie die hij gebruikt) weten waar de veiligheidgebieden liggen. Gebruikers van Mijn Kadaster zien een markering op de kaart tijdens het tekenen van het graafgebied.   \
+Met de release van 11 februari 2025 kan de B2B REST API gebruiker een verzoek indienen om de Geometrie van de veiligheidsgebieden beschikbaar te krijgen via een REST API, dat kan [via dit contactformulier](https://formulieren.kadaster.nl/contact_klic).  
+
+  Meer informatie over de procedure bij een KLIC-melding in een veiligheidsgebied, is te vinden op [deze site van het Kadaster](https://www.kadaster.nl/-/wat-is-de-procedure-bij-een-klic-melding-graafmelding-of-een-ori-c3-abntatieverzoek-in-een-veiligheidsgebied-).
+
+  Er is een presentatie beschikbaar [op GitHub](Presentaties%20bijeenkomsten/KLIC%20informatiebijeenkomst/2024-09-27/0.%20Agenda%20en%20terugblik%20KLIC%20bijeenkomst%2027%20september%202024.pdf).
+
+**Terugkoppeling orderblokkade bij B2B REST API KLIC-aanvraag**:
+- Indien een organisatie op ‘blokkering’ staat wordt er vroegtijdig een melding gegeven dat het indienen van een gebiedsinformatie aanvraag via de API niet mogelijk is.  \
+De volgende melding wordt synchroon teruggekoppeld bij het doen van de aanvraag via de GIA-POST-API: COR9005 -  `Het is voor deze gebruiker niet toegestaan een aanvraag in te dienen, omdat de klant het kenmerk 'geblokkeerd' heeft in ons systeem. Neem contact op met de Kadaster Klantenservice.`  \
+Merk op dat gebruikers van Mijn Kadaster tijdens het inloggen reeds een melding krijgen indien hun organisatie op blokkade staat.
+
+
 -------------------------------------------------------------------------------------
 
 
