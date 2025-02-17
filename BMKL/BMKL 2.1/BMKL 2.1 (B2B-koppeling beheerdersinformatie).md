@@ -148,6 +148,9 @@ Haal als netbeheerder voor een specifieke beheerdersinformatie-aanvraag de behee
 Zodra een belanghebbende netbeheerder de details kent van een gebiedsinformatie-aanvraag, kan de beheerdersinformatie worden samengesteld. \
 Beheerdersinformatie en de bijbehorende documenten worden aangeleverd in een zipbestand door de decentrale netbeheerder. Dit bestand moet voldoen aan de volgende voorwaarden:
 
+-  De bestandsnaam van het zipbestand en de bestanden in het zipbestand, mogen een maximaal aantal tekens en geen ongeldige tekens bevatten.
+    - Een bestandsnaam mag niet langer zijn dan 120 tekens.
+    - Een bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "`<spatie>`", ".", "-", "\_", "(" en ")"
 - Het zipbestand bevat exact één bestand met de extentie `.xml`. Dit bestand bevat de beheerdersinformatie in [IMKL 2.0 formaat](https://www.geonovum.nl/geo-standaarden/informatiemodel-kabels-en-leidingen#standaard).
 - Het zipbestand mag één of meerdere PDF bestanden bevatten. Elk van deze bestanden moet gerefereerd worden vanuit het XML-bestand.
 - Het zipbestand mag geen mappenstructuur bevatten; alle bestanden in het zipbestand moeten op het hoogste niveau in het zipbestand opgeslagen worden.

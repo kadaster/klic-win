@@ -102,7 +102,9 @@ Het is mogelijk om meerdere **document** elementen op te nemen in het XML-bestan
 #### Validatieregels
 
 Het zipbestand moet aan een aantal voorwaarden voldoen:
-
+-  De bestandsnaam van het zipbestand en de bestanden in het zipbestand, mogen een maximaal aantal tekens en geen ongeldige tekens bevatten.
+    - Een bestandsnaam mag niet langer zijn dan 120 tekens.
+    - Een bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "`<spatie>`", ".", "-", "\_", "(" en ")"
 -   Het bevat exact één XML-bestand.
 -   In het XML-bestand mag ieder *lokaalID* slechts één keer voorkomen.
 -   Alle meegeleverde bestanden hebben de extensie “.pdf”.

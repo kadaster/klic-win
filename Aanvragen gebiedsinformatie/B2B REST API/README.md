@@ -17,6 +17,7 @@ Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kad
     - [1.5.1 Algemeen](#151-algemeen)
     - [1.5.2 Validaties van de polygonen](#152-validaties-van-de-polygonen)
     - [1.5.3 Aanvragen in het kader van de EU-stimulering breedband (WIBON-regelgeving)](#153-aanvragen-in-het-kader-van-de-eu-stimulering-breedband-wibon-regelgeving)
+    - [1.5.4 Veiligheidsgebieden](#154-veiligheidsgebieden)
 - [2. Endpoints](#2-endpoints)
 - [3. Authenticatie en Autorisatie](#3-authenticatie-en-Autorisatie)
   - [3.1 Overzicht per scenario](#31-overzicht-per-scenario)
@@ -51,7 +52,7 @@ Het verdient aanbeveling om als unieke MessageID een zogenaamde UUID of GUID te 
 
 Het modelschema voor een GIA-POST is gebaseerd op het IMKL en heeft daardoor een grote overeenkomst met de GIA-GET-API (die reeds voor netbeheerders beschikbaar is).
 
-:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.88.xlsx).
+:arrow_forward: [Het modelschema voor de GIA-POST-API is beschikbaar in een Excel bestand](GIA-POST-API_specificatie_v0.89.xlsx).
 
 Er is gekozen voor één modelschema voor alle type aanvragen. Er zijn validatie regels toegevoegd om aan de bestaande business logica te voldoen.
 In het werkblad staat in kolom E en F het modelschema inclusief een voorbeeld.  \
@@ -209,7 +210,13 @@ De volgende controles worden uitgevoerd:
 - per aanvraag mag slechts één van deze velden worden geselecteerd.
 - als één van deze velden wordt gebruikt, mogen geen soorten werkzaamheden worden opgegeven .
 
+### 1.5.4 Veiligheidsgebieden
+Als het graafgebied van een KLIC-melding een veiligheidsgebied (BVG) overlapt, volgt er bij de validatiemeldingen een `warning`. De aanvraag wordt dan wel door het systeem aangenomen en verwerkt. De levering wordt echter niet naar de grondroerder gestuurd maar naar de veiligheidsgebied beheerder. De grondroerder moet dan in contact treden met de veiligheidsgebied beheerder voor de levering.  \
+Vaak is dit onnodig veel hand werk, aangezien de grondroerder in de praktijk ook zijn graafgebied om het veiligheidsgebied heen had kunnen tekenen.  \
+Daarvoor moet de grondroerder (via de applicatie die hij gebruikt) weten waar de veiligheidgebieden liggen. Gebruikers van Mijn Kadaster zien een markering op de kaart tijdens het tekenen van het graafgebied.   \
+De B2B REST API gebruiker kan een verzoek indienen om de Geometrie van de veiligheidsgebieden beschikbaar te krijgen via een REST API, dat kan [via dit contactformulier](https://formulieren.kadaster.nl/contact_klic).  
 
+  Meer informatie over de procedure bij een KLIC-melding in een veiligheidsgebied, is te vinden op [deze site van het Kadaster](https://www.kadaster.nl/-/wat-is-de-procedure-bij-een-klic-melding-graafmelding-of-een-ori-c3-abntatieverzoek-in-een-veiligheidsgebied-).
 
 ---------------------------------------------------------
 ## 2. Endpoints

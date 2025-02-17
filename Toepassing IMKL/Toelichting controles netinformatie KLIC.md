@@ -142,9 +142,9 @@ Een aangeleverd zipbestand wordt gecontroleerd op de punten:
 * Het aangeleverde bestand moet een ZIP-archief zijn.
 * Het te gebruiken ZIP-formaat is beschreven in Info-ZIP Application Note 970311 (ZIP). Sommige ZIP-tools gebruiken compressie methodes die niet in deze specificatie staan, deze methodes worden niet ondersteund.
 * De bestandsnamen binnen het zipbestand moeten uniek zijn.
-* De bestandsnaam van het zipbestand of XML-bestand mag een maximaal aantal tekens en geen ongeldige tekens bevatten.
-  * Bestandsnaam mag niet langer zijn dan 120 tekens.
-  * De bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "<spatie>", ".", "-", "\_", "(" en ")"
+-  De bestandsnaam van het zipbestand en de bestanden in het zipbestand (waaronder het XML-bestand), mogen een maximaal aantal tekens en geen ongeldige tekens bevatten.
+    - Een bestandsnaam mag niet langer zijn dan 120 tekens.
+    - Een bestandsnaam mag niet bestaan uit vreemde tekens; als geldige tekens worden gezien de ASCII-characters:<br>"a-z", "A-Z", "0-9", "`<spatie>`", ".", "-", "\_", "(" en ")"
 * Het aangeleverde bestand mag niet beveiligd zijn met een wachtwoord.
 * Het ZIP-bestand voor aanleveringen in IMKL versie 2.0 dient te eindigen op `_V2.zip`.
 
