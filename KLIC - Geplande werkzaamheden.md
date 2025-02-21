@@ -1,10 +1,21 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 30 januari)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 21 februari)
+-------------------------------------------------------------------------------------
+
+
+## Release – 24 februari 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Actualiseren en aanleveren netinfomratie en documenten**:
+- Verbeterderde foutafhandeling bij uploaden van zip bestand met verkeerde bestandsnamen. De gebruiker krijgt nu de validatie melding `De ZIP kan niet verwerkt worden. Mogelijk zit er een bestandsnaam in met karakters die niet in de ASCII reeks zitten.`  \
+  Merk op dat het voor deze update ook al bestanden niet verwerkt werden met tekens buiten de afgesproken ASCII reeks.
+
 -------------------------------------------------------------------------------------
 
 
 ## Release – 11 februari 2025
 
-Voor deze release zijn is het volgende onderwerp gepland:
+Voor deze release zijn de het volgende onderwerpen gepland:
 
 **Veiligheidsgebied geometrie beschikbaar stellen voor B2B REST API KLIC-aanvraag gebruiker)**:
 
@@ -28,7 +39,7 @@ Merk op dat gebruikers van Mijn Kadaster tijdens het inloggen reeds een melding 
 
 ## Release – 13 januari 2025
 
-Voor deze release zijn is het volgende onderwerp gepland:
+Voor deze release is het volgende onderwerp gepland:
 
 **Verandering in Front-end Externe Test Omgeving (ETO)**:
 - Verandering van de naamgeving van de ETO (Externe Test Omgeving) op de Kadaster website. De huidige ETO wordt op verschillende plekken nog aangeduid als NTD. Dit wordt nu overal gewijzigd in ETO.  
