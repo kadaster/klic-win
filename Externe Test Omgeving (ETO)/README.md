@@ -76,6 +76,9 @@ Het beheren van belangen wordt net als in regulier alleen ondersteund via een te
 Het proces van beheren belangen in de Externe Testomgeving is hetzelfde als in Regulier. De data is echter strikt gescheiden. Om testen te kunnen doen in de Externe Test Omgeving is het dus belangrijk om ook in de ETO een belang aan te maken.  \
 *Dit kan een fictief belang met fictieve geometrie betreffen, echter wel altijd valide.* 
 
+| :bulb: Net als in productie is het verplicht om een ingangsdatum van het nieuwe belang minimaal 1 dag in de toekomst te zetten. Een nieuw belang zal dus (net als in productie) pas actief zijn na 12 uur snachts. |   
+|:---|
+
 Bij het opvoeren van een belang in de ETO krijgt de netbeheerder de keuze om zijn belang in de ETO op `publiek` te zetten.
 - Bij het bepalen van welke belangen zijn geraakt in de ETO, worden alleen de belangen in beschouwing genomen die op ‘publiek’ staan. Voor deze netbeheerders wordt dan de aangeleverde netinformatie en documenten uitgeleverd als het opgegeven graafgebied een belang raakt van de netbeheerder. Deze gegevens komen alleen uit de Centrale Voorziening van de testomgeving. Een decentrale netbeheerder zonder informatie in de centrale voorziening zal dus met een publiek belang als “niet betrokken” in de levering komen.
 - De netbeheerder kan ook de BILzip’s downloaden voor deze testmeldingen.
@@ -84,6 +87,7 @@ Bij het opvoeren van een belang in de ETO krijgt de netbeheerder de keuze om zij
  
  ![Netbeheerder keuze publiek belang](bijlagen/Netbeheerder%20keuze%20publiek%20belang.png)  \
 *Keuze publiek of niet bij het opvoeren van een belang in de ETO*
+
 
 
 ## Actualiseren netinformatie en documenten 
@@ -149,7 +153,7 @@ Een beschrijving is te vinden op [deze Github pagina](../BMKL/BMKL%202.1/BMKL%20
 
 ## Serviceprovider namens Netbeheerder
 Een serviceprovider kan namens de netbeheerder in de ETO dezelfde handelingen uitvoeren als in productie. Hij logt in als zichzelf en geeft op namens welke netbeheerder hij een actie doet. Zie hiervoor de reguliere documentatie.  \
-Voor het inregelen van de machtigen dient de netbeheerder in de applicatie “autoriseren serviceprovider”  de dienst “Externe Test Omgeving” aan te zetten. De Service provider is dan voor alle functies binnen de ETO gemachtigd. Een beschrijving is [hier te vinden]( https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider). 
+Voor het inregelen van de machtigingen dient de netbeheerder in de applicatie “autoriseren serviceprovider”  de dienst “Externe Test Omgeving” aan te zetten. De Service provider is dan voor alle functies binnen de ETO gemachtigd. Een beschrijving is [hier te vinden]( https://www.kadaster.nl/-/klic-klantinstructie-autoriseren-serviceprovider). 
 
 ----
 # Grondroerder functionaliteit
@@ -188,6 +192,6 @@ Let op: er worden geen e-mails verstuurd vanuit de testomgeving met betrekking t
 
 ## Serviceprovider namens Grondroerder
 Een serviceprovider kan namens de grondroerder in de ETO dezelfde handelingen uitvoeren als in productie. Hij logt in als zichzelf en geeft op namens welke grondroerder hij een actie doet. Zie hiervoor de reguliere documentatie.  \
-Voor het inregelen van de machtigen dient de netbeheerder in de applicatie “autoriseren serviceprovider”  de dienst “B2B aanvraag” aan te zetten.  \
-Voor het inregelen van de machtigen geldt geen gescheiden proces tussen productie regulier en de ETO: een serviceprovider is dus voor beide omgevingen tegelijk gemachtigd. 
+Voor het inregelen van de machtigingen dient de grondroerder in de applicatie “autoriseren serviceprovider”  de dienst “B2B aanvraag” aan te zetten.  \
+Voor het inregelen van de machtigingen geldt geen gescheiden proces tussen productie regulier en de ETO: een serviceprovider is dus voor beide omgevingen tegelijk gemachtigd. 
 

@@ -1,4 +1,33 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 21 februari)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 maart)
+-------------------------------------------------------------------------------------
+
+## Release – 7 april 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (7.1.0):
+- De meetfunctionaliteit is verbeterd voor de touchscreen gebruikers. Er is een rozet beschikbaar gesteld waarmee de gebruiker nauwkeurig metingen kan vastleggen
+- Wettelijke toegankelijkheidseisen:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Algemeen performance verbeteringen.
+- Diverse bugfixes.
+
+-------------------------------------------------------------------------------------
+
+## Release – medio maart 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Bugfix terugmeld bijlagen**:  \
+Sinds 4 maart zijn de bijlagen niet meer te bekijken via de API en niet meer via de Mijn Kadaster applicatie 'Beheren Terugmelden Netbeheerder'.
+ - Na deze wijziging zijn de bijlagen weer te bekijken in de Mijn Kadaster applicatie 'Beheren Terugmelden Netbeheerder'.
+  
+ - Bijlagen via API **met authenticatie**:  \
+   In de API wordt er met deze wijziging  nieuwe URL's gegeven voor de bijlagen. Deze zien er als volgt uit:  \
+   `https://service10.kadaster.nl/klic/bmkl/v2/gebiedsinformatieAanvragen/-/terugmeldingen/123/bijlagen/123456`  \
+     Voor het ophalen van de bijlage geldt dezelfde authenticatie voorwaarde als voor andere calls die gedaan worden voor het beheren van terugmeldingen ([Zie deze pagina op deze Github)](API%20management/Authenticatie_via_oauth%20Client%20Credentials.md#access-token-gebruiken).
+
 -------------------------------------------------------------------------------------
 
 
@@ -6,10 +35,9 @@
 
 Voor deze release is het volgende onderwerp gepland:
 
-**Actualiseren en aanleveren netinfomratie en documenten**:
+**Actualiseren en aanleveren netinformatie en documenten**:
 - Verbeterderde foutafhandeling bij uploaden van zip bestand met verkeerde bestandsnamen. De gebruiker krijgt nu de validatie melding `De ZIP kan niet verwerkt worden. Mogelijk zit er een bestandsnaam in met karakters die niet in de ASCII reeks zitten.`  \
   Merk op dat het voor deze update ook al bestanden niet verwerkt werden met tekens buiten de afgesproken ASCII reeks.
-
 -------------------------------------------------------------------------------------
 
 
@@ -17,7 +45,7 @@ Voor deze release is het volgende onderwerp gepland:
 
 Voor deze release zijn de het volgende onderwerpen gepland:
 
-**Veiligheidsgebied geometrie beschikbaar stellen voor B2B REST API KLIC-aanvraag gebruiker)**:
+**Veiligheidsgebied geometrie beschikbaar stellen voor B2B REST API KLIC-aanvraag gebruiker**:
 
 - Als het graafgebied van een KLIC-melding een veiligheidsgebied (BVG) overlapt, wordt de melding niet naar de grondroerder gestuurd maar naar de veiligheidsgebied beheerder. De grondroerder moet dan in contact treden met de veiligheidsgebied beheerder voor de levering.  \
 Vaak is dit onnodig veel hand werk, aangezien de grondroerder in de praktijk ook zijn graafgebied om het veiligheidsgebied heen had kunnen tekenen.  \
