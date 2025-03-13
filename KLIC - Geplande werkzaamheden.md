@@ -15,7 +15,7 @@ Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-va
 
 -------------------------------------------------------------------------------------
 
-## Release – medio maart 2025
+## Release – 13 maart 2025
 
 Voor deze release is het volgende onderwerp gepland:
 
