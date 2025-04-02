@@ -1,7 +1,7 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 maart)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 2 april)
 -------------------------------------------------------------------------------------
 
-## Release – 7 april 2025
+## Release – 9 april 2025
 
 Voor deze release is het volgende onderwerp gepland:
 
