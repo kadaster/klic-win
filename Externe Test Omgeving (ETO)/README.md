@@ -1,9 +1,7 @@
 # Externe Test Omgeving (ETO)
----
-| Deze functionaliteit is per eind november 2024 beschikbaar. <br> Houdt de pagina met [geplande werkzaamheden](../KLIC%20-%20Geplande%20werkzaamheden.md) in de gaten voor eventuele updates. |
-|------------------------------|
+----------------
 
----
+
 ## Achtergrond
 
 Er is de wens geuit om een externe testomgeving te hebben die representatief is voor zowel de compleetheid van functionaliteit en het gebruik van dezelfde software die in de reguliere productie voor KLIC gebruikt wordt.  \

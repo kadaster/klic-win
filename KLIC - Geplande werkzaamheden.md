@@ -1,4 +1,13 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 2 april)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 12 mei)
+-------------------------------------------------------------------------------------
+
+## Nieuwe reeksen IP-adressen - April tot september
+
+**Doorvoeren nieuwe reeksen IP-adressen**:  \
+De diensten van het Kadaster worden vanaf april tot en met september gemigreerd naar een nieuwe IT-leverancier. Daarom krijgen onze webservices en API's in 2025 nieuwe reeksen IP-adressen. Sommige organisaties moeten een wijziging laten doorvoeren in de beveiligingsinstellingen van hun IT-omgeving om gebruik te blijven maken van onze diensten.  \
+Zie [deze website](https://www.kadaster.nl/-/nieuwe-reeksen-ip-adressen-door-migratie?redirect=%2Fzakelijk%2Fregistraties%2Flandelijke-voorzieningen%2Fklic%2Fklic-nieuws) voor meer informatie.
+
+
 -------------------------------------------------------------------------------------
 
 ## Release – 9 april 2025
