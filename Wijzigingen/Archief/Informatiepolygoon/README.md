@@ -36,7 +36,7 @@ In [dit document](Beschrijving%205%20scenarios%20thema%20BGI%20versus%20Graafpol
 - Aanvraag via website
   - mogelijkheid om informatiebuffer om graafpolygoon toe te voegen met ingestelde aantal meters.
 - Aanvraag via B2B-kanaal
-  - extra [validatie regels](../../Aanvragen%20gebiedsinformatie/B2B%20REST%20API#152-validaties-van-de-polygonen) voor de aanvraag
+  - extra [validatie regels](../../../Aanvragen%20gebiedsinformatie/B2B%20REST%20API#152-validaties-van-de-polygonen) voor de aanvraag
   - in het responsebericht bij calamiteitenmeldingen wordt onderscheid gemaakt tussen netbeheerder-thema's die op basis van hun geregistreerde belang alleen voor de informatiepolygoon van toepassing zijn, en netbeheerders die (ook) in de graafpolygoon van toepassing zijn.  \
      Zie het tabblad `POLL-Response messages` van de excel sheet met [het modelschema](../../../Aanvragen%20gebiedsinformatie/B2B%20REST%20API/README.md#13-modelschema-en-swagger-documentatie). Het veld 'alleenInInformatiepolygoon' geeft dit onderscheid aan. 
 - NetbeheerdersTestDienst (NTD)

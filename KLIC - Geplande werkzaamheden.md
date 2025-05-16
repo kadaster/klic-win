@@ -10,6 +10,16 @@ Zie [deze website](https://www.kadaster.nl/-/nieuwe-reeksen-ip-adressen-door-mig
 
 -------------------------------------------------------------------------------------
 
+## Release – 16 mei 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+
+**Bugfix terugmeld bijlagen**:  
+- Bij het downloaden van een bijlage bij een terugmelding staat de bestandsnaam genoemd in de 'Content-Disposition'-header. Hierin stond een aanhalingsteken op een verkeerde plek. Na deze release werkt het weer correct; ook voor terugmeldingen die al voor deze release in het systeem stonden.
+
+-------------------------------------------------------------------------------------
+
 ## Release – 9 april 2025
 
 Voor deze release is het volgende onderwerp gepland:
