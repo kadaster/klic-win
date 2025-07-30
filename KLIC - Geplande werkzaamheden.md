@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 12 mei)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 30 juli)
 -------------------------------------------------------------------------------------
 
 ## Nieuwe reeksen IP-adressen - April tot september
@@ -7,6 +7,31 @@
 De diensten van het Kadaster worden vanaf april tot en met september gemigreerd naar een nieuwe IT-leverancier. Daarom krijgen onze webservices en API's in 2025 nieuwe reeksen IP-adressen. Sommige organisaties moeten een wijziging laten doorvoeren in de beveiligingsinstellingen van hun IT-omgeving om gebruik te blijven maken van onze diensten.  \
 Zie [deze website](https://www.kadaster.nl/-/nieuwe-reeksen-ip-adressen-door-migratie?redirect=%2Fzakelijk%2Fregistraties%2Flandelijke-voorzieningen%2Fklic%2Fklic-nieuws) voor meer informatie.
 
+
+-------------------------------------------------------------------------------------
+
+## Release – 6 augustus 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (7.2.0):
+- Met de Desktop variant van de Kadaster KLIC-viewer een ZIP-levering kunnen inladen in de viewer, zodat de inhoud direct kan bekeken worden zonder vooraf handmatig uit te pakken.
+- Wettelijke toegankelijkheidseisen:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Betere foutafhandeling van meldingen van Afwijkende Situaties.
+- Diverse bugfixes.
+
+
+
+-------------------------------------------------------------------------------------
+
+## Release – 15 juli 2025
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Netinformatie aanleveren en actualiseren**:
+ - Validatie van [bestaande afspraak](https://docs.geostandaarden.nl/kl/imkl/#nadere-gml-implementatie-specificaties) bij netinformatie toegevoegd op het attribuut `Curve` voor zowel Centrale actualisatie als Decentrale aanleveringen. Voor de lijninterpolatie mag alleen `gml:LineString` worden gebruikt. Indien een `Arc` wordt gebruikt, wordt de aanlevering afgekeurd.
 
 -------------------------------------------------------------------------------------
 
