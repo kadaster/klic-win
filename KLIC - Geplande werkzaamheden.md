@@ -1,4 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 4 september)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 september)
 -------------------------------------------------------------------------------------
 
 ## Release – eind september 2025
@@ -7,7 +7,7 @@
 
 Voor deze release is het volgende onderwerp gepland:
 - Het actualiseren van netinformatie in de ETO (Externe Testomgeving) voor de netbeheerders.
-- Bekijk [de presentatie met een impressie](ActualiserenNetinformatie/Impressie-Vernieuwd-Actualiseren-Netinformatie-ETO.pdf) van de netinformatie actualiseren schermen in de ETO.
+- Bekijk [de presentatie met een impressie](Actualiseren/Netinformatie/Impressie-Vernieuwd-Actualiseren-Netinformatie-ETO.pdf) van de netinformatie actualiseren schermen in de ETO.
 
 Netinformatie en Documenten actualiseren in de reguliere productie omgeving volgen later.
 
