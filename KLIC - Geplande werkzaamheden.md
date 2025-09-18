@@ -1,6 +1,14 @@
 # Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 september)
 -------------------------------------------------------------------------------------
 
+## Release – 23 september 2025
+
+**Leveringsbrief (LI-pdf)**:
+- In de leveringsbrief staan de contactgegevens van de betrokken netbeheerders.  \
+  De brieven die vanaf deze release in de levering zitten, zullen klikbare telefoonnummers bevatten. Dat betekend dat bij digitale verwerking, bijvoorbeeld vanuit de Kadaster KLIC-viewer op je mobiele telefoon, er op de link geklikt kan worden zodat een telefoonapplicatie geopend wordt met het telefoonnummer vooraf ingevuld.
+
+
+-------------------------------------------------------------------------------------
 ## Release – eind september 2025
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
