@@ -1,13 +1,4 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 september)
--------------------------------------------------------------------------------------
-
-## Release – 23 september 2025
-
-**Leveringsbrief (LI-pdf)**:
-- In de leveringsbrief staan de contactgegevens van de betrokken netbeheerders.  \
-  De brieven die vanaf deze release in de levering zitten, zullen klikbare telefoonnummers bevatten. Dat betekend dat bij digitale verwerking, bijvoorbeeld vanuit de Kadaster KLIC-viewer op je mobiele telefoon, er op de link geklikt kan worden zodat een telefoonapplicatie geopend wordt met het telefoonnummer vooraf ingevuld.
-
-
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 22 september)
 -------------------------------------------------------------------------------------
 ## Release – eind september 2025
 
@@ -19,15 +10,13 @@ Voor deze release is het volgende onderwerp gepland:
 
 Netinformatie en Documenten actualiseren in de reguliere productie omgeving volgen later.
 
-
 -------------------------------------------------------------------------------------
 
-## Nieuwe reeksen IP-adressen - April tot september
+## Release – 23 september 2025
 
-**Doorvoeren nieuwe reeksen IP-adressen**:  \
-De diensten van het Kadaster worden vanaf april tot en met september gemigreerd naar een nieuwe IT-leverancier. Daarom krijgen onze webservices en API's in 2025 nieuwe reeksen IP-adressen. Sommige organisaties moeten een wijziging laten doorvoeren in de beveiligingsinstellingen van hun IT-omgeving om gebruik te blijven maken van onze diensten.  \
-Zie [deze website](https://www.kadaster.nl/-/nieuwe-reeksen-ip-adressen-door-migratie?redirect=%2Fzakelijk%2Fregistraties%2Flandelijke-voorzieningen%2Fklic%2Fklic-nieuws) voor meer informatie.
-
+**Leveringsbrief (LI-pdf)**:
+- In de leveringsbrief staan de contactgegevens van de betrokken netbeheerders.  \
+Vanaf deze release bevatten de brieven klikbare telefoonnummers. Dit betekent dat bij digitale verwerking, bijvoorbeeld via de Kadaster KLIC-viewer op een mobiele telefoon, direct op het telefoonnummer kan worden geklikt. Hierdoor wordt automatisch de telefoonapp geopend met het nummer al ingevuld.
 
 -------------------------------------------------------------------------------------
 

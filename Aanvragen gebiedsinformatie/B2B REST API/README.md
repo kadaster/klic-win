@@ -12,6 +12,7 @@ Deze technische notitie beschrijft het koppelvlak tussen externe systemen en Kad
     - [1.3.1 Modelschema onderdeel "bestelling"](#131-modelschema-onderdeel-bestelling)
     - [1.3.2 Modelschema onderdeel "testparameters"](#132-modelschema-onderdeel-testparameters)
     - [1.3.3. Modelschema onderdeel "gebiedsinformatie aanvragen"](#133-modelschema-onderdeel-gebiedsinformatie-aanvragen)
+    - [1.3.4 Modelschema wijzigingen voor bmkl 3.0](#134-modelschema-wijzigingen-voor-bmkl-30)
   - [1.4 Terugkoppeling door het Kadaster](#14-terugkoppeling-door-het-kadaster)
   - [1.5 Validaties](#15-validaties)
     - [1.5.1 Algemeen](#151-algemeen)
@@ -123,6 +124,79 @@ bv: `"jsonPointer": "/gebiedsinformatieAanvragen/1/eindDatum"` In dit geval zit
 - De meldingen dienen allemaal binnen een vlak van 5000x5000 meter te vallen voor een graafmelding of 10.000x10.000 voor oriëntatieverzoek.
 - Er mogen niet meer dan 100 meldingen per bestelling ingediend worden.
 
+
+### 1.3.4. Modelschema wijzigingen voor BMKL 3.0
+
+| :information_source: Hier staat BMKL versie 3.0 *in concept* beschreven. Dit is de versie die volgt op de huidge BMKL versie 2.1.  <br> Planning over de implementatie van BMKL 3.0 is nog niet bekend. |
+|:------|
+
+De aanleiding van het wijzigen van het modelschema is de beoogde upgrade van de KLIC-standaarden.  \
+De issues die impact hebben het het `GebiedsInformatieAanvraag`-object, leiden tot een aanpassing in het modelschema van de aanvraag.  \
+[Issue #346](https://github.com/Geonovum/imkl2015-review/issues/346) heeft betrekking op de soort werkzaamheden. In BMKL 2.1 was er een lijst van 51 soorten werkzaamhede; dat is nu een lijst van 18 soorten, maar met de verplichting een methode en maximale werkdiepte op te geven.  \
+[issue #333](https://github.com/Geonovum/imkl2015-review/issues/333) heeft betrekking op het aantal toegestande tekens voor de klantreferentie. Dat heeft geen invloed op het modelschema van het `GebiedsInformatieAanvraag`-object, maar heeft wel impact op de validatie regels en mogelijk  voor een partij die de API consumeert.
+
+
+<table style="width:100%">
+  <tr>
+    <th>BMKL 2.1</th>
+    <th>BMKL 3.0</th>
+
+  </tr>
+  <tr>
+    <td> Fragment gebiedsinformatieAanvragen: 
+
+ ```json
+"gebiedsinformatieAanvragen": [
+    {
+      "giAanvraagId": "string",
+     … //
+      "voorbereidingMedegebruikFysiekeInfrastructuur": false,
+
+      "soortWerkzaamheden": [
+        "string"
+      ],
+
+
+
+
+
+      "omschrijvingWerkzaamheden": "string",
+     … //
+}
+```
+
+</td>
+<td> Fragment gebiedsinformatieAanvragen:
+
+
+ ```json
+  "gebiedsinformatieAanvragen": [
+    {
+      "giAanvraagId": "string",
+     … //
+      "voorbereidingMedegebruikFysiekeInfrastructuur": false,
+      "werkzaamhedenInfo": {
+        "soortWerkzaamheden": [
+          "string"
+        ],
+        methode": [
+          "string"
+        ],
+        "maximaleWerkdiepte": "string",
+      },
+      "omschrijvingWerkzaamheden": "string",
+     … //
+}
+```
+</td>
+</tr>
+</table>
+
+_Tabel: SoortWerkzaamheden in gebiedsinformatieAanvraag_
+
+
+| :information_source: Het is nog niet bekend wat de planning is met betrekking tot de implementatie van de Upgrade van de KLIC-standaarden, derhalve beschrijft de rest van deze documentatie de werking volgens het huidige modelschema. <br> Houdt de geplande werkzaamheden pagina in de gaten om te zien vanaf wanneer versie 3.0 verplicht gaat worden.|
+|:------|
 
 ## 1.4 Terugkoppeling door het Kadaster
 
