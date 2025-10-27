@@ -93,7 +93,7 @@ De issues die impact hebben het het `GebiedsInformatieAanvraag`-object, leiden w
         "soortWerkzaamheden": [
           "string"
         ],
-        methode": [
+        "methode": [
           "string"
         ],
         "maximaleWerkdiepte": "string",

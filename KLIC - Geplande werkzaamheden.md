@@ -1,6 +1,6 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 22 september)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 27 oktober)
 -------------------------------------------------------------------------------------
-## Release – eind september 2025
+## Release – 21 oktober 2025
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
 
