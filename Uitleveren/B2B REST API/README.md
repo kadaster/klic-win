@@ -213,7 +213,7 @@ Indien het GIA bericht opgehaald wordt direct na het insturen van de aanvraag; d
 :information_source: Merk op dat de lijst ook deelleveringen kan bevatten. De `indicatieLeveringCompleet` is dan false, en er zal nog een levering zijn of volgen met een hoger `leveringsvolgnummer`.  
 
  
-De `giLeveringUrl` bevat de download URL die ook in de leveringsmail verzonden is. Deze link is tot 20 werkdagen te gebruiken nadat de levering is samengesteld.
+De `giLeveringUrl` bevat de download URL die ook in de leveringsmail verzonden is. Download de KLIC-levering binnen 20 werkdagen (daarna is dit niet meer mogelijk).
 
 In het geval er een veiligeidsgebied geraakt is (`isVeiligheidsgebiedGeraakt` is `true`), is er geen download link beschikbaar. Het reguliere proces waarbij er contact gezocht moet worden met de veilgheidsgebied beheerder dient dan gevolgd te worden.
 
