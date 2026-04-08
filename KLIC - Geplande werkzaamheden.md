@@ -1,9 +1,27 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 5 januari)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 april)
+-------------------------------------------------------------------------------------
+## Release – 15 april 2026
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (7.3.0):
+- - Helderheid van de achtergrondkaart instelbaar via weergave menu. Voor betere zichtbaarheid is met de schuifregelaar extra contrast te realiseren. (zie schermafbeelding)
+- De meetfunctionaliteit is verbeterd voor de touchscreen gebruikers. Er is een knop toegevoegd om de laatste actie ongedaan te maken.
+- Wettelijke toegankelijkheidseisen:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Algemeen performance verbeteringen.
+- Diverse bugfixes.
+
+Kadaster KLIC-Viewer: Instellen helderheid achtergrondkaart via schuifregelaar:  \
+![Helderheid Achtergrondkaart in Kadaster KLIC-viewer](Kadaster%20KLIC-viewer/images/HelderheidAchtergrondkaart.png)
+
 -------------------------------------------------------------------------------------
 ## Release – 6 januari 2026
 
 Voor deze release is het volgende onderwerp gepland:
-**Aanvragen via Mijn Kadaser**:
+
+**Aanvragen via Mijn Kadaster**:
 - Vanaf 6 januari is het niet meer mogelijk om een postbusadres op te geven bij de bedrijfsgegevens van een opdrachtgever.  \
   (*Merk op dat via de B2B-REST-API het gebruik van postbusadressen sinds de invoering al niet meer wordt ondersteund.*)
 
