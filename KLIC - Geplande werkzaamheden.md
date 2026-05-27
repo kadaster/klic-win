@@ -1,4 +1,15 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 8 april)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 27 mei)
+-------------------------------------------------------------------------------------
+## Release – 29 mei 2026
+
+*De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
+
+Voor deze release is het volgende onderwerp gepland:
+- Het actualiseren van netinformatie in de reguliere productie omgeving voor de netbeheerders.
+- Bekijk [de presentatie met een impressie](Actualiseren/Netinformatie/Impressie-Vernieuwd-Actualiseren-Netinformatie-ETO.pdf) van de netinformatie actualiseren schermen in de ETO (Externe Testomgeving).
+
+Netinformatie en Documenten actualiseren in de ETO (Externe Testomgeving) zijn al [in oktober gereleased](#release--21-oktober-2025).
+
 -------------------------------------------------------------------------------------
 ## Release – 15 april 2026
 
