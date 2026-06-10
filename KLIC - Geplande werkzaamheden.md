@@ -1,6 +1,14 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 27 mei)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 juni)
 -------------------------------------------------------------------------------------
-## Release – 29 mei 2026
+## Release – oktober 2026
+
+*2 factor authenticatie voor inloggen in Mijn Kadaster*.
+In oktober stapt het Kadaster over op een veilig en toekomstbestendig inlogsysteem. Alle gebruikers van Mijn Kadaster moeten hun e-mail adres doorgeven met inloggen.  \
+Als u niet inlogt met eHerkenning dan is vanaf oktober inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](hhttps://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
+
+
+-------------------------------------------------------------------------------------
+## Release – 10 juni 2026
 
 *De Kadaster websites worden op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups*.
 
