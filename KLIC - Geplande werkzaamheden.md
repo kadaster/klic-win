@@ -2,9 +2,9 @@
 -------------------------------------------------------------------------------------
 ## Release – oktober 2026
 
-*2 factor authenticatie voor inloggen in Mijn Kadaster*.
+**2 factor authenticatie voor inloggen in Mijn Kadaster**.  \
 In oktober stapt het Kadaster over op een veilig en toekomstbestendig inlogsysteem. Alle gebruikers van Mijn Kadaster moeten hun e-mail adres doorgeven met inloggen.  \
-Als u niet inlogt met eHerkenning dan is vanaf oktober inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](hhttps://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
+Als u niet inlogt met eHerkenning dan is vanaf oktober inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](https://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
 
 
 -------------------------------------------------------------------------------------
