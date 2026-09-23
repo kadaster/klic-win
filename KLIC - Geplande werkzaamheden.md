@@ -1,10 +1,23 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 10 juni)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 23 september)
 -------------------------------------------------------------------------------------
-## Release – oktober 2026
+## Release – 2027
 
 **2 factor authenticatie voor inloggen in Mijn Kadaster**.  \
 In oktober stapt het Kadaster over op een veilig en toekomstbestendig inlogsysteem. Alle gebruikers van Mijn Kadaster moeten hun e-mail adres doorgeven met inloggen.  \
 Als u niet inlogt met eHerkenning dan is vanaf oktober inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](https://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
+
+-------------------------------------------------------------------------------------
+## Release – 30 september 2026
+
+Voor deze release is het volgende onderwerp gepland:
+
+**Nieuwe versie Kadaster KLIC-viewer** (7.4.0):
+- Technische verbeteringen & verschillende bugfixes.
+- Performance verbetering en bredere ondersteuning voor Macbooks.
+- Wettelijke toegankelijkheidseisen:  \
+  De Kadaster KLIC-viewer wordt op basis van de wettelijke toegankelijkheidseisen verbeterd. Hierbij moet je denken aan toetsenbordtoegankelijkheid, leesbaarheid teksten en pop-ups.  \
+Voor meer informatie zie [Uitleg WCAG](https://www.digitoegankelijk.nl/uitleg-van-eisen/wat-wcag) (Web Content Accessibility Guidelines) op digitoegankelijk.nl
+- Helderheidsinstellingen worden opgeslagen.
 
 
 -------------------------------------------------------------------------------------
