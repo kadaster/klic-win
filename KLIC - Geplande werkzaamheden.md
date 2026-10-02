@@ -1,10 +1,36 @@
-# Geplande en uitgevoerde werkzaamheden (bijgewerkt 23 september)
+# Geplande en uitgevoerde werkzaamheden (bijgewerkt 2 oktober)
 -------------------------------------------------------------------------------------
-## Release – 2027
+## Release – medio 2027
 
 **2 factor authenticatie voor inloggen in Mijn Kadaster**.  \
-In oktober stapt het Kadaster over op een veilig en toekomstbestendig inlogsysteem. Alle gebruikers van Mijn Kadaster moeten hun e-mail adres doorgeven met inloggen.  \
-Als u niet inlogt met eHerkenning dan is vanaf oktober inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](https://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
+In 2027 stapt het Kadaster over op een veilig en toekomstbestendig inlogsysteem. Alle gebruikers van Mijn Kadaster moeten hun e-mail adres doorgeven met inloggen.  \
+Als u niet inlogt met eHerkenning dan is vanaf de implementatie inloggen met uw e-mailadres en 2 factor authenticatie zoals Google of Microsoft authenticator verplicht. Meer informatie vindt u op [E-mailadres doorgeven voor Mijn Kadaster - Kadaster.nl zakelijk](https://www.kadaster.nl/zakelijk/mijn-kadaster/emailadres-doorgeven-mijn-kadaster).
+
+-------------------------------------------------------------------------------------
+## Release – 13 oktober 2026
+
+> Externe Test Omgeving (ETO) per 7 oktober 
+
+Voor deze release zijn de volgende onderwerpen gepland:
+
+**BMKL API**:
+- Strikter beleid bij quotes (') in URL's.  \
+  voorheen werden quotes op sommige plaatsen in API endpoints getolereerd. Dit is aangescherpt. (ID 10478)
+- Het veld `meerinformatie` die in de API response bij foutmeldingen werd teruggegeven is weggehaald. Deze werd immers niet gebruikt. (ID 9770)
+
+**Decentrale aanleveringen**:
+- Er is een controle toegevoegd op reeds geldende afspraken met betrekking tot het gebruik van ongeldige tekens in bestandsnamen bij decentrale aanleveringen (ID 10407)  \
+  Er wordt nu actief gevalideerd of een bestandsnaam vreemde tekens bevat. Als geldige tekens worden gezien de ASCII-characters:  \
+  "a-z", "A-Z", "0-9", "<spatie>", ".", "-", "_", "(" en ")"   \
+  Meer informatie vindt u op [B2B-koppeling BMKL 2.1](https://github.com/kadaster/klic-win/blob/master/BMKL/BMKL%202.1/BMKL%202.1%20(B2B-koppeling%20beheerdersinformatie).md#samenstellen-zipbestand)
+
+**Aanvragen**:
+- Startdatum na huidige dag: (ID 10282)  \
+  Aanvragen die via de B2B API ingestuurd worden, mogen niet meer de startdatum van vandaag hebben. Bij aanvragen via het Online portaal was het al niet mogelijk om deze dag te selecteren.
+ 
+**Terugmeldproces**:
+- Als gemeente een terugmelding accepteert nadat deze als wees is overgedragen, leidt dit niet langer tot handmatige acties voor het afsluiten van de terugmelding. (ID 10093)
+- Verbetering HTTP statuscode bij het niet tonen van records. Er is nu een duidelijker onderscheid tussen 'niet gemachtigd' (403) en 'object niet gevonden' (404). (ID 10230)
 
 -------------------------------------------------------------------------------------
 ## Release – 30 september 2026
